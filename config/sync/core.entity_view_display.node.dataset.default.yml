@@ -3,18 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.dataset.body
     - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_quality_accuracy
     - field.field.node.dataset.field_quality_completeness
     - field.field.node.dataset.field_quality_consistency
     - node.type.dataset
   module:
+    - text
     - user
 id: node.dataset.default
 targetEntityType: node
 bundle: dataset
 mode: default
 content:
+  body:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_purpose:
     weight: 1
     label: above

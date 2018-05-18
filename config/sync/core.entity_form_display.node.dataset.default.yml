@@ -3,18 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.dataset.body
     - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_quality_accuracy
     - field.field.node.dataset.field_quality_completeness
     - field.field.node.dataset.field_quality_consistency
     - node.type.dataset
+  module:
+    - text
 id: node.dataset.default
 targetEntityType: node
 bundle: dataset
 mode: default
 content:
-  field_purpose:
+  body:
     weight: 1
+    settings:
+      rows: 3
+      placeholder: ''
+      summary_rows: 1
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_purpose:
+    weight: 2
     settings:
       rows: 3
       placeholder: ''
@@ -22,19 +34,19 @@ content:
     type: string_textarea
     region: content
   field_quality_accuracy:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_quality_completeness:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_quality_consistency:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
