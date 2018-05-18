@@ -1,0 +1,9 @@
+uuid: ebab6f50-516e-400a-a420-6aeccda6b089
+langcode: en
+status: true
+dependencies: {  }
+name: Quality
+vid: quality
+description: ''
+hierarchy: 0
+weight: 0

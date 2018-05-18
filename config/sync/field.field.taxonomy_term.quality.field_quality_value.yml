@@ -1,0 +1,21 @@
+uuid: ab1e01e6-a640-4567-95e2-bf198e2a1985
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_quality_value
+    - taxonomy.vocabulary.quality
+  module:
+    - options
+id: taxonomy_term.quality.field_quality_value
+field_name: field_quality_value
+entity_type: taxonomy_term
+bundle: quality
+label: Value
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

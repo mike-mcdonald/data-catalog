@@ -1,0 +1,30 @@
+uuid: ace63553-c237-4da9-aef3-4777914e7e57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.quality.field_quality_value
+    - taxonomy.vocabulary.quality
+  module:
+    - options
+    - text
+id: taxonomy_term.quality.default
+targetEntityType: taxonomy_term
+bundle: quality
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_quality_value:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }
