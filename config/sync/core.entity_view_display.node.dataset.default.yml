@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.dataset.field_quality_accuracy
+    - field.field.node.dataset.field_quality_completeness
+    - field.field.node.dataset.field_quality_consistency
     - node.type.dataset
   module:
     - user
@@ -14,6 +16,22 @@ mode: default
 content:
   field_quality_accuracy:
     weight: 101
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_quality_completeness:
+    weight: 103
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_quality_consistency:
+    weight: 102
     label: inline
     settings:
       link: false

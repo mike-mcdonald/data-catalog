@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.dataset.field_quality_accuracy
+    - field.field.node.dataset.field_quality_completeness
+    - field.field.node.dataset.field_quality_consistency
     - node.type.dataset
 id: node.dataset.default
 targetEntityType: node
@@ -12,6 +14,18 @@ mode: default
 content:
   field_quality_accuracy:
     weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_quality_completeness:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_quality_consistency:
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select
