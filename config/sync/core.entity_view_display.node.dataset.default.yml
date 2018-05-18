@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_quality_accuracy
     - field.field.node.dataset.field_quality_completeness
     - field.field.node.dataset.field_quality_consistency
@@ -14,8 +15,15 @@ targetEntityType: node
 bundle: dataset
 mode: default
 content:
+  field_purpose:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_quality_accuracy:
-    weight: 101
+    weight: 2
     label: inline
     settings:
       link: false
@@ -23,7 +31,7 @@ content:
     type: entity_reference_label
     region: content
   field_quality_completeness:
-    weight: 103
+    weight: 4
     label: inline
     settings:
       link: false
@@ -31,7 +39,7 @@ content:
     type: entity_reference_label
     region: content
   field_quality_consistency:
-    weight: 102
+    weight: 3
     label: inline
     settings:
       link: false
@@ -39,7 +47,7 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

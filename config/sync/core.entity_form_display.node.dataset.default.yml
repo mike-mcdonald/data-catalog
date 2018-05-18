@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_quality_accuracy
     - field.field.node.dataset.field_quality_completeness
     - field.field.node.dataset.field_quality_consistency
@@ -12,20 +13,28 @@ targetEntityType: node
 bundle: dataset
 mode: default
 content:
-  field_quality_accuracy:
+  field_purpose:
     weight: 1
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_quality_accuracy:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_quality_completeness:
-    weight: 27
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_quality_consistency:
-    weight: 26
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
