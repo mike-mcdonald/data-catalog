@@ -1,0 +1,14 @@
+diff --git a/modules/views/src/Plugin/views/query/Sql.php b/modules/views/src/Plugin/views/query/Sql.php
+index 660caf1..34509ee 100644
+--- a/modules/views/src/Plugin/views/query/Sql.php
++++ b/modules/views/src/Plugin/views/query/Sql.php
+@@ -282,6 +282,9 @@ public function addRelationship($alias, JoinPluginBase $join, $base, $link_point
+       return FALSE;
+     }
+ 
++    // Ensure the table alias is no longer than 60 characters long.
++    $alias = (strlen($alias) > 60) ? substr($alias, -60) : $alias;
++
+     // Make sure $alias isn't already used; if it, start adding stuff.
+     $alias_base = $alias;
+     $count = 1;
