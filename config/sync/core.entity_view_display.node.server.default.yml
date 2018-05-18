@@ -1,0 +1,17 @@
+uuid: ff8f8ffa-96fe-4fd6-aede-cdab14ea5300
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.server
+  module:
+    - user
+id: node.server.default
+targetEntityType: node
+bundle: server
+mode: default
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }
