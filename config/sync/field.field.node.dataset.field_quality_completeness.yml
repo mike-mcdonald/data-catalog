@@ -1,0 +1,25 @@
+uuid: b6f9f790-dbfc-4961-b87d-9d219c12bbbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quality_completeness
+    - node.type.dataset
+id: node.dataset.field_quality_completeness
+field_name: field_quality_completeness
+entity_type: node
+bundle: dataset
+label: 'Quality: Completeness'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: quality_selection
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference
