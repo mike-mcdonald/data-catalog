@@ -1,0 +1,25 @@
+uuid: 86b1b50e-a86c-4b5a-932a-adf96eaf29af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quality_accuracy
+    - node.type.dataset
+id: node.dataset.field_quality_accuracy
+field_name: field_quality_accuracy
+entity_type: node
+bundle: dataset
+label: 'Quality: Accuracy'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: quality_selection
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

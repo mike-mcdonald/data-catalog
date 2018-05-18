@@ -1,0 +1,33 @@
+uuid: 9bda75c1-7cd5-4b43-a339-1efa66223ce0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dataset.field_quality_accuracy
+    - node.type.dataset
+id: node.dataset.default
+targetEntityType: node
+bundle: dataset
+mode: default
+content:
+  field_quality_accuracy:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

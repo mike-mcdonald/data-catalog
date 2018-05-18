@@ -1,0 +1,28 @@
+uuid: 95023ab2-09a3-4c9f-9595-6704082198ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dataset.field_quality_accuracy
+    - node.type.dataset
+  module:
+    - user
+id: node.dataset.default
+targetEntityType: node
+bundle: dataset
+mode: default
+content:
+  field_quality_accuracy:
+    weight: 101
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

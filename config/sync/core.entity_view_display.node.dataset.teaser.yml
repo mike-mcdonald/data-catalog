@@ -1,0 +1,18 @@
+uuid: 064cb344-9919-468f-9d1d-0f70d111bf73
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.dataset
+  module:
+    - user
+id: node.dataset.teaser
+targetEntityType: node
+bundle: dataset
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }
