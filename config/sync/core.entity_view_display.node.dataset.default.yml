@@ -18,21 +18,21 @@ bundle: dataset
 mode: default
 content:
   body:
-    weight: 5
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_purpose:
-    weight: 1
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_quality_accuracy:
-    weight: 2
+    weight: 3
     label: inline
     settings:
       link: false
@@ -40,7 +40,7 @@ content:
     type: entity_reference_label
     region: content
   field_quality_completeness:
-    weight: 4
+    weight: 5
     label: inline
     settings:
       link: false
@@ -48,7 +48,7 @@ content:
     type: entity_reference_label
     region: content
   field_quality_consistency:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       link: false

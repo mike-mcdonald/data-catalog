@@ -1,0 +1,17 @@
+uuid: 116100f3-2fe9-43c0-81f9-c083c8253a23
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Server
+type: server
+description: 'Use this content type to add information about a server that may or may not contain datasets.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
