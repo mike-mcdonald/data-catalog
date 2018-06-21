@@ -1,0 +1,28 @@
+uuid: f2aec32e-bde1-41df-bcb6-1b53318d138a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_server
+    - node.type.database
+    - node.type.server
+id: node.database.field_server
+field_name: field_server
+entity_type: node
+bundle: database
+label: Server
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      server: server
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
