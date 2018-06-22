@@ -1,0 +1,9 @@
+uuid: 84f6fb68-cad4-488d-bee6-d123607649ec
+langcode: en
+status: true
+dependencies: {  }
+name: 'Authority levels'
+vid: authority_levels
+description: ''
+hierarchy: 0
+weight: 0

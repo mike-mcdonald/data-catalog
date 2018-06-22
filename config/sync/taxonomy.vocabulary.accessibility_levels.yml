@@ -1,0 +1,9 @@
+uuid: 6fbe8189-aa39-4d85-8a63-2cfef8b76c79
+langcode: en
+status: true
+dependencies: {  }
+name: 'Accessibility levels'
+vid: accessibility_levels
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,9 @@
+uuid: 4781d676-3292-4e4f-ac65-3bd2a226e52e
+langcode: en
+status: true
+dependencies: {  }
+name: Frequency
+vid: frequency
+description: ''
+hierarchy: 0
+weight: 0
