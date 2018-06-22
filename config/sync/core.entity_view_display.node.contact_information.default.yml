@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.contact_information.field_email_address
+    - field.field.node.contact_information.field_telephone_number
     - node.type.contact_information
   module:
     - user
@@ -11,6 +13,20 @@ targetEntityType: node
 bundle: contact_information
 mode: default
 content:
+  field_email_address:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_telephone_number:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   links:
     weight: 100
     region: content
