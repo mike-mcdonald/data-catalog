@@ -1,0 +1,18 @@
+uuid: f9536ed1-3644-4b0e-8cb3-9425d9d77bd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_spatial_enabled
+field_name: field_spatial_enabled
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 0bfe8bce-b5f2-48bb-8a02-7d0ea59b7dd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_update_frequency
+field_name: field_update_frequency
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

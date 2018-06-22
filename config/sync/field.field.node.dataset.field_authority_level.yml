@@ -1,0 +1,29 @@
+uuid: 3504aacc-97c0-450c-9670-dc1899e13b82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_authority_level
+    - node.type.dataset
+    - taxonomy.vocabulary.authority_levels
+id: node.dataset.field_authority_level
+field_name: field_authority_level
+entity_type: node
+bundle: dataset
+label: 'Authority level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      authority_levels: authority_levels
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

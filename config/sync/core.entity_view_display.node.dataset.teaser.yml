@@ -15,4 +15,14 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  body: true
+  field_authority_level: true
+  field_keywords: true
+  field_public_records_exempt: true
+  field_purpose: true
+  field_quality_accuracy: true
+  field_quality_completeness: true
+  field_quality_consistency: true
+  field_spatial_enabled: true
+  field_update_frequency: true

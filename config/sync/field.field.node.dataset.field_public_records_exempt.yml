@@ -1,0 +1,23 @@
+uuid: e37c1e23-5446-44b5-a302-f8d83c252153
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_records_exempt
+    - node.type.dataset
+id: node.dataset.field_public_records_exempt
+field_name: field_public_records_exempt
+entity_type: node
+bundle: dataset
+label: 'Public records exempt'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Exempt
+  off_label: Nonexempt
+field_type: boolean
