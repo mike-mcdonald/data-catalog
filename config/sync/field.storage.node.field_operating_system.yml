@@ -1,0 +1,20 @@
+uuid: 28abe888-629b-437a-8b73-b96c6d53a981
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_operating_system
+field_name: field_operating_system
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
