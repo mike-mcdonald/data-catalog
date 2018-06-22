@@ -1,0 +1,17 @@
+uuid: efe65c88-060f-494b-80d1-daa0ff86dc7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contact_information
+  module:
+    - user
+id: node.contact_information.default
+targetEntityType: node
+bundle: contact_information
+mode: default
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

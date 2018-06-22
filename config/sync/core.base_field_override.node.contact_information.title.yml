@@ -1,0 +1,18 @@
+uuid: 64466f48-582f-4fa3-9aeb-3157bddfeb8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contact_information
+id: node.contact_information.title
+field_name: title
+entity_type: node
+bundle: contact_information
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
