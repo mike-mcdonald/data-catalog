@@ -1,0 +1,24 @@
+uuid: 523ec164-2c0a-4a75-bb67-3f049ff6e6a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_accessibility_value
+field_name: field_accessibility_value
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Public
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

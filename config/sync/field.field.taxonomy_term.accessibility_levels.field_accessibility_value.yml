@@ -1,0 +1,21 @@
+uuid: 5a0028e2-4f75-4c8a-a7f6-90e4cef40398
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_accessibility_value
+    - taxonomy.vocabulary.accessibility_levels
+  module:
+    - options
+id: taxonomy_term.accessibility_levels.field_accessibility_value
+field_name: field_accessibility_value
+entity_type: taxonomy_term
+bundle: accessibility_levels
+label: 'Accessibility value'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
