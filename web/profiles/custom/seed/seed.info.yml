@@ -29,6 +29,7 @@ dependencies:
   - field_ui
   - file
   - rdf
+  - user
   - views
   - views_ui
   - automated_cron
