@@ -1,0 +1,30 @@
+uuid: 8e8e3d36-fdb1-4e72-80c1-d5e9b265a813
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.accessibility_levels.field_accessibility_value
+    - taxonomy.vocabulary.accessibility_levels
+  module:
+    - options
+    - text
+id: taxonomy_term.accessibility_levels.default
+targetEntityType: taxonomy_term
+bundle: accessibility_levels
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_accessibility_value:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.dataset.body
+    - field.field.node.dataset.field_accessibility_level
     - field.field.node.dataset.field_authority_level
+    - field.field.node.dataset.field_data_custodian
+    - field.field.node.dataset.field_data_owner
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_public_records_exempt
     - field.field.node.dataset.field_purpose
@@ -12,6 +15,7 @@ dependencies:
     - field.field.node.dataset.field_quality_completeness
     - field.field.node.dataset.field_quality_consistency
     - field.field.node.dataset.field_spatial_enabled
+    - field.field.node.dataset.field_subject_matter_experts
     - field.field.node.dataset.field_update_frequency
     - node.type.dataset
   module:
@@ -30,14 +34,35 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
+  field_accessibility_level:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_authority_level:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_data_custodian:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_data_owner:
     weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_keywords:
-    weight: 3
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -46,7 +71,7 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_public_records_exempt:
-    weight: 27
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
@@ -61,32 +86,41 @@ content:
     type: string_textarea
     region: content
   field_quality_accuracy:
-    weight: 6
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_quality_completeness:
-    weight: 8
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_quality_consistency:
-    weight: 7
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_spatial_enabled:
-    weight: 26
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_subject_matter_experts:
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_update_frequency:
-    weight: 5
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select

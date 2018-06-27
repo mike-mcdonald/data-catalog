@@ -1,0 +1,9 @@
+uuid: 26e9a579-3d3e-4312-9fdf-0c9029abc4f8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Operating system'
+vid: operating_system
+description: ''
+hierarchy: 1
+weight: 0

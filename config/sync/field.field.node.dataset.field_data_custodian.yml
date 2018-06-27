@@ -1,0 +1,28 @@
+uuid: c1c1eeaa-f7f0-4d99-b283-1f11b980d276
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_custodian
+    - node.type.contact_information
+    - node.type.dataset
+id: node.dataset.field_data_custodian
+field_name: field_data_custodian
+entity_type: node
+bundle: dataset
+label: 'Data custodian'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      contact_information: contact_information
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
