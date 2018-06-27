@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Dataset
 type: dataset
-description: ''
+description: 'Use this content type to create a new dataset that exists in a database or server'
 help: ''
 new_revision: true
 preview_mode: 1
