@@ -14,6 +14,12 @@ settings:
     -
       value: '1'
       label: Public
+    -
+      value: '2'
+      label: Restricted
+    -
+      value: '3'
+      label: Confidential
   allowed_values_function: ''
 module: options
 locked: false

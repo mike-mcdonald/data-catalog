@@ -17,7 +17,10 @@ content:
     region: content
 hidden:
   body: true
+  field_accessibility_level: true
   field_authority_level: true
+  field_data_custodian: true
+  field_data_owner: true
   field_keywords: true
   field_public_records_exempt: true
   field_purpose: true
@@ -25,4 +28,5 @@ hidden:
   field_quality_completeness: true
   field_quality_consistency: true
   field_spatial_enabled: true
+  field_subject_matter_experts: true
   field_update_frequency: true

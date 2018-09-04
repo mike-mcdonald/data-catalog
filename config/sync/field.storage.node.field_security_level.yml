@@ -1,18 +1,19 @@
-uuid: a55f8cc8-1001-42cd-bc63-f6e0ef06231e
+uuid: 63bc1f77-3fcc-491b-9a29-27f696f96f65
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_subject_matter_experts
-field_name: field_subject_matter_experts
+    - taxonomy
+id: node.field_security_level
+field_name: field_security_level
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

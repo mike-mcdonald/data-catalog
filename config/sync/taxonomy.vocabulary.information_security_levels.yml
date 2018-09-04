@@ -1,0 +1,9 @@
+uuid: eb0f6747-702b-45aa-9ec3-00f60a6a5841
+langcode: en
+status: true
+dependencies: {  }
+name: 'Information security levels'
+vid: information_security_levels
+description: ''
+hierarchy: 0
+weight: 0

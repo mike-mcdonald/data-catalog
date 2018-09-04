@@ -10,7 +10,7 @@ id: node.dataset.field_data_custodian
 field_name: field_data_custodian
 entity_type: node
 bundle: dataset
-label: 'Data custodian'
+label: 'Primary Contact '
 description: ''
 required: false
 translatable: false
@@ -23,6 +23,6 @@ settings:
       contact_information: contact_information
     sort:
       field: _none
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

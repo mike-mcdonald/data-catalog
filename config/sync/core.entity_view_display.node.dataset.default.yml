@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.dataset.body
     - field.field.node.dataset.field_accessibility_level
     - field.field.node.dataset.field_authority_level
     - field.field.node.dataset.field_data_custodian
@@ -11,28 +10,17 @@ dependencies:
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_public_records_exempt
     - field.field.node.dataset.field_purpose
-    - field.field.node.dataset.field_quality_accuracy
-    - field.field.node.dataset.field_quality_completeness
-    - field.field.node.dataset.field_quality_consistency
+    - field.field.node.dataset.field_security_level
     - field.field.node.dataset.field_spatial_enabled
-    - field.field.node.dataset.field_subject_matter_experts
     - field.field.node.dataset.field_update_frequency
     - node.type.dataset
   module:
-    - text
     - user
 id: node.dataset.default
 targetEntityType: node
 bundle: dataset
 mode: default
 content:
-  body:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_accessibility_level:
     weight: 14
     label: above
@@ -90,27 +78,11 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_quality_accuracy:
-    weight: 3
-    label: inline
+  field_security_level:
+    weight: 15
+    label: above
     settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_quality_completeness:
-    weight: 5
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_quality_consistency:
-    weight: 4
-    label: inline
-    settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -123,14 +95,6 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
-    region: content
-  field_subject_matter_experts:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_update_frequency:
     weight: 6
