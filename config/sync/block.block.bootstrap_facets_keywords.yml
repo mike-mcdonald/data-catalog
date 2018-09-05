@@ -1,0 +1,29 @@
+uuid: f04687ac-cd51-4b39-9cbe-47d1d4876188
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.keywords
+  module:
+    - facets
+    - system
+  theme:
+    - bootstrap
+id: bootstrap_facets_keywords
+theme: bootstrap
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:keywords'
+settings:
+  id: 'facet_block:keywords'
+  label: Keywords
+  provider: facets
+  label_display: visible
+  block_id: bootstrap_facets_keywords
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/dataset
+    negate: false
+    context_mapping: {  }
