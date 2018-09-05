@@ -1,0 +1,17 @@
+uuid: 00fd392b-91fc-445e-b10e-cc85ee2240d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Business term'
+type: business_term
+description: 'Use this content type to create terms that describe business lingo that you want to relate to subject areas.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

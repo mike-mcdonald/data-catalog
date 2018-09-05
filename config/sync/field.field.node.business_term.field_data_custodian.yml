@@ -1,0 +1,28 @@
+uuid: 2b203b6e-07fb-4f2c-a455-2c08ea50d785
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_custodian
+    - node.type.business_term
+    - node.type.contact_information
+id: node.business_term.field_data_custodian
+field_name: field_data_custodian
+entity_type: node
+bundle: business_term
+label: 'Primary Contact '
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      contact_information: contact_information
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

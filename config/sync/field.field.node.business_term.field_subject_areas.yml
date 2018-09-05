@@ -1,0 +1,29 @@
+uuid: 1eeb76d8-74dc-422e-afcc-1013365061c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subject_areas
+    - node.type.business_term
+    - taxonomy.vocabulary.subject_area
+id: node.business_term.field_subject_areas
+field_name: field_subject_areas
+entity_type: node
+bundle: business_term
+label: 'Subject areas'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      subject_area: subject_area
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

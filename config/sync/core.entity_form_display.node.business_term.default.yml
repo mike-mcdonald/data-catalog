@@ -1,0 +1,60 @@
+uuid: 5baa84f6-7174-42df-8958-c9d547ae19c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.business_term.body
+    - field.field.node.business_term.field_data_custodian
+    - field.field.node.business_term.field_subject_areas
+    - node.type.business_term
+  module:
+    - shs
+    - text
+id: node.business_term.default
+targetEntityType: node
+bundle: business_term
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_data_custodian:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_subject_areas:
+    weight: 3
+    settings:
+      force_deepest: '1'
+      create_new_items: false
+      create_new_levels: false
+      display_node_count: false
+    third_party_settings: {  }
+    type: options_shs
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,0 +1,18 @@
+uuid: 537a7144-9408-4a88-99d3-a663a168b4b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.business_term
+id: node.business_term.title
+field_name: title
+entity_type: node
+bundle: business_term
+label: Term
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
