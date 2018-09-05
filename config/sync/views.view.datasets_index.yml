@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_purpose
     - field.storage.node.field_telephone_number
     - search_api.index.datasets
+    - system.menu.main
   module:
     - node
     - search_api
@@ -561,6 +562,15 @@ display:
         type: none
       defaults:
         cache: false
+      menu:
+        type: normal
+        title: Find
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
