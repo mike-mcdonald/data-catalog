@@ -1,0 +1,62 @@
+uuid: 3986d636-c32f-48f4-bf07-88cdab1f4586
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subject_areas
+    - search_api.server.database
+  module:
+    - taxonomy
+    - search_api
+    - node
+id: business_terms
+name: 'Business terms'
+description: ''
+read_only: false
+field_settings:
+  business_term_title:
+    label: Term
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 2
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          business_term: default
+  subject_area_name:
+    label: 'Subject areas'
+    datasource_id: 'entity:node'
+    property_path: 'field_subject_areas:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_subject_areas
+      module:
+        - taxonomy
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - business_term
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: database
