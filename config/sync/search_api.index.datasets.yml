@@ -1,0 +1,72 @@
+uuid: e19b9e40-31b1-4b1b-94d3-fd0d25087c5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_keywords
+    - field.storage.node.field_data_custodian
+    - search_api.server.database
+  module:
+    - taxonomy
+    - node
+    - search_api
+id: datasets
+name: Datasets
+description: ''
+read_only: false
+field_settings:
+  data_custodian_title:
+    label: 'Primary contact name'
+    datasource_id: 'entity:node'
+    property_path: 'field_data_custodian:entity:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_data_custodian
+      module:
+        - node
+  dataset_keywords_name:
+    label: Keywords
+    datasource_id: 'entity:node'
+    property_path: 'field_keywords:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_keywords
+      module:
+        - taxonomy
+  dataset_rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        authenticated: authenticated
+      view_mode:
+        'entity:node':
+          dataset: default
+  dataset_title:
+    label: 'Dataset name'
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - dataset
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: database
