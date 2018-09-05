@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.dataset.field_accessibility_level
     - field.field.node.dataset.field_authority_level
     - field.field.node.dataset.field_data_custodian
+    - field.field.node.dataset.field_data_group
     - field.field.node.dataset.field_data_owner
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_public_records_exempt
@@ -23,13 +24,13 @@ bundle: dataset
 mode: default
 content:
   field_accessibility_level:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_authority_level:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -43,6 +44,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_data_group:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_data_owner:
     weight: 3
     settings: {  }
@@ -50,7 +57,7 @@ content:
     type: options_select
     region: content
   field_keywords:
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -59,7 +66,7 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_public_records_exempt:
-    weight: 10
+    weight: 11
     settings:
       display_label: true
     third_party_settings: {  }
@@ -74,20 +81,20 @@ content:
     type: string_textarea
     region: content
   field_security_level:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_spatial_enabled:
-    weight: 7
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_subject_areas:
-    weight: 4
+    weight: 5
     settings:
       force_deepest: '1'
       create_new_items: false
@@ -97,7 +104,7 @@ content:
     type: options_shs
     region: content
   field_update_frequency:
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select

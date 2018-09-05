@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.dataset.field_accessibility_level
     - field.field.node.dataset.field_authority_level
     - field.field.node.dataset.field_data_custodian
+    - field.field.node.dataset.field_data_group
     - field.field.node.dataset.field_data_owner
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_public_records_exempt
@@ -40,6 +41,14 @@ content:
     region: content
   field_data_custodian:
     weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_data_group:
+    weight: 17
     label: above
     settings:
       link: true
