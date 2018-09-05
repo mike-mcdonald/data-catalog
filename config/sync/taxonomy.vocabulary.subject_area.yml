@@ -1,0 +1,9 @@
+uuid: c92b441b-a317-42f6-81ae-0c94583b1ac4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Subject Area'
+vid: subject_area
+description: 'Use this to create a list of subject areas to relate both datasets and business terms.'
+hierarchy: 0
+weight: 0
