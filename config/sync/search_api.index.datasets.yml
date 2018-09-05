@@ -49,7 +49,8 @@ field_settings:
     label: 'Dataset name'
     datasource_id: 'entity:node'
     property_path: title
-    type: string
+    type: text
+    boost: !!float 2
 datasource_settings:
   'entity:node':
     bundles:
