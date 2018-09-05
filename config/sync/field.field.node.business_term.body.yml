@@ -1,0 +1,22 @@
+uuid: 461c884b-1b35-4859-b798-8f013f6b59fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.business_term
+  module:
+    - text
+id: node.business_term.body
+field_name: body
+entity_type: node
+bundle: business_term
+label: Definition
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
