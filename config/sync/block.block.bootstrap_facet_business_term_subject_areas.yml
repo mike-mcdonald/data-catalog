@@ -1,0 +1,29 @@
+uuid: 81bfd0a6-7635-4e7d-9749-7042e90073b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.subject_areas
+  module:
+    - facets
+    - system
+  theme:
+    - bootstrap
+id: bootstrap_facet_business_term_subject_areas
+theme: bootstrap
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'facet_block:subject_areas'
+settings:
+  id: 'facet_block:subject_areas'
+  label: 'Business terms by subject area'
+  provider: facets
+  label_display: visible
+  block_id: bootstrap_facet_business_term_subject_areas
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/business-terms
+    negate: false
+    context_mapping: {  }
