@@ -472,7 +472,7 @@ display:
           fields: {  }
           plugin_id: search_api_fulltext
       sorts: {  }
-      title: 'Business terms index'
+      title: 'Search business terms'
       header:
         result:
           id: result
