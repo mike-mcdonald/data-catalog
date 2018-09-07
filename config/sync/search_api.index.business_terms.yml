@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_keywords
     - field.storage.node.field_subject_areas
     - search_api.server.database
   module:
@@ -20,6 +21,16 @@ field_settings:
     property_path: title
     type: text
     boost: !!float 2
+  keywords_name:
+    label: Keywords
+    datasource_id: 'entity:node'
+    property_path: 'field_keywords:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_keywords
+      module:
+        - taxonomy
   rendered_item:
     label: 'Rendered HTML output'
     property_path: rendered_item
