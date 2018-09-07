@@ -1,0 +1,29 @@
+uuid: 2e7ef291-7c35-4f02-b7e2-7c559311717e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.business_term_keywords
+  module:
+    - facets
+    - system
+  theme:
+    - bootstrap
+id: bootstrap_facet_business_term_keywords
+theme: bootstrap
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:business_term_keywords'
+settings:
+  id: 'facet_block:business_term_keywords'
+  label: 'Business terms by keyword'
+  provider: facets
+  label_display: visible
+  block_id: bootstrap_facet_business_term_keywords
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/business-terms
+    negate: false
+    context_mapping: {  }
