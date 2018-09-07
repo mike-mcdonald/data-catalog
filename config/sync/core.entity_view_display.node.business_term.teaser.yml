@@ -25,4 +25,6 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_data_custodian: true
+  field_subject_areas: true
