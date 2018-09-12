@@ -1,0 +1,16 @@
+uuid: 62d9fe39-feda-43ba-8488-df68d962fa1f
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content editor'
+weight: -8
+is_admin: null
+permissions:
+  - 'create contact_information content'
+  - 'create dataset content'
+  - 'delete own contact_information content'
+  - 'delete own dataset content'
+  - 'view contact_information revisions'
+  - 'view dataset revisions'
+  - 'view own unpublished content'
