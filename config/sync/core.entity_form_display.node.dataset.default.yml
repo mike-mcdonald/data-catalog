@@ -46,9 +46,13 @@ content:
     region: content
   field_data_group:
     weight: 4
-    settings: {  }
+    settings:
+      force_deepest: '1'
+      create_new_items: false
+      create_new_levels: false
+      display_node_count: false
     third_party_settings: {  }
-    type: options_select
+    type: options_shs
     region: content
   field_data_owner:
     weight: 3
