@@ -1,0 +1,60 @@
+uuid: a8ab3496-316a-4b7a-a8fd-b15ec0474fce
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.business_terms
+    - views.view.business_terms_index
+  module:
+    - search_api
+id: business_term_keywords
+name: Keywords
+url_alias: business_term_keywords
+weight: 0
+min_count: 0
+show_only_one_result: false
+field_identifier: keywords_name
+facet_source_id: 'search_api:views_page__business_terms_index__page_1'
+widget:
+  type: links
+  config:
+    show_numbers: true
+    soft_limit: 0
+    soft_limit_settings:
+      show_less_label: 'Show less'
+      show_more_label: 'Show more'
+query_operator: or
+use_hierarchy: false
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+hard_limit: 0
+exclude: false
+only_visible_when_facet_source_is_visible: false
+processor_configs:
+  active_widget_order:
+    processor_id: active_widget_order
+    weights:
+      sort: -10
+    settings:
+      sort: ASC
+  count_widget_order:
+    processor_id: count_widget_order
+    weights:
+      sort: -10
+    settings:
+      sort: DESC
+  display_value_widget_order:
+    processor_id: display_value_widget_order
+    weights:
+      sort: -10
+    settings:
+      sort: ASC
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: -10
+      build: -10
+    settings: {  }
+empty_behavior:
+  behavior: none
+show_title: false

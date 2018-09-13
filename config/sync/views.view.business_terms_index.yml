@@ -1,24 +1,24 @@
-uuid: a1711698-c286-4e69-8bf6-a0d2ecb1859c
+uuid: 5d3d4626-4aa2-4442-888a-d4891b7c859a
 langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.body
     - field.storage.node.field_email_address
-    - field.storage.node.field_purpose
     - field.storage.node.field_telephone_number
-    - search_api.index.datasets
+    - search_api.index.business_terms
     - system.menu.main
   module:
     - node
     - search_api
-    - telephone
+    - text
     - views_bootstrap
-id: datasets_index
-label: 'Search API Datasets'
+id: business_terms_index
+label: 'Business terms index'
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_datasets
+base_table: search_api_index_business_terms
 base_field: search_api_id
 core: 8.x
 display:
@@ -43,19 +43,24 @@ display:
         type: basic
         options:
           submit_button: Search
-          reset_button: false
-          reset_button_label: Reset
+          reset_button: true
+          reset_button_label: Clear
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 30
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -64,75 +69,23 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
         type: views_bootstrap_table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: 1
-          sticky: 0
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            dataset_title: dataset_title
-            field_purpose: field_purpose
-            data_custodian_title: data_custodian_title
-            field_email_address: field_email_address
-            field_telephone_number: field_telephone_number
-          info:
-            dataset_title:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_purpose:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            data_custodian_title:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_email_address:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_telephone_number:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-          default: '-1'
-          empty_table: 0
-          responsive: 1
-          bootstrap_styles:
-            hover: hover
-            condensed: condensed
-            striped: 0
-            bordered: 0
       row:
         type: fields
       fields:
-        dataset_title:
-          id: dataset_title
-          table: search_api_index_datasets
-          field: dataset_title
+        business_term_title:
+          table: search_api_index_business_terms
+          field: business_term_title
+          id: business_term_title
+          entity_type: null
+          entity_field: null
+          plugin_id: search_api_field
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Dataset name'
+          label: 'Term (indexed field)'
           exclude: false
           alter:
             alter_text: false
@@ -175,8 +128,7 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings:
-            link_to_entity: true
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -194,15 +146,14 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          plugin_id: search_api_field
-        field_purpose:
-          id: field_purpose
-          table: search_api_datasource_datasets_entity_node
-          field: field_purpose
+        body:
+          id: body
+          table: search_api_datasource_business_terms_entity_node
+          field: body
           relationship: none
           group_type: group
           admin_label: ''
-          label: Description
+          label: Definition
           exclude: false
           alter:
             alter_text: false
@@ -244,7 +195,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: basic_string
+          type: text_default
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -316,7 +267,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -385,7 +336,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: email_mailto
+          type: basic_string
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -455,9 +406,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: telephone_link
+          type: string
           settings:
-            title: ''
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -480,7 +431,7 @@ display:
       filters:
         search_api_fulltext:
           id: search_api_fulltext
-          table: search_api_index_datasets
+          table: search_api_index_business_terms
           field: search_api_fulltext
           relationship: none
           group_type: group
@@ -521,14 +472,24 @@ display:
           fields: {  }
           plugin_id: search_api_fulltext
       sorts: {  }
-      title: 'Search datasets'
-      header: {  }
+      title: 'Search business terms'
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total business terms'
+          plugin_id: result
       footer: {  }
       empty: {  }
       relationships:
         field_data_custodian:
           id: field_data_custodian
-          table: search_api_datasource_datasets_entity_node
+          table: search_api_datasource_business_terms_entity_node
           field: field_data_custodian
           relationship: none
           group_type: group
@@ -547,8 +508,8 @@ display:
         - url
         - url.query_args
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_email_address'
-        - 'config:field.storage.node.field_purpose'
         - 'config:field.storage.node.field_telephone_number'
   page_1:
     display_plugin: page
@@ -557,20 +518,20 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: search/dataset
-      cache:
-        type: none
-      defaults:
-        cache: false
+      path: search/business-terms
       menu:
         type: normal
-        title: Datasets
+        title: 'Business terms'
         description: ''
         expanded: false
         parent: 'menu_link_content:76a43d96-f1b7-4623-bab1-a68e70e6216d'
         weight: 0
         context: '0'
         menu_name: main
+      cache:
+        type: none
+      defaults:
+        cache: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -579,6 +540,6 @@ display:
         - url
         - url.query_args
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_email_address'
-        - 'config:field.storage.node.field_purpose'
         - 'config:field.storage.node.field_telephone_number'

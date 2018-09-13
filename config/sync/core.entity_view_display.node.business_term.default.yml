@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.business_term.body
     - field.field.node.business_term.field_data_custodian
+    - field.field.node.business_term.field_keywords
     - field.field.node.business_term.field_subject_areas
     - node.type.business_term
   module:
@@ -24,6 +25,14 @@ content:
     region: content
   field_data_custodian:
     weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_keywords:
+    weight: 104
     label: above
     settings:
       link: true
