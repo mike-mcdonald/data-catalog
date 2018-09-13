@@ -564,10 +564,10 @@ display:
         cache: false
       menu:
         type: normal
-        title: Find
+        title: Datasets
         description: ''
         expanded: false
-        parent: ''
+        parent: 'menu_link_content:76a43d96-f1b7-4623-bab1-a68e70e6216d'
         weight: 0
         context: '0'
         menu_name: main
