@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.dataset.field_data_group
     - field.field.node.dataset.field_data_owner
     - field.field.node.dataset.field_keywords
-    - field.field.node.dataset.field_public_records_exempt
     - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_security_level
     - field.field.node.dataset.field_spatial_enabled
@@ -68,13 +67,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
-    region: content
-  field_public_records_exempt:
-    weight: 11
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   field_purpose:
     weight: 1
