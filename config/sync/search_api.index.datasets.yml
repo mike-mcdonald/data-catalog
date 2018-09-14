@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_keywords
     - field.storage.node.field_data_custodian
+    - field.storage.node.field_subject_areas
     - search_api.server.database
   module:
     - taxonomy
@@ -45,6 +46,16 @@ field_settings:
       view_mode:
         'entity:node':
           dataset: default
+  dataset_subject_areas_name:
+    label: 'Subject areas'
+    datasource_id: 'entity:node'
+    property_path: 'field_subject_areas:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_subject_areas
+      module:
+        - taxonomy
   dataset_title:
     label: 'Dataset name'
     datasource_id: 'entity:node'
