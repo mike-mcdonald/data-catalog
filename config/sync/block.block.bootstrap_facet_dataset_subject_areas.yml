@@ -1,26 +1,26 @@
-uuid: f04687ac-cd51-4b39-9cbe-47d1d4876188
+uuid: fc38d067-a3c6-42d7-bec9-8d6de13a857b
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.keywords
+    - facets.facet.dataset_subject_areas
   module:
     - facets
     - system
   theme:
     - bootstrap
-id: bootstrap_facets_keywords
+id: bootstrap_facet_dataset_subject_areas
 theme: bootstrap
 region: sidebar_first
-weight: -4
+weight: -5
 provider: null
-plugin: 'facet_block:keywords'
+plugin: 'facet_block:dataset_subject_areas'
 settings:
-  id: 'facet_block:keywords'
-  label: 'Datasets by keyword'
+  id: 'facet_block:dataset_subject_areas'
+  label: 'Datasets by subject area'
   provider: facets
   label_display: visible
-  block_id: bootstrap_facets_keywords
+  block_id: subjectareas
 visibility:
   request_path:
     id: request_path

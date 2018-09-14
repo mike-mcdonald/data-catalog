@@ -524,8 +524,8 @@ display:
         title: 'Business terms'
         description: ''
         expanded: false
-        parent: 'menu_link_content:76a43d96-f1b7-4623-bab1-a68e70e6216d'
-        weight: 0
+        parent: 'menu_link_content:7d638f5c-848c-484b-8866-10f8579c87d0'
+        weight: 1
         context: '0'
         menu_name: main
       cache:

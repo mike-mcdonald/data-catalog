@@ -14,7 +14,7 @@ dependencies:
     - telephone
     - views_bootstrap
 id: datasets_index
-label: 'Search API Datasets'
+label: 'Datasets index'
 module: views
 description: ''
 tag: ''
@@ -50,12 +50,17 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 30
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -64,9 +69,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
         type: views_bootstrap_table
         options:
@@ -522,7 +525,17 @@ display:
           plugin_id: search_api_fulltext
       sorts: {  }
       title: 'Search datasets'
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total datasets'
+          plugin_id: result
       footer: {  }
       empty: {  }
       relationships:
@@ -567,7 +580,7 @@ display:
         title: Datasets
         description: ''
         expanded: false
-        parent: 'menu_link_content:76a43d96-f1b7-4623-bab1-a68e70e6216d'
+        parent: 'menu_link_content:7d638f5c-848c-484b-8866-10f8579c87d0'
         weight: 0
         context: '0'
         menu_name: main
