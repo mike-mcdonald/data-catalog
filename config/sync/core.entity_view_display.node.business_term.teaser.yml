@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.business_term.body
+    - field.field.node.business_term.field_data_custodian
+    - field.field.node.business_term.field_keywords
+    - field.field.node.business_term.field_subject_areas
     - node.type.business_term
   module:
     - text
@@ -25,6 +28,9 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_data_custodian: true
+  field_keywords: true
   field_subject_areas: true

@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.contact_information.field_email_address
+    - field.field.node.contact_information.field_telephone_number
     - node.type.contact_information
   module:
     - user
@@ -15,6 +17,8 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_email_address: true
   field_telephone_number: true
