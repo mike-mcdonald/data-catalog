@@ -11,7 +11,7 @@ field_name: field_authority_level
 entity_type: node
 bundle: dataset
 label: 'Authority level'
-description: ''
+description: 'Is this the primary, authoritative data source, or data that''s a product of that primary source?'
 required: false
 translatable: false
 default_value: {  }

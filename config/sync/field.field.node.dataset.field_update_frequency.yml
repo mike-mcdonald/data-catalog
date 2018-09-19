@@ -11,7 +11,7 @@ field_name: field_update_frequency
 entity_type: node
 bundle: dataset
 label: 'Frequency updated'
-description: ''
+description: 'How often is the data or dataset updated?'
 required: false
 translatable: false
 default_value: {  }

@@ -10,7 +10,7 @@ field_name: field_spatial_enabled
 entity_type: node
 bundle: dataset
 label: Spatial
-description: ''
+description: 'View the definition <a href="[site:url]term/spatial">here</a>'
 required: false
 translatable: false
 default_value:

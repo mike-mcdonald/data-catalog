@@ -10,7 +10,7 @@ field_name: field_accessibility_level
 entity_type: node
 bundle: dataset
 label: Accessibility
-description: ''
+description: 'View the definition <a href="[site:url]term/accessibility-protected-data">here</a>'
 required: false
 translatable: false
 default_value: {  }
