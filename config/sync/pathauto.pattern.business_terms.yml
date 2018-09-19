@@ -1,0 +1,22 @@
+uuid: 642ebb79-e306-4f96-a1c9-a44e2de9b160
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: business_terms
+label: 'Business terms'
+type: 'canonical_entities:node'
+pattern: 'term/[node:title]'
+selection_criteria:
+  eab8aba4-0201-4a19-ba55-241dbf07e1e6:
+    id: node_type
+    bundles:
+      business_term: business_term
+    negate: false
+    context_mapping:
+      node: node
+    uuid: eab8aba4-0201-4a19-ba55-241dbf07e1e6
+selection_logic: and
+weight: -5
+relationships: {  }

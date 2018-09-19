@@ -1,0 +1,22 @@
+uuid: 6623027e-b869-49ef-a496-c4da17c3c384
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: datasets
+label: Datasets
+type: 'canonical_entities:node'
+pattern: 'dataset/[node:title]'
+selection_criteria:
+  3cec4a89-e13e-478c-b5ed-125681ccbda3:
+    id: node_type
+    bundles:
+      dataset: dataset
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3cec4a89-e13e-478c-b5ed-125681ccbda3
+selection_logic: and
+weight: -5
+relationships: {  }
