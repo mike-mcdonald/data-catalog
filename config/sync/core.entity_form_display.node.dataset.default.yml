@@ -46,7 +46,7 @@ content:
   field_data_group:
     weight: 4
     settings:
-      force_deepest: true
+      force_deepest: '1'
       create_new_items: false
       create_new_levels: false
       display_node_count: false
@@ -92,7 +92,7 @@ content:
   field_subject_areas:
     weight: 5
     settings:
-      force_deepest: true
+      force_deepest: '1'
       create_new_items: false
       create_new_levels: false
       display_node_count: false
