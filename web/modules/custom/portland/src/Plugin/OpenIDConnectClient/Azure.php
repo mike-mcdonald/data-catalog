@@ -276,10 +276,8 @@ class Azure extends OpenIDConnectClientBase {
         $profile_data['email'] = $profile_data[$backup_mail_property];
       }
 
-      // make all emails lowercase
-      $profile_data['email'] = strtolower($profile_data['email']);
       // create username from the email address
-      $profile_data['name'] = explode('@', $profile_data['email'])[0];
+      $profile_data['name'] = strtolower(explode('@', $profile_data['email'])[0]);
 
       return $profile_data;
     }
