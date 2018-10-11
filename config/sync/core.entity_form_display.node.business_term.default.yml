@@ -46,7 +46,7 @@ content:
   field_subject_areas:
     weight: 2
     settings:
-      force_deepest: '1'
+      force_deepest: true
       create_new_items: false
       create_new_levels: false
       display_node_count: false
