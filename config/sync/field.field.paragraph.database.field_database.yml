@@ -1,0 +1,29 @@
+uuid: 34f5240e-ad07-477c-92e3-93d2d10fe705
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_database
+    - paragraphs.paragraphs_type.database
+    - taxonomy.vocabulary.database
+id: paragraph.database.field_database
+field_name: field_database
+entity_type: paragraph
+bundle: database
+label: Database
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      database: database
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

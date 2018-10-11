@@ -1,0 +1,9 @@
+uuid: 71179f78-bf12-4cea-9063-59d14795678a
+langcode: en
+status: true
+dependencies: {  }
+id: database
+label: Database
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

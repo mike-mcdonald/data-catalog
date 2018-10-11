@@ -1,0 +1,26 @@
+uuid: c126e6bc-21cf-45b3-bed6-b50a3e4b0ad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.database.field_database
+    - paragraphs.paragraphs_type.database
+  module:
+    - select_or_other
+id: paragraph.database.default
+targetEntityType: paragraph
+bundle: database
+mode: default
+content:
+  field_database:
+    weight: 0
+    settings:
+      select_element_type: select_or_other_select
+      sort_options: ''
+    third_party_settings: {  }
+    type: select_or_other_reference
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
