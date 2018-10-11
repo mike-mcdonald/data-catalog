@@ -1,0 +1,9 @@
+uuid: 06187209-568c-4d1a-9529-fec4260b78a4
+langcode: en
+status: true
+dependencies: {  }
+name: 'File type'
+vid: file_type
+description: ''
+hierarchy: 0
+weight: 0

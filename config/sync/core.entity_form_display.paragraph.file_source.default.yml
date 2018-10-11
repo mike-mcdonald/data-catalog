@@ -1,0 +1,26 @@
+uuid: c54dbb58-14a7-4249-aa3f-a05a21511a4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.file_source.field_file_type
+    - paragraphs.paragraphs_type.file_source
+  module:
+    - select_or_other
+id: paragraph.file_source.default
+targetEntityType: paragraph
+bundle: file_source
+mode: default
+content:
+  field_file_type:
+    weight: 0
+    settings:
+      select_element_type: select_or_other_select
+      sort_options: ''
+    third_party_settings: {  }
+    type: select_or_other_reference
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

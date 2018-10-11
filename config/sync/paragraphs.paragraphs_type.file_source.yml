@@ -1,0 +1,9 @@
+uuid: 68413108-a7a4-46cd-9c46-2de60b539881
+langcode: en
+status: true
+dependencies: {  }
+id: file_source
+label: 'File source'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

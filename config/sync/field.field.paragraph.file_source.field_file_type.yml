@@ -1,0 +1,29 @@
+uuid: 4afc0de0-353b-4c76-80bb-5cf4f8cbffd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_file_type
+    - paragraphs.paragraphs_type.file_source
+    - taxonomy.vocabulary.file_type
+id: paragraph.file_source.field_file_type
+field_name: field_file_type
+entity_type: paragraph
+bundle: file_source
+label: 'File type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      file_type: file_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

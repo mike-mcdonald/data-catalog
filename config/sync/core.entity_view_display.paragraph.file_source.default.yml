@@ -1,0 +1,21 @@
+uuid: ae478b6d-680a-42ee-874e-c259fde2db47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.file_source.field_file_type
+    - paragraphs.paragraphs_type.file_source
+id: paragraph.file_source.default
+targetEntityType: paragraph
+bundle: file_source
+mode: default
+content:
+  field_file_type:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }
