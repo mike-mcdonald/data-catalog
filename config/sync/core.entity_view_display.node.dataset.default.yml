@@ -11,11 +11,13 @@ dependencies:
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_security_level
+    - field.field.node.dataset.field_source
     - field.field.node.dataset.field_spatial_enabled
     - field.field.node.dataset.field_subject_areas
     - field.field.node.dataset.field_update_frequency
     - node.type.dataset
   module:
+    - entity_reference_revisions
     - user
 id: node.dataset.default
 targetEntityType: node
@@ -84,6 +86,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_source:
+    type: entity_reference_revisions_entity_view
+    weight: 18
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_spatial_enabled:
     weight: 9

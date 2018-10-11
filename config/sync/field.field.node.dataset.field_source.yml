@@ -1,0 +1,39 @@
+uuid: bca85104-ff98-4686-b000-2ced343620ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source
+    - node.type.dataset
+    - paragraphs.paragraphs_type.database
+    - paragraphs.paragraphs_type.file_source
+  module:
+    - entity_reference_revisions
+id: node.dataset.field_source
+field_name: field_source
+entity_type: node
+bundle: dataset
+label: Source
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      database: database
+      file_source: file_source
+    target_bundles_drag_drop:
+      database:
+        enabled: true
+        weight: 4
+      file_source:
+        enabled: true
+        weight: 5
+      notes:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions
