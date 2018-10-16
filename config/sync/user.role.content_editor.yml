@@ -11,6 +11,8 @@ permissions:
   - 'create dataset content'
   - 'delete own contact_information content'
   - 'delete own dataset content'
+  - 'edit own contact_information content'
+  - 'edit own dataset content'
   - 'view contact_information revisions'
   - 'view dataset revisions'
   - 'view own unpublished content'
