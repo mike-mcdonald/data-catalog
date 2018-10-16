@@ -226,6 +226,17 @@ $databases = [];
  * @endcode
  */
 
+ $databases['default']['default'] = [
+  'database' => getenv('DB_DATABASE'),
+  'username' => getenv('DB_USERNAME'),
+  'password' => getenv('DB_PASSWORD'),
+  'prefix' => '',
+  'host' => getenv('DB_HOSTNAME'),
+  'port' => getenv('DB_PORT'),
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
+  'driver' => 'pgsql',
+ ];
+
 /**
  * Location of the site configuration files.
  *
@@ -251,7 +262,9 @@ $databases = [];
  *   );
  * @endcode
  */
-$config_directories = [];
+$config_directories = [
+  CONFIG_SYNC_DIRECTORY => getenv('CONFIG_SYNC_DIRECTORY'),
+];
 
 /**
  * Settings:
@@ -280,7 +293,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = getenv('HASH_SALT');
 
 /**
  * Deployment identifier.
