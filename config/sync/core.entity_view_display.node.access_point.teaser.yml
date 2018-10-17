@@ -1,0 +1,20 @@
+uuid: 323fe8f2-5d13-4283-b8ec-e6cc1f5c9ef5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.access_point
+  module:
+    - user
+id: node.access_point.teaser
+targetEntityType: node
+bundle: access_point
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,18 @@
+uuid: 5f996ef7-8d59-465e-98cf-56daced18cfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.access_point
+id: node.access_point.title
+field_name: title
+entity_type: node
+bundle: access_point
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

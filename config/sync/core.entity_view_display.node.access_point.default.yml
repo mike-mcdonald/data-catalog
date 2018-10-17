@@ -1,0 +1,68 @@
+uuid: a715b3dc-3a53-432e-af64-16642a9e3b35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.access_point.field_data_custodian
+    - field.field.node.access_point.field_keywords
+    - field.field.node.access_point.field_purpose
+    - field.field.node.access_point.field_subject_areas
+    - field.field.node.access_point.field_url
+    - node.type.access_point
+  module:
+    - link
+    - user
+id: node.access_point.default
+targetEntityType: node
+bundle: access_point
+mode: default
+content:
+  field_data_custodian:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_keywords:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_purpose:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_subject_areas:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_url:
+    weight: 105
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

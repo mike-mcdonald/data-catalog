@@ -1,0 +1,19 @@
+uuid: ae6bcf74-44ae-4220-9519-8bd986fc03bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_purpose
+    - node.type.access_point
+id: node.access_point.field_purpose
+field_name: field_purpose
+entity_type: node
+bundle: access_point
+label: Description
+description: 'Please describe what this access point contains or enables.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
