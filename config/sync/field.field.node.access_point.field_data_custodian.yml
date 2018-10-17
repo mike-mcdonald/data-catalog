@@ -1,0 +1,28 @@
+uuid: dbe46fe8-d565-45d4-9fd9-55f03a265daf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_custodian
+    - node.type.access_point
+    - node.type.contact_information
+id: node.access_point.field_data_custodian
+field_name: field_data_custodian
+entity_type: node
+bundle: access_point
+label: 'Primary Contact '
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      contact_information: contact_information
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

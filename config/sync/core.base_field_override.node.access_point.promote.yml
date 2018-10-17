@@ -1,0 +1,22 @@
+uuid: 2be542ba-34b0-4299-9295-252e8112c2f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.access_point
+id: node.access_point.promote
+field_name: promote
+entity_type: node
+bundle: access_point
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

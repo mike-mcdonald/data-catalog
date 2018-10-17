@@ -1,0 +1,17 @@
+uuid: 045ffa32-e2b8-46a2-ab37-defc6d956db1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Access point'
+type: access_point
+description: 'An access point is an online source for retrieving datasets'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
