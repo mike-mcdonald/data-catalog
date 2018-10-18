@@ -7,12 +7,17 @@ label: 'Content editor'
 weight: -8
 is_admin: null
 permissions:
+  - 'access content'
+  - 'create access_point content'
   - 'create contact_information content'
   - 'create dataset content'
+  - 'delete own access_point content'
   - 'delete own contact_information content'
   - 'delete own dataset content'
+  - 'edit own access_point content'
   - 'edit own contact_information content'
   - 'edit own dataset content'
+  - 'view access_point revisions'
   - 'view contact_information revisions'
   - 'view dataset revisions'
   - 'view own unpublished content'
