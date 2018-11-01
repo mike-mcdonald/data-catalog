@@ -12,6 +12,7 @@ permissions:
   - 'create contact_information content'
   - 'create dataset content'
   - 'create terms in database'
+  - 'create terms in file_type'
   - 'delete own access_point content'
   - 'delete own contact_information content'
   - 'delete own dataset content'
