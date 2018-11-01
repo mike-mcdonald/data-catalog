@@ -1,0 +1,9 @@
+uuid: 6263fc6d-353c-46ae-8f9d-9f6558f27fad
+langcode: en
+status: true
+dependencies: {  }
+name: Database
+vid: database
+description: 'Use this to add databases that exist on accessible servers'
+hierarchy: 0
+weight: 0
