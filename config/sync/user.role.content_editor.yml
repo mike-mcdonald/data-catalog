@@ -7,12 +7,15 @@ label: 'Content editor'
 weight: -8
 is_admin: null
 permissions:
+  - 'access administration pages'
   - 'access content'
+  - 'access taxonomy overview'
   - 'create access_point content'
   - 'create contact_information content'
   - 'create dataset content'
   - 'create terms in database'
   - 'create terms in file_type'
+  - 'create terms in keywords'
   - 'delete own access_point content'
   - 'delete own contact_information content'
   - 'delete own dataset content'
@@ -23,3 +26,4 @@ permissions:
   - 'view contact_information revisions'
   - 'view dataset revisions'
   - 'view own unpublished content'
+  - 'view the administration theme'
