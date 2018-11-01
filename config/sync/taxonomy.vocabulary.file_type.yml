@@ -1,0 +1,9 @@
+uuid: 88762f09-9585-4b1f-813a-3c016e8426d4
+langcode: en
+status: true
+dependencies: {  }
+name: 'File type'
+vid: file_type
+description: 'Use this to manage the file types that can be selected as a dataset source.'
+hierarchy: 0
+weight: 0
