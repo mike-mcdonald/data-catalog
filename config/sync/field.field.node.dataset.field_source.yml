@@ -1,0 +1,31 @@
+uuid: 425f6f11-c2b9-49f5-8751-110aa3d9c0fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source
+    - node.type.dataset
+    - taxonomy.vocabulary.database
+    - taxonomy.vocabulary.file_type
+id: node.dataset.field_source
+field_name: field_source
+entity_type: node
+bundle: dataset
+label: Source
+description: 'Select the source database or file type for this dataset. If you do not see an appropriate option, add one from the Manage>Taxonomies menu option above.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      database: database
+      file_type: file_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: database
+field_type: entity_reference
