@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_security_level
+    - field.field.node.dataset.field_source
     - field.field.node.dataset.field_spatial_enabled
     - field.field.node.dataset.field_subject_areas
     - field.field.node.dataset.field_update_frequency
@@ -23,13 +24,13 @@ bundle: dataset
 mode: default
 content:
   field_accessibility_level:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_authority_level:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -46,7 +47,7 @@ content:
   field_data_group:
     weight: 4
     settings:
-      force_deepest: '1'
+      force_deepest: true
       create_new_items: false
       create_new_levels: false
       display_node_count: false
@@ -77,13 +78,19 @@ content:
     type: string_textarea
     region: content
   field_security_level:
-    weight: 10
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_source:
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_spatial_enabled:
-    weight: 8
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
@@ -92,7 +99,7 @@ content:
   field_subject_areas:
     weight: 5
     settings:
-      force_deepest: '1'
+      force_deepest: true
       create_new_items: false
       create_new_levels: false
       display_node_count: false
