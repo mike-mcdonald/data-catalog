@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.business_term.field_subject_areas
     - node.type.business_term
   module:
+    - cshs
     - text
     - user
 id: node.business_term.default
@@ -43,9 +44,11 @@ content:
     weight: 103
     label: above
     settings:
-      link: true
+      separator: ' » '
+      linked: false
+      reverse: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: cshs_full_hierarchy
     region: content
   links:
     weight: 100

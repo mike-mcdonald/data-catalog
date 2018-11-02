@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.access_point.field_url
     - node.type.access_point
   module:
+    - cshs
     - link
     - user
 id: node.access_point.default
@@ -44,9 +45,11 @@ content:
     weight: 104
     label: above
     settings:
-      link: true
+      separator: ' » '
+      linked: false
+      reverse: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: cshs_full_hierarchy
     region: content
   field_url:
     weight: 105
@@ -62,7 +65,7 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
