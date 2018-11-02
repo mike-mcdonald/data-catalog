@@ -22,7 +22,8 @@ settings:
     target_bundles:
       contact_information: contact_information
     sort:
-      field: _none
+      field: title
+      direction: ASC
     auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference
