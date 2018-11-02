@@ -1,6 +1,10 @@
 schemas:
   bootstrap: 8000
   pbot: 8000
+logo:
+  path: ''
+  url: ''
+  use_default: true
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
@@ -11,7 +15,5 @@ features:
   comment_user_verification: true
   favicon: false
   node_user_picture: true
-logo:
-  path: ''
-  url: ''
-  use_default: false
+navbar_inverse: 1
+table: ''
