@@ -1,10 +1,33 @@
 /**
  * Place your custom styles here.
  */
-.select-wrapper + .select-wrapper {
+.select-wrapper+.select-wrapper {
   margin-top: .5rem;
 }
 
 .table-responsive {
   overflow-x: hidden;
+}
+
+.select2-container .selection:after {
+  color: #337ab7;
+  content: '▼';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: -.5em;
+  padding-right: .5em;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 10;
+}
+
+.has-glyphicons .select2-container .selection:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\e114';
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
 }
