@@ -28,6 +28,7 @@
         "drupal/bootstrap_library": "^1.11",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.6.1",
+        "drupal/cshs": "^1.0@beta",
         "drupal/ds": "^3.1",
         "drupal/facets": "^1.1",
         "drupal/field_group": "^1.0",

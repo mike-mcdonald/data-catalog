@@ -12,6 +12,7 @@ module:
   ckeditor: 0
   color: 0
   config: 0
+  cshs: 0
   ctools: 0
   datetime: 0
   dblog: 0
