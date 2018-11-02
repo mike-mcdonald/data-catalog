@@ -11,7 +11,7 @@ field_name: field_keywords
 entity_type: node
 bundle: dataset
 label: Keywords
-description: ''
+description: 'Click above to select keywords that apply to this dataset. Type to search the list and select the applicable keyword. This input allows multiple selections, so repeat the process to add keywords.'
 required: false
 translatable: false
 default_value: {  }

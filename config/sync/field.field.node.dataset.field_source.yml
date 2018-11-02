@@ -12,7 +12,7 @@ field_name: field_source
 entity_type: node
 bundle: dataset
 label: Source
-description: 'Select the source database or file type for this dataset. If you do not see an appropriate option, add one from the Manage>Taxonomies menu option above.'
+description: 'Select the source database or file type for this dataset. If you do not see an appropriate option, add one from the Manage>Taxonomies menu option above or by clicking <a href="[site:url]admin/structure/taxonomy">here</a>.'
 required: false
 translatable: false
 default_value: {  }
