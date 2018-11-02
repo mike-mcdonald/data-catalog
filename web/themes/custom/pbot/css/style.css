@@ -1,0 +1,10 @@
+/**
+ * Place your custom styles here.
+ */
+.select-wrapper + .select-wrapper {
+  margin-top: .5rem;
+}
+
+.table-responsive {
+  overflow-x: hidden;
+}

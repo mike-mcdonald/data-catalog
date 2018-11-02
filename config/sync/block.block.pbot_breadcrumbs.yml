@@ -1,0 +1,22 @@
+uuid: 85fe459e-b023-4022-ad4a-3000c1e82631
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pbot
+_core:
+  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+id: pbot_breadcrumbs
+theme: pbot
+region: header
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

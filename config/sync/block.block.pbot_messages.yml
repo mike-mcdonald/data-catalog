@@ -1,0 +1,22 @@
+uuid: 156eeab9-4a66-4e9e-a514-b9672edec632
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pbot
+_core:
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: pbot_messages
+theme: pbot
+region: header
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

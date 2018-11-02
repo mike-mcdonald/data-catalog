@@ -1,0 +1,29 @@
+uuid: 55d1f8dd-6204-455a-97c4-b6ed98d282fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.dataset_subject_areas
+  module:
+    - facets
+    - system
+  theme:
+    - pbot
+id: pbot_facet_dataset_subject_areas
+theme: pbot
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'facet_block:dataset_subject_areas'
+settings:
+  id: 'facet_block:dataset_subject_areas'
+  label: 'Datasets by subject area'
+  provider: facets
+  label_display: visible
+  block_id: subjectareas
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/dataset
+    negate: false
+    context_mapping: {  }

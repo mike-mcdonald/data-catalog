@@ -12,6 +12,7 @@ module:
   ckeditor: 0
   color: 0
   config: 0
+  cshs: 0
   ctools: 0
   datetime: 0
   dblog: 0
@@ -39,7 +40,6 @@ module:
   search_api: 0
   search_api_db: 0
   select2: 0
-  shs: 0
   system: 0
   taxonomy: 0
   telephone: 0
@@ -61,6 +61,7 @@ theme:
   seven: 0
   adminimal_theme: 0
   bootstrap: 0
+  pbot: 0
 profile: seed
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

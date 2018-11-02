@@ -1,0 +1,22 @@
+uuid: c5cc7d5f-3371-48c0-b7d4-adb34d2925b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pbot
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: pbot_content
+theme: pbot
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
