@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.dataset.field_update_frequency
     - node.type.dataset
   module:
+    - select2
     - shs
 id: node.dataset.default
 targetEntityType: node
@@ -38,11 +39,11 @@ content:
   field_data_custodian:
     weight: 2
     settings:
+      width: 100%
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_data_group:
     weight: 4
@@ -64,10 +65,10 @@ content:
     weight: 6
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
+      width: 100%
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: select2_entity_reference
     region: content
   field_purpose:
     weight: 1
