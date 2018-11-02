@@ -1,6 +1,10 @@
 /**
  * Place your custom styles here.
  */
+.navbar .logo {
+  width: 10rem;
+}
+
 .select-wrapper+.select-wrapper {
   margin-top: .5rem;
 }
