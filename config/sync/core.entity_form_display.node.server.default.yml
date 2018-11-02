@@ -7,7 +7,6 @@ dependencies:
     - node.type.server
   module:
     - path
-    - shs
 id: node.server.default
 targetEntityType: node
 bundle: server
@@ -20,14 +19,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_operating_system:
-    weight: 1
+    weight: 26
     settings:
-      force_deepest: true
-      create_new_items: false
-      create_new_levels: false
-      display_node_count: false
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_shs
+    type: entity_reference_autocomplete
     region: content
   path:
     type: path
