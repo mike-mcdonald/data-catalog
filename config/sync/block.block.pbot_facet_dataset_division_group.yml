@@ -1,0 +1,29 @@
+uuid: 492d6292-fbd6-4820-b3dd-9b73154788b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.datasets_division_group
+  module:
+    - facets
+    - system
+  theme:
+    - pbot
+id: pbot_facet_dataset_division_group
+theme: pbot
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'facet_block:datasets_division_group'
+settings:
+  id: 'facet_block:datasets_division_group'
+  label: 'Datasets by Division/Group'
+  provider: facets
+  label_display: visible
+  block_id: pbot_facet_dataset_division_group
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/dataset
+    negate: false
+    context_mapping: {  }

@@ -12,7 +12,7 @@ dependencies:
 id: pbot_facet_business_term_keywords
 theme: pbot
 region: sidebar_first
-weight: -6
+weight: -7
 provider: null
 plugin: 'facet_block:business_term_keywords'
 settings:
