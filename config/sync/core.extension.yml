@@ -38,6 +38,7 @@ module:
   rdf: 0
   search_api: 0
   search_api_db: 0
+  select2: 0
   shs: 0
   system: 0
   taxonomy: 0
