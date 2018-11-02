@@ -3,13 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_keywords
     - field.storage.node.field_data_custodian
+    - field.storage.node.field_data_group
+    - field.storage.node.field_keywords
+    - field.storage.node.field_source
     - field.storage.node.field_subject_areas
     - search_api.server.database
   module:
-    - taxonomy
     - node
+    - taxonomy
     - search_api
 id: datasets
 name: Datasets
@@ -26,6 +28,15 @@ field_settings:
         - field.storage.node.field_data_custodian
       module:
         - node
+        - node
+  dataset_data_group:
+    label: Division/Group
+    datasource_id: 'entity:node'
+    property_path: field_data_group
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_data_group
   dataset_keywords_name:
     label: Keywords
     datasource_id: 'entity:node'
@@ -35,6 +46,7 @@ field_settings:
       config:
         - field.storage.node.field_keywords
       module:
+        - taxonomy
         - taxonomy
   dataset_rendered_item:
     label: 'Rendered HTML output'
@@ -46,6 +58,14 @@ field_settings:
       view_mode:
         'entity:node':
           dataset: default
+  dataset_source:
+    label: Source
+    datasource_id: 'entity:node'
+    property_path: field_source
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_source
   dataset_subject_areas_name:
     label: 'Subject areas'
     datasource_id: 'entity:node'
@@ -56,12 +76,16 @@ field_settings:
         - field.storage.node.field_subject_areas
       module:
         - taxonomy
+        - taxonomy
   dataset_title:
     label: 'Dataset name'
     datasource_id: 'entity:node'
     property_path: title
     type: text
     boost: !!float 2
+    dependencies:
+      module:
+        - node
 datasource_settings:
   'entity:node':
     bundles:
@@ -74,6 +98,12 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  hierarchy:
+    fields:
+      dataset_data_group: taxonomy_term-parent
+      dataset_source: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
   rendered_item: {  }
 tracker_settings:
   default:
