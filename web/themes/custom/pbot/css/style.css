@@ -17,7 +17,7 @@ body,
 }
 
 .form-control {
-  height: unset;
+  height: unset !important;
 }
 
 .navbar .logo {
