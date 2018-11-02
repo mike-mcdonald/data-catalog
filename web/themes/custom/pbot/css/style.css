@@ -1,6 +1,25 @@
 /**
  * Place your custom styles here.
  */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800');
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body,
+.form-control,
+.btn,
+.help-block {
+  font-size: 16px !important;
+}
+
+.form-control {
+  height: unset;
+}
+
 .navbar .logo {
   width: 10rem;
 }
