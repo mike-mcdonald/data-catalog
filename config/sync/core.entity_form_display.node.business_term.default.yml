@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.business_term.field_subject_areas
     - node.type.business_term
   module:
+    - cshs
+    - select2
     - text
 id: node.business_term.default
 targetEntityType: node
@@ -28,28 +30,28 @@ content:
     weight: 4
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
+      width: 100%
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_keywords:
     weight: 3
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
+      width: 100%
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: select2_entity_reference
     region: content
   field_subject_areas:
     weight: 26
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      parent: 0
+      level_labels: ''
+      force_deepest: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: cshs
     region: content
   title:
     type: string_textfield

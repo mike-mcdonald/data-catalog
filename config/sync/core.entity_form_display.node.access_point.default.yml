@@ -10,8 +10,10 @@ dependencies:
     - field.field.node.access_point.field_url
     - node.type.access_point
   module:
+    - cshs
     - link
     - path
+    - select2
 id: node.access_point.default
 targetEntityType: node
 bundle: access_point
@@ -27,19 +29,19 @@ content:
     weight: 3
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
+      width: 100%
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_keywords:
     weight: 4
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
+      width: 100%
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_purpose:
     weight: 1
@@ -52,11 +54,11 @@ content:
   field_subject_areas:
     weight: 5
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      parent: 0
+      level_labels: ''
+      force_deepest: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: cshs
     region: content
   field_url:
     weight: 2
