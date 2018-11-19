@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fill-current stroke-current h-6 w-6 feather feather-maximize-2" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <polyline points="8.943 2.78 14.943 2.78 14.943 8.78" transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, -0.589054, 10.137899)"/>
+  <polyline points="15.603 21.282 9.603 21.282 9.603 15.282" transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, -9.846786, 14.226931)" bx:origin="0.441172 0.619598"/>
+  <line x1="14.829" y1="2.672" x2="9.172" y2="8.329" transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, -0.374576, 10.096694)"/>
+  <line x1="9.171" y1="21.328" x2="14.828" y2="15.671" transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, -9.566549, 13.903306)"/>
+</svg>
