@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Theme override for a 'textarea' #type form element.
+ *
+ * Available variables
+ * - wrapper_attributes: A list of HTML attributes for the wrapper element.
+ * - attributes: A list of HTML attributes for the textarea element.
+ * - resizable: An indicator for whether the textarea is resizable.
+ * - required: An indicator for whether the textarea is required.
+ * - value: The textarea content.
+ *
+ * @see template_preprocess_textarea()
+ */
+#}
+{%
+  set textarea_classes = textarea_classes|default([
+    'bg-grey-lighter',
+    'appearance-none',
+    'block',
+    'border-2',
+    'border-grey',
+    'rounded',
+    'w-full',
+    'py-2',
+    'px-4',
+    'mb-2',
+    'leading-tight',
+    'focus:outline-none',
+    'focus:bg-white',
+    'focus:border-grey-darkest',
+  ])
+%}
+<div{{ wrapper_attributes }}>
+  <textarea{{ attributes.addClass(textarea_classes) }}>{{ value }}</textarea>
+</div>

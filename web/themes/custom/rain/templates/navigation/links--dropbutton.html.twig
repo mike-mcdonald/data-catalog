@@ -1,0 +1,95 @@
+{% embed 'links.html.twig' with {
+  'list_classes': [
+    'list-reset',
+    'relative',
+  ],
+  'list_item_classes': [
+    'flex',
+    'flex-row',
+    'items-center',
+    'justify-between',
+    'bg-blue',
+    'appearance-none',
+    'cursor-pointer',
+    'border-2',
+    'border-b-4',
+    'border-blue-dark',
+    'rounded-lg',
+    'p-2',
+    'text-white',
+    'leading-tight',
+    'focus:outline-none',
+    'focus:border-blue-dark',
+    'hover:border-blue-dark',
+  ],
+} %}
+{% set secondary_list_attributes = secondary_list_attributes|default(create_attribute()) %}
+{% set secondary_list_classes = secondary_list_classes|default([
+  'relative',
+  'list-reset',
+  'secondary-action',
+]) %}
+
+{% set secondary_list_item_classes = secondary_list_item_classes|default([
+  'flex',
+  'flex-row',
+  'items-center',
+  'justify-between',
+  'bg-grey-light',
+  'appearance-none',
+  'cursor-pointer',
+  'border-2',
+  'border-grey-dark',
+  'p-2',
+  'text-body',
+  'leading-tight',
+  'focus:outline-none',
+]) %}
+
+{% set pin_attributes = pin_attributes|default(create_attribute()) %}
+{% set pin_classes = pin_classes|default([
+  'absolute',
+  'pin-t',
+  'pin-l',
+  'pin-r',
+  'z-50',
+]) %}
+
+{% set dropbutton_classes = dropbutton_classes|default([
+  'dropbutton-action',
+]) %}
+
+{% block list %}
+  <div{{ attributes.addClass(list_classes) }}>
+    {% set first = links|first %}
+    <span{{ first.attributes.addClass(list_item_classes).addClass(dropbutton_classes) }}>
+      {%- if first.link -%}
+        <a{{ link_attributes.addClass(link_classes) }} href="{{ first.link['#url'].toString() }}">{{ first.text }}</a>
+      {%- elseif first.text_attributes -%}
+        <span{{ first.text_attributes }}>{{ first.text }}</span>
+      {%- else -%}
+        {{ first.text }}
+      {%- endif -%}
+    </span>
+    {% if links|length > 1 %}
+      <div{{ secondary_list_attributes.addClass(secondary_list_classes).addClass(dropbutton_classes) }}>
+        <div{{ pin_attributes.addClass(pin_classes) }}>
+          {%- for item in links -%}
+            {% if not loop.first %}
+            <span{{ item.attributes.removeClass(secondary_list_classes).removeClass(dropbutton_classes).addClass(secondary_list_item_classes) }}>
+              {%- if item.link -%}
+                <a{{ link_attributes.addClass(link_classes) }} href="{{ item.link['#url'].toString() }}">{{ item.text }}</a>
+              {%- elseif item.text_attributes -%}
+                <span{{ item.text_attributes }}>{{ item.text }}</span>
+              {%- else -%}
+                {{ item.text }}
+              {%- endif -%}
+            </span>
+            {% endif %}
+          {%- endfor -%}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}
+{% endembed %}
