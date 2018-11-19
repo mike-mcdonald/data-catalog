@@ -1,0 +1,81 @@
+
+/**
+ * @file
+ * Override styles for dropbuttons.
+ */
+
+/**
+ * The dropbutton styling.
+ *
+ * A dropbutton is a widget that displays a list of action links as a button
+ * with a primary action. Secondary actions are hidden behind a click on a
+ * twisty arrow.
+ *
+ * The arrow is created using border on a zero-width, zero-height span.
+ * The arrow inherits the link color, but can be overridden with border colors.
+ */
+
+.dropbutton-multiple.open,
+.dropbutton-multiple.open .dropbutton-widget {
+  max-width: none;
+}
+.dropbutton-multiple.open {
+  z-index: 100;
+}
+.dropbutton-multiple .dropbutton .secondary-action {
+  display: none;
+}
+.dropbutton-multiple.open .dropbutton .secondary-action {
+  display: block;
+}
+[dir="rtl"] .dropbutton-toggle {
+  left: 0;
+  right: auto;
+}
+.js .form-actions .dropbutton .dropbutton-action > * {
+  text-shadow: none;
+}
+
+.js .form-actions .dropbutton .dropbutton-action > *,
+.js .dropbutton-widget .dropbutton-action a,
+.js .dropbutton-widget .dropbutton-action input,
+.js .dropbutton-widget .dropbutton-action button,
+.js .dropbutton-multiple .dropbutton-widget,
+.js .dropbutton-widget .dropbutton-action input,
+.js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.js .dropbutton-wrapper .dropbutton-widget .dropbutton-action a:hover,
+.js .dropbutton-wrapper .dropbutton-widget .dropbutton-action button:hover,
+.js .dropbutton-wrapper .dropbutton-widget .dropbutton-action input:hover,
+.js .dropbutton-wrapper .dropbutton-widget .dropbutton-action a:focus,
+.js .dropbutton-wrapper .dropbutton-widget .dropbutton-action button:focus,
+.js .dropbutton-wrapper .dropbutton-widget .dropbutton-action input:focus {
+  box-shadow: none;
+}
+
+.js .dropbutton-multiple .dropbutton-widget {
+  background-image: none;
+  text-shadow: none;
+}
+
+.js .form-actions .dropbutton-multiple .dropbutton-widget {
+  background-color: #0071b8;
+}
+
+.js .dropbutton-multiple .dropbutton-widget {
+  text-shadow: none;
+}
+
+.js .dropbutton-multiple.open .dropbutton-action:first-child a,
+.js .dropbutton-multiple.open .dropbutton-action:first-child .button {
+  border-radius: 0;
+}
+
+.js .form-actions .dropbutton-wrapper .dropbutton-widget .dropbutton-action .button:hover,
+.js .form-actions .dropbutton-wrapper .dropbutton-widget .dropbutton-action .button:focus {
+  background-image: none;
+  box-shadow: none;
+}

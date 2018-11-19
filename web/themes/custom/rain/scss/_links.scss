@@ -1,0 +1,8 @@
+a {
+  color: inherit;
+  text-decoration: none;
+  &:not([class]) {
+    border-bottom: 2px solid;
+  }
+}
+

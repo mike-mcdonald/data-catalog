@@ -1,0 +1,13 @@
+.views-display-columns {
+  @apply flex flex-row -mx-3;
+  .views-display-column {
+    @apply flex-1 mx-3;
+  }
+}
+
+.views-display-setting {
+  @apply mb-3;
+  a {
+    @apply border-black border-b-2;
+  }
+}
