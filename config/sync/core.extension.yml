@@ -62,6 +62,7 @@ theme:
   adminimal_theme: 0
   bootstrap: 0
   pbot: 0
+  rain: 0
 profile: seed
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

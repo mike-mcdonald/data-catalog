@@ -1,4 +1,4 @@
-admin: adminimal_theme
-default: pbot
+admin: '0'
+default: rain
 _core:
   default_config_hash: fOjer9hADYYnbCJVZMFZIIM1azTFWyg84ZkFDHfAbUg

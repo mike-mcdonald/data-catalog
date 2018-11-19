@@ -1,0 +1,29 @@
+uuid: 047ff886-a8c8-4218-8540-53cf53416cd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.datasets_division_group
+  module:
+    - facets
+    - system
+  theme:
+    - rain
+id: rain_facet_dataset_division_group
+theme: rain
+region: right_sidebar
+weight: -7
+provider: null
+plugin: 'facet_block:datasets_division_group'
+settings:
+  id: 'facet_block:datasets_division_group'
+  label: 'Datasets by Division/Group'
+  provider: facets
+  label_display: visible
+  block_id: pbot_facet_dataset_division_group
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/dataset
+    negate: false
+    context_mapping: {  }
