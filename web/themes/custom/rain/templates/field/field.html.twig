@@ -46,18 +46,21 @@
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
-    'mb-' ~ margin,
+    'mt-' ~ margin,
     label_display == 'inline' ? 'd-flex'
   ]
 %}
 
 {%
   set title_classes = title_classes|default([
-    label_display == 'visually_hidden' ? 'sr-only',
+    label_display == 'visually_hidden' ? 'visually-hidden',
     label_display == 'inline' ? 'mr-1',
     'font-semibold'
   ])
 %}
+
+{% set content_attribute = content_attribute|default(create_attribute()) %}
+{% set content_classes = content_classes|default([]) %}
 
 {%
   set item_classes = item_classes|default([
@@ -74,11 +77,13 @@
       {%- endif -%}
     {% endblock %}
     {% block content %}
-      {%- for item in items -%}
-        <div{{ item.attributes.addClass(item_classes) }}>
-          {{ item.content }}
-        </div>
-      {%- endfor -%}
+      <div{{ content_attribute.addClass(content_classes) }}>
+        {%- for item in items -%}
+          <div{{ item.attributes.addClass(item_classes) }}>
+            {{ item.content }}
+          </div>
+        {%- endfor -%}
+      </div>
     {% endblock %}
   </div>
   {% endblock %}

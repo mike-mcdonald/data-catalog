@@ -19,11 +19,11 @@
     'py-2',
     'px-3',
     'mr-2',
-    is_active ? 'bg-blue-dark',
+    is_active ? 'bg-blue' : 'hover:bg-grey-light',
     is_active ? 'text-white',
-    is_active ? 'border',
-    is_active ? 'border-blue',
-    is_active ? 'rounded',
+    is_active ? 'border': 'hover:border',
+    is_active ? 'border-blue' : 'hover:border-grey-light ',
+    'rounded',
   ])
 %}
 <li{{ attributes.addClass(task_classes) }} {% if is_active %} aria-selected="true" {% endif %}>

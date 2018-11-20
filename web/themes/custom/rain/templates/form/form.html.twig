@@ -10,6 +10,12 @@
  * @see template_preprocess_form()
  */
 #}
-<form{{ attributes }}>
+{%
+  set form_classes = form_classes|default([
+    'mb-3',
+  ])
+%}
+
+<form{{ attributes.addClass(form_classes) }}>
   {{ children }}
 </form>

@@ -70,13 +70,41 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
+
+
+{%
+  set article_classes = article_classes|default([
+    'mb-0'
+  ])
+%}
+
+{%
+  set title_classes = title_classes|default([
+    'mb-3'
+  ])
+%}
+
+{% set heading_element = heading_element|default('h2') %}
+
+{% set content_classes = content_classes|default([
+  ''
+])
+%}
+
+{% set footer_classes = footer_classes|default([
+  'flex',
+  'flex-wrap',
+  'items-center',
+  'mt-3'
+])
+%}
+<article{{ attributes.addClass(article_classes) }}>
 
   {{ title_prefix }}
   {% if not page %}
-    <h2{{ title_attributes }}>
+    <{{ heading_element }} {{ title_attributes.addClass(title_classes) }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
+    </{{ heading_element }}>
   {% endif %}
   {{ title_suffix }}
 
@@ -84,13 +112,13 @@
     <footer>
       {{ author_picture }}
       <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {% trans %}By {{ author_name }}{% endtrans %}
         {{ metadata }}
       </div>
     </footer>
   {% endif %}
 
-  <div{{ content_attributes }}>
+  <div{{ content_attributes.addClass(content_classes) }}>
     {{ content }}
   </div>
 

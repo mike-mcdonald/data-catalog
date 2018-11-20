@@ -23,10 +23,16 @@
  * @see template_preprocess_taxonomy_term()
  */
 #}
-<div{{ attributes }}>
+{% set classes = classes|default([
+  ])
+%}
+{% set heading_element = heading_element|default('h2') %}
+<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if not page %}
-    <h2><a href="{{ url }}">{{ name }}</a></h2>
+    <{{ heading_element }}>
+      <a href="{{ url }}">{{ name }}</a>
+    </{{ heading_element }}>
   {% endif %}
   {{ title_suffix }}
   {{ content }}

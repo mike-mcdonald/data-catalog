@@ -91,18 +91,18 @@
   <main role="main" class="{{ container_classes|join(' ') }}">
     <a id="main-content" class="border-0" tabindex="-1"></a>{# link is in html.html.twig #}
     {% if page.left_sidebar %}
-      <aside class="flex flex-col mx-3" role="complementary">
+      <aside class="flex flex-col mr-6" role="complementary">
         {{ page.left_sidebar }}
       </aside>
     {% endif %}
 
-    <section class="flex-1 flex flex-col mx-3">
+    <section class="flex-1 flex flex-col">
       {{ page.content }}
     </section>{# /.layout-content #}
 
 
     {% if page.right_sidebar %}
-      <aside class="flex flex-col mx-3" role="complementary">
+      <aside class="flex flex-col ml-6" role="complementary">
         {{ page.right_sidebar }}
       </aside>
     {% endif %}

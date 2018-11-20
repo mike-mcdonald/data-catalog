@@ -41,5 +41,13 @@
 #}
 {# Add Ajax wrapper. #}
 <div id="field-display-overview-wrapper">
-  {% include 'table.html.twig' %}
+  {% include 'table.html.twig' with {
+    'table_classes': [
+      'table-auto',
+      'border-separate',
+      'w-full',
+      'text-left',
+      'align-middle',
+    ]
+  } %}
 </div>
