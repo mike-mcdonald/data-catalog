@@ -8,8 +8,8 @@ _core:
   default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
 id: rain_local_tasks
 theme: rain
-region: content
-weight: -5
+region: local_admin
+weight: -8
 provider: null
 plugin: local_tasks_block
 settings:
