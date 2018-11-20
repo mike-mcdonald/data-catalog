@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.contact_information.field_telephone_number
     - node.type.contact_information
   module:
+    - telephone
     - user
 id: node.contact_information.default
 targetEntityType: node
@@ -14,22 +15,19 @@ bundle: contact_information
 mode: default
 content:
   field_email_address:
-    weight: 101
+    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_telephone_number:
-    weight: 102
+    weight: 1
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  links: true

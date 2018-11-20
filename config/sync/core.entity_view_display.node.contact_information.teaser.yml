@@ -8,17 +8,27 @@ dependencies:
     - field.field.node.contact_information.field_telephone_number
     - node.type.contact_information
   module:
+    - telephone
     - user
 id: node.contact_information.teaser
 targetEntityType: node
 bundle: contact_information
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_email_address:
+    type: email_mailto
+    weight: 0
     region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
+  field_telephone_number:
+    type: telephone_link
+    weight: 1
+    region: content
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
 hidden:
-  field_email_address: true
-  field_telephone_number: true
+  links: true

@@ -1,8 +1,9 @@
-uuid: 95023ab2-09a3-4c9f-9595-6704082198ee
+uuid: 31e7c1ac-c677-439a-972a-d5d699ffa66b
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card
     - field.field.node.dataset.field_accessibility_level
     - field.field.node.dataset.field_authority_level
     - field.field.node.dataset.field_data_custodian
@@ -19,31 +20,14 @@ dependencies:
   module:
     - cshs
     - user
-id: node.dataset.default
+id: node.dataset.card
 targetEntityType: node
 bundle: dataset
-mode: default
+mode: card
 content:
-  field_authority_level:
-    weight: 7
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_data_custodian:
-    weight: 2
-    label: above
-    settings:
-      view_mode: teaser
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
   field_data_group:
     weight: 1
-    label: above
+    label: visually_hidden
     settings:
       linked: '1'
       separator: ' » '
@@ -52,8 +36,8 @@ content:
     type: cshs_full_hierarchy
     region: content
   field_keywords:
-    weight: 3
-    label: above
+    weight: 2
+    label: visually_hidden
     settings:
       view_mode: default
       link: false
@@ -62,34 +46,14 @@ content:
     region: content
   field_purpose:
     weight: 0
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_source:
-    type: cshs_full_hierarchy
-    weight: 5
-    label: above
-    settings:
-      separator: ' » '
-      linked: false
-      reverse: false
-    third_party_settings: {  }
-    region: content
-  field_spatial_enabled:
-    weight: 8
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_subject_areas:
-    weight: 4
-    label: above
+    weight: 3
+    label: visually_hidden
     settings:
       linked: '1'
       separator: ' » '
@@ -97,16 +61,13 @@ content:
     third_party_settings: {  }
     type: cshs_full_hierarchy
     region: content
-  field_update_frequency:
-    weight: 6
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
 hidden:
   field_accessibility_level: true
+  field_authority_level: true
+  field_data_custodian: true
   field_data_owner: true
   field_security_level: true
+  field_source: true
+  field_spatial_enabled: true
+  field_update_frequency: true
   links: true
