@@ -5,5 +5,5 @@ dependencies: {  }
 name: 'Data group levels'
 vid: data_group_levels
 description: ''
-hierarchy: 0
+hierarchy: 1
 weight: 0
