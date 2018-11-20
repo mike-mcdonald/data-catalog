@@ -31,12 +31,28 @@
   ])
 %}
 
+{%
+  set title_classes = title_classes|default([
+    'mb-3'
+  ])
+%}
+
+{% set heading_element = heading_element|default('h2') %}
+
+{% set content_attribute = content_attribute|default(create_attribute()) %}
+{% set content_classes = content_classes|default([
+  ''
+])
+%}
+
 <div{{ attributes.addClass(block_classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
+  {% block title %}
+    {{ title_prefix }}
+    {% if label %}
+      <{{ heading_element }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ heading_element }}>
+    {% endif %}
+    {{ title_suffix }}
+  {% endblock %}
   {% block content %}
     {{ content }}
   {% endblock %}
