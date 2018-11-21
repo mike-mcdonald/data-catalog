@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override to display primary and secondary local tasks.
+ *
+ * Available variables:
+ * - primary: HTML list items representing primary tasks.
+ * - secondary: HTML list items representing primary tasks.
+ *
+ * Each item in these variables (primary and secondary) can be individually
+ * themed in menu-local-task.html.twig.
+ */
+#}
+{% set list_attributes = list_attributes|default(create_attribute()) %}
+{%
+  set list_classes = list_classes|default([
+    'list-reset',
+    'flex',
+    'flex-row',
+    'mb-4',
+  ])
+%}
+
+{% if primary %}
+  <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+  <ul{{ list_attributes.addClass(list_classes) }}>{{ primary }}</ul>
+{% endif %}
+{% if secondary %}
+  <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+  <ul{{ list_attributes.addClass(list_classes) }}>{{ secondary }}</ul>
+{% endif %}

@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Theme override for a single local action link.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper element.
+ * - link: A rendered link element.
+ *
+ * @see template_preprocess_menu_local_action()
+ */
+#}
+{%
+  set action_classes = action_classes|default([
+    'bg-blue',
+    'appearance-none',
+    'cursor-pointer',
+    'border-2',
+    'border-b-4',
+    'border-blue-dark',
+    'rounded-lg',
+    'py-2',
+    'px-4',
+    'text-white',
+    'leading-tight',
+    'focus:outline-none',
+    'focus:bg-blue-dark',
+    'focus:border-blue-dark',
+    'hover:border-blue',
+  ])
+%}
+<span{{ attributes.addClass(action_classes) }}>
+  {{ link }}
+</span>

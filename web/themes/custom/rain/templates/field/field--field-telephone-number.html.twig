@@ -1,0 +1,31 @@
+{% embed 'field.html.twig' with {
+  'margin': 0,
+  'classes': [
+    'mx-1',
+  ],
+  'item_classes': [
+    'p-2',
+    'bg-blue',
+    'text-white',
+    'border-2',
+    'border-blue-dark',
+    'rounded',
+  ],
+} %}
+{% block label %}
+{% endblock %}
+{% block content %}
+{% set link_classes = link_classes|default([
+  'flex',
+  'items-center',
+]) %}
+{%- for item in items -%}
+  <div{{ item.attributes.addClass(item_classes) }}>
+    <a class="{{ link_classes|join(' ') }}" href="{{ item.content['#url'].toString() }}">
+      {% include active_theme_path() ~ '/icons/phone.svg' %}
+      <span class="ml-1">{{ item.content['#title'] }}</span>
+    </a>
+  </div>
+{%- endfor -%}
+{% endblock %}
+{% endembed %}

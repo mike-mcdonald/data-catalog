@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{% set list_attributes = list_attributes|default(create_attribute()) %}
+{%
+  set list_classes = list_classes|default([
+    'list-reset',
+    'flex',
+    'flex-row',
+    'flex-wrap',
+  ])
+%}
+
+{% set list_item_attributes = list_item_attributes|default(create_attribute()) %}
+{%
+  set list_item_classes = list_item_classes|default([
+
+  ])
+%}
+
+{% set seperator_attributes = seperator_attributes|default(create_attribute()) %}
+{%
+  set seperator_classes = seperator_classes|default([
+    'mx-3',
+  ])
+%}
+
+{% if breadcrumb %}
+  <nav role="navigation" aria-label="Breadcrumb" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+    <ol{{ list_attributes.addClass(list_classes) }}>
+    {% for item in breadcrumb %}
+      <li>
+        {% if item.url %}
+          <a href="{{ item.url }}">{{ item.text }}</a>
+        {% else %}
+          {{ item.text }}
+        {% endif %}
+      </li>
+      {%- if not loop.last -%}
+        <li{{ seperator_attributes.addClass(seperator_classes) }}>/</li>
+      {%- endif -%}
+    {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

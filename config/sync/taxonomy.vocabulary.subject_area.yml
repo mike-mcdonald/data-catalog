@@ -5,5 +5,5 @@ dependencies: {  }
 name: 'Subject Area'
 vid: subject_area
 description: 'Use this to create a list of subject areas to relate both datasets and business terms.'
-hierarchy: 0
+hierarchy: 1
 weight: 0

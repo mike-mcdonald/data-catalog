@@ -1,0 +1,45 @@
+name: Rain
+type: theme
+description: 'A steady theme'
+package: Portland themes
+core: 8.x
+libraries:
+  - rain/global-styling
+
+base theme: stable
+
+regions:
+  alert: Alert
+  header: Header
+  header_menu: Header menu
+  notification: Notification
+  local_admin: Local administration
+  left_sidebar: Left sidebar
+  content: Content
+  right_sidebar: Right sidebar
+  left_footer: Left footer
+  right_footer: Right footer
+
+libraries-extend:
+  system/base:
+    - rain/global-styling
+
+libraries-override:
+  # Remove some core libraries I want to override.
+  #  Overridden in global-styling library
+  core/drupal.dropbutton: false
+  core/drupal.tabledrag: false
+  system/base:
+    css:
+      component:
+        css/components/tabledrag.module.css: false
+  cshs/cshs.base: false
+
+  core/jquery.ui:
+    css:
+      theme:
+        assets/vendor/jquery.ui/themes/base/theme.css: false
+  core/jquery.ui.dialog:
+    css:
+      component:
+        assets/vendor/jquery.ui/themes/base/dialog.css: false

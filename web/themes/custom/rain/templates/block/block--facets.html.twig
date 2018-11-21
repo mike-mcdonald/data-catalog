@@ -1,0 +1,29 @@
+{% embed 'block.html.twig' with {
+  'block_classes': [
+    'mb-3',
+    'border',
+    'rounded',
+  ],
+  'heading_element': 'div',
+  'title_classes': [
+    'bg-grey-light',
+    'p-4',
+    'text-2xl',
+    'font-bold',
+  ],
+  'content_classes': [
+  ],
+} %}
+{% block title %}
+  {{ title_prefix }}
+  {% if label %}
+    <{{ heading_element }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ heading_element }}>
+  {% endif %}
+  {{ title_suffix }}
+{% endblock %}
+{% block content %}
+  <div{{ content_attribute.addClass(content_classes) }}>
+    {{ content }}
+  </div>
+{% endblock %}
+{% endembed %}

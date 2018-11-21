@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ * Theme override for a select element.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the select tag.
+ * - options: The option element children.
+ *
+ * @see template_preprocess_select()
+ */
+#}
+{% set wrapper_attributes = wrapper_attributes|default(create_attribute()) %}
+
+{%
+  set wrapper_classes = wrapper_classes|default([
+    'relative',
+  ])
+%}
+
+{%
+  set select_classes = select_classes|default([
+    'bg-grey-lighter',
+    'appearance-none',
+    'block',
+    'border-2',
+    'border-grey',
+    'rounded',
+    'w-full',
+    'py-2',
+    'px-4',
+    'pr-8',
+    'leading-tight',
+    'focus:outline-none',
+    'focus:bg-white',
+    'focus:border-grey-darkest',
+ ])
+%}
+
+{% set icon_attributes = icon_attributes|default(create_attribute()) %}
+{% set add_icon = add_icon|default('true') %}
+{%
+  set icon_classes = icon_classes|default([
+    'pointer-events-none',
+    'absolute',
+    'pin-y',
+    'pin-r',
+    'flex',
+    'items-center',
+    'px-2',
+  ])
+%}
+
+{% spaceless %}
+  <div{{ wrapper_attributes.addClass(wrapper_classes) }}>
+    <select{{ attributes.addClass(select_classes) }}>
+      {% for option in options %}
+        {% if option.type == 'optgroup' %}
+          <optgroup label="{{ option.label }}">
+            {% for sub_option in option.options %}
+              <option value="{{ sub_option.value }}" data-parent="{{ option.parent }}" {{ sub_option.selected ? ' selected="selected"' }}>{{ sub_option.label }}</option>
+            {% endfor %}
+          </optgroup>
+        {% else %}
+          <option value="{{ option.value }}" data-parent="{{ option.parent }}" {{ option.selected ? ' selected="selected"' }}>{{ option.label }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+    {% if add_icon == 'true' %}
+      <div{{ icon_attributes.addClass(icon_classes) }}>
+        {% include active_theme_path() ~ '/icons/chevron-down.svg' %}
+      </div>
+    {% endif %}
+  </div>
+{% endspaceless %}

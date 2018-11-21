@@ -12,7 +12,6 @@ dependencies:
     - node
     - search_api
     - telephone
-    - views_bootstrap
 id: datasets_index
 label: 'Datasets index'
 module: views
@@ -71,62 +70,17 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: views_bootstrap_table
+        type: default
         options:
           grouping: {  }
           row_class: ''
-          default_row_class: true
-          override: 1
-          sticky: 0
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            dataset_title: dataset_title
-            field_purpose: field_purpose
-            data_custodian_title: data_custodian_title
-            field_email_address: field_email_address
-            field_telephone_number: field_telephone_number
-          info:
-            dataset_title:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_purpose:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            data_custodian_title:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_email_address:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_telephone_number:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-          default: '-1'
-          empty_table: 0
-          responsive: 1
-          bootstrap_styles:
-            hover: hover
-            condensed: condensed
-            striped: 0
-            bordered: 0
+          default_row_class: false
       row:
-        type: fields
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              dataset: card
       fields:
         dataset_title:
           id: dataset_title
@@ -552,6 +506,10 @@ display:
           plugin_id: search_api
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:

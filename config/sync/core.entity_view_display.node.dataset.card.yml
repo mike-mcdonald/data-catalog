@@ -1,0 +1,73 @@
+uuid: 31e7c1ac-c677-439a-972a-d5d699ffa66b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.dataset.field_accessibility_level
+    - field.field.node.dataset.field_authority_level
+    - field.field.node.dataset.field_data_custodian
+    - field.field.node.dataset.field_data_group
+    - field.field.node.dataset.field_data_owner
+    - field.field.node.dataset.field_keywords
+    - field.field.node.dataset.field_purpose
+    - field.field.node.dataset.field_security_level
+    - field.field.node.dataset.field_source
+    - field.field.node.dataset.field_spatial_enabled
+    - field.field.node.dataset.field_subject_areas
+    - field.field.node.dataset.field_update_frequency
+    - node.type.dataset
+  module:
+    - cshs
+    - user
+id: node.dataset.card
+targetEntityType: node
+bundle: dataset
+mode: card
+content:
+  field_data_group:
+    weight: 1
+    label: visually_hidden
+    settings:
+      linked: '1'
+      separator: ' » '
+      reverse: 0
+    third_party_settings: {  }
+    type: cshs_full_hierarchy
+    region: content
+  field_keywords:
+    weight: 2
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_purpose:
+    weight: 0
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_subject_areas:
+    weight: 3
+    label: visually_hidden
+    settings:
+      linked: '1'
+      separator: ' » '
+      reverse: 0
+    third_party_settings: {  }
+    type: cshs_full_hierarchy
+    region: content
+hidden:
+  field_accessibility_level: true
+  field_authority_level: true
+  field_data_custodian: true
+  field_data_owner: true
+  field_security_level: true
+  field_source: true
+  field_spatial_enabled: true
+  field_update_frequency: true
+  links: true

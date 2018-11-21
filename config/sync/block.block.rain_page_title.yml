@@ -1,0 +1,20 @@
+uuid: 50be3540-84c4-4ba8-b099-03414e50dd12
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rain
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: rain_page_title
+theme: rain
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -24,16 +24,8 @@ targetEntityType: node
 bundle: dataset
 mode: default
 content:
-  field_accessibility_level:
-    weight: 10
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_authority_level:
-    weight: 8
+    weight: 7
     label: above
     settings:
       link: true
@@ -44,61 +36,49 @@ content:
     weight: 2
     label: above
     settings:
-      link: true
+      view_mode: teaser
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_data_group:
-    weight: 3
+    weight: 1
     label: above
     settings:
       linked: '1'
-      reverse: 0
       separator: ' » '
+      reverse: 0
     third_party_settings: {  }
     type: cshs_full_hierarchy
     region: content
-  field_data_owner:
-    weight: 7
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_keywords:
-    weight: 4
+    weight: 3
     label: above
     settings:
-      link: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_purpose:
-    weight: 1
+    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_security_level:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_source:
-    weight: 6
+    type: cshs_full_hierarchy
+    weight: 5
     label: above
     settings:
-      link: true
+      separator: ' » '
+      linked: false
+      reverse: false
     third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_spatial_enabled:
-    weight: 11
+    weight: 8
     label: above
     settings:
       format: default
@@ -108,26 +88,25 @@ content:
     type: boolean
     region: content
   field_subject_areas:
-    weight: 5
+    weight: 4
     label: above
     settings:
+      linked: '1'
       separator: ' » '
-      linked: false
-      reverse: false
+      reverse: 0
     third_party_settings: {  }
     type: cshs_full_hierarchy
     region: content
   field_update_frequency:
-    weight: 9
+    weight: 6
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_accessibility_level: true
+  field_data_owner: true
+  field_security_level: true
+  links: true

@@ -12,37 +12,101 @@ dependencies:
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_security_level
+    - field.field.node.dataset.field_source
     - field.field.node.dataset.field_spatial_enabled
     - field.field.node.dataset.field_subject_areas
     - field.field.node.dataset.field_update_frequency
     - node.type.dataset
   module:
+    - cshs
     - user
 id: node.dataset.teaser
 targetEntityType: node
 bundle: dataset
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_authority_level:
+    type: entity_reference_entity_view
+    weight: 5
     region: content
+    label: visually_hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_data_custodian:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+  field_data_group:
+    type: cshs_full_hierarchy
+    weight: 1
+    region: content
+    label: visually_hidden
+    settings:
+      linked: '1'
+      separator: ' » '
+      reverse: 0
+    third_party_settings: {  }
+  field_keywords:
+    type: entity_reference_entity_view
+    weight: 3
+    region: content
+    label: visually_hidden
+    settings:
+      view_mode: button
+      link: false
+    third_party_settings: {  }
+  field_purpose:
+    type: basic_string
+    weight: 0
+    region: content
+    label: visually_hidden
     settings: {  }
+    third_party_settings: {  }
+  field_spatial_enabled:
+    type: boolean
+    weight: 6
+    region: content
+    label: visually_hidden
+    settings:
+      format: custom
+      format_custom_true: Spatial
+      format_custom_false: 'Not spatial'
+    third_party_settings: {  }
+  field_subject_areas:
+    type: cshs_full_hierarchy
+    weight: 4
+    region: content
+    label: visually_hidden
+    settings:
+      linked: '1'
+      separator: ' » '
+      reverse: 0
+    third_party_settings: {  }
+  field_update_frequency:
+    type: entity_reference_entity_view
+    weight: 7
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+      view_mode: default
     third_party_settings: {  }
 hidden:
   body: true
   field_accessibility_level: true
-  field_authority_level: true
-  field_data_custodian: true
-  field_data_group: true
   field_data_owner: true
-  field_keywords: true
   field_public_records_exempt: true
-  field_purpose: true
   field_quality_accuracy: true
   field_quality_completeness: true
   field_quality_consistency: true
   field_security_level: true
-  field_spatial_enabled: true
-  field_subject_areas: true
+  field_source: true
   field_subject_matter_experts: true
-  field_update_frequency: true
+  links: true

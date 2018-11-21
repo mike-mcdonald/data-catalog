@@ -1,0 +1,22 @@
+uuid: 98fb4312-9e8d-43b3-8832-bc3d41e85258
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rain
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: rain_local_tasks
+theme: rain
+region: local_admin
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
