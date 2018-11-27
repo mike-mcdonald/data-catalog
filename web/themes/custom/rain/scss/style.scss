@@ -46,7 +46,7 @@
 }
 
 details[open] {
-  summary {
+  >summary {
     @apply border-b pb-3 mb-3;
   }
 }
