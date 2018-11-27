@@ -68,7 +68,7 @@ services:
     volumes:
       - tmp:/var/www/html/tmp
       - .:/var/www/html:cached
-      - ./php.ini:/usr/local/etc/php/conf.d/custom.ini
+      - ./.user.ini:/usr/local/etc/php/conf.d/custom.ini
       - ./log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
     networks:
       - code-network
