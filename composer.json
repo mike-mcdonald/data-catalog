@@ -30,6 +30,7 @@
         "drupal/core": "~8.6.1",
         "drupal/cshs": "^1.0@beta",
         "drupal/ds": "^3.1",
+        "drupal/easy_breadcrumb": "^1.8",
         "drupal/facets": "^1.1",
         "drupal/field_group": "^1.0",
         "drupal/openid_connect": "^1.0@beta",
