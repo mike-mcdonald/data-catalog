@@ -1,3 +1,7 @@
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800');
+
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -40,6 +44,7 @@
  @import "buttons";
  @import "dropbuttons";
  @import "views";
+ @import "menus";
 
 .transition {
   transition: all 0.5s ease;

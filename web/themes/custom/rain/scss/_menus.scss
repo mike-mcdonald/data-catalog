@@ -1,0 +1,7 @@
+header {
+  nav {
+    .is-active {
+      @apply bg-grey-lighter text-grey-darkest
+    }
+  }
+}
