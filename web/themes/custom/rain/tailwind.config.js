@@ -60,7 +60,7 @@ let colors = {
 
   black: baseColors.greyDark
     .clone()
-    .darken(20)
+    .darken(15)
     .toHexString(),
   "grey-darkest": baseColors.greyDark
     .clone()
@@ -71,7 +71,7 @@ let colors = {
     .clone()
     .lighten()
     .toHexString(),
-  grey: tinycolor.mix(baseColors.greyDark, baseColors.greyLight, (amount = 50)), //baseColors.greyLight.darken(20).toHexString(),
+  grey: tinycolor.mix(baseColors.greyDark, baseColors.greyLight, (amount = 50)), //baseColors.greyLight.darken(15).toHexString(),
   "grey-light": baseColors.greyLight
     .clone()
     .darken()
@@ -85,11 +85,11 @@ let colors = {
 
   "red-darkest": baseColors.red
     .clone()
-    .darken(30)
+    .darken(25)
     .toHexString(),
   "red-darker": baseColors.red
     .clone()
-    .darken(20)
+    .darken(15)
     .toHexString(),
   "red-dark": baseColors.red
     .clone()
@@ -102,20 +102,20 @@ let colors = {
     .toHexString(),
   "red-lighter": baseColors.red
     .clone()
-    .lighten(20)
+    .lighten(15)
     .toHexString(),
   "red-lightest": baseColors.red
     .clone()
-    .lighten(30)
+    .lighten(25)
     .toHexString(),
 
   "orange-darkest": baseColors.orange
     .clone()
-    .darken(30)
+    .darken(25)
     .toHexString(),
   "orange-darker": baseColors.orange
     .clone()
-    .darken(20)
+    .darken(15)
     .toHexString(),
   "orange-dark": baseColors.orange
     .clone()
@@ -128,20 +128,20 @@ let colors = {
     .toHexString(),
   "orange-lighter": baseColors.orange
     .clone()
-    .lighten(20)
+    .lighten(15)
     .toHexString(),
   "orange-lightest": baseColors.orange
     .clone()
-    .lighten(30)
+    .lighten(25)
     .toHexString(),
 
   // "yellow-darkest": baseColors.light
   //   .clone()
-  //   .darken(30)
+  //   .darken(25)
   //   .toHexString(),
   // "yellow-darker": baseColors.yellow
   //   .clone()
-  //   .darken(20)
+  //   .darken(15)
   //   .toHexString(),
   // "yellow-dark": baseColors.yellow
   //   .clone()
@@ -154,20 +154,20 @@ let colors = {
   //   .toHexString(),
   // "yellow-lighter": baseColors.yellow
   //   .clone()
-  //   .lighten(20)
+  //   .lighten(15)
   //   .toHexString(),
   // "yellow-lightest": baseColors.yellow
   //   .clone()
-  //   .lighten(30)
+  //   .lighten(25)
   //   .toHexString(),
 
   "green-darkest": baseColors.green
     .clone()
-    .darken(30)
+    .darken(25)
     .toHexString(),
   "green-darker": baseColors.green
     .clone()
-    .darken(20)
+    .darken(15)
     .toHexString(),
   "green-dark": baseColors.green
     .clone()
@@ -180,20 +180,20 @@ let colors = {
     .toHexString(),
   "green-lighter": baseColors.green
     .clone()
-    .lighten(20)
+    .lighten(15)
     .toHexString(),
   "green-lightest": baseColors.green
     .clone()
-    .lighten(30)
+    .lighten(25)
     .toHexString(),
 
   "teal-darkest": baseColors.teal
     .clone()
-    .darken(30)
+    .darken(25)
     .toHexString(),
   "teal-darker": baseColors.teal
     .clone()
-    .darken(20)
+    .darken(15)
     .toHexString(),
   "teal-dark": baseColors.teal
     .clone()
@@ -206,20 +206,20 @@ let colors = {
     .toHexString(),
   "teal-lighter": baseColors.teal
     .clone()
-    .lighten(20)
+    .lighten(15)
     .toHexString(),
   "teal-lightest": baseColors.teal
     .clone()
-    .lighten(30)
+    .lighten(25)
     .toHexString(),
 
   "blue-darkest": baseColors.blue
     .clone()
-    .darken(30)
+    .darken(25)
     .toHexString(),
   "blue-darker": baseColors.blue
     .clone()
-    .darken(20)
+    .darken(15)
     .toHexString(),
   "blue-dark": baseColors.blue
     .clone()
@@ -232,11 +232,11 @@ let colors = {
     .toHexString(),
   "blue-lighter": baseColors.blue
     .clone()
-    .lighten(20)
+    .lighten(15)
     .toHexString(),
   "blue-lightest": baseColors.blue
     .clone()
-    .lighten(30)
+    .lighten(25)
     .toHexString(),
 
   "indigo-darkest": "#191e38",
