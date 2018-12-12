@@ -31,14 +31,18 @@
  */
 #}
 {%
-  set classes = [
+  set table_classes = table_classes|default([
     'cols-' ~ header|length,
     responsive ? 'responsive-enabled',
     sticky ? 'sticky-enabled',
+    'table-auto',
+    'border-collapse',
     'w-full',
-  ]
+    'text-left',
+    'align-middle',
+  ])
 %}
-<table{{ attributes.addClass(classes) }}>
+<table{{ attributes.addClass(table_classes) }}>
   {% if caption_needed %}
     <caption>
     {% if caption %}
@@ -59,7 +63,7 @@
     </caption>
   {% endif %}
   {% if header %}
-    <thead>
+    <thead{{ create_attribute({ 'class': ['border-b-2', 'border-grey']}) }}>
       <tr>
         {% for key, column in header %}
           {% if column.default_classes %}
@@ -67,6 +71,8 @@
               set column_classes = [
                 'views-field',
                 'views-field-' ~ fields[key],
+                'align-middle',
+                'py-2',
               ]
             %}
           {% endif %}
@@ -93,12 +99,15 @@
   {% endif %}
   <tbody>
     {% for row in rows %}
-      <tr{{ row.attributes }}>
+      <tr{{ row.attributes.addClass('hover:bg-grey-lighter') }}>
         {% for key, column in row.columns %}
           {% if column.default_classes %}
             {%
               set column_classes = [
-                'views-field'
+                'views-field',
+                'align-middle',
+                'px-2',
+                'py-1',
               ]
             %}
             {% for field in column.fields %}

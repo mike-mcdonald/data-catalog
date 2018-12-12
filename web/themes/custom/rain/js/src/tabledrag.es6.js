@@ -234,7 +234,7 @@ import info from '../../icons/info.svg';
       'bg-blue',
       'appearance-none',
       'border-2',
-      'border-blue',
+      'border-blue-dark',
       'rounded-lg',
       'py-2',
       'px-4',
@@ -243,6 +243,7 @@ import info from '../../icons/info.svg';
       'focus:outline-none',
       'focus:bg-blue-dark',
       'focus:border-blue-dark',
+      'hover:border-blue'
     ];
 
     // Add a link before the table for users to show or hide weight columns.
@@ -259,7 +260,7 @@ import info from '../../icons/info.svg';
             this.toggleColumns();
           }, this),
         )
-        .wrap('<div class="flex flex-column items-end mb-3"></div>')
+        .wrap('<div class="flex flex-col items-end mb-3"></div>')
         .parent(),
     );
 
@@ -775,8 +776,12 @@ import info from '../../icons/info.svg';
     self.table.topY = $(self.table).offset().top;
     self.table.bottomY = self.table.topY + self.table.offsetHeight;
 
+    const dragClasses = [
+      'bg-blue-lightest'
+    ];
+
     // Add classes to the handle and row.
-    $(item).addClass('drag');
+    $(item).addClass(dragClasses.join(' '));
 
     // Set the document to use the move cursor during drag.
     $('body').addClass('drag');

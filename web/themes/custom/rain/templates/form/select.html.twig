@@ -38,7 +38,7 @@
 %}
 
 {% set icon_attributes = icon_attributes|default(create_attribute()) %}
-{% set add_icon = add_icon|default('true') %}
+{% set add_icon = add_icon|default(attributes.multiple ? 'false' : 'true') %}
 {%
   set icon_classes = icon_classes|default([
     'pointer-events-none',

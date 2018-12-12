@@ -41,8 +41,8 @@
 #}
 {%
   set table_classes = table_classes|default([
-    'table-fixed',
-    'border-separate',
+    'table-auto',
+    'border-collapse',
     'w-full',
     'text-left',
     'align-middle',
@@ -73,10 +73,10 @@
   {% endfor %}
 
   {% if header %}
-    <thead>
+    <thead{{ create_attribute({ 'class': ['border-b-2', 'border-grey']}) }}>
       <tr>
         {% for cell in header %}
-          <{{ cell.tag }}{{ cell.attributes.removeClass('block').addClass(cell_classes) }}>
+          <{{ cell.tag }}{{ cell.attributes.removeClass('block').addClass(cell_classes, 'py-2') }}>
             {{- cell.content -}}
           </{{ cell.tag }}>
         {% endfor %}
@@ -87,9 +87,9 @@
   {% if rows %}
     <tbody>
       {% for row in rows %}
-        <tr{{ row.attributes }}>
+        <tr{{ row.attributes.addClass('hover:bg-grey-lighter') }}>
           {% for cell in row.cells %}
-            <{{ cell.tag }}{{ cell.attributes.removeClass('block').addClass(cell_classes) }}>
+            <{{ cell.tag }}{{ cell.attributes.removeClass('block').addClass(cell_classes, 'px-2', 'py-1') }}>
               {{- cell.content -}}
             </{{ cell.tag }}>
           {% endfor %}

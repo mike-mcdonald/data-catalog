@@ -12,7 +12,6 @@
     'appearance-none',
     'cursor-pointer',
     'border-2',
-    'border-b-4',
     'border-blue-dark',
     'rounded-lg',
     'p-2',
@@ -20,7 +19,7 @@
     'leading-tight',
     'focus:outline-none',
     'focus:border-blue-dark',
-    'hover:border-blue-dark',
+    'hover:border-blue',
   ],
 } %}
 {% set secondary_list_attributes = secondary_list_attributes|default(create_attribute()) %}
@@ -35,11 +34,9 @@
   'flex-row',
   'items-center',
   'justify-between',
-  'bg-grey-light',
+  'hover:bg-grey',
   'appearance-none',
   'cursor-pointer',
-  'border-2',
-  'border-grey-dark',
   'p-2',
   'text-body',
   'leading-tight',
@@ -50,10 +47,15 @@
 {% set pin_classes = pin_classes|default([
   'absolute',
   'pin-t',
-  'pin-l',
   'pin-r',
   'z-50',
   'w-64',
+  'mt-1',
+  'py-1',
+  'bg-grey-light',
+  'border',
+  'rounded',
+  'shadow-lg',
 ]) %}
 
 {% set dropbutton_classes = dropbutton_classes|default([
