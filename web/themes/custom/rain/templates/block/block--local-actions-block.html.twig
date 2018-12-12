@@ -1,4 +1,9 @@
-{% extends "block.html.twig" %}
+{% embed "block.html.twig" with {
+  'content_classes':[
+    'flex',
+    'flex-wrap',
+  ]
+} %}
 {#
 /**
  * @file
@@ -7,6 +12,9 @@
 #}
 {% block content %}
   {% if content %}
-    <nav>{{ content }}</nav>
+    <nav{{ create_attribute({ 'class': content_classes }) }}>
+      {{ content }}
+    </nav>
   {% endif %}
 {% endblock %}
+{% endembed %}
