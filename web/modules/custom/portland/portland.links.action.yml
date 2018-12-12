@@ -1,0 +1,7 @@
+datasets_add_action:
+  route_name: node.add
+  title: "Add dataset"
+  route_parameters:
+    node_type: "dataset"
+  appears_on:
+    - view.datasets_index.page_1
