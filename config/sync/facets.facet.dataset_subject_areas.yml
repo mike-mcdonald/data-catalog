@@ -11,7 +11,7 @@ id: dataset_subject_areas
 name: 'Subject areas'
 url_alias: dataset_subject_areas
 weight: 0
-min_count: 1
+min_count: 2
 show_only_one_result: false
 field_identifier: dataset_subject_areas_name
 facet_source_id: 'search_api:views_page__datasets_index__page_1'

@@ -51,7 +51,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 30
+          items_per_page: 10
           offset: 0
           id: 0
           total_pages: null
@@ -478,7 +478,7 @@ display:
           fields: {  }
           plugin_id: search_api_fulltext
       sorts: {  }
-      title: 'Search datasets'
+      title: Datasets
       header:
         result:
           id: result
