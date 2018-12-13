@@ -50,218 +50,88 @@ const baseColors = {
   green: tinycolor("66ad83"),
   greyDark: tinycolor("4d4d4f"),
   blue: tinycolor("005cb9"),
-  tealLight: tinycolor("99cccc"),
-  orangeLight: tinycolor("fcb040"),
-  greyLight: tinycolor("e7e8ea")
+  marine: tinycolor("99cccc"),
+  tangerine: tinycolor("fcb040"),
+  fog: tinycolor("e7e8ea")
 };
 
 let colors = {
   transparent: "transparent",
 
-  black: baseColors.greyDark
-    .clone()
-    .darken(15)
-    .toHexString(),
-  "grey-darkest": baseColors.greyDark
-    .clone()
-    .darken()
-    .toHexString(),
-  "grey-darker": baseColors.greyDark.toHexString(),
-  "grey-dark": baseColors.greyDark
-    .clone()
-    .lighten()
-    .toHexString(),
-  grey: tinycolor.mix(baseColors.greyDark, baseColors.greyLight, (amount = 50)), //baseColors.greyLight.darken(15).toHexString(),
-  "grey-light": baseColors.greyLight
-    .clone()
-    .darken()
-    .toHexString(),
-  "grey-lighter": baseColors.greyLight.clone().toHexString(),
-  "grey-lightest": baseColors.greyLight
-    .clone()
-    .lighten()
-    .toHexString(),
+  black: "#22292f",
   white: "#ffffff",
 
-  "red-darkest": baseColors.red
-    .clone()
-    .darken(25)
-    .toHexString(),
-  "red-darker": baseColors.red
-    .clone()
-    .darken(15)
-    .toHexString(),
-  "red-dark": baseColors.red
-    .clone()
-    .darken()
-    .toHexString(),
-  red: baseColors.red.toHexString(),
-  "red-light": baseColors.red
-    .clone()
-    .lighten()
-    .toHexString(),
-  "red-lighter": baseColors.red
-    .clone()
-    .lighten(15)
-    .toHexString(),
-  "red-lightest": baseColors.red
-    .clone()
-    .lighten(25)
-    .toHexString(),
+  'cyan-darkest' : '#003034',
+  'cyan-darker' : '#006068',
+  'cyan-dark' : '#00909D',
+  'cyan' : '#00A0AE',
+  'cyan-light' : '#4DBDC6',
+  'cyan-lighter' : '#99D9DF',
+  'cyan-lightest' : '#E6F6F7',
 
-  "orange-darkest": baseColors.orange
-    .clone()
-    .darken(25)
-    .toHexString(),
-  "orange-darker": baseColors.orange
-    .clone()
-    .darken(15)
-    .toHexString(),
-  "orange-dark": baseColors.orange
-    .clone()
-    .darken()
-    .toHexString(),
-  orange: baseColors.orange.toHexString(),
-  "orange-light": baseColors.orange
-    .clone()
-    .lighten()
-    .toHexString(),
-  "orange-lighter": baseColors.orange
-    .clone()
-    .lighten(15)
-    .toHexString(),
-  "orange-lightest": baseColors.orange
-    .clone()
-    .lighten(25)
-    .toHexString(),
+  'orange-darkest' : '#4A270A',
+  'orange-darker' : '#934E13',
+  'orange-dark' : '#DD751D',
+  'orange' : '#F58220',
+  'orange-light' : '#F8A863',
+  'orange-lighter' : '#FBCDA6',
+  'orange-lightest' : '#FEF3E9',
 
-  // "yellow-darkest": baseColors.light
-  //   .clone()
-  //   .darken(25)
-  //   .toHexString(),
-  // "yellow-darker": baseColors.yellow
-  //   .clone()
-  //   .darken(15)
-  //   .toHexString(),
-  // "yellow-dark": baseColors.yellow
-  //   .clone()
-  //   .darken()
-  //   .toHexString(),
-  // yellow: baseColors.yellow.toHexString(),
-  // "yellow-light": baseColors.yellow
-  //   .clone()
-  //   .lighten()
-  //   .toHexString(),
-  // "yellow-lighter": baseColors.yellow
-  //   .clone()
-  //   .lighten(15)
-  //   .toHexString(),
-  // "yellow-lightest": baseColors.yellow
-  //   .clone()
-  //   .lighten(25)
-  //   .toHexString(),
+  'red-darkest' : '#4D1F1F',
+  'red-darker' : '#993D3D',
+  'red-dark' : '#E65C5C',
+  'red' : '#FF6666',
+  'red-light' : '#FF9494',
+  'red-lighter' : '#FFC2C2',
+  'red-lightest' : '#FFF0F0',
 
-  "green-darkest": baseColors.green
-    .clone()
-    .darken(25)
-    .toHexString(),
-  "green-darker": baseColors.green
-    .clone()
-    .darken(15)
-    .toHexString(),
-  "green-dark": baseColors.green
-    .clone()
-    .darken()
-    .toHexString(),
-  green: baseColors.green.toHexString(),
-  "green-light": baseColors.green
-    .clone()
-    .lighten()
-    .toHexString(),
-  "green-lighter": baseColors.green
-    .clone()
-    .lighten(15)
-    .toHexString(),
-  "green-lightest": baseColors.green
-    .clone()
-    .lighten(25)
-    .toHexString(),
+  'green-darkest' : '#1F3427',
+  'green-darker' : '#3D684F',
+  'green-dark' : '#5C9C76',
+  'green' : '#66AD83',
+  'green-light' : '#94C6A8',
+  'green-lighter' : '#C2DECD',
+  'green-lightest' : '#F0F7F3',
 
-  "teal-darkest": baseColors.teal
-    .clone()
-    .darken(25)
-    .toHexString(),
-  "teal-darker": baseColors.teal
-    .clone()
-    .darken(15)
-    .toHexString(),
-  "teal-dark": baseColors.teal
-    .clone()
-    .darken()
-    .toHexString(),
-  teal: baseColors.teal.toHexString(),
-  "teal-light": baseColors.teal
-    .clone()
-    .lighten()
-    .toHexString(),
-  "teal-lighter": baseColors.teal
-    .clone()
-    .lighten(15)
-    .toHexString(),
-  "teal-lightest": baseColors.teal
-    .clone()
-    .lighten(25)
-    .toHexString(),
+  'grey-darkest' : '#171718',
+  'grey-darker' : '#2E2E2F',
+  'grey-dark' : '#454547',
+  'grey' : '#4D4D4F',
+  'grey-light' : '#828284',
+  'grey-lighter' : '#B8B8B9',
+  'grey-lightest' : '#EDEDED',
 
-  "blue-darkest": baseColors.blue
-    .clone()
-    .darken(25)
-    .toHexString(),
-  "blue-darker": baseColors.blue
-    .clone()
-    .darken(15)
-    .toHexString(),
-  "blue-dark": baseColors.blue
-    .clone()
-    .darken()
-    .toHexString(),
-  blue: baseColors.blue.toHexString(),
-  "blue-light": baseColors.blue
-    .clone()
-    .lighten()
-    .toHexString(),
-  "blue-lighter": baseColors.blue
-    .clone()
-    .lighten(15)
-    .toHexString(),
-  "blue-lightest": baseColors.blue
-    .clone()
-    .lighten(25)
-    .toHexString(),
+  'blue-darkest' : '#001C38',
+  'blue-darker' : '#00376F',
+  'blue-dark' : '#0053A7',
+  'blue' : '#005CB9',
+  'blue-light' : '#4D8DCE',
+  'blue-lighter' : '#99BEE3',
+  'blue-lightest' : '#E6EFF8',
 
-  "indigo-darkest": "#191e38",
-  "indigo-darker": "#2f365f",
-  "indigo-dark": "#5661b3",
-  indigo: "#6574cd",
-  "indigo-light": "#7886d7",
-  "indigo-lighter": "#b2b7ff",
-  "indigo-lightest": "#e6e8ff",
+  'marine-darkest' : '#2E3D3D',
+  'marine-darker' : '#5C7A7A',
+  'marine-dark' : '#8AB8B8',
+  'marine' : '#99CCCC',
+  'marine-light' : '#B8DBDB',
+  'marine-lighter' : '#D6EBEB',
+  'marine-lightest' : '#F5FAFA',
 
-  "purple-darkest": "#21183c",
-  "purple-darker": "#382b5f",
-  "purple-dark": "#794acf",
-  purple: "#9561e2",
-  "purple-light": "#a779e9",
-  "purple-lighter": "#d6bbfc",
-  "purple-lightest": "#f3ebff",
+  'tangerine-darkest' : '#4C3513',
+  'tangerine-darker' : '#976A26',
+  'tangerine-dark' : '#E39E3A',
+  'tangerine' : '#FCB040',
+  'tangerine-light' : '#FDC879',
+  'tangerine-lighter' : '#FEDFB3',
+  'tangerine-lightest' : '#FFF7EC',
 
-  "pink-darkest": "#451225",
-  "pink-darker": "#6f213f",
-  "pink-dark": "#eb5286",
-  pink: "#f66d9b",
-  "pink-light": "#fa7ea8",
-  "pink-lighter": "#ffbbca",
-  "pink-lightest": "#ffebef"
+  'fog-darkest' : '#454646',
+  'fog-darker' : '#8B8B8C',
+  'fog-dark' : '#D0D1D3',
+  'fog' : '#E7E8EA',
+  'fog-light' : '#EEEFF0',
+  'fog-lighter' : '#F5F6F7',
+  'fog-lightest' : '#FDFDFD'
 };
 
 module.exports = {
