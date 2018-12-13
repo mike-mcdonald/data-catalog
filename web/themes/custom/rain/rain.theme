@@ -178,3 +178,31 @@ function rain_theme_suggestions_details_alter(array &$suggestions, array $variab
 function rain_preprocess_menu_local_task(array &$variables) {
   //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
 }
+
+/**
+ * Implements hook_preprocess_facets_item_list().
+ */
+function rain_preprocess_facets_item_list(array &$variables) {
+  /* value in items is a link which needs to be styled here and not in a template */
+  $link_classes = [
+    'p-3',
+    'border-b',
+    'hover:bg-fog-light',
+    'flex',
+    'items-center',
+    'justify-between',
+  ];
+
+  $active_classes = [
+    'bg-blue-lightest',
+  ];
+
+  foreach ($variables['items'] as $key => &$item) {
+    if(isset($item['value']['#title']['#is_active']) && $item['value']['#title']['#is_active']) {
+      $item['value']['#attributes']['class'] = array_merge($active_classes, $link_classes);
+    }
+    else {
+      $item['value']['#attributes']['class'] = $link_classes;
+    }
+  }
+}

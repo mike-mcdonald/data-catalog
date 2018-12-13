@@ -17,9 +17,9 @@
  */
 #}
 {% if is_active %}
-  <span class="facet-item__status js-facet-deactivate">(-)</span>
+  <i class="mr-1 flex">{% include active_theme_path() ~ '/icons/minus-circle.svg' %}</i>
 {% endif %}
-<span class="facet-item__value">{{ value }}</span>
+<span class="flex-1">{{ value }}</span>
 {% if show_count %}
-  <span class="facet-item__count">({{ count }})</span>
+  <span class="bg-blue text-white rounded-full px-2 py-1 text-xs font-bold">{{ count }}</span>
 {% endif %}
