@@ -10,7 +10,7 @@
 # Database password: example
 # ADVANCED OPTIONS; Database host: postgres
 
-version: '2'
+version: "2"
 
 services:
   db:
@@ -21,6 +21,7 @@ services:
       POSTGRES_PASSWORD: datacatalog
     volumes:
       - ./artifacts:/docker-entrypoint-initdb.d
+      - db:/var/lib/postgresql/data
     networks:
       - code-network
       - db-network
@@ -88,3 +89,4 @@ networks:
 
 volumes:
   tmp:
+  db:
