@@ -40,13 +40,13 @@
     'list-reset',
     'inline-flex',
     'p-1',
-    'bg-grey-light',
+    'bg-fog',
     'rounded',
   ])
 %}
 {%
   set list_item_classes = list_item_classes|default([
-    'hover:bg-grey',
+    'hover:bg-fog-darker',
     'font-bold',
     'py-2',
     'px-4',
@@ -86,8 +86,8 @@
       {# Now generate the actual pager piece. #}
       {% for key, item in items.pages %}
         {% set page_classes = list_item_classes|merge([
-          current == key ? 'bg-blue',
-          current == key ? 'hover:bg-blue-dark',
+          current == key ? 'bg-cyan',
+          current == key ? 'hover:bg-cyan-dark',
           current == key ? 'text-white',
           'mx-1',
         ]) %}

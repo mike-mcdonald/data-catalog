@@ -54,6 +54,7 @@
     title_display not in ['after', 'before'] ? 'form-no-label',
     disabled == 'disabled' ? 'form-disabled',
     errors ? 'form-item--error',
+    'mb-4',
   ])
 %}
 {%
@@ -73,7 +74,7 @@
     'flex',
     'items-baseline',
     'font-bold',
-    'mb-2',
+    'mb-1',
   ]%}
   <div{{ attributes.addClass(classes) }}>
     {% if prefix is not empty %}

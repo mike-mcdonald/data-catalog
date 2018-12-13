@@ -99,7 +99,7 @@
   {% endif %}
   <tbody>
     {% for row in rows %}
-      <tr{{ row.attributes.addClass('hover:bg-grey-lighter') }}>
+      <tr{{ row.attributes.addClass('hover:bg-grey-lightest') }}>
         {% for key, column in row.columns %}
           {% if column.default_classes %}
             {%

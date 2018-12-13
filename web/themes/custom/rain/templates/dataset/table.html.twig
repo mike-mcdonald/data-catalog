@@ -87,7 +87,7 @@
   {% if rows %}
     <tbody>
       {% for row in rows %}
-        <tr{{ row.attributes.addClass('hover:bg-grey-lighter') }}>
+        <tr{{ row.attributes.addClass('hover:bg-grey-lightest') }}>
           {% for cell in row.cells %}
             <{{ cell.tag }}{{ cell.attributes.removeClass('block').addClass(cell_classes, 'px-2', 'py-1') }}>
               {{- cell.content -}}

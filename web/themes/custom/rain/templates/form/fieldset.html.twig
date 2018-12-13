@@ -26,7 +26,19 @@
     'form-item',
     'js-form-wrapper',
     'form-wrapper',
+    'mb-3',
+    'p-3',
+    'border',
+    'rounded',
   ]
+%}
+
+{%
+  set legend_classes = legend_classes|default([
+    'font-semibold',
+    'px-2',
+    'py-1',
+  ])
 %}
 <fieldset{{ attributes.addClass(classes) }}>
   {%
@@ -37,7 +49,7 @@
     ]
   %}
   {#  Always wrap fieldset legends in a SPAN for CSS positioning. #}
-  <legend{{ legend.attributes }}>
+  <legend{{ legend.attributes.addClass(legend_classes) }}>
     <span{{ legend_span.attributes.addClass(legend_span_classes) }}>{{ legend.title }}</span>
   </legend>
   <div class="fieldset-wrapper">

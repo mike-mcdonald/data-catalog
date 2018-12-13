@@ -231,19 +231,19 @@ import info from '../../icons/info.svg';
     const buttonClasses = [
       'tabledrag-toggle-weight',
       'ml-auto',
-      'bg-blue',
+      'bg-cyan',
       'appearance-none',
       'border-2',
-      'border-blue-dark',
+      'border-cyan-darker',
       'rounded-lg',
       'py-2',
       'px-4',
       'text-white',
       'leading-tight',
       'focus:outline-none',
-      'focus:bg-blue-dark',
-      'focus:border-blue-dark',
-      'hover:border-blue'
+      'focus:bg-cyan-dark',
+      'focus:border-cyan-darker',
+      'hover:border-cyan'
     ];
 
     // Add a link before the table for users to show or hide weight columns.
@@ -777,7 +777,7 @@ import info from '../../icons/info.svg';
     self.table.bottomY = self.table.topY + self.table.offsetHeight;
 
     const dragClasses = [
-      'bg-blue-lightest'
+      'bg-cyan-lightest'
     ];
 
     // Add classes to the handle and row.
