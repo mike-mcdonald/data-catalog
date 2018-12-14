@@ -1,7 +1,14 @@
 global-styling:
-   version: 1.0
-   css:
+  version: 1.0
+  css:
     theme:
-      css/style.bundle.css : {}
-   js:
-     js/main.bundle.js : {}
+      css/style.bundle.css: {}
+  js:
+    js/main.bundle.js: {}
+
+select2.theme:
+  css:
+    component:
+      css/style.bundle.css: {}
+  dependencies:
+    - rain/global-styling

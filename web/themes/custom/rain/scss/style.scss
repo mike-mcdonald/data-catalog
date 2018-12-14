@@ -1,6 +1,5 @@
-
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800");
 
 /**
  * This injects Tailwind's base styles, which is a combination of
@@ -40,19 +39,20 @@
  * @import "components/forms";
  */
 
- @import "links";
- @import "buttons";
- @import "dropbuttons";
- @import "views";
- @import "menus";
- @import "forms";
+@import "links";
+@import "buttons";
+@import "dropbuttons";
+@import "views";
+@import "menus";
+@import "forms";
+@import "select2/layout";
 
 .transition {
   transition: all 0.5s ease;
 }
 
 details[open] {
-  >summary {
+  > summary {
     @apply border-b pb-3 mb-3;
   }
 }
@@ -81,4 +81,3 @@ details[open] {
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
-
