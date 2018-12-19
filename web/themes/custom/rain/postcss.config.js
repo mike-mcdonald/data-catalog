@@ -25,8 +25,9 @@ module.exports = ({ file, options, env }) => {
       }),
       options.mode === 'production' ? purgecss({
         content: [
-          './templates/**/*.html.twig',
+          'templates/**/*.html.twig',
           'js/main.bundle.js',
+          './rain.theme',
         ],
         extractors: [
           {
@@ -34,7 +35,7 @@ module.exports = ({ file, options, env }) => {
 
             // Specify the file extensions to include when scanning for
             // class names.
-            extensions: ["html", "twig", "js", "php", "vue"]
+            extensions: ["html", "twig", "js", "php", "vue", "theme"]
           }
         ]
       }) : false,
