@@ -19,19 +19,22 @@
  * @see template_preprocess_field_multiple_value_form()
  */
 #}
-
 {% if multiple %}
-  <div class="js-form-item form-item mb-4">
+  <div class="js-form-item form-item my-4">
     {{ table }}
     {% if description.content %}
-      <div{{ description.attributes.addClass('description') }} >{{ description.content }}</div>
+      <div{{description.attributes.addClass('description')}}>
+        {{ description.content }}</div>
     {% endif %}
     {% if button %}
-      <div class="clearfix">{{ button }}</div>
+      <div class="clearfix">
+        {{ button }}</div>
     {% endif %}
   </div>
-{% else %}
-  {% for element in elements %}
-    {{ element }}
-  {% endfor %}
+  {% else %}
+  <div class="my-4">
+    {% for element in elements %}
+      {{ element }}
+    {% endfor %}
+  </div>
 {% endif %}

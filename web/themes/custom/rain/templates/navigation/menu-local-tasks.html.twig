@@ -11,21 +11,31 @@
  * themed in menu-local-task.html.twig.
  */
 #}
-{% set list_attributes = list_attributes|default(create_attribute()) %}
+{% set primary_attributes = primary_attributes|default(create_attribute()) %}
+{% set secondary_attributes = secondary_attributes|default(create_attribute()) %}
 {%
-  set list_classes = list_classes|default([
+  set primary_classes = primary_classes|default([
     'list-reset',
     'flex',
     'flex-row',
-    'mb-4',
+    'bg-marine-light',
+  ])
+%}
+
+{%
+  set secondary_classes = secondary_classes|default([
+    'list-reset',
+    'flex',
+    'flex-row',
+    'bg-marine',
   ])
 %}
 
 {% if primary %}
   <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
-  <ul{{ list_attributes.addClass(list_classes) }}>{{ primary }}</ul>
+  <ul{{ primary_attributes.addClass(primary_classes) }}>{{ primary }}</ul>
 {% endif %}
 {% if secondary %}
   <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
-  <ul{{ list_attributes.addClass(list_classes) }}>{{ secondary }}</ul>
+  <ul{{ secondary_attributes.addClass(secondary_classes) }}>{{ secondary }}</ul>
 {% endif %}

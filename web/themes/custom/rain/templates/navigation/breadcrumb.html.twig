@@ -7,6 +7,13 @@
  * - breadcrumb: Breadcrumb trail items.
  */
 #}
+{% set nav_attributes = nav_attributes|default(create_attribute()) %}
+{%
+  set nav_classes = nav_classes|default([
+    'my-2',
+  ])
+%}
+
 {% set list_attributes = list_attributes|default(create_attribute()) %}
 {%
   set list_classes = list_classes|default([
@@ -32,7 +39,7 @@
 %}
 
 {% if breadcrumb %}
-  <nav role="navigation" aria-label="Breadcrumb" aria-labelledby="system-breadcrumb">
+  <nav{{ nav_attributes.addClass(nav_classes) }} role="navigation" aria-label="Breadcrumb" aria-labelledby="system-breadcrumb">
     <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
     <ol{{ list_attributes.addClass(list_classes) }}>
     {% for item in breadcrumb %}

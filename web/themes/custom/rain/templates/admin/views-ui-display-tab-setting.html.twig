@@ -23,32 +23,31 @@
     'views-ui-display-tab-setting',
     defaulted ? 'defaulted',
     overridden ? 'overridden',
+    'p-2',
 ]
 %}
-
 {%
   set link_classes = link_classes|default([
     'border-black',
     'border-b-2',
   ])
 %}
-
 {% set seperator_attributes = seperator_attributes|default(create_attribute()) %}
 {%
   set seperator_classes = seperator_classes|default([
     'mx-1',
   ])
 %}
-
-<div{{ attributes.addClass(classes) }}>
+<div{{attributes.addClass(classes)}}>
   {% if description -%}
-    <span class="label">{{ description }}</span>
+    <span class="label">
+      {{ description }}</span>
   {%- endif %}
   {% if settings_links %}
     {% for link in settings_links %}
       {{ link }}
       {% if not loop.last %}
-        <span{{ seperator_attributes.addClass(seperator_classes) }}>|</span>
+        <span{{seperator_attributes.addClass(seperator_classes)}}>|</span>
       {% endif %}
     {% endfor %}
   {% endif %}

@@ -6,6 +6,7 @@
  * Available variables:
  * - attributes: A list of HTML attributes for the input element.
  * - children: Optional additional rendered elements.
+ * - required: Exists if this input is required
  *
  * @see template_preprocess_input()
  */
@@ -28,5 +29,4 @@
     required ? 'focus:border-red-darkest' : 'focus:border-grey-darkest',
   ])
 %}
-
-<input{{ attributes.addClass(input_classes) }} />{{ children }}
+<input{{attributes.addClass(input_classes)}}/>{{ children }}

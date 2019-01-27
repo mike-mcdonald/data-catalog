@@ -16,14 +16,11 @@
 #}
 {%
   set task_classes = task_classes|default([
-    'py-2',
-    'px-3',
-    'mr-2',
-    is_active ? 'bg-cyan' : 'hover:bg-grey-lightest',
+    'py-3',
+    'px-4',
+    is_active ? 'bg-cyan',
     is_active ? 'text-white',
-    is_active ? 'border': 'hover:border',
-    is_active ? 'border-cyan-darker' : 'hover:border-grey-light ',
-    'rounded',
+    is_active ? 'hover:bg-cyan-darker' : 'hover:bg-fog-light ',
   ])
 %}
 <li{{ attributes.addClass(task_classes) }} {% if is_active %} aria-selected="true" {% endif %}>

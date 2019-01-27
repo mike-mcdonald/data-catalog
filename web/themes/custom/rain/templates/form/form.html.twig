@@ -12,10 +12,9 @@
 #}
 {%
   set form_classes = form_classes|default([
-    'mb-3',
+    'my-3',
   ])
 %}
-
-<form{{ attributes.addClass(form_classes) }}>
+<form{{attributes.addClass(form_classes)}}>
   {{ children }}
 </form>

@@ -20,14 +20,22 @@
     'views-ui-display-tab-bucket',
     name ? name|clean_class,
     overridden ? 'overridden',
+    'border',
+    'rounded-lg',
+    'mb-1',
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
-  {% if title -%}
-    <h3 class="views-ui-display-tab-bucket__title">{{ title }}</h3>
-  {%- endif %}
-  {% if actions -%}
-    {{ actions }}
-  {%- endif %}
+<div{{attributes.addClass(classes)}}>
+  {% if title or actions %}
+    <div class="flex items-center justify-between p-2 rounded-t-lg bg-fog-light">
+      {% if title -%}
+        <h3 class="views-ui-display-tab-bucket__title">
+          {{ title }}</h3>
+      {%- endif %}
+      {% if actions -%}
+        {{ actions }}
+      {%- endif %}
+    </div>
+  {% endif %}
   {{ content }}
 </div>

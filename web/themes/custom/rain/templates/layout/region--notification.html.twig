@@ -1,0 +1,8 @@
+{% include 'region.html.twig' with {
+  'region_element': 'div',
+  'region_classes': [
+    'region',
+    'region-' ~ region|clean_class,
+    'flex-grow',
+  ]
+} %}

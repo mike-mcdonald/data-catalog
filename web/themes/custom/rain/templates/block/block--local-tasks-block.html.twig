@@ -1,0 +1,19 @@
+{% embed "block.html.twig" with {
+  'block_classes': [
+    'mb-0',
+  ]
+} %}
+{#
+/**
+ * @file
+ * Theme override for local actions (primary admin actions.)
+ */
+#}
+{% block content %}
+  {% if content %}
+    <nav{{ create_attribute({ 'class': content_classes }) }}>
+      {{ content }}
+    </nav>
+  {% endif %}
+{% endblock %}
+{% endembed %}

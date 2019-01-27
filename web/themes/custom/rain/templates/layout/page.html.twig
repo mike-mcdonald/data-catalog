@@ -42,7 +42,6 @@
  * @see html.html.twig
  */
 #}
-
 {%
   set container_classes = container_classes|default([
     is_admin ? '' : 'container',
@@ -53,71 +52,56 @@
     'lg:flex-row',
   ])
 %}
-<div>
-  {% if page.alert|render is not empty %}
-    <section role="notifications">
-      <span class="">
-        {{ page.alert }}
-      </span>
+{% if page.alert|render is not empty %}
+  <section role="notifications">
+    {{ page.alert }}
+  </section>
+{% endif %}
+{% if page.header|render is not empty or page.header_menu|render is not empty %}
+  <header role="banner" class="bg-grey text-white">
+    <span class="{{ container_classes|merge(['items-center'])|join(' ') }}">
+      {{ page.header }}
+      {{ page.header_menu }}
+    </span>
+  </header>
+{% endif %}
+{% if page.notification|render is not empty %}
+  <section role="notifications">
+    <span class="{{ container_classes|join(' ') }}">
+      {{ page.notification }}
+    </span>
+  </section>
+{% endif %}
+{% if page.local_admin|render is not empty %}
+  <section role="administration">
+    {{ page.local_admin }}
+  </section>
+{% endif %}
+<main role="main" class="{{ container_classes|merge(['mb-4'])|join(' ') }}">
+  <a class="border-0" id="main-content" tabindex="-1"></a>
+  {# link is in html.html.twig #}
+  {% if page.left_sidebar|render is not empty %}
+    <aside class="lg:mr-4 lg:w-1/4" role="complementary">
+      {{ page.left_sidebar }}
+    </aside>
+  {% endif %}
+  <section class="flex-grow lg:w-1/2">
+    {{ page.content }}
+  </section>
+  {# /.layout-content #}
+  {% if page.right_sidebar|render|striptags|trim is not empty %}
+    <aside class="lg:ml-4 lg:w-1/4" role="complementary">
+      {{ page.right_sidebar }}
+    </aside>
+  {% endif %}
+</main>
+{% if page.left_footer or page.right_footer %}
+  <footer role="contentinfo" class="{{ container_classes|merge(['justify-between'])|join(' ') }}">
+    <section>
+      {{ page.left_footer }}
     </section>
-  {% endif %}
-
-  {% if page.header|render is not empty or page.header_menu|render is not empty %}
-    <header role="banner" class="bg-grey text-white">
-      <span class="{{ container_classes|merge(['items-center', 'py-4'])|join(' ') }}">
-        {{ page.header }}
-        {{ page.header_menu }}
-      </span>
-    </header>
-  {% endif %}
-
-  {% if page.notifications|render is not empty %}
-    <section role="notifications">
-      <span class="{{ container_classes|join(' ') }}">
-        {{ page.notifications }}
-      </span>
+    <section>
+      {{ page.right_footer }}
     </section>
-  {% endif %}
-
-  {% if page.local_admin|render is not empty %}
-    <section role="administration">
-      <span class="{{ container_classes|merge(['my-4'])|join(' ') }}">
-        {{ page.local_admin }}
-      </span>
-    </section>
-  {% endif %}
-
-  <main role="main" class="{{ container_classes|merge(['my-4'])|join(' ') }}">
-    <a id="main-content" class="border-0" tabindex="-1"></a>{# link is in html.html.twig #}
-    {% if page.left_sidebar %}
-      <aside class="lg:mr-4 lg:w-1/4" role="complementary">
-        {{ page.left_sidebar }}
-      </aside>
-    {% endif %}
-
-    <section class="flex-grow lg:w-1/2">
-      {{ page.content }}
-    </section>{# /.layout-content #}
-
-
-    {% if page.right_sidebar %}
-      <aside class="lg:ml-4 lg:w-1/4" role="complementary">
-        {{ page.right_sidebar }}
-      </aside>
-    {% endif %}
-
-  </main>
-
-  {% if page.left_footer or page.right_footer %}
-    <footer role="contentinfo" class="">
-      <span class="{{ container_classes|join(' ') }}">
-        <section>
-          {{ page.left_footer }}
-        </section>
-        <section>
-          {{ page.right_footer }}
-        </section>
-      </span>
-    </footer>
-  {% endif %}
-</div>
+  </footer>
+{% endif %}
