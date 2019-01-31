@@ -1,0 +1,14 @@
+/**
+ * @file
+ * Progress behavior.
+ */
+
+.progress {
+  @apply relative;
+}
+.progress__track {
+  @apply border;
+}
+.progress__bar {
+  @apply bg-green;
+}

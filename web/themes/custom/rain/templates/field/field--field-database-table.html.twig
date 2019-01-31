@@ -1,0 +1,27 @@
+{% embed 'field.html.twig' with {
+  'content_classes': [
+
+  ],
+  'item_classes': [
+    'my-2',
+    'flex',
+    'items-center',
+  ]
+  } %}
+  {% spaceless %}
+    {% block content %}
+      <div{{content_attribute.addClass(content_classes)}}>
+        {%- for item in items -%}
+          <div{{item.attributes.addClass(item_classes)}}>
+            <span class="mr-2 flex">
+              {% include active_theme_path() ~ '/icons/table-solid.svg' %}
+            </span>
+            <span>
+              {{ item.content }}
+            </span>
+          </div>
+        {%- endfor -%}
+      </div>
+    {% endblock %}
+  {% endspaceless %}
+{% endembed %}

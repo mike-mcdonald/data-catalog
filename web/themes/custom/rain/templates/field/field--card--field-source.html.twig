@@ -1,0 +1,21 @@
+{% embed 'field.html.twig' with {
+  'content_classes': [
+    'flex',
+    'flex-wrap',
+    'items-center',
+    '-mx-2',
+  ],
+  'item_classes': [
+    'm-2',
+  ]
+} %}
+  {% block content %}
+    <div{{content_attribute.addClass(content_classes)}}>
+      {%- for item in items -%}
+        <div{{item.attributes.addClass(item_classes)}}>
+          {{ item.content }}
+        </div>
+      {%- endfor -%}
+    </div>
+  {% endblock %}
+{% endembed %}

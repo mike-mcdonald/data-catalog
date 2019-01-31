@@ -1,0 +1,36 @@
+{% embed 'field.html.twig' with {
+  'title_classes': [
+
+  ],
+  'item_classes': [
+    'my-2',
+    'flex',
+    'items-center',
+  ]
+  } %}
+  {% spaceless %}
+    {% block label %}
+      {%- if not label_hidden -%}
+        <div class="flex items-center mr-3">
+          <span class="mr-2 flex">
+            {% include active_theme_path() ~ '/icons/database.svg' %}
+          </span>
+          <label{{title_attributes.addClass(title_classes)}}>
+            {{ label|render }}
+          </label>
+        </div>
+      {%- endif -%}
+    {% endblock %}
+    {% block content %}
+      <div{{content_attribute.addClass(content_classes)}}>
+        {%- for item in items -%}
+          <div{{item.attributes.addClass(item_classes)}}>
+            <span>
+              {{ item.content }}
+            </span>
+          </div>
+        {%- endfor -%}
+      </div>
+    {% endblock %}
+  {% endspaceless %}
+{% endembed %}

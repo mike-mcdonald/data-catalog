@@ -1,0 +1,19 @@
+{% embed 'node.html.twig' with {
+  'heading_element': 'span',
+  'title_classes': [
+    'flex',
+    'items-center',
+  ],
+} %}
+  {% block title %}
+    {{ title_prefix }}
+    {% if not page %}
+      <{{heading_element}} {{ title_attributes.addClass(title_classes) }}>
+        <a href="{{ url }}" rel="bookmark">
+          {{ label }}
+        </a>
+      </{{heading_element}}>
+    {% endif %}
+    {{ title_suffix }}
+  {% endblock %}
+{% endembed %}
