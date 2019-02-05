@@ -1,1 +1,2419 @@
-!function(t){var e={};function n(o){if(e[o])return e[o].exports;var r=e[o]={i:o,l:!1,exports:{}};return t[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}n.m=t,n.c=e,n.d=function(t,e,o){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:o})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var r in t)n.d(o,r,function(e){return t[e]}.bind(null,r));return o},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=4)}([function(t,e){t.exports='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fill-current stroke-current h-6 w-6 feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>'},function(t,e){t.exports='<svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-6 w-6" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>'},function(t,e){t.exports='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-current stroke-current h-6 w-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-move"><polyline points="5 9 2 12 5 15"></polyline><polyline points="9 5 12 2 15 5"></polyline><polyline points="15 19 12 22 9 19"></polyline><polyline points="19 9 22 12 19 15"></polyline><line x1="2" y1="12" x2="22" y2="12"></line><line x1="12" y1="2" x2="12" y2="22"></line></svg>'},function(t,e){t.exports='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current h-6 w-6 feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>'},function(t,e,n){n(5),n(6),n(7),n(8),t.exports=n(9)},function(t,e){!function(t){"use strict";Drupal.behaviors.cshs={attach:function(e,n){t("select.simpler-select-root",e).once("cshs").each(function(e,o){void 0!==n.cshs&&void 0!==n.cshs[o.id]&&t(o).simplerSelect(n.cshs[o.id])})}}}(jQuery)},function(t,e,n){"use strict";n.r(e);var o=n(0),r=n.n(o);!function(t,e){function n(n,o){const r=t.extend({title:e.t("List additional actions")},o),i=t(n);if(this.$dropbutton=i,this.$list=i.find(".dropbutton"),this.$actions=this.$list.find(".dropbutton-action"),this.$actions.length>1){const n=this.$actions.slice(0,1);this.$actions.slice(1).addClass("secondary-action"),n.append(e.theme("dropbuttonToggle",r)),this.$dropbutton.addClass("dropbutton-multiple").on({"mouseleave.dropbutton":t.proxy(this.hoverOut,this),"mouseenter.dropbutton":t.proxy(this.hoverIn,this),"focusout.dropbutton":t.proxy(this.focusOut,this),"focusin.dropbutton":t.proxy(this.focusIn,this)})}else this.$dropbutton.addClass("dropbutton-single")}function o(e){e.preventDefault(),t(e.target).closest(".dropbutton-wrapper").toggleClass("open")}e.behaviors.dropButton={attach(e,r){const i=t(e).find(".dropbutton-wrapper").once("dropbutton");if(i.length){const e=t("body").once("dropbutton-click");e.length&&e.on("click",".dropbutton-toggle",o);const s=i.length;for(let t=0;t<s;t++)n.dropbuttons.push(new n(i[t],r.dropbutton))}}},t.extend(n,{dropbuttons:[]}),t.extend(n.prototype,{toggle(t){t="boolean"==typeof t?t:!this.$dropbutton.hasClass("open"),this.$dropbutton.toggleClass("open",t)},hoverIn(){this.timerID&&window.clearTimeout(this.timerID)},hoverOut(){this.timerID=window.setTimeout(t.proxy(this,"close"),500)},open(){this.toggle(!0)},close(){this.toggle(!1)},focusOut(t){this.hoverOut.call(this,t)},focusIn(t){this.hoverIn.call(this,t)}}),t.extend(e.theme,{dropbuttonToggle:t=>`<span class="${["dropbutton-toggle","border-l","pl-3","flex"].join(" ")}">\n          <span class="visually-hidden">${t.title}</span>\n          <button class="flex" type="button">\n            ${r.a}\n          </button>\n        </span>`}),e.DropButton=n}(jQuery,Drupal)},function(t,e,n){"use strict";n.r(e);var o=n(1),r=n.n(o);!function(t,e){var n={noneLabel:"- Please choose -",noneValue:"_none",labels:[]};function o(e,o){this.$element=t(e),this.$currentSelect=null,this.settings=t.extend({},n,o),this.selectOptions=[],this.init()}o.prototype={init:function(){var e=this;e.destroy(),e.$element.find("option").each(function(){var n=t(this);e.selectOptions.push({value:n.val(),label:n.text(),parent:n.data("parent")||0,children:[]})});var n=e.buildTree(e.selectOptions);if(null!==n){var o=e.$element.val(),r=[],i=e.createSelect(n),s=i;o&&("string"!=typeof o&&(o=o.shift()),(r=e.getAllParents(o)).reverse(),r.push(o)),this.$element.after(i),t.each(r,function(t,n){e.selectSetValue(s,n);var o=e.createSelect(e.getOptionInfoByValue(n).children,n,t+1);null!==o&&(s.after(o),s=o)}),e.$element.hide()}},destroy:function(){this.selectOptions=[],this.$element.show().nextAll(".select-wrapper").remove()},createSelect:function(e,n,o){if(!e||e.length<1)return null;n=n||this.settings.noneValue,o=o||0;const i=`\n      <div class="${["pointer-events-none","absolute","pin-y","pin-r","flex","items-center","px-2"].join(" ")}">\n      ${r.a}\n      </div>\n      `,s=`<select class="${["simpler-select","w-full"].join(" ")}">`;var l=this,a=t(s).addClass(l.$element.attr("class")),d=t(`<div class="${["select-wrapper","relative"].join(" ")}">`);return l.$element.hasClass("error")&&a.addClass("error"),a.append('<option value="'+l.settings.noneValue+'" data-parent-value="'+n+'">'+l.settings.noneLabel+"</option>"),t.each(e,function(e,n){if(n.value!=l.settings.noneValue){var o=t("<option>").val(n.value).text(n.label.replace(/(- )+/,""));n.children.length&&o.addClass("has-children"),a.append(o)}}),a.change(function(){l.$currentSelect=t(this),l.selectRemoveNext(l.$currentSelect);var e=l.$currentSelect.find("option:selected"),n=e.val(),o=e.data("parent-value");if(void 0===o&&(o=n),l.$element.val(o).change(),n!=l.settings.noneValue){var r=l.getOptionInfoByValue(n);void 0!==r.children&&l.addSelectAfter(l.createSelect(r.children,n,l.selectGetLevel()))}}),l.settings.labels[o]&&d.append("<label>"+l.settings.labels[o]+"</label>"),d.append(a),d.append(i),d},buildTree:function(e,n,o){o=o||[],n=n||{value:0};var r=t.grep(e,function(t){return void 0!==t&&t.parent==n.value});if(r.length){0==n.value?o=r:n.children=r;for(var i=0;i<r.length;i++)this.buildTree(e,r[i],o)}return o},selectSetValue:function(t,e){t.find("select").val(e)},selectRemoveNext:function(){this.$currentSelect.parents(".select-wrapper").nextAll(".select-wrapper").remove()},addSelectAfter:function(t){this.$currentSelect.parents(".select-wrapper").after(t)},selectGetLevel:function(){return this.$currentSelect.parents(".form-type-cshs").find(".select-wrapper").length},getAllParents:function(t,e){if(t==this.settings.noneValue)return[];e=e||[];var n=this.getOptionByValue(t).data("parent");return void 0!==n&&0!=n&&(e.push(n),this.getAllParents(this.getOptionByValue(n).val(),e)),e},getOptionByValue:function(t){return this.$element.find('option[value="'+t+'"]')},getOptionInfoByValue:function(e){var n={};return t.each(this.selectOptions,function(t,o){if(o.value==e)return n=o,!1}),n}},t.fn.simplerSelect=function(e){return this.each(function(){t.data(this,"plugin_simplerSelect")||t.data(this,"plugin_simplerSelect",new o(this,e))}),this}}(jQuery)},function(t,e,n){"use strict";n.r(e);var o=n(2),r=n.n(o),i=n(3),s=n.n(i);!function(t,e,n){let o=JSON.parse(localStorage.getItem("Drupal.tableDrag.showWeight"));e.behaviors.tableDrag={attach(n,o){Object.keys(o.tableDrag||{}).forEach(r=>{!function(t,n){t.length&&(e.tableDrag[n]=new e.tableDrag(t[0],o.tableDrag[n]))}(t(n).find(`#${r}`).once("tabledrag"),r)})}},e.tableDrag=function(n,r){const i=this,s=t(n);if(this.$table=t(n),this.table=n,this.tableSettings=r,this.dragObject=null,this.rowObject=null,this.oldRowElement=null,this.oldY=0,this.changed=!1,this.maxDepth=0,this.rtl="rtl"===t(this.table).css("direction")?-1:1,this.striping=1===t(this.table).data("striping"),this.scrollSettings={amount:4,interval:50,trigger:70},this.scrollInterval=null,this.scrollY=0,this.windowHeight=0,this.indentEnabled=!1,Object.keys(r||{}).forEach(t=>{Object.keys(r[t]||{}).forEach(e=>{"parent"===r[t][e].relationship&&(this.indentEnabled=!0),r[t][e].limit>0&&(this.maxDepth=r[t][e].limit)})}),this.indentEnabled){this.indentCount=1;const o=e.theme("tableDragIndentation"),r=t("<tr/>").addClass("draggable").appendTo(n),i=t("<td/>").appendTo(r).prepend(o).prepend(o).find(".js-indentation");this.indentAmount=i.get(1).offsetLeft-i.get(0).offsetLeft,r.remove()}s.find("> tr.draggable, > tbody > tr.draggable").each(function(){i.makeDraggable(this)});s.before(t(`<button type="button" class="${["tabledrag-toggle-weight","ml-auto","bg-cyan","appearance-none","border-2","border-cyan-darker","rounded-lg","py-2","px-4","text-white","leading-tight","focus:outline-none","focus:bg-cyan-dark","focus:border-cyan-darker","hover:border-cyan"].join(" ")}"></button>`).attr("title",e.t("Re-order rows by numerical weight instead of dragging.")).on("click",t.proxy(function(t){t.preventDefault(),this.toggleColumns()},this)).wrap('<div class="flex flex-col items-end mb-3"></div>').parent()),i.initColumns(),t(document).on("touchmove",t=>i.dragRow(t.originalEvent.touches[0],i)),t(document).on("touchend",t=>i.dropRow(t.originalEvent.touches[0],i)),t(document).on("mousemove pointermove",t=>i.dragRow(t,i)),t(document).on("mouseup pointerup",t=>i.dropRow(t,i)),t(window).on("storage",t.proxy(function(t){"Drupal.tableDrag.showWeight"===t.originalEvent.key&&(o=JSON.parse(t.originalEvent.newValue),this.displayColumns(o))},this))},e.tableDrag.prototype.initColumns=function(){const t=this.$table;let e,n,r;Object.keys(this.tableSettings||{}).forEach(o=>{Object.keys(this.tableSettings[o]).some(r=>{const i=t.find(`.${this.tableSettings[o][r].target}`).eq(0);return!(!i.length||!this.tableSettings[o][r].hidden)&&(e=this.tableSettings[o][r].hidden,n=i.closest("td"),!0)}),e&&n[0]&&(r=n.parent().find("> td").index(n.get(0))+1,t.find("> thead > tr, > tbody > tr, > tr").each(this.addColspanClass(r)))}),this.displayColumns(o)},e.tableDrag.prototype.addColspanClass=function(e){return function(){const n=t(this);let o=e;const r=n.children();let i;r.each(function(t){t<o&&this.colSpan&&this.colSpan>1&&(o-=this.colSpan-1)}),o>0&&((i=r.filter(`:nth-child(${o})`))[0].colSpan&&i[0].colSpan>1?i.addClass("tabledrag-has-colspan"):i.addClass("tabledrag-hide"))}},e.tableDrag.prototype.displayColumns=function(e){e?this.showColumns():this.hideColumns(),t("table").findOnce("tabledrag").trigger("columnschange",!!e)},e.tableDrag.prototype.toggleColumns=function(){o=!o,this.displayColumns(o),o?localStorage.setItem("Drupal.tableDrag.showWeight",o):localStorage.removeItem("Drupal.tableDrag.showWeight")},e.tableDrag.prototype.hideColumns=function(){const n=t("table").findOnce("tabledrag");n.find(".tabledrag-hide").css("display","none"),n.find(".tabledrag-handle").css("display",""),n.find(".tabledrag-has-colspan").each(function(){this.colSpan=this.colSpan-1}),t(".tabledrag-toggle-weight").text(e.t("Show row weights"))},e.tableDrag.prototype.showColumns=function(){const n=t("table").findOnce("tabledrag");n.find(".tabledrag-hide").css("display",""),n.find(".tabledrag-handle").css("display","none"),n.find(".tabledrag-has-colspan").each(function(){this.colSpan=this.colSpan+1}),t(".tabledrag-toggle-weight").text(e.t("Hide row weights"))},e.tableDrag.prototype.rowSettings=function(e,n){const o=t(n).find(`.${e}`),r=this.tableSettings[e];return Object.keys(r).map(t=>{const e=r[t].target;let n;return o.is(`.${e}`)&&(n={},Object.keys(r[t]).forEach(e=>{n[e]=r[t][e]})),n}).filter(t=>t)[0]},e.tableDrag.prototype.makeDraggable=function(n){const o=this,i=t(n);i.find("td:first-of-type").find("a").addClass("menu-item__link");const s=t(`<span class="${["tabledrag-handle","handle","cursor-move","align-middle","h-4","w-4","mr-3"].join(" ")}">${r.a}</span>`).attr("title",e.t("Drag to re-order")),l=i.find("td:first-of-type").find(".js-indentation").eq(-1);l.length?(l.after(s),o.indentCount=Math.max(i.find(".js-indentation").length,o.indentCount)):i.find("td").eq(0).prepend(s),s.on("mousedown touchstart pointerdown",t=>{t.preventDefault(),"touchstart"===t.originalEvent.type&&(t=t.originalEvent.touches[0]),o.dragStart(t,o,n)}),s.on("click",t=>{t.preventDefault()}),s.on("focus",()=>{o.safeBlur=!0}),s.on("blur",t=>{o.rowObject&&o.safeBlur&&o.dropRow(t,o)}),s.on("keydown",e=>{9===e.keyCode||o.rowObject||(o.rowObject=new o.row(n,"keyboard",o.indentEnabled,o.maxDepth,!0));let r,i=!1;switch(e.keyCode){case 37:case 63234:i=!0,o.rowObject.indent(-1*o.rtl);break;case 38:case 63232:{let e=t(o.rowObject.element).prev("tr:first-of-type"),l=e.get(0);for(;l&&e.is(":hidden");)l=(e=t(l).prev("tr:first-of-type")).get(0);if(l){if(o.safeBlur=!1,o.rowObject.direction="up",i=!0,t(n).is(".tabledrag-root")){for(r=0;l&&e.find(".js-indentation").length;)l=(e=t(l).prev("tr:first-of-type")).get(0),r+=e.is(":hidden")?0:l.offsetHeight;l&&(o.rowObject.swap("before",l),window.scrollBy(0,-r))}else(o.table.tBodies[0].rows[0]!==l||e.is(".draggable"))&&(o.rowObject.swap("before",l),o.rowObject.interval=null,o.rowObject.indent(0),window.scrollBy(0,-parseInt(n.offsetHeight,10)));s.trigger("focus")}break}case 39:case 63235:i=!0,o.rowObject.indent(o.rtl);break;case 40:case 63233:{let e=t(o.rowObject.group).eq(-1).next("tr:first-of-type"),l=e.get(0);for(;l&&e.is(":hidden");)l=(e=t(l).next("tr:first-of-type")).get(0);if(l){if(o.safeBlur=!1,o.rowObject.direction="down",i=!0,t(n).is(".tabledrag-root")){r=0;const e=new o.row(l,"keyboard",o.indentEnabled,o.maxDepth,!1);if(e){t(e.group).each(function(){r+=t(this).is(":hidden")?0:this.offsetHeight});const n=t(e.group).eq(-1).get(0);o.rowObject.swap("after",n),window.scrollBy(0,parseInt(r,10))}}else o.rowObject.swap("after",l),o.rowObject.interval=null,o.rowObject.indent(0),window.scrollBy(0,parseInt(n.offsetHeight,10));s.trigger("focus")}break}}if(o.rowObject&&!0===o.rowObject.changed&&(t(n).addClass("drag"),o.oldRowElement&&t(o.oldRowElement).removeClass("drag-previous"),o.oldRowElement=n,!0===o.striping&&o.restripeTable(),o.onDrag()),i)return!1}),s.on("keypress",t=>{switch(t.keyCode){case 37:case 38:case 39:case 40:return!1}})},e.tableDrag.prototype.dragStart=function(e,n,o){n.dragObject={},n.dragObject.initOffset=n.getPointerOffset(o,e),n.dragObject.initPointerCoords=n.pointerCoords(e),n.indentEnabled&&(n.dragObject.indentPointerPos=n.dragObject.initPointerCoords),n.rowObject&&t(n.rowObject.element).find("a.tabledrag-handle").trigger("blur"),n.rowObject=new n.row(o,"pointer",n.indentEnabled,n.maxDepth,!0),n.table.topY=t(n.table).offset().top,n.table.bottomY=n.table.topY+n.table.offsetHeight;t(o).addClass(["bg-cyan-lightest"].join(" ")),t("body").addClass("drag"),n.oldRowElement&&t(n.oldRowElement).removeClass("drag-previous")},e.tableDrag.prototype.dragRow=function(t,e){if(e.dragObject){e.currentPointerCoords=e.pointerCoords(t);const n=e.currentPointerCoords.y-e.dragObject.initOffset.y,o=e.currentPointerCoords.x-e.dragObject.initOffset.x;if(n!==e.oldY){e.rowObject.direction=n>e.oldY?"down":"up",e.oldY=n;const t=e.checkScroll(e.currentPointerCoords.y);clearInterval(e.scrollInterval),(t>0&&"down"===e.rowObject.direction||t<0&&"up"===e.rowObject.direction)&&e.setScroll(t);const r=e.findDropTargetRow(o,n);r&&("down"===e.rowObject.direction?e.rowObject.swap("after",r,e):e.rowObject.swap("before",r,e),!0===e.striping&&e.restripeTable())}if(e.indentEnabled){const t=e.currentPointerCoords.x-e.dragObject.indentPointerPos.x,n=Math.round(t/e.indentAmount),o=e.rowObject.indent(n);e.dragObject.indentPointerPos.x+=e.indentAmount*o*e.rtl,e.indentCount=Math.max(e.indentCount,e.rowObject.indents)}return!1}},e.tableDrag.prototype.dropRow=function(n,o){let r,i;null!==o.rowObject&&(r=o.rowObject.element,i=t(r),!0===o.rowObject.changed&&(o.updateFields(r),Object.keys(o.tableSettings||{}).forEach(t=>{"group"===o.rowSettings(t,r).relationship&&Object.keys(o.rowObject.children||{}).forEach(e=>{o.updateField(o.rowObject.children[e],t)})}),o.rowObject.markChanged(),!1===o.changed&&(t(e.theme("tableDragChangedWarning")).insertBefore(o.table).hide().fadeIn("slow"),o.changed=!0)),o.indentEnabled&&o.rowObject.removeIndentClasses(),o.oldRowElement&&t(o.oldRowElement).removeClass("drag-previous"),i.removeClass("drag").addClass("drag-previous"),o.oldRowElement=r,o.onDrop(),o.rowObject=null),null!==o.dragObject&&(o.dragObject=null,t("body").removeClass("drag"),clearInterval(o.scrollInterval))},e.tableDrag.prototype.pointerCoords=function(t){return t.pageX||t.pageY?{x:t.pageX,y:t.pageY}:{x:t.clientX+document.body.scrollLeft-document.body.clientLeft,y:t.clientY+document.body.scrollTop-document.body.clientTop}},e.tableDrag.prototype.getPointerOffset=function(e,n){const o=t(e).offset(),r=this.pointerCoords(n);return{x:r.x-o.left,y:r.y-o.top}},e.tableDrag.prototype.findDropTargetRow=function(e,n){const o=t(this.table.tBodies[0].rows).not(":hidden");for(let e=0;e<o.length;e++){let r=o[e],i=t(r);const s=i.offset().top;let l;if(n>s-(l=0===r.offsetHeight?parseInt(r.firstChild.offsetHeight,10)/2:parseInt(r.offsetHeight,10)/2)&&n<s+l){if(this.indentEnabled){if(Object.keys(this.rowObject.group).some(t=>this.rowObject.group[t]===r))return null}else if(r===this.rowObject.element)return null;if(!this.rowObject.isValidSwap(r))return null;for(;i.is(":hidden")&&i.prev("tr").is(":hidden");)i=i.prev("tr:first-of-type"),r=i.get(0);return r}}return null},e.tableDrag.prototype.updateFields=function(t){Object.keys(this.tableSettings||{}).forEach(e=>{this.updateField(t,e)})},e.tableDrag.prototype.updateField=function(e,n){let o=this.rowSettings(n,e);const r=t(e);let i,s,l,a;if("self"===o.relationship||"group"===o.relationship)i=e;else if("sibling"===o.relationship){l=(s=r.prev("tr:first-of-type")).get(0);const t=r.next("tr:first-of-type"),o=t.get(0);i=e,s.is(".draggable")&&s.find(`.${n}`).length?this.indentEnabled?s.find(".js-indentations").length===r.find(".js-indentations").length&&(i=l):i=l:t.is(".draggable")&&t.find(`.${n}`).length&&(this.indentEnabled?t.find(".js-indentations").length===r.find(".js-indentations").length&&(i=o):i=o)}else if("parent"===o.relationship){for(l=s=r.prev("tr");s.length&&s.find(".js-indentation").length>=this.rowObject.indents;)l=s=s.prev("tr");s.length?i=s.get(0):((i=t(this.table).find("tr.draggable:first-of-type").get(0))===this.rowObject.element&&(i=t(this.rowObject.group[this.rowObject.group.length-1]).next("tr.draggable").get(0)),a=!0)}this.copyDragClasses(i,e,n),o=this.rowSettings(n,e),a&&(o.relationship="sibling",o.source=o.target);const d=`.${o.target}`,c=r.find(d).get(0);if(c){const e=`.${o.source}`,n=t(e,i).get(0);switch(o.action){case"depth":c.value=t(n).closest("tr").find(".js-indentation").length;break;case"match":c.value=n.value;break;case"order":{const e=this.rowObject.findSiblings(o);if(t(c).is("select")){const n=[];t(c).find("option").each(function(){n.push(this.value)});const o=n[n.length-1];t(e).find(d).each(function(){n.length>0?this.value=n.shift():this.value=o})}else{let n=parseInt(t(e[0]).find(d).val(),10)||0;t(e).find(d).each(function(){this.value=n,n++})}break}}}},e.tableDrag.prototype.copyDragClasses=function(e,n,o){const r=t(e).find(`.${o}`),i=t(n).find(`.${o}`);r.length&&i.length&&(i[0].className=r[0].className)},e.tableDrag.prototype.checkScroll=function(t){const e=document.documentElement,n=document.body,o=window.innerHeight||(e.clientHeight&&0!==e.clientWidth?e.clientHeight:n.offsetHeight);let r;this.windowHeight=o,r=document.all?e.scrollTop?e.scrollTop:n.scrollTop:window.pageYOffset?window.pageYOffset:window.scrollY,this.scrollY=r;const i=this.scrollSettings.trigger;let s=0;return t-r>o-i?(s=(s=i/(o+r-t))>0&&s<i?s:i)*this.scrollSettings.amount:t-r<i?-(s=(s=i/(t-r))>0&&s<i?s:i)*this.scrollSettings.amount:void 0},e.tableDrag.prototype.setScroll=function(t){const e=this;this.scrollInterval=setInterval(()=>{e.checkScroll(e.currentPointerCoords.y);const n=e.scrollY>e.table.topY,o=e.scrollY+e.windowHeight<e.table.bottomY;(t>0&&o||t<0&&n)&&window.scrollBy(0,t)},this.scrollSettings.interval)},e.tableDrag.prototype.restripeTable=function(){t(this.table).find("> tbody > tr.draggable, > tr.draggable").filter(":visible").filter(":odd").removeClass("odd").addClass("even").end().filter(":even").removeClass("even").addClass("odd")},e.tableDrag.prototype.onDrag=function(){return null},e.tableDrag.prototype.onDrop=function(){return null},e.tableDrag.prototype.row=function(e,n,o,r,i){const s=t(e);if(this.element=e,this.method=n,this.group=[e],this.groupDepth=s.find(".js-indentation").length,this.changed=!1,this.table=s.closest("table")[0],this.indentEnabled=o,this.maxDepth=r,this.direction="",this.indentEnabled){this.indents=s.find(".js-indentation").length,this.children=this.findChildren(i),this.group=t.merge(this.group,this.children);for(let e=0;e<this.group.length;e++)this.groupDepth=Math.max(t(this.group[e]).find(".js-indentation").length,this.groupDepth)}},e.tableDrag.prototype.row.prototype.findChildren=function(e){const n=this.indents;let o=t(this.element,this.table).next("tr.draggable");const r=[];let i=0;function s(e,o){const r=t(o);1===i&&e===n&&r.addClass("tree-child-first"),e===n?r.addClass("tree-child"):e>n&&r.addClass("tree-child-horizontal")}for(;o.length&&o.find(".js-indentation").length>n;)i++,r.push(o[0]),e&&o.find(".js-indentation").each(s),o=o.next("tr.draggable");return e&&r.length&&t(r[r.length-1]).find(`.js-indentation:nth-child(${n+1})`).addClass("tree-child-last"),r},e.tableDrag.prototype.row.prototype.isValidSwap=function(e){const n=t(e);if(this.indentEnabled){let t,o;if("down"===this.direction?(t=e,o=n.next("tr").get(0)):(t=n.prev("tr").get(0),o=e),this.interval=this.validIndentInterval(t,o),this.interval.min>this.interval.max)return!1}return this.table.tBodies[0].rows[0]!==e||!n.is(":not(.draggable)")},e.tableDrag.prototype.row.prototype.swap=function(o,r){this.group.forEach(t=>{e.detachBehaviors(t,n,"move")}),t(r)[o](this.group),this.group.forEach(t=>{e.attachBehaviors(t,n)}),this.changed=!0,this.onSwap(r)},e.tableDrag.prototype.row.prototype.validIndentInterval=function(e,n){const o=t(e);let r;const i=n?t(n).find(".js-indentation").length:0;return!e||o.is(":not(.draggable)")||t(this.element).is(".tabledrag-root")?r=0:(r=o.find(".js-indentation").length+(o.is(".tabledrag-leaf")?0:1),this.maxDepth&&(r=Math.min(r,this.maxDepth-(this.groupDepth-this.indents)))),{min:i,max:r}},e.tableDrag.prototype.row.prototype.indent=function(n){const o=t(this.group);if(!this.interval){const e=t(this.element).prev("tr").get(0),n=o.eq(-1).next("tr").get(0);this.interval=this.validIndentInterval(e,n)}let r=this.indents+n;r=Math.max(r,this.interval.min),n=(r=Math.min(r,this.interval.max))-this.indents;for(let t=1;t<=Math.abs(n);t++)n<0?(o.find(".js-indentation:first-of-type").remove(),this.indents--):(o.find("td:first-of-type").prepend(e.theme("tableDragIndentation")),this.indents++);return n&&(this.changed=!0,this.groupDepth+=n,this.onIndent()),n},e.tableDrag.prototype.row.prototype.findSiblings=function(e){const n=[],o=["prev","next"],r=this.indents;let i;for(let s=0;s<o.length;s++){let l=t(this.element)[o[s]]();for(;l.length&&l.find(`.${e.target}`);){if(this.indentEnabled&&(i=l.find(".js-indentation").length),this.indentEnabled&&i!==r){if(i<r)break}else n.push(l[0]);l=l[o[s]]()}"prev"===o[s]&&(n.reverse(),n.push(this.element))}return n},e.tableDrag.prototype.row.prototype.removeIndentClasses=function(){Object.keys(this.children||{}).forEach(e=>{t(this.children[e]).find(".js-indentation").removeClass("tree-child").removeClass("tree-child-first").removeClass("tree-child-last").removeClass("tree-child-horizontal")})},e.tableDrag.prototype.row.prototype.markChanged=function(){const n=e.theme("tableDragChangedMarker"),o=t(this.element).find("td:first-of-type");0===o.find(".tabledrag-changed").length&&o.append(n)},e.tableDrag.prototype.row.prototype.onIndent=function(){return null},e.tableDrag.prototype.row.prototype.onSwap=function(t){return null},t.extend(e.theme,{tableDragChangedMarker:()=>`\n        <span title="${e.t("Changed")}" class="${["tabledrag-changed","text-purple-darkest","font-bold","mr-3"].join(" ")}">${s.a}</span>`,tableDragIndentation:()=>'<div class="js-indentation indentation">&nbsp;</div>',tableDragChangedWarning:()=>`\n        <div role="alert" class="bg-purple-lightest border-t-4 border-purple rounded-b text-purple-darkest px-4 py-3 shadow-md mb-4">\n          <div class="flex">\n            ${e.theme("tableDragChangedMarker")}\n            <div>\n              ${e.t("You have unsaved changes.")}\n            </div>\n          </div>\n        </div>`})}(jQuery,Drupal,drupalSettings)},function(t,e){}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./icons/chevron-down.svg":
+/*!********************************!*\
+  !*** ./icons/chevron-down.svg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"fill-current h-6 w-6\" viewBox=\"0 0 20 20\"><path d=\"M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z\"></path></svg>"
+
+/***/ }),
+
+/***/ "./icons/info.svg":
+/*!************************!*\
+  !*** ./icons/info.svg ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"stroke-current h-6 w-6 feather feather-info\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"12\"></line><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"8\"></line></svg>"
+
+/***/ }),
+
+/***/ "./icons/more-vertical.svg":
+/*!*********************************!*\
+  !*** ./icons/more-vertical.svg ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"fill-current stroke-current h-6 w-6 feather feather-more-vertical\"><circle cx=\"12\" cy=\"12\" r=\"1\"></circle><circle cx=\"12\" cy=\"5\" r=\"1\"></circle><circle cx=\"12\" cy=\"19\" r=\"1\"></circle></svg>"
+
+/***/ }),
+
+/***/ "./icons/move.svg":
+/*!************************!*\
+  !*** ./icons/move.svg ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" class=\"fill-current stroke-current h-6 w-6\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-move\"><polyline points=\"5 9 2 12 5 15\"></polyline><polyline points=\"9 5 12 2 15 5\"></polyline><polyline points=\"15 19 12 22 9 19\"></polyline><polyline points=\"19 9 22 12 19 15\"></polyline><line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\"></line><line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"22\"></line></svg>"
+
+/***/ }),
+
+/***/ "./js/src/cshs.es6.js":
+/*!****************************!*\
+  !*** ./js/src/cshs.es6.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * @file
+ * Behavior which initializes the simplerSelect jQuery Plugin.
+ */
+(function ($) {
+  'use strict';
+
+  Drupal.behaviors.cshs = {
+    attach: function (context, settings) {
+      $('select.simpler-select-root', context).once('cshs').each(function (idx, element) {
+        // See if we got settings from Drupal for this field.
+        if (typeof settings.cshs !== 'undefined' && typeof settings.cshs[element.id] !== 'undefined') {
+          $(element).simplerSelect(settings.cshs[element.id]);
+        }
+      });
+    }
+  };
+})(jQuery);
+
+/***/ }),
+
+/***/ "./js/src/dropbutton.es6.js":
+/*!**********************************!*\
+  !*** ./js/src/dropbutton.es6.js ***!
+  \**********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _icons_more_vertical_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../icons/more-vertical.svg */ "./icons/more-vertical.svg");
+/* harmony import */ var _icons_more_vertical_svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_icons_more_vertical_svg__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * @file
+ * Dropbutton feature.
+ */
+
+
+(function ($, Drupal) {
+  /**
+   * A DropButton presents an HTML list as a button with a primary action.
+   *
+   * All secondary actions beyond the first in the list are presented in a
+   * dropdown list accessible through a toggle arrow associated with the button.
+   *
+   * @constructor Drupal.DropButton
+   *
+   * @param {HTMLElement} dropbutton
+   *   A DOM element.
+   * @param {object} settings
+   *   A list of options including:
+   * @param {string} settings.title
+   *   The text inside the toggle link element. This text is hidden
+   *   from visual UAs.
+   */
+  function DropButton(dropbutton, settings) {
+    // Merge defaults with settings.
+    const options = $.extend({
+      title: Drupal.t('List additional actions')
+    }, settings);
+    const $dropbutton = $(dropbutton);
+    /**
+     * @type {jQuery}
+     */
+
+    this.$dropbutton = $dropbutton;
+    /**
+     * @type {jQuery}
+     */
+
+    this.$list = $dropbutton.find('.dropbutton');
+    /**
+     * Find actions and mark them.
+     *
+     * @type {jQuery}
+     */
+
+    this.$actions = this.$list.find('.dropbutton-action'); // Add the special dropdown only if there are hidden actions.
+
+    if (this.$actions.length > 1) {
+      // Identify the first element of the collection.
+      const $primary = this.$actions.slice(0, 1); // Identify the secondary actions.
+
+      const $secondary = this.$actions.slice(1);
+      $secondary.addClass('secondary-action'); // Add toggle link.
+
+      $primary.append(Drupal.theme('dropbuttonToggle', options)); // Bind mouse events.
+
+      this.$dropbutton.addClass('dropbutton-multiple').on({
+        /**
+         * Adds a timeout to close the dropdown on mouseleave.
+         *
+         * @ignore
+         */
+        'mouseleave.dropbutton': $.proxy(this.hoverOut, this),
+
+        /**
+         * Clears timeout when mouseout of the dropdown.
+         *
+         * @ignore
+         */
+        'mouseenter.dropbutton': $.proxy(this.hoverIn, this),
+
+        /**
+         * Similar to mouseleave/mouseenter, but for keyboard navigation.
+         *
+         * @ignore
+         */
+        'focusout.dropbutton': $.proxy(this.focusOut, this),
+
+        /**
+         * @ignore
+         */
+        'focusin.dropbutton': $.proxy(this.focusIn, this)
+      });
+    } else {
+      this.$dropbutton.addClass('dropbutton-single');
+    }
+  }
+  /**
+   * Delegated callback for opening and closing dropbutton secondary actions.
+   *
+   * @function Drupal.DropButton~dropbuttonClickHandler
+   *
+   * @param {jQuery.Event} e
+   *   The event triggered.
+   */
+
+
+  function dropbuttonClickHandler(e) {
+    e.preventDefault();
+    $(e.target).closest('.dropbutton-wrapper').toggleClass('open');
+  }
+  /**
+   * Process elements with the .dropbutton class on page load.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Attaches dropButton behaviors.
+   */
+
+
+  Drupal.behaviors.dropButton = {
+    attach(context, settings) {
+      const $dropbuttons = $(context).find('.dropbutton-wrapper').once('dropbutton');
+
+      if ($dropbuttons.length) {
+        // Adds the delegated handler that will toggle dropdowns on click.
+        const $body = $('body').once('dropbutton-click');
+
+        if ($body.length) {
+          $body.on('click', '.dropbutton-toggle', dropbuttonClickHandler);
+        } // Initialize all buttons.
+
+
+        const il = $dropbuttons.length;
+
+        for (let i = 0; i < il; i++) {
+          DropButton.dropbuttons.push(new DropButton($dropbuttons[i], settings.dropbutton));
+        }
+      }
+    }
+
+  };
+  /**
+   * Extend the DropButton constructor.
+   */
+
+  $.extend(DropButton,
+  /** @lends Drupal.DropButton */
+  {
+    /**
+     * Store all processed DropButtons.
+     *
+     * @type {Array.<Drupal.DropButton>}
+     */
+    dropbuttons: []
+  });
+  /**
+   * Extend the DropButton prototype.
+   */
+
+  $.extend(DropButton.prototype,
+  /** @lends Drupal.DropButton# */
+  {
+    /**
+     * Toggle the dropbutton open and closed.
+     *
+     * @param {bool} [show]
+     *   Force the dropbutton to open by passing true or to close by
+     *   passing false.
+     */
+    toggle(show) {
+      const isBool = typeof show === 'boolean';
+      show = isBool ? show : !this.$dropbutton.hasClass('open');
+      this.$dropbutton.toggleClass('open', show);
+    },
+
+    /**
+     * @method
+     */
+    hoverIn() {
+      // Clear any previous timer we were using.
+      if (this.timerID) {
+        window.clearTimeout(this.timerID);
+      }
+    },
+
+    /**
+     * @method
+     */
+    hoverOut() {
+      // Wait half a second before closing.
+      this.timerID = window.setTimeout($.proxy(this, 'close'), 500);
+    },
+
+    /**
+     * @method
+     */
+    open() {
+      this.toggle(true);
+    },
+
+    /**
+     * @method
+     */
+    close() {
+      this.toggle(false);
+    },
+
+    /**
+     * @param {jQuery.Event} e
+     *   The event triggered.
+     */
+    focusOut(e) {
+      this.hoverOut.call(this, e);
+    },
+
+    /**
+     * @param {jQuery.Event} e
+     *   The event triggered.
+     */
+    focusIn(e) {
+      this.hoverIn.call(this, e);
+    }
+
+  });
+  $.extend(Drupal.theme,
+  /** @lends Drupal.theme */
+  {
+    /**
+     * A toggle is an interactive element often bound to a click handler.
+     *
+     * @param {object} options
+     *   Options object.
+     * @param {string} [options.title]
+     *   The button text.
+     *
+     * @return {string}
+     *   A string representing a DOM fragment.
+     */
+    dropbuttonToggle(options) {
+      const dropbuttonClasses = ['dropbutton-toggle', 'border-l', 'pl-3', 'flex'];
+      return `<span class="${dropbuttonClasses.join(' ')}">
+          <span class="visually-hidden">${options.title}</span>
+          <button class="flex" type="button">
+            ${_icons_more_vertical_svg__WEBPACK_IMPORTED_MODULE_0___default.a}
+          </button>
+        </span>`;
+    }
+
+  }); // Expose constructor in the public space.
+
+  Drupal.DropButton = DropButton;
+})(jQuery, Drupal);
+
+/***/ }),
+
+/***/ "./js/src/simpler-select.es6.js":
+/*!**************************************!*\
+  !*** ./js/src/simpler-select.es6.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _icons_chevron_down_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../icons/chevron-down.svg */ "./icons/chevron-down.svg");
+/* harmony import */ var _icons_chevron_down_svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_icons_chevron_down_svg__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * @file
+ * Render standard select with hierarchical options: as set of selects, one for each level of the hierarchy.
+ */
+
+
+(function ($, pluginName) {
+  'use strict'; // Create the defaults once.
+
+  var defaults = {
+    noneLabel: '- Please choose -',
+    noneValue: '_none',
+    labels: []
+  }; // The actual plugin constructor.
+
+  function Plugin(element, options) {
+    this.$element = $(element);
+    this.$currentSelect = null;
+    this.settings = $.extend({}, defaults, options);
+    this.selectOptions = [];
+    this.init();
+  }
+
+  Plugin.prototype = {
+    init: function () {
+      var that = this; // Ensure that we'll clearly initiate a new instance.
+
+      that.destroy();
+      that.$element.find('option').each(function () {
+        var $option = $(this);
+        that.selectOptions.push({
+          value: $option.val(),
+          label: $option.text(),
+          parent: $option.data('parent') || 0,
+          children: []
+        });
+      });
+      var tree = that.buildTree(that.selectOptions);
+
+      if (tree === null) {
+        return;
+      }
+
+      var initialValue = that.$element.val();
+      var initialParents = [];
+      var $selectElement = that.createSelect(tree);
+      var $currentSelect = $selectElement;
+
+      if (initialValue) {
+        if (typeof initialValue !== 'string') {
+          // If array, flatten it.
+          initialValue = initialValue.shift();
+        } // Get all parents, starting from the initial value.
+
+
+        initialParents = that.getAllParents(initialValue); // Reverse the parents, that they start from the root.
+
+        initialParents.reverse(); // Add the current value as the last leave.
+
+        initialParents.push(initialValue);
+      }
+
+      this.$element.after($selectElement);
+      $.each(initialParents, function (i, value) {
+        that.selectSetValue($currentSelect, value);
+        var $nextSelect = that.createSelect(that.getOptionInfoByValue(value).children, value, i + 1);
+
+        if (null !== $nextSelect) {
+          $currentSelect.after($nextSelect);
+          $currentSelect = $nextSelect;
+        }
+      }); // Hide the original.
+
+      that.$element.hide();
+    },
+
+    /**
+     * Destroy CSHS.
+     */
+    destroy: function () {
+      this.selectOptions = [];
+      this.$element.show().nextAll('.select-wrapper').remove();
+    },
+
+    /**
+     * Given an array of options, build an HTML select element.
+     *
+     * @param {HTMLElement[]|HTMLOptionElement[]} options
+     *   List of options.
+     * @param {String} [parent]
+     *   Parent option.
+     * @param {Number} [level]
+     *   Nesting level.
+     *
+     * @return {jQuery|null}
+     *   Newly created element.
+     */
+    createSelect: function (options, parent, level) {
+      if (!options || options.length < 1) {
+        return null;
+      }
+
+      parent = parent || this.settings.noneValue;
+      level = level || 0;
+      const wrapperClasses = ['select-wrapper', 'relative'];
+      const chevronClasses = ['pointer-events-none', 'absolute', 'pin-y', 'pin-r', 'flex', 'items-center', 'px-2'];
+      const chevronElement = `
+      <div class="${chevronClasses.join(' ')}">
+      ${_icons_chevron_down_svg__WEBPACK_IMPORTED_MODULE_0___default.a}
+      </div>
+      `;
+      const selectClasses = ['simpler-select', 'w-full'];
+      const selectElement = `<select class="${selectClasses.join(' ')}">`;
+      var that = this;
+      var $select = $(selectElement).addClass(that.$element.attr('class'));
+      var $wrapper = $(`<div class="${wrapperClasses.join(' ')}">`);
+
+      if (that.$element.hasClass('error')) {
+        $select.addClass('error');
+      } // Always add the "_none" option.
+
+
+      $select.append('<option value="' + that.settings.noneValue + '" data-parent-value="' + parent + '">' + that.settings.noneLabel + '</option>');
+      $.each(options, function (i, option) {
+        // Do not add "_none" option (already added by code above).
+        if (option.value != that.settings.noneValue) {
+          var $option = $('<option>').val(option.value) // Remove dashes from the beginning, then set the label.
+          .text(option.label.replace(/(- )+/, ''));
+
+          if (option.children.length) {
+            $option.addClass('has-children');
+          }
+
+          $select.append($option);
+        }
+      });
+      $select.change(function () {
+        that.$currentSelect = $(this); // Remove deeper selects.
+
+        that.selectRemoveNext(that.$currentSelect); // Get the selected value and also set the original drop-down.
+
+        var $selected = that.$currentSelect.find('option:selected');
+        var selectedValue = $selected.val();
+        var parentValue = $selected.data('parent-value');
+
+        if (undefined === parentValue) {
+          parentValue = selectedValue;
+        }
+
+        that.$element.val(parentValue).change();
+
+        if (selectedValue == that.settings.noneValue) {
+          return;
+        } // Build new child select.
+
+
+        var optionInfo = that.getOptionInfoByValue(selectedValue);
+
+        if (undefined !== optionInfo.children) {
+          that.addSelectAfter(that.createSelect(optionInfo.children, selectedValue, that.selectGetLevel()));
+        }
+      });
+
+      if (that.settings.labels[level]) {
+        $wrapper.append('<label>' + that.settings.labels[level] + '</label>');
+      }
+
+      $wrapper.append($select);
+      $wrapper.append(chevronElement);
+      return $wrapper;
+    },
+
+    /**
+     * Given an flat array an tree is built.
+     *
+     * @param {Object[]} array
+     *   Options list.
+     * @param {Object} [parent]
+     *   Parent option.
+     * @param {Array} [tree]
+     *   Existing options.
+     *
+     * @return {Array}
+     *   Options tree.
+     */
+    buildTree: function (array, parent, tree) {
+      tree = tree || [];
+      parent = parent || {
+        value: 0
+      };
+      var children = $.grep(array, function (child) {
+        // Here must be no strict comparison!
+        return undefined !== child && child.parent == parent.value;
+      });
+
+      if (children.length) {
+        if (0 == parent.value) {
+          tree = children;
+        } else {
+          parent.children = children;
+        }
+
+        for (var i = 0; i < children.length; i++) {
+          this.buildTree(array, children[i], tree);
+        }
+      }
+
+      return tree;
+    },
+
+    /**
+     * Set the value of a select to the given.
+     *
+     * @param {jQuery} $select
+     *   Wrapper element.
+     * @param {String} value
+     *   New value to set.
+     */
+    selectSetValue: function ($select, value) {
+      $select.find('select').val(value);
+    },
+
+    /**
+     * Remove all following selects.
+     */
+    selectRemoveNext: function () {
+      this.$currentSelect.parents('.select-wrapper').nextAll('.select-wrapper').remove();
+    },
+
+    /**
+     * Add a newSelect after the currentSelect.
+     *
+     * @param {jQuery} $newSelect
+     *   New "select" element.
+     */
+    addSelectAfter: function ($newSelect) {
+      this.$currentSelect.parents('.select-wrapper').after($newSelect);
+    },
+
+    /**
+     * Get the hierarchy level of given select.
+     *
+     * @return {Number}
+     *   Number of wrappers.
+     */
+    selectGetLevel: function () {
+      return this.$currentSelect.parents('.form-type-cshs').find('.select-wrapper').length;
+    },
+
+    /**
+     * Given a value build an array of all parents (from leave to root).
+     *
+     * @param {String} value
+     *   Value of option.
+     * @param {Array} [parents]
+     *   Parent options.
+     *
+     * @return {Array}
+     *   Updated parent options list.
+     */
+    getAllParents: function (value, parents) {
+      if (value == this.settings.noneValue) {
+        return [];
+      }
+
+      parents = parents || [];
+      var parent = this.getOptionByValue(value).data('parent');
+
+      if (undefined !== parent && 0 != parent) {
+        parents.push(parent);
+        this.getAllParents(this.getOptionByValue(parent).val(), parents);
+      }
+
+      return parents;
+    },
+
+    /**
+     * Tiny helper to get the option jQuery object.
+     *
+     * @param {String} value
+     *   Value of an option.
+     *
+     * @return {jQuery}
+     *   Element.
+     */
+    getOptionByValue: function (value) {
+      return this.$element.find('option[value="' + value + '"]');
+    },
+
+    /**
+     * Helper to get the info-object which corresponds to an option value.
+     *
+     * @param {String} value
+     *   Value of an option.
+     *
+     * @return {Object}
+     *   Element.
+     */
+    getOptionInfoByValue: function (value) {
+      var optionInfo = {};
+      $.each(this.selectOptions, function (idx, option) {
+        if (option.value == value) {
+          optionInfo = option;
+          return false;
+        }
+      });
+      return optionInfo;
+    }
+  }; // A really lightweight plugin wrapper around the constructor,
+  // preventing against multiple instantiations.
+
+  $.fn[pluginName] = function (options) {
+    this.each(function () {
+      if (!$.data(this, 'plugin_' + pluginName)) {
+        $.data(this, 'plugin_' + pluginName, new Plugin(this, options));
+      }
+    });
+    return this;
+  };
+})(jQuery, 'simplerSelect');
+
+/***/ }),
+
+/***/ "./js/src/tabledrag.es6.js":
+/*!*********************************!*\
+  !*** ./js/src/tabledrag.es6.js ***!
+  \*********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _icons_move_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../icons/move.svg */ "./icons/move.svg");
+/* harmony import */ var _icons_move_svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_icons_move_svg__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _icons_info_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../icons/info.svg */ "./icons/info.svg");
+/* harmony import */ var _icons_info_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_icons_info_svg__WEBPACK_IMPORTED_MODULE_1__);
+/**
+ * @file
+ * Provide dragging capabilities to admin uis.
+ */
+
+/**
+ * Triggers when weights columns are toggled.
+ *
+ * @event columnschange
+ */
+
+
+
+(function ($, Drupal, drupalSettings) {
+  /**
+   * Store the state of weight columns display for all tables.
+   *
+   * Default value is to hide weight columns.
+   */
+  let showWeight = JSON.parse(localStorage.getItem('Drupal.tableDrag.showWeight'));
+  /**
+   * Drag and drop table rows with field manipulation.
+   *
+   * Using the drupal_attach_tabledrag() function, any table with weights or
+   * parent relationships may be made into draggable tables. Columns containing
+   * a field may optionally be hidden, providing a better user experience.
+   *
+   * Created tableDrag instances may be modified with custom behaviors by
+   * overriding the .onDrag, .onDrop, .row.onSwap, and .row.onIndent methods.
+   * See blocks.js for an example of adding additional functionality to
+   * tableDrag.
+   *
+   * @type {Drupal~behavior}
+   */
+
+  Drupal.behaviors.tableDrag = {
+    attach(context, settings) {
+      function initTableDrag(table, base) {
+        if (table.length) {
+          // Create the new tableDrag instance. Save in the Drupal variable
+          // to allow other scripts access to the object.
+          Drupal.tableDrag[base] = new Drupal.tableDrag(table[0], settings.tableDrag[base]);
+        }
+      }
+
+      Object.keys(settings.tableDrag || {}).forEach(base => {
+        initTableDrag($(context).find(`#${base}`).once('tabledrag'), base);
+      });
+    }
+
+  };
+  /**
+   * Provides table and field manipulation.
+   *
+   * @constructor
+   *
+   * @param {HTMLElement} table
+   *   DOM object for the table to be made draggable.
+   * @param {object} tableSettings
+   *   Settings for the table added via drupal_add_dragtable().
+   */
+
+  Drupal.tableDrag = function (table, tableSettings) {
+    const self = this;
+    const $table = $(table);
+    /**
+     * @type {jQuery}
+     */
+
+    this.$table = $(table);
+    /**
+     *
+     * @type {HTMLElement}
+     */
+
+    this.table = table;
+    /**
+     * @type {object}
+     */
+
+    this.tableSettings = tableSettings;
+    /**
+     * Used to hold information about a current drag operation.
+     *
+     * @type {?HTMLElement}
+     */
+
+    this.dragObject = null;
+    /**
+     * Provides operations for row manipulation.
+     *
+     * @type {?HTMLElement}
+     */
+
+    this.rowObject = null;
+    /**
+     * Remember the previous element.
+     *
+     * @type {?HTMLElement}
+     */
+
+    this.oldRowElement = null;
+    /**
+     * Used to determine up or down direction from last mouse move.
+     *
+     * @type {number}
+     */
+
+    this.oldY = 0;
+    /**
+     * Whether anything in the entire table has changed.
+     *
+     * @type {bool}
+     */
+
+    this.changed = false;
+    /**
+     * Maximum amount of allowed parenting.
+     *
+     * @type {number}
+     */
+
+    this.maxDepth = 0;
+    /**
+     * Direction of the table.
+     *
+     * @type {number}
+     */
+
+    this.rtl = $(this.table).css('direction') === 'rtl' ? -1 : 1;
+    /**
+     *
+     * @type {bool}
+     */
+
+    this.striping = $(this.table).data('striping') === 1;
+    /**
+     * Configure the scroll settings.
+     *
+     * @type {object}
+     *
+     * @prop {number} amount
+     * @prop {number} interval
+     * @prop {number} trigger
+     */
+
+    this.scrollSettings = {
+      amount: 4,
+      interval: 50,
+      trigger: 70
+    };
+    /**
+     *
+     * @type {?number}
+     */
+
+    this.scrollInterval = null;
+    /**
+     *
+     * @type {number}
+     */
+
+    this.scrollY = 0;
+    /**
+     *
+     * @type {number}
+     */
+
+    this.windowHeight = 0;
+    /**
+     * Check this table's settings for parent relationships.
+     *
+     * For efficiency, large sections of code can be skipped if we don't need to
+     * track horizontal movement and indentations.
+     *
+     * @type {bool}
+     */
+
+    this.indentEnabled = false;
+    Object.keys(tableSettings || {}).forEach(group => {
+      Object.keys(tableSettings[group] || {}).forEach(n => {
+        if (tableSettings[group][n].relationship === 'parent') {
+          this.indentEnabled = true;
+        }
+
+        if (tableSettings[group][n].limit > 0) {
+          this.maxDepth = tableSettings[group][n].limit;
+        }
+      });
+    });
+
+    if (this.indentEnabled) {
+      /**
+       * Total width of indents, set in makeDraggable.
+       *
+       * @type {number}
+       */
+      this.indentCount = 1; // Find the width of indentations to measure mouse movements against.
+      // Because the table doesn't need to start with any indentations, we
+      // manually append 2 indentations in the first draggable row, measure
+      // the offset, then remove.
+
+      const indent = Drupal.theme('tableDragIndentation');
+      const testRow = $('<tr/>').addClass('draggable').appendTo(table);
+      const testCell = $('<td/>').appendTo(testRow).prepend(indent).prepend(indent);
+      const $indentation = testCell.find('.js-indentation');
+      /**
+       *
+       * @type {number}
+       */
+
+      this.indentAmount = $indentation.get(1).offsetLeft - $indentation.get(0).offsetLeft;
+      testRow.remove();
+    } // Make each applicable row draggable.
+    // Match immediate children of the parent element to allow nesting.
+
+
+    $table.find('> tr.draggable, > tbody > tr.draggable').each(function () {
+      self.makeDraggable(this);
+    });
+    const buttonClasses = ['tabledrag-toggle-weight', 'ml-auto', 'bg-cyan', 'appearance-none', 'border-2', 'border-cyan-darker', 'rounded-lg', 'py-2', 'px-4', 'text-white', 'leading-tight', 'focus:outline-none', 'focus:bg-cyan-dark', 'focus:border-cyan-darker', 'hover:border-cyan']; // Add a link before the table for users to show or hide weight columns.
+
+    $table.before($(`<button type="button" class="${buttonClasses.join(' ')}"></button>`).attr('title', Drupal.t('Re-order rows by numerical weight instead of dragging.')).on('click', $.proxy(function (e) {
+      e.preventDefault();
+      this.toggleColumns();
+    }, this)).wrap('<div class="flex flex-col items-end mb-3"></div>').parent()); // Initialize the specified columns (for example, weight or parent columns)
+    // to show or hide according to user preference. This aids accessibility
+    // so that, e.g., screen reader users can choose to enter weight values and
+    // manipulate form elements directly, rather than using drag-and-drop..
+
+    self.initColumns(); // Add event bindings to the document. The self variable is passed along
+    // as event handlers do not have direct access to the tableDrag object.
+
+    $(document).on('touchmove', event => self.dragRow(event.originalEvent.touches[0], self));
+    $(document).on('touchend', event => self.dropRow(event.originalEvent.touches[0], self));
+    $(document).on('mousemove pointermove', event => self.dragRow(event, self));
+    $(document).on('mouseup pointerup', event => self.dropRow(event, self)); // React to localStorage event showing or hiding weight columns.
+
+    $(window).on('storage', $.proxy(function (e) {
+      // Only react to 'Drupal.tableDrag.showWeight' value change.
+      if (e.originalEvent.key === 'Drupal.tableDrag.showWeight') {
+        // This was changed in another window, get the new value for this
+        // window.
+        showWeight = JSON.parse(e.originalEvent.newValue);
+        this.displayColumns(showWeight);
+      }
+    }, this));
+  };
+  /**
+   * Initialize columns containing form elements to be hidden by default.
+   *
+   * Identify and mark each cell with a CSS class so we can easily toggle
+   * show/hide it. Finally, hide columns if user does not have a
+   * 'Drupal.tableDrag.showWeight' localStorage value.
+   */
+
+
+  Drupal.tableDrag.prototype.initColumns = function () {
+    const $table = this.$table;
+    let hidden;
+    let cell;
+    let columnIndex;
+    Object.keys(this.tableSettings || {}).forEach(group => {
+      // Find the first field in this group.
+      Object.keys(this.tableSettings[group]).some(tableSetting => {
+        const field = $table.find(`.${this.tableSettings[group][tableSetting].target}`).eq(0);
+
+        if (field.length && this.tableSettings[group][tableSetting].hidden) {
+          hidden = this.tableSettings[group][tableSetting].hidden;
+          cell = field.closest('td');
+          return true;
+        }
+
+        return false;
+      }); // Mark the column containing this field so it can be hidden.
+
+      if (hidden && cell[0]) {
+        // Add 1 to our indexes. The nth-child selector is 1 based, not 0
+        // based. Match immediate children of the parent element to allow
+        // nesting.
+        columnIndex = cell.parent().find('> td').index(cell.get(0)) + 1;
+        $table.find('> thead > tr, > tbody > tr, > tr').each(this.addColspanClass(columnIndex));
+      }
+    });
+    this.displayColumns(showWeight);
+  };
+  /**
+   * Mark cells that have colspan.
+   *
+   * In order to adjust the colspan instead of hiding them altogether.
+   *
+   * @param {number} columnIndex
+   *   The column index to add colspan class to.
+   *
+   * @return {function}
+   *   Function to add colspan class.
+   */
+
+
+  Drupal.tableDrag.prototype.addColspanClass = function (columnIndex) {
+    return function () {
+      // Get the columnIndex and adjust for any colspans in this row.
+      const $row = $(this);
+      let index = columnIndex;
+      const cells = $row.children();
+      let cell;
+      cells.each(function (n) {
+        if (n < index && this.colSpan && this.colSpan > 1) {
+          index -= this.colSpan - 1;
+        }
+      });
+
+      if (index > 0) {
+        cell = cells.filter(`:nth-child(${index})`);
+
+        if (cell[0].colSpan && cell[0].colSpan > 1) {
+          // If this cell has a colspan, mark it so we can reduce the colspan.
+          cell.addClass('tabledrag-has-colspan');
+        } else {
+          // Mark this cell so we can hide it.
+          cell.addClass('tabledrag-hide');
+        }
+      }
+    };
+  };
+  /**
+   * Hide or display weight columns. Triggers an event on change.
+   *
+   * @fires event:columnschange
+   *
+   * @param {bool} displayWeight
+   *   'true' will show weight columns.
+   */
+
+
+  Drupal.tableDrag.prototype.displayColumns = function (displayWeight) {
+    if (displayWeight) {
+      this.showColumns();
+    } // Default action is to hide columns.
+    else {
+        this.hideColumns();
+      } // Trigger an event to allow other scripts to react to this display change.
+    // Force the extra parameter as a bool.
+
+
+    $('table').findOnce('tabledrag').trigger('columnschange', !!displayWeight);
+  };
+  /**
+   * Toggle the weight column depending on 'showWeight' value.
+   *
+   * Store only default override.
+   */
+
+
+  Drupal.tableDrag.prototype.toggleColumns = function () {
+    showWeight = !showWeight;
+    this.displayColumns(showWeight);
+
+    if (showWeight) {
+      // Save default override.
+      localStorage.setItem('Drupal.tableDrag.showWeight', showWeight);
+    } else {
+      // Reset the value to its default.
+      localStorage.removeItem('Drupal.tableDrag.showWeight');
+    }
+  };
+  /**
+   * Hide the columns containing weight/parent form elements.
+   *
+   * Undo showColumns().
+   */
+
+
+  Drupal.tableDrag.prototype.hideColumns = function () {
+    const $tables = $('table').findOnce('tabledrag'); // Hide weight/parent cells and headers.
+
+    $tables.find('.tabledrag-hide').css('display', 'none'); // Show TableDrag handles.
+
+    $tables.find('.tabledrag-handle').css('display', ''); // Reduce the colspan of any effected multi-span columns.
+
+    $tables.find('.tabledrag-has-colspan').each(function () {
+      this.colSpan = this.colSpan - 1;
+    }); // Change link text.
+
+    $('.tabledrag-toggle-weight').text(Drupal.t('Show row weights'));
+  };
+  /**
+   * Show the columns containing weight/parent form elements.
+   *
+   * Undo hideColumns().
+   */
+
+
+  Drupal.tableDrag.prototype.showColumns = function () {
+    const $tables = $('table').findOnce('tabledrag'); // Show weight/parent cells and headers.
+
+    $tables.find('.tabledrag-hide').css('display', ''); // Hide TableDrag handles.
+
+    $tables.find('.tabledrag-handle').css('display', 'none'); // Increase the colspan for any columns where it was previously reduced.
+
+    $tables.find('.tabledrag-has-colspan').each(function () {
+      this.colSpan = this.colSpan + 1;
+    }); // Change link text.
+
+    $('.tabledrag-toggle-weight').text(Drupal.t('Hide row weights'));
+  };
+  /**
+   * Find the target used within a particular row and group.
+   *
+   * @param {string} group
+   *   Group selector.
+   * @param {HTMLElement} row
+   *   The row HTML element.
+   *
+   * @return {object}
+   *   The table row settings.
+   */
+
+
+  Drupal.tableDrag.prototype.rowSettings = function (group, row) {
+    const field = $(row).find(`.${group}`);
+    const tableSettingsGroup = this.tableSettings[group];
+    return Object.keys(tableSettingsGroup).map(delta => {
+      const targetClass = tableSettingsGroup[delta].target;
+      let rowSettings;
+
+      if (field.is(`.${targetClass}`)) {
+        // Return a copy of the row settings.
+        rowSettings = {};
+        Object.keys(tableSettingsGroup[delta]).forEach(n => {
+          rowSettings[n] = tableSettingsGroup[delta][n];
+        });
+      }
+
+      return rowSettings;
+    }).filter(rowSetting => rowSetting)[0];
+  };
+  /**
+   * Take an item and add event handlers to make it become draggable.
+   *
+   * @param {HTMLElement} item
+   *   The item to add event handlers to.
+   */
+
+
+  Drupal.tableDrag.prototype.makeDraggable = function (item) {
+    const self = this;
+    const $item = $(item); // Add a class to the title link.
+
+    $item.find('td:first-of-type').find('a').addClass('menu-item__link'); // Create the handle.
+
+    const handleClasses = ['tabledrag-handle', 'handle', 'cursor-move', 'align-middle', 'h-4', 'w-4', 'mr-3'];
+    const handle = $(`<span class="${handleClasses.join(' ')}">${_icons_move_svg__WEBPACK_IMPORTED_MODULE_0___default.a}</span>`).attr('title', Drupal.t('Drag to re-order')); // Insert the handle after indentations (if any).
+
+    const $indentationLast = $item.find('td:first-of-type').find('.js-indentation').eq(-1);
+
+    if ($indentationLast.length) {
+      $indentationLast.after(handle); // Update the total width of indentation in this entire table.
+
+      self.indentCount = Math.max($item.find('.js-indentation').length, self.indentCount);
+    } else {
+      $item.find('td').eq(0).prepend(handle);
+    }
+
+    handle.on('mousedown touchstart pointerdown', event => {
+      event.preventDefault();
+
+      if (event.originalEvent.type === 'touchstart') {
+        event = event.originalEvent.touches[0];
+      }
+
+      self.dragStart(event, self, item);
+    }); // Prevent the anchor tag from jumping us to the top of the page.
+
+    handle.on('click', e => {
+      e.preventDefault();
+    }); // Set blur cleanup when a handle is focused.
+
+    handle.on('focus', () => {
+      self.safeBlur = true;
+    }); // On blur, fire the same function as a touchend/mouseup. This is used to
+    // update values after a row has been moved through the keyboard support.
+
+    handle.on('blur', event => {
+      if (self.rowObject && self.safeBlur) {
+        self.dropRow(event, self);
+      }
+    }); // Add arrow-key support to the handle.
+
+    handle.on('keydown', event => {
+      // If a rowObject doesn't yet exist and this isn't the tab key.
+      if (event.keyCode !== 9 && !self.rowObject) {
+        self.rowObject = new self.row(item, 'keyboard', self.indentEnabled, self.maxDepth, true);
+      }
+
+      let keyChange = false;
+      let groupHeight;
+      /* eslint-disable no-fallthrough */
+
+      switch (event.keyCode) {
+        // Left arrow.
+        case 37: // Safari left arrow.
+
+        case 63234:
+          keyChange = true;
+          self.rowObject.indent(-1 * self.rtl);
+          break;
+        // Up arrow.
+
+        case 38: // Safari up arrow.
+
+        case 63232:
+          {
+            let $previousRow = $(self.rowObject.element).prev('tr:first-of-type');
+            let previousRow = $previousRow.get(0);
+
+            while (previousRow && $previousRow.is(':hidden')) {
+              $previousRow = $(previousRow).prev('tr:first-of-type');
+              previousRow = $previousRow.get(0);
+            }
+
+            if (previousRow) {
+              // Do not allow the onBlur cleanup.
+              self.safeBlur = false;
+              self.rowObject.direction = 'up';
+              keyChange = true;
+
+              if ($(item).is('.tabledrag-root')) {
+                // Swap with the previous top-level row.
+                groupHeight = 0;
+
+                while (previousRow && $previousRow.find('.js-indentation').length) {
+                  $previousRow = $(previousRow).prev('tr:first-of-type');
+                  previousRow = $previousRow.get(0);
+                  groupHeight += $previousRow.is(':hidden') ? 0 : previousRow.offsetHeight;
+                }
+
+                if (previousRow) {
+                  self.rowObject.swap('before', previousRow); // No need to check for indentation, 0 is the only valid one.
+
+                  window.scrollBy(0, -groupHeight);
+                }
+              } else if (self.table.tBodies[0].rows[0] !== previousRow || $previousRow.is('.draggable')) {
+                // Swap with the previous row (unless previous row is the first
+                // one and undraggable).
+                self.rowObject.swap('before', previousRow);
+                self.rowObject.interval = null;
+                self.rowObject.indent(0);
+                window.scrollBy(0, -parseInt(item.offsetHeight, 10));
+              } // Regain focus after the DOM manipulation.
+
+
+              handle.trigger('focus');
+            }
+
+            break;
+          }
+        // Right arrow.
+
+        case 39: // Safari right arrow.
+
+        case 63235:
+          keyChange = true;
+          self.rowObject.indent(self.rtl);
+          break;
+        // Down arrow.
+
+        case 40: // Safari down arrow.
+
+        case 63233:
+          {
+            let $nextRow = $(self.rowObject.group).eq(-1).next('tr:first-of-type');
+            let nextRow = $nextRow.get(0);
+
+            while (nextRow && $nextRow.is(':hidden')) {
+              $nextRow = $(nextRow).next('tr:first-of-type');
+              nextRow = $nextRow.get(0);
+            }
+
+            if (nextRow) {
+              // Do not allow the onBlur cleanup.
+              self.safeBlur = false;
+              self.rowObject.direction = 'down';
+              keyChange = true;
+
+              if ($(item).is('.tabledrag-root')) {
+                // Swap with the next group (necessarily a top-level one).
+                groupHeight = 0;
+                const nextGroup = new self.row(nextRow, 'keyboard', self.indentEnabled, self.maxDepth, false);
+
+                if (nextGroup) {
+                  $(nextGroup.group).each(function () {
+                    groupHeight += $(this).is(':hidden') ? 0 : this.offsetHeight;
+                  });
+                  const nextGroupRow = $(nextGroup.group).eq(-1).get(0);
+                  self.rowObject.swap('after', nextGroupRow); // No need to check for indentation, 0 is the only valid one.
+
+                  window.scrollBy(0, parseInt(groupHeight, 10));
+                }
+              } else {
+                // Swap with the next row.
+                self.rowObject.swap('after', nextRow);
+                self.rowObject.interval = null;
+                self.rowObject.indent(0);
+                window.scrollBy(0, parseInt(item.offsetHeight, 10));
+              } // Regain focus after the DOM manipulation.
+
+
+              handle.trigger('focus');
+            }
+
+            break;
+          }
+      }
+      /* eslint-enable no-fallthrough */
+
+
+      if (self.rowObject && self.rowObject.changed === true) {
+        $(item).addClass('drag');
+
+        if (self.oldRowElement) {
+          $(self.oldRowElement).removeClass('drag-previous');
+        }
+
+        self.oldRowElement = item;
+
+        if (self.striping === true) {
+          self.restripeTable();
+        }
+
+        self.onDrag();
+      } // Returning false if we have an arrow key to prevent scrolling.
+
+
+      if (keyChange) {
+        return false;
+      }
+    }); // Compatibility addition, return false on keypress to prevent unwanted
+    // scrolling. IE and Safari will suppress scrolling on keydown, but all
+    // other browsers need to return false on keypress.
+    // http://www.quirksmode.org/js/keys.html
+
+    handle.on('keypress', event => {
+      /* eslint-disable no-fallthrough */
+      switch (event.keyCode) {
+        // Left arrow.
+        case 37: // Up arrow.
+
+        case 38: // Right arrow.
+
+        case 39: // Down arrow.
+
+        case 40:
+          return false;
+      }
+      /* eslint-enable no-fallthrough */
+
+    });
+  };
+  /**
+   * Pointer event initiator, creates drag object and information.
+   *
+   * @param {jQuery.Event} event
+   *   The event object that trigger the drag.
+   * @param {Drupal.tableDrag} self
+   *   The drag handle.
+   * @param {HTMLElement} item
+   *   The item that that is being dragged.
+   */
+
+
+  Drupal.tableDrag.prototype.dragStart = function (event, self, item) {
+    // Create a new dragObject recording the pointer information.
+    self.dragObject = {};
+    self.dragObject.initOffset = self.getPointerOffset(item, event);
+    self.dragObject.initPointerCoords = self.pointerCoords(event);
+
+    if (self.indentEnabled) {
+      self.dragObject.indentPointerPos = self.dragObject.initPointerCoords;
+    } // If there's a lingering row object from the keyboard, remove its focus.
+
+
+    if (self.rowObject) {
+      $(self.rowObject.element).find('a.tabledrag-handle').trigger('blur');
+    } // Create a new rowObject for manipulation of this row.
+
+
+    self.rowObject = new self.row(item, 'pointer', self.indentEnabled, self.maxDepth, true); // Save the position of the table.
+
+    self.table.topY = $(self.table).offset().top;
+    self.table.bottomY = self.table.topY + self.table.offsetHeight;
+    const dragClasses = ['bg-cyan-lightest']; // Add classes to the handle and row.
+
+    $(item).addClass(dragClasses.join(' ')); // Set the document to use the move cursor during drag.
+
+    $('body').addClass('drag');
+
+    if (self.oldRowElement) {
+      $(self.oldRowElement).removeClass('drag-previous');
+    }
+  };
+  /**
+   * Pointer movement handler, bound to document.
+   *
+   * @param {jQuery.Event} event
+   *   The pointer event.
+   * @param {Drupal.tableDrag} self
+   *   The tableDrag instance.
+   *
+   * @return {bool|undefined}
+   *   Undefined if no dragObject is defined, false otherwise.
+   */
+
+
+  Drupal.tableDrag.prototype.dragRow = function (event, self) {
+    if (self.dragObject) {
+      self.currentPointerCoords = self.pointerCoords(event);
+      const y = self.currentPointerCoords.y - self.dragObject.initOffset.y;
+      const x = self.currentPointerCoords.x - self.dragObject.initOffset.x; // Check for row swapping and vertical scrolling.
+
+      if (y !== self.oldY) {
+        self.rowObject.direction = y > self.oldY ? 'down' : 'up'; // Update the old value.
+
+        self.oldY = y; // Check if the window should be scrolled (and how fast).
+
+        const scrollAmount = self.checkScroll(self.currentPointerCoords.y); // Stop any current scrolling.
+
+        clearInterval(self.scrollInterval); // Continue scrolling if the mouse has moved in the scroll direction.
+
+        if (scrollAmount > 0 && self.rowObject.direction === 'down' || scrollAmount < 0 && self.rowObject.direction === 'up') {
+          self.setScroll(scrollAmount);
+        } // If we have a valid target, perform the swap and restripe the table.
+
+
+        const currentRow = self.findDropTargetRow(x, y);
+
+        if (currentRow) {
+          if (self.rowObject.direction === 'down') {
+            self.rowObject.swap('after', currentRow, self);
+          } else {
+            self.rowObject.swap('before', currentRow, self);
+          }
+
+          if (self.striping === true) {
+            self.restripeTable();
+          }
+        }
+      } // Similar to row swapping, handle indentations.
+
+
+      if (self.indentEnabled) {
+        const xDiff = self.currentPointerCoords.x - self.dragObject.indentPointerPos.x; // Set the number of indentations the pointer has been moved left or
+        // right.
+
+        const indentDiff = Math.round(xDiff / self.indentAmount); // Indent the row with our estimated diff, which may be further
+        // restricted according to the rows around this row.
+
+        const indentChange = self.rowObject.indent(indentDiff); // Update table and pointer indentations.
+
+        self.dragObject.indentPointerPos.x += self.indentAmount * indentChange * self.rtl;
+        self.indentCount = Math.max(self.indentCount, self.rowObject.indents);
+      }
+
+      return false;
+    }
+  };
+  /**
+   * Pointerup behavior.
+   *
+   * @param {jQuery.Event} event
+   *   The pointer event.
+   * @param {Drupal.tableDrag} self
+   *   The tableDrag instance.
+   */
+
+
+  Drupal.tableDrag.prototype.dropRow = function (event, self) {
+    let droppedRow;
+    let $droppedRow; // Drop row functionality.
+
+    if (self.rowObject !== null) {
+      droppedRow = self.rowObject.element;
+      $droppedRow = $(droppedRow); // The row is already in the right place so we just release it.
+
+      if (self.rowObject.changed === true) {
+        // Update the fields in the dropped row.
+        self.updateFields(droppedRow); // If a setting exists for affecting the entire group, update all the
+        // fields in the entire dragged group.
+
+        Object.keys(self.tableSettings || {}).forEach(group => {
+          const rowSettings = self.rowSettings(group, droppedRow);
+
+          if (rowSettings.relationship === 'group') {
+            Object.keys(self.rowObject.children || {}).forEach(n => {
+              self.updateField(self.rowObject.children[n], group);
+            });
+          }
+        });
+        self.rowObject.markChanged();
+
+        if (self.changed === false) {
+          $(Drupal.theme('tableDragChangedWarning')).insertBefore(self.table).hide().fadeIn('slow');
+          self.changed = true;
+        }
+      }
+
+      if (self.indentEnabled) {
+        self.rowObject.removeIndentClasses();
+      }
+
+      if (self.oldRowElement) {
+        $(self.oldRowElement).removeClass('drag-previous');
+      }
+
+      $droppedRow.removeClass('drag').addClass('drag-previous');
+      self.oldRowElement = droppedRow;
+      self.onDrop();
+      self.rowObject = null;
+    } // Functionality specific only to pointerup events.
+
+
+    if (self.dragObject !== null) {
+      self.dragObject = null;
+      $('body').removeClass('drag');
+      clearInterval(self.scrollInterval);
+    }
+  };
+  /**
+   * Get the coordinates from the event (allowing for browser differences).
+   *
+   * @param {jQuery.Event} event
+   *   The pointer event.
+   *
+   * @return {object}
+   *   An object with `x` and `y` keys indicating the position.
+   */
+
+
+  Drupal.tableDrag.prototype.pointerCoords = function (event) {
+    if (event.pageX || event.pageY) {
+      return {
+        x: event.pageX,
+        y: event.pageY
+      };
+    }
+
+    return {
+      x: event.clientX + document.body.scrollLeft - document.body.clientLeft,
+      y: event.clientY + document.body.scrollTop - document.body.clientTop
+    };
+  };
+  /**
+   * Get the event offset from the target element.
+   *
+   * Given a target element and a pointer event, get the event offset from that
+   * element. To do this we need the element's position and the target position.
+   *
+   * @param {HTMLElement} target
+   *   The target HTML element.
+   * @param {jQuery.Event} event
+   *   The pointer event.
+   *
+   * @return {object}
+   *   An object with `x` and `y` keys indicating the position.
+   */
+
+
+  Drupal.tableDrag.prototype.getPointerOffset = function (target, event) {
+    const docPos = $(target).offset();
+    const pointerPos = this.pointerCoords(event);
+    return {
+      x: pointerPos.x - docPos.left,
+      y: pointerPos.y - docPos.top
+    };
+  };
+  /**
+   * Find the row the mouse is currently over.
+   *
+   * This row is then taken and swapped with the one being dragged.
+   *
+   * @param {number} x
+   *   The x coordinate of the mouse on the page (not the screen).
+   * @param {number} y
+   *   The y coordinate of the mouse on the page (not the screen).
+   *
+   * @return {*}
+   *   The drop target row, if found.
+   */
+
+
+  Drupal.tableDrag.prototype.findDropTargetRow = function (x, y) {
+    const rows = $(this.table.tBodies[0].rows).not(':hidden');
+
+    for (let n = 0; n < rows.length; n++) {
+      let row = rows[n];
+      let $row = $(row);
+      const rowY = $row.offset().top;
+      let rowHeight; // Because Safari does not report offsetHeight on table rows, but does on
+      // table cells, grab the firstChild of the row and use that instead.
+      // http://jacob.peargrove.com/blog/2006/technical/table-row-offsettop-bug-in-safari.
+
+      if (row.offsetHeight === 0) {
+        rowHeight = parseInt(row.firstChild.offsetHeight, 10) / 2;
+      } // Other browsers.
+      else {
+          rowHeight = parseInt(row.offsetHeight, 10) / 2;
+        } // Because we always insert before, we need to offset the height a bit.
+
+
+      if (y > rowY - rowHeight && y < rowY + rowHeight) {
+        if (this.indentEnabled) {
+          // Check that this row is not a child of the row being dragged.
+          if (Object.keys(this.rowObject.group).some(o => this.rowObject.group[o] === row)) {
+            return null;
+          }
+        } // Do not allow a row to be swapped with itself.
+        else if (row === this.rowObject.element) {
+            return null;
+          } // Check that swapping with this row is allowed.
+
+
+        if (!this.rowObject.isValidSwap(row)) {
+          return null;
+        } // We may have found the row the mouse just passed over, but it doesn't
+        // take into account hidden rows. Skip backwards until we find a
+        // draggable row.
+
+
+        while ($row.is(':hidden') && $row.prev('tr').is(':hidden')) {
+          $row = $row.prev('tr:first-of-type');
+          row = $row.get(0);
+        }
+
+        return row;
+      }
+    }
+
+    return null;
+  };
+  /**
+   * After the row is dropped, update the table fields.
+   *
+   * @param {HTMLElement} changedRow
+   *   DOM object for the row that was just dropped.
+   */
+
+
+  Drupal.tableDrag.prototype.updateFields = function (changedRow) {
+    Object.keys(this.tableSettings || {}).forEach(group => {
+      // Each group may have a different setting for relationship, so we find
+      // the source rows for each separately.
+      this.updateField(changedRow, group);
+    });
+  };
+  /**
+   * After the row is dropped, update a single table field.
+   *
+   * @param {HTMLElement} changedRow
+   *   DOM object for the row that was just dropped.
+   * @param {string} group
+   *   The settings group on which field updates will occur.
+   */
+
+
+  Drupal.tableDrag.prototype.updateField = function (changedRow, group) {
+    let rowSettings = this.rowSettings(group, changedRow);
+    const $changedRow = $(changedRow);
+    let sourceRow;
+    let $previousRow;
+    let previousRow;
+    let useSibling; // Set the row as its own target.
+
+    if (rowSettings.relationship === 'self' || rowSettings.relationship === 'group') {
+      sourceRow = changedRow;
+    } // Siblings are easy, check previous and next rows.
+    else if (rowSettings.relationship === 'sibling') {
+        $previousRow = $changedRow.prev('tr:first-of-type');
+        previousRow = $previousRow.get(0);
+        const $nextRow = $changedRow.next('tr:first-of-type');
+        const nextRow = $nextRow.get(0);
+        sourceRow = changedRow;
+
+        if ($previousRow.is('.draggable') && $previousRow.find(`.${group}`).length) {
+          if (this.indentEnabled) {
+            if ($previousRow.find('.js-indentations').length === $changedRow.find('.js-indentations').length) {
+              sourceRow = previousRow;
+            }
+          } else {
+            sourceRow = previousRow;
+          }
+        } else if ($nextRow.is('.draggable') && $nextRow.find(`.${group}`).length) {
+          if (this.indentEnabled) {
+            if ($nextRow.find('.js-indentations').length === $changedRow.find('.js-indentations').length) {
+              sourceRow = nextRow;
+            }
+          } else {
+            sourceRow = nextRow;
+          }
+        }
+      } // Parents, look up the tree until we find a field not in this group.
+      // Go up as many parents as indentations in the changed row.
+      else if (rowSettings.relationship === 'parent') {
+          $previousRow = $changedRow.prev('tr');
+          previousRow = $previousRow;
+
+          while ($previousRow.length && $previousRow.find('.js-indentation').length >= this.rowObject.indents) {
+            $previousRow = $previousRow.prev('tr');
+            previousRow = $previousRow;
+          } // If we found a row.
+
+
+          if ($previousRow.length) {
+            sourceRow = $previousRow.get(0);
+          } // Otherwise we went all the way to the left of the table without finding
+          // a parent, meaning this item has been placed at the root level.
+          else {
+              // Use the first row in the table as source, because it's guaranteed to
+              // be at the root level. Find the first item, then compare this row
+              // against it as a sibling.
+              sourceRow = $(this.table).find('tr.draggable:first-of-type').get(0);
+
+              if (sourceRow === this.rowObject.element) {
+                sourceRow = $(this.rowObject.group[this.rowObject.group.length - 1]).next('tr.draggable').get(0);
+              }
+
+              useSibling = true;
+            }
+        } // Because we may have moved the row from one category to another,
+    // take a look at our sibling and borrow its sources and targets.
+
+
+    this.copyDragClasses(sourceRow, changedRow, group);
+    rowSettings = this.rowSettings(group, changedRow); // In the case that we're looking for a parent, but the row is at the top
+    // of the tree, copy our sibling's values.
+
+    if (useSibling) {
+      rowSettings.relationship = 'sibling';
+      rowSettings.source = rowSettings.target;
+    }
+
+    const targetClass = `.${rowSettings.target}`;
+    const targetElement = $changedRow.find(targetClass).get(0); // Check if a target element exists in this row.
+
+    if (targetElement) {
+      const sourceClass = `.${rowSettings.source}`;
+      const sourceElement = $(sourceClass, sourceRow).get(0);
+
+      switch (rowSettings.action) {
+        case 'depth':
+          // Get the depth of the target row.
+          targetElement.value = $(sourceElement).closest('tr').find('.js-indentation').length;
+          break;
+
+        case 'match':
+          // Update the value.
+          targetElement.value = sourceElement.value;
+          break;
+
+        case 'order':
+          {
+            const siblings = this.rowObject.findSiblings(rowSettings);
+
+            if ($(targetElement).is('select')) {
+              // Get a list of acceptable values.
+              const values = [];
+              $(targetElement).find('option').each(function () {
+                values.push(this.value);
+              });
+              const maxVal = values[values.length - 1]; // Populate the values in the siblings.
+
+              $(siblings).find(targetClass).each(function () {
+                // If there are more items than possible values, assign the
+                // maximum value to the row.
+                if (values.length > 0) {
+                  this.value = values.shift();
+                } else {
+                  this.value = maxVal;
+                }
+              });
+            } else {
+              // Assume a numeric input field.
+              let weight = parseInt($(siblings[0]).find(targetClass).val(), 10) || 0;
+              $(siblings).find(targetClass).each(function () {
+                this.value = weight;
+                weight++;
+              });
+            }
+
+            break;
+          }
+      }
+    }
+  };
+  /**
+   * Copy all tableDrag related classes from one row to another.
+   *
+   * Copy all special tableDrag classes from one row's form elements to a
+   * different one, removing any special classes that the destination row
+   * may have had.
+   *
+   * @param {HTMLElement} sourceRow
+   *   The element for the source row.
+   * @param {HTMLElement} targetRow
+   *   The element for the target row.
+   * @param {string} group
+   *   The group selector.
+   */
+
+
+  Drupal.tableDrag.prototype.copyDragClasses = function (sourceRow, targetRow, group) {
+    const sourceElement = $(sourceRow).find(`.${group}`);
+    const targetElement = $(targetRow).find(`.${group}`);
+
+    if (sourceElement.length && targetElement.length) {
+      targetElement[0].className = sourceElement[0].className;
+    }
+  };
+  /**
+   * Check the suggested scroll of the table.
+   *
+   * @param {number} cursorY
+   *   The Y position of the cursor.
+   *
+   * @return {number}
+   *   The suggested scroll.
+   */
+
+
+  Drupal.tableDrag.prototype.checkScroll = function (cursorY) {
+    const de = document.documentElement;
+    const b = document.body;
+    const windowHeight = window.innerHeight || (de.clientHeight && de.clientWidth !== 0 ? de.clientHeight : b.offsetHeight);
+    this.windowHeight = windowHeight;
+    let scrollY;
+
+    if (document.all) {
+      scrollY = !de.scrollTop ? b.scrollTop : de.scrollTop;
+    } else {
+      scrollY = window.pageYOffset ? window.pageYOffset : window.scrollY;
+    }
+
+    this.scrollY = scrollY;
+    const trigger = this.scrollSettings.trigger;
+    let delta = 0; // Return a scroll speed relative to the edge of the screen.
+
+    if (cursorY - scrollY > windowHeight - trigger) {
+      delta = trigger / (windowHeight + scrollY - cursorY);
+      delta = delta > 0 && delta < trigger ? delta : trigger;
+      return delta * this.scrollSettings.amount;
+    }
+
+    if (cursorY - scrollY < trigger) {
+      delta = trigger / (cursorY - scrollY);
+      delta = delta > 0 && delta < trigger ? delta : trigger;
+      return -delta * this.scrollSettings.amount;
+    }
+  };
+  /**
+   * Set the scroll for the table.
+   *
+   * @param {number} scrollAmount
+   *   The amount of scroll to apply to the window.
+   */
+
+
+  Drupal.tableDrag.prototype.setScroll = function (scrollAmount) {
+    const self = this;
+    this.scrollInterval = setInterval(() => {
+      // Update the scroll values stored in the object.
+      self.checkScroll(self.currentPointerCoords.y);
+      const aboveTable = self.scrollY > self.table.topY;
+      const belowTable = self.scrollY + self.windowHeight < self.table.bottomY;
+
+      if (scrollAmount > 0 && belowTable || scrollAmount < 0 && aboveTable) {
+        window.scrollBy(0, scrollAmount);
+      }
+    }, this.scrollSettings.interval);
+  };
+  /**
+   * Command to restripe table properly.
+   */
+
+
+  Drupal.tableDrag.prototype.restripeTable = function () {
+    // :even and :odd are reversed because jQuery counts from 0 and
+    // we count from 1, so we're out of sync.
+    // Match immediate children of the parent element to allow nesting.
+    $(this.table).find('> tbody > tr.draggable, > tr.draggable').filter(':visible').filter(':odd').removeClass('odd').addClass('even').end().filter(':even').removeClass('even').addClass('odd');
+  };
+  /**
+   * Stub function. Allows a custom handler when a row begins dragging.
+   *
+   * @return {null}
+   *   Returns null when the stub function is used.
+   */
+
+
+  Drupal.tableDrag.prototype.onDrag = function () {
+    return null;
+  };
+  /**
+   * Stub function. Allows a custom handler when a row is dropped.
+   *
+   * @return {null}
+   *   Returns null when the stub function is used.
+   */
+
+
+  Drupal.tableDrag.prototype.onDrop = function () {
+    return null;
+  };
+  /**
+   * Constructor to make a new object to manipulate a table row.
+   *
+   * @param {HTMLElement} tableRow
+   *   The DOM element for the table row we will be manipulating.
+   * @param {string} method
+   *   The method in which this row is being moved. Either 'keyboard' or
+   *   'mouse'.
+   * @param {bool} indentEnabled
+   *   Whether the containing table uses indentations. Used for optimizations.
+   * @param {number} maxDepth
+   *   The maximum amount of indentations this row may contain.
+   * @param {bool} addClasses
+   *   Whether we want to add classes to this row to indicate child
+   *   relationships.
+   */
+
+
+  Drupal.tableDrag.prototype.row = function (tableRow, method, indentEnabled, maxDepth, addClasses) {
+    const $tableRow = $(tableRow);
+    this.element = tableRow;
+    this.method = method;
+    this.group = [tableRow];
+    this.groupDepth = $tableRow.find('.js-indentation').length;
+    this.changed = false;
+    this.table = $tableRow.closest('table')[0];
+    this.indentEnabled = indentEnabled;
+    this.maxDepth = maxDepth; // Direction the row is being moved.
+
+    this.direction = '';
+
+    if (this.indentEnabled) {
+      this.indents = $tableRow.find('.js-indentation').length;
+      this.children = this.findChildren(addClasses);
+      this.group = $.merge(this.group, this.children); // Find the depth of this entire group.
+
+      for (let n = 0; n < this.group.length; n++) {
+        this.groupDepth = Math.max($(this.group[n]).find('.js-indentation').length, this.groupDepth);
+      }
+    }
+  };
+  /**
+   * Find all children of rowObject by indentation.
+   *
+   * @param {bool} addClasses
+   *   Whether we want to add classes to this row to indicate child
+   *   relationships.
+   *
+   * @return {Array}
+   *   An array of children of the row.
+   */
+
+
+  Drupal.tableDrag.prototype.row.prototype.findChildren = function (addClasses) {
+    const parentIndentation = this.indents;
+    let currentRow = $(this.element, this.table).next('tr.draggable');
+    const rows = [];
+    let child = 0;
+
+    function rowIndentation(indentNum, el) {
+      const self = $(el);
+
+      if (child === 1 && indentNum === parentIndentation) {
+        self.addClass('tree-child-first');
+      }
+
+      if (indentNum === parentIndentation) {
+        self.addClass('tree-child');
+      } else if (indentNum > parentIndentation) {
+        self.addClass('tree-child-horizontal');
+      }
+    }
+
+    while (currentRow.length) {
+      // A greater indentation indicates this is a child.
+      if (currentRow.find('.js-indentation').length > parentIndentation) {
+        child++;
+        rows.push(currentRow[0]);
+
+        if (addClasses) {
+          currentRow.find('.js-indentation').each(rowIndentation);
+        }
+      } else {
+        break;
+      }
+
+      currentRow = currentRow.next('tr.draggable');
+    }
+
+    if (addClasses && rows.length) {
+      $(rows[rows.length - 1]).find(`.js-indentation:nth-child(${parentIndentation + 1})`).addClass('tree-child-last');
+    }
+
+    return rows;
+  };
+  /**
+   * Ensure that two rows are allowed to be swapped.
+   *
+   * @param {HTMLElement} row
+   *   DOM object for the row being considered for swapping.
+   *
+   * @return {bool}
+   *   Whether the swap is a valid swap or not.
+   */
+
+
+  Drupal.tableDrag.prototype.row.prototype.isValidSwap = function (row) {
+    const $row = $(row);
+
+    if (this.indentEnabled) {
+      let prevRow;
+      let nextRow;
+
+      if (this.direction === 'down') {
+        prevRow = row;
+        nextRow = $row.next('tr').get(0);
+      } else {
+        prevRow = $row.prev('tr').get(0);
+        nextRow = row;
+      }
+
+      this.interval = this.validIndentInterval(prevRow, nextRow); // We have an invalid swap if the valid indentations interval is empty.
+
+      if (this.interval.min > this.interval.max) {
+        return false;
+      }
+    } // Do not let an un-draggable first row have anything put before it.
+
+
+    if (this.table.tBodies[0].rows[0] === row && $row.is(':not(.draggable)')) {
+      return false;
+    }
+
+    return true;
+  };
+  /**
+   * Perform the swap between two rows.
+   *
+   * @param {string} position
+   *   Whether the swap will occur 'before' or 'after' the given row.
+   * @param {HTMLElement} row
+   *   DOM element what will be swapped with the row group.
+   */
+
+
+  Drupal.tableDrag.prototype.row.prototype.swap = function (position, row) {
+    // Makes sure only DOM object are passed to Drupal.detachBehaviors().
+    this.group.forEach(row => {
+      Drupal.detachBehaviors(row, drupalSettings, 'move');
+    });
+    $(row)[position](this.group); // Makes sure only DOM object are passed to Drupal.attachBehaviors()s.
+
+    this.group.forEach(row => {
+      Drupal.attachBehaviors(row, drupalSettings);
+    });
+    this.changed = true;
+    this.onSwap(row);
+  };
+  /**
+   * Determine the valid indentations interval for the row at a given position.
+   *
+   * @param {?HTMLElement} prevRow
+   *   DOM object for the row before the tested position
+   *   (or null for first position in the table).
+   * @param {?HTMLElement} nextRow
+   *   DOM object for the row after the tested position
+   *   (or null for last position in the table).
+   *
+   * @return {object}
+   *   An object with the keys `min` and `max` to indicate the valid indent
+   *   interval.
+   */
+
+
+  Drupal.tableDrag.prototype.row.prototype.validIndentInterval = function (prevRow, nextRow) {
+    const $prevRow = $(prevRow);
+    let maxIndent; // Minimum indentation:
+    // Do not orphan the next row.
+
+    const minIndent = nextRow ? $(nextRow).find('.js-indentation').length : 0; // Maximum indentation:
+
+    if (!prevRow || $prevRow.is(':not(.draggable)') || $(this.element).is('.tabledrag-root')) {
+      // Do not indent:
+      // - the first row in the table,
+      // - rows dragged below a non-draggable row,
+      // - 'root' rows.
+      maxIndent = 0;
+    } else {
+      // Do not go deeper than as a child of the previous row.
+      maxIndent = $prevRow.find('.js-indentation').length + ($prevRow.is('.tabledrag-leaf') ? 0 : 1); // Limit by the maximum allowed depth for the table.
+
+      if (this.maxDepth) {
+        maxIndent = Math.min(maxIndent, this.maxDepth - (this.groupDepth - this.indents));
+      }
+    }
+
+    return {
+      min: minIndent,
+      max: maxIndent
+    };
+  };
+  /**
+   * Indent a row within the legal bounds of the table.
+   *
+   * @param {number} indentDiff
+   *   The number of additional indentations proposed for the row (can be
+   *   positive or negative). This number will be adjusted to nearest valid
+   *   indentation level for the row.
+   *
+   * @return {number}
+   *   The number of indentations applied.
+   */
+
+
+  Drupal.tableDrag.prototype.row.prototype.indent = function (indentDiff) {
+    const $group = $(this.group); // Determine the valid indentations interval if not available yet.
+
+    if (!this.interval) {
+      const prevRow = $(this.element).prev('tr').get(0);
+      const nextRow = $group.eq(-1).next('tr').get(0);
+      this.interval = this.validIndentInterval(prevRow, nextRow);
+    } // Adjust to the nearest valid indentation.
+
+
+    let indent = this.indents + indentDiff;
+    indent = Math.max(indent, this.interval.min);
+    indent = Math.min(indent, this.interval.max);
+    indentDiff = indent - this.indents;
+
+    for (let n = 1; n <= Math.abs(indentDiff); n++) {
+      // Add or remove indentations.
+      if (indentDiff < 0) {
+        $group.find('.js-indentation:first-of-type').remove();
+        this.indents--;
+      } else {
+        $group.find('td:first-of-type').prepend(Drupal.theme('tableDragIndentation'));
+        this.indents++;
+      }
+    }
+
+    if (indentDiff) {
+      // Update indentation for this row.
+      this.changed = true;
+      this.groupDepth += indentDiff;
+      this.onIndent();
+    }
+
+    return indentDiff;
+  };
+  /**
+   * Find all siblings for a row.
+   *
+   * According to its subgroup or indentation. Note that the passed-in row is
+   * included in the list of siblings.
+   *
+   * @param {object} rowSettings
+   *   The field settings we're using to identify what constitutes a sibling.
+   *
+   * @return {Array}
+   *   An array of siblings.
+   */
+
+
+  Drupal.tableDrag.prototype.row.prototype.findSiblings = function (rowSettings) {
+    const siblings = [];
+    const directions = ['prev', 'next'];
+    const rowIndentation = this.indents;
+    let checkRowIndentation;
+
+    for (let d = 0; d < directions.length; d++) {
+      let checkRow = $(this.element)[directions[d]]();
+
+      while (checkRow.length) {
+        // Check that the sibling contains a similar target field.
+        if (checkRow.find(`.${rowSettings.target}`)) {
+          // Either add immediately if this is a flat table, or check to ensure
+          // that this row has the same level of indentation.
+          if (this.indentEnabled) {
+            checkRowIndentation = checkRow.find('.js-indentation').length;
+          }
+
+          if (!this.indentEnabled || checkRowIndentation === rowIndentation) {
+            siblings.push(checkRow[0]);
+          } else if (checkRowIndentation < rowIndentation) {
+            // No need to keep looking for siblings when we get to a parent.
+            break;
+          }
+        } else {
+          break;
+        }
+
+        checkRow = checkRow[directions[d]]();
+      } // Since siblings are added in reverse order for previous, reverse the
+      // completed list of previous siblings. Add the current row and continue.
+
+
+      if (directions[d] === 'prev') {
+        siblings.reverse();
+        siblings.push(this.element);
+      }
+    }
+
+    return siblings;
+  };
+  /**
+   * Remove indentation helper classes from the current row group.
+   */
+
+
+  Drupal.tableDrag.prototype.row.prototype.removeIndentClasses = function () {
+    Object.keys(this.children || {}).forEach(n => {
+      $(this.children[n]).find('.js-indentation').removeClass('tree-child').removeClass('tree-child-first').removeClass('tree-child-last').removeClass('tree-child-horizontal');
+    });
+  };
+  /**
+   * Add an asterisk or other marker to the changed row.
+   */
+
+
+  Drupal.tableDrag.prototype.row.prototype.markChanged = function () {
+    const marker = Drupal.theme('tableDragChangedMarker');
+    const cell = $(this.element).find('td:first-of-type');
+
+    if (cell.find('.tabledrag-changed').length === 0) {
+      cell.append(marker);
+    }
+  };
+  /**
+   * Stub function. Allows a custom handler when a row is indented.
+   *
+   * @return {null}
+   *   Returns null when the stub function is used.
+   */
+
+
+  Drupal.tableDrag.prototype.row.prototype.onIndent = function () {
+    return null;
+  };
+  /**
+   * Stub function. Allows a custom handler when a row is swapped.
+   *
+   * @param {HTMLElement} swappedRow
+   *   The element for the swapped row.
+   *
+   * @return {null}
+   *   Returns null when the stub function is used.
+   */
+
+
+  Drupal.tableDrag.prototype.row.prototype.onSwap = function (swappedRow) {
+    return null;
+  };
+
+  $.extend(Drupal.theme,
+  /** @lends Drupal.theme */
+  {
+    /**
+     * @return {string}
+     *  Markup for the marker.
+     */
+    tableDragChangedMarker() {
+      const markerClasses = ['tabledrag-changed', 'text-purple-darkest', 'font-bold', 'mr-3'];
+      return `
+        <span title="${Drupal.t('Changed')}" class="${markerClasses.join(' ')}">${_icons_info_svg__WEBPACK_IMPORTED_MODULE_1___default.a}</span>`;
+    },
+
+    /**
+     * @return {string}
+     *   Markup for the indentation.
+     */
+    tableDragIndentation() {
+      return '<div class="js-indentation indentation">&nbsp;</div>';
+    },
+
+    /**
+     * @return {string}
+     *   Markup for the warning.
+     */
+    tableDragChangedWarning() {
+      const warningClasses = [''];
+      return `
+        <div role="alert" class="bg-purple-lightest border-t-4 border-purple rounded-b text-purple-darkest px-4 py-3 shadow-md mb-4">
+          <div class="flex">
+            ${Drupal.theme('tableDragChangedMarker')}
+            <div>
+              ${Drupal.t('You have unsaved changes.')}
+            </div>
+          </div>
+        </div>`;
+      return `<div class="bg-indigo-darkest text-center py-4 lg:px-4">
+          <div class="p-2 bg-indigo-darker items-center text-indigo-lightest leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+            ${Drupal.theme('tableDragChangedMarker')}
+            <span class="font-semibold mr-2 text-left flex-auto">${Drupal.t('You have unsaved changes.')}</span>
+          </div>
+        </div>`;
+    }
+
+  });
+})(jQuery, Drupal, drupalSettings);
+
+/***/ }),
+
+/***/ "./scss/style.scss":
+/*!*************************!*\
+  !*** ./scss/style.scss ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./scss/tailwind.scss":
+/*!****************************!*\
+  !*** ./scss/tailwind.scss ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 0:
+/*!*************************************************************************************************************************************************************!*\
+  !*** multi ./js/src/cshs.es6.js ./js/src/dropbutton.es6.js ./js/src/simpler-select.es6.js ./js/src/tabledrag.es6.js ./scss/tailwind.scss ./scss/style.scss ***!
+  \*************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./js/src/cshs.es6.js */"./js/src/cshs.es6.js");
+__webpack_require__(/*! ./js/src/dropbutton.es6.js */"./js/src/dropbutton.es6.js");
+__webpack_require__(/*! ./js/src/simpler-select.es6.js */"./js/src/simpler-select.es6.js");
+__webpack_require__(/*! ./js/src/tabledrag.es6.js */"./js/src/tabledrag.es6.js");
+__webpack_require__(/*! ./scss/tailwind.scss */"./scss/tailwind.scss");
+module.exports = __webpack_require__(/*! ./scss/style.scss */"./scss/style.scss");
+
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=main.bundle.js.map

@@ -1,6 +1,6 @@
 .select2-container--rain {
-  @import "single";
-  @import "multiple";
+  @import 'single';
+  @import 'multiple';
 
   &.select2-container--open.select2-container--above {
     .select2-selection--single,
@@ -46,15 +46,15 @@
   }
 
   .select2-results__option {
-    &[role="group"] {
+    &[role='group'] {
       padding: 0;
     }
 
-    &[aria-disabled="true"] {
+    &[aria-disabled='true'] {
       color: #999;
     }
 
-    &[aria-selected="true"] {
+    &[aria-selected='true'] {
       background-color: #ddd;
     }
 
