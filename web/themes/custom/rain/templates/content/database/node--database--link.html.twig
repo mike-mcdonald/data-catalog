@@ -1,0 +1,22 @@
+{% embed 'node.html.twig' with {
+  'heading_element': 'span',
+  'title_classes': [
+    'flex',
+    'items-center',
+  ],
+} %}
+  {% block title %}
+    {{ title_prefix }}
+    {% if not page %}
+      <{{heading_element}} {{ title_attributes.addClass(title_classes) }}>
+        <span class="mr-2 flex">
+          {% include active_theme_path() ~ '/icons/database.svg' %}
+        </span>
+        <a href="{{ url }}" rel="bookmark">
+          {{ label }}
+        </a>
+      </{{heading_element}}>
+    {% endif %}
+    {{ title_suffix }}
+  {% endblock %}
+{% endembed %}

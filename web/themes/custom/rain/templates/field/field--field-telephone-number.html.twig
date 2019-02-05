@@ -2,6 +2,7 @@
   'margin': 0,
   'classes': [
     'mx-1',
+    'flex',
   ],
   'item_classes': [
     'p-2',
@@ -12,20 +13,18 @@
     'rounded',
   ],
 } %}
-{% block label %}
-{% endblock %}
-{% block content %}
-{% set link_classes = link_classes|default([
+  {% block label %}{% endblock %}
+  {% block content %}
+    {% set link_classes = link_classes|default([
   'flex',
   'items-center',
 ]) %}
-{%- for item in items -%}
-  <div{{ item.attributes.addClass(item_classes) }}>
-    <a class="{{ link_classes|join(' ') }}" href="{{ item.content['#url'].toString() }}">
-      {% include active_theme_path() ~ '/icons/phone.svg' %}
-      <span class="ml-1">{{ item.content['#title'] }}</span>
-    </a>
-  </div>
-{%- endfor -%}
-{% endblock %}
+    {%- for item in items -%}
+      <div{{item.attributes.addClass(item_classes)}}>
+        <a class="{{ link_classes|join(' ') }}" href="{{ item.content['#url'].toString() }}">
+          {% include active_theme_path() ~ '/icons/phone.svg' %}
+        </a>
+      </div>
+    {%- endfor -%}
+  {% endblock %}
 {% endembed %}
