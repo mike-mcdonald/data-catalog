@@ -1,7 +1,7 @@
-const tailwindcss = require("tailwindcss");
-const purgecss = require("@fullhuman/postcss-purgecss");
-const cssnano = require("cssnano");
-const autoprefixer = require("autoprefixer");
+const tailwindcss = require('tailwindcss');
+const purgecss = require('@fullhuman/postcss-purgecss');
+const cssnano = require('cssnano');
+const autoprefixer = require('autoprefixer');
 
 // Custom PurgeCSS extractor for Tailwind that allows special characters in
 // class names.
@@ -14,21 +14,19 @@ class TailwindExtractor {
 }
 
 module.exports = ({ file, options, env }) => {
-  console.log("options:", options);
-
   return {
     plugins: [
-      tailwindcss("./tailwind.config.js"),
+      tailwindcss('./tailwind.config.js'),
       autoprefixer,
       cssnano({
-        preset: "default"
+        preset: 'default'
       }),
-      options.mode === "production"
+      options.mode === 'production'
         ? purgecss({
             content: [
-              "templates/**/*.html.twig",
-              "js/main.bundle.js",
-              "./rain.theme"
+              'templates/**/*.html.twig',
+              'js/main.bundle.js',
+              './rain.theme'
             ],
             extractors: [
               {
@@ -36,7 +34,7 @@ module.exports = ({ file, options, env }) => {
 
                 // Specify the file extensions to include when scanning for
                 // class names.
-                extensions: ["html", "twig", "js", "php", "vue", "theme"]
+                extensions: ['html', 'twig', 'js', 'php', 'vue', 'theme']
               }
             ],
             whitelistPatternsChildren: [/select2-container--rain$/]

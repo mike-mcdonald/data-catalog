@@ -1,17 +1,27 @@
 const path = require('path');
 const globby = require('globby');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, argv) => ({
-  entry: './scss/style.scss',
   entry: {
-    main: globby.sync(['./js/src/**/*.js', './scss/style.scss'])
+    main: globby.sync([
+      './js/src/**/*.js',
+      './scss/tailwind.scss',
+      './scss/style.scss'
+    ])
   },
   mode: process.env.NODE_ENV,
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname),
     filename: 'js/[name].bundle.js'
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'css/style.bundle.css',
+      chunkFilename: 'css/[id].bundle.css'
+    })
+  ],
   module: {
     rules: [
       {
@@ -27,43 +37,34 @@ module.exports = (env, argv) => ({
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract(
+        use: [
+          MiniCssExtractPlugin.loader,
           {
-            fallback: 'style-loader',
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  sourceMap: true,
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: './postcss.config.js',
+                ctx: {
+                  mode: argv.mode
                 }
-              },
-              {
-                loader: 'postcss-loader',
-                options: {
-                  sourceMap: true,
-                  config: {
-                    path: './postcss.config.js',
-                    ctx: {
-                      mode: argv.mode,
-                    },
-                  }
-                }
-              },
-              {
-                loader: 'sass-loader',
-                options: {
-                  sourceMap: true
-                }
-              }],
-          })
+              }
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       }
     ]
-  },
-  plugins: [
-    new ExtractTextPlugin(
-      {
-        filename: 'css/style.bundle.css'
-      }
-    )
-  ]
+  }
 });
