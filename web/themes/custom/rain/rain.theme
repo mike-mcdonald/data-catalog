@@ -150,7 +150,7 @@ function rain_preprocess_form(array &$variables) {
  * Implements hook_preprocess_input().
  */
 function rain_preprocess_input(array &$variables) {
-  if($variables['element']['#required'] == TRUE) {
+  if(isset($variables['element']['#required']) && $variables['element']['#required'] == TRUE) {
     $variables['required'] = TRUE;
   }
 }
@@ -159,7 +159,7 @@ function rain_preprocess_input(array &$variables) {
  * Implements hook_preprocess_select().
  */
 function rain_preprocess_select(array &$variables) {
-  if($variables['element']['#required'] == TRUE) {
+  if(isset($variables['element']['#required']) && $variables['element']['#required'] == TRUE) {
     $variables['required'] = TRUE;
   }
 }
