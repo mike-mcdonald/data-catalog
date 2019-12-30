@@ -1,0 +1,23 @@
+uuid: 13d2c31f-5aa6-4785-b6a9-b6dd31c5789c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oldest_record
+    - node.type.dataset
+  module:
+    - yearonly
+id: node.dataset.field_oldest_record
+field_name: field_oldest_record
+entity_type: node
+bundle: dataset
+label: 'Oldest record'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1900'
+  yearonly_to: now
+field_type: yearonly

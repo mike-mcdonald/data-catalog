@@ -17,4 +17,9 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_data_custodian: true
+  field_keywords: true
+  field_purpose: true
+  field_subject_areas: true
+  field_url: true

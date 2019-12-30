@@ -1,0 +1,33 @@
+uuid: afce5df9-698e-4eba-80d7-039dfcf5e7a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_update_lag
+field_name: field_update_lag
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: month
+      label: Month
+    -
+      value: quarter
+      label: Quarter
+    -
+      value: year
+      label: Year
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

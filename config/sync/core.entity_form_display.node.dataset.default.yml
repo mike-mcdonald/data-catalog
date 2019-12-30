@@ -8,17 +8,25 @@ dependencies:
     - field.field.node.dataset.field_data_custodian
     - field.field.node.dataset.field_data_group
     - field.field.node.dataset.field_data_owner
+    - field.field.node.dataset.field_demographic_info
+    - field.field.node.dataset.field_frequency_use
     - field.field.node.dataset.field_keywords
+    - field.field.node.dataset.field_oldest_record
     - field.field.node.dataset.field_purpose
+    - field.field.node.dataset.field_quality_concerns
+    - field.field.node.dataset.field_quality_rating
     - field.field.node.dataset.field_security_level
     - field.field.node.dataset.field_source
     - field.field.node.dataset.field_spatial_enabled
     - field.field.node.dataset.field_subject_areas
     - field.field.node.dataset.field_update_frequency
+    - field.field.node.dataset.field_update_lag
     - node.type.dataset
   module:
     - cshs
+    - paragraphs
     - select2
+    - yearonly
 id: node.dataset.default
 targetEntityType: node
 bundle: dataset
@@ -60,6 +68,18 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_demographic_info:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_frequency_use:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_keywords:
     weight: 7
     settings:
@@ -69,6 +89,12 @@ content:
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
+  field_oldest_record:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: yearonly_default
+    region: content
   field_purpose:
     weight: 1
     settings:
@@ -76,6 +102,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_quality_concerns:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_quality_rating:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_security_level:
     weight: 11
@@ -107,6 +147,12 @@ content:
     region: content
   field_update_frequency:
     weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_update_lag:
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select

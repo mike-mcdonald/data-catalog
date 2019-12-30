@@ -1,0 +1,19 @@
+uuid: ae98cb29-8d0d-4aaf-8df5-9bd5859a5005
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - yearonly
+id: node.field_oldest_record
+field_name: field_oldest_record
+entity_type: node
+type: yearonly
+settings: {  }
+module: yearonly
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
