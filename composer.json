@@ -46,6 +46,7 @@
     "drupal/search_api_db": "^1.9",
     "drupal/select2": "^1.0@beta",
     "drupal/views_bootstrap": "^3.0",
+    "drupal/yearonly": "^1.3",
     "drush/drush": "^9.0.0",
     "npm-asset/select2": "^4.0",
     "oomphinc/composer-installers-extender": "^1.1",
