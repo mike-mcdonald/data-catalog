@@ -1,0 +1,9 @@
+uuid: ada75caf-78d5-48e1-967e-270d11ca71e9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Spatial information'
+vid: spatial_information
+description: 'Use this vocabulary to describe the types of spatial information datasets may contain.'
+hierarchy: 0
+weight: 0

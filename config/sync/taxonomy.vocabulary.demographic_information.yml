@@ -1,0 +1,9 @@
+uuid: f8d13d51-631a-419e-8723-42775e8e9997
+langcode: en
+status: true
+dependencies: {  }
+name: 'Demographic information'
+vid: demographic_information
+description: ''
+hierarchy: 0
+weight: 0
