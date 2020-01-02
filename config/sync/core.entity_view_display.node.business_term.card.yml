@@ -1,0 +1,128 @@
+uuid: 474793cd-d976-432d-8749-82ee86f0b41e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.business_term.body
+    - field.field.node.business_term.field_data_custodian
+    - field.field.node.business_term.field_keywords
+    - field.field.node.business_term.field_subject_areas
+    - node.type.business_term
+  module:
+    - field_layout
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          5a0b5fbe-cdc4-4879-8877-08f4c74e4011:
+            uuid: 5a0b5fbe-cdc4-4879-8877-08f4c74e4011
+            region: content
+            configuration:
+              id: 'field_block:node:business_term:type'
+              label: 'Content type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          85ba897a-576a-4425-8788-0ae599b3b43b:
+            uuid: 85ba897a-576a-4425-8788-0ae599b3b43b
+            region: content
+            configuration:
+              id: 'field_block:node:business_term:title'
+              label: Term
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          92a64537-6abd-4830-87cc-8abe3bc2cd97:
+            uuid: 92a64537-6abd-4830-87cc-8abe3bc2cd97
+            region: content
+            configuration:
+              id: 'field_block:node:business_term:body'
+              label: Definition
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 200
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          addd0879-d4da-4222-adaf-83a918c7fe9e:
+            uuid: addd0879-d4da-4222-adaf-83a918c7fe9e
+            region: content
+            configuration:
+              id: 'field_block:node:business_term:field_keywords'
+              label: Keywords
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: card
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+    allow_custom: false
+id: node.business_term.card
+targetEntityType: node
+bundle: business_term
+mode: card
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    region: content
+  field_keywords:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_data_custodian: true
+  field_subject_areas: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: 96a73972-4900-44de-8db3-1377be9c21bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.full_content_type
+  module:
+    - facets
+    - system
+  theme:
+    - rain
+id: facet_full_content_type
+theme: rain
+region: left_sidebar
+weight: -9
+provider: null
+plugin: 'facet_block:full_content_type'
+settings:
+  id: 'facet_block:full_content_type'
+  label: 'Content by type'
+  provider: facets
+  label_display: visible
+  block_id: facet_full_content_type
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

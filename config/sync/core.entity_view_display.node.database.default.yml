@@ -6,7 +6,48 @@ dependencies:
     - field.field.node.database.field_server
     - node.type.database
   module:
+    - field_layout
+    - layout_builder
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          67898c24-74ba-4d4a-8a8b-cc8faee32a0f:
+            uuid: 67898c24-74ba-4d4a-8a8b-cc8faee32a0f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:database:links'
+            additional: {  }
+            weight: 0
+          e2c38120-3ed9-447e-90b9-ac0f219e9740:
+            uuid: e2c38120-3ed9-447e-90b9-ac0f219e9740
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:database:field_server'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.database.default
 targetEntityType: node
 bundle: database
@@ -25,4 +66,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  search_api_excerpt: true

@@ -5,5 +5,4 @@ dependencies: {  }
 name: Database
 vid: database
 description: 'Use this to add databases that exist on accessible servers'
-hierarchy: 0
 weight: 0

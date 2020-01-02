@@ -5,6 +5,13 @@ dependencies:
   config:
     - field.field.taxonomy_term.quality.field_quality_value
     - taxonomy.vocabulary.quality
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: taxonomy_term.quality.default
 targetEntityType: taxonomy_term
 bundle: quality

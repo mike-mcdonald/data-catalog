@@ -1,6 +1,6 @@
 uuid: f1b7992a-5251-494b-ae3e-26c6566041bc
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -8,8 +8,55 @@ dependencies:
     - field.field.node.contact_information.field_telephone_number
     - node.type.contact_information
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - telephone
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          0c51c496-faee-4807-b8ed-009dc7e40258:
+            uuid: 0c51c496-faee-4807-b8ed-009dc7e40258
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact_information:field_email_address'
+              formatter:
+                type: email_mailto
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          b0c21c2c-a0ce-4c0b-a2e1-be58e3465f76:
+            uuid: b0c21c2c-a0ce-4c0b-a2e1-be58e3465f76
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact_information:field_telephone_number'
+              formatter:
+                type: telephone_link
+                label: above
+                settings:
+                  title: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.contact_information.teaser
 targetEntityType: node
 bundle: contact_information
@@ -32,3 +79,4 @@ content:
     third_party_settings: {  }
 hidden:
   links: true
+  search_api_excerpt: true

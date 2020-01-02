@@ -1,0 +1,20 @@
+uuid: f6277bf8-566f-47f4-8e65-0ecb5df4a3d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_frequency_usage
+field_name: field_frequency_usage
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

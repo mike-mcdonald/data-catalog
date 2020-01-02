@@ -1,0 +1,122 @@
+uuid: d7d4d7de-ac86-4f48-ad01-e4925c5454f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.contact_information.title
+    - core.entity_view_mode.node.card
+    - field.field.node.contact_information.field_email_address
+    - field.field.node.contact_information.field_telephone_number
+    - node.type.contact_information
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - telephone
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          b9351c4b-fa2f-4bca-8e9e-a0830a9d70a1:
+            uuid: b9351c4b-fa2f-4bca-8e9e-a0830a9d70a1
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact_information:field_email_address'
+              formatter:
+                label: visually_hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: email_mailto
+            additional: {  }
+            weight: 2
+          d22c38fe-6fa6-49a7-8bdf-4e4b6b2a8d3a:
+            uuid: d22c38fe-6fa6-49a7-8bdf-4e4b6b2a8d3a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact_information:field_telephone_number'
+              formatter:
+                label: visually_hidden
+                settings:
+                  title: ''
+                third_party_settings: {  }
+                type: telephone_link
+            additional: {  }
+            weight: 3
+          a1c7bd51-15c8-446d-9c32-5c82d67da99a:
+            uuid: a1c7bd51-15c8-446d-9c32-5c82d67da99a
+            region: content
+            configuration:
+              id: 'field_block:node:contact_information:title'
+              label: Name
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          b4115568-e5bb-4463-96f2-ba8b0ac04a45:
+            uuid: b4115568-e5bb-4463-96f2-ba8b0ac04a45
+            region: content
+            configuration:
+              id: 'field_block:node:contact_information:type'
+              label: 'Content type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.contact_information.card
+targetEntityType: node
+bundle: contact_information
+mode: card
+content:
+  field_email_address:
+    weight: 0
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_telephone_number:
+    weight: 1
+    label: visually_hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+hidden:
+  links: true
+  search_api_excerpt: true

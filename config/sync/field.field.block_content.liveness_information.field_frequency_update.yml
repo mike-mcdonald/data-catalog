@@ -1,0 +1,29 @@
+uuid: 36289049-3268-47d0-be84-860bb90592d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.liveness_information
+    - field.storage.block_content.field_frequency_update
+    - taxonomy.vocabulary.frequency
+id: block_content.liveness_information.field_frequency_update
+field_name: field_frequency_update
+entity_type: block_content
+bundle: liveness_information
+label: 'Update frequency'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      frequency: frequency
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

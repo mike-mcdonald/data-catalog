@@ -7,7 +7,32 @@ dependencies:
     - field.field.node.server.field_operating_system
     - node.type.server
   module:
+    - field_layout
+    - layout_builder
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          da8ec27a-725f-4048-b42b-fb2800405aa2:
+            uuid: da8ec27a-725f-4048-b42b-fb2800405aa2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:server:links'
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.server.teaser
 targetEntityType: node
 bundle: server
@@ -20,3 +45,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_operating_system: true
+  search_api_excerpt: true

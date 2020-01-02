@@ -6,7 +6,13 @@ dependencies:
     - field.field.paragraph.notes.field_text
     - paragraphs.paragraphs_type.notes
   module:
+    - field_layout
+    - layout_discovery
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: paragraph.notes.default
 targetEntityType: paragraph
 bundle: notes

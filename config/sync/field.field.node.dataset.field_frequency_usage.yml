@@ -1,17 +1,17 @@
-uuid: 7a5e0573-29aa-4b76-a886-d396f0b39032
+uuid: dca86e9d-4349-4ec0-8e40-258ef8e1d9d2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_update_frequency
+    - field.storage.node.field_frequency_usage
     - node.type.dataset
     - taxonomy.vocabulary.frequency
-id: node.dataset.field_update_frequency
-field_name: field_update_frequency
+id: node.dataset.field_frequency_usage
+field_name: field_frequency_usage
 entity_type: node
 bundle: dataset
-label: 'Frequency updated'
-description: 'How often is the data or dataset updated?'
+label: 'Frequency of usage'
+description: ''
 required: false
 translatable: false
 default_value: {  }

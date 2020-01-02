@@ -7,8 +7,63 @@ dependencies:
     - field.field.node.contact_information.field_telephone_number
     - node.type.contact_information
   module:
+    - field_layout
+    - layout_builder
     - telephone
     - user
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol
+        layout_settings:
+          label: ''
+        components:
+          c8cd60c3-bb26-4aa5-b11b-51f3da965336:
+            uuid: c8cd60c3-bb26-4aa5-b11b-51f3da965336
+            region: first
+            configuration:
+              id: 'field_block:node:contact_information:field_email_address'
+              label: 'E-mail address'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: email_mailto
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          3ae94c6c-a92c-4f26-ac6d-dba8151084d4:
+            uuid: 3ae94c6c-a92c-4f26-ac6d-dba8151084d4
+            region: second
+            configuration:
+              id: 'field_block:node:contact_information:field_telephone_number'
+              label: 'Telephone number'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: telephone_link
+                settings:
+                  title: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.contact_information.default
 targetEntityType: node
 bundle: contact_information
@@ -31,3 +86,4 @@ content:
     region: content
 hidden:
   links: true
+  search_api_excerpt: true

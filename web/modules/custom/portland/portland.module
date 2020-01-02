@@ -1,0 +1,12 @@
+<?php
+
+function portland_inline_entity_form_table_fields_alter(&$fields, $context) {
+  if ($context['entity_type'] == 'block_content') {
+    // Remove 'block description'
+    unset($fields['label']);
+    if ($context['field_name'] == 'field_timeliness') {
+      // Rebplace 'Block type' with this, which better describes this field's types
+      $fields['type']['label'] = t('Timeliness type');
+    }
+  }
+}

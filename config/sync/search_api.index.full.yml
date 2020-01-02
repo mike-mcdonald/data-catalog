@@ -1,0 +1,184 @@
+uuid: 4da740db-aad5-4706-881e-3b7e7415be58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_authority_level
+    - field.storage.node.field_data_owner
+    - field.storage.node.field_demographic_information
+    - field.storage.node.field_data_group
+    - field.storage.node.field_frequency_usage
+    - field.storage.node.field_security_level
+    - field.storage.node.field_keywords
+    - field.storage.node.field_quality_rating
+    - field.storage.node.field_spatial_information
+    - field.storage.node.field_subject_areas
+    - field.storage.node.field_timeliness
+    - search_api.server.database
+    - core.entity_view_mode.node.search_index
+  module:
+    - node
+    - block_content
+    - search_api
+id: full
+name: Full
+description: ''
+read_only: false
+field_settings:
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  field_authority_level:
+    label: 'Authority level'
+    datasource_id: 'entity:node'
+    property_path: field_authority_level
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_authority_level
+  field_data_group:
+    label: Division/Group
+    datasource_id: 'entity:node'
+    property_path: field_data_group
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_data_group
+  field_data_owner:
+    label: 'Data Publisher'
+    datasource_id: 'entity:node'
+    property_path: field_data_owner
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_data_owner
+  field_demographic_information:
+    label: 'Demographic information'
+    datasource_id: 'entity:node'
+    property_path: field_demographic_information
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_demographic_information
+  field_frequency_usage:
+    label: 'Frequency of usage'
+    datasource_id: 'entity:node'
+    property_path: field_frequency_usage
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_frequency_usage
+  field_keywords:
+    label: Keywords
+    datasource_id: 'entity:node'
+    property_path: field_keywords
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_keywords
+  field_quality_rating:
+    label: 'Quality rating'
+    datasource_id: 'entity:node'
+    property_path: field_quality_rating
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_quality_rating
+  field_security_level:
+    label: 'Information security regulation'
+    datasource_id: 'entity:node'
+    property_path: field_security_level
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_security_level
+  field_spatial_information:
+    label: 'Spatial information type'
+    datasource_id: 'entity:node'
+    property_path: field_spatial_information
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_spatial_information
+  field_subject_areas:
+    label: 'Subject areas'
+    datasource_id: 'entity:node'
+    property_path: field_subject_areas
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_subject_areas
+  field_timeliness:
+    label: 'Timeliness type'
+    datasource_id: 'entity:node'
+    property_path: 'field_timeliness:entity:type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_timeliness
+      module:
+        - block_content
+        - block_content
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        authenticated: authenticated
+      view_mode:
+        'entity:node':
+          access_point: search_index
+          business_term: search_index
+          contact_information: search_index
+          database: search_index
+          dataset: search_index
+          server: search_index
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  hierarchy:
+    fields:
+      field_data_group: taxonomy_term-parent
+      field_subject_areas: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: database

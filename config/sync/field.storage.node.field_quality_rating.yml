@@ -1,33 +1,17 @@
-uuid: 138334d8-6a78-4c79-b1d3-fcb04be76934
+uuid: a0c2dce2-4488-493b-96a7-aca92acb02ee
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - options
+    - taxonomy
 id: node.field_quality_rating
 field_name: field_quality_rating
 entity_type: node
-type: list_string
+type: entity_reference
 settings:
-  allowed_values:
-    -
-      value: '1'
-      label: 'Very poor'
-    -
-      value: '2'
-      label: Poor
-    -
-      value: '3'
-      label: Acceptable/Fair
-    -
-      value: '4'
-      label: Good
-    -
-      value: '5'
-      label: 'Very good'
-  allowed_values_function: ''
-module: options
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

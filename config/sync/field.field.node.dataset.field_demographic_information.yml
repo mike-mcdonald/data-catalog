@@ -1,0 +1,29 @@
+uuid: 1b75c6ae-bf42-439d-b9f3-3f8b0f6b8602
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_demographic_information
+    - node.type.dataset
+    - taxonomy.vocabulary.demographic_information
+id: node.dataset.field_demographic_information
+field_name: field_demographic_information
+entity_type: node
+bundle: dataset
+label: 'Demographic information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      demographic_information: demographic_information
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

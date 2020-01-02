@@ -1,0 +1,20 @@
+uuid: 51b5779d-7a87-40ca-b7ac-99aef176b3ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_spatial_information
+field_name: field_spatial_information
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

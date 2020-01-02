@@ -6,8 +6,14 @@ dependencies:
     - field.field.taxonomy_term.accessibility_levels.field_accessibility_value
     - taxonomy.vocabulary.accessibility_levels
   module:
+    - field_layout
+    - layout_discovery
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: taxonomy_term.accessibility_levels.default
 targetEntityType: taxonomy_term
 bundle: accessibility_levels

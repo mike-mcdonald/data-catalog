@@ -1,12 +1,44 @@
 uuid: 323fe8f2-5d13-4283-b8ec-e6cc1f5c9ef5
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.access_point.field_data_custodian
+    - field.field.node.access_point.field_keywords
+    - field.field.node.access_point.field_purpose
+    - field.field.node.access_point.field_subject_areas
+    - field.field.node.access_point.field_url
     - node.type.access_point
   module:
+    - field_layout
+    - layout_builder
     - user
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          145dcb30-3267-4b71-8e00-b024e6c439c3:
+            uuid: 145dcb30-3267-4b71-8e00-b024e6c439c3
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:access_point:links'
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.access_point.teaser
 targetEntityType: node
 bundle: access_point
@@ -23,3 +55,4 @@ hidden:
   field_purpose: true
   field_subject_areas: true
   field_url: true
+  search_api_excerpt: true

@@ -1,16 +1,17 @@
-uuid: ae98cb29-8d0d-4aaf-8df5-9bd5859a5005
+uuid: 906fe60b-9d9b-45f9-a218-7909c0c6ac61
 langcode: en
 status: true
 dependencies:
   module:
+    - block_content
     - node
-    - yearonly
-id: node.field_oldest_record
-field_name: field_oldest_record
+id: node.field_timeliness
+field_name: field_timeliness
 entity_type: node
-type: yearonly
-settings: {  }
-module: yearonly
+type: entity_reference
+settings:
+  target_type: block_content
+module: core
 locked: false
 cardinality: 1
 translatable: true

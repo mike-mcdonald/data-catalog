@@ -1,21 +1,29 @@
-uuid: 73e27ac4-1be1-40b9-816e-9c72d8aaa1c3
+uuid: c9c20662-d220-45ab-9571-3f20a6ab3163
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_quality_rating
     - node.type.dataset
-  module:
-    - options
+    - taxonomy.vocabulary.quality
 id: node.dataset.field_quality_rating
 field_name: field_quality_rating
 entity_type: node
 bundle: dataset
 label: 'Quality rating'
-description: 'Overall subjective rating based on accuracy, reliability, and completeness of the dataset.'
+description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: list_string
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      quality: quality
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

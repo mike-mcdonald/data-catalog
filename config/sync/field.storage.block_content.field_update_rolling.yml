@@ -1,12 +1,12 @@
-uuid: f9536ed1-3644-4b0e-8cb3-9425d9d77bd0
+uuid: 5555b013-b083-423f-9a5e-ce7bdc26b5ec
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_spatial_enabled
-field_name: field_spatial_enabled
-entity_type: node
+    - block_content
+id: block_content.field_update_rolling
+field_name: field_update_rolling
+entity_type: block_content
 type: boolean
 settings: {  }
 module: core

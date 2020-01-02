@@ -10,8 +10,16 @@ dependencies:
     - node.type.business_term
   module:
     - cshs
+    - field_layout
+    - inline_entity_form
+    - layout_discovery
     - select2
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.business_term.default
 targetEntityType: node
 bundle: business_term
@@ -24,23 +32,31 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   field_data_custodian:
     weight: 4
     settings:
+      form_mode: default
+      override_labels: true
+      label_singular: contact
+      label_plural: contacts
+      allow_new: true
+      allow_existing: true
       match_operator: CONTAINS
-      autocomplete: false
-      width: 100%
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings: {  }
-    type: select2_entity_reference
+    type: inline_entity_form_complex
     region: content
   field_keywords:
     weight: 3
     settings:
+      width: 100%
       match_operator: CONTAINS
       autocomplete: false
-      width: 100%
     third_party_settings: {  }
     type: select2_entity_reference
     region: content

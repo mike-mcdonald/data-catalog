@@ -1,0 +1,35 @@
+uuid: ec20ff4e-a544-40a2-9a2b-f380c9b3ae78
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.archival_information
+    - field.field.block_content.archival_information.field_earliest_record
+    - field.field.block_content.archival_information.field_latest_record
+  module:
+    - field_layout
+    - layout_discovery
+    - yearonly
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: block_content.archival_information.default
+targetEntityType: block_content
+bundle: archival_information
+mode: default
+content:
+  field_earliest_record:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: yearonly_default
+    region: content
+  field_latest_record:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: yearonly_default
+    region: content
+hidden:
+  info: true

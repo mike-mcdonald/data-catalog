@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Information security levels'
 vid: information_security_levels
 description: ''
-hierarchy: 0
 weight: 0

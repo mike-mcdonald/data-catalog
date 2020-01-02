@@ -8,17 +8,368 @@ dependencies:
     - field.field.node.dataset.field_data_custodian
     - field.field.node.dataset.field_data_group
     - field.field.node.dataset.field_data_owner
+    - field.field.node.dataset.field_demographic_information
+    - field.field.node.dataset.field_frequency_usage
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_purpose
+    - field.field.node.dataset.field_quality_concerns
+    - field.field.node.dataset.field_quality_rating
     - field.field.node.dataset.field_security_level
     - field.field.node.dataset.field_source
-    - field.field.node.dataset.field_spatial_enabled
+    - field.field.node.dataset.field_spatial_information
     - field.field.node.dataset.field_subject_areas
-    - field.field.node.dataset.field_update_frequency
+    - field.field.node.dataset.field_timeliness
     - node.type.dataset
   module:
     - cshs
+    - field_layout
+    - layout_builder
     - user
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          af9ac02a-beff-4c64-9c2c-c36b42987e05:
+            uuid: af9ac02a-beff-4c64-9c2c-c36b42987e05
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:dataset:field_purpose'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: basic_string
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol
+        layout_settings:
+          label: ''
+        components:
+          f5048262-df79-43e3-a198-e340a0ba0497:
+            uuid: f5048262-df79-43e3-a198-e340a0ba0497
+            region: first
+            configuration:
+              id: 'field_block:node:dataset:field_source'
+              label: Source
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          9d9f9e60-d63b-4c7f-a566-92b1694876db:
+            uuid: 9d9f9e60-d63b-4c7f-a566-92b1694876db
+            region: first
+            configuration:
+              id: 'field_block:node:dataset:field_authority_level'
+              label: 'Authority level'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          e74f0aa9-465d-48a5-bf6c-5c3c4d92b656:
+            uuid: e74f0aa9-465d-48a5-bf6c-5c3c4d92b656
+            region: second
+            configuration:
+              id: 'field_block:node:dataset:field_security_level'
+              label: 'Information security regulation'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          660df897-e1d0-4d9d-93b1-e4b564a428a5:
+            uuid: 660df897-e1d0-4d9d-93b1-e4b564a428a5
+            region: second
+            configuration:
+              id: 'field_block:node:dataset:field_accessibility_level'
+              label: Accessibility
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol
+        layout_settings:
+          label: ''
+        components:
+          190c1cf9-c8af-4435-b3b0-f8c354ca4a8d:
+            uuid: 190c1cf9-c8af-4435-b3b0-f8c354ca4a8d
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:dataset:field_keywords'
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+                type: entity_reference_entity_view
+            additional: {  }
+            weight: 3
+          bf796982-a493-407b-80db-2c3c0f541632:
+            uuid: bf796982-a493-407b-80db-2c3c0f541632
+            region: second
+            configuration:
+              id: 'field_block:node:dataset:field_subject_areas'
+              label: 'Subject areas'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: cshs_full_hierarchy
+                settings:
+                  linked: 1
+                  reverse: 0
+                  separator: ' / '
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol
+        layout_settings:
+          label: ''
+        components:
+          5f8b1305-b256-4e21-8cb0-422e3a3eeb7c:
+            uuid: 5f8b1305-b256-4e21-8cb0-422e3a3eeb7c
+            region: second
+            configuration:
+              id: 'field_block:node:dataset:field_demographic_information'
+              label: 'Demographic information'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          60af349f-5979-415d-a098-c93b9f3d4d6a:
+            uuid: 60af349f-5979-415d-a098-c93b9f3d4d6a
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:dataset:field_spatial_information'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 7
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol
+        layout_settings:
+          label: ''
+        components:
+          aae39dbb-28d7-4387-a064-7a56f76242fb:
+            uuid: aae39dbb-28d7-4387-a064-7a56f76242fb
+            region: first
+            configuration:
+              id: 'field_block:node:dataset:field_timeliness'
+              label: Timeliness
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 9
+          5e5255c6-6f91-49f8-adb2-501b708b9489:
+            uuid: 5e5255c6-6f91-49f8-adb2-501b708b9489
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:dataset:field_frequency_usage'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 10
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol
+        layout_settings:
+          label: ''
+        components:
+          89ff3c5a-dee5-4deb-935d-1fcfd27df2c3:
+            uuid: 89ff3c5a-dee5-4deb-935d-1fcfd27df2c3
+            region: first
+            configuration:
+              id: 'field_block:node:dataset:field_data_group'
+              label: Division/Group
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          6361c8d7-8250-407c-a575-cc6df5ff645e:
+            uuid: 6361c8d7-8250-407c-a575-cc6df5ff645e
+            region: second
+            configuration:
+              id: 'field_block:node:dataset:field_data_custodian'
+              label: 'Primary Contact '
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: card
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          4d5ee833-3600-405b-b8f2-6fb6528656c3:
+            uuid: 4d5ee833-3600-405b-b8f2-6fb6528656c3
+            region: first
+            configuration:
+              id: 'field_block:node:dataset:field_data_owner'
+              label: 'Data Publisher'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol
+        layout_settings:
+          label: ''
+        components:
+          c174e884-13ee-42c4-8579-0c2b8fbe965c:
+            uuid: c174e884-13ee-42c4-8579-0c2b8fbe965c
+            region: first
+            configuration:
+              id: 'field_block:node:dataset:field_quality_concerns'
+              label: 'Quality concerns'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          6c923190-e39d-41e1-ad94-317223cf04c2:
+            uuid: 6c923190-e39d-41e1-ad94-317223cf04c2
+            region: second
+            configuration:
+              id: 'field_block:node:dataset:field_quality_rating'
+              label: 'Quality rating'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+    allow_custom: false
 id: node.dataset.default
 targetEntityType: node
 bundle: dataset
@@ -51,6 +402,22 @@ content:
     third_party_settings: {  }
     type: cshs_full_hierarchy
     region: content
+  field_demographic_information:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_frequency_usage:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_keywords:
     weight: 3
     label: above
@@ -67,6 +434,14 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
+  field_quality_rating:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_source:
     type: cshs_full_hierarchy
     weight: 5
@@ -77,15 +452,13 @@ content:
       reverse: false
     third_party_settings: {  }
     region: content
-  field_spatial_enabled:
-    weight: 8
+  field_spatial_information:
+    weight: 11
     label: above
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+      link: true
     third_party_settings: {  }
-    type: boolean
+    type: entity_reference_label
     region: content
   field_subject_areas:
     weight: 4
@@ -97,8 +470,8 @@ content:
     third_party_settings: {  }
     type: cshs_full_hierarchy
     region: content
-  field_update_frequency:
-    weight: 6
+  field_timeliness:
+    weight: 13
     label: above
     settings:
       link: true
@@ -108,5 +481,7 @@ content:
 hidden:
   field_accessibility_level: true
   field_data_owner: true
+  field_quality_concerns: true
   field_security_level: true
   links: true
+  search_api_excerpt: true
