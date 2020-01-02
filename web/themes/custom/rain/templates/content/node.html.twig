@@ -92,28 +92,29 @@
   'mt-3'
 ])
 %}
+{% set display_heading = display_heading|default(false)  %}
 <article{{attributes.addClass(article_classes)}}>
-  {% block title %}
-    {{ title_prefix }}
-    {% if not page %}
-      <{{heading_element}} {{ title_attributes.addClass(title_classes) }}>
-        <a href="{{ url }}" rel="bookmark">
-          {{ label }}</a>
-      </{{heading_element}}>
-    {% endif %}
-    {{ title_suffix }}
-  {% endblock %}
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{author_attributes}}>
-        {% trans %}By
-        {{ author_name }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-  <div{{content_attributes.addClass(content_classes)}}>
-    {{ content }}
-  </div>
+	{% block title %}
+		{{ title_prefix }}
+		{% if display_heading %}
+			<{{heading_element}} {{ title_attributes.addClass(title_classes) }}>
+				<a href="{{ url }}" rel="bookmark">
+					{{ label }}</a>
+			</{{heading_element}}>
+		{% endif %}
+		{{ title_suffix }}
+	{% endblock %}
+	{% if display_submitted %}
+		<footer>
+			{{ author_picture }}
+			<div{{author_attributes}}>
+				{% trans %}By
+				{{ author_name }}{% endtrans %}
+				{{ metadata }}
+			</div>
+		</footer>
+	{% endif %}
+	<div{{content_attributes.addClass(content_classes)}}>
+		{{ content }}
+	</div>
 </article>

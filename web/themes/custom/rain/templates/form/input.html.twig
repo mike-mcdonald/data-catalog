@@ -29,4 +29,6 @@
     required ? 'focus:border-red-darkest' : 'focus:border-grey-darkest',
   ])
 %}
-<input{{attributes.addClass(input_classes)}}/>{{ children }}
+{% spaceless %}
+	<input{{attributes.addClass(input_classes)}}/>{{ children }}
+{% endspaceless %}

@@ -1,3 +1,21 @@
+card:
+  label: 'Card'
+  path: layouts
+  template: layout--card
+  default_region: content
+  regions:
+    content:
+      label: Content
+
+layout_row:
+  label: 'Row'
+  path: layouts
+  template: layout--row
+  default_region: content
+  regions:
+    content:
+      label: Content
+
 layout_onecol:
   label: 'One column'
   path: layouts/onecol

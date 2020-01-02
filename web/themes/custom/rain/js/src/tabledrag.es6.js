@@ -260,7 +260,7 @@ import info from '../../icons/info.svg';
             this.toggleColumns();
           }, this),
         )
-        .wrap('<div class="flex flex-col items-end mb-3"></div>')
+        .wrap('<div class="flex flex-col items-end m-2"></div>')
         .parent(),
     );
 

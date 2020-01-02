@@ -10,4 +10,7 @@
  * @see template_preprocess_vertical_tabs()
  */
 #}
-<div{{ attributes.setAttribute('data-vertical-tabs-panes', TRUE) }}>{{ children }}</div>
+{% set tabs_classes = tabs_classes|default([
+  '-mx-3',
+]) %}
+<div{{attributes.setAttribute('data-vertical-tabs-panes',TRUE).addClass(tabs_classes)}}>{{ children }}</div>
