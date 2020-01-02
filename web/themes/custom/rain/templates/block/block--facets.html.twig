@@ -1,6 +1,6 @@
 {% embed 'block.html.twig' with {
   'block_classes': [
-    'mb-3',
+    'my-3',
     'border-2',
     'border-b',
     'rounded',
@@ -17,16 +17,16 @@
   'content_classes': [
   ],
 } %}
-{% block title %}
-  {{ title_prefix }}
-  {% if label %}
-    <{{ heading_element }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ heading_element }}>
-  {% endif %}
-  {{ title_suffix }}
-{% endblock %}
-{% block content %}
-  <div{{ content_attribute.addClass(content_classes) }}>
-    {{ content }}
-  </div>
-{% endblock %}
+	{% block title %}
+		{{ title_prefix }}
+		{% if label %}
+			<{{heading_element}}{{title_attributes.addClass(title_classes)}}>{{ label }}</{{heading_element}}>
+		{% endif %}
+		{{ title_suffix }}
+	{% endblock %}
+	{% block content %}
+		<div{{content_attribute.addClass(content_classes)}}>
+			{{ content }}
+		</div>
+	{% endblock %}
 {% endembed %}

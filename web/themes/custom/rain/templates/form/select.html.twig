@@ -29,6 +29,7 @@
     'w-full',
     'py-2',
     'px-4',
+    'pr-8',
     'leading-tight',
     'focus:outline-none',
     required ? 'focus:bg-red-lightest' : 'focus:bg-white',
@@ -52,24 +53,24 @@
 %}
 
 {% spaceless %}
-  <div{{ wrapper_attributes.addClass(wrapper_classes) }}>
-    <select{{ attributes.addClass(select_classes) }}>
-      {% for option in options %}
-        {% if option.type == 'optgroup' %}
-          <optgroup label="{{ option.label }}">
-            {% for sub_option in option.options %}
-              <option value="{{ sub_option.value }}" data-parent="{{ option.parent }}" {{ sub_option.selected ? ' selected="selected"' }}>{{ sub_option.label }}</option>
-            {% endfor %}
-          </optgroup>
-        {% else %}
-          <option value="{{ option.value }}" data-parent="{{ option.parent }}" {{ option.selected ? ' selected="selected"' }}>{{ option.label }}</option>
-        {% endif %}
-      {% endfor %}
-    </select>
-    {% if add_icon == 'true' %}
-      <div{{ icon_attributes.addClass(icon_classes) }}>
-        {% include active_theme_path() ~ '/icons/chevron-down.svg' %}
-      </div>
-    {% endif %}
-  </div>
+	<div{{wrapper_attributes.addClass(wrapper_classes)}}>
+		<select{{attributes.addClass(select_classes)}}>
+			{% for option in options %}
+				{% if option.type == 'optgroup' %}
+					<optgroup label="{{ option.label }}">
+						{% for sub_option in option.options %}
+							<option value="{{ sub_option.value }}" data-parent="{{ option.parent }}" {{ sub_option.selected ? ' selected="selected"' }}>{{ sub_option.label }}</option>
+						{% endfor %}
+					</optgroup>
+				{% else %}
+					<option value="{{ option.value }}" data-parent="{{ option.parent }}" {{ option.selected ? ' selected="selected"' }}>{{ option.label }}</option>
+				{% endif %}
+			{% endfor %}
+		</select>
+		{% if add_icon == 'true' %}
+			<div{{icon_attributes.addClass(icon_classes)}}>
+				{% include active_theme_path() ~ '/icons/chevron-down.svg' %}
+			</div>
+		{% endif %}
+	</div>
 {% endspaceless %}

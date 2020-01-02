@@ -12,8 +12,8 @@ regions:
   alert: Alert
   header: Header
   header_menu: Header menu
-  notification: Notification
   local_admin: Local administration
+  notification: Notification
   left_sidebar: Left sidebar
   content: Content
   right_sidebar: Right sidebar

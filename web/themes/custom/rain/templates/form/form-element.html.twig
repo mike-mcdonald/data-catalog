@@ -54,7 +54,7 @@
     title_display not in ['after', 'before'] ? 'form-no-label',
     disabled == 'disabled' ? 'form-disabled',
     errors ? 'form-item--error',
-    'my-3',
+    'm-2',
   ])
 %}
 {%
@@ -66,83 +66,82 @@
 %}
 {% set label_attributes = label_attributes|default(create_attribute()) %}
 {% if type in ['checkbox', 'radio'] %}
-  {% set label_classes = [
+	{% set label_classes = [
     'flex',
     'items-baseline',
-    'font-bold',
     'mb-1',
   ]%}
-  <div{{attributes.addClass(classes)}}>
-    {% if prefix is not empty %}
-      <span class="field-prefix">
-        {{ prefix }}</span>
-    {% endif %}
-    {% if description_display == 'before' and description.content %}
-      <div{{description.attributes}}>
-        {{ description.content }}
-      </div>
-    {% endif %}
-    <label{{label_attributes.addClass(label_classes)}}>
-      {% if label_display == 'before' %}
-        {{ label }}&nbsp;
-      {% endif %}
-      {{ children }}
-      {% if label_display == 'after' %}
-        &nbsp;{{ label }}
-      {% endif %}
-    </label>
-    {% if suffix is not empty %}
-      <span class="field-suffix">
-        {{ suffix }}</span>
-    {% endif %}
-    {% if errors %}
-      <div class="invalid-feedback">
-        {{ errors }}
-      </div>
-    {% endif %}
-    {% if description_display in ['after', 'invisible'] and description.content %}
-      <small{{description.attributes.addClass(description_classes)}}>
-        {{ description.content }}
-      </small>
-    {% endif %}
-  </div>
-  {% elseif type in ['search'] %}
-  {{ children }}
-  {% if label_display in ['before', 'invisible'] %}
-    {{ label }}
-  {% endif %}
-  {% else %}
-  <div{{attributes.addClass(classes,'form-group')}}>
-    {% if label_display in ['before', 'invisible'] %}
-      {{ label }}
-    {% endif %}
-    {% if prefix is not empty %}
-      <span class="field-prefix">
-        {{ prefix }}</span>
-    {% endif %}
-    {% if description_display == 'before' and description.content %}
-      <div{{description.attributes}}>
-        {{ description.content }}
-      </div>
-    {% endif %}
-    <div>
-      {{ children }}</div>
-    {% if suffix is not empty %}
-      <span class="field-suffix">
-        {{ suffix }}</span>
-    {% endif %}
-    {% if label_display == 'after' %}
-      {{ label }}
-    {% endif %}
-    {% if errors %}
-      <div class="invalid-feedback">
-        {{ errors }}
-      </div>
-    {% endif %}
-    {% if description_display in ['after', 'invisible'] and description.content %}
-      <small{{description.attributes.addClass(description_classes)}}>
-        {{ description.content }}
-      </small>
-    {% endif %}
-  </div>
+	<div{{attributes.addClass(classes)}}>
+		{% if prefix is not empty %}
+			<span class="field-prefix">
+				{{ prefix }}</span>
+		{% endif %}
+		{% if description_display == 'before' and description.content %}
+			<div{{description.attributes}}>
+				{{ description.content }}
+			</div>
+		{% endif %}
+		<label{{label_attributes.addClass(label_classes)}}>
+			{% if label_display == 'before' %}
+				{{ label }}&nbsp;
+			{% endif %}
+			{{ children }}
+			{% if label_display == 'after' %}
+				&nbsp;{{ label }}
+			{% endif %}
+		</label>
+		{% if suffix is not empty %}
+			<span class="field-suffix">
+				{{ suffix }}</span>
+		{% endif %}
+		{% if errors %}
+			<div class="invalid-feedback">
+				{{ errors }}
+			</div>
+		{% endif %}
+		{% if description_display in ['after', 'invisible'] and description.content %}
+			<small{{description.attributes.addClass(description_classes)}}>
+				{{ description.content }}
+			</small>
+		{% endif %}
+	</div>
+{% elseif type in ['search'] %}
+	{{ children }}
+	{% if label_display in ['before', 'invisible'] %}
+		{{ label }}
+	{% endif %}
+{% else %}
+	<div{{attributes.addClass(classes,'form-group')}}>
+		{% if label_display in ['before', 'invisible'] %}
+			{{ label }}
+		{% endif %}
+		{% if prefix is not empty %}
+			<span class="field-prefix">
+				{{ prefix }}</span>
+		{% endif %}
+		{% if description_display == 'before' and description.content %}
+			<div{{description.attributes}}>
+				{{ description.content }}
+			</div>
+		{% endif %}
+		<div>
+			{{ children }}</div>
+		{% if suffix is not empty %}
+			<span class="field-suffix">
+				{{ suffix }}</span>
+		{% endif %}
+		{% if label_display == 'after' %}
+			{{ label }}
+		{% endif %}
+		{% if errors %}
+			<div class="invalid-feedback">
+				{{ errors }}
+			</div>
+		{% endif %}
+		{% if description_display in ['after', 'invisible'] and description.content %}
+			<small{{description.attributes.addClass(description_classes)}}>
+				{{ description.content }}
+			</small>
+		{% endif %}
+	</div>
 {% endif %}

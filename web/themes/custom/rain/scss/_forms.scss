@@ -1,5 +1,11 @@
-table {
-  .mb-4 {
-    @apply mb-0;
-  }
+.container-inline div, .container-inline label {
+  display: inline-flex;
+}
+
+.filter-wrapper {
+  @apply p-2 m-2 -mt-2 border;
+}
+
+.field-ui-overview .field-plugin-settings-editing .field-plugin-type + * {
+  @apply hidden;
 }

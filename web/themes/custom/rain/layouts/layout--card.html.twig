@@ -11,11 +11,16 @@
  */
 #}
 {%
-  set layout_classes = layout_classes|default([])
-%}
-{%
-  set region_classes = region_classes|default([])
+  set layout_classes = layout_classes|default([
+    'my-2',
+    'p-4',
+    'border-2',
+    'rounded-lg',
+    'shadow',
+  ])
 %}
 {% if content %}
-	{{ content.content }}
-{% endif %}
+	<section {{ region_attributes.content.addClass(layout_classes) }}>
+		{{ content.content }}
+	</section>
+</div>{% endif %}

@@ -65,6 +65,11 @@
 		</span>
 	</header>
 {% endif %}
+{% if page.local_admin|render is not empty %}
+	<section role="administration">
+		{{ page.local_admin }}
+	</section>
+{% endif %}
 {% if page.notification|render is not empty %}
 	<section role="notifications">
 		<span class="{{ container_classes|join(' ') }}">
@@ -72,36 +77,33 @@
 		</span>
 	</section>
 {% endif %}
-{% if page.local_admin|render is not empty %}
-	<section role="administration">
-		{{ page.local_admin }}
-	</section>
-{% endif %}
 <main role="main" class="{{ container_classes|merge(['mb-4'])|join(' ') }}">
 	<a class="border-0" id="main-content" tabindex="-1"></a>
 	{# link is in html.html.twig #}
 	{% if page.left_sidebar is not empty %}
-		<aside class="lg:mr-4 lg:w-1/4" role="complementary">
-			{{ page.left_sidebar }}
-		</aside>
-	{% endif %}
-	<section class="flex-grow lg:w-1/2">
-		{{ page.content }}
-	</section>
-	{# /.layout-content #}
-	{% if page.right_sidebar %}
-		<aside class="lg:ml-4 lg:w-1/4" role="complementary">
-			{{ page.right_sidebar }}
-		</aside>
-	{% endif %}
-</main>
-{% if page.left_footer or page.right_footer %}
-	<footer role="contentinfo" class="{{ container_classes|merge(['justify-between'])|join(' ') }}">
-		<section>
-			{{ page.left_footer }}
+		{% if page.left_sidebar|render is not empty %}>>>> master
+			<aside class="lg:mr-4 lg:w-1/4" role="complementary">
+				{{ page.left_sidebar }}
+			</aside>
+		{% endif %}
+		<section class="flex-grow lg:w-1/2">
+			{{ page.content }}
 		</section>
-		<section>
-			{{ page.right_footer }}
-		</section>
-	</footer>
-{% endif %}
+		{# /.layout-content #}
+		{% if page.right_sidebar %}
+			{% if page.right_sidebar|render|striptags|trim is not empty %}>>>> master
+				<aside class="lg:ml-4 lg:w-1/4" role="complementary">
+					{{ page.right_sidebar }}
+				</aside>
+			{% endif %}
+		</main>
+		{% if page.left_footer or page.right_footer %}
+			<footer role="contentinfo" class="{{ container_classes|merge(['justify-between'])|join(' ') }}">
+				<section>
+					{{ page.left_footer }}
+				</section>
+				<section>
+					{{ page.right_footer }}
+				</section>
+			</footer>
+		{% endif %}

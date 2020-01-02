@@ -36,8 +36,11 @@
  * @see template_preprocess_field()
  */
 #}
-{% set margin = margin|default('3') %}
-{% set classes = classes|default([]) %}
+{% set margin = margin|default('2') %}
+{% set classes = classes|default([
+  'flex',
+  label_display == 'inline' ? 'flex-row' : 'flex-col',
+]) %}
 {%
   set field_classes = [
     'field',
@@ -45,7 +48,6 @@
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
     'my-' ~ margin,
-    label_display == 'inline' ? 'd-flex'
   ]
 %}
 {%
@@ -64,23 +66,23 @@
   ])
 %}
 {% spaceless %}
-  {% block field %}
-    <div{{attributes.addClass(field_classes).addClass(classes)}}>
-      {% block label %}
-        {%- if not label_hidden -%}
-          <label{{title_attributes.addClass(title_classes)}}>
-            {{ label|render }}</label>
-        {%- endif -%}
-      {% endblock %}
-      {% block content %}
-        <div{{content_attribute.addClass(content_classes)}}>
-          {%- for item in items -%}
-            <div{{item.attributes.addClass(item_classes)}}>
-              {{ item.content }}
-            </div>
-          {%- endfor -%}
-        </div>
-      {% endblock %}
-    </div>
-  {% endblock %}
+	{% block field %}
+		<div{{attributes.addClass(field_classes).addClass(classes)}}>
+			{% block label %}
+				{%- if not label_hidden -%}
+					<label{{title_attributes.addClass(title_classes)}}>
+						{{ label|render }}</label>
+				{%- endif -%}
+			{% endblock %}
+			{% block content %}
+				<div{{content_attribute.addClass(content_classes)}}>
+					{%- for item in items -%}
+						<div{{item.attributes.addClass(item_classes)}}>
+							{{ item.content }}
+						</div>
+					{%- endfor -%}
+				</div>
+			{% endblock %}
+		</div>
+	{% endblock %}
 {% endspaceless %}

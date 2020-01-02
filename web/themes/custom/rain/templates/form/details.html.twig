@@ -19,27 +19,27 @@
     'border',
     'rounded',
     'p-3',
-    'mb-4',
+    'm-2',
   ])
 %}
-<details{{ attributes.addClass(classes) }}>
-  {%
+<details{{attributes.addClass(classes)}}>
+	{%
     set summary_classes = [
       required ? 'js-form-required',
       required ? 'form-required',
     ]
   %}
-  {%- if title -%}
-    <summary{{ summary_attributes.addClass(summary_classes) }}>{{ title }}</summary>
-  {%- endif -%}
+	{%- if title -%}
+		<summary{{summary_attributes.addClass(summary_classes)}}>{{ title }}</summary>
+	{%- endif -%}
 
-  {% if errors %}
-    <div>
-      {{ errors }}
-    </div>
-  {% endif %}
+	{% if errors %}
+		<div>
+			{{ errors }}
+		</div>
+	{% endif %}
 
-  {{ description }}
-  {{ children }}
-  {{ value }}
+	{{ description }}
+	{{ children }}
+	{{ value }}
 </details>

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the token tree link.
+ *
+ * Available variables:
+ * - url: The URL to the token tree page.
+ * - text: The text to be displayed in the link.
+ * - attributes: Attributes for the anchor tag.
+ * - link: The complete link.
+ *
+ * @see template_preprocess_token_tree_link()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set anchor_classes = anchor_classes|default([
+  'm-2',
+]) %}
+<a{{attributes.addClass(anchor_classes)}} href="{{url}}">
+	{{ text }}
+</a>
