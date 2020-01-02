@@ -1,0 +1,77 @@
+uuid: f3a6d53b-3540-44df-b478-60e14feb86f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.archival_information
+    - core.entity_view_mode.block_content.token
+    - field.field.block_content.archival_information.field_earliest_record
+    - field.field.block_content.archival_information.field_latest_record
+  module:
+    - field_layout
+    - layout_builder
+    - yearonly
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9ed4579c-ae71-4fb9-b360-8922aa31eec4:
+            uuid: 9ed4579c-ae71-4fb9-b360-8922aa31eec4
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:archival_information:field_earliest_record'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: yearonly_default
+            additional: {  }
+            weight: 0
+          7ce8f701-cbea-4d59-8994-1e8ae8656f5c:
+            uuid: 7ce8f701-cbea-4d59-8994-1e8ae8656f5c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:archival_information:field_latest_record'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: yearonly_default
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+id: block_content.archival_information.token
+targetEntityType: block_content
+bundle: archival_information
+mode: token
+content:
+  field_earliest_record:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: yearonly_default
+    region: content
+  field_latest_record:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: yearonly_default
+    region: content
+hidden:
+  search_api_excerpt: true

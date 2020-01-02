@@ -9,17 +9,30 @@ dependencies:
     - field.field.node.dataset.field_data_custodian
     - field.field.node.dataset.field_data_group
     - field.field.node.dataset.field_data_owner
+    - field.field.node.dataset.field_demographic_information
+    - field.field.node.dataset.field_frequency_usage
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_purpose
+    - field.field.node.dataset.field_quality_concerns
+    - field.field.node.dataset.field_quality_rating
     - field.field.node.dataset.field_security_level
     - field.field.node.dataset.field_source
-    - field.field.node.dataset.field_spatial_enabled
+    - field.field.node.dataset.field_spatial_information
     - field.field.node.dataset.field_subject_areas
-    - field.field.node.dataset.field_update_frequency
+    - field.field.node.dataset.field_timeliness
     - node.type.dataset
   module:
     - cshs
+    - field_layout
+    - layout_builder
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: false
+    allow_custom: false
 id: node.dataset.teaser
 targetEntityType: node
 bundle: dataset
@@ -69,16 +82,6 @@ content:
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-  field_spatial_enabled:
-    type: boolean
-    weight: 6
-    region: content
-    label: visually_hidden
-    settings:
-      format: custom
-      format_custom_true: Spatial
-      format_custom_false: 'Not spatial'
-    third_party_settings: {  }
   field_subject_areas:
     type: cshs_full_hierarchy
     weight: 4
@@ -89,24 +92,22 @@ content:
       separator: ' » '
       reverse: 0
     third_party_settings: {  }
-  field_update_frequency:
-    type: entity_reference_entity_view
-    weight: 7
-    region: content
-    label: visually_hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
 hidden:
   body: true
   field_accessibility_level: true
   field_data_owner: true
+  field_demographic_information: true
+  field_frequency_usage: true
   field_public_records_exempt: true
   field_quality_accuracy: true
   field_quality_completeness: true
+  field_quality_concerns: true
   field_quality_consistency: true
+  field_quality_rating: true
   field_security_level: true
   field_source: true
+  field_spatial_information: true
   field_subject_matter_experts: true
+  field_timeliness: true
   links: true
+  search_api_excerpt: true

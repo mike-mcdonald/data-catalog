@@ -1,0 +1,19 @@
+uuid: a3db1497-6b72-4b74-ab96-4eef691e39e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quality_concerns
+    - node.type.dataset
+id: node.dataset.field_quality_concerns
+field_name: field_quality_concerns
+entity_type: node
+bundle: dataset
+label: 'Quality concerns'
+description: 'Describe the concerns you may have about the quality of the data.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

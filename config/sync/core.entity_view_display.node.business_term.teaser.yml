@@ -10,8 +10,49 @@ dependencies:
     - field.field.node.business_term.field_subject_areas
     - node.type.business_term
   module:
+    - field_layout
+    - layout_builder
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          3f8e8e0b-e6fd-40f4-bbab-feeb2faefa52:
+            uuid: 3f8e8e0b-e6fd-40f4-bbab-feeb2faefa52
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:business_term:links'
+            additional: {  }
+            weight: 0
+          8e2e8152-0ce4-4a37-a27b-278d7193e924:
+            uuid: 8e2e8152-0ce4-4a37-a27b-278d7193e924
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:business_term:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.business_term.teaser
 targetEntityType: node
 bundle: business_term
@@ -34,3 +75,4 @@ hidden:
   field_data_custodian: true
   field_keywords: true
   field_subject_areas: true
+  search_api_excerpt: true

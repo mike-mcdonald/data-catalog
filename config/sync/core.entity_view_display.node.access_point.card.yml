@@ -1,0 +1,201 @@
+uuid: 1f61c12b-00db-4e00-b04a-f43ac7e21273
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.access_point.title
+    - core.entity_view_mode.node.card
+    - field.field.node.access_point.field_data_custodian
+    - field.field.node.access_point.field_keywords
+    - field.field.node.access_point.field_purpose
+    - field.field.node.access_point.field_subject_areas
+    - field.field.node.access_point.field_url
+    - node.type.access_point
+  module:
+    - cshs
+    - field_layout
+    - layout_builder
+    - link
+    - user
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: card
+        layout_settings:
+          label: ''
+        components:
+          8369b0a0-ba45-4eec-83d7-48912c720110:
+            uuid: 8369b0a0-ba45-4eec-83d7-48912c720110
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:field_keywords'
+              label: Keywords
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: card
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -6
+          d8feb8b0-caf9-477f-8971-83af52270e20:
+            uuid: d8feb8b0-caf9-477f-8971-83af52270e20
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:field_purpose'
+              label: Description
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: smart_trim
+                settings:
+                  trim_length: 300
+                  trim_type: chars
+                  trim_suffix: ...
+                  wrap_output: false
+                  wrap_class: trimmed
+                  more_link: false
+                  more_text: More
+                  more_class: more-link
+                  trim_options:
+                    text: false
+                    trim_zero: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -7
+          9ee206ef-7305-44a1-9ca5-3d3ada8727e2:
+            uuid: 9ee206ef-7305-44a1-9ca5-3d3ada8727e2
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:type'
+              label: 'Content type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -10
+          6fe987f1-4abc-462f-952f-865cc85610af:
+            uuid: 6fe987f1-4abc-462f-952f-865cc85610af
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:title'
+              label: Name
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -9
+          1d62180a-5c10-4609-83eb-b12cbbdbbdf1:
+            uuid: 1d62180a-5c10-4609-83eb-b12cbbdbbdf1
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:field_url'
+              label: URL
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: link
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -8
+        third_party_settings: {  }
+id: node.access_point.card
+targetEntityType: node
+bundle: access_point
+mode: card
+content:
+  field_data_custodian:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_keywords:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_purpose:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_subject_areas:
+    weight: 104
+    label: above
+    settings:
+      separator: ' » '
+      linked: false
+      reverse: false
+    third_party_settings: {  }
+    type: cshs_full_hierarchy
+    region: content
+  field_url:
+    weight: 105
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

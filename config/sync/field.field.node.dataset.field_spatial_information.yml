@@ -1,0 +1,25 @@
+uuid: adcea9a8-46d3-4300-9dea-4c499e6a48a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spatial_information
+    - node.type.dataset
+id: node.dataset.field_spatial_information
+field_name: field_spatial_information
+entity_type: node
+bundle: dataset
+label: 'Spatial information type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: spatial_information
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

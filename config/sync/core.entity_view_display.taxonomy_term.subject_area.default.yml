@@ -5,7 +5,37 @@ dependencies:
   config:
     - taxonomy.vocabulary.subject_area
   module:
+    - field_layout
+    - layout_builder
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          6f1e341f-25da-4b25-af8b-668cbf45901c:
+            uuid: 6f1e341f-25da-4b25-af8b-668cbf45901c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:taxonomy_term:subject_area:description'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: taxonomy_term.subject_area.default
 targetEntityType: taxonomy_term
 bundle: subject_area
@@ -18,4 +48,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  search_api_excerpt: true

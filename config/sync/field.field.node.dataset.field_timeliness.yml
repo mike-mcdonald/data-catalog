@@ -1,0 +1,30 @@
+uuid: 27e7b31e-bd1a-4fef-a0e0-9ca64216ae4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.archival_information
+    - block_content.type.liveness_information
+    - field.storage.node.field_timeliness
+    - node.type.dataset
+id: node.dataset.field_timeliness
+field_name: field_timeliness
+entity_type: node
+bundle: dataset
+label: Timeliness
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      archival_information: archival_information
+      liveness_information: liveness_information
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: archival_information
+field_type: entity_reference

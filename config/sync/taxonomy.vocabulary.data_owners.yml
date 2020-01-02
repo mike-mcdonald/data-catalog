@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Data Owner'
 vid: data_owners
 description: ''
-hierarchy: 0
 weight: 0

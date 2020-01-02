@@ -1,0 +1,42 @@
+uuid: c805845c-d267-4e9d-b0b9-4d2ae20e6425
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.liveness_information
+    - field.field.block_content.liveness_information.field_frequency_update
+    - field.field.block_content.liveness_information.field_update_lag
+    - field.field.block_content.liveness_information.field_update_rolling
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: block_content.liveness_information.default
+targetEntityType: block_content
+bundle: liveness_information
+mode: default
+content:
+  field_frequency_update:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_update_lag:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_update_rolling:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  info: true

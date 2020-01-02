@@ -1,0 +1,20 @@
+uuid: a3ddb89a-fa82-4d37-9bbd-fbead9076ab7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_demographic_information
+field_name: field_demographic_information
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

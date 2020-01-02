@@ -1,0 +1,19 @@
+uuid: e16f439c-a1ef-4759-8a86-5af697f09aeb
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - yearonly
+id: block_content.field_earliest_record
+field_name: field_earliest_record
+entity_type: block_content
+type: yearonly
+settings: {  }
+module: yearonly
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

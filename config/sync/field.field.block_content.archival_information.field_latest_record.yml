@@ -1,0 +1,23 @@
+uuid: f689c835-b83c-4c81-b37f-febcb2840390
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.archival_information
+    - field.storage.block_content.field_latest_record
+  module:
+    - yearonly
+id: block_content.archival_information.field_latest_record
+field_name: field_latest_record
+entity_type: block_content
+bundle: archival_information
+label: 'Latest record'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1900'
+  yearonly_to: now
+field_type: yearonly

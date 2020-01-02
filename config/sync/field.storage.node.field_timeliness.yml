@@ -1,16 +1,16 @@
-uuid: 0bfe8bce-b5f2-48bb-8a02-7d0ea59b7dd7
+uuid: 906fe60b-9d9b-45f9-a218-7909c0c6ac61
 langcode: en
 status: true
 dependencies:
   module:
+    - block_content
     - node
-    - taxonomy
-id: node.field_update_frequency
-field_name: field_update_frequency
+id: node.field_timeliness
+field_name: field_timeliness
 entity_type: node
 type: entity_reference
 settings:
-  target_type: taxonomy_term
+  target_type: block_content
 module: core
 locked: false
 cardinality: 1

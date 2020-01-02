@@ -6,8 +6,53 @@ dependencies:
     - field.field.taxonomy_term.quality.field_quality_value
     - taxonomy.vocabulary.quality
   module:
+    - field_layout
+    - layout_builder
     - options
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          c0bb816c-6797-4cbf-9c79-ff6753c47e69:
+            uuid: c0bb816c-6797-4cbf-9c79-ff6753c47e69
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:taxonomy_term:quality:description'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          f66bd291-a2e6-43c3-855c-eec110e3e67d:
+            uuid: f66bd291-a2e6-43c3-855c-eec110e3e67d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:taxonomy_term:quality:field_quality_value'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: taxonomy_term.quality.default
 targetEntityType: taxonomy_term
 bundle: quality
@@ -27,4 +72,5 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,96 @@
+uuid: f2bbabf1-b5a7-4068-974d-809b94abaad5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.archival_information
+    - field.field.block_content.archival_information.field_earliest_record
+    - field.field.block_content.archival_information.field_latest_record
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - yearonly
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          52f18b8a-cfcd-4992-9df7-bfe5059faeef:
+            uuid: 52f18b8a-cfcd-4992-9df7-bfe5059faeef
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:archival_information:field_earliest_record'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: yearonly_default
+            additional: {  }
+            weight: 1
+          06c010eb-6e40-4b33-b7c6-cfc4b778a822:
+            uuid: 06c010eb-6e40-4b33-b7c6-cfc4b778a822
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:archival_information:field_latest_record'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: yearonly_default
+            additional: {  }
+            weight: 2
+          2366640d-38c2-4470-ade8-73609fc5874c:
+            uuid: 2366640d-38c2-4470-ade8-73609fc5874c
+            region: content
+            configuration:
+              id: 'field_block:block_content:archival_information:type'
+              label: 'Block type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: block_content.archival_information.default
+targetEntityType: block_content
+bundle: archival_information
+mode: default
+content:
+  field_earliest_record:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: yearonly_default
+    region: content
+  field_latest_record:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: yearonly_default
+    region: content
+hidden:
+  search_api_excerpt: true

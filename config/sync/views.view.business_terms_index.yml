@@ -12,7 +12,6 @@ dependencies:
     - node
     - search_api
     - text
-    - views_bootstrap
 id: business_terms_index
 label: 'Business terms index'
 module: views
@@ -20,7 +19,6 @@ description: ''
 tag: ''
 base_table: search_api_index_business_terms
 base_field: search_api_id
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -71,9 +69,17 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: views_bootstrap_table
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
-        type: fields
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              business_term: card
       fields:
         business_term_title:
           table: search_api_index_business_terms
@@ -453,8 +459,11 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              content_editor: '0'
               administrator: '0'
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

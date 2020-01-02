@@ -1,0 +1,23 @@
+uuid: ee673f9c-eee1-4013-ac7f-411c3325a49b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.liveness_information
+    - field.storage.block_content.field_update_rolling
+id: block_content.liveness_information.field_update_rolling
+field_name: field_update_rolling
+entity_type: block_content
+bundle: liveness_information
+label: 'Rolling updates'
+description: 'Is the time interval the dataset updated rolling?'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

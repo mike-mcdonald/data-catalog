@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Accessibility levels'
 vid: accessibility_levels
 description: ''
-hierarchy: 0
 weight: 0
