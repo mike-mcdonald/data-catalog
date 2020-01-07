@@ -31,3 +31,6 @@
 
 # Ignore temporary file store
 /tmp/
+
+# Ignore private security information
+/.certs/
