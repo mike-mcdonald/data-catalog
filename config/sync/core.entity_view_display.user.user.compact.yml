@@ -11,6 +11,8 @@ dependencies:
     - image
     - layout_builder
     - user
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol

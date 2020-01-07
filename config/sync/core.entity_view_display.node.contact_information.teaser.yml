@@ -10,9 +10,10 @@ dependencies:
   module:
     - field_layout
     - layout_builder
-    - layout_discovery
     - telephone
     - user
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol

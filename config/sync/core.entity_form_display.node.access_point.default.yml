@@ -12,10 +12,11 @@ dependencies:
   module:
     - cshs
     - field_layout
-    - layout_discovery
     - link
     - path
     - select2
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol

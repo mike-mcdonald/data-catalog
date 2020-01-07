@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.business_term.title
     - core.entity_view_mode.node.card
     - field.field.node.business_term.body
     - field.field.node.business_term.field_data_custodian
@@ -14,6 +15,8 @@ dependencies:
     - layout_builder
     - text
     - user
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol

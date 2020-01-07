@@ -24,8 +24,9 @@ dependencies:
     - cshs
     - field_layout
     - inline_entity_form
-    - layout_discovery
     - select2
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol

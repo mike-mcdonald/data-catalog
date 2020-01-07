@@ -1,4 +1,4 @@
-uuid: 96a73972-4900-44de-8db3-1377be9c21bf
+uuid: b0298a73-b25f-416d-8302-b5b6e2af9077
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ dependencies:
     - system
   theme:
     - rain
-id: facet_full_content_type
+id: rain_facet_full_content_type
 theme: rain
-region: left_sidebar
-weight: -9
+region: right_sidebar
+weight: 0
 provider: null
 plugin: 'facet_block:full_content_type'
 settings:
@@ -20,7 +20,7 @@ settings:
   label: 'Content by type'
   provider: facets
   label_display: visible
-  block_id: facet_full_content_type
+  block_id: rain_facet_full_content_type
 visibility:
   request_path:
     id: request_path

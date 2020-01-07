@@ -8,12 +8,14 @@ dependencies:
     - node.type.contact_information
   module:
     - field_layout
-    - layout_discovery
     - telephone
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 id: node.contact_information.default
 targetEntityType: node
 bundle: contact_information

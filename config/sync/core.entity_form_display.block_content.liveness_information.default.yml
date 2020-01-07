@@ -9,11 +9,13 @@ dependencies:
     - field.field.block_content.liveness_information.field_update_rolling
   module:
     - field_layout
-    - layout_discovery
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 id: block_content.liveness_information.default
 targetEntityType: block_content
 bundle: liveness_information

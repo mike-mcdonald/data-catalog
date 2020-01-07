@@ -6,13 +6,15 @@ dependencies:
     - taxonomy.vocabulary.subject_area
   module:
     - field_layout
-    - layout_discovery
     - path
     - text
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 id: taxonomy_term.subject_area.default
 targetEntityType: taxonomy_term
 bundle: subject_area
@@ -39,5 +41,12 @@ content:
     weight: 30
     region: content
     settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
     third_party_settings: {  }
 hidden: {  }

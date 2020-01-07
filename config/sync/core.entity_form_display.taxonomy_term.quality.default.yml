@@ -7,11 +7,13 @@ dependencies:
     - taxonomy.vocabulary.quality
   module:
     - field_layout
-    - layout_discovery
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 id: taxonomy_term.quality.default
 targetEntityType: taxonomy_term
 bundle: quality
@@ -30,6 +32,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
     third_party_settings: {  }
 hidden:
   description: true

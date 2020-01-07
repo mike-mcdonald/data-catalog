@@ -10,6 +10,8 @@ dependencies:
     - layout_builder
     - options
     - text
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol

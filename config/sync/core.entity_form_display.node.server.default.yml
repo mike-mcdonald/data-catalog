@@ -7,8 +7,9 @@ dependencies:
     - node.type.server
   module:
     - field_layout
-    - layout_discovery
     - path
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol

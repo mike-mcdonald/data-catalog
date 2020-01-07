@@ -8,12 +8,14 @@ dependencies:
     - field.field.block_content.archival_information.field_latest_record
   module:
     - field_layout
-    - layout_discovery
     - yearonly
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 id: block_content.archival_information.default
 targetEntityType: block_content
 bundle: archival_information

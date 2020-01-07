@@ -26,8 +26,9 @@ dependencies:
     - cshs
     - field_layout
     - layout_builder
-    - layout_discovery
     - user
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol
