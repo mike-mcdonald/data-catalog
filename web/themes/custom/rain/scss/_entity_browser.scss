@@ -2,7 +2,7 @@
  * @file
  * Styles for lists of entities display using FieldWidgetDisplayInterface plugins.
  */
-
+/*! purgecss start ignore */
 .entities-list .item-container {
   @apply flex items-center px-2 py-1 m-0;
 }
@@ -23,3 +23,4 @@
 .entities-list.hidden {
   @apply hidden;
 }
+/*! purgecss end ignore */

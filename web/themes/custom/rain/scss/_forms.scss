@@ -1,4 +1,6 @@
-.container-inline div, .container-inline label {
+/*! purgecss start ignore */
+.container-inline div,
+.container-inline label {
   display: inline-flex;
 }
 
@@ -9,3 +11,4 @@
 .field-ui-overview .field-plugin-settings-editing .field-plugin-type + * {
   @apply hidden;
 }
+/*! purgecss end ignore */

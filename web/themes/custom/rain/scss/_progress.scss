@@ -2,7 +2,7 @@
  * @file
  * Progress behavior.
  */
-
+/*! purgecss start ignore */
 .progress {
   @apply relative;
 }
@@ -12,3 +12,4 @@
 .progress__bar {
   @apply bg-green;
 }
+/*! purgecss end ignore */

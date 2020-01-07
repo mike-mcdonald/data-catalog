@@ -1,3 +1,4 @@
+/*! purgecss start ignore */
 .views-display-columns {
   @apply flex flex-row -mx-3;
   .views-display-column {
@@ -11,3 +12,4 @@
     @apply border-black border-b-2;
   }
 }
+/*! purgecss end ignore */
