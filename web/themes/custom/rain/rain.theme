@@ -235,5 +235,15 @@ function rain_preprocess_facets_item_list(array &$variables) {
     else {
       $item['value']['#attributes']['class'] = $link_classes;
     }
+
+    if(isset($item['value']['#is_child'])) {
+      $item['value']['#attributes']['class'] = array_merge($item['value']['#attributes']['class'], ['border-l-8']);
+    }
+
+    if(isset($item['value']['children'])) {
+      foreach($item['value']['children']['#items'] as &$child) {
+        $child['#is_child'] = true;
+      }
+    }
   }
 }
