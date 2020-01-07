@@ -1,20 +1,24 @@
 {% embed "block.html.twig" with {
+  'block_classes': [
+    'my-2',
+  ],
   'content_classes':[
     'flex',
     'flex-wrap',
+    '-mx-2',
   ]
 } %}
-{#
-/**
- * @file
- * Theme override for local actions (primary admin actions.)
- */
-#}
-{% block content %}
-  {% if content %}
-    <nav{{ create_attribute({ 'class': content_classes }) }}>
-      {{ content }}
-    </nav>
-  {% endif %}
-{% endblock %}
+  {#
+    /**
+     * @file
+     * Theme override for local actions (primary admin actions.)
+     */
+    #}
+  {% block content %}
+    {% if content %}
+      <nav{{create_attribute({'class':content_classes})}}>
+        {{ content }}
+      </nav>
+    {% endif %}
+  {% endblock %}
 {% endembed %}
