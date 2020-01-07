@@ -41,7 +41,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: visually_hidden
                 type: entity_reference_entity_view
                 settings:
                   view_mode: card
@@ -60,7 +60,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: visually_hidden
                 type: smart_trim
                 settings:
                   trim_length: 300
