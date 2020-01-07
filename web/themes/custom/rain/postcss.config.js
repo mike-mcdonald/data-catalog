@@ -23,22 +23,23 @@ module.exports = ({ file, options, env }) => {
       }),
       options.mode === 'production'
         ? purgecss({
-            content: [
-              'templates/**/*.html.twig',
-              'js/main.bundle.js',
-              './rain.theme'
-            ],
-            extractors: [
-              {
-                extractor: TailwindExtractor,
+          content: [
+            'templates/**/*.html.twig',
+            'layouts/**/*.html.twig',
+            'js/main.bundle.js',
+            './rain.theme'
+          ],
+          extractors: [
+            {
+              extractor: TailwindExtractor,
 
-                // Specify the file extensions to include when scanning for
-                // class names.
-                extensions: ['html', 'twig', 'js', 'php', 'vue', 'theme']
-              }
-            ],
-            whitelistPatternsChildren: [/select2-container--rain$/]
-          })
+              // Specify the file extensions to include when scanning for
+              // class names.
+              extensions: ['html', 'twig', 'js', 'php', 'vue', 'theme']
+            }
+          ],
+          whitelistPatternsChildren: [/select2-container--rain$/]
+        })
         : false
     ]
   };
