@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: archival_information
-label: Archived
+label: 'Data is static'
 revision: 0
 description: ''
