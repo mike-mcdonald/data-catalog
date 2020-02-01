@@ -1,16 +1,17 @@
-uuid: d232dfb6-ed5f-41ff-8303-e4ebbb06d15c
+uuid: 98bf3b9a-fbdd-4fe5-b603-f9bcbd251071
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-    - yearonly
-id: block_content.field_latest_record
-field_name: field_latest_record
+id: block_content.field_earliest_record_year
+field_name: field_earliest_record_year
 entity_type: block_content
-type: yearonly
-settings: {  }
-module: yearonly
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
 locked: false
 cardinality: 1
 translatable: true

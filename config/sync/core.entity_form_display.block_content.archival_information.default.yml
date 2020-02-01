@@ -4,11 +4,10 @@ status: true
 dependencies:
   config:
     - block_content.type.archival_information
-    - field.field.block_content.archival_information.field_earliest_record
-    - field.field.block_content.archival_information.field_latest_record
+    - field.field.block_content.archival_information.field_earliest_record_year
+    - field.field.block_content.archival_information.field_latest_record_year
   module:
     - field_layout
-    - yearonly
   theme:
     - rain
 third_party_settings:
@@ -21,17 +20,19 @@ targetEntityType: block_content
 bundle: archival_information
 mode: default
 content:
-  field_earliest_record:
-    weight: 0
-    settings: {  }
+  field_earliest_record_year:
+    weight: 26
+    settings:
+      placeholder: XXXX
     third_party_settings: {  }
-    type: yearonly_default
+    type: number
     region: content
-  field_latest_record:
-    weight: 1
-    settings: {  }
+  field_latest_record_year:
+    weight: 27
+    settings:
+      placeholder: XXXX
     third_party_settings: {  }
-    type: yearonly_default
+    type: number
     region: content
 hidden:
   info: true

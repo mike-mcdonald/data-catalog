@@ -9,11 +9,9 @@ dependencies:
     - field.field.node.dataset.field_data_group
     - field.field.node.dataset.field_data_owner
     - field.field.node.dataset.field_demographic_information
-    - field.field.node.dataset.field_frequency_usage
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_quality_concerns
-    - field.field.node.dataset.field_quality_rating
     - field.field.node.dataset.field_security_level
     - field.field.node.dataset.field_source
     - field.field.node.dataset.field_spatial_information
@@ -86,12 +84,6 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
-  field_frequency_usage:
-    weight: 12
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_keywords:
     weight: 8
     settings:
@@ -117,17 +109,11 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_quality_rating:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_security_level:
     weight: 1
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_source:
     type: options_select
@@ -157,10 +143,10 @@ content:
       override_labels: true
       label_singular: 'timeliness entry'
       label_plural: 'timeliness entries'
-      collapsible: true
-      collapsed: true
       allow_new: true
       match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
       allow_existing: false
       allow_duplicate: false
     third_party_settings: {  }

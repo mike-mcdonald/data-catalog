@@ -10,11 +10,9 @@ dependencies:
     - field.field.node.dataset.field_data_group
     - field.field.node.dataset.field_data_owner
     - field.field.node.dataset.field_demographic_information
-    - field.field.node.dataset.field_frequency_usage
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_quality_concerns
-    - field.field.node.dataset.field_quality_rating
     - field.field.node.dataset.field_security_level
     - field.field.node.dataset.field_source
     - field.field.node.dataset.field_spatial_information
@@ -97,13 +95,11 @@ hidden:
   field_accessibility_level: true
   field_data_owner: true
   field_demographic_information: true
-  field_frequency_usage: true
   field_public_records_exempt: true
   field_quality_accuracy: true
   field_quality_completeness: true
   field_quality_concerns: true
   field_quality_consistency: true
-  field_quality_rating: true
   field_security_level: true
   field_source: true
   field_spatial_information: true

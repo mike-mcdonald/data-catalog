@@ -4,12 +4,11 @@ status: true
 dependencies:
   config:
     - block_content.type.archival_information
-    - field.field.block_content.archival_information.field_earliest_record
-    - field.field.block_content.archival_information.field_latest_record
+    - field.field.block_content.archival_information.field_earliest_record_year
+    - field.field.block_content.archival_information.field_latest_record_year
   module:
     - field_layout
     - layout_builder
-    - yearonly
   theme:
     - rain
 third_party_settings:
@@ -24,36 +23,6 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          52f18b8a-cfcd-4992-9df7-bfe5059faeef:
-            uuid: 52f18b8a-cfcd-4992-9df7-bfe5059faeef
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:block_content:archival_information:field_earliest_record'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: yearonly_default
-            additional: {  }
-            weight: 1
-          06c010eb-6e40-4b33-b7c6-cfc4b778a822:
-            uuid: 06c010eb-6e40-4b33-b7c6-cfc4b778a822
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:block_content:archival_information:field_latest_record'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: yearonly_default
-            additional: {  }
-            weight: 2
           2366640d-38c2-4470-ade8-73609fc5874c:
             uuid: 2366640d-38c2-4470-ade8-73609fc5874c
             region: content
@@ -73,25 +42,63 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          6df07345-49ab-4924-aab7-8e1af82a48e9:
+            uuid: 6df07345-49ab-4924-aab7-8e1af82a48e9
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:archival_information:field_earliest_record_year'
+              formatter:
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_integer
+            additional: {  }
+            weight: 1
+          f6eb623c-4043-491b-b02d-b07f90909360:
+            uuid: f6eb623c-4043-491b-b02d-b07f90909360
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:archival_information:field_latest_record_year'
+              formatter:
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_integer
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
 id: block_content.archival_information.default
 targetEntityType: block_content
 bundle: archival_information
 mode: default
 content:
-  field_earliest_record:
+  field_earliest_record_year:
     weight: 0
     label: above
-    settings: {  }
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
-    type: yearonly_default
+    type: number_integer
     region: content
-  field_latest_record:
+  field_latest_record_year:
     weight: 1
     label: above
-    settings: {  }
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
-    type: yearonly_default
+    type: number_integer
     region: content
 hidden:
   search_api_excerpt: true

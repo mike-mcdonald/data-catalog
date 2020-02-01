@@ -11,9 +11,7 @@ dependencies:
     - field.storage.node.field_data_group
     - field.storage.node.field_data_owner
     - field.storage.node.field_demographic_information
-    - field.storage.node.field_frequency_usage
     - field.storage.node.field_keywords
-    - field.storage.node.field_quality_rating
     - field.storage.node.field_security_level
     - field.storage.node.field_spatial_information
     - field.storage.node.field_subject_areas
@@ -65,14 +63,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_demographic_information
-  field_frequency_usage:
-    label: 'Frequency of usage'
-    datasource_id: 'entity:node'
-    property_path: field_frequency_usage
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_frequency_usage
   field_keywords:
     label: Keywords
     datasource_id: 'entity:node'
@@ -81,14 +71,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_keywords
-  field_quality_rating:
-    label: 'Quality rating'
-    datasource_id: 'entity:node'
-    property_path: field_quality_rating
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_quality_rating
   field_security_level:
     label: 'Information security regulation'
     datasource_id: 'entity:node'

@@ -9,11 +9,9 @@ dependencies:
     - field.field.node.dataset.field_data_group
     - field.field.node.dataset.field_data_owner
     - field.field.node.dataset.field_demographic_information
-    - field.field.node.dataset.field_frequency_usage
     - field.field.node.dataset.field_keywords
     - field.field.node.dataset.field_purpose
     - field.field.node.dataset.field_quality_concerns
-    - field.field.node.dataset.field_quality_rating
     - field.field.node.dataset.field_security_level
     - field.field.node.dataset.field_source
     - field.field.node.dataset.field_spatial_information
@@ -248,22 +246,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 9
-          5e5255c6-6f91-49f8-adb2-501b708b9489:
-            uuid: 5e5255c6-6f91-49f8-adb2-501b708b9489
-            region: second
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:dataset:field_frequency_usage'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 10
         third_party_settings: {  }
       -
         layout_id: layout_twocol
@@ -299,9 +281,9 @@ third_party_settings:
               label_display: '0'
               formatter:
                 label: above
-                type: entity_reference_entity_view
+                type: entity_reference_label
                 settings:
-                  view_mode: card
+                  link: true
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -351,25 +333,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          6c923190-e39d-41e1-ad94-317223cf04c2:
-            uuid: 6c923190-e39d-41e1-ad94-317223cf04c2
-            region: second
-            configuration:
-              id: 'field_block:node:dataset:field_quality_rating'
-              label: 'Quality rating'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: entity_reference_label
-                settings:
-                  link: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
         third_party_settings: {  }
     allow_custom: false
 id: node.dataset.default
@@ -412,14 +375,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_frequency_usage:
-    weight: 14
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_keywords:
     weight: 3
     label: above
@@ -435,14 +390,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-    region: content
-  field_quality_rating:
-    weight: 15
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_source:
     type: cshs_full_hierarchy

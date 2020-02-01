@@ -1,0 +1,23 @@
+uuid: 594d6aba-78c5-4dc3-90da-a0b169950e89
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.archival_information
+    - field.storage.block_content.field_earliest_record_year
+id: block_content.archival_information.field_earliest_record_year
+field_name: field_earliest_record_year
+entity_type: block_content
+bundle: archival_information
+label: 'Earliest record year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1000
+  max: 9999
+  prefix: ''
+  suffix: ''
+field_type: integer

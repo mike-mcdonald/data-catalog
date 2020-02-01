@@ -1,14 +1,16 @@
-uuid: 5555b013-b083-423f-9a5e-ce7bdc26b5ec
+uuid: b962c9d1-74a0-4e1f-bbcb-214b0a63e168
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-id: block_content.field_update_rolling
-field_name: field_update_rolling
+id: block_content.field_latest_record_year
+field_name: field_latest_record_year
 entity_type: block_content
-type: boolean
-settings: {  }
+type: integer
+settings:
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

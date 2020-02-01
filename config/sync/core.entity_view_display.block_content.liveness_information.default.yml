@@ -4,9 +4,8 @@ status: true
 dependencies:
   config:
     - block_content.type.liveness_information
+    - field.field.block_content.liveness_information.field_earliest_record_year
     - field.field.block_content.liveness_information.field_frequency_update
-    - field.field.block_content.liveness_information.field_update_lag
-    - field.field.block_content.liveness_information.field_update_rolling
   module:
     - field_layout
     - layout_builder
@@ -40,40 +39,6 @@ third_party_settings:
                 type: entity_reference_label
             additional: {  }
             weight: 1
-          9ae4b575-ebf7-41db-a95c-e9605a696031:
-            uuid: 9ae4b575-ebf7-41db-a95c-e9605a696031
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:block_content:liveness_information:field_update_lag'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 2
-          d5f77a69-0f59-4a3b-baea-b0222d049432:
-            uuid: d5f77a69-0f59-4a3b-baea-b0222d049432
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:block_content:liveness_information:field_update_rolling'
-              formatter:
-                label: above
-                settings:
-                  format: default
-                  format_custom_false: ''
-                  format_custom_true: ''
-                third_party_settings: {  }
-                type: boolean
-            additional: {  }
-            weight: 3
           5c46b5a7-1c12-4f8c-9008-55fa6b4e5224:
             uuid: 5c46b5a7-1c12-4f8c-9008-55fa6b4e5224
             region: content
@@ -93,6 +58,23 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          40d3c7b1-60d0-48ce-8687-2fff90984d39:
+            uuid: 40d3c7b1-60d0-48ce-8687-2fff90984d39
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:liveness_information:field_earliest_record_year'
+              formatter:
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_integer
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
     allow_custom: false
 id: block_content.liveness_information.default
@@ -100,6 +82,15 @@ targetEntityType: block_content
 bundle: liveness_information
 mode: default
 content:
+  field_earliest_record_year:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
   field_frequency_update:
     weight: 1
     label: above
@@ -107,24 +98,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_update_lag:
-    weight: 2
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_update_rolling:
-    weight: 3
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: content
 hidden:
   search_api_excerpt: true

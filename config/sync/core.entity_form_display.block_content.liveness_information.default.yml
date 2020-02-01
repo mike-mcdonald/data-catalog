@@ -4,9 +4,8 @@ status: true
 dependencies:
   config:
     - block_content.type.liveness_information
+    - field.field.block_content.liveness_information.field_earliest_record_year
     - field.field.block_content.liveness_information.field_frequency_update
-    - field.field.block_content.liveness_information.field_update_lag
-    - field.field.block_content.liveness_information.field_update_rolling
   module:
     - field_layout
   theme:
@@ -21,24 +20,18 @@ targetEntityType: block_content
 bundle: liveness_information
 mode: default
 content:
+  field_earliest_record_year:
+    weight: 26
+    settings:
+      placeholder: XXXX
+    third_party_settings: {  }
+    type: number
+    region: content
   field_frequency_update:
     weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_update_lag:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_update_rolling:
-    weight: 1
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
 hidden:
   info: true

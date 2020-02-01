@@ -66,17 +66,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_source
-  dataset_subject_areas_name:
-    label: 'Subject areas'
-    datasource_id: 'entity:node'
-    property_path: 'field_subject_areas:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_subject_areas
-      module:
-        - taxonomy
-        - taxonomy
   dataset_title:
     label: 'Dataset name'
     datasource_id: 'entity:node'
@@ -86,6 +75,14 @@ field_settings:
     dependencies:
       module:
         - node
+  field_subject_areas:
+    label: 'Subject areas'
+    datasource_id: 'entity:node'
+    property_path: field_subject_areas
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_subject_areas
 datasource_settings:
   'entity:node':
     bundles:
@@ -102,8 +99,10 @@ processor_settings:
     fields:
       dataset_data_group: taxonomy_term-parent
       dataset_source: taxonomy_term-parent
+      field_subject_areas: taxonomy_term-parent
     weights:
       preprocess_index: -45
+  language_with_fallback: {  }
   rendered_item: {  }
 tracker_settings:
   default:

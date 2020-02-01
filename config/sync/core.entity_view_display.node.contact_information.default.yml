@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.contact_information.field_email_address
     - field.field.node.contact_information.field_telephone_number
     - node.type.contact_information
+    - views.view.contact_content
   module:
     - field_layout
     - layout_builder
     - telephone
     - user
+    - views
   theme:
     - rain
 third_party_settings:
@@ -61,6 +63,25 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9657de25-4ad7-4380-9479-a9799ffc4d5e:
+            uuid: 9657de25-4ad7-4380-9479-a9799ffc4d5e
+            region: content
+            configuration:
+              id: 'views_block:contact_content-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
             additional: {  }
             weight: 0
         third_party_settings: {  }
