@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a27d00e96c7c0adc9cea6ac83ee47609",
+    "content-hash": "878e20c3698dc1377419d7fc81c2f8a7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1842,7 +1842,7 @@
                 },
                 "drupal": {
                     "version": "8.x-2.0",
-                    "datestamp": "1573751237",
+                    "datestamp": "1572370984",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2005,131 +2005,18 @@
             }
         },
         {
-            "name": "drupal/bootstrap",
-            "version": "3.21.0",
+            "name": "drupal/block_content_permissions",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/bootstrap.git",
-                "reference": "8.x-3.21"
+                "url": "https://git.drupalcode.org/project/block_content_permissions.git",
+                "reference": "8.x-1.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.21.zip",
-                "reference": "8.x-3.21",
-                "shasum": "e431093eb4f64712b02e691660a85cfa4fb49c88"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.21",
-                    "datestamp": "1574417581",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Carver (markcarver)",
-                    "homepage": "https://www.drupal.org/u/markcarver",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "John McCormick (neardark)",
-                    "homepage": "https://www.drupal.org/u/neardark",
-                    "role": "Co-maintainer"
-                },
-                {
-                    "name": "Fabiano Sant'Ana (wundo)",
-                    "homepage": "https://www.drupal.org/u/wundo",
-                    "role": "Co-maintainer"
-                }
-            ],
-            "description": "Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.",
-            "homepage": "https://www.drupal.org/project/bootstrap",
-            "support": {
-                "source": "http://cgit.drupalcode.org/bootstrap",
-                "docs": "https://drupal-bootstrap.org",
-                "issues": "https://www.drupal.org/project/issues/bootstrap",
-                "irc": "irc://irc.freenode.org/drupal-bootstrap"
-            }
-        },
-        {
-            "name": "drupal/bootstrap_barrio",
-            "version": "4.22.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
-                "reference": "8.x-4.22"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.22.zip",
-                "reference": "8.x-4.22",
-                "shasum": "93613bd20cd59997d60d6ce036384d46dfb3fce2"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-4.22",
-                    "datestamp": "1551325387",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Alberto Siles",
-                    "homepage": "https://www.drupal.org/user/2824325",
-                    "email": "alberto@siles.pe"
-                },
-                {
-                    "name": "hatuhay",
-                    "homepage": "https://www.drupal.org/user/827704"
-                }
-            ],
-            "description": "Bootstrap 4 base theme.",
-            "homepage": "https://www.drupal.org/project/bootstrap_barrio",
-            "support": {
-                "source": "https://git.drupalcode.org/project/bootstrap_barrio"
-            }
-        },
-        {
-            "name": "drupal/bootstrap_layouts",
-            "version": "5.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/bootstrap_layouts.git",
-                "reference": "8.x-5.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_layouts-8.x-5.1.zip",
-                "reference": "8.x-5.1",
-                "shasum": "b304b1c9d0ea30646e6dff7aa32405a21a11d49f"
+                "url": "https://ftp.drupal.org/files/projects/block_content_permissions-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "15c2bff3b16082d7c0c82b747472af2b956e278f"
             },
             "require": {
                 "drupal/core": "*"
@@ -2137,11 +2024,11 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-5.x": "5.x-dev"
+                    "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.1",
-                    "datestamp": "1516598286",
+                    "version": "8.x-1.8",
+                    "datestamp": "1576687384",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2154,70 +2041,14 @@
             ],
             "authors": [
                 {
-                    "name": "darol100",
-                    "homepage": "https://www.drupal.org/user/2667123"
-                },
-                {
-                    "name": "hctom",
-                    "homepage": "https://www.drupal.org/user/112790"
-                },
-                {
-                    "name": "markcarver",
-                    "homepage": "https://www.drupal.org/user/501638"
+                    "name": "joshua.roberson",
+                    "homepage": "https://www.drupal.org/user/2999235"
                 }
             ],
-            "description": "This module is going to generate layouts with Bootstrap grid system.",
-            "homepage": "https://www.drupal.org/project/bootstrap_layouts",
+            "description": "Adds specific permissions for administering block content and block content types.",
+            "homepage": "https://www.drupal.org/project/block_content_permissions",
             "support": {
-                "source": "https://git.drupalcode.org/project/bootstrap_layouts"
-            }
-        },
-        {
-            "name": "drupal/bootstrap_library",
-            "version": "1.11.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/bootstrap_library.git",
-                "reference": "8.x-1.11"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_library-8.x-1.11.zip",
-                "reference": "8.x-1.11",
-                "shasum": "af90c93e08223bff8359f5a6789d1cd5cc6ffe70"
-            },
-            "require": {
-                "drupal/core": "~8.0",
-                "twbs/bootstrap": "4.1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.11",
-                    "datestamp": "1525127580",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "hatuhay",
-                    "homepage": "https://www.drupal.org/user/827704"
-                }
-            ],
-            "description": "Provides Bootstrap Integration.",
-            "homepage": "http://drupal.org/project/bootstrap_library",
-            "support": {
-                "source": "https://git.drupalcode.org/project/bootstrap_library"
+                "source": "https://git.drupalcode.org/project/block_content_permissions"
             }
         },
         {
@@ -2843,7 +2674,55 @@
             "description": "A simple client-side hierarchical select widget for taxonomy terms.",
             "homepage": "https://www.drupal.org/project/cshs",
             "support": {
-                "source": "https://git.drupalcode.org/project/cshs"
+                "source": "http://cgit.drupalcode.org/cshs"
+            }
+        },
+        {
+            "name": "drupal/csv_serialization",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/csv_serialization.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/csv_serialization-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "74cfc47c5c8a907f40112ec4819fe108f2775ef1"
+            },
+            "require": {
+                "drupal/core": "^8.0.4",
+                "league/csv": "^8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1531841921",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "grasmash",
+                    "homepage": "https://www.drupal.org/user/455714"
+                }
+            ],
+            "description": "Provides CSV as a serialization format.",
+            "homepage": "https://www.drupal.org/project/csv_serialization",
+            "support": {
+                "source": "https://git.drupalcode.org/project/csv_serialization"
             }
         },
         {
@@ -2984,20 +2863,12 @@
                     "homepage": "https://www.drupal.org/user/3326031"
                 },
                 {
-                    "name": "banoodle",
-                    "homepage": "https://www.drupal.org/user/2375050"
-                },
-                {
                     "name": "diamondsea",
                     "homepage": "https://www.drupal.org/user/430714"
                 },
                 {
                     "name": "hmartens",
                     "homepage": "https://www.drupal.org/user/622826"
-                },
-                {
-                    "name": "jasonsavino",
-                    "homepage": "https://www.drupal.org/user/411241"
                 },
                 {
                     "name": "loopduplicate",
@@ -3296,7 +3167,7 @@
             "description": "Provides the field_group module.",
             "homepage": "https://www.drupal.org/project/field_group",
             "support": {
-                "source": "https://git.drupalcode.org/project/field_group"
+                "source": "http://cgit.drupalcode.org/field_group"
             }
         },
         {
@@ -4103,6 +3974,74 @@
             }
         },
         {
+            "name": "drupal/views_data_export",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_data_export.git",
+                "reference": "8.x-1.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_data_export-8.x-1.0-beta3.zip",
+                "reference": "8.x-1.0-beta3",
+                "shasum": "4a6f5660e6d6258edee61b59c89d8dee01c9fcca"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/csv_serialization": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1569365482",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steven Jones",
+                    "homepage": "https://www.drupal.org/user/99644"
+                },
+                {
+                    "name": "amoebanath",
+                    "homepage": "https://www.drupal.org/user/2810799"
+                },
+                {
+                    "name": "james.williams",
+                    "homepage": "https://www.drupal.org/user/592268"
+                },
+                {
+                    "name": "jamsilver",
+                    "homepage": "https://www.drupal.org/user/476732"
+                },
+                {
+                    "name": "jhedstrom",
+                    "homepage": "https://www.drupal.org/user/208732"
+                },
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                }
+            ],
+            "description": "Plugin to export views data into various file formats.",
+            "homepage": "https://www.drupal.org/project/views_data_export",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_data_export"
+            }
+        },
+        {
             "name": "drupal/yearonly",
             "version": "1.3.0",
             "source": {
@@ -4852,6 +4791,63 @@
                 "service"
             ],
             "time": "2017-05-10T09:20:27+00:00"
+        },
+        {
+            "name": "league/csv",
+            "version": "8.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/csv.git",
+                "reference": "d2aab1e7bde802582c3879acf03d92716577c76d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/d2aab1e7bde802582c3879acf03d92716577c76d",
+                "reference": "d2aab1e7bde802582c3879acf03d92716577c76d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Csv\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://github.com/nyamsprod/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Csv data manipulation made easy in PHP",
+            "homepage": "http://csv.thephpleague.com",
+            "keywords": [
+                "csv",
+                "export",
+                "filter",
+                "import",
+                "read",
+                "write"
+            ],
+            "time": "2018-02-06T08:27:03+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -7386,57 +7382,6 @@
             "time": "2019-10-24T15:33:53+00:00"
         },
         {
-            "name": "twbs/bootstrap",
-            "version": "v4.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "8f7bd419935adfcd53c471a0202083464800619e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/8f7bd419935adfcd53c471a0202083464800619e",
-                "reference": "8f7bd419935adfcd53c471a0202083464800619e",
-                "shasum": ""
-            },
-            "replace": {
-                "twitter/bootstrap": "self.version"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jacob Thornton",
-                    "email": "jacobthornton@gmail.com"
-                },
-                {
-                    "name": "Mark Otto",
-                    "email": "markdotto@gmail.com"
-                }
-            ],
-            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-            "homepage": "https://getbootstrap.com/",
-            "keywords": [
-                "JS",
-                "css",
-                "framework",
-                "front-end",
-                "mobile-first",
-                "responsive",
-                "sass",
-                "web"
-            ],
-            "time": "2018-04-09T16:00:23+00:00"
-        },
-        {
             "name": "twig/twig",
             "version": "v1.42.3",
             "source": {
@@ -8131,16 +8076,16 @@
         },
         {
             "name": "behat/mink-selenium2-driver",
-            "version": "1.3.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/MinkSelenium2Driver.git",
-                "reference": "0a09c4341621fca937a726827611b20ce3e2c259"
+                "reference": "f4efaf52fed6a98bf6037a04f3fdef94dc0c8841"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/0a09c4341621fca937a726827611b20ce3e2c259",
-                "reference": "0a09c4341621fca937a726827611b20ce3e2c259",
+                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/f4efaf52fed6a98bf6037a04f3fdef94dc0c8841",
+                "reference": "f4efaf52fed6a98bf6037a04f3fdef94dc0c8841",
                 "shasum": ""
             },
             "require": {
@@ -8168,14 +8113,14 @@
             ],
             "authors": [
                 {
-                    "name": "Pete Otaqui",
-                    "email": "pete@otaqui.com",
-                    "homepage": "https://github.com/pete-otaqui"
-                },
-                {
                     "name": "Konstantin Kudryashov",
                     "email": "ever.zet@gmail.com",
                     "homepage": "http://everzet.com"
+                },
+                {
+                    "name": "Pete Otaqui",
+                    "email": "pete@otaqui.com",
+                    "homepage": "https://github.com/pete-otaqui"
                 }
             ],
             "description": "Selenium2 (WebDriver) driver for Mink framework",
@@ -8188,7 +8133,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2019-09-02T09:46:54+00:00"
+            "time": "2018-07-23T10:51:47+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -8485,6 +8430,222 @@
                 "instantiate"
             ],
             "time": "2019-10-21T16:45:58+00:00"
+        },
+        {
+            "name": "drupal/bootstrap",
+            "version": "3.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap.git",
+                "reference": "8.x-3.21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.21.zip",
+                "reference": "8.x-3.21",
+                "shasum": "e431093eb4f64712b02e691660a85cfa4fb49c88"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.21",
+                    "datestamp": "1574417581",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Carver (markcarver)",
+                    "homepage": "https://www.drupal.org/u/markcarver",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "John McCormick (neardark)",
+                    "homepage": "https://www.drupal.org/u/neardark",
+                    "role": "Co-maintainer"
+                },
+                {
+                    "name": "Fabiano Sant'Ana (wundo)",
+                    "homepage": "https://www.drupal.org/u/wundo",
+                    "role": "Co-maintainer"
+                }
+            ],
+            "description": "Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.",
+            "homepage": "https://www.drupal.org/project/bootstrap",
+            "support": {
+                "source": "http://cgit.drupalcode.org/bootstrap",
+                "docs": "https://drupal-bootstrap.org",
+                "issues": "https://www.drupal.org/project/issues/bootstrap",
+                "irc": "irc://irc.freenode.org/drupal-bootstrap"
+            }
+        },
+        {
+            "name": "drupal/bootstrap_barrio",
+            "version": "4.22.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
+                "reference": "8.x-4.22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.22.zip",
+                "reference": "8.x-4.22",
+                "shasum": "93613bd20cd59997d60d6ce036384d46dfb3fce2"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.22",
+                    "datestamp": "1551325387",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alberto Siles",
+                    "homepage": "https://www.drupal.org/user/2824325",
+                    "email": "alberto@siles.pe"
+                },
+                {
+                    "name": "hatuhay",
+                    "homepage": "https://www.drupal.org/user/827704"
+                }
+            ],
+            "description": "Bootstrap 4 base theme.",
+            "homepage": "https://www.drupal.org/project/bootstrap_barrio",
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap_barrio"
+            }
+        },
+        {
+            "name": "drupal/bootstrap_layouts",
+            "version": "5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_layouts.git",
+                "reference": "8.x-5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_layouts-8.x-5.1.zip",
+                "reference": "8.x-5.1",
+                "shasum": "b304b1c9d0ea30646e6dff7aa32405a21a11d49f"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-5.x": "5.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-5.1",
+                    "datestamp": "1516598286",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "darol100",
+                    "homepage": "https://www.drupal.org/user/2667123"
+                },
+                {
+                    "name": "hctom",
+                    "homepage": "https://www.drupal.org/user/112790"
+                },
+                {
+                    "name": "markcarver",
+                    "homepage": "https://www.drupal.org/user/501638"
+                }
+            ],
+            "description": "This module is going to generate layouts with Bootstrap grid system.",
+            "homepage": "https://www.drupal.org/project/bootstrap_layouts",
+            "support": {
+                "source": "http://cgit.drupalcode.org/bootstrap_layouts"
+            }
+        },
+        {
+            "name": "drupal/bootstrap_library",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_library.git",
+                "reference": "8.x-1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_library-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "af90c93e08223bff8359f5a6789d1cd5cc6ffe70"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "twbs/bootstrap": "4.1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.11",
+                    "datestamp": "1525127580",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "hatuhay",
+                    "homepage": "https://www.drupal.org/user/827704"
+                }
+            ],
+            "description": "Provides Bootstrap Integration.",
+            "homepage": "http://drupal.org/project/bootstrap_library",
+            "support": {
+                "source": "http://cgit.drupalcode.org/bootstrap_library"
+            }
         },
         {
             "name": "drupal/coder",
@@ -10631,6 +10792,57 @@
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "time": "2019-06-13T22:48:21+00:00"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "8f7bd419935adfcd53c471a0202083464800619e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/8f7bd419935adfcd53c471a0202083464800619e",
+                "reference": "8f7bd419935adfcd53c471a0202083464800619e",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "https://getbootstrap.com/",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "time": "2018-04-09T16:00:23+00:00"
         }
     ],
     "aliases": [],
@@ -10640,7 +10852,8 @@
         "drupal/inline_entity_form": 5,
         "drupal/maxlength": 10,
         "drupal/openid_connect": 10,
-        "drupal/select2": 10
+        "drupal/select2": 10,
+        "drupal/views_data_export": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
