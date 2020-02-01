@@ -1,4 +1,4 @@
-uuid: 20b69b68-5bd2-44e0-a4dc-5d35c9f3ddd9
+uuid: 52fcd581-3763-4d1d-b6f7-3ed194cc11a4
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ dependencies:
     - system
   theme:
     - rain
-id: rain_facet_dataset_subject_areas
+id: rain_facet_dataset_subject_area
 theme: rain
 region: right_sidebar
-weight: -6
+weight: -5
 provider: null
 plugin: 'facet_block:dataset_subject_areas'
 settings:

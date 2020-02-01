@@ -12,7 +12,7 @@ dependencies:
 id: rain_facet_business_term_keywords
 theme: rain
 region: right_sidebar
-weight: -8
+weight: -7
 provider: null
 plugin: 'facet_block:business_term_keywords'
 settings:
