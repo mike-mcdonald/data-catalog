@@ -10,4 +10,6 @@ weight: -9
 is_admin: false
 permissions:
   - 'access content'
+  - 'access user profiles'
+  - 'change own username'
   - 'use text format basic_html'
