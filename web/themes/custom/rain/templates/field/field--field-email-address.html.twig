@@ -1,13 +1,10 @@
 {% embed 'field.html.twig' with {
-  'margin': 2,
-  'classes': [
-    'block'
-  ],
+  'margin': 0,
   'item_classes': [
     'p-2',
     'bg-cyan',
     'text-white',
-    'border-2',
+    'border',
     'border-cyan-darker',
     'rounded',
   ],
@@ -15,9 +12,11 @@
 	{% spaceless %}
 		{% block content %}
 			{%- for item in items if item.content|render|striptags|trim is not empty -%}
-				<a{{item.attributes.addClass(item_classes)}} href="mailto:{{ item.content['#title'] }}">
-					{% include active_theme_path() ~ '/icons/send.svg' %}
-					<span class="ml-2">{{ item.content['#title'] }}</span>
+				<a{{item.attributes.addClass(['border-0', 'flex'])}} href="mailto:{{ item.content['#title'] }}">
+					<span{{ create_attribute().addClass(item_classes) }}>
+            {% include active_theme_path() ~ '/icons/send.svg' %}
+					  <span class="ml-2">{{ item.content['#title'] }}</span>
+          </span>
 				</a>
 			{%- endfor -%}
 		{% endblock %}
