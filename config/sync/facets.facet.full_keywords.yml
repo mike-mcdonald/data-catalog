@@ -1,4 +1,4 @@
-uuid: 6ddb1be9-5fd7-47ed-a979-51d1ddea69e8
+uuid: 49c698f2-1337-4caa-b41d-4c8c71f69744
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
     - views.view.full_index
   module:
     - search_api
-id: full_content_type
-name: 'Full content type'
-url_alias: full_content_type
+id: full_keywords
+name: 'Full keywords'
+url_alias: full_keywords
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: type
+field_identifier: field_keywords
 facet_source_id: 'search_api:views_page__full_index__page_1'
 widget:
   type: links
@@ -32,7 +32,7 @@ expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0
 exclude: false
-only_visible_when_facet_source_is_visible: false
+only_visible_when_facet_source_is_visible: true
 processor_configs:
   active_widget_order:
     processor_id: active_widget_order
@@ -40,6 +40,13 @@ processor_configs:
       sort: 20
     settings:
       sort: ASC
+  count_limit:
+    processor_id: count_limit
+    weights:
+      build: 50
+    settings:
+      minimum_items: 2
+      maximum_items: null
   count_widget_order:
     processor_id: count_widget_order
     weights:
@@ -52,8 +59,8 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
-  list_item:
-    processor_id: list_item
+  translate_entity:
+    processor_id: translate_entity
     weights:
       build: 5
     settings: {  }

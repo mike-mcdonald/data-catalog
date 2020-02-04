@@ -1,4 +1,4 @@
-uuid: 6ddb1be9-5fd7-47ed-a979-51d1ddea69e8
+uuid: b25d4dc6-ebc7-4a99-8d47-44482139f8c3
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
     - views.view.full_index
   module:
     - search_api
-id: full_content_type
-name: 'Full content type'
-url_alias: full_content_type
+id: full_subject_areas
+name: 'Full subject areas'
+url_alias: full_subject_areas
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: type
+field_identifier: field_subject_areas
 facet_source_id: 'search_api:views_page__full_index__page_1'
 widget:
   type: links
@@ -27,12 +27,12 @@ widget:
     reset_text: 'Show all'
     hide_reset_when_no_selection: false
 query_operator: or
-use_hierarchy: false
+use_hierarchy: true
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0
 exclude: false
-only_visible_when_facet_source_is_visible: false
+only_visible_when_facet_source_is_visible: true
 processor_configs:
   active_widget_order:
     processor_id: active_widget_order
@@ -52,8 +52,8 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
-  list_item:
-    processor_id: list_item
+  translate_entity:
+    processor_id: translate_entity
     weights:
       build: 5
     settings: {  }

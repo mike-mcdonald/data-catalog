@@ -220,6 +220,10 @@ display:
     display_options:
       display_extenders: {  }
       path: search
+      cache:
+        type: none
+      defaults:
+        cache: false
     cache_metadata:
       max-age: -1
       contexts:
