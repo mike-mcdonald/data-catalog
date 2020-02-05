@@ -125,7 +125,8 @@
         "3076096 - PostgreSQL: Operator does not exist: character varying <> bigint": "https://www.drupal.org/files/issues/2019-08-20/operator-does-not-exist-3076096-2.patch"
       },
       "drupal/inline_entity_form": {
-        "2927884 - Remove revision log messages from entities other than nodes": "https://www.drupal.org/files/issues/2019-07-16/inline_entity_form-remove_log_message-2927884-6.patch"
+        "2927884 - Remove revision log messages from entities other than nodes": "https://www.drupal.org/files/issues/2019-07-16/inline_entity_form-remove_log_message-2927884-6.patch",
+        "Replace tokens in description": "patches/inline-entity-form-token-replace.patch"
       }
     }
   }
