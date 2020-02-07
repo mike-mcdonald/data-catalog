@@ -311,13 +311,13 @@ third_party_settings:
             weight: 1
         third_party_settings: {  }
       -
-        layout_id: layout_twocol
+        layout_id: layout_onecol
         layout_settings:
           label: ''
         components:
-          c174e884-13ee-42c4-8579-0c2b8fbe965c:
-            uuid: c174e884-13ee-42c4-8579-0c2b8fbe965c
-            region: first
+          15ba8775-8f21-4de6-bfdf-a7655e3faee3:
+            uuid: 15ba8775-8f21-4de6-bfdf-a7655e3faee3
+            region: content
             configuration:
               id: 'field_block:node:dataset:field_quality_concerns'
               label: 'Quality concerns'
