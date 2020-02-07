@@ -13,9 +13,8 @@
 {%
   set form_classes = form_classes|default([
     'my-3',
-    '-mx-2',
   ])
 %}
 <form{{attributes.addClass(form_classes)}}>
-	{{ children }}
+  {{ children }}
 </form>

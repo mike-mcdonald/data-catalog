@@ -12,7 +12,6 @@
 #}
 {%
   set layout_classes = layout_classes|default([
-    'md:-mx-2',
   ])
 %}
 {%
@@ -20,7 +19,7 @@
   ])
 %}
 {% if content %}
-<div{{attributes.addClass(layout_classes).addClass(region_classes)}}>
-	{{ content.content }}
-</div>
+  <div{{attributes.addClass(layout_classes).addClass(region_classes)}}>
+    {{ content.content }}
+  </div>
 {% endif %}

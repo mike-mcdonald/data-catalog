@@ -15,8 +15,9 @@
  */
 #}
 {% set anchor_classes = anchor_classes|default([
-  'm-2',
+  'my-2',
 ]) %}
-<a{{attributes.addClass(anchor_classes)}} href="{{url}}">
-	{{ text }}
+<a{{attributes.addClass(anchor_classes)}}
+  href="{{url}}">
+  {{ text }}
 </a>
