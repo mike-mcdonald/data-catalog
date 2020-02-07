@@ -7,5 +7,7 @@ label: 'User admin'
 weight: -6
 is_admin: null
 permissions:
+  - 'access toolbar'
   - 'administer nodes'
+  - 'administer permissions'
   - 'administer users'

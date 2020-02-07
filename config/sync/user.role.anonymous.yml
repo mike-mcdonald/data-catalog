@@ -10,4 +10,6 @@ weight: -10
 is_admin: false
 permissions:
   - 'access content'
+  - 'create archival_information block content'
+  - 'create liveness_information block content'
   - 'use text format restricted_html'
