@@ -19,29 +19,30 @@
     'flex-col',
     'md:flex-row',
     'flex-wrap',
-    'md:-mx-3',
   ])
 %}
 {%
   set region_classes = region_classes|default([
     'md:w-1/3',
-    'md:px-3',
   ])
 %}
 {% if content %}
   <div{{attributes.addClass(layout_classes)}}>
     {% if content.first %}
-      <section {{ region_attributes.first.addClass(region_classes) }}>
+      <section
+        {{ region_attributes.first.addClass(region_classes) }}>
         {{ content.first }}
       </section>
     {% endif %}
     {% if content.second %}
-      <section {{ region_attributes.second.addClass(region_classes) }}>
+      <section
+        {{ region_attributes.second.addClass(region_classes) }}>
         {{ content.second }}
       </section>
     {% endif %}
     {% if content.third %}
-      <section {{ region_attributes.third.addClass(region_classes) }}>
+      <section
+        {{ region_attributes.third.addClass(region_classes) }}>
         {{ content.third }}
       </section>
     {% endif %}

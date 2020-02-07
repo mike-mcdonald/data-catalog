@@ -16,7 +16,6 @@
     'flex-col',
     'md:flex-row',
     'flex-wrap',
-    'md:-mx-2',
   ])
 %}
 {%
@@ -25,16 +24,18 @@
   ])
 %}
 {% if content %}
-	<div{{attributes.addClass(layout_classes)}}>
-		{% if content.first %}
-			<div {{ region_attributes.first.addClass(region_classes) }}>
-				{{ content.first }}
-			</div>
-		{% endif %}
-		{% if content.second %}
-			<div {{ region_attributes.second.addClass(region_classes) }}>
-				{{ content.second }}
-			</div>
-		{% endif %}
-	</div>
+  <div{{attributes.addClass(layout_classes)}}>
+    {% if content.first %}
+      <div
+        {{ region_attributes.first.addClass(region_classes) }}>
+        {{ content.first }}
+      </div>
+    {% endif %}
+    {% if content.second %}
+      <div
+        {{ region_attributes.second.addClass(region_classes) }}>
+        {{ content.second }}
+      </div>
+    {% endif %}
+  </div>
 {% endif %}
