@@ -1,26 +1,26 @@
-uuid: a8770c72-867c-4e5c-9475-801c29178161
+uuid: 6ee22b7a-e509-4a91-93d6-3217324d4c38
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.full_keywords
+    - facets.facet.full_division_group
   module:
     - facets
     - system
   theme:
     - rain
-id: rain_facet_full_keywords
+id: rain_facet_full_division_group
 theme: rain
 region: right_sidebar
-weight: -4
+weight: -5
 provider: null
-plugin: 'facet_block:full_keywords'
+plugin: 'facet_block:full_division_group'
 settings:
-  id: 'facet_block:full_keywords'
-  label: 'Content by keyword'
+  id: 'facet_block:full_division_group'
+  label: 'Content by division/group'
   provider: facets
   label_display: visible
-  block_id: fullkeywords
+  block_id: fulldivisiongroup
 visibility:
   request_path:
     id: request_path

@@ -12,7 +12,7 @@ dependencies:
 id: rain_facet_full_content_type
 theme: rain
 region: right_sidebar
-weight: -4
+weight: -7
 provider: null
 plugin: 'facet_block:full_content_type'
 settings:

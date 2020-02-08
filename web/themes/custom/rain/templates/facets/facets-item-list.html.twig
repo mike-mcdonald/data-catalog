@@ -25,36 +25,62 @@
  */
 #}
 
-{%
-  set list_classes = list_classes|default([
-    'flex',
-    'flex-col',
-  ])
-%}
-
-{% if facet.widget.type %}
-  {%- set attributes = attributes.addClass('item-list__' ~ facet.widget.type) %}
+{% if facet.widget.type == 'links' or facet.widget.type is empty %}
+  {%
+    set list_classes = [
+      'flex',
+      'flex-col',
+      'list-reset'
+    ]
+  %}
 {% endif %}
-{% if items or empty %}
-  {%- if title is not empty -%}
-    <h3>{{ title }}</h3>
-  {%- endif -%}
 
-  {%- if items -%}
-    <div{{ attributes.addClass(list_classes) }}>
-      {%- for item in items -%}
-        {%
-          set item_classes = [
-            'p-3',
-            not loop.last ? 'border-b',
-            'hover:bg-fog-lighter',
-          ]
-        %}
-        {{ item.value }}
-      {%- endfor -%}
-    </div>
-  {%- else -%}
-    {{- empty -}}
-  {%- endif -%}
-{%- endif %}
 
+{% if facet.widget.type == 'dropdown' %}
+  {%
+    set list_classes = [
+      'bg-grey-lightest',
+      'block',
+      'border',
+      'border-grey',
+      'rounded',
+      'w-full',
+      'py-2',
+      'px-4',
+      'leading-tight',
+      'focus:outline-none',
+      'focus:bg-white',
+      'focus:border-4',
+      'focus:border-grey-darkest'
+    ]
+  %}
+{% endif %}
+
+
+<div
+  class="facets-widget-{{ facet.widget.type }}">
+  {% if facet.widget.type %}
+    {%- set attributes = attributes.addClass('item-list__' ~ facet.widget.type) %}
+  {% endif %}
+  {% if items or empty %}
+    {%- if title is not empty -%}
+      <h3>{{ title }}</h3>
+    {%- endif -%}
+
+    {%- if items -%}
+      <{{list_type}}{{attributes.addClass(list_classes)}}>
+        {%- for item in items -%}
+          <li{{item.attributes.addClass(item_classes)}}>{{ item.value }}</li>
+        {%- endfor -%}
+      </{{list_type}}>
+    {%- else -%}
+      {{- empty -}}
+    {%- endif -%}
+  {%- endif %}
+
+  {% if facet.widget.type == "dropdown" %}
+    <label
+      id="facet_{{ facet.id }}_label">Facet
+      {{ facet.label }}</label>
+  {%- endif %}
+</div>

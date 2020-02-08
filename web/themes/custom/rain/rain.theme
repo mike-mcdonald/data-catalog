@@ -216,8 +216,8 @@ function rain_preprocess_menu_local_task(array &$variables) {
 function rain_preprocess_facets_item_list(array &$variables) {
   /* value in items is a link which needs to be styled here and not in a template */
   $link_classes = [
-    'p-3',
-    'border-b',
+    'py-3',
+    'px-2',
     'hover:bg-fog-light',
     'flex',
     'items-center',
@@ -225,7 +225,7 @@ function rain_preprocess_facets_item_list(array &$variables) {
   ];
 
   $active_classes = [
-    'bg-blue-lightest',
+    'bg-fog-light',
   ];
 
   foreach ($variables['items'] as $key => &$item) {
