@@ -1,0 +1,24 @@
+diff --git a/src/Plugin/Field/FieldWidget/Select2EntityReferenceWidget.php b/src/Plugin/Field/FieldWidget/Select2EntityReferenceWidget.php
+index 8ae1706..85a38ac 100644
+--- a/src/Plugin/Field/FieldWidget/Select2EntityReferenceWidget.php
++++ b/src/Plugin/Field/FieldWidget/Select2EntityReferenceWidget.php
+@@ -201,7 +201,18 @@ class Select2EntityReferenceWidget extends Select2Widget implements ContainerFac
+     /** @var \Drupal\Core\Entity\EntityReferenceSelection\SelectionInterface $handler */
+     $handler = \Drupal::service('plugin.manager.entity_reference_selection')->getInstance($handler_settings);
+ 
+-    $options = static::getValidReferenceableEntities(array_keys(OptGroup::flattenOptions($element['#options'])), $handler_settings);
++    // For those items that are passed back as a new item typed in the widget
++    // we don't want to try to see if they are a valid entity, because they have not been created yet
++    $ids = array_reduce(
++      array_keys(OptGroup::flattenOptions($element['#options'])),
++      function ($return, $item) {
++        if (substr($item, 0, 4) !== "\$ID:") {
++          $return[] = $item;
++        }
++        return $return;
++    });
++
++    $options = static::getValidReferenceableEntities($ids, $handler_settings);
+     $items = [];
+     foreach ($values as $value) {
+       if (isset($options[$value])) {
