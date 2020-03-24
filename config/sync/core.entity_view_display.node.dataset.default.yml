@@ -41,15 +41,18 @@ third_party_settings:
             uuid: af9ac02a-beff-4c64-9c2c-c36b42987e05
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:dataset:field_purpose'
+              label: Description
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                label: above
+                label: visually_hidden
+                type: basic_string
                 settings: {  }
                 third_party_settings: {  }
-                type: basic_string
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 0
         third_party_settings: {  }

@@ -28,7 +28,7 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: card
+        layout_id: layout_onecol
         layout_settings:
           label: ''
         components:
@@ -41,7 +41,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: visually_hidden
                 type: entity_reference_entity_view
                 settings:
                   view_mode: card

@@ -42,6 +42,12 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_row
+        layout_settings:
+          label: ''
+        components:
           6df07345-49ab-4924-aab7-8e1af82a48e9:
             uuid: 6df07345-49ab-4924-aab7-8e1af82a48e9
             region: content

@@ -56,7 +56,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 0
+            weight: -10
           cdc2497f-bc6d-42c6-b5e1-ec72dab5fe45:
             uuid: cdc2497f-bc6d-42c6-b5e1-ec72dab5fe45
             region: content
@@ -75,7 +75,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 1
+            weight: -9
           5aa4faa8-f9f7-424d-a1a4-60a5744e5b1c:
             uuid: 5aa4faa8-f9f7-424d-a1a4-60a5744e5b1c
             region: content
@@ -104,7 +104,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: -7
           a838f55d-eee6-4846-b09a-1bdc9e2f9934:
             uuid: a838f55d-eee6-4846-b09a-1bdc9e2f9934
             region: content
@@ -124,7 +124,28 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 3
+            weight: -6
+          bdd1138c-5a53-4277-a4d4-8df12f9c0a79:
+            uuid: bdd1138c-5a53-4277-a4d4-8df12f9c0a79
+            region: content
+            configuration:
+              id: 'field_block:node:dataset:field_data_group'
+              label: Division/Group
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: cshs_full_hierarchy
+                settings:
+                  linked: 1
+                  reverse: 0
+                  separator: ' / '
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -8
         third_party_settings: {  }
     allow_custom: false
 id: node.dataset.card

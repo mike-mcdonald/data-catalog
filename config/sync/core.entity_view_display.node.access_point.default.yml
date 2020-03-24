@@ -83,9 +83,9 @@ third_party_settings:
               label_display: '0'
               formatter:
                 label: above
-                type: entity_reference_entity_view
+                type: entity_reference_label
                 settings:
-                  view_mode: card
+                  link: true
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
