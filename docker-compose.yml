@@ -14,7 +14,7 @@ version: "2"
 
 services:
   db:
-    image: postgres
+    image: postgres:11
     environment:
       POSTGRES_DB: datacatalog
       POSTGRES_USER: datacatalog
