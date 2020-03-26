@@ -46,13 +46,11 @@ services:
       PANTHEON_ENVIRONMENT: dev
     ports:
       - 80:80
-      - 443:443
     volumes:
       - tmp:/var/www/html/tmp
       - .:/var/www/html:cached
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./site.conf:/etc/nginx/conf.d/default.conf
-      - ./certs:/certs
     networks:
       - code-network
       - cache-network
