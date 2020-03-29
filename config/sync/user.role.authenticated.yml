@@ -13,6 +13,7 @@ permissions:
   - 'access content'
   - 'access taxonomy overview'
   - 'access user profiles'
+  - 'administer blocks'
   - 'change own username'
   - 'create access_point content'
   - 'create archival_information block content'
@@ -36,4 +37,5 @@ permissions:
   - 'view access_point revisions'
   - 'view contact_information revisions'
   - 'view dataset revisions'
+  - 'view media'
   - 'view the administration theme'

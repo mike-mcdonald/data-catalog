@@ -41,55 +41,83 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             additional: {  }
-            weight: 0
-          1a39d82d-dcef-44ee-b1ff-37368ff5eb7a:
-            uuid: 1a39d82d-dcef-44ee-b1ff-37368ff5eb7a
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:business_term:field_data_custodian'
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            additional: {  }
-            weight: 1
+            weight: -10
           5b3df6bb-eff5-49a9-8117-b10dc6e570b8:
             uuid: 5b3df6bb-eff5-49a9-8117-b10dc6e570b8
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:business_term:field_keywords'
+              label: Keywords
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                label: above
+                label: inline
+                type: entity_reference_label
                 settings:
                   link: true
                 third_party_settings: {  }
-                type: entity_reference_label
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: -8
           7d1cc1f4-751c-4754-96bd-32964e35f517:
             uuid: 7d1cc1f4-751c-4754-96bd-32964e35f517
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:business_term:field_subject_areas'
+              label: 'Subject areas'
+              provider: layout_builder
+              label_display: '0'
               formatter:
+                label: inline
                 type: entity_reference_label
-                label: above
                 settings:
                   link: true
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
-            weight: 3
+            weight: -7
+          1a39d82d-dcef-44ee-b1ff-37368ff5eb7a:
+            uuid: 1a39d82d-dcef-44ee-b1ff-37368ff5eb7a
+            region: content
+            configuration:
+              id: 'field_block:node:business_term:field_data_custodian'
+              label: 'Primary Contact '
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -6
+          d54001e6-8a4e-4822-93a3-6a84c41f8e0b:
+            uuid: d54001e6-8a4e-4822-93a3-6a84c41f8e0b
+            region: content
+            configuration:
+              id: 'field_block:node:business_term:uid'
+              label: 'Authored by'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: compact
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -9
         third_party_settings: {  }
 id: node.business_term.default
 targetEntityType: node

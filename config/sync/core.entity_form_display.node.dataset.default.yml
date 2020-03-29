@@ -60,6 +60,7 @@ content:
       collapsible: false
       collapsed: false
       allow_duplicate: false
+      revision: false
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
@@ -90,13 +91,14 @@ content:
       match_operator: CONTAINS
       autocomplete: false
       width: 100%
+      match_limit: 10
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
   field_purpose:
     weight: 2
     settings:
-      rows: 3
+      rows: 10
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
@@ -149,6 +151,7 @@ content:
       collapsed: false
       allow_existing: false
       allow_duplicate: false
+      revision: false
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content

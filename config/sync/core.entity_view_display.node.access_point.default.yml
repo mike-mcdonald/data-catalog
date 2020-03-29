@@ -29,29 +29,22 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          75e8de7d-b7d8-4e73-b69e-0114d59ca946:
-            uuid: 75e8de7d-b7d8-4e73-b69e-0114d59ca946
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:access_point:links'
-            additional: {  }
-            weight: -10
           eb451321-ddbc-4c78-b0a9-c9fc737faf27:
             uuid: eb451321-ddbc-4c78-b0a9-c9fc737faf27
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:access_point:field_purpose'
+              label: Description
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                label: above
+                label: visually_hidden
+                type: basic_string
                 settings: {  }
                 third_party_settings: {  }
-                type: basic_string
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: -9
           07f87100-0bb3-422b-b5ef-e8ae32d15f5a:
@@ -63,7 +56,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: inline
                 type: entity_reference_entity_view
                 settings:
                   view_mode: card
@@ -82,7 +75,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: inline
                 type: entity_reference_label
                 settings:
                   link: true
@@ -101,12 +94,12 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: inline
                 type: cshs_full_hierarchy
                 settings:
                   linked: 1
                   reverse: 0
-                  separator: ' » '
+                  separator: '/  '
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -117,20 +110,42 @@ third_party_settings:
             uuid: b0dda337-d91a-4242-be97-47edcf97e7db
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:access_point:field_url'
+              label: URL
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                label: above
+                label: visually_hidden
+                type: link
                 settings:
                   trim_length: 80
                   url_only: false
                   url_plain: false
-                  rel: ''
-                  target: ''
+                  rel: '0'
+                  target: '0'
                 third_party_settings: {  }
-                type: link
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -10
+          ad856472-518f-4c88-911f-e6913d46f361:
+            uuid: ad856472-518f-4c88-911f-e6913d46f361
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:uid'
+              label: 'Authored by'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: compact
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: -8
         third_party_settings: {  }
