@@ -47,8 +47,8 @@ services:
     ports:
       - 80:80
     volumes:
-      - tmp:/var/www/html/tmp
       - .:/var/www/html:cached
+      - tmp:/var/www/html/tmp
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./site.conf:/etc/nginx/conf.d/default.conf
     networks:
@@ -65,8 +65,8 @@ services:
       CACHE_PORT: 6379
       XDEBUG_CONFIG: remote_host=host.docker.internal
     volumes:
-      - tmp:/var/www/html/tmp
       - .:/var/www/html:cached
+      - tmp:/var/www/html/tmp
       - ./.user.ini:/usr/local/etc/php/conf.d/custom.ini
       - ./log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
     networks:
