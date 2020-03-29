@@ -120,8 +120,8 @@ import chevronDown from '../../icons/chevron-down.svg';
       const chevronClasses = [
         'pointer-events-none',
         'absolute',
-        'pin-y',
-        'pin-r',
+        'inset-y-0',
+        'right-0',
         'flex',
         'items-center',
         'px-2',

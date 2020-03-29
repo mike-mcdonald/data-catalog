@@ -1,7 +1,7 @@
 a {
   @apply no-underline text-inherit;
   &:not([class]) {
-    @apply border-b-2 border-black;
+    @apply border-b-2 border-current;
   }
   &.button {
     @apply border-b-2 border-black mx-1;

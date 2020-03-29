@@ -1,6 +1,7 @@
 const path = require('path');
 const globby = require('globby');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = (env, argv) => ({
   entry: {
@@ -16,11 +17,13 @@ module.exports = (env, argv) => ({
     path: path.resolve(__dirname),
     filename: 'js/[name].bundle.js'
   },
+  stats: 'none',
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/style.bundle.css',
       chunkFilename: 'css/[id].bundle.css'
-    })
+    }),
+    new FriendlyErrorsWebpackPlugin()
   ],
   module: {
     rules: [

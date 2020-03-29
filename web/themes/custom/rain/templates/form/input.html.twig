@@ -13,20 +13,19 @@
 #}
 {%
   set input_classes = input_classes|default([
-    required ? 'bg-red-lightest' : 'bg-grey-lightest',
+    required ? 'bg-red-100' : 'bg-gray-100',
     'appearance-none',
     'block',
     'border',
-    required ? 'border-red-dark' : 'border-grey',
+    required ? 'border-red-600' : 'border-gray-500',
     'rounded',
     'w-full',
     'py-2',
     'px-4',
     'leading-tight',
     'focus:outline-none',
-    required ? 'focus:bg-red-lightest' : 'focus:bg-white',
-    'focus:border-4',
-    required ? 'focus:border-red-darkest' : 'focus:border-grey-darkest',
+    required ? 'focus:bg-red-100' : 'focus:bg-white',
+    required ? 'focus:border-red-900' : 'focus:border-gray-900',
   ])
 %}
 {% spaceless %}

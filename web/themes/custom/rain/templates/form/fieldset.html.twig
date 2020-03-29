@@ -30,6 +30,8 @@
     'p-3',
     'border',
     'rounded',
+    required ? 'border-red-500',
+    required ? 'bg-red-100',
   ]
 %}
 
@@ -38,6 +40,7 @@
     'font-bold',
     'px-2',
     'py-1',
+    required ? 'text-red-500',
   ])
 %}
 <fieldset{{attributes.addClass(classes)}}>

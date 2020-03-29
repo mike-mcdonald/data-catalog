@@ -6,6 +6,8 @@ card:
   regions:
     content:
       label: Content
+  icon_map:
+    - [content]
 
 layout_row:
   label: 'Row'
@@ -15,6 +17,8 @@ layout_row:
   regions:
     content:
       label: Content
+  icon_map:
+    - [content]
 
 layout_onecol:
   label: 'One column'
@@ -24,6 +28,8 @@ layout_onecol:
   regions:
     content:
       label: Content
+  icon_map:
+    - [content]
 
 layout_twocol:
   label: 'Two column'
@@ -35,6 +41,8 @@ layout_twocol:
       label: First
     second:
       label: Second
+  icon_map:
+    - [first, second]
 
 layout_threecol:
   label: 'Three columns'
@@ -48,3 +56,5 @@ layout_threecol:
       label: Second
     third:
       label: Third
+  icon_map:
+    - [first, second, third]

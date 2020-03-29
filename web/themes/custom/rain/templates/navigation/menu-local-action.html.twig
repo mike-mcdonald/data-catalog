@@ -12,11 +12,11 @@
 #}
 {%
   set action_classes = action_classes|default([
-    'bg-cyan',
+    'bg-cyan-500',
     'appearance-none',
     'cursor-pointer',
     'border',
-    'border-cyan-darker',
+    'border-cyan-800',
     'rounded',
     'm-2',
     'py-2',
@@ -24,9 +24,9 @@
     'text-white',
     'leading-tight',
     'focus:outline-none',
-    'focus:bg-cyan-dark',
-    'focus:border-cyan-darker',
-    'hover:border-cyan',
+    'focus:bg-cyan-600',
+    'focus:border-cyan-800',
+    'hover:border-cyan-500',
   ])
 %}
 <span{{attributes.addClass(action_classes)}}>

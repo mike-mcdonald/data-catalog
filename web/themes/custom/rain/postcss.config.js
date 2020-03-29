@@ -7,12 +7,6 @@ const autoprefixer = require('autoprefixer');
 // class names.
 //
 // https://github.com/FullHuman/purgecss#extractor
-class TailwindExtractor {
-  static extract(content) {
-    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-  }
-}
-
 module.exports = ({ file, options, env }) => {
   return {
     plugins: [
@@ -29,15 +23,7 @@ module.exports = ({ file, options, env }) => {
             'js/main.bundle.js',
             './rain.theme'
           ],
-          extractors: [
-            {
-              extractor: TailwindExtractor,
-
-              // Specify the file extensions to include when scanning for
-              // class names.
-              extensions: ['html', 'twig', 'js', 'php', 'vue', 'theme']
-            }
-          ],
+          defaultExtractor: content => content.match(/[\w-/:()]+(?<!:)/g) || [],
           whitelistPatternsChildren: [/select2-container--rain$/]
         })
         : false

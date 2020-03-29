@@ -70,7 +70,7 @@
 		{% endif %}
 	{% endfor %}
 	{% if header %}
-		<thead{{create_attribute({'class':['border-b-2','border-grey']})}}>
+		<thead{{create_attribute({'class':['border-b-2','border-gray-500']})}}>
 			<tr>
 				{% for cell in header %}
 					<{{cell.tag}}{{cell.attributes.removeClass('block').addClass(cell_classes,'py-2')}}>
@@ -83,7 +83,7 @@
 	{% if rows %}
 		<tbody>
 			{% for row in rows %}
-				<tr{{row.attributes.addClass('hover:bg-blue-lightest')}}>
+				<tr{{row.attributes.addClass('hover:bg-blue-100')}}>
 					{% for cell in row.cells %}
 						<{{cell.tag}}{{cell.attributes.removeClass('block').addClass(cell_classes,'px-2','py-1')}}>
 							{{- cell.content -}}

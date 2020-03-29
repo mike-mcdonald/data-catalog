@@ -40,13 +40,13 @@
     'list-reset',
     'inline-flex',
     'p-1',
-    'bg-fog',
+    'bg-fog-500',
     'rounded',
   ])
 %}
 {%
   set list_item_classes = list_item_classes|default([
-    'hover:bg-fog-darker',
+    'hover:bg-fog-800',
     'font-bold',
     'py-2',
     'px-4',
@@ -65,7 +65,7 @@
       {%
         set previous_classes = list_item_classes|merge([
           not items.previous ? 'cursor-not-allowed',
-          not items.previous ? 'text-grey',
+          not items.previous ? 'text-gray',
         ])
       %}
       {% set previous_attributes = create_attribute({
@@ -86,8 +86,8 @@
       {# Now generate the actual pager piece. #}
       {% for key, item in items.pages %}
         {% set page_classes = list_item_classes|merge([
-          current == key ? 'bg-cyan',
-          current == key ? 'hover:bg-cyan-dark',
+          current == key ? 'bg-cyan-500',
+          current == key ? 'hover:bg-cyan-600',
           current == key ? 'text-white',
           'mx-1',
         ]) %}
@@ -112,7 +112,7 @@
       {%
         set next_classes = list_item_classes|merge([
           not items.next ? 'cursor-not-allowed',
-          not items.next ? 'text-grey',
+          not items.next ? 'text-gray',
         ])
       %}
       {% set next_attributes = create_attribute({

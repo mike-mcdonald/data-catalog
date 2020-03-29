@@ -1,9 +1,9 @@
 .select2-selection--multiple {
-  @apply bg-grey-lightest appearance-none block border border-grey rounded w-full py-2 px-4 leading-tight;
+  @apply bg-gray-100 appearance-none block border border-gray-500 rounded w-full py-2 px-4 leading-tight;
   cursor: text;
 
   .select2-selection__rendered {
-    @apply list-reset flex flex-wrap items-center;
+    @apply list-none flex flex-wrap items-center;
   }
 
   .select2-selection__placeholder {
@@ -18,7 +18,7 @@
   }
 
   .select2-selection__choice {
-    @apply bg-blue-lightest border rounded border-blue-darker mr-1 px-2 py-1;
+    @apply bg-blue-100 border rounded border-blue-800 mr-1 px-2 py-1;
     cursor: default;
   }
 
@@ -59,7 +59,7 @@
 
 &.select2-container--focus {
   .select2-selection--multiple {
-    @apply outline-none bg-white border-grey-darkest;
+    @apply outline-none bg-white border-gray-900;
   }
 }
 

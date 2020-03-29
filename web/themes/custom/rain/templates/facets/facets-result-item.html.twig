@@ -16,10 +16,11 @@
  * @ingroup themeable
  */
 #}
+
 {% if is_active %}
   <i class="mr-1 flex">{% include active_theme_path() ~ '/icons/minus-circle.svg' %}</i>
 {% endif %}
 <span class="flex-1">{{ value }}</span>
 {% if show_count %}
-  <span class="bg-blue text-white rounded-full px-2 py-1 text-xs font-bold">{{ count }}</span>
+  <span class="bg-blue-500 text-white rounded-full px-2 py-1 text-xs font-bold">{{ count }}</span>
 {% endif %}

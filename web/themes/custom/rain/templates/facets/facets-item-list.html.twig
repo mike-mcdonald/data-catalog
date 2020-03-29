@@ -30,7 +30,7 @@
     set list_classes = [
       'flex',
       'flex-col',
-      'list-reset'
+      'list-none'
     ]
   %}
 {% endif %}
@@ -39,19 +39,18 @@
 {% if facet.widget.type == 'dropdown' %}
   {%
     set list_classes = [
-      'bg-grey-lightest',
+      'bg-gray-100',
       'block',
       'border',
-      'border-grey',
+      'border-gray-500',
       'rounded',
       'w-full',
-      'py-2',
-      'px-4',
+      'py-1',
+      'px-2',
       'leading-tight',
       'focus:outline-none',
       'focus:bg-white',
-      'focus:border-4',
-      'focus:border-grey-darkest'
+      'focus:border-gray-900'
     ]
   %}
 {% endif %}
