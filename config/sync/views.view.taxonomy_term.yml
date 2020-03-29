@@ -101,9 +101,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          default_action: 'not found'
+          default_action: ignore
           exception:
-            value: ''
+            value: all
             title_enable: false
             title: All
           title_enable: true
