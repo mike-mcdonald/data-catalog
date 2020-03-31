@@ -1734,7 +1734,7 @@ import info from '../../icons/info.svg';
         ];
 
         return `
-        <div role="alert" class="bg-purple-700 border-purple-500 rounded text-purple-100 px-4 py-3 shadow mb-4 flex items-center">
+        <div role="alert" class="mb-1 border-l-8 p-4 bg-orange-100 border-orange-500 text-orange-900">
           <div class="flex items-center">
             ${Drupal.theme('tableDragChangedMarker')}
             <div class="mx-3">
