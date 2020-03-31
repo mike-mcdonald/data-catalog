@@ -1,0 +1,20 @@
+uuid: 1ff61328-be47-4ebf-ae31-1bda794843ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.performance_measure
+  module:
+    - user
+id: node.performance_measure.default
+targetEntityType: node
+bundle: performance_measure
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

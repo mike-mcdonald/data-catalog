@@ -1,0 +1,21 @@
+uuid: 385c1613-fde4-4951-b852-d5a5c61145b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.performance_measure
+  module:
+    - user
+id: node.performance_measure.teaser
+targetEntityType: node
+bundle: performance_measure
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true
