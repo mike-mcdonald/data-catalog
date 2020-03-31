@@ -13,8 +13,16 @@
  */
 #}
 
+
+
 {% include 'select.html.twig' with {
   'attributes': attributes,
+  wrapper_classes: [
+    'relative',
+    'grid',
+    'grid-cols-1',
+    'gap-1',
+  ],
   'add_icon': 'false',
 } %}
 {#
