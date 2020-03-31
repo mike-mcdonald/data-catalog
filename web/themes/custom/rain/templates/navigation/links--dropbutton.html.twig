@@ -1,6 +1,6 @@
 {% embed 'links.html.twig' with {
   'list_classes': [
-    'list-reset',
+    'list-none',
     'relative',
   ],
   'list_item_classes': [
@@ -25,7 +25,7 @@
 {% set secondary_list_attributes = secondary_list_attributes|default(create_attribute()) %}
 {% set secondary_list_classes = secondary_list_classes|default([
   'relative',
-  'list-reset',
+  'list-none',
   'secondary-action',
 ]) %}
 
