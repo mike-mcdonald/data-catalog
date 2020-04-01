@@ -16,7 +16,6 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
-  devel: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
@@ -31,7 +30,6 @@ module:
   history: 0
   image: 0
   inline_entity_form: 0
-  kint: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
