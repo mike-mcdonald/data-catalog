@@ -1,4 +1,4 @@
-uuid: fc86e9c7-4c66-457f-9947-0624088dc8c0
+uuid: 3662eebe-7dea-4483-ba29-3afd1e144eae
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Performance measure'
+name: 'Performance Measure'
 type: performance_measure
 description: ''
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: false

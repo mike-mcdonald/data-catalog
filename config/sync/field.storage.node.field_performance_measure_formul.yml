@@ -1,0 +1,19 @@
+uuid: 369d5e06-dba5-4bfa-b8a8-2f5172d9d21e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_performance_measure_formul
+field_name: field_performance_measure_formul
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

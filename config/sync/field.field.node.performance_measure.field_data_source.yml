@@ -1,0 +1,19 @@
+uuid: e3f896cf-fa64-40b4-b791-204352a788aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_source
+    - node.type.performance_measure
+id: node.performance_measure.field_data_source
+field_name: field_data_source
+entity_type: node
+bundle: performance_measure
+label: 'Data Source'
+description: 'Includes (1) data collection mechanisms (describe ways the data will be collected, survey forms, printed reports, contractor performance reports, etc.); (2) data sources (manual logs, check sheets, computer databases, surveys, spreadsheets, etc.); data collection time frame (i.e. reporting time lag); data storage location.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

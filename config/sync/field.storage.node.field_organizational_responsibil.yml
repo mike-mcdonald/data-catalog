@@ -1,0 +1,21 @@
+uuid: 9a8d97cf-e3a7-454a-9b43-d6d318fbbc11
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_organizational_responsibil
+field_name: field_organizational_responsibil
+entity_type: node
+type: string
+settings:
+  max_length: 256
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,242 @@
+uuid: ee7627d3-cb9b-46d5-9dbd-2c1e1ad1b5a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.performance_measure.title
+    - core.entity_view_mode.node.card
+    - field.field.node.performance_measure.field_audience
+    - field.field.node.performance_measure.field_data_reliability
+    - field.field.node.performance_measure.field_data_source
+    - field.field.node.performance_measure.field_data_source_contact_email
+    - field.field.node.performance_measure.field_data_source_contact_name
+    - field.field.node.performance_measure.field_data_source_program_email
+    - field.field.node.performance_measure.field_data_source_program_manage
+    - field.field.node.performance_measure.field_frequency_of_data_collecti
+    - field.field.node.performance_measure.field_keywords
+    - field.field.node.performance_measure.field_organizational_responsibil
+    - field.field.node.performance_measure.field_performance_measure_data_r
+    - field.field.node.performance_measure.field_performance_measure_formul
+    - field.field.node.performance_measure.field_performance_measure_thresh
+    - field.field.node.performance_measure.field_performance_measure_type
+    - field.field.node.performance_measure.field_performance_metric
+    - field.field.node.performance_measure.field_performance_metric_purpose
+    - field.field.node.performance_measure.field_pm_url
+    - field.field.node.performance_measure.field_target
+    - node.type.performance_measure
+  module:
+    - layout_builder
+    - options
+    - user
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          04bfb078-0ec0-4e98-9fb1-04d0597aff1d:
+            uuid: 04bfb078-0ec0-4e98-9fb1-04d0597aff1d
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_performance_metric_purpose'
+              label: 'Performance Metric Purpose'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -8
+          f5150f94-b691-47a7-a157-d9a208bd4bdb:
+            uuid: f5150f94-b691-47a7-a157-d9a208bd4bdb
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_performance_metric'
+              label: 'Performance Metric'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -9
+          b128aaaf-ac36-4ef1-9152-49c73f7c0c64:
+            uuid: b128aaaf-ac36-4ef1-9152-49c73f7c0c64
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_data_reliability'
+              label: 'Data Reliability'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -7
+          79b63ad4-ab70-4ea1-b77c-7be53419966c:
+            uuid: 79b63ad4-ab70-4ea1-b77c-7be53419966c
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_data_source_contact_name'
+              label: 'Data Source Contact Name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -2
+          f73fabfc-af43-4a32-a59c-492fd1351bd6:
+            uuid: f73fabfc-af43-4a32-a59c-492fd1351bd6
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_data_source_contact_email'
+              label: 'Data Source Contact Email'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -1
+          b36efa59-6645-46dc-bfd7-723e1d9ebd35:
+            uuid: b36efa59-6645-46dc-bfd7-723e1d9ebd35
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:title'
+              label: 'Measure Name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -10
+        third_party_settings: {  }
+id: node.performance_measure.card
+targetEntityType: node
+bundle: performance_measure
+mode: card
+content:
+  field_audience:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_data_reliability:
+    type: list_default
+    weight: 6
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_data_source:
+    type: basic_string
+    weight: 7
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_data_source_contact_email:
+    type: basic_string
+    weight: 9
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_data_source_contact_name:
+    type: string
+    weight: 8
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_performance_measure_data_r:
+    type: basic_string
+    weight: 4
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_performance_measure_thresh:
+    type: string
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_performance_metric:
+    type: basic_string
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_performance_metric_purpose:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_data_source_program_email: true
+  field_data_source_program_manage: true
+  field_frequency_of_data_collecti: true
+  field_keywords: true
+  field_organizational_responsibil: true
+  field_performance_measure_formul: true
+  field_performance_measure_type: true
+  field_pm_url: true
+  field_target: true
+  search_api_excerpt: true

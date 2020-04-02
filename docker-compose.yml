@@ -17,7 +17,7 @@ services:
     image: postgres:11
     environment:
       POSTGRES_DB: datacatalog
-      POSTGRES_USER: datacatalog
+      POSTGRES_USER: datacatalogadmin
       POSTGRES_PASSWORD: datacatalog
     volumes:
       - ./artifacts:/docker-entrypoint-initdb.d

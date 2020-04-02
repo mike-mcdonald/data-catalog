@@ -1,0 +1,21 @@
+uuid: f8022a63-4ec3-428d-b6ab-388b87b6ed56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frequency_of_data_collecti
+    - node.type.performance_measure
+  module:
+    - options
+id: node.performance_measure.field_frequency_of_data_collecti
+field_name: field_frequency_of_data_collecti
+entity_type: node
+bundle: performance_measure
+label: 'Frequency of Data Collection'
+description: 'Frequency may vary from when data is reported.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 70941f88-3f7c-4713-a871-ffd2c1878a0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_performance_measure_data_r
+field_name: field_performance_measure_data_r
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

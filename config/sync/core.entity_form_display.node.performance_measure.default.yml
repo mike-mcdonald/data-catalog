@@ -1,12 +1,31 @@
-uuid: 60d2dab0-38c5-4ff0-b953-334f5e274587
+uuid: 34559761-0dda-4645-be4a-c5d0f002100d
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.performance_measure.field_audience
+    - field.field.node.performance_measure.field_data_reliability
+    - field.field.node.performance_measure.field_data_source
+    - field.field.node.performance_measure.field_data_source_contact_email
+    - field.field.node.performance_measure.field_data_source_contact_name
+    - field.field.node.performance_measure.field_data_source_program_email
+    - field.field.node.performance_measure.field_data_source_program_manage
+    - field.field.node.performance_measure.field_frequency_of_data_collecti
+    - field.field.node.performance_measure.field_keywords
+    - field.field.node.performance_measure.field_organizational_responsibil
+    - field.field.node.performance_measure.field_performance_measure_data_r
+    - field.field.node.performance_measure.field_performance_measure_formul
+    - field.field.node.performance_measure.field_performance_measure_thresh
+    - field.field.node.performance_measure.field_performance_measure_type
+    - field.field.node.performance_measure.field_performance_metric
+    - field.field.node.performance_measure.field_performance_metric_purpose
+    - field.field.node.performance_measure.field_pm_url
+    - field.field.node.performance_measure.field_target
     - node.type.performance_measure
   module:
     - field_layout
-    - path
+    - link
+    - select2
   theme:
     - rain
 third_party_settings:
@@ -21,40 +40,156 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
-    region: content
+  field_audience:
+    weight: 4
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
+    type: options_buttons
+    region: content
+  field_data_reliability:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_data_source:
+    weight: 11
     settings:
-      display_label: true
-    weight: 15
-    region: content
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_data_source_contact_email:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_data_source_contact_name:
+    weight: 12
+    settings:
+      size: 64
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_data_source_program_email:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_data_source_program_manage:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_frequency_of_data_collecti:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_keywords:
+    weight: 18
+    settings:
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+      width: 100%
+    third_party_settings: {  }
+    type: select2_entity_reference
+    region: content
+  field_organizational_responsibil:
+    weight: 10
+    settings:
+      size: 256
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_performance_measure_data_r:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_performance_measure_formul:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_performance_measure_thresh:
+    weight: 7
+    settings:
+      size: 512
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_performance_measure_type:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_performance_metric:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_performance_metric_purpose:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_pm_url:
+    weight: 17
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_target:
+    weight: 9
+    settings:
+      size: 512
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 16
+    weight: 21
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -62,7 +197,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 19
     settings:
       match_operator: CONTAINS
       size: 60
@@ -70,4 +205,7 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  path: true
+  promote: true
+  sticky: true

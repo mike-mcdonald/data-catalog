@@ -1,0 +1,21 @@
+uuid: 177a18a4-4165-419f-8120-213bec539a68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_reliability
+    - node.type.performance_measure
+  module:
+    - options
+id: node.performance_measure.field_data_reliability
+field_name: field_data_reliability
+entity_type: node
+bundle: performance_measure
+label: 'Data Reliability'
+description: 'Refers to the expected accuracy and reliability of the performance data. High—data gathered via reliable process designed to validate or verify the information; Medium—somewhat dependable process designed to validate or verify the information; Low—data gathered without a dependable process to validate or verify the information, or indication that bureau does not have a reliable method of data quality assurance.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,9 +1,27 @@
-uuid: 385c1613-fde4-4951-b852-d5a5c61145b2
+uuid: bd64fdf7-2d2d-4dce-a657-640dd71715b0
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.performance_measure.field_audience
+    - field.field.node.performance_measure.field_data_reliability
+    - field.field.node.performance_measure.field_data_source
+    - field.field.node.performance_measure.field_data_source_contact_email
+    - field.field.node.performance_measure.field_data_source_contact_name
+    - field.field.node.performance_measure.field_data_source_program_email
+    - field.field.node.performance_measure.field_data_source_program_manage
+    - field.field.node.performance_measure.field_frequency_of_data_collecti
+    - field.field.node.performance_measure.field_keywords
+    - field.field.node.performance_measure.field_organizational_responsibil
+    - field.field.node.performance_measure.field_performance_measure_data_r
+    - field.field.node.performance_measure.field_performance_measure_formul
+    - field.field.node.performance_measure.field_performance_measure_thresh
+    - field.field.node.performance_measure.field_performance_measure_type
+    - field.field.node.performance_measure.field_performance_metric
+    - field.field.node.performance_measure.field_performance_metric_purpose
+    - field.field.node.performance_measure.field_pm_url
+    - field.field.node.performance_measure.field_target
     - node.type.performance_measure
   module:
     - user
@@ -18,4 +36,22 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_audience: true
+  field_data_reliability: true
+  field_data_source: true
+  field_data_source_contact_email: true
+  field_data_source_contact_name: true
+  field_data_source_program_email: true
+  field_data_source_program_manage: true
+  field_frequency_of_data_collecti: true
+  field_keywords: true
+  field_organizational_responsibil: true
+  field_performance_measure_data_r: true
+  field_performance_measure_formul: true
+  field_performance_measure_thresh: true
+  field_performance_measure_type: true
+  field_performance_metric: true
+  field_performance_metric_purpose: true
+  field_pm_url: true
+  field_target: true
   search_api_excerpt: true
