@@ -1,10 +1,17 @@
 FROM php:7.4-fpm
 
-RUN apt-get update && apt-get install -my gnupg2
+# Use custom certificates
+COPY ./.certs /usr/local/share/ca-certificates
+RUN update-ca-certificates
+
 # Get the repository set up for postgresql
+# Required to use GPG below
+RUN apt-get update && apt-get install -my gnupg2
+# Add postgresql repository
 RUN { \
   echo 'deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main'; \
   } > /etc/apt/sources.list.d/pgdg.list
+# Add postgresql GPG
 RUN curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 RUN apt-get update && apt-get install -y \
@@ -80,14 +87,15 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
   && php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" \
   && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
   && php -r "unlink('composer-setup.php');" \
-  && mkdir -p /var/www/.composer
+  && mkdir -p /var/www/.composer \
+  && chown -R www-data:www-data /var/www/.composer
 
 # Install terminus
 RUN mkdir -p /srv/bin/terminus \
   && curl -O "https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar" \
   && php installer.phar install --install-dir=/srv/bin/terminus
 
-# set recommended PHP.ini settings
+# set recommended opcache settings
 # see https://secure.php.net/manual/en/opcache.installation.php
 RUN { \
   echo 'opcache.memory_consumption=128'; \
