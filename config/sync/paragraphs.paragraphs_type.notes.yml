@@ -1,9 +1,0 @@
-uuid: e14b357e-71a0-4c69-81f2-e1b68abec1af
-langcode: en
-status: true
-dependencies: {  }
-id: notes
-label: Notes
-icon_uuid: null
-description: ''
-behavior_plugins: {  }
