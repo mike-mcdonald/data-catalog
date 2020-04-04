@@ -1,0 +1,21 @@
+uuid: df50ca15-5eb6-4101-a9bc-0eabd1916fea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.performance_measure
+  module:
+    - text
+id: node.performance_measure.field_description
+field_name: field_description
+entity_type: node
+bundle: performance_measure
+label: Description
+description: 'Provide a description of what the measure is.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

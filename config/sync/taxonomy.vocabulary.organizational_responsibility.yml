@@ -1,0 +1,8 @@
+uuid: 4fc811d9-a685-4fb9-9969-19dc884a3cae
+langcode: en
+status: true
+dependencies: {  }
+name: 'Organizational Responsibility'
+vid: organizational_responsibility
+description: 'Section and Division Names'
+weight: 0

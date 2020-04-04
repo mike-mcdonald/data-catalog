@@ -1,14 +1,16 @@
-uuid: b3030e00-35aa-4cf2-9b78-b89abb684154
+uuid: d5363461-5bf7-4e52-b4c8-2148c5755456
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_data_source_program_email
-field_name: field_data_source_program_email
+    - taxonomy
+id: node.field_program_area
+field_name: field_program_area
 entity_type: node
-type: email
-settings: {  }
+type: entity_reference
+settings:
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

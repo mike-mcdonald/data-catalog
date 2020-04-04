@@ -10,8 +10,8 @@ third_party_settings:
     parent: ''
 name: 'Performance Measure'
 type: performance_measure
-description: ''
+description: 'Use This Content Type to create new Performance Measure records.'
 help: ''
-new_revision: false
+new_revision: true
 preview_mode: 1
 display_submitted: false

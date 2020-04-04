@@ -1,17 +1,16 @@
-uuid: 9a8d97cf-e3a7-454a-9b43-d6d318fbbc11
+uuid: 93789c7c-9ad2-4d5c-aa83-b31563dee4d9
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - taxonomy
 id: node.field_organizational_responsibil
 field_name: field_organizational_responsibil
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 256
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

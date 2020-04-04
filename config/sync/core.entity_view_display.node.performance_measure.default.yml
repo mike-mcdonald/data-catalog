@@ -3,16 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.performance_measure.title
     - field.field.node.performance_measure.field_audience
     - field.field.node.performance_measure.field_data_reliability
-    - field.field.node.performance_measure.field_data_source
-    - field.field.node.performance_measure.field_data_source_contact_email
-    - field.field.node.performance_measure.field_data_source_contact_name
-    - field.field.node.performance_measure.field_data_source_program_email
-    - field.field.node.performance_measure.field_data_source_program_manage
+    - field.field.node.performance_measure.field_data_set_s_
+    - field.field.node.performance_measure.field_description
     - field.field.node.performance_measure.field_frequency_of_data_collecti
     - field.field.node.performance_measure.field_keywords
     - field.field.node.performance_measure.field_organizational_responsibil
+    - field.field.node.performance_measure.field_performance_measure_contac
     - field.field.node.performance_measure.field_performance_measure_data_r
     - field.field.node.performance_measure.field_performance_measure_formul
     - field.field.node.performance_measure.field_performance_measure_thresh
@@ -20,12 +19,16 @@ dependencies:
     - field.field.node.performance_measure.field_performance_metric
     - field.field.node.performance_measure.field_performance_metric_purpose
     - field.field.node.performance_measure.field_pm_url
+    - field.field.node.performance_measure.field_program_area
+    - field.field.node.performance_measure.field_status
     - field.field.node.performance_measure.field_target
     - node.type.performance_measure
   module:
     - layout_builder
     - link
     - options
+    - system
+    - text
     - user
   theme:
     - rain
@@ -35,22 +38,27 @@ third_party_settings:
     enabled: true
     sections:
       -
+        layout_id: layout_row
+        layout_settings:
+          label: Breadcrumbs
+        components:
+          507a5fca-bff9-4026-80c0-b4e103d9339c:
+            uuid: 507a5fca-bff9-4026-80c0-b4e103d9339c
+            region: content
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              provider: system
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
         layout_id: layout_onecol
         layout_settings:
           label: ''
         components:
-          21f342bb-4dc6-4e3a-8a9e-949fbfba4f36:
-            uuid: 21f342bb-4dc6-4e3a-8a9e-949fbfba4f36
-            region: content
-            configuration:
-              id: 'extra_field_block:node:performance_measure:links'
-              label: Links
-              provider: layout_builder
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
           dc94d8fa-7c62-411a-a976-13c3f1527dbd:
             uuid: dc94d8fa-7c62-411a-a976-13c3f1527dbd
             region: content
@@ -69,7 +77,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 1
+            weight: -8
           f5555948-1a9b-4ad4-9586-510154a3ac4b:
             uuid: f5555948-1a9b-4ad4-9586-510154a3ac4b
             region: content
@@ -88,7 +96,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: -7
           08bb991e-96c7-4cbc-ae12-f0a79fc16f3a:
             uuid: 08bb991e-96c7-4cbc-ae12-f0a79fc16f3a
             region: content
@@ -106,7 +114,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 3
+            weight: -5
           a3c4ee31-3b5f-48d1-bdbc-c0ae61e99332:
             uuid: a3c4ee31-3b5f-48d1-bdbc-c0ae61e99332
             region: content
@@ -124,25 +132,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 4
-          e47b0dc8-85ba-4d80-aec2-573e4ffb75ef:
-            uuid: e47b0dc8-85ba-4d80-aec2-573e4ffb75ef
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_performance_measure_data_r'
-              label: 'Performance Measure Data Requirements'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: basic_string
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 5
+            weight: -4
           c308f08a-3ade-46cc-a022-f83837ea8a01:
             uuid: c308f08a-3ade-46cc-a022-f83837ea8a01
             region: content
@@ -161,7 +151,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 6
+            weight: -2
           231c35cb-667f-4cb8-a2b1-c24978591c26:
             uuid: 231c35cb-667f-4cb8-a2b1-c24978591c26
             region: content
@@ -179,7 +169,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 7
+            weight: -1
           4513317a-2c87-4b5e-8cd0-2ec69950a84b:
             uuid: 4513317a-2c87-4b5e-8cd0-2ec69950a84b
             region: content
@@ -198,118 +188,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 8
-          3e876b79-cb7d-4c3b-9859-70f963166416:
-            uuid: 3e876b79-cb7d-4c3b-9859-70f963166416
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_organizational_responsibil'
-              label: 'Organizational Responsibility'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 9
-          8749e82b-1b30-46ca-995e-96aef173b234:
-            uuid: 8749e82b-1b30-46ca-995e-96aef173b234
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_data_source'
-              label: 'Data Source'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: basic_string
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 10
-          9295a676-39c2-4a69-9356-6db2c420d73c:
-            uuid: 9295a676-39c2-4a69-9356-6db2c420d73c
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_data_source_contact_name'
-              label: 'Data Source Contact Name'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 11
-          d86e1375-f9d4-4f93-8cb3-26830ab3737f:
-            uuid: d86e1375-f9d4-4f93-8cb3-26830ab3737f
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_data_source_contact_email'
-              label: 'Data Source Contact Email'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: basic_string
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 12
-          b98d13f2-3d29-402b-9834-ebd569e1c430:
-            uuid: b98d13f2-3d29-402b-9834-ebd569e1c430
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_data_source_program_manage'
-              label: 'Data Source Program Manager Name'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 13
-          7e6dc67a-7f40-4ee3-91af-711573d7c88f:
-            uuid: 7e6dc67a-7f40-4ee3-91af-711573d7c88f
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_data_source_program_email'
-              label: 'Data Source Program Manager Email'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: basic_string
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 14
+            weight: 0
           ae7e97b1-4de5-47cb-b8f2-2e34f7c60574:
             uuid: ae7e97b1-4de5-47cb-b8f2-2e34f7c60574
             region: content
@@ -327,25 +206,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 15
-          1703e31d-e588-4902-877e-f514798a7431:
-            uuid: 1703e31d-e588-4902-877e-f514798a7431
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_data_reliability'
-              label: 'Data Reliability'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: list_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 16
+            weight: 4
           182822c8-3956-4de8-81ba-4a4562a4deca:
             uuid: 182822c8-3956-4de8-81ba-4a4562a4deca
             region: content
@@ -368,7 +229,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 17
+            weight: 6
           a653e4a3-2146-4cce-b3ab-3b58f4d08e8c:
             uuid: a653e4a3-2146-4cce-b3ab-3b58f4d08e8c
             region: content
@@ -387,7 +248,215 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 18
+            weight: 7
+          62ac3656-8205-4a24-8d6c-c34e93ad2ed9:
+            uuid: 62ac3656-8205-4a24-8d6c-c34e93ad2ed9
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:performance_measure:field_status'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 8
+          8f9d01da-39d6-4e87-9769-32e4c9a5f061:
+            uuid: 8f9d01da-39d6-4e87-9769-32e4c9a5f061
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:performance_measure:field_description'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: -9
+          97f5671b-a144-4cd9-b9cc-35c7b47f383c:
+            uuid: 97f5671b-a144-4cd9-b9cc-35c7b47f383c
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:title'
+              label: 'Measure Name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -10
+          68aa6c8b-a863-44a3-b4d1-740b3d62e3cb:
+            uuid: 68aa6c8b-a863-44a3-b4d1-740b3d62e3cb
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_program_area'
+              label: 'Program Area'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -6
+          27215644-262a-4a63-b61e-ee3194d0472b:
+            uuid: 27215644-262a-4a63-b61e-ee3194d0472b
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_data_set_s_'
+              label: 'Data set(s)'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+          1703e31d-e588-4902-877e-f514798a7431:
+            uuid: 1703e31d-e588-4902-877e-f514798a7431
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_data_reliability'
+              label: 'Data Reliability'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 5
+          724c25bd-5edf-42b8-8d9f-d25b68c0e2bd:
+            uuid: 724c25bd-5edf-42b8-8d9f-d25b68c0e2bd
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_organizational_responsibil'
+              label: 'Organizational Responsibility'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          f9d3b01e-36ea-402e-8f7e-6f4304b93632:
+            uuid: f9d3b01e-36ea-402e-8f7e-6f4304b93632
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_performance_measure_contac'
+              label: 'Performance Measure Contact'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
+          e47b0dc8-85ba-4d80-aec2-573e4ffb75ef:
+            uuid: e47b0dc8-85ba-4d80-aec2-573e4ffb75ef
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_performance_measure_data_r'
+              label: 'Performance Measure Data Requirements'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -3
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: authorSec
+          column_widths: 50-50
+        components:
+          52c25333-3c46-4e12-bf72-3125e1e15e67:
+            uuid: 52c25333-3c46-4e12-bf72-3125e1e15e67
+            region: first
+            configuration:
+              id: 'field_block:node:performance_measure:uid'
+              label: 'Authored by'
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          d4512cdf-a5cb-4ed2-931d-5cf617e0de86:
+            uuid: d4512cdf-a5cb-4ed2-931d-5cf617e0de86
+            region: second
+            configuration:
+              id: 'field_block:node:performance_measure:created'
+              label: 'Authored on'
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: above
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
@@ -409,42 +478,20 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-  field_data_source:
-    weight: 110
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_data_source_contact_email:
-    weight: 112
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_data_source_contact_name:
-    weight: 111
+  field_data_set_s_:
+    weight: 122
     label: above
     settings:
-      link_to_entity: false
+      link: true
     third_party_settings: {  }
-    type: string
+    type: entity_reference_label
     region: content
-  field_data_source_program_email:
-    weight: 114
+  field_description:
+    weight: 119
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_data_source_program_manage:
-    weight: 113
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+    type: text_default
     region: content
   field_frequency_of_data_collecti:
     weight: 115
@@ -462,12 +509,20 @@ content:
     type: entity_reference_label
     region: content
   field_organizational_responsibil:
-    weight: 109
+    weight: 123
     label: above
     settings:
-      link_to_entity: false
+      link: true
     third_party_settings: {  }
-    type: string
+    type: entity_reference_label
+    region: content
+  field_performance_measure_contac:
+    weight: 124
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_performance_measure_data_r:
     weight: 105
@@ -524,6 +579,21 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_program_area:
+    weight: 121
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_status:
+    weight: 120
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_target:
     weight: 108

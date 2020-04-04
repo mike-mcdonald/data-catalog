@@ -1,17 +1,17 @@
-uuid: 5592b46b-3915-4ed7-bba0-1ecf748d70ae
+uuid: fed33d89-3b81-4220-b942-b5c201152696
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_organizational_responsibil
+    - field.storage.node.field_program_area
     - node.type.performance_measure
-    - taxonomy.vocabulary.organizational_responsibility
-id: node.performance_measure.field_organizational_responsibil
-field_name: field_organizational_responsibil
+    - taxonomy.vocabulary.program_area
+id: node.performance_measure.field_program_area
+field_name: field_program_area
 entity_type: node
 bundle: performance_measure
-label: 'Organizational Responsibility'
-description: 'Section or Division Name.'
+label: 'Program Area'
+description: ''
 required: false
 translatable: false
 default_value: {  }
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      organizational_responsibility: organizational_responsibility
+      program_area: program_area
     sort:
       field: name
       direction: asc

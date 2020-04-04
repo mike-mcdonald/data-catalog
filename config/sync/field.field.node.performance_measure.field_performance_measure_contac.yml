@@ -1,0 +1,28 @@
+uuid: 824336d4-b7c2-48ac-9569-b8f0d80e88ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_performance_measure_contac
+    - node.type.contact_information
+    - node.type.performance_measure
+id: node.performance_measure.field_performance_measure_contac
+field_name: field_performance_measure_contac
+entity_type: node
+bundle: performance_measure
+label: 'Performance Measure Contact'
+description: 'Name and email of the person who can answer questions about this metric.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      contact_information: contact_information
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

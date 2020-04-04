@@ -414,6 +414,8 @@ display:
             description: ''
             use_operator: false
             operator: type_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: type
             required: false
             remember: false
@@ -421,10 +423,10 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              content_admin: '0'
+              user_admin: '0'
               administrator: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
