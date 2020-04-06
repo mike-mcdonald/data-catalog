@@ -4,24 +4,24 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.performance_measure.body
     - field.field.node.performance_measure.field_audience
+    - field.field.node.performance_measure.field_category
+    - field.field.node.performance_measure.field_data_custodian
+    - field.field.node.performance_measure.field_data_group
     - field.field.node.performance_measure.field_data_reliability
-    - field.field.node.performance_measure.field_data_set_s_
-    - field.field.node.performance_measure.field_description
-    - field.field.node.performance_measure.field_frequency_of_data_collecti
+    - field.field.node.performance_measure.field_datasets
+    - field.field.node.performance_measure.field_formula
+    - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
-    - field.field.node.performance_measure.field_organizational_responsibil
-    - field.field.node.performance_measure.field_performance_measure_contac
-    - field.field.node.performance_measure.field_performance_measure_data_r
-    - field.field.node.performance_measure.field_performance_measure_formul
-    - field.field.node.performance_measure.field_performance_measure_thresh
-    - field.field.node.performance_measure.field_performance_measure_type
+    - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_performance_metric
-    - field.field.node.performance_measure.field_performance_metric_purpose
-    - field.field.node.performance_measure.field_pm_url
     - field.field.node.performance_measure.field_program_area
+    - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
     - field.field.node.performance_measure.field_target
+    - field.field.node.performance_measure.field_threshold
+    - field.field.node.performance_measure.field_url
     - node.type.performance_measure
   module:
     - user
@@ -36,22 +36,22 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  body: true
   field_audience: true
+  field_category: true
+  field_data_custodian: true
+  field_data_group: true
   field_data_reliability: true
-  field_data_set_s_: true
-  field_description: true
-  field_frequency_of_data_collecti: true
+  field_datasets: true
+  field_formula: true
+  field_frequency: true
   field_keywords: true
-  field_organizational_responsibil: true
-  field_performance_measure_contac: true
-  field_performance_measure_data_r: true
-  field_performance_measure_formul: true
-  field_performance_measure_thresh: true
-  field_performance_measure_type: true
+  field_measure_type: true
   field_performance_metric: true
-  field_performance_metric_purpose: true
-  field_pm_url: true
   field_program_area: true
+  field_requirements: true
   field_status: true
   field_target: true
+  field_threshold: true
+  field_url: true
   search_api_excerpt: true

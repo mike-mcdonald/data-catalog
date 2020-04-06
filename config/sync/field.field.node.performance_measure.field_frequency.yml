@@ -1,17 +1,17 @@
-uuid: 8cb28689-d7c7-4321-a00f-c3a5d64ed840
+uuid: ca977f53-d4c4-4e5e-ba08-e54de2577637
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_performance_metric_purpose
+    - field.storage.node.field_frequency
     - node.type.performance_measure
-    - taxonomy.vocabulary.performance_metric_purpose
-id: node.performance_measure.field_performance_metric_purpose
-field_name: field_performance_metric_purpose
+    - taxonomy.vocabulary.frequency
+id: node.performance_measure.field_frequency
+field_name: field_frequency
 entity_type: node
 bundle: performance_measure
-label: 'Performance Metric Purpose'
-description: ''
+label: 'Frequency of Data Collection'
+description: 'How often are component variables collected, frequency may vary from when data is reported.'
 required: true
 translatable: false
 default_value: {  }
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      performance_metric_purpose: performance_metric_purpose
+      frequency: frequency
     sort:
       field: name
       direction: asc

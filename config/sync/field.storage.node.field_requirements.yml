@@ -1,18 +1,18 @@
-uuid: e23035aa-28e2-4a86-88ab-f21043fa5cee
+uuid: 51275b5a-bd8b-41fd-bd71-6f673f2f910b
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_data_set_s_
-field_name: field_data_set_s_
+id: node.field_requirements
+field_name: field_requirements
 entity_type: node
-type: entity_reference
+type: string_long
 settings:
-  target_type: node
+  case_sensitive: false
 module: core
 locked: false
-cardinality: 4
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -1,18 +1,18 @@
-uuid: 1c3ca2f7-9c10-4969-a939-22c67956c384
+uuid: 162512ad-cfd8-4401-b142-8a198c25f9c8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_status
+    - field.storage.node.field_category
     - node.type.performance_measure
-    - taxonomy.vocabulary.status
-id: node.performance_measure.field_status
-field_name: field_status
+    - taxonomy.vocabulary.performance_metric_purpose
+id: node.performance_measure.field_category
+field_name: field_category
 entity_type: node
 bundle: performance_measure
-label: Status
+label: 'Performance Metric Purpose'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      status: status
+      performance_metric_purpose: performance_metric_purpose
     sort:
       field: name
       direction: asc

@@ -1,16 +1,15 @@
-uuid: 93789c7c-9ad2-4d5c-aa83-b31563dee4d9
+uuid: 9352c39e-dc67-400f-9619-d183a8800bd8
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_organizational_responsibil
-field_name: field_organizational_responsibil
+id: node.field_formula
+field_name: field_formula
 entity_type: node
-type: entity_reference
+type: string_long
 settings:
-  target_type: taxonomy_term
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

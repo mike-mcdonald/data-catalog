@@ -1,27 +1,17 @@
-uuid: fdbe64db-baff-47b6-b200-b479bbd6707f
+uuid: a6e4effe-d6bf-451b-83af-d51e98ad9c67
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - options
+    - taxonomy
 id: node.field_status
 field_name: field_status
 entity_type: node
-type: list_string
+type: entity_reference
 settings:
-  allowed_values:
-    -
-      value: Draft
-      label: Draft
-    -
-      value: QA
-      label: QA
-    -
-      value: Prod
-      label: Prod
-  allowed_values_function: ''
-module: options
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

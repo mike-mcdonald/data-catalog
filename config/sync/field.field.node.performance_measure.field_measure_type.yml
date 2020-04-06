@@ -1,17 +1,17 @@
-uuid: 5592b46b-3915-4ed7-bba0-1ecf748d70ae
+uuid: a803ed49-5fec-419e-b140-50539566ed93
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_organizational_responsibil
+    - field.storage.node.field_measure_type
     - node.type.performance_measure
-    - taxonomy.vocabulary.organizational_responsibility
-id: node.performance_measure.field_organizational_responsibil
-field_name: field_organizational_responsibil
+    - taxonomy.vocabulary.performance_measure_type
+id: node.performance_measure.field_measure_type
+field_name: field_measure_type
 entity_type: node
 bundle: performance_measure
-label: 'Organizational Responsibility'
-description: 'Section or Division Name.'
+label: 'Performance Measure Type'
+description: ''
 required: false
 translatable: false
 default_value: {  }
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      organizational_responsibility: organizational_responsibility
+      performance_measure_type: performance_measure_type
     sort:
       field: name
       direction: asc

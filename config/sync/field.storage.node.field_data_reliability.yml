@@ -1,27 +1,17 @@
-uuid: cfe962f5-abd4-4acc-bfa1-f9fb329ef45b
+uuid: 4554d142-b2bf-4291-af8f-689a5cc8bd0d
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - options
+    - taxonomy
 id: node.field_data_reliability
 field_name: field_data_reliability
 entity_type: node
-type: list_string
+type: entity_reference
 settings:
-  allowed_values:
-    -
-      value: High
-      label: High
-    -
-      value: Medium
-      label: Medium
-    -
-      value: Low
-      label: Low
-  allowed_values_function: ''
-module: options
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

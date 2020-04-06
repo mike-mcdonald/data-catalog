@@ -1,12 +1,11 @@
-uuid: 177a18a4-4165-419f-8120-213bec539a68
+uuid: df1b9aae-b3d8-4c4c-be00-02584335526d
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_data_reliability
     - node.type.performance_measure
-  module:
-    - options
+    - taxonomy.vocabulary.quality
 id: node.performance_measure.field_data_reliability
 field_name: field_data_reliability
 entity_type: node
@@ -17,5 +16,14 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: list_string
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      quality: quality
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

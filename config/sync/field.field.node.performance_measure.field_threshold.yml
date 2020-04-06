@@ -1,12 +1,12 @@
-uuid: f7335620-feee-4a4f-9a6f-48b0f8c219f3
+uuid: 7f4e96f8-a267-40ab-98c6-ebed2a390175
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_performance_measure_thresh
+    - field.storage.node.field_threshold
     - node.type.performance_measure
-id: node.performance_measure.field_performance_measure_thresh
-field_name: field_performance_measure_thresh
+id: node.performance_measure.field_threshold
+field_name: field_threshold
 entity_type: node
 bundle: performance_measure
 label: 'Performance Measure Threshold'

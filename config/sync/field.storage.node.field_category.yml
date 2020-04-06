@@ -1,18 +1,19 @@
-uuid: 9caef40f-7118-487d-b4be-5dd7c6616546
+uuid: d90bdeed-16bd-4ee8-9f3f-0d4db453b3bf
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_performance_measure_contac
-field_name: field_performance_measure_contac
+    - taxonomy
+id: node.field_category
+field_name: field_category
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 2
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

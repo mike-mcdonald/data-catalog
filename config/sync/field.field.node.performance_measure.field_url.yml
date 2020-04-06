@@ -1,0 +1,23 @@
+uuid: 8d70537f-4892-4b55-a607-51ed7597ca5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url
+    - node.type.performance_measure
+  module:
+    - link
+id: node.performance_measure.field_url
+field_name: field_url
+entity_type: node
+bundle: performance_measure
+label: URL
+description: '“For more info”—Directs reader to program web pages, press releases, how to get involved/citizen engagement, annual report, budget, or simply the bureau home page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

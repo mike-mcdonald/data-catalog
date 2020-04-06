@@ -1,15 +1,16 @@
-uuid: 369d5e06-dba5-4bfa-b8a8-2f5172d9d21e
+uuid: 0305b0d9-414c-4033-88e2-d5d9e3fbb473
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_performance_measure_formul
-field_name: field_performance_measure_formul
+    - taxonomy
+id: node.field_measure_type
+field_name: field_measure_type
 entity_type: node
-type: string_long
+type: entity_reference
 settings:
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

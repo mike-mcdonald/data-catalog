@@ -1,0 +1,8 @@
+uuid: 979e2caf-44ab-4947-b98c-2ee8a3e7a5b1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Performance Measure Type'
+vid: performance_measure_type
+description: ''
+weight: 0

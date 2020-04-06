@@ -1,12 +1,12 @@
-uuid: 432244fa-23e9-490f-857e-3ab329008373
+uuid: 10b9d38e-1e58-4673-8b87-df49005534d0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_performance_measure_formul
+    - field.storage.node.field_formula
     - node.type.performance_measure
-id: node.performance_measure.field_performance_measure_formul
-field_name: field_performance_measure_formul
+id: node.performance_measure.field_formula
+field_name: field_formula
 entity_type: node
 bundle: performance_measure
 label: 'Performance Measure Formula'

@@ -1,12 +1,12 @@
-uuid: 7dd9e4a4-13fe-460e-b091-e57287118526
+uuid: 3d7050b5-a24c-47e5-9c3f-9df8b89601ac
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_performance_measure_data_r
+    - field.storage.node.field_requirements
     - node.type.performance_measure
-id: node.performance_measure.field_performance_measure_data_r
-field_name: field_performance_measure_data_r
+id: node.performance_measure.field_requirements
+field_name: field_requirements
 entity_type: node
 bundle: performance_measure
 label: 'Performance Measure Data Requirements'

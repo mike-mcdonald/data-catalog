@@ -1,19 +1,19 @@
-uuid: 90633c25-ad18-4db7-8f8b-78cfda42e642
+uuid: 2ee86bc5-b0b3-4a6b-aaa3-40b2837f01b8
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - taxonomy
-id: node.field_performance_metric_purpose
-field_name: field_performance_metric_purpose
+id: node.field_frequency
+field_name: field_frequency
 entity_type: node
 type: entity_reference
 settings:
   target_type: taxonomy_term
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

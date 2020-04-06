@@ -1,0 +1,29 @@
+uuid: 9c30be37-9676-4e9b-a67c-777a4709b0ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_datasets
+    - node.type.dataset
+    - node.type.performance_measure
+id: node.performance_measure.field_datasets
+field_name: field_datasets
+entity_type: node
+bundle: performance_measure
+label: 'Data set(s)'
+description: 'Includes (1) data collection mechanisms (describe ways the data will be collected, survey forms, printed reports, contractor performance reports, etc.); (2) data sources (manual logs, check sheets, computer databases, surveys, spreadsheets, etc.); data collection time frame (i.e. reporting time lag); data storage location.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dataset: dataset
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
