@@ -1,0 +1,31 @@
+uuid: c0ce04d3-7141-4470-815c-539c8a40ee55
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.audio.field_media_audio_file
+    - image.style.medium
+    - media.type.audio
+  module:
+    - image
+id: media.audio.media_library
+targetEntityType: media
+bundle: audio
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_audio_file: true
+  name: true
+  search_api_excerpt: true
+  uid: true

@@ -1,0 +1,40 @@
+uuid: b832756e-c2cc-45fd-bf20-954372af4bee
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.logo.field_media_image
+    - field.field.media.logo.field_media_logo_section
+    - image.style.thumbnail
+    - media.type.logo
+  module:
+    - field_layout
+    - image
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: media.logo.media_library
+targetEntityType: media
+bundle: logo
+mode: media_library
+content:
+  field_media_image:
+    weight: -50
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  field_media_logo_section: true
+  name: true
+  path: true
+  status: true
+  uid: true
