@@ -1,14 +1,12 @@
-uuid: 9a005ca0-7531-467c-a7cf-965d2567e1d2
+uuid: effaeb4c-da21-4d31-85f2-a7d47e9d95ac
 langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
+    - filter.format.restricted_html
   module:
     - ckeditor
-_core:
-  default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
-format: basic_html
+format: restricted_html
 editor: ckeditor
 settings:
   toolbar:
@@ -20,7 +18,7 @@ settings:
             - Bold
             - Italic
         -
-          name: Linking
+          name: Links
           items:
             - DrupalLink
             - DrupalUnlink
@@ -33,12 +31,6 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
-            - DrupalMediaLibrary
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
         -
           name: Tools
           items:
@@ -49,7 +41,7 @@ settings:
     language:
       language_list: un
 image_upload:
-  status: true
+  status: false
   scheme: public
   directory: inline-images
   max_size: ''
