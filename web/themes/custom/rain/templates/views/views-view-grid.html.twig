@@ -24,12 +24,14 @@
  * @see template_preprocess_views_view_grid()
  */
 #}
+{% set flow = options.alignment == 'horizontal' ? 'grid-flow-row' : 'grid-flow-col' %}
 {%
   set classes = [
-    'views-view-grid',
-    options.alignment,
-    'cols-' ~ options.columns,
-    'clearfix',
+    'my-3',
+    'grid',
+    flow,
+    'grid-cols-' ~ options.columns,
+    'gap-8',
   ]
 %}
 {% if options.row_class_default %}
@@ -54,23 +56,19 @@
 <div{{ attributes.addClass(classes) }}>
   {% if options.alignment == 'horizontal' %}
     {% for row in items %}
-      <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
-        {% for column in row.content %}
-          <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }}>
-            {{- column.content -}}
-          </div>
-        {% endfor %}
-      </div>
+      {% for column in row.content %}
+        <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }}>
+          {{- column.content -}}
+        </div>
+      {% endfor %}
     {% endfor %}
   {% else %}
     {% for column in items %}
-      <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }}>
-        {% for row in column.content %}
-          <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
-            {{- row.content -}}
-          </div>
-        {% endfor %}
-      </div>
+     {% for row in column.content %}
+        <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
+          {{- row.content -}}
+        </div>
+      {% endfor %}
     {% endfor %}
   {% endif %}
 </div>

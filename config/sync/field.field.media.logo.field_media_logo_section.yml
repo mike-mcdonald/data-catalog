@@ -1,0 +1,21 @@
+uuid: 8f89872b-b0b6-49f2-895b-baf5e5c0e262
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_logo_section
+    - media.type.logo
+  module:
+    - options
+id: media.logo.field_media_logo_section
+field_name: field_media_logo_section
+entity_type: media
+bundle: logo
+label: Section
+description: 'Choose an indication of where this logo should reside for use in blocks'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

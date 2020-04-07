@@ -1,0 +1,14 @@
+uuid: ae9f1102-dccc-402d-b6d6-87527927a2b7
+langcode: en
+status: true
+dependencies: {  }
+id: logo
+label: Logo
+description: 'Use this media to add logos for displaying throughout the site.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

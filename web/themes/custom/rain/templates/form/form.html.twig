@@ -16,5 +16,7 @@
   ])
 %}
 <form{{attributes.addClass(form_classes)}}>
-  {{ children }}
+  {% block content %}
+    {{ children }}
+  {% endblock %}
 </form>

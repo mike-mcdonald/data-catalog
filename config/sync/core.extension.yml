@@ -1,7 +1,6 @@
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
-  adminimal_admin_toolbar: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
@@ -11,6 +10,8 @@ module:
   ckeditor: 0
   color: 0
   config: 0
+  config_filter: 0
+  config_split: 0
   contextual: 0
   cshs: 0
   ctools: 0
@@ -34,6 +35,7 @@ module:
   layout_discovery: 0
   link: 0
   media: 0
+  media_library: 0
   menu_ui: 0
   node: 0
   openid_connect: 0
