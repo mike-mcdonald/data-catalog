@@ -4,12 +4,14 @@
  */
 /*! purgecss start ignore */
 .entities-list .item-container {
-  @apply flex items-center px-2 py-1 m-0;
-}
-
-.entities-list .item-container > img,
-.entities-list .item-container > input {
-  @apply block my-1;
+  @apply flex items-center px-2 py-1 -mx-2;
+  &>img,
+  &>input {
+    @apply mx-2 block;
+  }
+  input:first-of-type {
+    @apply ml-auto;
+  }
 }
 
 .entities-list.sortable .item-container:hover {

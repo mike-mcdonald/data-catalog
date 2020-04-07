@@ -12,14 +12,16 @@
     'appearance-none',
     'cursor-pointer',
     'border',
-    'border-cyan-800',
+    'border-transparent',
     'rounded',
     'p-2',
     'text-white',
-    'leading-tight',
     'focus:outline-none',
     'focus:border-cyan-800',
     'hover:border-cyan',
+    'transition',
+    'ease-in-out',
+    'duration-150',
   ],
 } %}
 {% set secondary_list_attributes = secondary_list_attributes|default(create_attribute()) %}
@@ -39,7 +41,6 @@
   'cursor-pointer',
   'p-2',
   'text-body',
-  'leading-tight',
   'focus:outline-none',
 ]) %}
 

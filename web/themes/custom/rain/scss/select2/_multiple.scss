@@ -1,5 +1,5 @@
 .select2-selection--multiple {
-  @apply bg-gray-100 appearance-none block border border-gray-500 rounded w-full py-2 px-4 leading-tight;
+  @apply bg-gray-100 appearance-none block border border-gray-500 rounded w-full py-3 px-4;
   cursor: text;
 
   .select2-selection__rendered {
@@ -23,17 +23,7 @@
   }
 
   .select2-selection__choice__remove {
-    color: #999;
-    cursor: pointer;
-
-    display: inline-block;
-    font-weight: bold;
-
-    margin-right: 2px;
-
-    &:hover {
-      color: #333;
-    }
+    @apply cursor-pointer mr-1 font-bold;
   }
 }
 
