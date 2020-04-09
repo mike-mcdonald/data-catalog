@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_audience
     - node.type.performance_measure
-    - taxonomy.vocabulary.pm_audience
+    - taxonomy.vocabulary.audience
 id: node.performance_measure.field_audience
 field_name: field_audience
 entity_type: node
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      pm_audience: pm_audience
+      audience: audience
     sort:
       field: name
       direction: asc
