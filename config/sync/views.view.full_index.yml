@@ -80,6 +80,7 @@ display:
               contact_information: card
               database: card
               dataset: card
+              performance_measure: card
               server: card
       fields:
         field_authority_level:

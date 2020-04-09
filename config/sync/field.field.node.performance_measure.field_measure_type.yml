@@ -1,0 +1,29 @@
+uuid: a803ed49-5fec-419e-b140-50539566ed93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_measure_type
+    - node.type.performance_measure
+    - taxonomy.vocabulary.performance_measure_type
+id: node.performance_measure.field_measure_type
+field_name: field_measure_type
+entity_type: node
+bundle: performance_measure
+label: 'Performance Measure Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      performance_measure_type: performance_measure_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

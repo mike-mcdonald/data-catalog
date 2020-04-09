@@ -1,4 +1,4 @@
-uuid: 4f931782-334f-41bc-b38e-6326e4ff9d34
+uuid: b40062f2-1f62-4a20-b3a1-f456d8644ef4
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ id: node.performance_measure.title
 field_name: title
 entity_type: node
 bundle: performance_measure
-label: Name
+label: 'Measure Name'
 description: ''
 required: true
 translatable: true

@@ -1,0 +1,29 @@
+uuid: 9c30be37-9676-4e9b-a67c-777a4709b0ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_datasets
+    - node.type.dataset
+    - node.type.performance_measure
+id: node.performance_measure.field_datasets
+field_name: field_datasets
+entity_type: node
+bundle: performance_measure
+label: 'Data set(s)'
+description: 'Select one or more Data set(s) that supports this measure.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dataset: dataset
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

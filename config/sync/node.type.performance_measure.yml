@@ -1,4 +1,4 @@
-uuid: fc86e9c7-4c66-457f-9947-0624088dc8c0
+uuid: 3662eebe-7dea-4483-ba29-3afd1e144eae
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'Performance measure'
 type: performance_measure
-description: ''
+description: 'Use This Content Type to create new Performance Measure records.'
 help: ''
 new_revision: true
 preview_mode: 1

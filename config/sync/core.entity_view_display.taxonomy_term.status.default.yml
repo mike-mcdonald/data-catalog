@@ -1,0 +1,22 @@
+uuid: 9a22d328-91aa-446b-ad39-cca40f010414
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.status
+  module:
+    - text
+id: taxonomy_term.status.default
+targetEntityType: taxonomy_term
+bundle: status
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

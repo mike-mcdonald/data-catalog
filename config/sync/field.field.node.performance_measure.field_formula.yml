@@ -1,0 +1,19 @@
+uuid: 10b9d38e-1e58-4673-8b87-df49005534d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_formula
+    - node.type.performance_measure
+id: node.performance_measure.field_formula
+field_name: field_formula
+entity_type: node
+bundle: performance_measure
+label: 'Performance Measure Formula'
+description: 'An expression based on a metric, used to establish targets and to assess progress towards achieving the established target.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

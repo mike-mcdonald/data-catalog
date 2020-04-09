@@ -1,0 +1,23 @@
+uuid: a59bd78f-bc73-4ccf-9030-a54a426f13bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.performance_measure
+  module:
+    - text
+id: node.performance_measure.body
+field_name: body
+entity_type: node
+bundle: performance_measure
+label: Description
+description: 'Provide a description of what the measure is.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

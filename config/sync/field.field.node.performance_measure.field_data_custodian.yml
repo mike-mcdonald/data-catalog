@@ -1,0 +1,29 @@
+uuid: 307c13ec-4716-4810-9db4-ae003ae34bdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_custodian
+    - node.type.contact_information
+    - node.type.performance_measure
+id: node.performance_measure.field_data_custodian
+field_name: field_data_custodian
+entity_type: node
+bundle: performance_measure
+label: 'Performance Measure Contact'
+description: 'Name and email of the person who can answer questions about this metric.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      contact_information: contact_information
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
