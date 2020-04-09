@@ -11,7 +11,7 @@ field_name: field_datasets
 entity_type: node
 bundle: performance_measure
 label: 'Data set(s)'
-description: 'Includes (1) data collection mechanisms (describe ways the data will be collected, survey forms, printed reports, contractor performance reports, etc.); (2) data sources (manual logs, check sheets, computer databases, surveys, spreadsheets, etc.); data collection time frame (i.e. reporting time lag); data storage location.'
+description: 'Select one or more Data set(s) that supports this measure.'
 required: false
 translatable: false
 default_value: {  }
