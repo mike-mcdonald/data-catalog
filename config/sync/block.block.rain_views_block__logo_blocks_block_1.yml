@@ -1,0 +1,24 @@
+uuid: 3b0199e9-9864-459d-b084-6b4d9edcc1fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.logo_blocks
+  module:
+    - views
+  theme:
+    - rain
+id: rain_views_block__logo_blocks_block_1
+theme: rain
+region: left_footer
+weight: -8
+provider: null
+plugin: 'views_block:logo_blocks-block_1'
+settings:
+  id: 'views_block:logo_blocks-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

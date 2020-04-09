@@ -32,6 +32,11 @@
     'py-2',
     'px-4',
     'rounded',
+    'flex',
+    'items-center',
+    'transition',
+    'ease-in-out',
+    'duration-150',
   ])
 %}
 {% set first_classes = first_classes|default(['rounded-l']) %}
@@ -45,8 +50,7 @@
       {% set previous_tag = items.previous ? 'a' : 'span' %}
       {%
         set previous_classes = list_item_classes|merge([
-          not items.previous ? 'cursor-not-allowed',
-          not items.previous ? 'text-gray',
+          not items.previous ? 'invisible'
         ])
       %}
       {% set previous_attributes = create_attribute({
@@ -61,16 +65,13 @@
         <span aria-hidden="true">{% include active_theme_path() ~ '/icons/chevron-left.svg' %}</span>
       </{{ previous_tag }}>
       {% if items.current %}
-        {% set page_classes = list_item_classes|merge([
-          'hover:bg-fog-800',
-        ]) %}
         {% if current == key %}
           {% set title = 'Current page'|t %}
         {% else %}
           {% set title = 'Go to page @key'|t({'@key': key}) %}
         {% endif %}
 
-        <span{{ create_attribute({ 'class': page_classes }) }} href="{{ item.href }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }}>
+        <span{{ create_attribute({ 'class': ['font-bold', 'py-2', 'px-4'] }) }} href="{{ item.href }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }}>
           {% trans %}
             Page {{ items.current }}
           {% endtrans %}
@@ -80,8 +81,7 @@
       {% set next_tag = items.next ? 'a' : 'span' %}
       {%
         set next_classes = list_item_classes|merge([
-          not items.next ? 'cursor-not-allowed',
-          not items.next ? 'text-gray',
+          not items.next ? 'invisible',
         ])
       %}
       {% set next_attributes = create_attribute({

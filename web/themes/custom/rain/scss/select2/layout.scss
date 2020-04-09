@@ -19,6 +19,7 @@
   &.select2-container--open.select2-container--below {
     .select2-selection--single,
     .select2-selection--multiple {
+      @apply outline-none bg-white border-gray-900;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }

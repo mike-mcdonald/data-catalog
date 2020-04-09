@@ -23,15 +23,18 @@
  * @see template_preprocess_taxonomy_term()
  */
 #}
-{% set classes = classes|default([
-  ])
+{% set classes = classes|default([])
 %}
+
+{% set link_classes = link_classes|default([])
+%}
+
 {% set heading_element = heading_element|default('h2') %}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if not page %}
     <{{ heading_element }}>
-      <a href="{{ url }}">{{ name }}</a>
+      <a{{ create_attribute({ 'class': link_classes })}} href="{{ url }}">{{ name }}</a>
     </{{ heading_element }}>
   {% endif %}
   {{ title_suffix }}

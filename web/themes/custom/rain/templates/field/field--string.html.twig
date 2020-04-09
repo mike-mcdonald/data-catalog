@@ -43,11 +43,10 @@
     {% spaceless %}
       {% block content %}
         {%- for item in items if item.content|render|striptags|trim is not empty -%}
-          <p{{ item.attributes.addClass(item_classes) }}>
+          <span{{ item.attributes.addClass(item_classes) }}>
             {{ item.content }}
-          </p>
+          </span>
         {%- endfor -%}
       {% endblock %}
     {% endspaceless %}
   {% endembed %}
-  

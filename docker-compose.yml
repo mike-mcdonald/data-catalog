@@ -10,7 +10,7 @@
 # Database password: example
 # ADVANCED OPTIONS; Database host: postgres
 
-version: "3.7"
+version: "3.3"
 
 services:
   db:
@@ -56,13 +56,12 @@ services:
       - mail-network
 
   php:
-    build:
-      context: .
-      dockerfile: php.Dockerfile
+    image: pbotapps/php:7.4-fpm
     user: www-data
     environment:
       CACHE_HOST: redis
       CACHE_PORT: 6379
+      DRUPAL_ENV: development
       XDEBUG_CONFIG: remote_host=host.docker.internal
     volumes:
       - ".:/var/www/html:cached"

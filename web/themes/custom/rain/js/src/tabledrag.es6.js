@@ -230,20 +230,23 @@ import info from '../../icons/info.svg';
 
     const buttonClasses = [
       'tabledrag-toggle-weight',
-      'ml-auto',
-      'bg-cyan-500',
       'appearance-none',
-      'border',
-      'border-cyan-800',
-      'rounded',
-      'py-2',
+      'ml-auto',
       'px-4',
+      'py-3',
+      'border',
+      'border-transparent',
+      'rounded-lg',
+      'shadow',
+      'bg-cyan-500',
       'text-white',
-      'leading-tight',
+      'hover:bg-cyan-600',
       'focus:outline-none',
+      'focus:shadow-outline',
       'focus:bg-cyan-600',
-      'focus:border-cyan-800',
-      'hover:border-cyan-500'
+      'transition',
+      'ease-in-out',
+      'duration-150'
     ];
 
     // Add a link before the table for users to show or hide weight columns.
