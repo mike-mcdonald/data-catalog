@@ -7,4 +7,7 @@
 .field-ui-overview .field-plugin-settings-editing .field-plugin-type + * {
   @apply hidden;
 }
+.cke_editable {
+  @apply px-2;
+}
 /*! purgecss end ignore */

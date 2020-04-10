@@ -35,3 +35,6 @@ libraries-override:
         css/components/tabledrag.module.css: false
   cshs/cshs.base: false
   views_ui/admin.styling: false
+
+ckeditor_stylesheets:
+  - css/style.bundle.css
