@@ -36,35 +36,30 @@
  * @see template_preprocess_field()
  */
 #}
-{% set margin = margin|default('4') %}
-
-{% set classes = classes|default([
-  label_display == 'inline' ? 'sm:grid' : 'flex',
-  label_display == 'inline' ? 'sm:grid-cols-2' : 'flex-col',
-  label_display == 'inline' ? 'gap-4',
-]) %}
-
 {%
-  set field_classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-    'my-' ~ margin,
-  ]
+  set field_classes = field_classes|default([
+    'my-4',
+  ])|merge([
+    label_display == 'inline' ? 'sm:grid' : 'flex',
+    label_display == 'inline' ? 'sm:grid-cols-2' : 'flex-col',
+    label_display == 'inline' ? 'gap-4',
+  ])
 %}
+
 {%
   set title_classes = title_classes|default([
     label_display == 'visually_hidden' ? 'visually-hidden',
     'font-semibold'
   ])
 %}
+
 {% set content_attribute = content_attribute|default(create_attribute()) %}
 {% set content_classes = content_classes|default([]) %}
 {% set item_classes = item_classes|default([]) %}
+
 {% spaceless %}
 	{% block field %}
-		<div{{attributes.addClass(field_classes).addClass(classes)}}>
+		<div{{attributes.addClass(field_classes)}}>
 			{% block label %}
 				{%- if not label_hidden -%}
 					<label{{title_attributes.addClass(title_classes)}}>
