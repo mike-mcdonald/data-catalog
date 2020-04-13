@@ -1,0 +1,30 @@
+uuid: 70f91927-8236-41c2-8808-404702022c61
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - options
+id: media.field_media_logo_section
+field_name: field_media_logo_section
+entity_type: media
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: footer
+      label: Footer
+    -
+      value: header
+      label: Header
+    -
+      value: sidebar
+      label: Sidebar
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

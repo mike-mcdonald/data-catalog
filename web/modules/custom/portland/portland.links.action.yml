@@ -31,3 +31,11 @@ access_points_add_action:
     node_type: "access_point"
   appears_on:
     - view.full_index.page_1
+
+performance_measure_add_action:
+  route_name: node.add
+  title: "Add performance measure"
+  route_parameters:
+    node_type: "performance_measure"
+  appears_on:
+    - view.full_index.page_1
