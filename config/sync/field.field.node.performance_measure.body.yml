@@ -13,7 +13,7 @@ entity_type: node
 bundle: performance_measure
 label: Description
 description: 'Provide a description of what the measure is.'
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

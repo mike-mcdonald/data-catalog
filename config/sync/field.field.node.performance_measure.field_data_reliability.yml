@@ -11,7 +11,7 @@ field_name: field_data_reliability
 entity_type: node
 bundle: performance_measure
 label: 'Data Reliability'
-description: 'Refers to the expected accuracy and reliability of the performance data. High—data gathered via reliable process designed to validate or verify the information; Medium—somewhat dependable process designed to validate or verify the information; Low—data gathered without a dependable process to validate or verify the information, or indication that bureau does not have a reliable method of data quality assurance.'
+description: "Refers to the expected accuracy and reliability of the performance data. \r\n<ol>\r\n<li><b>High:</b> data gathered via reliable process designed to validate or verify the information. </li>\r\n <li><b>Medium:</b> somewhat dependable process designed to validate or verify the information.</li><li><b>Low:</b> data gathered without a dependable process to validate or verify the information or indication that bureau does not have a reliable method of data quality assurance.</li></ol>"
 required: false
 translatable: false
 default_value: {  }
