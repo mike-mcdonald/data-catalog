@@ -83,9 +83,7 @@ function rain_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $
   $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
 
   $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
-  $suggestions[] = 'taxonomy_term__' . $term->bundle();
   $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
-  $suggestions[] = 'taxonomy_term__' . $term->id();
   $suggestions[] = 'taxonomy_term__' . $term->id() . '__' . $sanitized_view_mode;
 }
 
@@ -122,6 +120,7 @@ function rain_theme_suggestions_field_alter(array &$suggestions, array $variable
   $element = $variables['element'];
 
   $entity_type = $element['#entity_type'];
+  $bundle = $element['#bundle'];
   $view_mode = $element['#view_mode'];
   $field_type = $element['#field_type'];
   $field_name = $element['#field_name'];
@@ -131,10 +130,13 @@ function rain_theme_suggestions_field_alter(array &$suggestions, array $variable
   }
 
   $suggestions[] = 'field__' . $view_mode;
-  $suggestions[] = 'field__' . $entity_type;
-  $suggestions[] = 'field__' . $entity_type . '__' . $view_mode;
-  $suggestions[] = 'field__' . $field_name;
+  $suggestions[] = 'field__' . $field_name  . '__' . $bundle;
   $suggestions[] = 'field__' . $field_name  . '__' . $view_mode;
+  $suggestions[] = 'field__' . $field_type  . '__' . $bundle;
+  $suggestions[] = 'field__' . $field_type  . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $bundle;
+  $suggestions[] = 'field__' . $entity_type . '__' . $bundle . '__' . $view_mode;
   $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' .$view_mode ;
 }
 
