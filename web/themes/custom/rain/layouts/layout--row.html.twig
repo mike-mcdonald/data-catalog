@@ -12,6 +12,7 @@
 #}
 {%
   set layout_classes = layout_classes|default([
+    '-mx-4',
     'flex',
     'flex-wrap',
     'items-center',
@@ -19,6 +20,10 @@
 %}
 {% if content %}
   <section{{region_attributes.content.addClass(layout_classes)}}>
-    {{ content.content }}
+    {% for item in content.content %}
+      <div class="mx-4">
+        {{ item }}
+      </div>
+    {% endfor %}
   </section>
 {% endif %}
