@@ -32,7 +32,7 @@
     "drupal/cshs": "^1.0@beta",
     "drupal/csv_serialization": "^1.4",
     "drupal/easy_breadcrumb": "^1.8",
-    "drupal/entity_browser": "^2.0",
+    "drupal/entity_browser": "^2.4",
     "drupal/facets": "^1.1",
     "drupal/field_group": "^1.0",
     "drupal/inline_entity_form": "^1.0@RC",
