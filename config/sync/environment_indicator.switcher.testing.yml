@@ -1,0 +1,10 @@
+uuid: b55b6f50-9c93-4012-bc0f-7c19feb77e98
+langcode: en
+status: true
+dependencies: {  }
+machine: testing
+description: null
+name: Testing
+url: 'https://pbotweb4/drupal/next/data-catalog'
+fg_color: '#49270a'
+bg_color: '#fbcda6'
