@@ -1,0 +1,19 @@
+uuid: 7f4e96f8-a267-40ab-98c6-ebed2a390175
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_threshold
+    - node.type.performance_measure
+id: node.performance_measure.field_threshold
+field_name: field_threshold
+entity_type: node
+bundle: performance_measure
+label: 'Performance Measure Threshold'
+description: 'The level of performance based on a variable that  determines its inclusion in the measure.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

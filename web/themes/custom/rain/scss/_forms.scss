@@ -4,11 +4,10 @@
   display: inline-flex;
 }
 
-.filter-wrapper {
-  @apply p-2 m-2 -mt-2 border;
-}
-
 .field-ui-overview .field-plugin-settings-editing .field-plugin-type + * {
   @apply hidden;
+}
+.cke_editable {
+  @apply px-2;
 }
 /*! purgecss end ignore */

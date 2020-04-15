@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: liveness_information
-label: 'Data is updated'
+label: Live
 revision: 0
 description: ''

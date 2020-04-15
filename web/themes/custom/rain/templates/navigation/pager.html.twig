@@ -37,20 +37,26 @@
 %}
 {%
   set list_classes = list_classes|default([
-    'list-reset',
+    'list-none',
     'inline-flex',
+    'items-stretch',
     'p-1',
-    'bg-fog',
+    'bg-fog-300',
     'rounded',
   ])
 %}
 {%
   set list_item_classes = list_item_classes|default([
-    'hover:bg-fog-darker',
-    'font-bold',
-    'py-2',
     'px-4',
+    'py-2',
     'rounded',
+    'font-bold',
+    'flex',
+    'items-center',
+    'transition',
+    'ease-in-out',
+    'duration-150',
+    'hover:bg-fog-500',
   ])
 %}
 {% set first_classes = first_classes|default(['rounded-l']) %}
@@ -64,8 +70,7 @@
       {% set previous_tag = items.previous ? 'a' : 'span' %}
       {%
         set previous_classes = list_item_classes|merge([
-          not items.previous ? 'cursor-not-allowed',
-          not items.previous ? 'text-grey',
+          not items.previous ? 'invisible',
         ])
       %}
       {% set previous_attributes = create_attribute({
@@ -77,18 +82,24 @@
       %}
       <{{ previous_tag }}{{ previous_attributes }}{{ items.previous.attributes|without('href', 'title', 'rel') }}>
         <span class="visually-hidden">{{ 'Previous page'|t }}</span>
-        <span aria-hidden="true">{% include active_theme_path() ~ '/icons/chevron-left.svg' %}</span>
+        <span>{% include active_theme_path() ~ '/icons/chevron-left.svg' %}</span>
       </{{ previous_tag }}>
       {# Add an ellipsis if there are further previous pages. #}
       {% if ellipses.previous %}
         <span{{ create_attribute({ 'class': list_item_classes }) }} role="presentation">&hellip;</span>
       {% endif %}
       {# Now generate the actual pager piece. #}
+      <div{{ create_attribute({ 'class': [
+        'list-none',
+        'inline-flex',
+        'flex-wrap',
+        'items-stretch',
+      ] }) }}>
       {% for key, item in items.pages %}
         {% set page_classes = list_item_classes|merge([
-          current == key ? 'bg-cyan',
-          current == key ? 'hover:bg-cyan-dark',
-          current == key ? 'text-white',
+          current == key ? 'bg-fog-900',
+          current == key ? 'text-fog-100',
+          current == key ? 'hover:text-fog-900',
           'mx-1',
         ]) %}
         {% if current == key %}
@@ -107,12 +118,12 @@
       {% if ellipses.next %}
         <span{{ create_attribute({ 'class': list_item_classes }) }} role="presentation">&hellip;</span>
       {% endif %}
+      </div>
       {# Print next item #}
       {% set next_tag = items.next ? 'a' : 'span' %}
       {%
         set next_classes = list_item_classes|merge([
-          not items.next ? 'cursor-not-allowed',
-          not items.next ? 'text-grey',
+          not items.next ? 'invisible',
         ])
       %}
       {% set next_attributes = create_attribute({
@@ -124,7 +135,7 @@
       %}
       <{{ next_tag }}{{ next_attributes }}{{ items.next.attributes|without('href', 'title', 'rel') }}>
         <span class="visually-hidden">{{ 'Next page'|t }}</span>
-        <span aria-hidden="true">{% include active_theme_path() ~ '/icons/chevron-right.svg' %}</span>
+        <span>{% include active_theme_path() ~ '/icons/chevron-right.svg' %}</span>
       </{{ next_tag }}>
     </div>
   </nav>

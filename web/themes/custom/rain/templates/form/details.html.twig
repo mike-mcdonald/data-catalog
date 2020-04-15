@@ -20,6 +20,8 @@
     'rounded',
     'p-3',
     'my-2',
+    'flex',
+    'flex-col',
   ])
 %}
 <details{{attributes.addClass(classes)}}>
@@ -38,8 +40,9 @@
       {{ errors }}
     </div>
   {% endif %}
-
-  {{ description }}
+  <small class="my-3 text-gray-600">
+    {{ description }}
+  </small>
   {{ children }}
   {{ value }}
 </details>

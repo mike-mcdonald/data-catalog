@@ -12,16 +12,13 @@
 #}
 {%
   set layout_classes = layout_classes|default([
-    'flex',
-    'flex-col',
-    'md:flex-row',
-    'flex-wrap',
+    'sm:grid',
+    'sm:grid-cols-2',
+    'sm:gap-4',
   ])
 %}
 {%
-  set region_classes = region_classes|default([
-    'md:w-1/2',
-  ])
+  set region_classes = region_classes|default([])
 %}
 {% if content %}
   <div{{attributes.addClass(layout_classes)}}>

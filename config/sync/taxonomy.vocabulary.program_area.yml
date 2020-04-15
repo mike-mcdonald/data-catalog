@@ -1,0 +1,8 @@
+uuid: 6d9a02d0-7688-4cd5-94a3-2f893ad9db04
+langcode: en
+status: true
+dependencies: {  }
+name: 'Program Area'
+vid: program_area
+description: ''
+weight: 0

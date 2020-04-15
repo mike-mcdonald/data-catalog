@@ -49,6 +49,14 @@ function rain_preprocess_page(array &$variables) {
   }
 }
 
+function rain_preprocess_views_view_grid(array &$variables) {
+  foreach ($variables['items'] as $item) {
+    foreach ($item['content'] as $content) {
+      $content['attributes']['style'] = NULL;
+    }
+  }
+}
+
 /**
  * Implements hook_theme_suggestions_page_alter().
  */
@@ -75,9 +83,7 @@ function rain_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $
   $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
 
   $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
-  $suggestions[] = 'taxonomy_term__' . $term->bundle();
   $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
-  $suggestions[] = 'taxonomy_term__' . $term->id();
   $suggestions[] = 'taxonomy_term__' . $term->id() . '__' . $sanitized_view_mode;
 }
 
@@ -114,6 +120,7 @@ function rain_theme_suggestions_field_alter(array &$suggestions, array $variable
   $element = $variables['element'];
 
   $entity_type = $element['#entity_type'];
+  $bundle = $element['#bundle'];
   $view_mode = $element['#view_mode'];
   $field_type = $element['#field_type'];
   $field_name = $element['#field_name'];
@@ -123,10 +130,13 @@ function rain_theme_suggestions_field_alter(array &$suggestions, array $variable
   }
 
   $suggestions[] = 'field__' . $view_mode;
-  $suggestions[] = 'field__' . $entity_type;
-  $suggestions[] = 'field__' . $entity_type . '__' . $view_mode;
-  $suggestions[] = 'field__' . $field_name;
+  $suggestions[] = 'field__' . $field_name  . '__' . $bundle;
   $suggestions[] = 'field__' . $field_name  . '__' . $view_mode;
+  $suggestions[] = 'field__' . $field_type  . '__' . $bundle;
+  $suggestions[] = 'field__' . $field_type  . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $bundle;
+  $suggestions[] = 'field__' . $entity_type . '__' . $bundle . '__' . $view_mode;
   $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' .$view_mode ;
 }
 
@@ -216,16 +226,22 @@ function rain_preprocess_menu_local_task(array &$variables) {
 function rain_preprocess_facets_item_list(array &$variables) {
   /* value in items is a link which needs to be styled here and not in a template */
   $link_classes = [
-    'py-3',
     'px-2',
-    'hover:bg-fog-light',
+    'py-1',
+    'rounded-sm',
     'flex',
     'items-center',
     'justify-between',
+    'transition',
+    'ease-in-out',
+    'duration-15',
+    'hover:bg-gray-100',
+    'focus:bg-gray-100',
+    'focus:shadow-outline',
   ];
 
   $active_classes = [
-    'bg-fog-light',
+    'bg-gray-100',
   ];
 
   foreach ($variables['items'] as $key => &$item) {
@@ -234,16 +250,6 @@ function rain_preprocess_facets_item_list(array &$variables) {
     }
     else {
       $item['value']['#attributes']['class'] = $link_classes;
-    }
-
-    if(isset($item['value']['#is_child'])) {
-      $item['value']['#attributes']['class'] = array_merge($item['value']['#attributes']['class'], ['border-l-8']);
-    }
-
-    if(isset($item['value']['children'])) {
-      foreach($item['value']['children']['#items'] as &$child) {
-        $child['#is_child'] = true;
-      }
     }
   }
 }

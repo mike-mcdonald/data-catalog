@@ -1,0 +1,17 @@
+uuid: 3662eebe-7dea-4483-ba29-3afd1e144eae
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Performance measure'
+type: performance_measure
+description: 'Use This Content Type to create new Performance Measure records.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

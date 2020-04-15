@@ -28,30 +28,30 @@
 {% if facet.widget.type == 'links' or facet.widget.type is empty %}
   {%
     set list_classes = [
-      'flex',
-      'flex-col',
-      'list-reset'
+      'grid',
+      'grid-cols-1',
+      'gap-px',
+      'list-none'
     ]
   %}
+  {% set item_classes = []%}
 {% endif %}
 
 
 {% if facet.widget.type == 'dropdown' %}
   {%
     set list_classes = [
-      'bg-grey-lightest',
       'block',
-      'border',
-      'border-grey',
-      'rounded',
       'w-full',
-      'py-2',
+      'py-3',
       'px-4',
-      'leading-tight',
+      'border',
+      'border-gray-500',
+      'rounded',
+      'bg-gray-100',
       'focus:outline-none',
       'focus:bg-white',
-      'focus:border-4',
-      'focus:border-grey-darkest'
+      'focus:border-gray-900'
     ]
   %}
 {% endif %}

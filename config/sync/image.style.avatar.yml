@@ -1,0 +1,14 @@
+uuid: 3cbfc816-4ba9-42cf-86b2-69e3fe7b7660
+langcode: en
+status: true
+dependencies: {  }
+name: avatar
+label: 'Avatar (50x50)'
+effects:
+  458b91a9-144c-4085-b0b4-5558eff85796:
+    uuid: 458b91a9-144c-4085-b0b4-5558eff85796
+    id: image_resize
+    weight: 1
+    data:
+      width: 50
+      height: 50

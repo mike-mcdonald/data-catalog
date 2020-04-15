@@ -1,0 +1,29 @@
+uuid: ca977f53-d4c4-4e5e-ba08-e54de2577637
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frequency
+    - node.type.performance_measure
+    - taxonomy.vocabulary.frequency
+id: node.performance_measure.field_frequency
+field_name: field_frequency
+entity_type: node
+bundle: performance_measure
+label: 'Frequency of Data Collection'
+description: 'How often are component variables collected, frequency may vary from when data is reported.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      frequency: frequency
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

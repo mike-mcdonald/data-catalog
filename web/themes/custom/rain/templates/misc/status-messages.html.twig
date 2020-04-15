@@ -27,7 +27,7 @@
 {% set list_attributes = list_attributes|default(create_attribute()) %}
 {%
   set list_classes = list_classes|default([
-    'list-reset',
+    'list-none',
   ])
 %}
 {%
@@ -40,15 +40,15 @@
 {% for type, messages in message_list %}
   {%
     set type_classes = [
-      type == 'error' ? 'bg-red-lightest',
-      type == 'warning' ? 'bg-tangerine-lightest',
-      type == 'status' ? 'bg-green-lightest',
-      type == 'error' ? 'border-red',
-      type == 'warning' ? 'border-tangerine',
-      type == 'status' ? 'border-green',
-      type == 'error' ? 'text-red-darkest',
-      type == 'warning' ? 'text-tangerine-darkest',
-      type == 'status' ? 'text-green-darkest',
+      type == 'error' ? 'bg-red-100',
+      type == 'warning' ? 'bg-orange-100',
+      type == 'status' ? 'bg-green-100',
+      type == 'error' ? 'border-red-500',
+      type == 'warning' ? 'border-orange-500',
+      type == 'status' ? 'border-green-500',
+      type == 'error' ? 'text-red-900',
+      type == 'warning' ? 'text-orange-900',
+      type == 'status' ? 'text-green-900',
     ]
   %}
   <div role="{{ type == 'error' ? 'alert' : 'contentinfo' }}" aria-label="{{ status_headings[type] }}" {{ attributes.addClass(wrapper_classes)|without('role', 'aria-label') }}>

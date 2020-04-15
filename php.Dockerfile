@@ -1,10 +1,17 @@
-FROM php:7.3-fpm
+FROM php:7.4-fpm
 
-RUN apt-get update && apt-get install -my gnupg
+# Use custom certificates
+COPY ./.certs /usr/local/share/ca-certificates
+RUN update-ca-certificates
+
 # Get the repository set up for postgresql
+# Required to use GPG below
+RUN apt-get update && apt-get install -my gnupg2
+# Add postgresql repository
 RUN { \
   echo 'deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main'; \
   } > /etc/apt/sources.list.d/pgdg.list
+# Add postgresql GPG
 RUN curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 RUN apt-get update && apt-get install -y \
@@ -14,7 +21,8 @@ RUN apt-get update && apt-get install -y \
   imagemagick \
   libbz2-dev \
   libc-client2007e-dev \
-  libjpeg-dev \
+  libfreetype6-dev \
+  libjpeg62-turbo-dev \
   libkrb5-dev \
   libldap2-dev \
   libmagickwand-dev \
@@ -37,10 +45,10 @@ RUN apt-get update && apt-get install -y \
   && pecl install apcu \
   && pecl install imagick \
   && pecl install memcached \
-  && pecl install oauth-2.0.2 \
-  && pecl install redis-3.1.2 \
+  && pecl install oauth \
+  && pecl install redis \
   && pecl install xdebug \
-  && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
+  && docker-php-ext-configure gd --with-freetype --with-jpeg \
   && docker-php-ext-configure imap --with-imap-ssl --with-kerberos \
   && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ \
   && docker-php-ext-enable apcu \
@@ -57,7 +65,6 @@ RUN apt-get update && apt-get install -y \
   gd \
   imap \
   ldap \
-  mbstring \
   mysqli \
   opcache \
   pdo \
@@ -80,14 +87,15 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
   && php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" \
   && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
   && php -r "unlink('composer-setup.php');" \
-  && mkdir -p /var/www/.composer
+  && mkdir -p /var/www/.composer \
+  && chown -R www-data:www-data /var/www/.composer
 
 # Install terminus
 RUN mkdir -p /srv/bin/terminus \
   && curl -O "https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar" \
-  && php installer.phar install --install-dir=/srv/bin/terminus --install-version=$TERMINUS_VERSION
+  && php installer.phar install --install-dir=/srv/bin/terminus
 
-# set recommended PHP.ini settings
+# set recommended opcache settings
 # see https://secure.php.net/manual/en/opcache.installation.php
 RUN { \
   echo 'opcache.memory_consumption=128'; \

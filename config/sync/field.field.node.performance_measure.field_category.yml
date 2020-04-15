@@ -1,0 +1,29 @@
+uuid: 162512ad-cfd8-4401-b142-8a198c25f9c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.performance_measure
+    - taxonomy.vocabulary.performance_metric_purpose
+id: node.performance_measure.field_category
+field_name: field_category
+entity_type: node
+bundle: performance_measure
+label: 'Performance Metric Purpose'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      performance_metric_purpose: performance_metric_purpose
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

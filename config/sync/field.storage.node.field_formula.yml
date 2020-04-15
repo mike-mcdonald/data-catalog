@@ -1,0 +1,19 @@
+uuid: 9352c39e-dc67-400f-9619-d183a8800bd8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_formula
+field_name: field_formula
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

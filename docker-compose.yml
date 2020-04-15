@@ -10,18 +10,18 @@
 # Database password: example
 # ADVANCED OPTIONS; Database host: postgres
 
-version: "2"
+version: "3.3"
 
 services:
   db:
     image: postgres:11
     environment:
       POSTGRES_DB: datacatalog
-      POSTGRES_USER: datacatalog
+      POSTGRES_USER: datacatalogadmin
       POSTGRES_PASSWORD: datacatalog
     volumes:
-      - ./artifacts:/docker-entrypoint-initdb.d
-      - db:/var/lib/postgresql/data
+      - "./artifacts:/docker-entrypoint-initdb.d"
+      - "db:/var/lib/postgresql/data"
     networks:
       - code-network
       - db-network
@@ -29,8 +29,8 @@ services:
   mail:
     image: mailhog/mailhog
     ports:
-      - 1025:1025
-      - 8025:8025
+      - "1025:1025"
+      - "8025:8025"
     restart: always
     networks:
       - mail-network
@@ -45,32 +45,28 @@ services:
     environment:
       PANTHEON_ENVIRONMENT: dev
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
     volumes:
-      - tmp:/var/www/html/tmp
-      - .:/var/www/html:cached
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./site.conf:/etc/nginx/conf.d/default.conf
-      - ./certs:/certs
+      - ".:/var/www/html:cached"
+      - "./nginx.conf:/etc/nginx/nginx.conf"
+      - "./site.conf:/etc/nginx/conf.d/default.conf"
     networks:
       - code-network
       - cache-network
       - mail-network
 
   php:
-    build:
-      context: .
-      dockerfile: php.Dockerfile
+    image: pbotapps/php:7.4-fpm
+    user: www-data
     environment:
       CACHE_HOST: redis
       CACHE_PORT: 6379
+      DRUPAL_ENV: development
       XDEBUG_CONFIG: remote_host=host.docker.internal
     volumes:
-      - tmp:/var/www/html/tmp
-      - .:/var/www/html:cached
-      - ./.user.ini:/usr/local/etc/php/conf.d/custom.ini
-      - ./log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+      - ".:/var/www/html:cached"
+      - "./.user.ini:/usr/local/etc/php/conf.d/custom.ini"
+      - "./log.conf:/usr/local/etc/php-fpm.d/zz-log.conf"
     networks:
       - code-network
       - cache-network

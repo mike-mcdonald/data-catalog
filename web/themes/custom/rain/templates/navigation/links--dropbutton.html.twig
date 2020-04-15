@@ -1,6 +1,6 @@
 {% embed 'links.html.twig' with {
   'list_classes': [
-    'list-reset',
+    'list-none',
     'relative',
   ],
   'list_item_classes': [
@@ -8,24 +8,26 @@
     'flex-row',
     'items-center',
     'justify-between',
-    'bg-cyan',
+    'bg-cyan-500',
     'appearance-none',
     'cursor-pointer',
     'border',
-    'border-cyan-darker',
+    'border-transparent',
     'rounded',
     'p-2',
     'text-white',
-    'leading-tight',
     'focus:outline-none',
-    'focus:border-cyan-darker',
+    'focus:border-cyan-800',
     'hover:border-cyan',
+    'transition',
+    'ease-in-out',
+    'duration-150',
   ],
 } %}
 {% set secondary_list_attributes = secondary_list_attributes|default(create_attribute()) %}
 {% set secondary_list_classes = secondary_list_classes|default([
   'relative',
-  'list-reset',
+  'list-none',
   'secondary-action',
 ]) %}
 
@@ -34,25 +36,24 @@
   'flex-row',
   'items-center',
   'justify-between',
-  'hover:bg-fog-dark',
+  'hover:bg-fog-600',
   'appearance-none',
   'cursor-pointer',
   'p-2',
   'text-body',
-  'leading-tight',
   'focus:outline-none',
 ]) %}
 
 {% set pin_attributes = pin_attributes|default(create_attribute()) %}
 {% set pin_classes = pin_classes|default([
   'absolute',
-  'pin-t',
-  'pin-r',
+  'top-0',
+  'right-0',
   'z-50',
   'w-64',
   'mt-1',
   'py-1',
-  'bg-fog',
+  'bg-fog-500',
   'border',
   'rounded',
   'shadow-lg',

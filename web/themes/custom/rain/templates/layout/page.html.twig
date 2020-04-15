@@ -58,7 +58,7 @@
 	</section>
 {% endif %}
 {% if page.header|render is not empty or page.header_menu|render is not empty %}
-	<header role="banner" class="bg-grey text-white">
+	<header role="banner" class="bg-gray-500 text-white">
 		<span class="{{ container_classes|merge(['items-center'])|join(' ') }}">
 			{{ page.header }}
 			{{ page.header_menu }}
@@ -77,7 +77,7 @@
 		</span>
 	</section>
 {% endif %}
-<main role="main" class="{{ container_classes|merge(['mb-4'])|join(' ') }}">
+<main role="main" class="{{ container_classes|merge(['mb-24'])|join(' ') }}">
 	<a class="border-0" id="main-content" tabindex="-1"></a>
 	{# link is in html.html.twig #}
 	{% if page.left_sidebar is not empty %}
@@ -96,12 +96,14 @@
 	{% endif %}
 </main>
 {% if page.left_footer or page.right_footer %}
-	<footer role="contentinfo" class="{{ container_classes|merge(['justify-between'])|join(' ') }}">
-		<section>
-			{{ page.left_footer }}
-		</section>
-		<section>
-			{{ page.right_footer }}
-		</section>
+	<footer role="contentinfo" class="bg-gray-900 text-gray-100">
+    <div class="container mx-auto px-2 pt-8 pb-16 sm:grid sm:grid-cols-2 sm:gap-4">
+      <section>
+        {{ page.left_footer }}
+      </section>
+      <section>
+        {{ page.right_footer }}
+      </section>
+    </div>
 	</footer>
 {% endif %}

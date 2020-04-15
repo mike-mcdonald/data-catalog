@@ -38,16 +38,17 @@
 #}
 
 {% embed 'field.html.twig' with {
-    'margin' : '0'
+    field_classes: [
+      'my-0',
+    ]
   } %}
     {% spaceless %}
       {% block content %}
-        {%- for item in items if item.content|render|striptags|trim is not empty -%}
-          <p{{ item.attributes.addClass(item_classes) }}>
+        {%- for item in items -%}
+          <span{{ item.attributes.addClass(item_classes) }}>
             {{ item.content }}
-          </p>
+          </span>
         {%- endfor -%}
       {% endblock %}
     {% endspaceless %}
   {% endembed %}
-  

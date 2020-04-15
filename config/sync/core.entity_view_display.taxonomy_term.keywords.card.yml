@@ -1,0 +1,21 @@
+uuid: 4cda63de-d50e-4769-9ce9-92bb2e28ce51
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.card
+    - taxonomy.vocabulary.keywords
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: taxonomy_term.keywords.card
+targetEntityType: taxonomy_term
+bundle: keywords
+mode: card
+content: {  }
+hidden:
+  description: true
+  search_api_excerpt: true

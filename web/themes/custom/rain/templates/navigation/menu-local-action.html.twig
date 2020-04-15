@@ -12,21 +12,24 @@
 #}
 {%
   set action_classes = action_classes|default([
-    'bg-cyan',
     'appearance-none',
     'cursor-pointer',
-    'border',
-    'border-cyan-darker',
-    'rounded',
     'm-2',
-    'py-2',
     'px-4',
+    'py-3',
+    'border',
+    'border-transparent',
+    'rounded-lg',
+    'shadow',
+    'bg-cyan-500',
     'text-white',
-    'leading-tight',
+    'hover:bg-cyan-600',
     'focus:outline-none',
-    'focus:bg-cyan-dark',
-    'focus:border-cyan-darker',
-    'hover:border-cyan',
+    'focus:shadow-outline',
+    'focus:bg-cyan-600',
+    'transition',
+    'ease-in-out',
+    'duration-150',
   ])
 %}
 <span{{attributes.addClass(action_classes)}}>

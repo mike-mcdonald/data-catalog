@@ -11,12 +11,10 @@
  */
 #}
 {%
-  set layout_classes = layout_classes|default([
-  ])
+  set layout_classes = layout_classes|default([])
 %}
 {%
-  set region_classes = region_classes|default([
-  ])
+  set region_classes = region_classes|default([])
 %}
 {% if content %}
   <div{{attributes.addClass(layout_classes).addClass(region_classes)}}>

@@ -1,0 +1,18 @@
+uuid: b40062f2-1f62-4a20-b3a1-f456d8644ef4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.performance_measure
+id: node.performance_measure.title
+field_name: title
+entity_type: node
+bundle: performance_measure
+label: 'Measure Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

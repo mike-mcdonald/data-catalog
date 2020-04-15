@@ -1,0 +1,21 @@
+uuid: 63a06088-012c-4395-9c02-092cba25d050
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.card
+    - taxonomy.vocabulary.status
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: taxonomy_term.status.card
+targetEntityType: taxonomy_term
+bundle: status
+mode: card
+content: {  }
+hidden:
+  description: true
+  search_api_excerpt: true

@@ -44,44 +44,50 @@ third_party_settings:
             weight: 0
         third_party_settings: {  }
       -
-        layout_id: layout_row
+        layout_id: layout_twocol
         layout_settings:
           label: ''
         components:
-          6df07345-49ab-4924-aab7-8e1af82a48e9:
-            uuid: 6df07345-49ab-4924-aab7-8e1af82a48e9
-            region: content
+          68936f7e-2f2a-4036-b1ab-0400fb22c080:
+            uuid: 68936f7e-2f2a-4036-b1ab-0400fb22c080
+            region: first
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:block_content:archival_information:field_earliest_record_year'
+              label: 'Earliest record year'
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: above
+                type: number_integer
                 settings:
                   thousand_separator: ''
-                  prefix_suffix: true
+                  prefix_suffix: false
                 third_party_settings: {  }
-                type: number_integer
-            additional: {  }
-            weight: 1
-          f6eb623c-4043-491b-b02d-b07f90909360:
-            uuid: f6eb623c-4043-491b-b02d-b07f90909360
-            region: content
-            configuration:
-              label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          9f30120c-eb39-4858-8ce4-d8923179f979:
+            uuid: 9f30120c-eb39-4858-8ce4-d8923179f979
+            region: second
+            configuration:
               id: 'field_block:block_content:archival_information:field_latest_record_year'
+              label: 'Latest record year'
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: above
+                type: number_integer
                 settings:
                   thousand_separator: ''
-                  prefix_suffix: true
+                  prefix_suffix: false
                 third_party_settings: {  }
-                type: number_integer
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: 0
         third_party_settings: {  }
 id: block_content.archival_information.default
 targetEntityType: block_content

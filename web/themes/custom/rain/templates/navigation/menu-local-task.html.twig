@@ -18,9 +18,9 @@
   set task_classes = task_classes|default([
     'py-3',
     'px-4',
-    is_active ? 'bg-cyan',
+    is_active ? 'bg-cyan-500',
     is_active ? 'text-white',
-    is_active ? 'hover:bg-cyan-darker' : 'hover:bg-fog-light ',
+    is_active ? 'hover:bg-cyan-800' : 'hover:bg-fog-300 ',
   ])
 %}
 <li{{ attributes.addClass(task_classes) }} {% if is_active %} aria-selected="true" {% endif %}>

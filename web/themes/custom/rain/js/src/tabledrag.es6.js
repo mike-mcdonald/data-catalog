@@ -230,20 +230,23 @@ import info from '../../icons/info.svg';
 
     const buttonClasses = [
       'tabledrag-toggle-weight',
-      'ml-auto',
-      'bg-cyan',
       'appearance-none',
-      'border',
-      'border-cyan-darker',
-      'rounded',
-      'py-2',
+      'ml-auto',
       'px-4',
+      'py-3',
+      'border',
+      'border-transparent',
+      'rounded-lg',
+      'shadow',
+      'bg-cyan-500',
       'text-white',
-      'leading-tight',
+      'hover:bg-cyan-600',
       'focus:outline-none',
-      'focus:bg-cyan-dark',
-      'focus:border-cyan-darker',
-      'hover:border-cyan'
+      'focus:shadow-outline',
+      'focus:bg-cyan-600',
+      'transition',
+      'ease-in-out',
+      'duration-150'
     ];
 
     // Add a link before the table for users to show or hide weight columns.
@@ -260,7 +263,7 @@ import info from '../../icons/info.svg';
             this.toggleColumns();
           }, this),
         )
-        .wrap('<div class="flex flex-col items-end m-2"></div>')
+        .wrap('<div class="flex flex-col items-end my-2"></div>')
         .parent(),
     );
 
@@ -504,9 +507,7 @@ import info from '../../icons/info.svg';
       'handle',
       'cursor-move',
       'align-middle',
-      'h-4',
-      'w-4',
-      'mr-3',
+      'float-left'
     ];
     const handle = $(
       `<span class="${handleClasses.join(' ')}">${move}</span>`,
@@ -777,7 +778,7 @@ import info from '../../icons/info.svg';
     self.table.bottomY = self.table.topY + self.table.offsetHeight;
 
     const dragClasses = [
-      'bg-cyan-lightest'
+      'bg-cyan-100'
     ];
 
     // Add classes to the handle and row.
@@ -1711,9 +1712,7 @@ import info from '../../icons/info.svg';
       tableDragChangedMarker() {
         const markerClasses = [
           'tabledrag-changed',
-          'text-purple-darkest',
           'font-bold',
-          'mr-3',
         ];
 
         return `
@@ -1738,19 +1737,12 @@ import info from '../../icons/info.svg';
         ];
 
         return `
-        <div role="alert" class="bg-purple-lightest border-t-4 border-purple rounded-b text-purple-darkest px-4 py-3 shadow-md mb-4">
-          <div class="flex">
+        <div role="alert" class="mb-1 border-l-8 p-4 bg-orange-100 border-orange-500 text-orange-900">
+          <div class="flex items-center">
             ${Drupal.theme('tableDragChangedMarker')}
-            <div>
+            <div class="mx-3">
               ${Drupal.t('You have unsaved changes.')}
             </div>
-          </div>
-        </div>`;
-
-        return `<div class="bg-indigo-darkest text-center py-4 lg:px-4">
-          <div class="p-2 bg-indigo-darker items-center text-indigo-lightest leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-            ${Drupal.theme('tableDragChangedMarker')}
-            <span class="font-semibold mr-2 text-left flex-auto">${Drupal.t('You have unsaved changes.')}</span>
           </div>
         </div>`;
       },

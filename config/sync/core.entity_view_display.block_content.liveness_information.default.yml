@@ -23,22 +23,6 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          60684860-b40a-446f-8264-97f67458738c:
-            uuid: 60684860-b40a-446f-8264-97f67458738c
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:block_content:liveness_information:field_frequency_update'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 1
           5c46b5a7-1c12-4f8c-9008-55fa6b4e5224:
             uuid: 5c46b5a7-1c12-4f8c-9008-55fa6b4e5224
             region: content
@@ -58,9 +42,31 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol
+        layout_settings:
+          label: ''
+        components:
+          60684860-b40a-446f-8264-97f67458738c:
+            uuid: 60684860-b40a-446f-8264-97f67458738c
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:liveness_information:field_frequency_update'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 1
           40d3c7b1-60d0-48ce-8687-2fff90984d39:
             uuid: 40d3c7b1-60d0-48ce-8687-2fff90984d39
-            region: content
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
