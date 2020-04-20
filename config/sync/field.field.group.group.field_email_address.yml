@@ -1,0 +1,19 @@
+uuid: 50e083ae-e2a5-42f8-8234-be3ce5b228c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_email_address
+    - group.type.group
+id: group.group.field_email_address
+field_name: field_email_address
+entity_type: group
+bundle: group
+label: 'E-mail address'
+description: 'Use the primary e-mail address for contacting the entire group. This could be a shared group inbox or an e-mail list.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email
