@@ -1,0 +1,20 @@
+uuid: b2dd20be-ace7-4ecf-a644-ce14ecaa4d4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.group
+id: group-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: group
+permissions_ui: true
+permissions:
+  - 'join group'
+  - 'view group'
+  - 'view group_node:access_point entity'
+  - 'view group_node:contact_information entity'
+  - 'view group_node:dataset entity'
+  - 'view group_node:performance_measure entity'
