@@ -1,41 +1,13 @@
-{%
-  set field_classes = field_classes|default([
-    'my-4',
-  ])|merge([
-    label_display == 'inline' ? 'flex' : 'flex',
+{% include 'field--changed.html.twig' with {
+  layout_classes: [
+    'flex',
     label_display == 'inline' ? 'flex-row' : 'flex-col',
-    label_display == 'inline' ? 'gap-4',
-  ])
-%}
-{%
-  set title_classes = title_classes|default([
-    label_display == 'visually_hidden' ? 'visually-hidden',
-    'font-semibold'
-  ])
-%}
-
-{% set content_attribute = content_attribute|default(create_attribute()) %}
-{% set content_classes = content_classes|default(['mx-2']) %}
-{% set item_classes = item_classes|default(['mx-2']) %}
-
-{% spaceless %}
-	{% block field %}
-		<div{{attributes.addClass(field_classes)}}>
-			{% block label %}
-				{%- if not label_hidden -%}
-					<label{{title_attributes.addClass(title_classes)}}>
-						{{ label|render }}</label>
-				{%- endif -%}
-			{% endblock %}
-			{% block content %}
-				<div{{content_attribute.addClass(content_classes)}}>
-					{%- for item in items -%}
-						<div{{item.attributes.addClass(item_classes)}}>
-							{{ item.content }}
-						</div>
-					{%- endfor -%}
-				</div>
-			{% endblock %}
-		</div>
-	{% endblock %}
-{% endspaceless %}
+  ],
+  field_classes: [
+    'my-4',
+    'text-gray-600',
+  ],
+  content_classes: [
+    'mx-2',
+  ],
+} %}
