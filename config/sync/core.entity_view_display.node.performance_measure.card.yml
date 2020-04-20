@@ -159,7 +159,7 @@ third_party_settings:
                 type: timestamp
                 settings:
                   date_format: short
-                  custom_date_format: 'F j, Y  g:i a'
+                  custom_date_format: ''
                   timezone: ''
                 third_party_settings: {  }
               context_mapping:
