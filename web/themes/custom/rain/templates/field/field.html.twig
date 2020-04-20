@@ -36,14 +36,17 @@
  * @see template_preprocess_field()
  */
 #}
-{%
-  set field_classes = field_classes|default([
-    'my-4',
-  ])|merge([
+{% set layout_classes = layout_classes|default([
     label_display == 'inline' ? 'sm:grid' : 'flex',
     label_display == 'inline' ? 'sm:grid-cols-2' : 'flex-col',
     label_display == 'inline' ? 'gap-4',
   ])
+%}
+
+{%
+  set field_classes = field_classes|default([
+    'my-4',
+  ])|merge(layout_classes)
 %}
 
 {%
