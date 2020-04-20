@@ -30,6 +30,7 @@ type_settings:
     archive:
       label: Archive
       from:
+        - archived
         - draft
         - published
       to: archived
@@ -49,7 +50,7 @@ type_settings:
         - draft
         - published
     revive:
-      label: Revive
+      label: Restore
       from:
         - archived
       to: draft

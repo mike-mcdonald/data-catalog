@@ -82,7 +82,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -4
+            weight: -3
           08bb991e-96c7-4cbc-ae12-f0a79fc16f3a:
             uuid: 08bb991e-96c7-4cbc-ae12-f0a79fc16f3a
             region: content
@@ -100,7 +100,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -2
+            weight: -1
           4513317a-2c87-4b5e-8cd0-2ec69950a84b:
             uuid: 4513317a-2c87-4b5e-8cd0-2ec69950a84b
             region: content
@@ -119,7 +119,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 8
+            weight: 9
           a653e4a3-2146-4cce-b3ab-3b58f4d08e8c:
             uuid: a653e4a3-2146-4cce-b3ab-3b58f4d08e8c
             region: content
@@ -138,7 +138,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -6
+            weight: -5
           68aa6c8b-a863-44a3-b4d1-740b3d62e3cb:
             uuid: 68aa6c8b-a863-44a3-b4d1-740b3d62e3cb
             region: content
@@ -157,7 +157,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -5
+            weight: -4
           3bdf273e-ba26-48aa-baea-4dd458955550:
             uuid: 3bdf273e-ba26-48aa-baea-4dd458955550
             region: content
@@ -176,7 +176,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 5
+            weight: 6
           06ad06cb-b6c5-4375-a85a-fc6d7bdf9a72:
             uuid: 06ad06cb-b6c5-4375-a85a-fc6d7bdf9a72
             region: content
@@ -199,7 +199,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 7
+            weight: 8
           eb77e2c7-c01f-434a-a132-af07633b71b2:
             uuid: eb77e2c7-c01f-434a-a132-af07633b71b2
             region: content
@@ -218,7 +218,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 6
+            weight: 7
           8370368d-4a53-44c8-9076-e3127acd33a7:
             uuid: 8370368d-4a53-44c8-9076-e3127acd33a7
             region: content
@@ -236,7 +236,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 0
+            weight: 1
           7d1410d4-3ddb-4b56-97cf-06fc940116ff:
             uuid: 7d1410d4-3ddb-4b56-97cf-06fc940116ff
             region: content
@@ -255,7 +255,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 1
+            weight: 2
           44fca45b-3d28-4d11-b7ad-c36f1dd49acb:
             uuid: 44fca45b-3d28-4d11-b7ad-c36f1dd49acb
             region: content
@@ -274,7 +274,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: 3
           d2cbe4bf-ddc2-4418-a76b-5326c36ff1ad:
             uuid: d2cbe4bf-ddc2-4418-a76b-5326c36ff1ad
             region: content
@@ -293,7 +293,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -3
+            weight: -2
           dc44f6af-c558-402c-b1ed-acbaf57d8e94:
             uuid: dc44f6af-c558-402c-b1ed-acbaf57d8e94
             region: content
@@ -312,7 +312,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -7
+            weight: -6
           3f434581-4df1-42e9-b1ed-d7abae7952ee:
             uuid: 3f434581-4df1-42e9-b1ed-d7abae7952ee
             region: content
@@ -331,7 +331,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 4
+            weight: 5
           2638be8d-05d6-45d4-9e4c-ae67e7ca698d:
             uuid: 2638be8d-05d6-45d4-9e4c-ae67e7ca698d
             region: content
@@ -368,7 +368,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 3
+            weight: 4
           76dbbe5d-7b9b-4660-b717-f2dc2fa1caa6:
             uuid: 76dbbe5d-7b9b-4660-b717-f2dc2fa1caa6
             region: content
@@ -386,7 +386,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -1
+            weight: 0
           d99de31f-252e-4296-a866-f348abe56bd6:
             uuid: d99de31f-252e-4296-a866-f348abe56bd6
             region: content
@@ -406,6 +406,36 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: -8
+          51da3f6b-5169-4c3a-883b-e03f42b120a5:
+            uuid: 51da3f6b-5169-4c3a-883b-e03f42b120a5
+            region: content
+            configuration:
+              id: 'extra_field_block:node:performance_measure:content_moderation_control'
+              label: 'Moderation control'
+              provider: layout_builder
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: -10
+          e753ce6b-7151-47f6-84a5-83e186f0cf3d:
+            uuid: e753ce6b-7151-47f6-84a5-83e186f0cf3d
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:moderation_state'
+              label: 'Current State'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: content_moderation_state
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -7
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
@@ -418,6 +448,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
     region: content
   field_audience:
     weight: 102
