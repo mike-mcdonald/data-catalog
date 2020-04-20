@@ -158,7 +158,7 @@ third_party_settings:
                 label: inline
                 type: timestamp
                 settings:
-                  date_format: custom
+                  date_format: short
                   custom_date_format: 'F j, Y  g:i a'
                   timezone: ''
                 third_party_settings: {  }

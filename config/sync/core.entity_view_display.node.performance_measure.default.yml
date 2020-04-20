@@ -401,7 +401,7 @@ third_party_settings:
                 label: inline
                 type: timestamp
                 settings:
-                  date_format: long
+                  date_format: short
                   custom_date_format: ''
                   timezone: ''
                 third_party_settings: {  }
