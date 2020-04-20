@@ -1,0 +1,19 @@
+uuid: 40b2ecc2-1bf1-4004-a7ce-100884990c87
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.group
+    - node.type.contact_information
+  module:
+    - gnode
+    - node
+id: group_content_type_8b46be7d37516
+label: 'Group: Add Contact information'
+description: 'Use this content type to add information about people that can be contacted about datasets'
+group_type: group
+content_plugin: 'group_node:contact_information'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false
