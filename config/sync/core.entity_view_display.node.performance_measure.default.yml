@@ -406,18 +406,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: -8
-          51da3f6b-5169-4c3a-883b-e03f42b120a5:
-            uuid: 51da3f6b-5169-4c3a-883b-e03f42b120a5
-            region: content
-            configuration:
-              id: 'extra_field_block:node:performance_measure:content_moderation_control'
-              label: 'Moderation control'
-              provider: layout_builder
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: -10
           e753ce6b-7151-47f6-84a5-83e186f0cf3d:
             uuid: e753ce6b-7151-47f6-84a5-83e186f0cf3d
             region: content
