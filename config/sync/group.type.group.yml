@@ -5,7 +5,7 @@ dependencies: {  }
 id: group
 label: Group
 description: 'Use this to create generic groups for managing content together.'
-creator_membership: true
+creator_membership: false
 creator_wizard: true
 creator_roles:
   - group-admin

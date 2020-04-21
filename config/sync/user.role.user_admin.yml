@@ -9,6 +9,7 @@ is_admin: null
 permissions:
   - 'access group overview'
   - 'access toolbar'
-  - 'administer nodes'
-  - 'administer permissions'
+  - 'access user profiles'
   - 'administer users'
+  - 'bypass group access'
+  - 'create group group'
