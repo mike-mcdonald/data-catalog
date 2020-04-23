@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.performance_measure.field_formula
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
+    - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_performance_metric
     - field.field.node.performance_measure.field_program_area
@@ -212,6 +213,7 @@ hidden:
   field_formula: true
   field_frequency: true
   field_keywords: true
+  field_measure_id: true
   field_measure_type: true
   field_program_area: true
   field_requirements: true

@@ -1,0 +1,19 @@
+uuid: 4cb310b7-20eb-457b-a55f-a65d1b94f7c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_measure_id
+    - node.type.performance_measure
+id: node.performance_measure.field_measure_id
+field_name: field_measure_id
+entity_type: node
+bundle: performance_measure
+label: 'Measure ID'
+description: 'An ID to uniquely Identify this Performance Measure record.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
