@@ -24,11 +24,4 @@
 {% embed 'field.html.twig' with {
     'label': label
   } %}
-	{% block content %}
-		{% spaceless %}
-			{%- for item in items -%}
-        {{ item.content }}
-      {%- endfor -%}
-		{% endspaceless %}
-	{% endblock %}
 {% endembed %}

@@ -1,0 +1,22 @@
+{% set color_classes = color_classes|default([
+  'bg-gray-100',
+  'text-gray-900',
+  'hover:bg-gray-200',
+]) %}
+
+{% include 'taxonomy-term.html.twig' with {
+  'link_classes': [
+    'px-2',
+    'py-1',
+    'rounded',
+    'shadow',
+    'flex',
+    'transition',
+    'ease-in-out',
+    'duration-15',
+  ]|merge(color_classes),
+  classes: [
+    'text-sm',
+  ],
+  'heading_element': 'label',
+} %}
