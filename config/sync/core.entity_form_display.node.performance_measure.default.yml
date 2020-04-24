@@ -74,14 +74,14 @@ content:
     weight: 15
     settings:
       form_mode: default
-      label_singular: ''
-      label_plural: ''
+      override_labels: true
+      label_singular: contact
+      label_plural: contacts
       collapsible: true
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
       revision: false
-      override_labels: false
       collapsed: false
       allow_duplicate: false
     third_party_settings: {  }
