@@ -10,8 +10,8 @@ id: node.performance_measure.field_datasets
 field_name: field_datasets
 entity_type: node
 bundle: performance_measure
-label: 'Data set(s)'
-description: 'Select one or more Data set(s) that supports this measure.'
+label: 'Supporting datasets'
+description: 'Select one or more datasets that provide data that is measured against the metric as described by this record. Begin typing the name of a dataset record, then choose the record from the list. If you cannot find the dataset you are looking for you may need to <a href="[site:url]node/add/dataset" target="_blank">add a new record</a>.'
 required: false
 translatable: false
 default_value: {  }
