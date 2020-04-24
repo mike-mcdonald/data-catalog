@@ -1,0 +1,13 @@
+{% include "field.html.twig" with {
+  layout_classes: [
+    'flex',
+    label_display == 'inline' ? 'flex-row' : 'flex-col',
+  ],
+  field_classes: [
+    'text-base',
+    'text-gray-500',
+  ],
+  content_classes: [
+    'mx-2'
+  ]
+} %}

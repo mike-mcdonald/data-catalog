@@ -20,7 +20,7 @@
  */
 #}
 {% if multiple %}
-  <div class="js-form-item form-item my-2">
+  <div class="js-form-item form-item">
     {{ table }}
     {% if description.content %}
       <div{{description.attributes.addClass('description')}}>
@@ -33,7 +33,7 @@
     {% endif %}
   </div>
 {% else %}
-  <div class="my-3">
+  <div>
     {% for element in elements %}
       {{ element }}
     {% endfor %}
