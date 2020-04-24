@@ -203,6 +203,11 @@ targetEntityType: node
 bundle: performance_measure
 mode: card
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_audience:
     type: entity_reference_label
     weight: 2
