@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.base_field_override.node.dataset.title
-    - core.entity_view_mode.node.datasets_in_performance_measure
+    - core.entity_view_mode.node.reference
     - field.field.node.dataset.field_accessibility_level
     - field.field.node.dataset.field_authority_level
     - field.field.node.dataset.field_data_custodian
@@ -79,10 +79,10 @@ third_party_settings:
             additional: {  }
             weight: -10
         third_party_settings: {  }
-id: node.dataset.datasets_in_performance_measure
+id: node.dataset.reference
 targetEntityType: node
 bundle: dataset
-mode: datasets_in_performance_measure
+mode: reference
 content:
   field_authority_level:
     weight: 7

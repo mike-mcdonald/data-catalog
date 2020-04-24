@@ -363,7 +363,7 @@ third_party_settings:
                 label: above
                 type: entity_reference_entity_view
                 settings:
-                  view_mode: datasets_in_performance_measure
+                  view_mode: reference
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity

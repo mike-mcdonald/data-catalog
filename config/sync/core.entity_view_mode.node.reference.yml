@@ -4,7 +4,7 @@ status: true
 dependencies:
   module:
     - node
-id: node.datasets_in_performance_measure
-label: 'Datasets in Performance Measure'
+id: node.reference
+label: Reference
 targetEntityType: node
 cache: true
