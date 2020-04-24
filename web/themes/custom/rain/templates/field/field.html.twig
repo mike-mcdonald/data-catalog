@@ -43,9 +43,7 @@
 %}
 
 {%
-  set field_classes = field_classes|default([
-    'my-4',
-  ])|merge(layout_classes)
+  set field_classes = field_classes|default([])|merge(layout_classes)
 %}
 
 {%
