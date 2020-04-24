@@ -360,7 +360,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: inline
                 type: entity_reference_entity_view
                 settings:
                   view_mode: reference
