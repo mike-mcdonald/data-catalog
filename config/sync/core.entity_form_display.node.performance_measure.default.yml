@@ -105,19 +105,12 @@ content:
   field_datasets:
     weight: 14
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      collapsible: true
-      allow_existing: true
       match_operator: CONTAINS
-      revision: false
-      override_labels: false
-      collapsed: false
-      allow_new: false
-      allow_duplicate: false
+      match_limit: 10
+      size: 60
+      placeholder: 'Begin typing to search for a dataset...'
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: entity_reference_autocomplete
     region: content
   field_formula:
     weight: 8
