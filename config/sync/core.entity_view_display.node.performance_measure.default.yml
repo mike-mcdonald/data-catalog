@@ -149,9 +149,11 @@ third_party_settings:
               label_display: '0'
               formatter:
                 label: inline
-                type: entity_reference_label
+                type: cshs_full_hierarchy
                 settings:
-                  link: true
+                  linked: 1
+                  reverse: 0
+                  separator: ' / '
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -349,26 +351,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -9
-          f5634494-4633-428a-b6ee-f68cc254a71f:
-            uuid: f5634494-4633-428a-b6ee-f68cc254a71f
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_datasets'
-              label: 'Data set(s)'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 3
+            weight: -10
           76dbbe5d-7b9b-4660-b717-f2dc2fa1caa6:
             uuid: 76dbbe5d-7b9b-4660-b717-f2dc2fa1caa6
             region: content
@@ -405,7 +388,47 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
+            weight: -9
+          9f150d66-8d5b-40d2-b477-8dbf9456e7c3:
+            uuid: 9f150d66-8d5b-40d2-b477-8dbf9456e7c3
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:changed'
+              label: 'Revised on'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: timestamp
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
             weight: -8
+          f5634494-4633-428a-b6ee-f68cc254a71f:
+            uuid: f5634494-4633-428a-b6ee-f68cc254a71f
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_datasets'
+              label: 'Data set(s)'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
