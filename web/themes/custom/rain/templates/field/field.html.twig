@@ -37,24 +37,27 @@
  */
 #}
 {%
-  set field_classes = field_classes|default([
-    'my-4',
-  ])|merge([
-    label_display == 'inline' ? 'sm:grid' : 'flex',
-    label_display == 'inline' ? 'sm:grid-cols-2' : 'flex-col',
-    label_display == 'inline' ? 'gap-4',
-  ])
+  set layout_classes = layout_classes|default(
+    label_display == 'inline' ? ['grid', 'grid-cols-1', 'sm:grid-cols-2', 'lg:grid-cols-3', 'sm:gap-4'] : ['flex', 'flex-col']
+  )
+%}
+
+{%
+  set field_classes = field_classes|default([])|merge(layout_classes)
 %}
 
 {%
   set title_classes = title_classes|default([
     label_display == 'visually_hidden' ? 'visually-hidden',
+    label_display == 'inline' ? '',
     'font-semibold'
   ])
 %}
 
 {% set content_attribute = content_attribute|default(create_attribute()) %}
-{% set content_classes = content_classes|default([]) %}
+{% set content_classes = content_classes|default([])|merge([
+   label_display == 'inline' ? 'lg:col-span-2'
+]) %}
 {% set item_classes = item_classes|default([]) %}
 
 {% spaceless %}

@@ -12,6 +12,7 @@ module:
   config: 0
   config_filter: 0
   config_split: 0
+  content_moderation: 0
   contextual: 0
   cshs: 0
   ctools: 0
@@ -61,6 +62,7 @@ module:
   user: 0
   views_bootstrap: 0
   views_ui: 0
+  workflows: 0
   yearonly: 0
   menu_link_content: 1
   pathauto: 1
