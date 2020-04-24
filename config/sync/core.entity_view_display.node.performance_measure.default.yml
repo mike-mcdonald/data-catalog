@@ -360,10 +360,10 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: inline
-                type: entity_reference_label
+                label: above
+                type: entity_reference_entity_view
                 settings:
-                  link: true
+                  view_mode: datasets_in_performance_measure
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity

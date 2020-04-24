@@ -1,0 +1,180 @@
+uuid: d739385f-9fcb-4ec5-a386-701b0269924c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.dataset.title
+    - core.entity_view_mode.node.datasets_in_performance_measure
+    - field.field.node.dataset.field_accessibility_level
+    - field.field.node.dataset.field_authority_level
+    - field.field.node.dataset.field_data_custodian
+    - field.field.node.dataset.field_data_group
+    - field.field.node.dataset.field_data_owner
+    - field.field.node.dataset.field_demographic_information
+    - field.field.node.dataset.field_keywords
+    - field.field.node.dataset.field_purpose
+    - field.field.node.dataset.field_quality_concerns
+    - field.field.node.dataset.field_security_level
+    - field.field.node.dataset.field_source
+    - field.field.node.dataset.field_spatial_information
+    - field.field.node.dataset.field_subject_areas
+    - field.field.node.dataset.field_timeliness
+    - node.type.dataset
+  module:
+    - cshs
+    - field_layout
+    - layout_builder
+    - user
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          e19b5325-c585-4901-912a-4116840af1e8:
+            uuid: e19b5325-c585-4901-912a-4116840af1e8
+            region: content
+            configuration:
+              id: 'field_block:node:dataset:field_data_custodian'
+              label: 'Primary Contact '
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -9
+          434c6b8b-5f19-4ce1-b035-caebd755ac33:
+            uuid: 434c6b8b-5f19-4ce1-b035-caebd755ac33
+            region: content
+            configuration:
+              id: 'field_block:node:dataset:title'
+              label: 'Dataset name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -10
+        third_party_settings: {  }
+id: node.dataset.datasets_in_performance_measure
+targetEntityType: node
+bundle: dataset
+mode: datasets_in_performance_measure
+content:
+  field_authority_level:
+    weight: 7
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_data_custodian:
+    weight: 2
+    label: inline
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_data_group:
+    weight: 1
+    label: inline
+    settings:
+      linked: '1'
+      separator: ' » '
+      reverse: 0
+    third_party_settings: {  }
+    type: cshs_full_hierarchy
+    region: content
+  field_demographic_information:
+    weight: 12
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_keywords:
+    weight: 3
+    label: inline
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_purpose:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_source:
+    type: cshs_full_hierarchy
+    weight: 5
+    label: inline
+    settings:
+      separator: ' » '
+      linked: false
+      reverse: false
+    third_party_settings: {  }
+    region: content
+  field_spatial_information:
+    weight: 11
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_subject_areas:
+    weight: 4
+    label: inline
+    settings:
+      linked: '1'
+      separator: ' » '
+      reverse: 0
+    third_party_settings: {  }
+    type: cshs_full_hierarchy
+    region: content
+  field_timeliness:
+    weight: 13
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_accessibility_level: true
+  field_data_owner: true
+  field_quality_concerns: true
+  field_security_level: true
+  links: true
+  search_api_excerpt: true
