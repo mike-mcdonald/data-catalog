@@ -1,20 +1,17 @@
 {% embed 'field.html.twig' with {
-  field_classes: [
-    'my-2',
-  ],
   'item_classes': [
     'flex',
     'items-center',
   ],
 } %}
-	{% block content %}
-		{%- for item in items -%}
-			<a{{item.attributes.addClass(['border-0', 'flex'])}} href="tel:+1{{ item.content['#title'] | trim }}">
-				<span{{ create_attribute().addClass(item_classes) }}>
+  {% block content %}
+    {%- for item in items -%}
+      <a{{item.attributes.addClass(['border-0','flex'])}} href="tel:+1{{ item.content['#title'] | trim }}">
+        <span{{create_attribute().addClass(item_classes)}}>
           {% include active_theme_path() ~ '/icons/phone.svg' %}
-				  <span class="ml-2 border-b-2 border-transparent hover:border-current focus:border-current">{{ item.content['#title'] }}</span>
+          <span class="ml-2 border-b-2 border-transparent hover:border-current focus:border-current">{{ item.content['#title'] }}</span>
         </span>
-			</a>
-		{%- endfor -%}
-	{% endblock %}
+      </a>
+    {%- endfor -%}
+  {% endblock %}
 {% endembed %}
