@@ -1,8 +1,4 @@
-{% embed 'field.html.twig' with {
-    field_classes: [
-      'my-0',
-    ],
-  } %}
+{% embed 'field.html.twig' with %}
   {% spaceless %}
     {% block content %}
       {%- for item in element['#items'] if item.getValue()['value'] == 1 -%}
