@@ -1,6 +1,6 @@
 uuid: f3a6d53b-3540-44df-b478-60e14feb86f4
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - block_content.type.archival_information
