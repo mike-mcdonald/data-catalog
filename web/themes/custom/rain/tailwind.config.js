@@ -70,17 +70,6 @@ module.exports = {
       black: mix('#000000', mix('#FF6666', '#005CB9', 0.5).hex(), 0.2).hex(),
       white: '#ffffff',
       gray: generateColors('#666666'),
-      // {
-      //   '100': '#f5f5f5',
-      //   '200': '#eeeeee',
-      //   '300': '#e0e0e0',
-      //   '400': '#bdbdbd',
-      //   '500': '#666666',
-      //   '600': '#757575',
-      //   '700': '#616161',
-      //   '800': '#424242',
-      //   '900': '#212121'
-      // },
       cyan: generateColors('#00A0AE'),
       orange: generateColors('#F58220'),
       red: generateColors('#FF6666'),
