@@ -33,6 +33,7 @@ libraries-override:
     css:
       component:
         css/components/tabledrag.module.css: false
+  environment_indicator/drupal.environment_indicator: false
   cshs/cshs.base: false
   views_ui/admin.styling: false
 

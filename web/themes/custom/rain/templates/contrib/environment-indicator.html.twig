@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation of an environment indicator element.
+ *
+ * Available variables:
+ * - title: The name of the environment.
+ * - description: Additional information to be shown.
+ * - attributes: HTML attributes for the environment indicator.
+ *
+ * @see template_preprocess_datetime_form()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes }} class="px-2 py-5 flex flex-col items-center" x-data="{ open: false }">
+  <span @click="open = true">{{ title }}</span>
+  {% if description %}
+    <span class="description">{{ description }}</span>
+  {% endif %}
+  {% if switcher %}
+    <div class="mt-3 w-full" x-show="open" @click.away="open = false">
+      {{ switcher }}
+    </div>
+  {% endif %}
+</div>

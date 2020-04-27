@@ -1,0 +1,13 @@
+/*! purgecss start ignore */
+#environment-indicator {
+  ul {
+    @apply flex items-center justify-center;
+    li {
+      @apply px-3 py-2;
+      a {
+        @apply border-b-2 border-current;
+      }
+    }
+  }
+}
+/*! purgecss end ignore */
