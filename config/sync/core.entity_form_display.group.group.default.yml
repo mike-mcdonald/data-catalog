@@ -1,0 +1,49 @@
+uuid: 5a5cf5fe-a64a-4952-895b-16327a7cd427
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.group.field_email_address
+    - field.field.group.group.field_summary
+    - group.type.group
+  module:
+    - field_layout
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: group.group.default
+targetEntityType: group
+bundle: group
+mode: default
+content:
+  field_email_address:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_summary:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  path: true
+  uid: true

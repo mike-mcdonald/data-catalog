@@ -1,0 +1,19 @@
+uuid: bec02261-5968-418f-8fa5-804159068b8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.group
+    - node.type.performance_measure
+  module:
+    - gnode
+    - node
+id: group_content_type_e1851433e2e09
+label: 'Group: Add Performance measure'
+description: 'Use This Content Type to create new Performance Measure records.'
+group_type: group
+content_plugin: 'group_node:performance_measure'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false

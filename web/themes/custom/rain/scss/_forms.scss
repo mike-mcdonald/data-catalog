@@ -1,7 +1,7 @@
 /*! purgecss start ignore */
 .container-inline div,
 .container-inline label {
-  display: inline-flex;
+  @apply inline-flex;
 }
 
 .field-ui-overview .field-plugin-settings-editing .field-plugin-type + * {
@@ -9,5 +9,11 @@
 }
 .cke_editable {
   @apply px-2;
+}
+
+#views-exposed-form-full-index-page-1 {
+  .form-item-fulltext {
+    @apply col-span-3;
+  }
 }
 /*! purgecss end ignore */

@@ -1,0 +1,68 @@
+diff --git a/modules/gnode/src/Plugin/GroupContentEnabler/GroupNode.php b/modules/gnode/src/Plugin/GroupContentEnabler/GroupNode.php
+index 40b8bcc..eb89d22 100644
+--- a/modules/gnode/src/Plugin/GroupContentEnabler/GroupNode.php
++++ b/modules/gnode/src/Plugin/GroupContentEnabler/GroupNode.php
+@@ -13,8 +13,8 @@ use Drupal\Core\Form\FormStateInterface;
+  *
+  * @GroupContentEnabler(
+  *   id = "group_node",
+- *   label = @Translation("Group node"),
+- *   description = @Translation("Adds nodes to groups both publicly and privately."),
++ *   label = @Translation("Group content"),
++ *   description = @Translation("Adds content to groups both publicly and privately."),
+  *   entity_type_id = "node",
+  *   entity_access = TRUE,
+  *   reference_label = @Translation("Title"),
+diff --git a/modules/gnode/src/Plugin/GroupContentEnabler/GroupNodeDeriver.php b/modules/gnode/src/Plugin/GroupContentEnabler/GroupNodeDeriver.php
+index ecc1a91..8b25e42 100644
+--- a/modules/gnode/src/Plugin/GroupContentEnabler/GroupNodeDeriver.php
++++ b/modules/gnode/src/Plugin/GroupContentEnabler/GroupNodeDeriver.php
+@@ -13,11 +13,12 @@ class GroupNodeDeriver extends DeriverBase {
+   public function getDerivativeDefinitions($base_plugin_definition) {
+     foreach (NodeType::loadMultiple() as $name => $node_type) {
+       $label = $node_type->label();
++      $description = $node_type->getDescription();
+
+       $this->derivatives[$name] = [
+         'entity_bundle' => $name,
+-        'label' => t('Group node (@type)', ['@type' => $label]),
+-        'description' => t('Adds %type content to groups both publicly and privately.', ['%type' => $label]),
++        'label' => t('Add @type', ['@type' => $label]),
++        'description' => $description,
+       ] + $base_plugin_definition;
+     }
+
+diff --git a/src/Entity/Controller/GroupContentController.php b/src/Entity/Controller/GroupContentController.php
+index fbe48f6..e4569be 100644
+--- a/src/Entity/Controller/GroupContentController.php
++++ b/src/Entity/Controller/GroupContentController.php
+@@ -12,6 +12,8 @@ use Drupal\Core\Routing\RouteMatchInterface;
+ use Drupal\Core\Url;
+ use Drupal\group\Entity\GroupContentType;
+ use Drupal\group\Entity\GroupInterface;
++use Drupal\media\Entity\MediaType;
++use Drupal\node\Entity\NodeType;
+ use Drupal\user\PrivateTempStoreFactory;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ use Symfony\Component\HttpFoundation\RedirectResponse;
+@@ -375,8 +377,18 @@ class GroupContentController extends ControllerBase {
+   public function createFormTitle(GroupInterface $group, $plugin_id) {
+     /** @var \Drupal\group\Plugin\GroupContentEnablerInterface $plugin */
+     $plugin = $group->getGroupType()->getContentPlugin($plugin_id);
+-    $group_content_type = GroupContentType::load($plugin->getContentTypeConfigId());
+-    return $this->t('Add @name', ['@name' => $group_content_type->label()]);
++    $entity_type = $plugin->getEntityTypeId();
++    switch ($entity_type) {
++      case "media":
++        $content_type = MediaType::load($plugin->getEntityBundle());
++        break;
++      case "node":
++        $content_type = NodeType::load($plugin->getEntityBundle());
++        break;
++      default:
++        $content_type = "undefined";
++    }
++    return $this->t('Create @name in @group', ['@name' => $content_type->label(), '@group' => $group->label()]);
+   }
+
+ }
