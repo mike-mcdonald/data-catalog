@@ -1,0 +1,20 @@
+ol:not([class]),ul:not([class]) {
+  @apply pl-5;
+}
+
+ol {
+  @apply list-decimal;
+  ol {
+    list-style-type: lower-alpha;
+  }
+}
+
+ul {
+  @apply list-disc;
+  ul {
+    list-style-type: square;
+    ul {
+      list-style-type: circle;
+    }
+  }
+}
