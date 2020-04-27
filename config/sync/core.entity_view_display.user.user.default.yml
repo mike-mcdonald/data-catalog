@@ -86,16 +86,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
-          8183784e-34fc-40a0-aa60-640f06758d74:
-            uuid: 8183784e-34fc-40a0-aa60-640f06758d74
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:user:user:masquerade'
-            additional: {  }
-            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_onecol
