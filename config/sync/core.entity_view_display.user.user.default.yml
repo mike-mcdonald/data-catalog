@@ -107,10 +107,10 @@ third_party_settings:
             region: content
             configuration:
               id: 'views_block:user_content-block_1'
-              label: 'Content owned by this user'
+              label: 'Owned content'
               provider: views
               label_display: visible
-              views_label: 'Content owned by this user'
+              views_label: 'Owned content'
               items_per_page: none
               context_mapping: {  }
             additional: {  }
