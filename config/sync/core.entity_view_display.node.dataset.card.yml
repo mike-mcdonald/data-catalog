@@ -97,7 +97,7 @@ third_party_settings:
                   more_text: More
                   more_class: more-link
                   trim_options:
-                    text: false
+                    text: true
                     trim_zero: false
                 third_party_settings: {  }
               context_mapping:
@@ -158,7 +158,7 @@ content:
     label: visually_hidden
     settings:
       linked: '1'
-      separator: ' » '
+      separator: ' / '
       reverse: 0
     third_party_settings: {  }
     type: cshs_full_hierarchy
@@ -184,7 +184,7 @@ content:
     label: visually_hidden
     settings:
       linked: '1'
-      separator: ' » '
+      separator: ' / '
       reverse: 0
     third_party_settings: {  }
     type: cshs_full_hierarchy

@@ -61,7 +61,7 @@ content:
     label: visually_hidden
     settings:
       linked: '1'
-      separator: ' » '
+      separator: ' / '
       reverse: 0
     third_party_settings: {  }
   field_keywords:
@@ -87,7 +87,7 @@ content:
     label: visually_hidden
     settings:
       linked: '1'
-      separator: ' » '
+      separator: ' / '
       reverse: 0
     third_party_settings: {  }
 hidden:

@@ -45,24 +45,25 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          0c2c6e27-9483-4416-a9dd-b0a99364dbc7:
-            uuid: 0c2c6e27-9483-4416-a9dd-b0a99364dbc7
+          15899e04-ecba-4852-b519-a8ebaed2e1f9:
+            uuid: 15899e04-ecba-4852-b519-a8ebaed2e1f9
             region: content
             configuration:
-              id: 'field_block:user:user:mail'
-              label: Email
+              id: 'field_block:user:user:name'
+              label: Name
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: hidden
-                type: email_mailto
-                settings: {  }
+                label: visually_hidden
+                type: string
+                settings:
+                  link_to_entity: true
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: 4
         third_party_settings: {  }
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
@@ -71,6 +72,11 @@ targetEntityType: user
 bundle: user
 mode: compact
 content:
+  masquerade:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   user_picture:
     type: image
     weight: 0

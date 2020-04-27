@@ -35,6 +35,7 @@
     "drupal/entity_browser": "^2.4",
     "drupal/facets": "^1.1",
     "drupal/field_group": "^1.0",
+    "drupal/group": "^1.0@RC",
     "drupal/inline_entity_form": "^1.0@RC",
     "drupal/maxlength": "^1.0@beta",
     "drupal/openid_connect": "^1.0@beta",
@@ -122,6 +123,10 @@
         "Fix for PostgreSQL table alias length limit": "patches/drupal-571548-107-d8_0.patch",
         "Fix for PostgreSQL table alias length limit 2": "patches/postgresql_table_alias_fix.patch",
         "2457999 - Cannot use relationship for rendered entity on Views": "https://www.drupal.org/files/issues/2019-10-28/2457999-223.patch"
+      },
+      "drupal/group": {
+        "Change some labels to be more friendly": "patches/group-friendly_labels.patch",
+        "2842630 - Empty page when trying to create group node": "https://www.drupal.org/files/issues/2019-01-04/2842630-20.patch"
       },
       "drupal/paragraphs": {
         "3076096 - PostgreSQL: Operator does not exist: character varying <> bigint": "https://www.drupal.org/files/issues/2019-08-20/operator-does-not-exist-3076096-2.patch"

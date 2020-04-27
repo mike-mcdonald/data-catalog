@@ -1,0 +1,11 @@
+uuid: 6005e62d-ea87-4a6e-a191-3ad6d2528d43
+langcode: en
+status: true
+dependencies: {  }
+id: group
+label: Group
+description: 'Use this to create generic groups for managing content together.'
+creator_membership: false
+creator_wizard: true
+creator_roles:
+  - group-admin

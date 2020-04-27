@@ -1,0 +1,19 @@
+uuid: 8e1c2a28-2111-4b8f-af90-a6ed6413a010
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.group
+    - node.type.access_point
+  module:
+    - gnode
+    - node
+id: group-group_node-access_point
+label: 'Group: Add Access point'
+description: 'An access point is an online source for retrieving datasets'
+group_type: group
+content_plugin: 'group_node:access_point'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false

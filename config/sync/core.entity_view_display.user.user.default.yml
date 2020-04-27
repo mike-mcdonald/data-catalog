@@ -6,6 +6,7 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
     - views.view.user_content
+    - views.view.your_groups
   module:
     - field_layout
     - image
@@ -85,6 +86,16 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
+          8183784e-34fc-40a0-aa60-640f06758d74:
+            uuid: 8183784e-34fc-40a0-aa60-640f06758d74
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:user:user:masquerade'
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -96,14 +107,27 @@ third_party_settings:
             region: content
             configuration:
               id: 'views_block:user_content-block_1'
-              label: 'Content owned by this user'
+              label: 'Owned content'
               provider: views
               label_display: visible
-              views_label: 'Content owned by this user'
+              views_label: 'Owned content'
               items_per_page: none
               context_mapping: {  }
             additional: {  }
-            weight: 1
+            weight: -9
+          125c203a-bdbe-4d27-8e37-c4f31ea85c6e:
+            uuid: 125c203a-bdbe-4d27-8e37-c4f31ea85c6e
+            region: content
+            configuration:
+              id: 'views_block:your_groups-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: -10
         third_party_settings: {  }
     allow_custom: false
 _core:
@@ -113,6 +137,11 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  masquerade:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: first
   member_for:
     weight: 5
     region: content

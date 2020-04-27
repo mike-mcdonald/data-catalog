@@ -350,7 +350,7 @@ content:
     label: inline
     settings:
       linked: '1'
-      separator: ' » '
+      separator: ' / '
       reverse: 0
     third_party_settings: {  }
     type: cshs_full_hierarchy
@@ -384,7 +384,7 @@ content:
     weight: 5
     label: inline
     settings:
-      separator: ' » '
+      separator: ' / '
       linked: false
       reverse: false
     third_party_settings: {  }
@@ -402,7 +402,7 @@ content:
     label: inline
     settings:
       linked: '1'
-      separator: ' » '
+      separator: ' / '
       reverse: 0
     third_party_settings: {  }
     type: cshs_full_hierarchy
