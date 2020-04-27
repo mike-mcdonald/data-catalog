@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.performance_measure.field_formula
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
+    - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_performance_metric
     - field.field.node.performance_measure.field_program_area
@@ -351,7 +352,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -9
+            weight: -10
           f5634494-4633-428a-b6ee-f68cc254a71f:
             uuid: f5634494-4633-428a-b6ee-f68cc254a71f
             region: content
@@ -362,9 +363,9 @@ third_party_settings:
               label_display: '0'
               formatter:
                 label: inline
-                type: entity_reference_label
+                type: entity_reference_entity_view
                 settings:
-                  link: true
+                  view_mode: reference
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -429,6 +430,25 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: -8
+          59129609-2193-4325-870d-8c5a88f6fd27:
+            uuid: 59129609-2193-4325-870d-8c5a88f6fd27
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_measure_id'
+              label: 'Measure ID'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -9
           e753ce6b-7151-47f6-84a5-83e186f0cf3d:
             uuid: e753ce6b-7151-47f6-84a5-83e186f0cf3d
             region: content
@@ -535,6 +555,14 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_measure_id:
+    weight: 138
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_measure_type:
     weight: 134
