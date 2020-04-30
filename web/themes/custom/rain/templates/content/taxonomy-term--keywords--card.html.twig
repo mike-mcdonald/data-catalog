@@ -1,16 +1,11 @@
-{% include 'taxonomy-term.html.twig' with {
-  'link_classes': [
-    'px-2',
-    'py-1',
+{% include 'taxonomy-term--card.html.twig' with {
+  'color_classes': [
     'bg-cyan-100',
     'text-cyan-900',
-    'rounded',
-    'shadow',
-    'flex',
-    'transition',
-    'ease-in-out',
-    'duration-15',
     'hover:bg-cyan-200',
+  ],
+  classes: [
+    'text-sm',
   ],
   'heading_element': 'span',
 } %}

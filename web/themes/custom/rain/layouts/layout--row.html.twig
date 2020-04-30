@@ -20,10 +20,6 @@
 %}
 {% if content %}
   <section{{region_attributes.content.addClass(layout_classes)}}>
-    {% for item in content.content if item['#plugin_id'] %}
-      <div class="mx-2">
-        {{ item }}
-      </div>
-    {% endfor %}
+    {{ content }}
   </section>
 {% endif %}

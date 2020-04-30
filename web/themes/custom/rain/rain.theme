@@ -130,10 +130,10 @@ function rain_theme_suggestions_field_alter(array &$suggestions, array $variable
   }
 
   $suggestions[] = 'field__' . $view_mode;
-  $suggestions[] = 'field__' . $field_name  . '__' . $bundle;
-  $suggestions[] = 'field__' . $field_name  . '__' . $view_mode;
   $suggestions[] = 'field__' . $field_type  . '__' . $bundle;
   $suggestions[] = 'field__' . $field_type  . '__' . $view_mode;
+  $suggestions[] = 'field__' . $field_name  . '__' . $bundle;
+  $suggestions[] = 'field__' . $field_name  . '__' . $view_mode;
   $suggestions[] = 'field__' . $entity_type . '__' . $view_mode;
   $suggestions[] = 'field__' . $entity_type . '__' . $bundle;
   $suggestions[] = 'field__' . $entity_type . '__' . $bundle . '__' . $view_mode;

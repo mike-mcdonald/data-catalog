@@ -65,7 +65,7 @@
     </caption>
   {% endif %}
   {% if header %}
-    <thead{{create_attribute({'class':['border-b-2','border-gray-500']})}}>
+    <thead{{create_attribute({'class':['border-t', 'border-b','border-gray-500', 'bg-gray-100', 'text-gray-900']})}}>
       <tr>
         {% for key, column in header %}
           {% if column.default_classes %}
@@ -103,17 +103,16 @@
       </tr>
     </thead>
   {% endif %}
-  <tbody>
+  <tbody class="border-t border-gray-500">
     {% for row in rows %}
-      <tr{{row.attributes.addClass('hover:bg-gray-100')}}>
+      <tr{{row.attributes.addClass(['border-b', 'border-gray-500', 'hover:bg-fog-200'])}}>
         {% for key, column in row.columns %}
           {% if column.default_classes %}
             {%
               set column_classes = [
                 'views-field',
                 'align-middle',
-                'px-2',
-                'py-1',
+                'p-2',
               ]
             %}
             {% for field in column.fields %}

@@ -99,7 +99,7 @@ third_party_settings:
                 settings:
                   linked: 1
                   reverse: 0
-                  separator: '/  '
+                  separator: ' / '
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -182,7 +182,7 @@ content:
     weight: 104
     label: above
     settings:
-      separator: ' » '
+      separator: ' / '
       linked: false
       reverse: false
     third_party_settings: {  }
