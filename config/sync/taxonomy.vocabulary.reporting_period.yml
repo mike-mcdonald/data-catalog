@@ -1,0 +1,8 @@
+uuid: c2a9c798-8932-4fdb-9ef6-d0407b95a3fb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Reporting period'
+vid: reporting_period
+description: ''
+weight: 0

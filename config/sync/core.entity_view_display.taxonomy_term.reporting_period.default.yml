@@ -1,0 +1,43 @@
+uuid: 41e4b304-144c-440e-85d2-87a2b37cf068
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.reporting_period.field_end_date
+    - field.field.taxonomy_term.reporting_period.field_start_date
+    - taxonomy.vocabulary.reporting_period
+  module:
+    - datetime
+    - text
+id: taxonomy_term.reporting_period.default
+targetEntityType: taxonomy_term
+bundle: reporting_period
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_end_date:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_start_date:
+    weight: 1
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  search_api_excerpt: true
