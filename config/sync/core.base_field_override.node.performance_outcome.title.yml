@@ -1,0 +1,18 @@
+uuid: 183f4f84-1ccb-4fb9-b5ae-14757b0ac4fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.performance_outcome
+id: node.performance_outcome.title
+field_name: title
+entity_type: node
+bundle: performance_outcome
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,31 @@
+uuid: 35f8e1a5-6f25-4201-9039-af016eb5220c
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.performance_outcome.body
+    - field.field.node.performance_outcome.field_actual
+    - field.field.node.performance_outcome.field_estimate
+    - field.field.node.performance_outcome.field_performance_measure
+    - field.field.node.performance_outcome.field_reporting_period
+    - node.type.performance_outcome
+  module:
+    - user
+id: node.performance_outcome.teaser
+targetEntityType: node
+bundle: performance_outcome
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  field_actual: true
+  field_estimate: true
+  field_performance_measure: true
+  field_reporting_period: true
+  search_api_excerpt: true
