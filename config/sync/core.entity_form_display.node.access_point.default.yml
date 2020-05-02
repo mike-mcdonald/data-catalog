@@ -10,8 +10,10 @@ dependencies:
     - field.field.node.access_point.field_url
     - node.type.access_point
   module:
+    - content_moderation
     - cshs
     - field_layout
+    - inline_entity_form
     - link
     - path
     - select2
@@ -34,13 +36,21 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_data_custodian:
-    weight: 3
+    weight: 1
     settings:
+      form_mode: default
+      override_labels: true
+      label_singular: contact
+      label_plural: contacts
+      allow_new: true
+      allow_existing: true
       match_operator: CONTAINS
-      autocomplete: false
-      width: 100%
+      revision: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings: {  }
-    type: select2_entity_reference
+    type: inline_entity_form_complex
     region: content
   field_keywords:
     weight: 4
@@ -48,11 +58,12 @@ content:
       match_operator: CONTAINS
       autocomplete: false
       width: 100%
+      match_limit: 10
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
   field_purpose:
-    weight: 1
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -76,6 +87,12 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 12
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 10
