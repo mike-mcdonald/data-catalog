@@ -3,11 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.reporting_period.field_end_date
-    - field.field.taxonomy_term.reporting_period.field_start_date
+    - field.field.taxonomy_term.reporting_period.field_date_range
     - taxonomy.vocabulary.reporting_period
   module:
-    - datetime
+    - datetime_range
     - text
 id: taxonomy_term.reporting_period.default
 targetEntityType: taxonomy_term
@@ -21,23 +20,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_end_date:
-    weight: 2
+  field_date_range:
+    weight: 3
     label: above
     settings:
+      separator: '-'
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_start_date:
-    weight: 1
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
+    type: daterange_default
     region: content
 hidden:
   search_api_excerpt: true

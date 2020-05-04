@@ -18,6 +18,7 @@ module:
   cshs: 0
   ctools: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0

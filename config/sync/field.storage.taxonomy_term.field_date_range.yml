@@ -1,17 +1,17 @@
-uuid: d92b3fa1-c6db-4063-9427-db52e08e5bbc
+uuid: a53035ce-e74c-4e46-b293-53f9c63e5c11
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
+    - datetime_range
     - taxonomy
-id: taxonomy_term.field_end_date
-field_name: field_end_date
+id: taxonomy_term.field_date_range
+field_name: field_date_range
 entity_type: taxonomy_term
-type: datetime
+type: daterange
 settings:
   datetime_type: date
-module: datetime
+module: datetime_range
 locked: false
 cardinality: 1
 translatable: true
