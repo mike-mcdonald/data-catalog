@@ -11,8 +11,8 @@ dependencies:
     - node.type.performance_outcome
   module:
     - content_moderation
+    - cshs
     - field_layout
-    - select2
     - text
   theme:
     - rain
@@ -59,12 +59,11 @@ content:
   field_reporting_period:
     weight: 2
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      autocomplete: false
-      width: 100%
+      force_deepest: '1'
+      parent: '0'
+      level_labels: ''
     third_party_settings: {  }
-    type: select2_entity_reference
+    type: cshs
     region: content
   moderation_state:
     type: moderation_state_default
