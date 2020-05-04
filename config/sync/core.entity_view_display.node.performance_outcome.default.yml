@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.performance_outcome.field_reporting_period
     - node.type.performance_outcome
   module:
+    - cshs
     - text
     - user
 id: node.performance_outcome.default
@@ -18,15 +19,15 @@ bundle: performance_outcome
 mode: default
 content:
   body:
-    weight: 103
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_actual:
-    weight: 101
-    label: above
+    weight: 4
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -36,8 +37,8 @@ content:
     type: number_decimal
     region: content
   field_estimate:
-    weight: 102
-    label: above
+    weight: 3
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -47,23 +48,25 @@ content:
     type: number_decimal
     region: content
   field_performance_measure:
-    weight: 105
-    label: above
+    weight: 1
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_reporting_period:
-    weight: 104
-    label: above
+    weight: 2
+    label: inline
     settings:
-      link: true
+      separator: ' - '
+      linked: 0
+      reverse: 0
     third_party_settings: {  }
-    type: entity_reference_label
+    type: cshs_full_hierarchy
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
