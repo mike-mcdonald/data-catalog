@@ -379,7 +379,20 @@ display:
       title: 'Measure outcomes'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'There are no outcomes available yet.'
+            format: basic_html
+          plugin_id: text
       relationships:
         reverse__node__field_performance_measure:
           id: reverse__node__field_performance_measure
