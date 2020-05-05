@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.performance_measure.field_formula
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
+    - field.field.node.performance_measure.field_level
     - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_performance_metric
@@ -58,7 +59,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 23
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -75,7 +76,7 @@ content:
     type: options_buttons
     region: content
   field_data_custodian:
-    weight: 17
+    weight: 18
     settings:
       form_mode: default
       override_labels: true
@@ -92,7 +93,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_data_group:
-    weight: 15
+    weight: 16
     settings:
       parent: 0
       level_labels: ''
@@ -101,13 +102,13 @@ content:
     type: cshs
     region: content
   field_data_reliability:
-    weight: 18
+    weight: 19
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_datasets:
-    weight: 16
+    weight: 17
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -117,7 +118,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_formula:
-    weight: 10
+    weight: 11
     settings:
       rows: 5
       placeholder: ''
@@ -131,7 +132,7 @@ content:
     type: options_select
     region: content
   field_keywords:
-    weight: 20
+    weight: 21
     settings:
       autocomplete: false
       match_operator: CONTAINS
@@ -139,6 +140,12 @@ content:
       width: 100%
     third_party_settings: {  }
     type: select2_entity_reference
+    region: content
+  field_level:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_measure_id:
     weight: 0
@@ -149,7 +156,7 @@ content:
     type: string_textfield
     region: content
   field_measure_type:
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -172,7 +179,7 @@ content:
     type: cshs
     region: content
   field_requirements:
-    weight: 11
+    weight: 12
     settings:
       rows: 5
       placeholder: ''
@@ -180,7 +187,7 @@ content:
     type: string_textarea
     region: content
   field_status:
-    weight: 21
+    weight: 22
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -205,7 +212,7 @@ content:
     type: select2_entity_reference
     region: content
   field_target:
-    weight: 14
+    weight: 15
     settings:
       size: 512
       placeholder: ''
@@ -213,7 +220,7 @@ content:
     type: string_textfield
     region: content
   field_threshold:
-    weight: 12
+    weight: 13
     settings:
       size: 512
       placeholder: ''
@@ -221,7 +228,7 @@ content:
     type: string_textfield
     region: content
   field_url:
-    weight: 19
+    weight: 20
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -230,7 +237,7 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 25
+    weight: 26
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -238,7 +245,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 24
+    weight: 25
     region: content
     third_party_settings: {  }
   title:
@@ -251,7 +258,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 22
+    weight: 23
     settings:
       match_operator: CONTAINS
       size: 60
