@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_performance_metric
     - field.field.node.performance_measure.field_program_area
+    - field.field.node.performance_measure.field_project_name
     - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
     - field.field.node.performance_measure.field_strategic_plan
@@ -246,6 +247,7 @@ hidden:
   field_measure_id: true
   field_measure_type: true
   field_program_area: true
+  field_project_name: true
   field_requirements: true
   field_status: true
   field_strategic_plan: true
