@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.performance_measure.field_program_area
     - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
+    - field.field.node.performance_measure.field_strategic_plan
     - field.field.node.performance_measure.field_strategic_year
     - field.field.node.performance_measure.field_target
     - field.field.node.performance_measure.field_threshold
@@ -59,6 +60,7 @@ hidden:
   field_program_area: true
   field_requirements: true
   field_status: true
+  field_strategic_plan: true
   field_strategic_year: true
   field_target: true
   field_threshold: true
