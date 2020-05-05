@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.performance_measure.field_level
     - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
+    - field.field.node.performance_measure.field_origination_date
     - field.field.node.performance_measure.field_performance_metric
     - field.field.node.performance_measure.field_program_area
     - field.field.node.performance_measure.field_project_name
@@ -59,6 +60,7 @@ hidden:
   field_level: true
   field_measure_id: true
   field_measure_type: true
+  field_origination_date: true
   field_performance_metric: true
   field_program_area: true
   field_project_name: true

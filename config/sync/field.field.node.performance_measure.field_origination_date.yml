@@ -1,0 +1,19 @@
+uuid: fb557534-5222-466f-bec4-db4be120367f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_origination_date
+    - node.type.performance_measure
+id: node.performance_measure.field_origination_date
+field_name: field_origination_date
+entity_type: node
+bundle: performance_measure
+label: 'Performance measure origination date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

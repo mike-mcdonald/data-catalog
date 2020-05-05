@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.performance_measure.field_level
     - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
+    - field.field.node.performance_measure.field_origination_date
     - field.field.node.performance_measure.field_performance_metric
     - field.field.node.performance_measure.field_program_area
     - field.field.node.performance_measure.field_project_name
@@ -88,24 +89,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 2
-          08bb991e-96c7-4cbc-ae12-f0a79fc16f3a:
-            uuid: 08bb991e-96c7-4cbc-ae12-f0a79fc16f3a
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_performance_metric'
-              label: 'Performance Metric'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: basic_string
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 4
           4513317a-2c87-4b5e-8cd0-2ec69950a84b:
             uuid: 4513317a-2c87-4b5e-8cd0-2ec69950a84b
             region: content
@@ -124,7 +107,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 10
+            weight: 9
           a653e4a3-2146-4cce-b3ab-3b58f4d08e8c:
             uuid: a653e4a3-2146-4cce-b3ab-3b58f4d08e8c
             region: content
@@ -375,7 +358,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 9
+            weight: 10
           76dbbe5d-7b9b-4660-b717-f2dc2fa1caa6:
             uuid: 76dbbe5d-7b9b-4660-b717-f2dc2fa1caa6
             region: content
@@ -549,6 +532,43 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          08bb991e-96c7-4cbc-ae12-f0a79fc16f3a:
+            uuid: 08bb991e-96c7-4cbc-ae12-f0a79fc16f3a
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_performance_metric'
+              label: 'Performance Metric'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 4
+          255f4eb8-307c-4d2e-b81b-e9f54c9ebf55:
+            uuid: 255f4eb8-307c-4d2e-b81b-e9f54c9ebf55
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_origination_date'
+              label: 'Performance measure origination date'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 10
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
@@ -661,6 +681,14 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_origination_date:
+    weight: 143
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_performance_metric:
     weight: 103
