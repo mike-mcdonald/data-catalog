@@ -33,6 +33,7 @@ dependencies:
     - content_moderation
     - cshs
     - field_layout
+    - gcontent_field
     - inline_entity_form
     - link
     - select2
@@ -41,7 +42,7 @@ dependencies:
     - rain
 third_party_settings:
   field_layout:
-    id: layout_onecol
+    id: layout_blank
     settings:
       label: ''
 id: node.performance_measure.default
@@ -50,7 +51,7 @@ bundle: performance_measure
 mode: default
 content:
   body:
-    weight: 2
+    weight: 3
     settings:
       rows: 9
       placeholder: ''
@@ -61,24 +62,24 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 26
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   field_audience:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_category:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_data_custodian:
-    weight: 19
+    weight: 16
     settings:
       form_mode: default
       override_labels: true
@@ -95,7 +96,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_data_group:
-    weight: 17
+    weight: 14
     settings:
       parent: 0
       level_labels: ''
@@ -104,13 +105,13 @@ content:
     type: cshs
     region: content
   field_data_reliability:
-    weight: 21
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_datasets:
-    weight: 18
+    weight: 15
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -120,7 +121,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_formula:
-    weight: 12
+    weight: 9
     settings:
       rows: 5
       placeholder: ''
@@ -128,13 +129,13 @@ content:
     type: string_textarea
     region: content
   field_frequency:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_keywords:
-    weight: 23
+    weight: 19
     settings:
       autocomplete: false
       match_operator: CONTAINS
@@ -150,7 +151,7 @@ content:
     type: options_select
     region: content
   field_measure_id:
-    weight: 0
+    weight: 1
     settings:
       size: 255
       placeholder: ''
@@ -158,7 +159,7 @@ content:
     type: string_textfield
     region: content
   field_measure_type:
-    weight: 15
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -172,7 +173,7 @@ content:
     type: string_textfield
     region: content
   field_performance_metric:
-    weight: 4
+    weight: 5
     settings:
       rows: 5
       placeholder: ''
@@ -180,7 +181,7 @@ content:
     type: string_textarea
     region: content
   field_program_area:
-    weight: 7
+    weight: 8
     settings:
       parent: 0
       level_labels: ''
@@ -197,7 +198,7 @@ content:
     type: string_textfield
     region: content
   field_requirements:
-    weight: 13
+    weight: 10
     settings:
       rows: 5
       placeholder: ''
@@ -205,7 +206,7 @@ content:
     type: string_textarea
     region: content
   field_status:
-    weight: 24
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -230,7 +231,7 @@ content:
     type: select2_entity_reference
     region: content
   field_target:
-    weight: 16
+    weight: 13
     settings:
       size: 512
       placeholder: ''
@@ -238,7 +239,7 @@ content:
     type: string_textfield
     region: content
   field_threshold:
-    weight: 14
+    weight: 11
     settings:
       size: 512
       placeholder: ''
@@ -246,16 +247,25 @@ content:
     type: string_textfield
     region: content
   field_url:
-    weight: 22
+    weight: 18
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
+  group_content:
+    type: group_selector_widget
+    weight: 0
+    region: content
+    settings:
+      widget: select
+      multiple: '1'
+      required: '1'
+    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 28
+    weight: 24
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -263,12 +273,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 27
+    weight: 23
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 1
+    weight: 2
     region: content
     settings:
       size: 60
@@ -276,7 +286,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 25
+    weight: 21
     settings:
       match_operator: CONTAINS
       size: 60

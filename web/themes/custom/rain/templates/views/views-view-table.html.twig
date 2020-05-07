@@ -65,7 +65,7 @@
     </caption>
   {% endif %}
   {% if header %}
-    <thead{{create_attribute({'class':['border-t', 'border-b','border-gray-500', 'bg-gray-100', 'text-gray-900']})}}>
+    <thead{{create_attribute({'class':['border-t', 'border-b','border-fog-700', 'bg-fog-300', 'text-fog-900']})}}>
       <tr>
         {% for key, column in header %}
           {% if column.default_classes %}
@@ -103,9 +103,9 @@
       </tr>
     </thead>
   {% endif %}
-  <tbody class="border-t border-gray-500">
+  <tbody class="border-t border-fog-700">
     {% for row in rows %}
-      <tr{{row.attributes.addClass(['border-b', 'border-gray-500', 'hover:bg-fog-200'])}}>
+      <tr{{row.attributes.addClass(['border-b', 'border-fog-700', 'hover:bg-fog-200'])}}>
         {% for key, column in row.columns %}
           {% if column.default_classes %}
             {%

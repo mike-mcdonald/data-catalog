@@ -28,11 +28,14 @@ dependencies:
     - field.field.node.performance_measure.field_threshold
     - field.field.node.performance_measure.field_url
     - node.type.performance_measure
+    - views.view.measure_outcomes
   module:
     - layout_builder
     - link
+    - node
     - text
     - user
+    - views
   theme:
     - rain
 third_party_settings:
@@ -569,6 +572,32 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 10
+          c328ed7f-4dd1-4698-a8c1-c6e87326eb44:
+            uuid: c328ed7f-4dd1-4698-a8c1-c6e87326eb44
+            region: content
+            configuration:
+              id: 'views_block:measure_outcomes-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 10
+          b096a4aa-c6e9-4af0-93d4-5dc8f0e9a11c:
+            uuid: b096a4aa-c6e9-4af0-93d4-5dc8f0e9a11c
+            region: content
+            configuration:
+              id: formblock_node
+              label: 'Add a new outcome'
+              provider: node
+              label_display: visible
+              type: performance_outcome
+              show_help: 0
+              context_mapping: {  }
+            additional: {  }
+            weight: 11
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
@@ -778,4 +807,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  group_content: true
   search_api_excerpt: true

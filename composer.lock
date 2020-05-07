@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41b49f99447894a6124654622892152d",
+    "content-hash": "749786b0a5afc2ec44a8105e602764a4",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2001,6 +2001,71 @@
             }
         },
         {
+            "name": "drupal/auto_entitylabel",
+            "version": "3.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/auto_entitylabel.git",
+                "reference": "8.x-3.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/auto_entitylabel-8.x-3.0-beta2.zip",
+                "reference": "8.x-3.0-beta2",
+                "shasum": "b1fcf53f57147bbe445d5ff97e42c5c1a2a2718a"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0-beta2",
+                    "datestamp": "1570745586",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pravin Ajaaz",
+                    "homepage": "https://www.drupal.org/user/2910049"
+                },
+                {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
+                    "name": "bforchhammer",
+                    "homepage": "https://www.drupal.org/user/216396"
+                },
+                {
+                    "name": "colan",
+                    "homepage": "https://www.drupal.org/user/58704"
+                },
+                {
+                    "name": "diqidoq",
+                    "homepage": "https://www.drupal.org/user/1001934"
+                },
+                {
+                    "name": "purushotam.rai",
+                    "homepage": "https://www.drupal.org/user/3193859"
+                }
+            ],
+            "description": "Allows hiding of entity label fields and automatic label creation.",
+            "homepage": "https://www.drupal.org/project/auto_entitylabel",
+            "support": {
+                "source": "https://git.drupalcode.org/project/auto_entitylabel",
+                "issues": "https://www.drupal.org/project/issues/auto_entitylabel"
+            }
+        },
+        {
             "name": "drupal/block_content_permissions",
             "version": "1.8.0",
             "source": {
@@ -3431,6 +3496,61 @@
             }
         },
         {
+            "name": "drupal/formblock",
+            "version": "1.0.0-beta9",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/formblock.git",
+                "reference": "8.x-1.0-beta9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/formblock-8.x-1.0-beta9.zip",
+                "reference": "8.x-1.0-beta9",
+                "shasum": "b9e06977dbb5cfc77a40fa97ce968300e342dbbf"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta9",
+                    "datestamp": "1471552142",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "chx",
+                    "homepage": "https://www.drupal.org/user/9446"
+                },
+                {
+                    "name": "mikey_p",
+                    "homepage": "https://www.drupal.org/user/62496"
+                },
+                {
+                    "name": "nedjo",
+                    "homepage": "https://www.drupal.org/user/4481"
+                }
+            ],
+            "description": "Enables the presentation of node creation forms in blocks. This is particularly useful for including forms on panels.",
+            "homepage": "https://www.drupal.org/project/formblock",
+            "support": {
+                "source": "https://git.drupalcode.org/project/formblock"
+            }
+        },
+        {
             "name": "drupal/group",
             "version": "1.0.0-rc5",
             "source": {
@@ -3460,6 +3580,10 @@
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Change some labels to be more friendly": "patches/group-friendly_labels.patch",
+                    "2842630 - Empty page when trying to create group node": "https://www.drupal.org/files/issues/2019-01-04/2842630-20.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -11053,7 +11177,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/auto_entitylabel": 10,
         "drupal/cshs": 10,
+        "drupal/formblock": 10,
         "drupal/group": 5,
         "drupal/inline_entity_form": 5,
         "drupal/maxlength": 10,
