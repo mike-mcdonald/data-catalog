@@ -1,0 +1,8 @@
+uuid: 9f74c336-4110-4c56-ab50-a436d4f606f5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Strategic plan'
+vid: strategic_plan
+description: ''
+weight: 0

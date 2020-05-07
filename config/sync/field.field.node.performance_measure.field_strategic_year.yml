@@ -1,0 +1,29 @@
+uuid: 2b68e20a-6d2d-4a66-abb1-829122fe1b9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_strategic_year
+    - node.type.performance_measure
+    - taxonomy.vocabulary.strategic_year
+id: node.performance_measure.field_strategic_year
+field_name: field_strategic_year
+entity_type: node
+bundle: performance_measure
+label: 'Strategic year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      strategic_year: strategic_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

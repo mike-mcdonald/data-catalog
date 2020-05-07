@@ -15,12 +15,17 @@ dependencies:
     - field.field.node.performance_measure.field_formula
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
+    - field.field.node.performance_measure.field_level
     - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
+    - field.field.node.performance_measure.field_origination_date
     - field.field.node.performance_measure.field_performance_metric
     - field.field.node.performance_measure.field_program_area
+    - field.field.node.performance_measure.field_project_name
     - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
+    - field.field.node.performance_measure.field_strategic_plan
+    - field.field.node.performance_measure.field_strategic_year
     - field.field.node.performance_measure.field_target
     - field.field.node.performance_measure.field_threshold
     - field.field.node.performance_measure.field_url
@@ -239,11 +244,16 @@ hidden:
   field_formula: true
   field_frequency: true
   field_keywords: true
+  field_level: true
   field_measure_id: true
   field_measure_type: true
+  field_origination_date: true
   field_program_area: true
+  field_project_name: true
   field_requirements: true
   field_status: true
+  field_strategic_plan: true
+  field_strategic_year: true
   field_target: true
   field_threshold: true
   field_url: true
