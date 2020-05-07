@@ -3,6 +3,12 @@
   @apply text-red-600;
 }
 
+.field-multiple-table {
+  .label {
+    font-size: inherit;
+  }
+}
+
 .container-inline div,
 .container-inline label {
   @apply inline-flex;

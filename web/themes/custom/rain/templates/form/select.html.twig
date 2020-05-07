@@ -21,6 +21,7 @@
 {%
   set select_classes = select_classes|default([
     required ? 'bg-red-100' : 'bg-gray-100',
+    required ? 'text-red-900' : 'text-current',
     'appearance-none',
     'block',
     'border',
@@ -31,11 +32,13 @@
     'pr-8',
     'py-3',
     'focus:outline-none',
+    'focus:shadow-outline',
+    'focus:bg-white',
+    'focus:text-black',
+    'focus:border-gray-900',
     'transition',
     'ease-in-out',
     'duration-150',
-    required ? 'focus:bg-red-100' : 'focus:bg-white',
-    required ? 'focus:border-red-900' : 'focus:border-gray-900',
  ])
 %}
 
@@ -50,6 +53,7 @@
     'flex',
     'items-center',
     'px-2',
+    required ? 'text-red-900' : 'text-current',
   ])
 %}
 
