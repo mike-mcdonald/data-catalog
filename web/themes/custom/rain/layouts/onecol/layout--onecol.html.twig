@@ -14,13 +14,11 @@
   set layout_classes = layout_classes|default([
     'grid',
     'grid-cols-1',
-    'gap-3',
+    'gap-4',
   ])
 %}
 {%
-  set region_classes = region_classes|default([
-    '-mx-2',
-  ])
+  set region_classes = region_classes|default([])
 %}
 {% if content %}
   <div{{attributes.addClass(layout_classes).addClass(region_classes)}}>

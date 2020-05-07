@@ -1,10 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation for a three column layout.
- *
- * This template provides a three column 25%-50%-25% display layout, with
- * additional areas for the top and the bottom.
+ * Default theme implementation to display a two-column layout.
  *
  * Available variables:
  * - content: The content for this layout.
@@ -15,37 +12,30 @@
 #}
 {%
   set layout_classes = layout_classes|default([
-    'sm:grid',
-    'sm:grid-cols-3',
-    'sm:gap-4',
+    'flex',
+    'flex-col',
+    'md:flex-row',
+    '-mx-2',
   ])
 %}
 {%
   set region_classes = region_classes|default([
-    'grid',
-    'grid-cols-1',
-    'gap-4',
+    'mx-2',
   ])
 %}
 {% if content %}
   <div{{attributes.addClass(layout_classes)}}>
     {% if content.first %}
-      <section
+      <div
         {{ region_attributes.first.addClass(region_classes) }}>
         {{ content.first }}
-      </section>
+      </div>
     {% endif %}
     {% if content.second %}
-      <section
+      <div
         {{ region_attributes.second.addClass(region_classes) }}>
         {{ content.second }}
-      </section>
-    {% endif %}
-    {% if content.third %}
-      <section
-        {{ region_attributes.third.addClass(region_classes) }}>
-        {{ content.third }}
-      </section>
+      </div>
     {% endif %}
   </div>
 {% endif %}
