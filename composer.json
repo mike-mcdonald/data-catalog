@@ -37,6 +37,7 @@
     "drupal/environment_indicator": "^3.7",
     "drupal/facets": "^1.1",
     "drupal/field_group": "^1.0",
+    "drupal/formblock": "^1.0@beta",
     "drupal/group": "^1.0@RC",
     "drupal/inline_entity_form": "^1.0@RC",
     "drupal/maxlength": "^1.0@beta",
@@ -124,7 +125,8 @@
       "drupal/core": {
         "Fix for PostgreSQL table alias length limit": "patches/drupal-571548-107-d8_0.patch",
         "Fix for PostgreSQL table alias length limit 2": "patches/postgresql_table_alias_fix.patch",
-        "2457999 - Cannot use relationship for rendered entity on Views": "https://www.drupal.org/files/issues/2019-10-28/2457999-223.patch"
+        "2457999 - Cannot use relationship for rendered entity on Views": "https://www.drupal.org/files/issues/2019-10-28/2457999-223.patch",
+        "3045171 - Form blocks rendered inside layout builder break save": "https://www.drupal.org/files/issues/2020-02-04/layout-builder-save-issue-3045171-140.patch"
       },
       "drupal/group": {
         "Change some labels to be more friendly": "patches/group-friendly_labels.patch",
