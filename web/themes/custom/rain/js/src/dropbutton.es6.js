@@ -236,8 +236,9 @@ import moreVertical from '../../icons/more-vertical.svg';
       dropbuttonToggle(options) {
         const dropbuttonClasses = [
           'dropbutton-toggle',
+          'border-current',
           'border-l',
-          'pl-3',
+          'pl-2',
           'flex',
         ];
 

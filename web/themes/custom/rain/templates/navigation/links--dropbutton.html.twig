@@ -13,8 +13,9 @@
     'cursor-pointer',
     'border',
     'border-transparent',
-    'rounded',
-    'p-2',
+    'rounded-lg',
+    'shadow',
+    'p-3',
     'text-white',
     'focus:outline-none',
     'focus:border-cyan-800',
@@ -23,6 +24,11 @@
     'ease-in-out',
     'duration-150',
   ],
+  link_classes: [
+    'border-0',
+    'whitespace-no-wrap',
+    'pr-3',
+  ]
 } %}
 {% set secondary_list_attributes = secondary_list_attributes|default(create_attribute()) %}
 {% set secondary_list_classes = secondary_list_classes|default([
