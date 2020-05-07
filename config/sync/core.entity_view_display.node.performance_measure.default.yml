@@ -23,12 +23,14 @@ dependencies:
     - field.field.node.performance_measure.field_threshold
     - field.field.node.performance_measure.field_url
     - node.type.performance_measure
+    - views.view.measure_outcomes
   module:
     - layout_builder
     - link
     - node
     - text
     - user
+    - views
   theme:
     - rain
 third_party_settings:

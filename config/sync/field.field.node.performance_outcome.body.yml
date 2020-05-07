@@ -1,0 +1,23 @@
+uuid: d4a15f81-2b44-48ca-a238-e1461ff66082
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.performance_outcome
+  module:
+    - text
+id: node.performance_outcome.body
+field_name: body
+entity_type: node
+bundle: performance_outcome
+label: Narrative
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

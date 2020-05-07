@@ -71,7 +71,7 @@
 		{% endif %}
 	{% endfor %}
 	{% if header %}
-		<thead{{create_attribute({'class': ['border-t', 'border-b','border-gray-500', 'bg-gray-100', 'text-gray-900']})}}>
+		<thead{{create_attribute({'class': ['border-t', 'border-b','border-fog-700', 'bg-fog-300', 'text-fog-900']})}}>
 			<tr>
 				{% for cell in header %}
 					<{{cell.tag}}{{cell.attributes.removeClass('block').addClass(cell_classes,'p-2')}}>
@@ -82,9 +82,9 @@
 		</thead>
 	{% endif %}
 	{% if rows %}
-		<tbody class="border-t border-gray-500">
+		<tbody class="border-t border-fog-700">
 			{% for row in rows %}
-				<tr{{row.attributes.addClass(['border-b', 'border-gray-500', 'hover:bg-fog-200'])}}>
+				<tr{{row.attributes.addClass(['border-b', 'border-fog-700', 'hover:bg-fog-200'])}}>
 					{% for cell in row.cells %}
 						<{{cell.tag}}{{cell.attributes.removeClass('block').addClass(cell_classes,'p-2')}}>
 							{{- cell.content -}}

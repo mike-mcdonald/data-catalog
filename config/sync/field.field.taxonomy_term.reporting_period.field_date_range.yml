@@ -1,0 +1,21 @@
+uuid: b6d5f6ed-11e3-4fb8-ae23-3aaf6681d469
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_date_range
+    - taxonomy.vocabulary.reporting_period
+  module:
+    - datetime_range
+id: taxonomy_term.reporting_period.field_date_range
+field_name: field_date_range
+entity_type: taxonomy_term
+bundle: reporting_period
+label: 'Date range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

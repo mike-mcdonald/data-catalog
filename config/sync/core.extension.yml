@@ -1,6 +1,7 @@
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  auto_entitylabel: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
@@ -17,6 +18,7 @@ module:
   cshs: 0
   ctools: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
@@ -32,6 +34,7 @@ module:
   file: 0
   filter: 0
   formblock: 0
+  gcontent_field: 0
   gnode: 0
   group: 0
   help: 0
