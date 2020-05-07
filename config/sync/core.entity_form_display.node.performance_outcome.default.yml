@@ -78,14 +78,6 @@ content:
     weight: 6
     region: content
     third_party_settings: {  }
-  title:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 8
@@ -101,3 +93,4 @@ hidden:
   path: true
   promote: true
   sticky: true
+  title: true
