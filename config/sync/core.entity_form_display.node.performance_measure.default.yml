@@ -42,7 +42,7 @@ dependencies:
     - rain
 third_party_settings:
   field_layout:
-    id: layout_blank
+    id: layout_onecol
     settings:
       label: ''
 id: node.performance_measure.default
