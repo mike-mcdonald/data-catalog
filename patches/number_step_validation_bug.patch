@@ -1,0 +1,13 @@
+diff --git a/core/lib/Drupal/Component/Utility/Number.php b/core/lib/Drupal/Component/Utility/Number.php
+index 838c33c454..519dd70d7e 100644
+--- a/core/lib/Drupal/Component/Utility/Number.php
++++ b/core/lib/Drupal/Component/Utility/Number.php
+@@ -44,7 +44,7 @@ public static function validStep($value, $step, $offset = 0.0) {
+     }
+ 
+     // Now compute that remainder of a division by $step.
+-    $remainder = (double) abs($double_value - $step * round($double_value / $step));
++    $remainder = (double) abs(round($double_value / $step) * $step - $double_value);
+ 
+     // $remainder is a double precision floating point number. Remainders that
+     // can't be represented with single precision floats are acceptable. The
