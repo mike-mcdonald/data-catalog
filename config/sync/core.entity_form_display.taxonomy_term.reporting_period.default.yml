@@ -1,0 +1,46 @@
+uuid: dbee06c0-240f-4cdd-a7da-3da328be25ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.reporting_period.field_date_range
+    - taxonomy.vocabulary.reporting_period
+  module:
+    - datetime_range
+    - field_layout
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: taxonomy_term.reporting_period.default
+targetEntityType: taxonomy_term
+bundle: reporting_period
+mode: default
+content:
+  field_date_range:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

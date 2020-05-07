@@ -1,0 +1,18 @@
+uuid: 51f05d45-8fd2-46ad-8d5b-b394e70dca40
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Performance measure outcome'
+type: performance_outcome
+description: 'Add a new outcome that should be attached to a performance measure'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

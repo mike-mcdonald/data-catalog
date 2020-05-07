@@ -1,0 +1,33 @@
+uuid: 60086658-e3d7-46dc-9105-1c65bd563214
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.content_type.group_content_type_b4cbdbdf5a73d
+  module:
+    - field_layout
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: group_content.group_content_type_b4cbdbdf5a73d.default
+targetEntityType: group_content
+bundle: group_content_type_b4cbdbdf5a73d
+mode: default
+content:
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  path: true
+  uid: true
