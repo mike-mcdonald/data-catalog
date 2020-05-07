@@ -1,0 +1,8 @@
+uuid: b496ad8e-deaf-4b45-98f1-663ca2fa68a7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Performance measure level'
+vid: performance_measure_level
+description: ''
+weight: 0

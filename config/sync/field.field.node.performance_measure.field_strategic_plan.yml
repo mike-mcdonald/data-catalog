@@ -1,0 +1,29 @@
+uuid: 565a7d1e-2c41-4e14-8320-eacb7c35b7b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_strategic_plan
+    - node.type.performance_measure
+    - taxonomy.vocabulary.strategic_plan
+id: node.performance_measure.field_strategic_plan
+field_name: field_strategic_plan
+entity_type: node
+bundle: performance_measure
+label: 'Strategic plan'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      strategic_plan: strategic_plan
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
