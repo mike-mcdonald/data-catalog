@@ -66,13 +66,13 @@ third_party_settings:
             weight: 0
         third_party_settings: {  }
       -
-        layout_id: layout_row
+        layout_id: layout_twocol_flex
         layout_settings:
           label: ''
         components:
           d4b2f9ce-f7ac-4264-875c-bb573868458e:
             uuid: d4b2f9ce-f7ac-4264-875c-bb573868458e
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:title'
               label: 'Measure Name'
@@ -91,7 +91,7 @@ third_party_settings:
             weight: 0
           175f87a2-3a32-4ddf-a475-fda590f5eaa4:
             uuid: 175f87a2-3a32-4ddf-a475-fda590f5eaa4
-            region: content
+            region: second
             configuration:
               id: 'field_block:node:performance_measure:field_status'
               label: Status
@@ -107,7 +107,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 1
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_onecol

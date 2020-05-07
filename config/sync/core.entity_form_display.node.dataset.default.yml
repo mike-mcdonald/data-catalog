@@ -182,6 +182,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  group_content: true
   path: true
   promote: true
   status: true
