@@ -1,4 +1,8 @@
 /*! purgecss start ignore */
+.form-required {
+  @apply text-red-600;
+}
+
 .container-inline div,
 .container-inline label {
   @apply inline-flex;
@@ -14,6 +18,22 @@
 #views-exposed-form-full-index-page-1 {
   .form-item-fulltext {
     @apply col-span-3;
+  }
+}
+
+#edit-group-content-wrapper {
+  .gcontent-type-top {
+    @apply flex flex-wrap items-center justify-between;
+  }
+
+  .gc-field-dropbutton-wrapper {
+    .dropbutton {
+      @apply list-none flex items-center;
+    }
+  }
+
+  .form-item-group-content-add-more-add-relation {
+    @apply my-2;
   }
 }
 /*! purgecss end ignore */
