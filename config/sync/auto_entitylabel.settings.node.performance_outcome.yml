@@ -1,0 +1,6 @@
+status: 1
+pattern: '[node:field_performance_measure:entity:title]: [node:field_reporting_period:entity:parent] [node:field_reporting_period]'
+escape: false
+dependencies:
+  config:
+    - node.type.performance_outcome

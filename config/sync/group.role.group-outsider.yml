@@ -18,3 +18,4 @@ permissions:
   - 'view group_node:contact_information entity'
   - 'view group_node:dataset entity'
   - 'view group_node:performance_measure entity'
+  - 'view group_node:performance_outcome entity'

@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set layout_classes = layout_classes|default([
+    'flex',
+    'flex-col',
+    'md:flex-row',
+    '-mx-2',
+  ])
+%}
+{%
+  set region_classes = region_classes|default([
+    'mx-2',
+  ])
+%}
+{% if content %}
+  <div{{attributes.addClass(layout_classes)}}>
+    {% if content.first %}
+      <section
+        {{ region_attributes.first.addClass(region_classes) }}>
+        {{ content.first }}
+      </section>
+    {% endif %}
+    {% if content.second %}
+      <section
+        {{ region_attributes.second.addClass(region_classes) }}>
+        {{ content.second }}
+      </section>
+    {% endif %}
+    {% if content.third %}
+      <section
+        {{ region_attributes.third.addClass(region_classes) }}>
+        {{ content.third }}
+      </section>
+    {% endif %}
+  </div>
+{% endif %}

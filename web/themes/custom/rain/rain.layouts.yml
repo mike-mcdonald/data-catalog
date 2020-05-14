@@ -20,6 +20,17 @@ layout_row:
   icon_map:
     - [content]
 
+layout_blank:
+  label: 'Blank'
+  path: layouts
+  template: layout--blank
+  default_region: content
+  regions:
+    content:
+      label: Content
+  icon_map:
+    - [content]
+
 layout_onecol:
   label: 'One column'
   path: layouts/onecol
@@ -32,7 +43,7 @@ layout_onecol:
     - [content]
 
 layout_twocol:
-  label: 'Two column'
+  label: 'Two column (grid)'
   path: layouts/twocol
   template: layout--twocol
   default_region: first
@@ -44,10 +55,38 @@ layout_twocol:
   icon_map:
     - [first, second]
 
+layout_twocol_flex:
+  label: 'Two column (flex)'
+  path: layouts/twocol
+  template: layout--twocol-flex
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+  icon_map:
+    - [first, second]
+
 layout_threecol:
-  label: 'Three columns'
+  label: 'Three columns (grid)'
   path: layouts/threecol
   template: layout--threecol
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+  icon_map:
+    - [first, second, third]
+
+layout_threecol_flex:
+  label: 'Three columns (flex)'
+  path: layouts/threecol
+  template: layout--threecol-flex
   default_region: first
   regions:
     first:

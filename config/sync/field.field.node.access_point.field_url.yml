@@ -13,7 +13,7 @@ entity_type: node
 bundle: access_point
 label: URL
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

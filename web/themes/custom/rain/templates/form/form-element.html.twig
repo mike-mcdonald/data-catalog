@@ -69,6 +69,7 @@
     'flex',
     'items-baseline',
     'mb-1',
+    required ? 'text-red-600'
   ]%}
 	<div{{attributes.addClass(classes)}}>
 		{% if prefix is not empty %}
@@ -82,11 +83,11 @@
 		{% endif %}
 		<label{{label_attributes.addClass(label_classes)}}>
 			{% if label_display == 'before' %}
-				{{ label }}&nbsp;
+				{{ label }}
 			{% endif %}
 			{{ children }}
 			{% if label_display == 'after' %}
-				&nbsp;{{ label }}
+				{{ label }}
 			{% endif %}
 		</label>
 		{% if suffix is not empty %}

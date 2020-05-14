@@ -1,0 +1,75 @@
+uuid: 9ce0b64e-6a52-4b37-8217-7911b268ba7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.performance_outcome.body
+    - field.field.node.performance_outcome.field_actual
+    - field.field.node.performance_outcome.field_estimate
+    - field.field.node.performance_outcome.field_performance_measure
+    - field.field.node.performance_outcome.field_reporting_period
+    - node.type.performance_outcome
+  module:
+    - cshs
+    - text
+    - user
+id: node.performance_outcome.default
+targetEntityType: node
+bundle: performance_outcome
+mode: default
+content:
+  body:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_actual:
+    weight: 4
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_estimate:
+    weight: 3
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_performance_measure:
+    weight: 1
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_reporting_period:
+    weight: 2
+    label: inline
+    settings:
+      separator: ' - '
+      linked: 0
+      reverse: 0
+    third_party_settings: {  }
+    type: cshs_full_hierarchy
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  group_content: true
+  search_api_excerpt: true

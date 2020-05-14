@@ -14,6 +14,6 @@ description: 'Use This Content Type to create new Performance Measure records.'
 group_type: group
 content_plugin: 'group_node:performance_measure'
 plugin_config:
-  group_cardinality: 1
+  group_cardinality: 0
   entity_cardinality: 1
   use_creation_wizard: false

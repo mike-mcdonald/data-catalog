@@ -54,12 +54,6 @@ filters:
       allowed_media_types:
         image: image
       allowed_view_modes: {  }
-  filter_autop:
-    id: filter_autop
-    provider: filter
-    status: false
-    weight: -49
-    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
@@ -67,15 +61,21 @@ filters:
     weight: -48
     settings:
       filter_url_length: 72
-  filter_html_escape:
-    id: filter_html_escape
+  filter_autop:
+    id: filter_autop
     provider: filter
     status: false
-    weight: -41
+    weight: -49
     settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
     status: true
     weight: -44
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -41
     settings: {  }

@@ -36,6 +36,10 @@ libraries-override:
   environment_indicator/drupal.environment_indicator: false
   cshs/cshs.base: false
   views_ui/admin.styling: false
+  gcontent_field/gcontent_field.admin:
+    css:
+      theme:
+        css/gcontent-field.admin.css: false
 
 ckeditor_stylesheets:
   - css/style.bundle.css

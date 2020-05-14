@@ -44,13 +44,13 @@ third_party_settings:
             weight: 0
         third_party_settings: {  }
       -
-        layout_id: layout_row
+        layout_id: layout_twocol_flex
         layout_settings:
           label: ''
         components:
           68936f7e-2f2a-4036-b1ab-0400fb22c080:
             uuid: 68936f7e-2f2a-4036-b1ab-0400fb22c080
-            region: content
+            region: first
             configuration:
               id: 'field_block:block_content:archival_information:field_earliest_record_year'
               label: 'Earliest record year'
@@ -70,7 +70,7 @@ third_party_settings:
             weight: 0
           9f30120c-eb39-4858-8ce4-d8923179f979:
             uuid: 9f30120c-eb39-4858-8ce4-d8923179f979
-            region: content
+            region: second
             configuration:
               id: 'field_block:block_content:archival_information:field_latest_record_year'
               label: 'Latest record year'

@@ -1,0 +1,23 @@
+uuid: fb2051fe-55cd-4ee4-885f-302801b84c60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_actual
+    - node.type.performance_outcome
+id: node.performance_outcome.field_actual
+field_name: field_actual
+entity_type: node
+bundle: performance_outcome
+label: Actual
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

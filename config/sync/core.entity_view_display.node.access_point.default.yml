@@ -65,26 +65,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -7
-          6116ad09-1839-44ef-9640-8170a5269016:
-            uuid: 6116ad09-1839-44ef-9640-8170a5269016
-            region: content
-            configuration:
-              id: 'field_block:node:access_point:field_data_custodian'
-              label: 'Primary Contact '
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: -5
+            weight: -6
           9a37da1b-a40f-472a-aaed-3a16759a9a6a:
             uuid: 9a37da1b-a40f-472a-aaed-3a16759a9a6a
             region: content
@@ -105,7 +86,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -6
+            weight: -5
           b0dda337-d91a-4242-be97-47edcf97e7db:
             uuid: b0dda337-d91a-4242-be97-47edcf97e7db
             region: content
@@ -142,6 +123,25 @@ third_party_settings:
                 type: entity_reference_entity_view
                 settings:
                   view_mode: compact
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -7
+          6116ad09-1839-44ef-9640-8170a5269016:
+            uuid: 6116ad09-1839-44ef-9640-8170a5269016
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:field_data_custodian'
+              label: 'Primary Contact '
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -206,4 +206,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  group_content: true
   search_api_excerpt: true

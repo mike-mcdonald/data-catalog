@@ -105,7 +105,6 @@ field_settings:
         - field.storage.node.field_timeliness
       module:
         - block_content
-        - block_content
   rendered_item:
     label: 'Rendered HTML output'
     property_path: rendered_item
@@ -141,7 +140,8 @@ datasource_settings:
   'entity:node':
     bundles:
       default: true
-      selected: {  }
+      selected:
+        - performance_outcome
     languages:
       default: true
       selected: {  }

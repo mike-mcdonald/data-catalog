@@ -112,6 +112,8 @@ import chevronDown from '../../icons/chevron-down.svg';
       parent = parent || this.settings.noneValue;
       level = level || 0;
 
+      const required = this.$element.attr('required');
+
       const wrapperClasses = [
         'select-wrapper',
         'relative',
@@ -126,6 +128,8 @@ import chevronDown from '../../icons/chevron-down.svg';
         'items-center',
         'px-2',
       ];
+
+      if (required) chevronClasses.push('text-red-900');
 
       const chevronElement = `
       <div class="${chevronClasses.join(' ')}">

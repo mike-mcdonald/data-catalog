@@ -1,0 +1,64 @@
+uuid: 4e783250-09d6-4a7e-ab1f-503828cacbb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.performance_outcome.body
+    - field.field.node.performance_outcome.field_actual
+    - field.field.node.performance_outcome.field_estimate
+    - field.field.node.performance_outcome.field_performance_measure
+    - field.field.node.performance_outcome.field_reporting_period
+    - node.type.performance_outcome
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.performance_outcome.card
+targetEntityType: node
+bundle: performance_outcome
+mode: card
+content:
+  body:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_actual:
+    weight: 101
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_estimate:
+    weight: 102
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_performance_measure: true
+  field_reporting_period: true
+  group_content: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: 3503ea53-4937-45dc-81b8-895e2d0b9095
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reporting_period
+    - node.type.performance_outcome
+    - taxonomy.vocabulary.reporting_period
+id: node.performance_outcome.field_reporting_period
+field_name: field_reporting_period
+entity_type: node
+bundle: performance_outcome
+label: 'Reporting period'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      reporting_period: reporting_period
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

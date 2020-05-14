@@ -13,8 +13,6 @@
  */
 #}
 
-
-
 {% include 'select.html.twig' with {
   'attributes': attributes,
   wrapper_classes: [
@@ -23,6 +21,7 @@
     'grid-cols-1',
     'gap-1',
   ],
+  required: element["#required"],
   'add_icon': 'false',
 } %}
 {#

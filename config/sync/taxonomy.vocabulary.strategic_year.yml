@@ -1,0 +1,8 @@
+uuid: 5f63e094-c5d7-4299-8580-9ffdf01f82c9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Strategic year'
+vid: strategic_year
+description: ''
+weight: 0
