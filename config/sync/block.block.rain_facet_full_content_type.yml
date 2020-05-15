@@ -12,12 +12,12 @@ dependencies:
 id: rain_facet_full_content_type
 theme: rain
 region: right_sidebar
-weight: -7
+weight: -8
 provider: null
 plugin: 'facet_block:full_content_type'
 settings:
   id: 'facet_block:full_content_type'
-  label: 'Content by type'
+  label: 'Filter by type'
   provider: facets
   label_display: visible
   block_id: rain_facet_full_content_type
