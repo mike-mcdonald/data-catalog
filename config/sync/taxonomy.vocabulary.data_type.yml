@@ -1,0 +1,8 @@
+uuid: 80e17971-cc2d-467d-8878-490ce4436a43
+langcode: en
+status: true
+dependencies: {  }
+name: 'Data type'
+vid: data_type
+description: 'Numeric value data type in performance measure and performance measure outcome.'
+weight: 0
