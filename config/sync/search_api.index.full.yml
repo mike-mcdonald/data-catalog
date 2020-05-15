@@ -2,22 +2,23 @@ uuid: 4da740db-aad5-4706-881e-3b7e7415be58
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-    - block_content
-    - search_api
   config:
     - field.storage.node.field_authority_level
-    - field.storage.node.field_data_group
     - field.storage.node.field_data_owner
     - field.storage.node.field_demographic_information
-    - field.storage.node.field_keywords
+    - field.storage.node.field_data_group
     - field.storage.node.field_security_level
+    - field.storage.node.field_keywords
+    - field.storage.node.field_data_custodian
     - field.storage.node.field_spatial_information
     - field.storage.node.field_subject_areas
     - field.storage.node.field_timeliness
     - search_api.server.database
     - core.entity_view_mode.node.search_index
+  module:
+    - node
+    - block_content
+    - search_api
 id: full
 name: Full
 description: ''
@@ -39,6 +40,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_authority_level
+  field_data_custodian:
+    label: 'Primary Contact '
+    datasource_id: 'entity:node'
+    property_path: field_data_custodian
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_data_custodian
   field_data_group:
     label: Division/Group
     datasource_id: 'entity:node'
