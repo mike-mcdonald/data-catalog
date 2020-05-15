@@ -133,7 +133,8 @@ field_settings:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
-    type: string
+    type: text
+    boost: !!float 21
     dependencies:
       module:
         - node
