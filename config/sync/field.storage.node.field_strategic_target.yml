@@ -9,8 +9,8 @@ field_name: field_strategic_target
 entity_type: node
 type: decimal
 settings:
-  precision: 10
-  scale: 2
+  precision: 20
+  scale: 6
 module: core
 locked: false
 cardinality: 1
