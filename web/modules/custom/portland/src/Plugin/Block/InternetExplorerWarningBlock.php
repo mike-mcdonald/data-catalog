@@ -77,7 +77,16 @@ class InternetExplorerWarningBlock extends BlockBase implements ContainerFactory
    */
   public function build() {
     return [
+      '#attributes' => [
+        'class' => ['js-internet-explorer-warning'],
+        'style' => 'display: none;',
+      ],
       '#children' => $this->configuration['display_message'],
+      '#attached' => [
+        'library' => [
+          'portland/internet_explorer_warning'
+        ]
+      ]
     ];
   }
 
