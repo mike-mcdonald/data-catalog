@@ -24,17 +24,18 @@
   ])
 %}
 {% if content %}
+  {% set content_first = content.first|render %}
+  {% set content_second = content.second|render %}
+
   <div{{attributes.addClass(layout_classes)}}>
-    {% if content.first %}
-      <div
-        {{ region_attributes.first.addClass(region_classes) }}>
-        {{ content.first }}
+    {% if content_first is not empty %}
+      <div{{ region_attributes.first.addClass(region_classes) }}>
+        {{ content_first }}
       </div>
     {% endif %}
-    {% if content.second %}
-      <div
-        {{ region_attributes.second.addClass(region_classes) }}>
-        {{ content.second }}
+    {% if content_second is not empty %}
+      <div{{ region_attributes.second.addClass(region_classes) }}>
+        {{ content_second }}
       </div>
     {% endif %}
   </div>
