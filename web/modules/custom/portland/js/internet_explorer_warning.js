@@ -21,7 +21,7 @@
    *   Attaches the behavior for the block filtering.
    */
   Drupal.behaviors.internetExplorerWarning = {
-    attach() {
+    attach: function() {
       const $block = $('.js-internet-explorer-warning').once('js-internet-explorer-warning-done');
 
       if ($block) {
@@ -29,10 +29,10 @@
 
         // Detect if IE <= 11, add message if detected
         if (ua.indexOf('Trident/') > 0 || ua.indexOf('MSIE ') > 0) {
-          $block.css('display', 'flex')
+          $block.css('display', 'block')
         }
       }
     }
   };
 
-})(jQuery, Drupal, Drupal.debounce);
+})(jQuery, Drupal);
