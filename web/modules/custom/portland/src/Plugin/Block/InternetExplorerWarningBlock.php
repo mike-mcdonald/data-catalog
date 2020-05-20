@@ -2,9 +2,11 @@
 
 namespace Drupal\portland\Plugin\Block;
 
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Session\AccountInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -41,6 +43,13 @@ class InternetExplorerWarningBlock extends BlockBase implements ContainerFactory
       $plugin_id,
       $plugin_definition
     );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function access(AccountInterface $account, $return_as_object = FALSE) {
+    return AccessResult::allowed();
   }
 
   /**
