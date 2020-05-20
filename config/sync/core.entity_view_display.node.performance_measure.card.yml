@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.performance_measure.field_data_custodian
     - field.field.node.performance_measure.field_data_group
     - field.field.node.performance_measure.field_data_reliability
+    - field.field.node.performance_measure.field_data_type
     - field.field.node.performance_measure.field_datasets
     - field.field.node.performance_measure.field_formula
     - field.field.node.performance_measure.field_frequency
@@ -240,6 +241,7 @@ hidden:
   field_data_custodian: true
   field_data_group: true
   field_data_reliability: true
+  field_data_type: true
   field_datasets: true
   field_formula: true
   field_frequency: true
