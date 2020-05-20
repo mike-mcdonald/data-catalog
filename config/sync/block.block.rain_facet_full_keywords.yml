@@ -17,7 +17,7 @@ provider: null
 plugin: 'facet_block:full_keywords'
 settings:
   id: 'facet_block:full_keywords'
-  label: 'Content by keyword'
+  label: 'Filter by keyword'
   provider: facets
   label_display: visible
   block_id: fullkeywords

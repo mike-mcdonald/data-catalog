@@ -1,26 +1,26 @@
-uuid: 6ee22b7a-e509-4a91-93d6-3217324d4c38
+uuid: 4b3029bb-f8bd-422a-b992-04bc56ad9b9d
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.full_division_group
+    - facets.facet.full_contact
   module:
     - facets
     - system
   theme:
     - rain
-id: rain_facet_full_division_group
+id: rain_facet_full_contact
 theme: rain
 region: right_sidebar
-weight: -6
+weight: -5
 provider: null
-plugin: 'facet_block:full_division_group'
+plugin: 'facet_block:full_contact'
 settings:
-  id: 'facet_block:full_division_group'
-  label: 'Filter by division/group'
+  id: 'facet_block:full_contact'
+  label: 'Filter by contact'
   provider: facets
   label_display: visible
-  block_id: fulldivisiongroup
+  block_id: rain_facet_full_contact
 visibility:
   request_path:
     id: request_path

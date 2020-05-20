@@ -24,23 +24,24 @@
   ])
 %}
 {% if content %}
+  {% set content_first = content.first|render %}
+  {% set content_second = content.second|render %}
+  {% set content_third = content.third|render %}
+
   <div{{attributes.addClass(layout_classes)}}>
-    {% if content.first %}
-      <section
-        {{ region_attributes.first.addClass(region_classes) }}>
-        {{ content.first }}
+    {% if content_first is not empty %}
+      <section{{ region_attributes.first.addClass(region_classes) }}>
+        {{ content_first }}
       </section>
     {% endif %}
-    {% if content.second %}
-      <section
-        {{ region_attributes.second.addClass(region_classes) }}>
-        {{ content.second }}
+    {% if content_second is not empty %}
+      <section{{ region_attributes.second.addClass(region_classes) }}>
+        {{ content_second }}
       </section>
     {% endif %}
-    {% if content.third %}
-      <section
-        {{ region_attributes.third.addClass(region_classes) }}>
-        {{ content.third }}
+    {% if content_third is not empty %}
+      <section{{ region_attributes.third.addClass(region_classes) }}>
+        {{ content_third }}
       </section>
     {% endif %}
   </div>

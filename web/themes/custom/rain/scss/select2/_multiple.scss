@@ -3,7 +3,7 @@
   cursor: text;
 
   .select2-selection__rendered {
-    @apply list-none flex flex-wrap items-center;
+    @apply pl-0 list-none flex flex-wrap items-center;
   }
 
   .select2-selection__placeholder {
