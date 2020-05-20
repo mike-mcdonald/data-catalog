@@ -24,8 +24,8 @@ dependencies:
     - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
     - field.field.node.performance_measure.field_strategic_plan
+    - field.field.node.performance_measure.field_strategic_target
     - field.field.node.performance_measure.field_strategic_year
-    - field.field.node.performance_measure.field_target
     - field.field.node.performance_measure.field_threshold
     - field.field.node.performance_measure.field_url
     - node.type.performance_measure
@@ -86,26 +86,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 3
-          4513317a-2c87-4b5e-8cd0-2ec69950a84b:
-            uuid: 4513317a-2c87-4b5e-8cd0-2ec69950a84b
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_target'
-              label: Target
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 9
+            weight: 4
           a653e4a3-2146-4cce-b3ab-3b58f4d08e8c:
             uuid: a653e4a3-2146-4cce-b3ab-3b58f4d08e8c
             region: content
@@ -224,7 +205,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 7
+            weight: 8
           7d1410d4-3ddb-4b56-97cf-06fc940116ff:
             uuid: 7d1410d4-3ddb-4b56-97cf-06fc940116ff
             region: content
@@ -243,7 +224,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 8
+            weight: 9
           44fca45b-3d28-4d11-b7ad-c36f1dd49acb:
             uuid: 44fca45b-3d28-4d11-b7ad-c36f1dd49acb
             region: content
@@ -281,7 +262,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 4
+            weight: 5
           dc44f6af-c558-402c-b1ed-acbaf57d8e94:
             uuid: dc44f6af-c558-402c-b1ed-acbaf57d8e94
             region: content
@@ -374,7 +355,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 6
+            weight: 7
           d99de31f-252e-4296-a866-f348abe56bd6:
             uuid: d99de31f-252e-4296-a866-f348abe56bd6
             region: content
@@ -491,7 +472,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: 3
           59129609-2193-4325-870d-8c5a88f6fd27:
             uuid: 59129609-2193-4325-870d-8c5a88f6fd27
             region: content
@@ -529,7 +510,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 1
+            weight: 2
           08bb991e-96c7-4cbc-ae12-f0a79fc16f3a:
             uuid: 08bb991e-96c7-4cbc-ae12-f0a79fc16f3a
             region: content
@@ -547,7 +528,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 5
+            weight: 6
           255f4eb8-307c-4d2e-b81b-e9f54c9ebf55:
             uuid: 255f4eb8-307c-4d2e-b81b-e9f54c9ebf55
             region: content
@@ -612,6 +593,28 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 9
+          1c95fb4c-548a-4d11-8003-2cea9022b9fa:
+            uuid: 1c95fb4c-548a-4d11-8003-2cea9022b9fa
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_strategic_target'
+              label: 'Strategic target'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: number_decimal
+                settings:
+                  thousand_separator: ','
+                  prefix_suffix: true
+                  decimal_separator: .
+                  scale: 2
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
@@ -787,6 +790,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_strategic_target:
+    weight: 144
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
   field_strategic_year:
     weight: 139
     label: above
@@ -794,14 +808,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_target:
-    weight: 108
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   field_threshold:
     weight: 133

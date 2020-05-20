@@ -1,26 +1,37 @@
-{% embed 'block.html.twig' with {
-  'block_classes': [
-    'my-3',
-  ],
-  'heading_element': 'div',
-  'title_classes': [
-    'py-2',
-    'font-thin',
-    'font-semibold',
-  ],
-  'content_classes': [
-  ],
-} %}
+
+{% set block_classes = [
+  'my-3',
+] %}
+
+{% set heading_element = 'div' %}
+{% set title_classes = [
+  'pr-2',
+  'py-2',
+  'font-thin',
+  'font-semibold',
+  'cursor-pointer',
+  'flex',
+  'items-center',
+  'justify-between',
+] %}
+
+{% set content_attribute = content_attribute|default(create_attribute()) %}
+{% set content_classes = [] %}
+
+<div{{attributes.addClass(block_classes)}} x-data="{ show: true }">
 	{% block title %}
 		{{ title_prefix }}
 		{% if label %}
-			<{{heading_element}}{{title_attributes.addClass(title_classes)}}>{{ label }}</{{heading_element}}>
+			<{{heading_element}}{{title_attributes.addClass(title_classes)}} @click="show = !show">
+      <span>{{ label }}</span>
+      <i class="transform transition ease-out duration-300 opacity-50" x-bind:class="{ 'rotate-180': !show }">{% include active_theme_path() ~ '/icons/chevron-up.svg' %}</i>
+      </{{heading_element}}>
 		{% endif %}
 		{{ title_suffix }}
 	{% endblock %}
 	{% block content %}
-		<div{{content_attribute.addClass(content_classes)}}>
+		<div{{content_attribute.addClass(content_classes)}} x-show="show">
 			{{ content }}
 		</div>
 	{% endblock %}
-{% endembed %}
+</div>
