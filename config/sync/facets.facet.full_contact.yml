@@ -1,4 +1,4 @@
-uuid: 49c698f2-1337-4caa-b41d-4c8c71f69744
+uuid: 20d85902-4a99-4954-8ce3-d0343c253258
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
     - views.view.full_index
   module:
     - search_api
-id: full_keywords
-name: 'Full keywords'
-url_alias: keywords
+id: full_contact
+name: Contact
+url_alias: contact
 weight: 0
 min_count: 1
-show_only_one_result: false
-field_identifier: field_keywords
+show_only_one_result: true
+field_identifier: field_data_custodian
 facet_source_id: 'search_api:views_page__full_index__page_1'
 widget:
   type: select2
@@ -28,7 +28,7 @@ expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0
 exclude: false
-only_visible_when_facet_source_is_visible: true
+only_visible_when_facet_source_is_visible: false
 processor_configs:
   active_widget_order:
     processor_id: active_widget_order
@@ -36,13 +36,6 @@ processor_configs:
       sort: 20
     settings:
       sort: ASC
-  count_limit:
-    processor_id: count_limit
-    weights:
-      build: 50
-    settings:
-      minimum_items: 1
-      maximum_items: null
   count_widget_order:
     processor_id: count_widget_order
     weights:
