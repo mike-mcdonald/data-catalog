@@ -1,19 +1,23 @@
-uuid: d57f4f1a-7b20-452d-a21b-89f25ec9b09b
+uuid: e678920b-81b3-469e-bd0a-9f19eac0bfad
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_target
+    - field.storage.node.field_strategic_target
     - node.type.performance_measure
-id: node.performance_measure.field_target
-field_name: field_target
+id: node.performance_measure.field_strategic_target
+field_name: field_strategic_target
 entity_type: node
 bundle: performance_measure
-label: Target
+label: 'Strategic target'
 description: 'A quantifiable level of performance or condition, as a value for a measure, to be achieved within a time period.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -25,8 +25,8 @@ dependencies:
     - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
     - field.field.node.performance_measure.field_strategic_plan
+    - field.field.node.performance_measure.field_strategic_target
     - field.field.node.performance_measure.field_strategic_year
-    - field.field.node.performance_measure.field_target
     - field.field.node.performance_measure.field_threshold
     - field.field.node.performance_measure.field_url
     - node.type.performance_measure
@@ -253,8 +253,9 @@ hidden:
   field_requirements: true
   field_status: true
   field_strategic_plan: true
+  field_strategic_target: true
   field_strategic_year: true
-  field_target: true
   field_threshold: true
   field_url: true
+  group_content: true
   search_api_excerpt: true
