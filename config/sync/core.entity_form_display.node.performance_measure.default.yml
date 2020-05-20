@@ -23,8 +23,8 @@ dependencies:
     - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
     - field.field.node.performance_measure.field_strategic_plan
+    - field.field.node.performance_measure.field_strategic_target
     - field.field.node.performance_measure.field_strategic_year
-    - field.field.node.performance_measure.field_target
     - field.field.node.performance_measure.field_threshold
     - field.field.node.performance_measure.field_url
     - node.type.performance_measure
@@ -121,7 +121,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_formula:
-    weight: 13
+    weight: 14
     settings:
       rows: 5
       placeholder: ''
@@ -159,7 +159,7 @@ content:
     type: string_textfield
     region: content
   field_measure_type:
-    weight: 16
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -181,7 +181,7 @@ content:
     type: string_textarea
     region: content
   field_program_area:
-    weight: 12
+    weight: 13
     settings:
       parent: 0
       level_labels: ''
@@ -190,7 +190,7 @@ content:
     type: cshs
     region: content
   field_project_name:
-    weight: 11
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -198,7 +198,7 @@ content:
     type: string_textfield
     region: content
   field_requirements:
-    weight: 14
+    weight: 15
     settings:
       rows: 5
       placeholder: ''
@@ -220,6 +220,13 @@ content:
     third_party_settings: {  }
     type: cshs
     region: content
+  field_strategic_target:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_strategic_year:
     weight: 9
     settings:
@@ -230,16 +237,8 @@ content:
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
-  field_target:
-    weight: 17
-    settings:
-      size: 512
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_threshold:
-    weight: 15
+    weight: 16
     settings:
       size: 512
       placeholder: ''
