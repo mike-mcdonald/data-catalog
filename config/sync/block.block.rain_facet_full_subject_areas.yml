@@ -12,12 +12,12 @@ dependencies:
 id: rain_facet_full_subject_areas
 theme: rain
 region: right_sidebar
-weight: -6
+weight: -7
 provider: null
 plugin: 'facet_block:full_subject_areas'
 settings:
   id: 'facet_block:full_subject_areas'
-  label: 'Content by subject area'
+  label: 'Filter by subject area'
   provider: facets
   label_display: visible
   block_id: fullsubjectareas

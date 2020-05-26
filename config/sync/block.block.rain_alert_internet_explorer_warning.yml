@@ -1,0 +1,21 @@
+uuid: c17fc2ff-c3a8-4c86-ba5c-b2719091c8f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - portland
+  theme:
+    - rain
+id: rain_alert_internet_explorer_warning
+theme: rain
+region: alert
+weight: 0
+provider: null
+plugin: internet_explorer_warning_block
+settings:
+  id: internet_explorer_warning_block
+  label: 'Internet Explorer warning'
+  provider: portland
+  label_display: '0'
+  display_message: 'You are using an unsupported browser, features of this site will not function. Please use a different browser.'
+visibility: {  }

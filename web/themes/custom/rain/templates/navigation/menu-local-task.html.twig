@@ -23,6 +23,8 @@
     is_active ? 'hover:bg-cyan-800' : 'hover:bg-fog-300 ',
   ])
 %}
-<li{{ attributes.addClass(task_classes) }} {% if is_active %} aria-selected="true" {% endif %}>
-  {{ link }}
+<li class="flex" {% if is_active %} aria-selected="true" {% endif %}>
+  <a{{attributes.addClass(task_classes)}} href="{{ link['#url'].toString() }}">
+    {{ link['#title'] }}
+  </a>
 </li>
