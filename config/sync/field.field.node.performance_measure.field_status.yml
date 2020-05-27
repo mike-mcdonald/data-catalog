@@ -10,7 +10,7 @@ id: node.performance_measure.field_status
 field_name: field_status
 entity_type: node
 bundle: performance_measure
-label: Status
+label: 'Development stage'
 description: ''
 required: false
 translatable: false
