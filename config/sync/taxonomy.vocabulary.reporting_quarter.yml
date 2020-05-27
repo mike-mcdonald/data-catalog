@@ -1,0 +1,8 @@
+uuid: 60df50a7-ad19-4fae-ac15-f5e618827ccc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Reporting quarter'
+vid: reporting_quarter
+description: ''
+weight: 0
