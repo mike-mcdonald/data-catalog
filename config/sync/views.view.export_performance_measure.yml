@@ -24,7 +24,7 @@ dependencies:
     - field.storage.node.field_status
     - field.storage.node.field_strategic_plan
     - field.storage.node.field_strategic_year
-    - field.storage.node.field_target
+    - field.storage.node.field_strategic_target
     - field.storage.node.field_threshold
     - field.storage.node.field_url
     - node.type.performance_measure
@@ -1981,7 +1981,7 @@ display:
         - 'config:field.storage.node.field_status'
         - 'config:field.storage.node.field_strategic_plan'
         - 'config:field.storage.node.field_strategic_year'
-        - 'config:field.storage.node.field_target'
+        - 'config:field.storage.node.field_strategic_target'
         - 'config:field.storage.node.field_threshold'
         - 'config:field.storage.node.field_url'
   data_export_1:
@@ -2051,6 +2051,6 @@ display:
         - 'config:field.storage.node.field_status'
         - 'config:field.storage.node.field_strategic_plan'
         - 'config:field.storage.node.field_strategic_year'
-        - 'config:field.storage.node.field_target'
+        - 'config:field.storage.node.field_strategic_target'
         - 'config:field.storage.node.field_threshold'
         - 'config:field.storage.node.field_url'
