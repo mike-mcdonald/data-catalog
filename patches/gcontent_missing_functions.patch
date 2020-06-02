@@ -1,0 +1,148 @@
+diff --git a/src/Form/GroupSettingsForm.php b/src/Form/GroupSettingsForm.php
+index 68e56fe..7a84803 100644
+--- a/src/Form/GroupSettingsForm.php
++++ b/src/Form/GroupSettingsForm.php
+@@ -4,12 +4,40 @@ namespace Drupal\group\Form;
+ 
+ use Drupal\Core\Form\ConfigFormBase;
+ use Drupal\Core\Form\FormStateInterface;
++use Drupal\Core\Extension\ModuleHandler;
++use Drupal\Core\Config\ConfigFactoryInterface;
++use Symfony\Component\DependencyInjection\ContainerInterface;
+ 
+ /**
+  * Class GroupSettingsForm.
+  */
+ class GroupSettingsForm extends ConfigFormBase {
+ 
++  /**
++   * The module handler.
++   *
++   * @var \Drupal\Core\Extension\ModuleHandler
++   */
++  protected $moduleHandler;
++
++  /**
++   * {@inheritdoc}
++   */
++  public function __construct(ConfigFactoryInterface $config_factory, ModuleHandler $module_handler) {
++    parent::__construct($config_factory);
++    $this->moduleHandler = $module_handler;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function create(ContainerInterface $container) {
++    return new static(
++      $container->get('config.factory'),
++      $container->get('module_handler')
++    );
++  }
++
+   /**
+    * {@inheritdoc}
+    */
+@@ -21,7 +49,11 @@ class GroupSettingsForm extends ConfigFormBase {
+    * {@inheritdoc}
+    */
+   protected function getEditableConfigNames() {
+-    return ['group.settings'];
++    $editables = ['group.settings'];
++    if ($this->moduleHandler->moduleExists('gcontent_field')) {
++      $editables[] = 'gcontent_field.settings';
++    }
++    return $editables;
+   }
+ 
+   /**
+@@ -38,6 +70,25 @@ class GroupSettingsForm extends ConfigFormBase {
+       '#default_value' => $config->get('use_admin_theme'),
+     ];
+ 
++    // Group content field options.
++    if ($this->moduleHandler->moduleExists('gcontent_field')) {
++      $gcontent_field_config = $this->config('gcontent_field.settings')->get('entity_field_label');
++      $form['gcontent_field'] = [
++        '#type' => 'details',
++        '#title' => $this->t('Group Content Field'),
++        '#tree' => TRUE,
++      ];
++      if ($entity_types = gcontent_field_get_entity_types()) {
++        foreach ($entity_types as $entity_type_id => $entity_type_name) {
++          $form['gcontent_field'][$entity_type_id] = [
++            '#type' => 'textfield',
++            '#title' => $this->t('Label for @entity_type', ['@entity_type' => $entity_type_name]),
++            '#default_value' => isset($gcontent_field_config[$entity_type_id]) ? $gcontent_field_config[$entity_type_id] : NULL,
++          ];
++        }
++      }
++    }
++
+     return $form;
+   }
+ 
+@@ -55,6 +106,12 @@ class GroupSettingsForm extends ConfigFormBase {
+       \Drupal::service('router.builder')->setRebuildNeeded();
+     }
+ 
++    // Setting gcontent_field settings.
++    if ($entity_field_label = $form_state->getValue('gcontent_field')) {
++      $gcontent_field_config = $this->config('gcontent_field.settings');
++      $gcontent_field_config->set('entity_field_label', $entity_field_label)->save();
++    }
++
+     parent::submitForm($form, $form_state);
+   }
+ 
+diff --git a/src/Plugin/GroupContentEnablerManager.php b/src/Plugin/GroupContentEnablerManager.php
+index ba53355..a4d6904 100644
+--- a/src/Plugin/GroupContentEnablerManager.php
++++ b/src/Plugin/GroupContentEnablerManager.php
+@@ -150,6 +150,22 @@ class GroupContentEnablerManager extends DefaultPluginManager implements GroupCo
+     return $this->allPlugins;
+   }
+ 
++  /**
++   * {@inheritdoc}
++   */
++  public function getPluginIdByEntityType($entity_type_id, $entity_bundle) {
++    foreach ($this->getDefinitions() as $plugin_id => $plugin_info) {
++      if ($plugin_info['entity_type_id'] == $entity_type_id) {
++        if ($plugin_info['entity_bundle'] && $plugin_info['entity_bundle'] == $entity_bundle) {
++          return $plugin_id;
++        }
++        elseif (!$plugin_info['entity_bundle']) {
++          return $plugin_id;
++        }
++      }
++    }
++  }
++
+   /**
+    * {@inheritdoc}
+    */
+diff --git a/src/Plugin/GroupContentEnablerManagerInterface.php b/src/Plugin/GroupContentEnablerManagerInterface.php
+index ffcfceb..75b0cb3 100644
+--- a/src/Plugin/GroupContentEnablerManagerInterface.php
++++ b/src/Plugin/GroupContentEnablerManagerInterface.php
+@@ -25,6 +25,19 @@ interface GroupContentEnablerManagerInterface extends PluginManagerInterface, Ca
+    */
+   public function getAll();
+ 
++  /**
++   * Returns a plugin id for a given entity_type_id and bundle.
++   *
++   * @param string $entity_type_id
++   *   The entity type id.
++   * @param string $entity_bundle
++   *   The entity bundle.
++   *
++   * @return string
++   *   A plugin id.
++   */
++  public function getPluginIdByEntityType($entity_type_id, $entity_bundle);
++
+   /**
+    * Returns a plugin collection of all installed content enablers.
+    *
