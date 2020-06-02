@@ -1,17 +1,16 @@
-uuid: 9db60613-ebe9-4249-b412-07af974eb0c7
+uuid: 294962b2-3c65-4fe9-858b-aac74413ac63
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_measure_id
-field_name: field_measure_id
+    - taxonomy
+id: node.field_reporting_month
+field_name: field_reporting_month
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

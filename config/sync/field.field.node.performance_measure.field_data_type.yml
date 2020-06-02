@@ -10,7 +10,7 @@ id: node.performance_measure.field_data_type
 field_name: field_data_type
 entity_type: node
 bundle: performance_measure
-label: 'Outcome value data type'
+label: 'Performance outcome value data type'
 description: 'Select the of value of numeric data used for this performance measure and its related outcome(s).'
 required: false
 translatable: false
