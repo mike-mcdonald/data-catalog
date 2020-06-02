@@ -1,10 +1,9 @@
-uuid: 396836b2-e74e-4186-a933-68ad8c6934ee
+uuid: aa481496-7ead-4aa5-bea6-550906fb2188
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.group_content.group-group_membership.group_roles
-    - group.content_type.group-group_membership
+    - group.content_type.group_content_type_8b46be7d37516
   module:
     - field_layout
   theme:
@@ -14,9 +13,9 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
-id: group_content.group-group_membership.default
+id: group_content.group_content_type_8b46be7d37516.default
 targetEntityType: group_content
-bundle: group-group_membership
+bundle: group_content_type_8b46be7d37516
 mode: default
 content:
   entity_id:
@@ -29,12 +28,6 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-  group_roles:
-    type: options_buttons
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
   path: true
   uid: true

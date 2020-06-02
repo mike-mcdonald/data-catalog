@@ -22,6 +22,7 @@ dependencies:
     - content_moderation
     - cshs
     - field_layout
+    - gcontent_field
     - inline_entity_form
     - select2
   theme:
@@ -156,11 +157,27 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
+  group_content:
+    type: group_selector_widget
+    weight: 15
+    region: content
+    settings:
+      widget: select
+      multiple: '1'
+      required: 0
+    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 16
+    weight: 18
     settings: {  }
     region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -172,7 +189,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 15
+    weight: 16
     region: content
     settings:
       match_operator: CONTAINS
@@ -182,8 +199,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  group_content: true
   path: true
   promote: true
-  status: true
   sticky: true
