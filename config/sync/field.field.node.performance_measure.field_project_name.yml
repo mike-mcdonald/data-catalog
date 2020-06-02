@@ -9,7 +9,7 @@ id: node.performance_measure.field_project_name
 field_name: field_project_name
 entity_type: node
 bundle: performance_measure
-label: 'Project name'
+label: 'Project or plan name'
 description: ''
 required: false
 translatable: false

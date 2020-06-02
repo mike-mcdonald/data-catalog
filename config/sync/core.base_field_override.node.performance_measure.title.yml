@@ -8,7 +8,7 @@ id: node.performance_measure.title
 field_name: title
 entity_type: node
 bundle: performance_measure
-label: 'Measure Name'
+label: 'Measure ID'
 description: ''
 required: true
 translatable: true
