@@ -12,21 +12,10 @@
 #}
 {%
   set action_classes = action_classes|default([
-    'px-3',
-    'py-4',
-    'bg-fog-300',
-    'text-fog-900',
-    'text-center',
-    'rounded-lg',
-    'hover:bg-fog-900',
-    'hover:text-fog-100',
-    'focus:outline-none',
-    'focus:shadow-outline',
-    'focus:bg-fog-900',
-    'focus:text-fog-100',
-    'transition',
-    'ease-in-out',
-    'duration-150',
+    'mr-3',
+    'my-3',
+    'border-b-2',
+    'border-current',
   ])
 %}
 <a{{attributes.addClass(action_classes)}} href="{{ link['#url'].toString() }}">
