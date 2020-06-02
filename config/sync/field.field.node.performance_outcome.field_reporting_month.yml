@@ -1,16 +1,16 @@
-uuid: 1c3ca2f7-9c10-4969-a939-22c67956c384
+uuid: 6f96b825-176d-43c8-a825-552186b1dbda
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_status
-    - node.type.performance_measure
-    - taxonomy.vocabulary.status
-id: node.performance_measure.field_status
-field_name: field_status
+    - field.storage.node.field_reporting_month
+    - node.type.performance_outcome
+    - taxonomy.vocabulary.reporting_month
+id: node.performance_outcome.field_reporting_month
+field_name: field_reporting_month
 entity_type: node
-bundle: performance_measure
-label: 'Development stage'
+bundle: performance_outcome
+label: 'Reporting month'
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      status: status
+      reporting_month: reporting_month
     sort:
       field: name
       direction: asc
