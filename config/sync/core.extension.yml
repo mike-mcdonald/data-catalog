@@ -74,6 +74,7 @@ module:
   views_bootstrap: 0
   views_data_export: 0
   views_ui: 0
+  webform: 0
   workflows: 0
   yearonly: 0
   menu_link_content: 1
