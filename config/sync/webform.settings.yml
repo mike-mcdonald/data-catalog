@@ -159,6 +159,10 @@ file:
   delete_temporary_managed_files: true
 format: {  }
 mail:
+  roles:
+    - content_admin
+    - user_admin
+    - administrator
   default_to_mail: '[site:mail]'
   default_from_mail: '[site:mail]'
   default_from_name: '[site:name]'
