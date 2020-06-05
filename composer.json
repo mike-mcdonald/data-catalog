@@ -41,6 +41,7 @@
     "drupal/formblock": "^1.0@beta",
     "drupal/group": "^1.0@RC",
     "drupal/inline_entity_form": "^1.0@RC",
+    "drupal/key": "^1.13",
     "drupal/maxlength": "^1.0@beta",
     "drupal/openid_connect": "^1.0@beta",
     "drupal/paragraphs": "^1.3",
