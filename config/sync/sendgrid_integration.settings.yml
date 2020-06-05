@@ -1,4 +1,4 @@
-apikey: null
+apikey: sendgrid_api_key
 test_defaults:
   to: michael.mcdonald@portlandoregon.gov
   subject: 'Test Email from SendGrid Module'
