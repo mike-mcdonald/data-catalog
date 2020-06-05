@@ -48,6 +48,7 @@
     "drupal/search_api": "^1.9",
     "drupal/search_api_db": "^1.9",
     "drupal/select2": "^1.0@beta",
+    "drupal/sendgrid_integration": "^1.2",
     "drupal/smart_trim": "^1.2",
     "drupal/smtp": "^1.0@RC",
     "drupal/views_bootstrap": "^3.0",
