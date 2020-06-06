@@ -1,5 +1,7 @@
 <?php
 
+include 'portland.tokens.inc';
+
 function portland_inline_entity_form_table_fields_alter(&$fields, $context) {
   if ($context['entity_type'] == 'block_content') {
     // Remove 'block description'
