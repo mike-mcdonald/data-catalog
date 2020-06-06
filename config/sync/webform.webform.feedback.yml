@@ -9,10 +9,10 @@ uid: 3
 template: false
 archive: false
 id: feedback
-title: Feedback
+title: 'Feedback and issue reporting'
 description: 'Form to gather general site feedback or issues, forwarded to administrators'
 category: ''
-elements: "thanks_message:\n  '#type': webform_message\n  '#message_type': info\n  '#message_message': |\n    <div class=\"js-form-item form-item js-form-type-processed-text form-item- js-form-item- form-no-label form-group\" id=\"edit-processed-text\">\n    <div>\n    <p>Thank you for helping us improve the data catalog! If you are experiencing an issue using the site, we apologize for any inconvenience you&#39;ve experienced, and we&#39;ll work to resolve that as rapidly as possible. Please use this form to help us understand your needs better and continually improve this site.</p>\n    </div>\n    </div>\nfeedback:\n  '#type': textarea\n  '#title': 'Feedback or issue'\n  '#description': 'Enter your feedback or describe the issue you are experiencing while using the site.'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'E-mail address'\n  '#description': 'If you&#39;d like to possibly receive follow-up communication, provide an e-mail.'\n  '#default_value': '[current-user:mail]'\nlast_visited:\n  '#type': url\n  '#title': 'Page for feedback'\n  '#description': 'If applicable, the page that this feedback is related to.'\n  '#default_value': '[server:HTTP_REFERER]'\nscreenshot:\n  '#type': webform_image_file\n  '#title': Screenshot\n  '#description': 'If possible, and you think it would be helpful, provide a screenshot highlighting the subject for your feedback or issue.'\n  '#sanitize': true"
+elements: "thanks_message:\n  '#type': webform_message\n  '#message_type': info\n  '#message_message': |\n    <div class=\"js-form-item form-item js-form-type-processed-text form-item- js-form-item- form-no-label form-group\" id=\"edit-processed-text\">\n    <div>\n    <p>Thank you for helping us improve the data catalog! If you are experiencing an issue using the site, we apologize for any inconvenience you&#39;ve experienced, and we&#39;ll work to resolve that as rapidly as possible. Please use this form to help us understand your needs better and continually improve this site.</p>\n    </div>\n    </div>\n    \nfeedback:\n  '#type': textarea\n  '#title': 'Feedback or issue'\n  '#description': 'Enter your feedback or describe the issue you are experiencing while using the site.'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'E-mail address'\n  '#description': 'If you&#39;d like to possibly receive follow-up communication, provide an e-mail.'\n  '#default_value': '[current-user:mail]'\nlast_visited:\n  '#type': url\n  '#title': 'Page for feedback'\n  '#description': 'If applicable, the page that this feedback is related to.'\n  '#default_value': '[server:HTTP_REFERER]'\nscreenshot:\n  '#type': webform_image_file\n  '#title': Screenshot\n  '#description': 'If possible, and you think it would be helpful, provide a screenshot highlighting the subject for your feedback or issue.'\n  '#file_help': more\n  '#sanitize': true"
 css: ''
 javascript: ''
 settings:
@@ -104,7 +104,7 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: message
   confirmation_title: ''
   confirmation_message: ''
   confirmation_url: ''
@@ -137,7 +137,6 @@ settings:
 access:
   create:
     roles:
-      - anonymous
       - authenticated
     users: {  }
     permissions: {  }
@@ -181,5 +180,79 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email_admin:
+    id: email
+    label: 'Email to admins'
+    handler_id: email_admin
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: PBOTApplicationSupport@portlandoregon.gov
+      to_options: {  }
+      cc_mail: aubrey.lindstrom@portlandoregon.gov
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: 'Feedback or issue submitted for Data Catalog'
+      body: "<p>Submitted on {{ webform_token('[webform_submission:created:short]', webform_submission) }}</p>\r\n{{ webform_token('[webform_submission:values]', webform_submission) }}\r\n"
+      excluded_elements:
+        thanks_message: thanks_message
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: true
+      twig: true
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  email_requestor:
+    id: email
+    label: 'Email to requestor'
+    handler_id: email_requestor
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email_address:raw]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: 'Feedback or issue for Data Catalog received'
+      body: "<p>Thank you for reaching out to provide feedback or report an issue with PBOT's Data Catalog. We have received your report. If you reported an issue that needs to be immediately resolved, we will reach out to you.</p>\r\n<p>Submitted on {{ webform_token('[webform_submission:created:short]', webform_submission) }}</p>\r\n{{ webform_token('[webform_submission:values]', webform_submission) }}\r\n"
+      excluded_elements:
+        thanks_message: thanks_message
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: true
+      twig: true
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
 variants: {  }
