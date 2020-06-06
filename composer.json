@@ -128,7 +128,8 @@
         "Fix for PostgreSQL table alias length limit 2": "patches/postgresql_table_alias_fix.patch",
         "2457999 - Cannot use relationship for rendered entity on Views": "https://www.drupal.org/files/issues/2019-10-28/2457999-223.patch",
         "3045171 - Form blocks rendered inside layout builder break save": "https://www.drupal.org/files/issues/2020-02-04/layout-builder-save-issue-3045171-140.patch",
-        "Fix number step validation bug": "patches/number_step_validation_bug.patch"
+        "Fix number step validation bug": "patches/number_step_validation_bug.patch",
+        "Load users by e-mail, case-insensitive": "patches/user_email_load_insensitive.patch"
       },
       "drupal/group": {
         "Change some labels to be more friendly": "patches/group-friendly_labels.patch",
