@@ -40,6 +40,7 @@
     "drupal/field_group": "^1.0",
     "drupal/formblock": "^1.0@beta",
     "drupal/group": "^1.0@RC",
+    "drupal/honeypot": "^2.0",
     "drupal/inline_entity_form": "^1.0@RC",
     "drupal/key": "^1.13",
     "drupal/maxlength": "^1.0@beta",
