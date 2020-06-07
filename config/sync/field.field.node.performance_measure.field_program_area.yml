@@ -10,7 +10,7 @@ id: node.performance_measure.field_program_area
 field_name: field_program_area
 entity_type: node
 bundle: performance_measure
-label: 'Program Area'
+label: 'Program area'
 description: ''
 required: false
 translatable: false

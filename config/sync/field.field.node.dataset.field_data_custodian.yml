@@ -10,7 +10,7 @@ id: node.dataset.field_data_custodian
 field_name: field_data_custodian
 entity_type: node
 bundle: dataset
-label: 'Primary Contact '
+label: 'Primary contact '
 description: 'View the definition <a href="[site:url]term/primary-contact">here</a>'
 required: true
 translatable: false
