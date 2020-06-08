@@ -34,3 +34,4 @@
 
 # Ignore private security information
 /.certs/
+/private/
