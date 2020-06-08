@@ -10,8 +10,8 @@ _core:
   default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
 id: rain_powered
 theme: rain
-region: left_footer
-weight: -7
+region: right_footer
+weight: -8
 provider: null
 plugin: system_powered_by_block
 settings:

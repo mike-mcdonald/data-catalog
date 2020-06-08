@@ -12,8 +12,8 @@ _core:
   default_config_hash: h06zhb3xV9_2_3Zy9NsyylL7YBaEDlMwMEqNwAn8kMo
 id: rain_footer
 theme: rain
-region: right_footer
-weight: -8
+region: left_footer
+weight: -10
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
