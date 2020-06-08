@@ -11,13 +11,15 @@
  */
 #}
 {%
-  set action_classes = action_classes|default([
-    'mr-3',
-    'my-3',
-    'border-b-2',
-    'border-current',
+  set item_classes = item_classes|default([
+    'm-2',
   ])
 %}
-<a{{attributes.addClass(action_classes)}} href="{{ link['#url'].toString() }}">
-  {{ link['#title'] }}
-</a>
+{%
+  set action_classes = action_classes|default([])
+%}
+<li{{ create_attribute({class: item_classes})}}>
+  <a{{attributes.addClass(action_classes)}} href="{{ link['#url'].toString() }}">
+    {{ link['#title'] }}
+  </a>
+</li>
