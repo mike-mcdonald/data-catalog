@@ -7,7 +7,6 @@ module.exports = (env, argv) => ({
   entry: {
     main: globby.sync([
       './js/src/**/*.js',
-      './scss/tailwind.scss',
       './scss/style.scss'
     ])
   },
