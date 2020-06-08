@@ -64,4 +64,5 @@ content:
     region: content
 hidden:
   group_content: true
+  layout_builder__layout: true
   search_api_excerpt: true
