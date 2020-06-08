@@ -83,11 +83,11 @@
 		{% endif %}
 		<label{{label_attributes.addClass(label_classes)}}>
 			{% if label_display == 'before' %}
-				{{ label }}
+				<label>{{ label['#title'] }}</label>
 			{% endif %}
 			{{ children }}
 			{% if label_display == 'after' %}
-				{{ label }}
+				<label>{{ label['#title'] }}</label>
 			{% endif %}
 		</label>
 		{% if suffix is not empty %}
