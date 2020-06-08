@@ -43,14 +43,14 @@
     &[type="checkbox"]:checked {
       + label::after {
         opacity: 1;
-        translate: 40% 110%;
+        transform: translateX(40%) translateY(110%) rotate(-45deg);
       }
     }
 
     &[type="radio"]:checked {
       + label::after {
         opacity: 1;
-        translate: 40% 40%;
+        transform: translateX(40%) translateY(40%);
       }
     }
   }
@@ -59,10 +59,10 @@
     + label::before {
       @apply absolute top-0 left-0 w-6 h-6 box-border border-solid border-2 border-current rounded bg-transparent;
       content: "";
-      translate: 10% 10%;
+      transform: translateX(10%) translateY(10%);
     }
     + label::after {
-      @apply absolute top-0 left-0 w-4 h-2 box-border border-solid border-t-0 border-r-0 border-l-4 border-b-4 border-current bg-transparent opacity-0 origin-center transform -rotate-45;
+      @apply absolute top-0 left-0 w-4 h-2 box-border border-solid border-t-0 border-r-0 border-l-4 border-b-4 border-current bg-transparent opacity-0;
       content: "";
     }
     &:focus {
@@ -76,7 +76,7 @@
     + label::before {
       @apply absolute top-0 left-0 w-6 h-6 box-border border-solid border-2 border-current rounded-full bg-transparent;
       content: "";
-      translate: 10% 10%;
+      transform: translateX(10%) translateY(10%);
     }
     + label::after {
       @apply absolute top-0 left-0 box-border border-solid border-8 border-current rounded-full bg-transparent opacity-0;
