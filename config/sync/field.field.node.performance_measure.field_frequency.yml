@@ -10,7 +10,7 @@ id: node.performance_measure.field_frequency
 field_name: field_frequency
 entity_type: node
 bundle: performance_measure
-label: 'Frequency of Data Collection'
+label: 'Frequency of data collection'
 description: 'How often are component variables collected, frequency may vary from when data is reported.'
 required: true
 translatable: false

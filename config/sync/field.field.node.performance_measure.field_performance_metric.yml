@@ -9,7 +9,7 @@ id: node.performance_measure.field_performance_metric
 field_name: field_performance_metric
 entity_type: node
 bundle: performance_measure
-label: 'Performance Measure Metric'
+label: 'Performance measure metric'
 description: 'A quantifiable indicator of performance or condition.'
 required: true
 translatable: false

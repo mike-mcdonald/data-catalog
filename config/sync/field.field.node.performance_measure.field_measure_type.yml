@@ -10,7 +10,7 @@ id: node.performance_measure.field_measure_type
 field_name: field_measure_type
 entity_type: node
 bundle: performance_measure
-label: 'Performance Measure Type'
+label: 'Performance measure type'
 description: ''
 required: false
 translatable: false

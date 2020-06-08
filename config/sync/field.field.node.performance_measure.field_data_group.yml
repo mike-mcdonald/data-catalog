@@ -10,8 +10,8 @@ id: node.performance_measure.field_data_group
 field_name: field_data_group
 entity_type: node
 bundle: performance_measure
-label: Division/Group
-description: 'Division or Group name.'
+label: 'Division and group'
+description: 'Use the selections above to select the deepest group.  There are two levels available, so wait for the second selection to appear.'
 required: false
 translatable: true
 default_value: {  }
