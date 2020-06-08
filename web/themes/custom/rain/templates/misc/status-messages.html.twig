@@ -41,14 +41,17 @@
   {%
     set type_classes = [
       type == 'error' ? 'bg-red-100',
-      type == 'warning' ? 'bg-orange-100',
-      type == 'status' ? 'bg-green-100',
       type == 'error' ? 'border-red-500',
-      type == 'warning' ? 'border-orange-500',
-      type == 'status' ? 'border-green-500',
       type == 'error' ? 'text-red-900',
+      type == 'warning' ? 'bg-orange-100',
+      type == 'warning' ? 'border-orange-500',
       type == 'warning' ? 'text-orange-900',
+      type == 'status' ? 'bg-green-100',
+      type == 'status' ? 'border-green-500',
       type == 'status' ? 'text-green-900',
+      type == 'info' ? 'bg-blue-100',
+      type == 'info' ? 'border-blue-500',
+      type == 'info' ? 'text-blue-900',
     ]
   %}
   <div role="{{ type == 'error' ? 'alert' : 'contentinfo' }}" aria-label="{{ status_headings[type] }}" {{ attributes.addClass(wrapper_classes)|without('role', 'aria-label') }}>

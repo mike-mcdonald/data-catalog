@@ -11,7 +11,7 @@
 #}
 {% block content %}
   {% if content %}
-    <nav{{ create_attribute({ 'class': content_classes }) }}>
+    <nav{{ create_attribute({ 'class': content_classes, 'role': 'navigation' }) }}>
       {{ content }}
     </nav>
   {% endif %}

@@ -7,7 +7,6 @@ label: 'Content admin'
 weight: -7
 is_admin: null
 permissions:
-  - 'access content'
   - 'access content overview'
   - 'access taxonomy overview'
   - 'access toolbar'
@@ -68,4 +67,3 @@ permissions:
   - 'use editorial transition publish'
   - 'use editorial transition revive'
   - 'view all revisions'
-  - 'view own unpublished content'

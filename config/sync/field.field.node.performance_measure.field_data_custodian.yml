@@ -10,7 +10,7 @@ id: node.performance_measure.field_data_custodian
 field_name: field_data_custodian
 entity_type: node
 bundle: performance_measure
-label: 'Performance Measure Contact'
+label: 'Performance measure contact'
 description: 'Name and email of the person who can answer questions about this metric.'
 required: false
 translatable: true

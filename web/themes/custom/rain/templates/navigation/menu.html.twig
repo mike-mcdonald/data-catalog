@@ -44,9 +44,7 @@
 
   {% set link_classes = link_classes|default([]) %}
 
-  {% set link_attributes = create_attribute({
-    'class': link_classes,
-  })
+  {% set link_attributes = create_attribute({})
   %}
 
   {% if items %}
@@ -57,7 +55,12 @@
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes.addClass(list_item_classes) }}>
-        {{ link(item.title, item.url, link_attributes) }}
+        {% include '@rain/component/link.html.twig' with {
+          attributes: link_attributes,
+          classes: link_classes,
+          url: item.url.toString(),
+          text: item.title,
+        } only %}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
