@@ -9,7 +9,7 @@ id: node.performance_measure.field_formula
 field_name: field_formula
 entity_type: node
 bundle: performance_measure
-label: 'Performance Measure Formula'
+label: 'Performance measure formula'
 description: 'An expression based on a metric, used to establish targets and to assess progress towards achieving the established target.'
 required: false
 translatable: false

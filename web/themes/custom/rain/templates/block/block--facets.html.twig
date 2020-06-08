@@ -7,6 +7,7 @@
 {% set title_classes = [
   'pr-2',
   'py-2',
+  'w-full',
   'font-thin',
   'font-semibold',
   'cursor-pointer',
@@ -22,9 +23,11 @@
 	{% block title %}
 		{{ title_prefix }}
 		{% if label %}
-			<{{heading_element}}{{title_attributes.addClass(title_classes)}} @click="show = !show">
-      <span>{{ label }}</span>
-      <i class="transform transition ease-out duration-300 opacity-50" x-bind:class="{ 'rotate-180': !show }">{% include active_theme_path() ~ '/icons/chevron-up.svg' %}</i>
+			<{{heading_element}}>
+        <button{{create_attribute({class: title_classes})}} x-bind:aria-expanded="show.toString()" @click="show = !show">
+          <span>{{ label }}</span>
+          <i class="transform transition ease-out duration-300 opacity-50" x-bind:class="{ 'rotate-180': !show }">{% include active_theme_path() ~ '/icons/chevron-up.svg' %}</i>
+        </button>
       </{{heading_element}}>
 		{% endif %}
 		{{ title_suffix }}

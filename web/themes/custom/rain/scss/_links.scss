@@ -1,22 +1,12 @@
 /*! purgecss start ignore */
 a {
-  &:not([class]) {
-    @apply border-b-2 border-current;
-    &:hover,
-    &:focus {
-      @apply border-current;
-    }
-  }
+  &:not([class]),
   &.button {
     @apply border-b-2 border-current;
-    &:hover,
-    &:focus {
-      @apply border-current;
-    }
   }
 }
 
-nav:not([role]) {
+nav[role="navigation"] {
   a {
     &:not([class]) {
       @apply border-b-0;

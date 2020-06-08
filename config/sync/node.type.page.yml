@@ -1,0 +1,17 @@
+uuid: 304d5b14-08ba-4196-9929-2839ba7b758d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Page
+type: page
+description: 'Use this content type to add a generic system page for use throughout the site.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

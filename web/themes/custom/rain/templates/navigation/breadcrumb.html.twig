@@ -37,6 +37,9 @@
     'mx-3',
   ])
 %}
+{% set link_classes = link_classes|default([
+
+]) %}
 
 {% if breadcrumb %}
   <nav{{ nav_attributes.addClass(nav_classes) }} role="navigation" aria-label="Breadcrumb" aria-labelledby="system-breadcrumb">
@@ -45,7 +48,10 @@
     {% for item in breadcrumb %}
       <li>
         {% if item.url %}
-          <a href="{{ item.url }}">{{ item.text }}</a>
+          {% include '@rain/component/link.html.twig' with {
+            url: item.url,
+            text: item.text,
+          } %}
         {% else %}
           {{ item.text }}
         {% endif %}
