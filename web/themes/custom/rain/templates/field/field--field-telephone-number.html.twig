@@ -6,12 +6,21 @@
 } %}
   {% block content %}
     {%- for item in items -%}
-      <a{{item.attributes.addClass(['border-0','flex'])}} href="tel:+1{{ item.content['#title'] | trim }}">
-        <span{{create_attribute().addClass(item_classes)}}>
+      {% set content %}
+        <span{{ create_attribute().addClass(item_classes) }}>
           {% include active_theme_path() ~ '/icons/phone.svg' %}
-          <span class="ml-2 border-b-2 border-transparent hover:border-current focus:border-current">{{ item.content['#title'] }}</span>
+          <span class="ml-2 border-b-2 border-current">{{ item.content['#title'] }}</span>
         </span>
-      </a>
+      {% endset %}
+      {% include '@rain/component/link.html.twig' with {
+        attributes: item.attributes,
+        classes: [
+          'border-0',
+          'flex',
+        ],
+        url: 'tel:+1' ~ item.content['#title']|trim,
+        text: content,
+      } only %}
     {%- endfor -%}
   {% endblock %}
 {% endembed %}
