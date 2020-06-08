@@ -55,7 +55,6 @@
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes.addClass(list_item_classes) }}>
-      {{ devel_breakpoint() }}
         {% include '@rain/component/link.html.twig' with {
           attributes: link_attributes,
           classes: link_classes,
