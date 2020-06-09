@@ -11,7 +11,7 @@ migration_group: null
 label: 'Import users from CSV'
 source:
   plugin: csv
-  path: /var/www/html/tmp/users.csv
+  path: 'private://tmp/users.csv'
   header_row_count: 1
   ids:
     - id
