@@ -12,7 +12,7 @@ id: request_access
 title: 'Request access'
 description: 'Form for forwarding access requests to the site generally.'
 category: ''
-elements: "email:\n  '#type': email\n  '#title': 'E-mail address'\n  '#required': true\ngroup_and_division:\n  '#type': webform_term_select\n  '#title': 'Group and division'\n  '#required': true\n  '#vocabulary': data_group_levels\n  '#breadcrumb': true\n  '#breadcrumb_delimiter': ' / '\n  '#tree_delimiter': ''\nname:\n  '#type': webform_name\n  '#title': Name\n  '#title_display': before\n  '#title__access': false\n  '#middle__access': false\n  '#suffix__access': false\n  '#degree__access': false"
+elements: "information_message:\n  '#type': webform_message\n  '#message_type': info\n  '#message_message': 'If you are unable to log in, use this form to send a request to have a user account created for you.'\nemail:\n  '#type': email\n  '#title': 'E-mail address'\n  '#required': true\nname:\n  '#type': webform_name\n  '#title': 'Full name'\n  '#description': 'If you&#39;d like an account set up with a preferred name, provide one here.'\n  '#title_display': before\n  '#description_display': before\n  '#title__access': false\n  '#middle__access': false\n  '#suffix__access': false\n  '#degree__access': false"
 css: ''
 javascript: ''
 settings:
