@@ -1,0 +1,33 @@
+uuid: 19a2c6be-28b5-431d-addf-3eac4847a45c
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.request_access
+  module:
+    - user
+    - webform
+  theme:
+    - rain
+id: rain_content_webform_request_access
+theme: rain
+region: content
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Request access to this site'
+  provider: webform
+  label_display: visible
+  webform_id: request_access
+  default_data: ''
+  redirect: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
