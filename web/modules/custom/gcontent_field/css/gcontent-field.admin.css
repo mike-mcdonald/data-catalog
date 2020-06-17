@@ -1,0 +1,52 @@
+.field--widget-group-selector-widget .dropbutton-wrapper {
+  display: inline-flex;
+  padding-right: 0;
+  margin-right: 0;
+  /* Override 600px breakpoint from core. */
+  width: auto;
+}
+
+.field--widget-group-selector-widget .dropbutton-widget {
+  position: relative;
+}
+
+.field--widget-group-selector-widget .field-multiple-table {
+  margin-bottom: 10px;
+}
+
+.field--widget-group-selector-widget td {
+  padding: 10px 0;
+}
+
+.field--widget-group-selector-widget .field-multiple-drag {
+  vertical-align: top;
+}
+.field--widget-group-selector-widget .draggable .tabledrag-handle {
+  padding-right: 0;
+  margin-left: 0;
+}
+.field--widget-group-selector-widget .tabledrag-handle .handle {
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 0.2em;
+}
+.gcontent-type-top {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.gcontent-type-title {
+  flex-basis: 25%;
+  min-width: 80px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.field--widget-group-selector-widget .delta-order {
+  padding-right: 10px;
+  text-align: right;
+}
+.field--widget-group-selector-widget .dropbutton-action .ajax-progress {
+  left: -115px;
+}

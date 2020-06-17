@@ -4,8 +4,8 @@
   ],
   'content_classes':[
     'flex',
+    'flex-row',
     'flex-wrap',
-    '-mx-2',
   ]
 } %}
   {#
@@ -16,9 +16,13 @@
     #}
   {% block content %}
     {% if content %}
-      <nav{{create_attribute({'class':content_classes})}}>
-        {{ content }}
-      </nav>
+      {% spaceless %}
+        <nav{{create_attribute({'class':content_classes})}}>
+          <ul class="list-none -mx-2 flex flex-wrap items-center">
+            {{ content }}
+          </ul>
+        </nav>
+      {% endspaceless %}
     {% endif %}
   {% endblock %}
 {% endembed %}

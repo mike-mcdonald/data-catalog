@@ -10,6 +10,7 @@ permissions:
   - 'access group overview'
   - 'access toolbar'
   - 'access user profiles'
+  - 'administer group'
   - 'administer users'
   - 'bypass group access'
   - 'create group group'

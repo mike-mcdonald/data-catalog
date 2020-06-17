@@ -1,0 +1,19 @@
+diff --git a/core/modules/user/user.module b/core/modules/user/user.module
+index 325d240903..759974e652 100644
+--- a/core/modules/user/user.module
++++ b/core/modules/user/user.module
+@@ -251,8 +251,12 @@ function user_load($uid, $reset = FALSE) {
+  * @see \Drupal\user\Entity\User::loadMultiple()
+  */
+ function user_load_by_mail($mail) {
+-  $users = \Drupal::entityTypeManager()->getStorage('user')
+-    ->loadByProperties(['mail' => $mail]);
++  $user_storage = \Drupal::entityTypeManager()->getStorage('user');
++  $query = $user_storage->getQuery();
++  $query->condition('mail', db_like($mail), 'LIKE');
++  $result = $query->execute();
++  $users = $result ? $user_storage->loadMultiple($result) : [];
++
+   return $users ? reset($users) : FALSE;
+ }
+ 

@@ -9,12 +9,12 @@ dependencies:
     - field.field.node.performance_measure.field_data_custodian
     - field.field.node.performance_measure.field_data_group
     - field.field.node.performance_measure.field_data_reliability
+    - field.field.node.performance_measure.field_data_type
     - field.field.node.performance_measure.field_datasets
     - field.field.node.performance_measure.field_formula
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
     - field.field.node.performance_measure.field_level
-    - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_origination_date
     - field.field.node.performance_measure.field_performance_metric
@@ -23,8 +23,8 @@ dependencies:
     - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
     - field.field.node.performance_measure.field_strategic_plan
+    - field.field.node.performance_measure.field_strategic_target
     - field.field.node.performance_measure.field_strategic_year
-    - field.field.node.performance_measure.field_target
     - field.field.node.performance_measure.field_threshold
     - field.field.node.performance_measure.field_url
     - node.type.performance_measure
@@ -67,7 +67,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_audience:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -110,6 +110,12 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_data_type:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_datasets:
     weight: 19
     settings:
@@ -129,7 +135,7 @@ content:
     type: string_textarea
     region: content
   field_frequency:
-    weight: 6
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -145,21 +151,13 @@ content:
     type: select2_entity_reference
     region: content
   field_level:
-    weight: 8
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_measure_id:
-    weight: 1
-    settings:
-      size: 255
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_measure_type:
-    weight: 16
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -173,7 +171,7 @@ content:
     type: string_textfield
     region: content
   field_performance_metric:
-    weight: 5
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -212,7 +210,7 @@ content:
     type: options_select
     region: content
   field_strategic_plan:
-    weight: 10
+    weight: 9
     settings:
       force_deepest: '1'
       parent: '0'
@@ -220,8 +218,15 @@ content:
     third_party_settings: {  }
     type: cshs
     region: content
+  field_strategic_target:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_strategic_year:
-    weight: 9
+    weight: 8
     settings:
       autocomplete: false
       match_operator: CONTAINS
@@ -230,16 +235,8 @@ content:
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
-  field_target:
-    weight: 17
-    settings:
-      size: 512
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_threshold:
-    weight: 15
+    weight: 16
     settings:
       size: 512
       placeholder: ''
@@ -278,7 +275,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 2
+    weight: 1
     region: content
     settings:
       size: 60

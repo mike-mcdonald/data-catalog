@@ -65,7 +65,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -6
+            weight: -5
           9a37da1b-a40f-472a-aaed-3a16759a9a6a:
             uuid: 9a37da1b-a40f-472a-aaed-3a16759a9a6a
             region: content
@@ -86,7 +86,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -5
+            weight: -6
           b0dda337-d91a-4242-be97-47edcf97e7db:
             uuid: b0dda337-d91a-4242-be97-47edcf97e7db
             region: content
@@ -128,7 +128,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -7
+            weight: -8
           6116ad09-1839-44ef-9640-8170a5269016:
             uuid: 6116ad09-1839-44ef-9640-8170a5269016
             region: content
@@ -147,7 +147,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -8
+            weight: -7
         third_party_settings: {  }
     allow_custom: false
 id: node.access_point.default

@@ -9,17 +9,19 @@ dependencies:
     - search_api
 id: full_keywords
 name: 'Full keywords'
-url_alias: full_keywords
+url_alias: keywords
 weight: 0
 min_count: 1
 show_only_one_result: false
 field_identifier: field_keywords
 facet_source_id: 'search_api:views_page__full_index__page_1'
 widget:
-  type: dropdown
+  type: select2
   config:
-    show_numbers: false
-    default_option_label: Choose
+    show_numbers: true
+    width: 100%
+    autocomplete: false
+    match_operator: CONTAINS
 query_operator: or
 use_hierarchy: false
 expand_hierarchy: false
@@ -39,7 +41,7 @@ processor_configs:
     weights:
       build: 50
     settings:
-      minimum_items: 2
+      minimum_items: 1
       maximum_items: null
   count_widget_order:
     processor_id: count_widget_order

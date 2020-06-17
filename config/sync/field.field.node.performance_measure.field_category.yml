@@ -10,7 +10,7 @@ id: node.performance_measure.field_category
 field_name: field_category
 entity_type: node
 bundle: performance_measure
-label: 'Performance Metric Purpose'
+label: 'Performance metric purpose'
 description: ''
 required: true
 translatable: false

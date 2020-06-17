@@ -9,7 +9,7 @@ id: node.performance_measure.field_requirements
 field_name: field_requirements
 entity_type: node
 bundle: performance_measure
-label: 'Performance Measure Data Requirements'
+label: 'Performance measure data requirements'
 description: 'Data required to produce results for a performance measure.'
 required: false
 translatable: false

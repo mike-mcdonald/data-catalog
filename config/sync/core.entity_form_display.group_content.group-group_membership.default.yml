@@ -7,7 +7,6 @@ dependencies:
     - group.content_type.group-group_membership
   module:
     - field_layout
-    - path
   theme:
     - rain
 third_party_settings:
@@ -22,7 +21,7 @@ mode: default
 content:
   entity_id:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 0
     settings:
       match_operator: CONTAINS
       size: 60
@@ -32,15 +31,10 @@ content:
     third_party_settings: {  }
   group_roles:
     type: options_buttons
-    weight: 31
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  path: true
   uid: true

@@ -1,0 +1,86 @@
+<?php
+
+/**
+ * @file
+ * Allows to add group content from entity form.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function gcontent_field_theme() {
+  return [
+    'gc_field_dropbutton_wrapper' => [
+      'variables' => ['children' => NULL],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function gcontent_field_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+  if ($entity_types = gcontent_field_get_entity_types()) {
+    // Adding field to entity types.
+    if (array_key_exists($entity_type->id(), $entity_types)) {
+      $entity_field_label = \Drupal::config('gcontent_field.settings')->get('entity_field_label');
+      $field_label = isset($entity_field_label[$entity_type->id()]) ? $entity_field_label[$entity_type->id()] : t('Groups');
+      $fields['group_content'] = BaseFieldDefinition::create('group_content')
+        ->setName('group_content')
+        ->setTargetEntityTypeId($entity_type->id())
+        ->setSetting('target_type', 'group_content')
+        ->setLabel($field_label)
+        ->setTranslatable(FALSE)
+        ->setComputed(TRUE)
+        ->setCustomStorage(TRUE)
+        ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
+        ->setClass('\Drupal\gcontent_field\Field\GcontentFieldItemList')
+        ->setDisplayConfigurable('form', TRUE)
+        ->setDisplayOptions('form', [
+          'type' => 'hidden',
+          'weight' => 50,
+        ])
+        ->setDisplayConfigurable('view', TRUE)
+        ->setDisplayOptions('view', [
+          'label' => 'hidden',
+          'type' => 'hidden',
+          'weight' => 50,
+        ]);
+    }
+  }
+  return $fields;
+}
+
+/**
+ * Implements hook_field_formatter_info_alter().
+ */
+function gcontent_field_field_formatter_info_alter(array &$info) {
+  $info['entity_reference_entity_view']['field_types'][] = 'group_content';
+}
+
+/**
+ * Get entities that should have a group content field.
+ */
+function gcontent_field_get_entity_types() {
+  $entity_types = [];
+  $plugin_manager = \Drupal::service('plugin.manager.group_content_enabler');
+  foreach ($plugin_manager->getDefinitions() as $plugin_id => $plugin_definition) {
+    // If entity already added to list just continue with next plugin.
+    if (in_array($plugin_definition['entity_type_id'], $entity_types)) {
+      continue;
+    }
+    if ($entity_type_definition = \Drupal::entityTypeManager()->getDefinition($plugin_definition['entity_type_id'], FALSE)) {
+      // Check if fields can be attached to the entity type.
+      if ($entity_type_definition->entityClassImplements(FieldableEntityInterface::class)) {
+        $entity_types[$plugin_definition['entity_type_id']] = (string) $entity_type_definition->getLabel();
+      }
+    }
+  }
+  return $entity_types;
+}

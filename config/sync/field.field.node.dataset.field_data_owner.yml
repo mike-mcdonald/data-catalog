@@ -10,7 +10,7 @@ id: node.dataset.field_data_owner
 field_name: field_data_owner
 entity_type: node
 bundle: dataset
-label: 'Data Publisher'
+label: 'Data publisher'
 description: 'Select the organization that generates or controls the data.'
 required: false
 translatable: false

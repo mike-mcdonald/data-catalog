@@ -12,4 +12,11 @@
     @apply border-black border-b-2;
   }
 }
+
+.views-display-link {
+  @apply mr-3 my-3 border-b-2 border-current inline-flex;
+  + .views-display-link {
+    @apply ml-0;
+  }
+}
 /*! purgecss end ignore */

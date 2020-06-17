@@ -1,0 +1,5 @@
+internet_explorer_warning:
+  js:
+    js/internet_explorer_warning.js: {}
+  dependencies:
+    - core/jquery.once

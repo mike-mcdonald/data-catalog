@@ -1,9 +1,9 @@
-uuid: c59865ab-0810-4721-9447-85024969c6d6
+uuid: 1294e8cc-c23b-455d-b61e-72d14486fec2
 langcode: en
 status: true
 dependencies:
   config:
-    - group.content_type.group_content_type_e1851433e2e09
+    - group.content_type.group-group_node-dataset
   module:
     - field_layout
   theme:
@@ -13,9 +13,9 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
-id: group_content.group_content_type_e1851433e2e09.default
+id: group_content.group-group_node-dataset.default
 targetEntityType: group_content
-bundle: group_content_type_e1851433e2e09
+bundle: group-group_node-dataset
 mode: default
 content:
   entity_id:

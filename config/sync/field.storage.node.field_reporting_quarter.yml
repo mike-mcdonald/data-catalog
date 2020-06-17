@@ -1,17 +1,16 @@
-uuid: ba501c4f-9887-41ea-bdd2-2f9d882660cc
+uuid: 5ed452f9-2d61-459d-9985-5fb9c9a553b8
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_target
-field_name: field_target
+    - taxonomy
+id: node.field_reporting_quarter
+field_name: field_reporting_quarter
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 512
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

@@ -8,6 +8,7 @@ dependencies:
     - search_api
   config:
     - field.storage.node.field_authority_level
+    - field.storage.node.field_data_custodian
     - field.storage.node.field_data_group
     - field.storage.node.field_data_owner
     - field.storage.node.field_demographic_information
@@ -39,6 +40,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_authority_level
+  field_data_custodian:
+    label: 'Primary Contact '
+    datasource_id: 'entity:node'
+    property_path: field_data_custodian
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_data_custodian
   field_data_group:
     label: Division/Group
     datasource_id: 'entity:node'
@@ -124,7 +133,8 @@ field_settings:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
-    type: string
+    type: text
+    boost: !!float 21
     dependencies:
       module:
         - node
@@ -141,6 +151,7 @@ datasource_settings:
     bundles:
       default: true
       selected:
+        - page
         - performance_outcome
     languages:
       default: true

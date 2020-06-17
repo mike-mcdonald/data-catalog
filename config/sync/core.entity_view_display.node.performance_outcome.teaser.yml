@@ -8,7 +8,9 @@ dependencies:
     - field.field.node.performance_outcome.field_actual
     - field.field.node.performance_outcome.field_estimate
     - field.field.node.performance_outcome.field_performance_measure
+    - field.field.node.performance_outcome.field_reporting_month
     - field.field.node.performance_outcome.field_reporting_period
+    - field.field.node.performance_outcome.field_reporting_quarter
     - node.type.performance_outcome
   module:
     - user
@@ -27,6 +29,8 @@ hidden:
   field_actual: true
   field_estimate: true
   field_performance_measure: true
+  field_reporting_month: true
   field_reporting_period: true
+  field_reporting_quarter: true
   group_content: true
   search_api_excerpt: true

@@ -240,7 +240,8 @@ class Azure extends OpenIDConnectClientBase {
    *   A result array or false.
    */
   public function retrieveUserInfo($access_token) {
-    $username_property = 'displayName';
+    $first_name_property = 'givenName';
+    $last_name_property = 'surname';
     $primary_email_property = 'mail';
     $backup_mail_property = 'userPrincipalName';
 
@@ -276,10 +277,8 @@ class Azure extends OpenIDConnectClientBase {
         $profile_data['email'] = $profile_data[$backup_mail_property];
       }
 
-      $profile_data['email'] = strtolower($profile_data['email']);
-
       // create username from the email address
-      $profile_data['name'] = explode('@', $profile_data['email'])[0];
+      $profile_data['name'] = implode(' ', [$profile_data[$first_name_property], $profile_data[$last_name_property]]);
 
       return $profile_data;
     }
