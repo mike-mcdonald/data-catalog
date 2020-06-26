@@ -17,7 +17,6 @@ dependencies:
     - field.field.node.performance_measure.field_level
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_origination_date
-    - field.field.node.performance_measure.field_performance_metric
     - field.field.node.performance_measure.field_program_area
     - field.field.node.performance_measure.field_project_name
     - field.field.node.performance_measure.field_requirements
@@ -169,14 +168,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_performance_metric:
-    weight: 2
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
     region: content
   field_program_area:
     weight: 12
