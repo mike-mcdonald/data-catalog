@@ -286,7 +286,7 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:performance_measure:field_frequency'
-              label: 'Frequency of Data Collection'
+              label: 'Frequency of performance reporting'
               provider: layout_builder
               label_display: '0'
               formatter:

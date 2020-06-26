@@ -2730,7 +2730,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Frequency of data reporting'
+          label: 'Frequency of performance reporting'
           exclude: false
           alter:
             alter_text: false
