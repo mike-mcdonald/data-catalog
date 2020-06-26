@@ -17,7 +17,6 @@ dependencies:
     - field.field.node.performance_measure.field_level
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_origination_date
-    - field.field.node.performance_measure.field_performance_metric
     - field.field.node.performance_measure.field_program_area
     - field.field.node.performance_measure.field_project_name
     - field.field.node.performance_measure.field_requirements
@@ -286,7 +285,7 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:performance_measure:field_frequency'
-              label: 'Frequency of Data Collection'
+              label: 'Frequency of performance reporting'
               provider: layout_builder
               label_display: '0'
               formatter:
@@ -491,24 +490,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 2
-          08bb991e-96c7-4cbc-ae12-f0a79fc16f3a:
-            uuid: 08bb991e-96c7-4cbc-ae12-f0a79fc16f3a
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_performance_metric'
-              label: 'Performance Metric'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: basic_string
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 6
           255f4eb8-307c-4d2e-b81b-e9f54c9ebf55:
             uuid: 255f4eb8-307c-4d2e-b81b-e9f54c9ebf55
             region: content
@@ -715,13 +696,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_performance_metric:
-    weight: 103
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
     region: content
   field_program_area:
     weight: 121
