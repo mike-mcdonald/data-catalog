@@ -139,5 +139,6 @@ content:
 hidden:
   field_data_custodian: true
   field_subject_areas: true
+  group_content: true
   links: true
   search_api_excerpt: true

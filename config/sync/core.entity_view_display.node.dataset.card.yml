@@ -200,5 +200,6 @@ hidden:
   field_source: true
   field_spatial_information: true
   field_timeliness: true
+  group_content: true
   links: true
   search_api_excerpt: true
