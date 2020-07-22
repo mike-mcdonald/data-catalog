@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
     - field.field.node.performance_measure.field_level
+    - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_origination_date
     - field.field.node.performance_measure.field_program_area
@@ -50,7 +51,7 @@ bundle: performance_measure
 mode: default
 content:
   body:
-    weight: 3
+    weight: 2
     settings:
       rows: 9
       placeholder: ''
@@ -97,7 +98,7 @@ content:
   field_data_group:
     weight: 18
     settings:
-      parent: 0
+      parent: '0'
       level_labels: ''
       force_deepest: false
     third_party_settings: {  }
@@ -155,6 +156,14 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_measure_id:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_measure_type:
     weight: 17
     settings: {  }
@@ -172,7 +181,7 @@ content:
   field_program_area:
     weight: 12
     settings:
-      parent: 0
+      parent: '0'
       level_labels: ''
       force_deepest: false
     third_party_settings: {  }
@@ -203,7 +212,7 @@ content:
   field_strategic_plan:
     weight: 9
     settings:
-      force_deepest: '1'
+      force_deepest: true
       parent: '0'
       level_labels: ''
     third_party_settings: {  }
