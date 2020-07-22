@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
     - field.field.node.performance_measure.field_level
+    - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_origination_date
     - field.field.node.performance_measure.field_program_area
@@ -103,7 +104,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -3
+            weight: -4
           68aa6c8b-a863-44a3-b4d1-740b3d62e3cb:
             uuid: 68aa6c8b-a863-44a3-b4d1-740b3d62e3cb
             region: content
@@ -203,7 +204,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 8
+            weight: 7
           7d1410d4-3ddb-4b56-97cf-06fc940116ff:
             uuid: 7d1410d4-3ddb-4b56-97cf-06fc940116ff
             region: content
@@ -222,7 +223,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 9
+            weight: 8
           44fca45b-3d28-4d11-b7ad-c36f1dd49acb:
             uuid: 44fca45b-3d28-4d11-b7ad-c36f1dd49acb
             region: content
@@ -279,7 +280,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -4
+            weight: -5
           3f434581-4df1-42e9-b1ed-d7abae7952ee:
             uuid: 3f434581-4df1-42e9-b1ed-d7abae7952ee
             region: content
@@ -353,7 +354,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 7
+            weight: 6
           d99de31f-252e-4296-a866-f348abe56bd6:
             uuid: d99de31f-252e-4296-a866-f348abe56bd6
             region: content
@@ -372,7 +373,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -7
+            weight: -8
           9f150d66-8d5b-40d2-b477-8dbf9456e7c3:
             uuid: 9f150d66-8d5b-40d2-b477-8dbf9456e7c3
             region: content
@@ -393,7 +394,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -6
+            weight: -7
           e753ce6b-7151-47f6-84a5-83e186f0cf3d:
             uuid: e753ce6b-7151-47f6-84a5-83e186f0cf3d
             region: content
@@ -411,7 +412,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -5
+            weight: -6
           5456cbe4-66c6-4c25-94d9-35a5ce757c8e:
             uuid: 5456cbe4-66c6-4c25-94d9-35a5ce757c8e
             region: content
@@ -576,6 +577,22 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
+          449b94db-9329-4792-8215-4448ead56fbf:
+            uuid: 449b94db-9329-4792-8215-4448ead56fbf
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:performance_measure:field_measure_id'
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: -3
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
@@ -680,6 +697,14 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_measure_id:
+    weight: 145
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_measure_type:
     weight: 134
