@@ -10,7 +10,7 @@ field_name: field_performance_measure
 entity_type: node
 bundle: performance_outcome
 label: 'Performance measure'
-description: ''
+description: 'Select a performance measure. The list contains any performance measure you have access to through your group memberships. If the list is empty, you do not have access configured for any performance measures.'
 required: true
 translatable: false
 default_value: {  }
