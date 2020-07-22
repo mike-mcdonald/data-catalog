@@ -50,6 +50,18 @@ filters:
     status: false
     weight: -49
     settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: -44
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -41
+    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
@@ -57,18 +69,6 @@ filters:
     weight: -48
     settings:
       filter_url_length: 72
-  filter_html_escape:
-    id: filter_html_escape
-    provider: filter
-    status: false
-    weight: -41
-    settings: {  }
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
-    provider: filter
-    status: true
-    weight: -44
-    settings: {  }
   media_embed:
     id: media_embed
     provider: media
