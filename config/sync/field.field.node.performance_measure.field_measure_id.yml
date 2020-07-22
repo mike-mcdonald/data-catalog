@@ -1,0 +1,19 @@
+uuid: 0043b520-527a-414a-aa24-1a3b60894bac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_measure_id
+    - node.type.performance_measure
+id: node.performance_measure.field_measure_id
+field_name: field_measure_id
+entity_type: node
+bundle: performance_measure
+label: 'CBO measure ID'
+description: 'Enter the CBO-provided measure ID for this measure. This only applies to measures that are reported to the CBO.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
