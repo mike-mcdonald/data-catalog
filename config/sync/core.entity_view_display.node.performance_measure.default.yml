@@ -581,16 +581,19 @@ third_party_settings:
             uuid: 449b94db-9329-4792-8215-4448ead56fbf
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:performance_measure:field_measure_id'
+              label: 'CBO measure ID'
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                label: above
+                label: inline
+                type: string
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-                type: string
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: -3
         third_party_settings: {  }
