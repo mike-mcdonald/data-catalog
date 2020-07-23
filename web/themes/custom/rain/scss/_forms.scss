@@ -25,7 +25,6 @@
   position: relative;
 
   label {
-    @apply block;
 
     label {
       @apply pl-8;
@@ -33,12 +32,10 @@
   }
 
   input {
-    @apply left-0 top-0 absolute p-1 w-6 h-6 cursor-pointer;
+    @apply p-1 w-6 h-6 cursor-pointer;
     z-index: 1;
     margin: 0;
     zoom: 1;
-    filter: alpha(opacity=0);
-    opacity: 0;
 
     &[type="checkbox"]:checked {
       + label::after {
@@ -56,36 +53,15 @@
   }
 
   [type="checkbox"] {
-    + label::before {
-      @apply absolute top-0 left-0 w-6 h-6 box-border border-solid border-2 border-current rounded bg-transparent;
-      content: "";
-      transform: translateX(10%) translateY(10%);
-    }
-    + label::after {
-      @apply absolute top-0 left-0 w-4 h-2 box-border border-solid border-t-0 border-r-0 border-l-4 border-b-4 border-current bg-transparent opacity-0;
-      content: "";
-    }
     &:focus {
-      + label::before {
         @apply shadow-outline;
-      }
     }
   }
 
   [type="radio"] {
-    + label::before {
-      @apply absolute top-0 left-0 w-6 h-6 box-border border-solid border-2 border-current rounded-full bg-transparent;
-      content: "";
-      transform: translateX(10%) translateY(10%);
-    }
-    + label::after {
-      @apply absolute top-0 left-0 box-border border-solid border-8 border-current rounded-full bg-transparent opacity-0;
-      content: "";
-    }
     &:focus {
-      + label::before {
-        @apply shadow-outline;
-      }
+      @apply shadow-outline;
+
     }
   }
 }
