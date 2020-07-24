@@ -40,8 +40,15 @@ dependencies:
     - field.storage.node.field_threshold
     - field.storage.node.field_timeliness
     - field.storage.node.field_url
+    - node.type.access_point
+    - node.type.business_term
+    - node.type.contact_information
+    - node.type.database
     - node.type.dataset
+    - node.type.page
     - node.type.performance_measure
+    - node.type.performance_outcome
+    - node.type.server
   module:
     - cshs
     - csv_serialization
@@ -558,27 +565,29 @@ display:
           admin_label: ''
           operator: in
           value:
+            all: all
+            access_point: access_point
+            business_term: business_term
+            contact_information: contact_information
+            database: database
             dataset: dataset
+            page: page
+            performance_measure: performance_measure
+            performance_outcome: performance_outcome
+            server: server
           group: 1
           exposed: true
           expose:
-            operator_id: type_op
-            label: 'Content type'
-            description: ''
             use_operator: false
             operator: type_op
             operator_limit_selection: false
             operator_list: {  }
             identifier: type
-            required: false
+            label: 'Content type'
+            description: null
             remember: false
             multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_admin: '0'
-              user_admin: '0'
-              administrator: '0'
+            required: false
             reduce: false
           is_grouped: false
           group_info:
@@ -617,26 +626,51 @@ display:
           field: group_content
           relationship: none
           group_type: group
-          admin_label: 'Content relation'
-          required: true
-          group_content_plugins: {  }
+          admin_label: 'Content: group content'
+          required: false
+          group_content_plugins:
+            'group_node:access_point': '0'
+            'group_node:business_term': '0'
+            'group_node:contact_information': '0'
+            'group_node:database': '0'
+            'group_node:dataset': '0'
+            'group_node:page': '0'
+            'group_node:performance_measure': '0'
+            'group_node:performance_outcome': '0'
+            'group_node:server': '0'
           entity_type: node
           plugin_id: group_content_to_entity_reverse
-      arguments:
         gid:
           id: gid
           table: group_content_field_data
           field: gid
           relationship: group_content
           group_type: group
+          admin_label: 'group_content: group'
+          required: true
+          entity_type: group_content
+          entity_field: gid
+          plugin_id: standard
+        field_performance_measure:
+          id: field_performance_measure
+          table: node__field_performance_measure
+          field: field_performance_measure
+          plugin_id: standard
+      arguments:
+        id:
+          id: id
+          table: groups_field_data
+          field: id
+          relationship: gid
+          group_type: group
           admin_label: ''
-          default_action: 'access denied'
+          default_action: default
           exception:
             value: all
             title_enable: false
             title: All
           title_enable: true
-          title: '{{ arguments.gid|placeholder }} content'
+          title: ''
           default_argument_type: fixed
           default_argument_options:
             argument: ''
@@ -657,9 +691,9 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          entity_type: group_content
-          entity_field: gid
-          plugin_id: numeric
+          entity_type: group
+          entity_field: id
+          plugin_id: group_id
       display_extenders: {  }
       title: Content
     cache_metadata:
@@ -688,6 +722,8 @@ display:
       defaults:
         access: false
         arguments: false
+        filters: false
+        filter_groups: false
       arguments:
         gid:
           id: gid
@@ -725,6 +761,115 @@ display:
           entity_type: group_content
           entity_field: gid
           plugin_id: numeric
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Published status'
+            description: ''
+            use_operator: false
+            operator: status_op
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              group_admin: '0'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: true
+          group_info:
+            label: 'Published status'
+            description: ''
+            identifier: status
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Published
+                operator: '='
+                value: '1'
+              2:
+                title: Unpublished
+                operator: '='
+                value: '0'
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            access_point: access_point
+            business_term: business_term
+            contact_information: contact_information
+            database: database
+            dataset: dataset
+            page: page
+            performance_measure: performance_measure
+            server: server
+          group: 1
+          exposed: false
+          expose:
+            operator_id: type_op
+            label: 'Content type'
+            description: ''
+            use_operator: false
+            operator: type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_admin: '0'
+              user_admin: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -1826,7 +1971,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
-        relationships: false
+        relationships: true
         group_by: false
       style:
         type: data_export
@@ -1955,18 +2100,6 @@ display:
         operator: AND
         groups:
           1: AND
-      relationships:
-        group_content:
-          id: group_content
-          table: node_field_data
-          field: group_content
-          relationship: none
-          group_type: group
-          admin_label: 'Content relation'
-          required: true
-          group_content_plugins: {  }
-          entity_type: node
-          plugin_id: group_content_to_entity_reverse
       display_description: ''
       group_by: false
     cache_metadata:
@@ -3707,30 +3840,11 @@ display:
             encoding: utf8
             utf8_bom: '0'
             use_serializer_encode_only: false
-      relationships:
-        group_content:
-          id: group_content
-          table: node_field_data
-          field: group_content
-          relationship: none
-          group_type: group
-          admin_label: 'Content relation'
-          required: true
-          group_content_plugins: {  }
-          entity_type: node
-          plugin_id: group_content_to_entity_reverse
-        field_performance_measure:
-          id: field_performance_measure
-          table: node__field_performance_measure
-          field: field_performance_measure
-          relationship: none
-          group_type: group
-          admin_label: 'field_performance_measure: Content'
-          required: false
-          plugin_id: standard
       defaults:
         relationships: false
         fields: false
+        filters: true
+        filter_groups: true
       fields:
         title_1:
           id: title_1
@@ -4194,6 +4308,47 @@ display:
       redirect_to_display: none
       custom_redirect_path: false
       include_query_params: false
+      relationships:
+        group_content:
+          id: group_content
+          table: node_field_data
+          field: group_content
+          relationship: none
+          group_type: group
+          admin_label: 'Content: group content'
+          required: false
+          group_content_plugins:
+            'group_node:access_point': '0'
+            'group_node:business_term': '0'
+            'group_node:contact_information': '0'
+            'group_node:database': '0'
+            'group_node:dataset': '0'
+            'group_node:page': '0'
+            'group_node:performance_measure': '0'
+            'group_node:performance_outcome': '0'
+            'group_node:server': '0'
+          entity_type: node
+          plugin_id: group_content_to_entity_reverse
+        gid:
+          id: gid
+          table: group_content_field_data
+          field: gid
+          relationship: group_content
+          group_type: group
+          admin_label: 'group_content: group'
+          required: true
+          entity_type: group_content
+          entity_field: gid
+          plugin_id: standard
+        field_performance_measure:
+          id: field_performance_measure
+          table: node__field_performance_measure
+          field: field_performance_measure
+          relationship: none
+          group_type: group
+          admin_label: 'field_performance_measure: Content'
+          required: true
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
@@ -4327,6 +4482,9 @@ display:
         style: false
         row: false
         header: false
+        arguments: false
+        filters: false
+        filter_groups: false
       row:
         type: 'entity:node'
         options:
@@ -4366,6 +4524,155 @@ display:
           display_id: data_export_3
           label: 'Export outcomes'
           plugin_id: display_link
+      arguments:
+        id:
+          id: id
+          table: groups_field_data
+          field: id
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: ''
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          entity_type: group
+          entity_field: id
+          plugin_id: group_id
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Published status'
+            description: ''
+            use_operator: false
+            operator: status_op
+            identifier: status
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              group_admin: '0'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: true
+          group_info:
+            label: 'Published status'
+            description: ''
+            identifier: status
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Published
+                operator: '='
+                value: '1'
+              2:
+                title: Unpublished
+                operator: '='
+                value: '0'
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            all: all
+            access_point: access_point
+            business_term: business_term
+            contact_information: contact_information
+            database: database
+            dataset: dataset
+            page: page
+            performance_measure: performance_measure
+            performance_outcome: performance_outcome
+            server: server
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_op
+            label: 'Content type'
+            description: ''
+            use_operator: false
+            operator: type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_admin: '0'
+              user_admin: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
