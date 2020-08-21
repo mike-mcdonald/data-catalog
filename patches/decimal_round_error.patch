@@ -1,0 +1,31 @@
+diff --git a/lib/Drupal/Core/Field/Plugin/Field/FieldFormatter/DecimalFormatter.php b/lib/Drupal/Core/Field/Plugin/Field/FieldFormatter/DecimalFormatter.php
+index 58e8fffc..b951afee 100644
+--- a/lib/Drupal/Core/Field/Plugin/Field/FieldFormatter/DecimalFormatter.php
++++ b/lib/Drupal/Core/Field/Plugin/Field/FieldFormatter/DecimalFormatter.php
+@@ -64,7 +64,7 @@ class DecimalFormatter extends NumericFormatterBase {
+    * {@inheritdoc}
+    */
+   protected function numberFormat($number) {
+-    return number_format($number, $this->getSetting('scale'), $this->getSetting('decimal_separator'), $this->getSetting('thousand_separator'));
++    return strval($number);
+   }
+ 
+ }
+diff --git a/lib/Drupal/Core/Field/Plugin/Field/FieldType/DecimalItem.php b/lib/Drupal/Core/Field/Plugin/Field/FieldType/DecimalItem.php
+index 379ff74d..2f5cc094 100644
+--- a/lib/Drupal/Core/Field/Plugin/Field/FieldType/DecimalItem.php
++++ b/lib/Drupal/Core/Field/Plugin/Field/FieldType/DecimalItem.php
+@@ -118,13 +118,6 @@ class DecimalItem extends NumericItemBase {
+     return $element;
+   }
+ 
+-  /**
+-   * {@inheritdoc}
+-   */
+-  public function preSave() {
+-    $this->value = round($this->value, $this->getSetting('scale'));
+-  }
+-
+   /**
+    * {@inheritdoc}
+    */
