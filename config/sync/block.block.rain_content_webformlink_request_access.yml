@@ -8,7 +8,7 @@ dependencies:
     - user
   theme:
     - rain
-id: cloudy_content_webformlink_request_access
+id: rain_content_webformlink_request_access
 theme: rain
 region: content
 weight: 0
