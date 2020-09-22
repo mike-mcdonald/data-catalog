@@ -119,20 +119,10 @@ class WebformLinkBlock extends BlockBase implements ContainerFactoryPluginInterf
 
     return [
       '#type' => 'container',
-      '#attributes' => [
-        'class' => [
-          'flex',
-        ],
-      ],
       'prefix' => [
         '#children' => $this->configuration['prefix_message'] . ' ',
       ],
       'link' => [
-        '#attributes' => [
-          'class' => [
-            'mx-3',
-          ],
-        ],
         '#children' => $link,
       ],
       'suffix' => [
