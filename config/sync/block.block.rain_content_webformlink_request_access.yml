@@ -21,7 +21,7 @@ settings:
   label_display: '0'
   webform_id: request_access
   prefix_message: 'If you are unable to login using the button above,'
-  webform_message: 'request access to the site'
+  webform_message: 'click here to request access to the site'
   suffix_message: ''
 visibility:
   user_role:
