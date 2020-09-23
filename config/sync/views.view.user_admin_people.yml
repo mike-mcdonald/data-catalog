@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - portland
     - user
 _core:
   default_config_hash: wTJRNzsLVTenCALONNlVfgm_pBOlqucSPuVFLOD56ck
@@ -578,10 +579,10 @@ display:
           entity_type: user
           entity_field: mail
       filters:
-        combine:
-          id: combine
-          table: views
-          field: combine
+        combine_lower_1:
+          id: combine_lower_1
+          table: portland
+          field: combine_lower
           relationship: none
           group_type: group
           admin_label: ''
@@ -590,21 +591,24 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: combine_op
-            label: 'Name or email contains'
+            operator_id: combine_lower_1_op
+            label: 'Username or email contains'
             description: ''
             use_operator: false
-            operator: combine_op
-            identifier: user
+            operator: combine_lower_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: user_lower
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              content_admin: '0'
+              user_admin: '0'
               administrator: '0'
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -620,7 +624,7 @@ display:
           fields:
             name: name
             mail: mail
-          plugin_id: combine
+          plugin_id: combine_lower
         status:
           id: status
           table: users_field_data
