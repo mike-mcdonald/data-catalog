@@ -202,7 +202,7 @@ handlers:
       from_options: {  }
       from_name: _default
       subject: 'Request for Data Catalog access'
-      body: "<h1>New request to access PBOT's Data Catalog</h1>\r\n<p class=\"text-xl leading-normal\">You are receiving this e-mail because you have permissions to add users to <a href=\"{{ webform_token('[site:url]', webform_submission) }}\">PBOT's Data Catalog</a></p>\r\n<p>Submitted on {{ webform_token('[webform_submission:created:short]', webform_submission) }}</p>\r\n{{ webform_token('[webform_submission:values]', webform_submission) }}\r\n<p><a href=\"{{ webform_token('[site:url]admin/people/create', webform_submission) }}\">Add a user</a></p>\r\n"
+      body: "<h1>New request to access PBOT's Data Catalog</h1>\r\n<p class=\"text-xl leading-normal\">You are receiving this e-mail because you have permissions to add users to <a href=\"{{ webform_token('[site:url]', webform_submission) }}\">PBOT's Data Catalog</a></p>\r\n<p>Submitted on {{ webform_token('[webform_submission:created:short]', webform_submission) }}</p>\r\n{{ webform_token('[webform_submission:values]', webform_submission) }}\r\n<p>Use the link below to manage users. Before adding this request as a new user account, use the search form on the management page to make sure they do not already have a user account.</p>\r\n<p><a href=\"{{ webform_token('[site:url]admin/people', webform_submission) }}\">Click here to manage users</a></p>\r\n"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

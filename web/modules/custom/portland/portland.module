@@ -12,3 +12,24 @@ function portland_inline_entity_form_table_fields_alter(&$fields, $context) {
     }
   }
 }
+
+/**
+ * Implements hook_views_data().
+ */
+function portland_views_data() {
+  $data['portland']['table']['group'] = t('Portland');
+  $data['portland']['table']['join'] = [
+    // #global is a special flag which allows a table to appear all the time.
+    '#global' => [],
+  ];
+
+  $data['portland']['combine_lower'] = [
+    'title' => t('Combine fields filter (case-insensitive)'),
+     'help' => t('Combine multiple fields together and search them without case-sensitivity.'),
+     'filter' => [
+       'id' => 'combine_lower',
+     ],
+   ];
+
+  return $data;
+}
