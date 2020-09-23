@@ -1,0 +1,38 @@
+uuid: 1cb49bd1-2f7c-4ed9-a6b2-483815c3edd4
+langcode: en
+status: true
+dependencies:
+  module:
+    - portland
+    - system
+    - user
+  theme:
+    - rain
+id: rain_content_webformlink_request_access
+theme: rain
+region: content
+weight: 0
+provider: null
+plugin: webform_link_block
+settings:
+  id: webform_link_block
+  label: 'Request access link'
+  provider: portland
+  label_display: '0'
+  webform_id: request_access
+  prefix_message: 'If you are unable to log in using the button above,'
+  webform_message: 'click here to request access to the site'
+  suffix_message: ''
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: /form/request-access
+    negate: true
+    context_mapping: {  }
