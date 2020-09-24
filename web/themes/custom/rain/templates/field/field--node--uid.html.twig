@@ -19,9 +19,14 @@
  * @see field.html.twig
  */
 #}
-{% set label = 'Author'|t %}
-
-{% embed 'field.html.twig' with {
-    'label': label
+{% include 'field.html.twig' with {
+    label: 'Entry by'|t,
+    layout_classes: label_display == 'inline' ? ['flex'] : ['flex', 'flex-col'],
+    field_classes: [
+      'text-base'
+    ],
+    title_classes: [
+      label_display == 'visually_hidden' ? 'visually-hidden',
+      label_display == 'inline' ? 'mr-2',
+    ],
   } %}
-{% endembed %}

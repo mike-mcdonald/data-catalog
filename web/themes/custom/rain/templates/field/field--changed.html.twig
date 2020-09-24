@@ -1,3 +1,11 @@
 {% include 'field.html.twig' with {
   label: 'Updated'|t,
+  layout_classes: label_display == 'inline' ? ['flex'] : ['flex', 'flex-col'],
+  field_classes: field_classes|default([
+    'text-base'
+  ]),
+  title_classes: [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+    label_display == 'inline' ? 'mr-2',
+  ],
 } %}

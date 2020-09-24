@@ -46,7 +46,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -9
+            weight: -7
           07f87100-0bb3-422b-b5ef-e8ae32d15f5a:
             uuid: 07f87100-0bb3-422b-b5ef-e8ae32d15f5a
             region: content
@@ -65,7 +65,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -5
+            weight: -4
           9a37da1b-a40f-472a-aaed-3a16759a9a6a:
             uuid: 9a37da1b-a40f-472a-aaed-3a16759a9a6a
             region: content
@@ -86,7 +86,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -6
+            weight: -5
           b0dda337-d91a-4242-be97-47edcf97e7db:
             uuid: b0dda337-d91a-4242-be97-47edcf97e7db
             region: content
@@ -104,25 +104,6 @@ third_party_settings:
                   url_plain: false
                   rel: '0'
                   target: '0'
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: -10
-          ad856472-518f-4c88-911f-e6913d46f361:
-            uuid: ad856472-518f-4c88-911f-e6913d46f361
-            region: content
-            configuration:
-              id: 'field_block:node:access_point:uid'
-              label: 'Authored by'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: compact
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -147,7 +128,47 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -7
+            weight: -6
+          593fd17b-72d8-4382-b043-749f0be4a0de:
+            uuid: 593fd17b-72d8-4382-b043-749f0be4a0de
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:changed'
+              label: Changed
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: timestamp
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -9
+          ad856472-518f-4c88-911f-e6913d46f361:
+            uuid: ad856472-518f-4c88-911f-e6913d46f361
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:uid'
+              label: 'Authored by'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: compact
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -10
         third_party_settings: {  }
     allow_custom: false
 id: node.access_point.default
