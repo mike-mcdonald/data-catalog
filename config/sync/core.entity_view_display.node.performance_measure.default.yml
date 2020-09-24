@@ -66,7 +66,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -10
+            weight: -8
           f5555948-1a9b-4ad4-9586-510154a3ac4b:
             uuid: f5555948-1a9b-4ad4-9586-510154a3ac4b
             region: content
@@ -317,7 +317,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -9
+            weight: -7
           f5634494-4633-428a-b6ee-f68cc254a71f:
             uuid: f5634494-4633-428a-b6ee-f68cc254a71f
             region: content
@@ -355,25 +355,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 6
-          d99de31f-252e-4296-a866-f348abe56bd6:
-            uuid: d99de31f-252e-4296-a866-f348abe56bd6
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:uid'
-              label: 'Authored by'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: compact
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: -8
           9f150d66-8d5b-40d2-b477-8dbf9456e7c3:
             uuid: 9f150d66-8d5b-40d2-b477-8dbf9456e7c3
             region: content
@@ -394,7 +375,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -7
+            weight: -9
           e753ce6b-7151-47f6-84a5-83e186f0cf3d:
             uuid: e753ce6b-7151-47f6-84a5-83e186f0cf3d
             region: content
@@ -535,7 +516,7 @@ third_party_settings:
               show_help: 0
               context_mapping: {  }
             additional: {  }
-            weight: 11
+            weight: 10
           77fd30de-23f5-486c-823c-46145f9e3efa:
             uuid: 77fd30de-23f5-486c-823c-46145f9e3efa
             region: content
@@ -596,6 +577,25 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: -3
+          d99de31f-252e-4296-a866-f348abe56bd6:
+            uuid: d99de31f-252e-4296-a866-f348abe56bd6
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:uid'
+              label: 'Authored by'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: compact
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -10
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
