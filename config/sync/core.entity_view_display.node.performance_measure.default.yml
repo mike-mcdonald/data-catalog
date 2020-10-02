@@ -354,7 +354,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 6
+            weight: 2
           9f150d66-8d5b-40d2-b477-8dbf9456e7c3:
             uuid: 9f150d66-8d5b-40d2-b477-8dbf9456e7c3
             region: content
@@ -453,25 +453,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 3
-          dd2cd672-9bdd-43ef-85bc-3166f60ba62e:
-            uuid: dd2cd672-9bdd-43ef-85bc-3166f60ba62e
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_project_name'
-              label: 'Project name'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 2
           255f4eb8-307c-4d2e-b81b-e9f54c9ebf55:
             uuid: 255f4eb8-307c-4d2e-b81b-e9f54c9ebf55
             region: content
@@ -596,6 +577,25 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          dd2cd672-9bdd-43ef-85bc-3166f60ba62e:
+            uuid: dd2cd672-9bdd-43ef-85bc-3166f60ba62e
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_project_name'
+              label: 'Project name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 6
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
