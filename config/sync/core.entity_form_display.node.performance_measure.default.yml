@@ -151,7 +151,7 @@ content:
     type: select2_entity_reference
     region: content
   field_level:
-    weight: 7
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -210,7 +210,7 @@ content:
     type: options_select
     region: content
   field_strategic_plan:
-    weight: 10
+    weight: 9
     settings:
       force_deepest: true
       parent: '0'
@@ -219,14 +219,14 @@ content:
     type: cshs
     region: content
   field_strategic_target:
-    weight: 9
+    weight: 8
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_strategic_year:
-    weight: 8
+    weight: 7
     settings:
       autocomplete: false
       match_operator: CONTAINS
