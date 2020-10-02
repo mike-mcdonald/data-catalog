@@ -433,7 +433,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 0
+            weight: 1
           4fb5e435-5116-407c-9280-4d195628282a:
             uuid: 4fb5e435-5116-407c-9280-4d195628282a
             region: content
@@ -536,28 +536,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 9
-          1c95fb4c-548a-4d11-8003-2cea9022b9fa:
-            uuid: 1c95fb4c-548a-4d11-8003-2cea9022b9fa
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_strategic_target'
-              label: 'Strategic target'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: number_decimal
-                settings:
-                  thousand_separator: ','
-                  prefix_suffix: true
-                  decimal_separator: .
-                  scale: 2
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
           449b94db-9329-4792-8215-4448ead56fbf:
             uuid: 449b94db-9329-4792-8215-4448ead56fbf
             region: content
@@ -596,6 +574,28 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: -10
+          1c95fb4c-548a-4d11-8003-2cea9022b9fa:
+            uuid: 1c95fb4c-548a-4d11-8003-2cea9022b9fa
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_strategic_target'
+              label: 'Strategic target'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: number_decimal
+                settings:
+                  thousand_separator: ','
+                  prefix_suffix: true
+                  decimal_separator: .
+                  scale: 2
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
