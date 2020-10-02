@@ -104,7 +104,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -4
+            weight: -3
           68aa6c8b-a863-44a3-b4d1-740b3d62e3cb:
             uuid: 68aa6c8b-a863-44a3-b4d1-740b3d62e3cb
             region: content
@@ -125,7 +125,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: -2
+            weight: -4
           3bdf273e-ba26-48aa-baea-4dd458955550:
             uuid: 3bdf273e-ba26-48aa-baea-4dd458955550
             region: content
@@ -517,25 +517,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 9
-          449b94db-9329-4792-8215-4448ead56fbf:
-            uuid: 449b94db-9329-4792-8215-4448ead56fbf
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_measure_id'
-              label: 'CBO measure ID'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: -3
           d99de31f-252e-4296-a866-f348abe56bd6:
             uuid: d99de31f-252e-4296-a866-f348abe56bd6
             region: content
@@ -596,6 +577,25 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 6
+          449b94db-9329-4792-8215-4448ead56fbf:
+            uuid: 449b94db-9329-4792-8215-4448ead56fbf
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_measure_id'
+              label: 'CBO measure ID'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -2
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
