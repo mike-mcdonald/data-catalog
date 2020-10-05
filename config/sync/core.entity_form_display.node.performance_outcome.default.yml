@@ -58,9 +58,9 @@ content:
     weight: 1
     settings:
       width: 100%
-      autocomplete: true
       match_operator: CONTAINS
       match_limit: 20
+      autocomplete: false
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
