@@ -1,46 +1,30 @@
-uuid: 8e8e3d36-fdb1-4e72-80c1-d5e9b265a813
+uuid: 9079eebd-fa6c-4146-84f0-ebb8da940ab3
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.card
     - field.field.taxonomy_term.accessibility_levels.field_accessibility_value
     - taxonomy.vocabulary.accessibility_levels
   module:
     - field_layout
     - layout_builder
     - options
-    - text
-  theme:
-    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
   layout_builder:
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
         components:
-          84386f8f-26d1-4de1-bc98-8abeafa6ec60:
-            uuid: 84386f8f-26d1-4de1-bc98-8abeafa6ec60
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:taxonomy_term:accessibility_levels:description'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 0
-          fc69b905-8a94-4986-9766-12de2591225d:
-            uuid: fc69b905-8a94-4986-9766-12de2591225d
+          078befc3-eadf-49fc-96bd-a554c0801924:
+            uuid: 078befc3-eadf-49fc-96bd-a554c0801924
             region: content
             configuration:
               label_display: '0'
@@ -48,32 +32,25 @@ third_party_settings:
                 entity: layout_builder.entity
               id: 'field_block:taxonomy_term:accessibility_levels:field_accessibility_value'
               formatter:
-                label: above
+                label: visually_hidden
                 settings: {  }
                 third_party_settings: {  }
                 type: list_default
             additional: {  }
-            weight: 1
+            weight: 0
         third_party_settings: {  }
-    allow_custom: false
-id: taxonomy_term.accessibility_levels.default
+id: taxonomy_term.accessibility_levels.card
 targetEntityType: taxonomy_term
 bundle: accessibility_levels
-mode: default
+mode: card
 content:
-  description:
-    label: hidden
-    type: text_default
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_accessibility_value:
-    weight: 1
-    label: above
+    weight: 0
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
 hidden:
+  description: true
   search_api_excerpt: true

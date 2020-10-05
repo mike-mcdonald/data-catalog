@@ -9,7 +9,7 @@ id: node.dataset.field_accessibility_level
 field_name: field_accessibility_level
 entity_type: node
 bundle: dataset
-label: Accessibility
+label: 'Data protection level'
 description: 'View the definition <a href="[site:url]term/accessibility-protected-data">here</a>'
 required: true
 translatable: false
