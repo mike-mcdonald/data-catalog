@@ -1,0 +1,16 @@
+{% embed 'field.html.twig' with {
+  field_classes: [
+    'my-0',
+  ],
+  'item_classes': [
+    'mb-0',
+  ]
+} %}
+  {% block field %}
+    {% spaceless %}
+      {%- for item in items -%}
+          {{ item.content }}
+      {%- endfor -%}
+    {% endspaceless %}
+  {% endblock %}
+{% endembed %}
