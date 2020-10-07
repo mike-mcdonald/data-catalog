@@ -148,9 +148,6 @@
       "drupal/inline_entity_form": {
         "Replace tokens in description": "patches/inline-entity-form-token-replace.patch"
       },
-      "drupal/openid_connect": {
-        "Fix update_8105 SQL query": "patches/openid_connect_update_8105.patch"
-      },
       "drupal/select2": {
         "Fix auto create bug in PostgreSQL": "patches/select2_autocreate_fix.patch"
       }
