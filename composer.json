@@ -60,7 +60,7 @@
     "drupal/views_data_export": "^1.0@beta",
     "drupal/webform": "^5.16",
     "drupal/yearonly": "^1.3",
-    "drush/drush": "^9.0.0",
+    "drush/drush": "^10.0.0",
     "league/csv": "^9.6.0",
     "npm-asset/select2": "^4.0",
     "oomphinc/composer-installers-extender": "^1.1",
