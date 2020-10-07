@@ -1,0 +1,15 @@
+{% set sep %}
+<span class="mr-1">:</span>
+{% endset %}
+
+{% include 'taxonomy-term.html.twig' with {
+  classes: [
+    'inline-flex',
+  ],
+  'link_classes': [
+    'border-b-2',
+    'border-current'
+  ],
+  'heading_element': 'label',
+  'title_suffix': sep
+} %}

@@ -1,4 +1,5 @@
 entity_field_label:
+  node: 'Permission groups'
   user: 'Group memberships'
 _core:
   default_config_hash: LHIZeHxypbYkGfUlTo43_wxmmaPzrGgYmoJmoCy7ahI

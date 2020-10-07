@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.business_term.field_subject_areas
     - node.type.business_term
   module:
+    - content_moderation
     - cshs
     - field_layout
     - inline_entity_form
@@ -37,7 +38,7 @@ content:
     third_party_settings: {  }
     region: content
   field_data_custodian:
-    weight: 4
+    weight: 3
     settings:
       form_mode: default
       override_labels: true
@@ -49,20 +50,22 @@ content:
       collapsible: false
       collapsed: false
       allow_duplicate: false
+      revision: false
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
   field_keywords:
-    weight: 3
+    weight: 2
     settings:
       width: 100%
       match_operator: CONTAINS
       autocomplete: false
+      match_limit: 10
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
   field_subject_areas:
-    weight: 26
+    weight: 4
     settings:
       parent: '0'
       level_labels: ''
@@ -72,7 +75,7 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 5
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -84,6 +87,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
   group_content: true
@@ -91,4 +104,3 @@ hidden:
   promote: true
   status: true
   sticky: true
-  uid: true

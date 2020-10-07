@@ -60,7 +60,7 @@
     "drupal/views_data_export": "^1.0@beta",
     "drupal/webform": "^5.16",
     "drupal/yearonly": "^1.3",
-    "drush/drush": "^9.0.0",
+    "drush/drush": "^10.0.0",
     "league/csv": "^9.6.0",
     "npm-asset/select2": "^4.0",
     "oomphinc/composer-installers-extender": "^1.1",
@@ -147,9 +147,6 @@
       },
       "drupal/inline_entity_form": {
         "Replace tokens in description": "patches/inline-entity-form-token-replace.patch"
-      },
-      "drupal/openid_connect": {
-        "Fix update_8105 SQL query": "patches/openid_connect_update_8105.patch"
       },
       "drupal/select2": {
         "Fix auto create bug in PostgreSQL": "patches/select2_autocreate_fix.patch"

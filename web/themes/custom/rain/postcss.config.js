@@ -3,7 +3,7 @@ const purgecss = require('@fullhuman/postcss-purgecss');
 const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
 
-module.exports = ({ file, options, env }) => {
+module.exports = ({ mode }) => {
   return {
     plugins: [
       tailwindcss('./tailwind.config.js'),
@@ -11,7 +11,7 @@ module.exports = ({ file, options, env }) => {
       cssnano({
         preset: 'default'
       }),
-      options.mode === 'production'
+      mode === 'production'
         ? purgecss({
           content: [
             'templates/**/*.html.twig',
@@ -20,7 +20,9 @@ module.exports = ({ file, options, env }) => {
             'rain.theme'
           ],
           defaultExtractor: content => content.match(/[\w-/:()]+(?<!:)/g) || [],
-          whitelistPatternsChildren: [/select2-container--rain$/]
+          safelist: {
+            deep: [/select2-container--rain$/]
+          }
         })
         : false
     ]

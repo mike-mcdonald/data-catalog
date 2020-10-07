@@ -50,13 +50,7 @@ module.exports = (env, argv) => ({
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: true,
-              config: {
-                path: './postcss.config.js',
-                ctx: {
-                  mode: argv.mode
-                }
-              }
+              sourceMap: true
             }
           },
           {
