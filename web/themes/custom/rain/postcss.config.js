@@ -20,7 +20,9 @@ module.exports = ({ mode }) => {
             'rain.theme'
           ],
           defaultExtractor: content => content.match(/[\w-/:()]+(?<!:)/g) || [],
-          whitelistPatternsChildren: [/select2-container--rain$/]
+          safelist: {
+            deep: [/select2-container--rain$/]
+          }
         })
         : false
     ]
