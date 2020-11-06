@@ -1897,7 +1897,7 @@ display:
               alias: ''
               raw_output: false
             field_purpose:
-              alias: purpose
+              alias: Purpose
               raw_output: false
       style:
         type: data_export
