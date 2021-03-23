@@ -40,17 +40,15 @@ content:
   field_data_custodian:
     weight: 3
     settings:
-      form_mode: default
-      override_labels: true
-      label_singular: contact
-      label_plural: contacts
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-      revision: false
+      entity_browser: contact_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: teaser
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_edit: false
+      field_widget_replace: false
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
