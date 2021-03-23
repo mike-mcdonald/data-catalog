@@ -11,7 +11,7 @@ name: contact_browser
 label: 'Contact browser'
 display: modal
 display_configuration:
-  width: '1050'
+  width: ''
   height: '800'
   link_text: 'Select contact(s)'
   auto_open: false
@@ -28,7 +28,7 @@ widgets:
       auto_select: false
     uuid: c143f58e-8572-46d8-a6e9-7f532178718d
     weight: 1
-    label: Contacts
+    label: 'Select Contacts'
     id: view
   0c76b431-71ad-4b18-a716-40a6deb9ca9f:
     settings:

@@ -222,7 +222,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -400,13 +400,13 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: 'Filter Contacts:'
+            label: 'Search contacts'
             description: ''
             use_operator: false
             operator: combine_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: combine
+            identifier: search
             required: false
             remember: false
             multiple: false
@@ -416,7 +416,7 @@ display:
               content_admin: '0'
               user_admin: '0'
               administrator: '0'
-            placeholder: ''
+            placeholder: 'Enter contact name...'
           is_grouped: false
           group_info:
             label: ''
