@@ -22,10 +22,14 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
+  devel: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
   entity: 0
+  entity_browser: 0
+  entity_browser_entity_form: 0
   entity_reference_revisions: 0
   environment_indicator: 0
   environment_indicator_ui: 0
@@ -45,10 +49,12 @@ module:
   image: 0
   inline_entity_form: 0
   key: 0
+  kint: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
   mailsystem: 0
+  masquerade: 0
   media: 0
   media_library: 0
   menu_ui: 0

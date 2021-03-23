@@ -27,12 +27,12 @@
   label {
 
     label {
-      @apply pl-8;
+      @apply pl-3;
     }
   }
 
   input {
-    @apply p-1 w-6 h-6 cursor-pointer;
+    @apply p-1 w-6 h-6 cursor-pointer flex-shrink-0;
     z-index: 1;
     margin: 0;
     zoom: 1;
