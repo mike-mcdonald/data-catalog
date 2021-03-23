@@ -17,6 +17,7 @@
 {%
   set classes = classes|default([
     'border',
+    required ? 'border-red-500',
     'rounded',
     'p-3',
     'my-2',
@@ -27,8 +28,10 @@
 <details{{attributes.addClass(classes)}}>
   {%
     set summary_classes = [
+      'font-bold',
       required ? 'js-form-required',
-      required ? 'form-required',
+      required ? 'text-red-600',
+      required ? 'border-red-500',
     ]
   %}
   {%- if title -%}
