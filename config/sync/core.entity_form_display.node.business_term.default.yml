@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.contact_browser
     - field.field.node.business_term.body
     - field.field.node.business_term.field_data_custodian
     - field.field.node.business_term.field_keywords
@@ -11,8 +12,8 @@ dependencies:
   module:
     - content_moderation
     - cshs
+    - entity_browser
     - field_layout
-    - inline_entity_form
     - select2
     - text
   theme:
@@ -50,7 +51,7 @@ content:
       field_widget_edit: false
       field_widget_replace: false
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: entity_browser_entity_reference
     region: content
   field_keywords:
     weight: 2
@@ -68,6 +69,9 @@ content:
       parent: '0'
       level_labels: ''
       force_deepest: false
+      save_lineage: false
+      hierarchy_depth: 0
+      required_depth: 0
     third_party_settings: {  }
     type: cshs
     region: content
