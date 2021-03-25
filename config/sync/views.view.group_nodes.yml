@@ -2112,7 +2112,7 @@ display:
           formats:
             csv: csv
           csv_settings:
-            delimiter: ','
+            delimiter: '|'
             enclosure: '"'
             escape_char: \
             strip_tags: true
@@ -2282,7 +2282,7 @@ display:
           formats:
             csv: csv
           csv_settings:
-            delimiter: ','
+            delimiter: '|'
             enclosure: '"'
             escape_char: \
             strip_tags: true
@@ -4161,7 +4161,7 @@ display:
           formats:
             csv: csv
           csv_settings:
-            delimiter: ','
+            delimiter: '|'
             enclosure: '"'
             escape_char: \
             strip_tags: true
