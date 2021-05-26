@@ -26,6 +26,8 @@ module:
   easy_breadcrumb: 0
   editor: 0
   entity: 0
+  entity_browser: 0
+  entity_browser_entity_form: 0
   entity_reference_revisions: 0
   environment_indicator: 0
   environment_indicator_ui: 0

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.contact_browser
     - field.field.node.business_term.body
     - field.field.node.business_term.field_data_custodian
     - field.field.node.business_term.field_keywords
@@ -11,8 +12,8 @@ dependencies:
   module:
     - content_moderation
     - cshs
+    - entity_browser
     - field_layout
-    - inline_entity_form
     - select2
     - text
   theme:
@@ -40,19 +41,17 @@ content:
   field_data_custodian:
     weight: 3
     settings:
-      form_mode: default
-      override_labels: true
-      label_singular: contact
-      label_plural: contacts
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-      revision: false
+      entity_browser: contact_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: teaser
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_edit: false
+      field_widget_replace: false
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: entity_browser_entity_reference
     region: content
   field_keywords:
     weight: 2
@@ -70,6 +69,9 @@ content:
       parent: '0'
       level_labels: ''
       force_deepest: false
+      save_lineage: false
+      hierarchy_depth: 0
+      required_depth: 0
     third_party_settings: {  }
     type: cshs
     region: content

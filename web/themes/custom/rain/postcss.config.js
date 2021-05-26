@@ -17,7 +17,8 @@ module.exports = ({ mode }) => {
             'templates/**/*.html.twig',
             'layouts/**/*.html.twig',
             'js/**/*.js',
-            'rain.theme'
+            'rain.theme',
+            '../../../../config/sync/*.yml'
           ],
           defaultExtractor: content => content.match(/[\w-/:()]+(?<!:)/g) || [],
           safelist: {

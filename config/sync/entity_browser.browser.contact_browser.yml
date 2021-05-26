@@ -1,0 +1,42 @@
+uuid: 1ccd8f4a-5d45-4aa1-8a09-7f32b852ac35
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.contact_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: contact_browser
+label: 'Contact browser'
+display: modal
+display_configuration:
+  width: ''
+  height: '800'
+  link_text: 'Select contact(s)'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  c143f58e-8572-46d8-a6e9-7f532178718d:
+    settings:
+      view: contact_browser
+      view_display: entity_browser_1
+      submit_text: 'Select contact(s)'
+      auto_select: false
+    uuid: c143f58e-8572-46d8-a6e9-7f532178718d
+    weight: 1
+    label: 'Select Contacts'
+    id: view
+  0c76b431-71ad-4b18-a716-40a6deb9ca9f:
+    settings:
+      entity_type: node
+      bundle: contact_information
+      form_mode: default
+      submit_text: Save
+    uuid: 0c76b431-71ad-4b18-a716-40a6deb9ca9f
+    weight: 2
+    label: 'Add New Contact'
+    id: entity_form
