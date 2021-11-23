@@ -132,6 +132,7 @@
     ],
     "patches": {
       "drupal/core": {
+        "2490294 - User email should not be case sensitive": "https://www.drupal.org/files/issues/2021-09-29/drupal-case_sensitive_email-2490294-45-d92.patch",
         "Fix for PostgreSQL table alias length limit": "patches/drupal-571548-107-d8_0.patch",
         "Fix for PostgreSQL table alias length limit 2": "patches/postgresql_table_alias_fix.patch",
         "Fix number step validation bug": "patches/number_step_validation_bug.patch",
