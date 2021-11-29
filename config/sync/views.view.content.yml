@@ -4146,7 +4146,7 @@ display:
   data_export_5:
     display_plugin: data_export
     id: data_export_5
-    display_title: 'Outcome export'
+    display_title: 'Measure data export'
     position: 5
     display_options:
       display_extenders: {  }
@@ -4568,7 +4568,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Estimate
+          label: Target
           exclude: false
           alter:
             alter_text: false
@@ -4888,10 +4888,10 @@ display:
           entity_field: created
           plugin_id: field
       display_description: ''
-      path: admin/content/export/outcome
-      filename: 'data-catalog_outcomes_[date:html_date].csv'
+      path: admin/content/export/measure-data
+      filename: 'data-catalog_measure-data_[date:html_date].csv'
       automatic_download: false
-      store_in_public_file_directory: false
+      store_in_public_file_directory: null
       redirect_to_display: none
       custom_redirect_path: false
       include_query_params: false
@@ -4976,7 +4976,7 @@ display:
           admin_label: ''
           empty: false
           display_id: data_export_5
-          label: 'Export outcomes'
+          label: 'Export measure data'
           plugin_id: display_link
       defaults:
         header: false
