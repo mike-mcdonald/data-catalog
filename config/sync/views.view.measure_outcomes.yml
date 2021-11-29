@@ -170,7 +170,7 @@ display:
           relationship: reverse__node__field_performance_measure
           group_type: group
           admin_label: ''
-          label: Estimate
+          label: Target
           exclude: false
           alter:
             alter_text: false
@@ -343,7 +343,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: 'Edit outcome'
+          text: 'Edit data'
           output_url_as_text: false
           absolute: false
           entity_type: node
@@ -376,7 +376,7 @@ display:
             label: ''
           granularity: day
           plugin_id: datetime
-      title: 'Measure outcomes'
+      title: 'Measure data'
       header: {  }
       footer: {  }
       empty:

@@ -472,7 +472,7 @@ third_party_settings:
             region: content
             configuration:
               id: formblock_node
-              label: 'Add a new outcome'
+              label: 'Add new measure data'
               provider: node
               label_display: visible
               type: performance_outcome

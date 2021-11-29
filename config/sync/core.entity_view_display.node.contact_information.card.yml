@@ -119,5 +119,6 @@ content:
     type: telephone_link
     region: content
 hidden:
+  group_content: true
   links: true
   search_api_excerpt: true

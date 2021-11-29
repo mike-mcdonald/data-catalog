@@ -77,4 +77,5 @@ hidden:
   field_data_custodian: true
   field_keywords: true
   field_subject_areas: true
+  group_content: true
   search_api_excerpt: true
