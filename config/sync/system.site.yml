@@ -1,10 +1,10 @@
 uuid: 850efadb-c0cb-44ca-99f2-6b206963c732
-name: 'Data Catalog'
-mail: noreply.data-catalog@portlandoregon.gov
-slogan: ''
+name: "Data Catalog"
+mail: PBOTApplicationSupport@portlandoregon.gov
+slogan: ""
 page:
   403: /user/login
-  404: ''
+  404: ""
   front: /search
 admin_compact_mode: false
 weight_select_max: 100
@@ -12,4 +12,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
-mail_notification: ''
+mail_notification: ""
