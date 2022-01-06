@@ -1,0 +1,17 @@
+uuid: 336b939e-d5ed-4713-9f65-d6c450f3d6c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Change Log'
+type: change_log
+description: 'Content type that tracks functional changes made to the site.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
