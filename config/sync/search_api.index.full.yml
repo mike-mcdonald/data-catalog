@@ -151,6 +151,7 @@ datasource_settings:
     bundles:
       default: true
       selected:
+        - change_log
         - page
         - performance_outcome
     languages:
@@ -208,6 +209,7 @@ processor_settings:
     weights:
       preprocess_index: -6
       preprocess_query: -6
+    ignored: ._-
   transliteration:
     all_fields: false
     fields:
@@ -223,5 +225,6 @@ tracker_settings:
     indexing_order: fifo
 options:
   index_directly: true
+  track_changes_in_references: false
   cron_limit: 50
 server: database
