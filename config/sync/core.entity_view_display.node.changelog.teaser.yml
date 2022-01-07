@@ -1,0 +1,76 @@
+uuid: 3c8da017-f885-43cb-94ff-ca8b14ff8134
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.changelog.body
+    - field.field.node.changelog.field_effective_date
+    - field.field.node.changelog.field_type
+    - node.type.changelog
+  module:
+    - layout_builder
+    - text
+    - user
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_flex
+        layout_settings:
+          label: ''
+        components:
+          672704be-21a7-4920-8a45-6e4c9b974c71:
+            uuid: 672704be-21a7-4920-8a45-6e4c9b974c71
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:changelog:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: -9
+          4734d718-0d47-4a17-868f-d2cf607cf176:
+            uuid: 4734d718-0d47-4a17-868f-d2cf607cf176
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:changelog:links'
+            additional: {  }
+            weight: -8
+        third_party_settings: {  }
+id: node.changelog.teaser
+targetEntityType: node
+bundle: changelog
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_effective_date: true
+  field_type: true
+  group_content: true
+  search_api_excerpt: true
