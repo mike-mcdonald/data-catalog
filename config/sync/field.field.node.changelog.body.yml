@@ -4,19 +4,19 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.change_log
+    - node.type.changelog
   module:
     - text
-id: node.change_log.body
+id: node.changelog.body
 field_name: body
 entity_type: node
-bundle: change_log
+bundle: changelog
 label: Description
-description: ''
+description: ""
 required: false
 translatable: true
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
   display_summary: true
   required_summary: true

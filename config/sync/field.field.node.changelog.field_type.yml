@@ -4,20 +4,20 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_type
-    - node.type.change_log
+    - node.type.changelog
     - taxonomy.vocabulary.changelog_type
-id: node.change_log.field_type
+id: node.changelog.field_type
 field_name: field_type
 entity_type: node
-bundle: change_log
-label: 'Change types'
-description: 'Select all the change types that apply to this change log.'
+bundle: changelog
+label: "Change types"
+description: "Select all the change types that apply to this change log."
 required: true
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:taxonomy_term'
+  handler: "default:taxonomy_term"
   handler_settings:
     target_bundles:
       changelog_type: changelog_type
@@ -25,5 +25,5 @@ settings:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: ""
 field_type: entity_reference

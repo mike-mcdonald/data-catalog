@@ -3,22 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - views.view.change_log
+    - views.view.changelog
   module:
     - views
   theme:
     - rain
-id: rain_views_block__change_log_block
+id: rain_views_block__changelog_block
 theme: rain
 region: alert
 weight: 0
 provider: null
-plugin: 'views_block:change_log-block_1'
+plugin: "views_block:changelog-block_1"
 settings:
-  id: 'views_block:change_log-block_1'
-  label: ''
+  id: "views_block:changelog-block_1"
+  label: ""
   provider: views
-  label_display: '0'
-  views_label: ''
+  label_display: "0"
+  views_label: ""
   items_per_page: none
-visibility: {  }
+visibility: {}
