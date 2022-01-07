@@ -27,7 +27,7 @@ third_party_settings:
             uuid: 672704be-21a7-4920-8a45-6e4c9b974c71
             region: first
             configuration:
-              id: "field_block:node:change_log:body"
+              id: "field_block:node:changelog:body"
               label_display: "0"
               context_mapping:
                 entity: layout_builder.entity
@@ -43,7 +43,7 @@ third_party_settings:
             uuid: 4734d718-0d47-4a17-868f-d2cf607cf176
             region: second
             configuration:
-              id: "extra_field_block:node:change_log:links"
+              id: "extra_field_block:node:changelog:links"
               label_display: "0"
               context_mapping:
                 entity: layout_builder.entity

@@ -26,7 +26,6 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Measure outcomes'
       fields:
         field_reporting_period:
           id: field_reporting_period
@@ -430,8 +429,6 @@ display:
           plugin_id: standard
           required: false
       use_ajax: true
-      header: {  }
-      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1

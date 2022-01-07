@@ -473,7 +473,6 @@ third_party_settings:
             configuration:
               id: formblock_node
               label: 'Add new measure data'
-              provider: node
               label_display: visible
               provider: node
               context_mapping: {  }

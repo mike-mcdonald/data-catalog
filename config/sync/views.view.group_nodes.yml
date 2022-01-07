@@ -3286,7 +3286,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_datasets:
           id: field_datasets
           table: node__field_datasets
@@ -4677,7 +4676,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_reporting_month:
           id: field_reporting_month
           table: node__field_reporting_month

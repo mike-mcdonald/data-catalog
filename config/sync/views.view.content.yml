@@ -3005,7 +3005,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_datasets:
           id: field_datasets
           table: node__field_datasets
@@ -4473,7 +4472,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_reporting_month:
           id: field_reporting_month
           table: node__field_reporting_month
@@ -4925,9 +4923,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
-          plugin_id: field
       display_description: ''
       path: admin/content/export/measure-data
       filename: 'data-catalog_measure-data_[date:html_date].csv'
@@ -4946,15 +4941,7 @@ display:
           admin_label: 'field_performance_measure: Content'
           plugin_id: standard
           required: true
-      display_description: ''
       display_extenders: {  }
-      path: admin/content/export/outcome
-      filename: 'data-catalog_outcomes_[date:html_date].csv'
-      automatic_download: false
-      store_in_public_file_directory: false
-      custom_redirect_path: false
-      redirect_to_display: none
-      include_query_params: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -5011,17 +4998,9 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: display_link
-          label: 'Export outcomes'
           empty: false
           display_id: data_export_5
           label: 'Export measure data'
-          plugin_id: display_link
-      defaults:
-        header: false
-    display_plugin: page
-    display_title: Page
-    id: page_1
-    position: 1
     cache_metadata:
       max-age: 0
       contexts:
