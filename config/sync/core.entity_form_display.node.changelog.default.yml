@@ -18,7 +18,7 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings:
-      label: ""
+      label: ''
 id: node.changelog.default
 targetEntityType: node
 bundle: changelog
@@ -30,14 +30,14 @@ content:
     settings:
       rows: 9
       summary_rows: 3
-      placeholder: ""
+      placeholder: ''
       show_summary: false
-    third_party_settings: {}
+    third_party_settings: {  }
     region: content
   field_effective_date:
     weight: 1
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: datetime_default
     region: content
   field_type:
@@ -47,7 +47,7 @@ content:
       match_limit: 10
       autocomplete: false
       width: 100%
-    third_party_settings: {}
+    third_party_settings: {  }
     type: select2_entity_reference
     region: content
   status:
@@ -56,25 +56,25 @@ content:
       display_label: true
     weight: 5
     region: content
-    third_party_settings: {}
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0
     region: content
     settings:
       size: 255
-      placeholder: ""
-    third_party_settings: {}
+      placeholder: ''
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
-      placeholder: ""
+      placeholder: ''
       match_limit: 10
     region: content
-    third_party_settings: {}
+    third_party_settings: {  }
 hidden:
   created: true
   group_content: true

@@ -11,13 +11,14 @@ id: node.changelog.field_effective_date
 field_name: field_effective_date
 entity_type: node
 bundle: changelog
-label: "Effective Date"
-description: ""
+label: 'Effective Date'
+description: ''
 required: true
 translatable: false
 default_value:
-  - default_date_type: now
+  -
+    default_date_type: now
     default_date: now
-default_value_callback: ""
-settings: {}
+default_value_callback: ''
+settings: {  }
 field_type: datetime

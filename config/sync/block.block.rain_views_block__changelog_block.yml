@@ -13,12 +13,12 @@ theme: rain
 region: alert
 weight: 0
 provider: null
-plugin: "views_block:changelog-block_1"
+plugin: 'views_block:changelog-block_1'
 settings:
-  id: "views_block:changelog-block_1"
-  label: ""
+  id: 'views_block:changelog-block_1'
+  label: ''
   provider: views
-  label_display: "0"
-  views_label: ""
+  label_display: '0'
+  views_label: ''
   items_per_page: none
-visibility: {}
+visibility: {  }

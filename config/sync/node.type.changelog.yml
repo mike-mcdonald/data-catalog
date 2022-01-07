@@ -6,12 +6,12 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus: {}
-    parent: ""
-name: "Changelog"
+    available_menus: {  }
+    parent: ''
+name: Changelog
 type: changelog
-description: "Content type that tracks functional changes made to the site."
-help: ""
+description: 'Content type that tracks functional changes made to the site.'
+help: ''
 new_revision: true
 preview_mode: 1
 display_submitted: false

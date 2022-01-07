@@ -10,10 +10,10 @@ dependencies:
     - node
     - user
 id: changelog
-label: "change log"
+label: 'change log'
 module: views
-description: ""
-tag: ""
+description: ''
+tag: ''
 base_table: node_field_data
 base_field: nid
 display:
@@ -26,25 +26,25 @@ display:
       access:
         type: perm
         options:
-          perm: "access content"
+          perm: 'access content'
       cache:
         type: tag
-        options: {}
+        options: {  }
       query:
         type: views_query
         options:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_comment: ""
-          query_tags: {}
+          query_comment: ''
+          query_tags: {  }
       exposed_form:
         type: basic
         options:
           submit_button: Apply
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: "Sort by"
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -56,7 +56,7 @@ display:
       style:
         type: default
       row:
-        type: "entity:node"
+        type: 'entity:node'
         options:
           view_mode: teaser
       fields:
@@ -66,7 +66,7 @@ display:
           field: title
           entity_type: node
           entity_field: title
-          label: ""
+          label: ''
           alter:
             alter_text: false
             make_link: false
@@ -83,33 +83,33 @@ display:
           plugin_id: field
           relationship: none
           group_type: group
-          admin_label: ""
+          admin_label: ''
           exclude: false
-          element_type: ""
-          element_class: ""
-          element_label_type: ""
-          element_label_class: ""
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
           element_label_colon: true
-          element_wrapper_type: ""
-          element_wrapper_class: ""
+          element_wrapper_type: ''
+          element_wrapper_class: ''
           element_default_classes: true
-          empty: ""
+          empty: ''
           hide_alter_empty: true
           click_sort_column: value
           type: string
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ", "
+          separator: ', '
           field_api_classes: false
       filters:
         status:
-          value: "1"
+          value: '1'
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -117,9 +117,9 @@ display:
           entity_field: status
           id: status
           expose:
-            operator: ""
+            operator: ''
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
           group: 1
         type:
           id: type
@@ -132,51 +132,51 @@ display:
           plugin_id: bundle
           expose:
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
         field_effective_date_value:
           id: field_effective_date_value
           table: node__field_effective_date
           field: field_effective_date_value
           relationship: none
           group_type: group
-          admin_label: ""
-          operator: ">"
+          admin_label: ''
+          operator: '>'
           value:
-            min: ""
-            max: ""
-            value: "-30 day"
+            min: ''
+            max: ''
+            value: '-30 day'
             type: offset
           group: 1
           exposed: false
           expose:
-            operator_id: ""
-            label: ""
-            description: ""
+            operator_id: ''
+            label: ''
+            description: ''
             use_operator: false
-            operator: ""
+            operator: ''
             operator_limit_selection: false
-            operator_list: {}
-            identifier: ""
+            operator_list: {  }
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ""
-            min_placeholder: ""
-            max_placeholder: ""
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
-            label: ""
-            description: ""
-            identifier: ""
+            label: ''
+            description: ''
+            identifier: ''
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {}
-            group_items: {}
+            default_group_multiple: {  }
+            group_items: {  }
           plugin_id: datetime
       sorts:
         field_effective_date_value:
@@ -185,41 +185,41 @@ display:
           field: field_effective_date_value
           relationship: none
           group_type: group
-          admin_label: ""
+          admin_label: ''
           order: DESC
           exposed: false
           expose:
-            label: ""
+            label: ''
           granularity: second
           plugin_id: datetime
-      title: "change log"
-      header: {}
-      footer: {}
-      empty: {}
-      relationships: {}
-      arguments: {}
-      display_extenders: {}
+      title: 'change log'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
-        - "languages:language_content"
-        - "languages:language_interface"
-        - "user.node_grants:view"
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
         - user.permissions
-      tags: {}
+      tags: {  }
   block_1:
     display_plugin: block
     id: block_1
     display_title: Block
     position: 1
     display_options:
-      display_extenders: {}
+      display_extenders: {  }
       block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
-        - "languages:language_content"
-        - "languages:language_interface"
-        - "user.node_grants:view"
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
         - user.permissions
-      tags: {}
+      tags: {  }

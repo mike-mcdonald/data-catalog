@@ -2,7 +2,7 @@ uuid: 010c3e4d-e8a7-4a18-9590-f527a33a1d37
 langcode: en
 status: true
 dependencies: {  }
-name: 'changelog type'
+name: 'Changelog type'
 vid: changelog_type
 description: ''
 weight: 0
