@@ -21,18 +21,18 @@ bundle: archival_information
 mode: default
 content:
   field_earliest_record_year:
+    type: number
     weight: 26
+    region: content
     settings:
       placeholder: XXXX
     third_party_settings: {  }
-    type: number
-    region: content
   field_latest_record_year:
+    type: number
     weight: 27
+    region: content
     settings:
       placeholder: XXXX
     third_party_settings: {  }
-    type: number
-    region: content
 hidden:
   info: true

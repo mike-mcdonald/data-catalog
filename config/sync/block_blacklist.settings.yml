@@ -1,8 +1,8 @@
+_core:
+  default_config_hash: S6rQarWvkmKD23_sdFs_HQdHZbyd6KX58eINnvUL9n4
 system_match: ''
 system_prefix: ''
 system_regex: '/block_content:(.*)/'
 layout_match: ''
 layout_prefix: ''
 layout_regex: ''
-_core:
-  default_config_hash: S6rQarWvkmKD23_sdFs_HQdHZbyd6KX58eINnvUL9n4

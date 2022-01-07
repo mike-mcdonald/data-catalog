@@ -31,114 +31,114 @@ third_party_settings:
             uuid: bab41ea9-f3fd-4af2-a06c-8cd3679b2178
             region: content
             configuration:
+              id: 'field_block:node:business_term:body'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:business_term:body'
               formatter:
-                label: hidden
                 type: text_default
+                label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            additional: {  }
             weight: -8
+            additional: {  }
           5b3df6bb-eff5-49a9-8117-b10dc6e570b8:
             uuid: 5b3df6bb-eff5-49a9-8117-b10dc6e570b8
             region: content
             configuration:
               id: 'field_block:node:business_term:field_keywords'
               label: Keywords
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: card
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_entity_view
+                label: inline
+                settings:
+                  view_mode: card
+                third_party_settings: {  }
             weight: -7
+            additional: {  }
           7d1cc1f4-751c-4754-96bd-32964e35f517:
             uuid: 7d1cc1f4-751c-4754-96bd-32964e35f517
             region: content
             configuration:
               id: 'field_block:node:business_term:field_subject_areas'
               label: 'Subject areas'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
             weight: -6
+            additional: {  }
           1a39d82d-dcef-44ee-b1ff-37368ff5eb7a:
             uuid: 1a39d82d-dcef-44ee-b1ff-37368ff5eb7a
             region: content
             configuration:
               id: 'field_block:node:business_term:field_data_custodian'
               label: 'Primary Contact '
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
             weight: -5
+            additional: {  }
           ee99d0f7-2e43-435f-9bbf-fe16c889e73c:
             uuid: ee99d0f7-2e43-435f-9bbf-fe16c889e73c
             region: content
             configuration:
               id: 'field_block:node:business_term:changed'
               label: Changed
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: inline
                 type: timestamp
+                label: inline
                 settings:
                   date_format: short
                   custom_date_format: ''
                   timezone: ''
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: -9
+            additional: {  }
           d54001e6-8a4e-4822-93a3-6a84c41f8e0b:
             uuid: d54001e6-8a4e-4822-93a3-6a84c41f8e0b
             region: content
             configuration:
               id: 'field_block:node:business_term:uid'
               label: 'Authored by'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: compact
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_entity_view
+                label: inline
+                settings:
+                  view_mode: compact
+                third_party_settings: {  }
             weight: -10
+            additional: {  }
         third_party_settings: {  }
 id: node.business_term.default
 targetEntityType: node
@@ -146,36 +146,36 @@ bundle: business_term
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_data_custodian:
     type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
     weight: 1
     region: content
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
   field_keywords:
-    weight: 2
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 2
     region: content
   field_subject_areas:
     type: entity_reference_label
-    weight: 3
-    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 3
+    region: content
 hidden:
   group_content: true
   links: true

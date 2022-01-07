@@ -34,69 +34,69 @@ third_party_settings:
             configuration:
               id: 'views_block:contact_content-block_1'
               label: ''
-              provider: views
               label_display: visible
+              provider: views
+              context_mapping: {  }
               views_label: ''
               items_per_page: none
-              context_mapping: {  }
-            additional: {  }
             weight: -7
+            additional: {  }
           c8cd60c3-bb26-4aa5-b11b-51f3da965336:
             uuid: c8cd60c3-bb26-4aa5-b11b-51f3da965336
             region: content
             configuration:
               id: 'field_block:node:contact_information:field_email_address'
               label: 'E-mail address'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: inline
-                type: email_mailto
-                settings: {  }
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: email_mailto
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
             weight: -9
+            additional: {  }
           3ae94c6c-a92c-4f26-ac6d-dba8151084d4:
             uuid: 3ae94c6c-a92c-4f26-ac6d-dba8151084d4
             region: content
             configuration:
               id: 'field_block:node:contact_information:field_telephone_number'
               label: 'Telephone number'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: inline
-                type: telephone_link
-                settings:
-                  title: ''
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: telephone_link
+                label: inline
+                settings:
+                  title: ''
+                third_party_settings: {  }
             weight: -8
+            additional: {  }
           51324643-e766-4014-9a09-cb72788c311b:
             uuid: 51324643-e766-4014-9a09-cb72788c311b
             region: content
             configuration:
               id: 'field_block:node:contact_information:uid'
               label: 'Authored by'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: compact
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_entity_view
+                label: inline
+                settings:
+                  view_mode: compact
+                third_party_settings: {  }
             weight: -10
+            additional: {  }
         third_party_settings: {  }
 id: node.contact_information.default
 targetEntityType: node
@@ -104,19 +104,19 @@ bundle: contact_information
 mode: default
 content:
   field_email_address:
-    weight: 0
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 0
     region: content
   field_telephone_number:
-    weight: 1
+    type: telephone_link
     label: above
     settings:
       title: ''
     third_party_settings: {  }
-    type: telephone_link
+    weight: 1
     region: content
 hidden:
   group_content: true

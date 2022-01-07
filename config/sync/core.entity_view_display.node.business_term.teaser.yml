@@ -27,33 +27,34 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           3f8e8e0b-e6fd-40f4-bbab-feeb2faefa52:
             uuid: 3f8e8e0b-e6fd-40f4-bbab-feeb2faefa52
             region: content
             configuration:
+              id: 'extra_field_block:node:business_term:links'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:business_term:links'
-            additional: {  }
             weight: 0
+            additional: {  }
           8e2e8152-0ce4-4a37-a27b-278d7193e924:
             uuid: 8e2e8152-0ce4-4a37-a27b-278d7193e924
             region: content
             configuration:
+              id: 'field_block:node:business_term:body'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:business_term:body'
               formatter:
-                label: hidden
                 type: text_summary_or_trimmed
+                label: hidden
                 settings:
                   trim_length: 600
                 third_party_settings: {  }
-            additional: {  }
             weight: 1
+            additional: {  }
         third_party_settings: {  }
 id: node.business_term.teaser
 targetEntityType: node
@@ -61,18 +62,18 @@ bundle: business_term
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 101
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_data_custodian: true
   field_keywords: true

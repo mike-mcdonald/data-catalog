@@ -37,8 +37,8 @@ dependencies:
     - rain
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
@@ -51,19 +51,19 @@ third_party_settings:
             configuration:
               id: 'field_block:node:performance_measure:type'
               label: 'Content type'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_label
-                settings:
-                  link: false
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_twocol_flex
@@ -76,38 +76,38 @@ third_party_settings:
             configuration:
               id: 'field_block:node:performance_measure:title'
               label: 'Measure Name'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: string
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
           175f87a2-3a32-4ddf-a475-fda590f5eaa4:
             uuid: 175f87a2-3a32-4ddf-a475-fda590f5eaa4
             region: second
             configuration:
               id: 'field_block:node:performance_measure:field_status'
               label: Status
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: card
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_entity_view
+                label: visually_hidden
+                settings:
+                  view_mode: card
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -120,70 +120,73 @@ third_party_settings:
             configuration:
               id: 'field_block:node:performance_measure:field_category'
               label: 'Performance Metric Purpose'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
             weight: -8
+            additional: {  }
           c5f9a42d-bf99-4806-9d11-06a7305e5393:
             uuid: c5f9a42d-bf99-4806-9d11-06a7305e5393
             region: content
             configuration:
               id: 'field_block:node:performance_measure:field_keywords'
               label: Keywords
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: card
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_entity_view
+                label: visually_hidden
+                settings:
+                  view_mode: card
+                third_party_settings: {  }
             weight: -7
+            additional: {  }
           8aeea7a5-ba56-474f-94c8-5e5ee2cf2ac1:
             uuid: 8aeea7a5-ba56-474f-94c8-5e5ee2cf2ac1
             region: content
             configuration:
               id: 'field_block:node:performance_measure:changed'
               label: Updated
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: inline
                 type: timestamp
+                label: inline
                 settings:
                   date_format: short
                   custom_date_format: ''
                   timezone: ''
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: -10
+            additional: {  }
           1e740314-5031-41b6-80dc-3517b7aba6a0:
             uuid: 1e740314-5031-41b6-80dc-3517b7aba6a0
             region: content
             configuration:
               id: 'field_block:node:performance_measure:body'
               label: Description
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: visually_hidden
                 type: smart_trim
+                label: visually_hidden
                 settings:
                   trim_length: 300
                   trim_type: chars
@@ -191,18 +194,15 @@ third_party_settings:
                   wrap_output: false
                   wrap_class: trimmed
                   more_link: false
-                  more_text: More
                   more_class: more-link
+                  more_text: More
                   summary_handler: trim
                   trim_options:
                     text: true
                     trim_zero: false
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: -9
+            additional: {  }
         third_party_settings: {  }
 id: node.performance_measure.card
 targetEntityType: node
@@ -210,23 +210,23 @@ bundle: performance_measure
 mode: card
 content:
   content_moderation_control:
-    weight: -20
     settings: {  }
     third_party_settings: {  }
+    weight: -20
     region: content
   field_audience:
     type: entity_reference_label
-    weight: 2
-    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
-  links:
-    weight: 0
+    weight: 2
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   body: true
   field_category: true

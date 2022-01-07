@@ -38,58 +38,58 @@ mode: teaser
 content:
   field_authority_level:
     type: entity_reference_entity_view
-    weight: 5
-    region: content
     label: visually_hidden
     settings:
-      link: true
       view_mode: default
+      link: true
     third_party_settings: {  }
+    weight: 5
+    region: content
   field_data_custodian:
     type: entity_reference_entity_view
-    weight: 2
-    region: content
     label: above
     settings:
       view_mode: teaser
       link: false
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_data_group:
     type: cshs_full_hierarchy
-    weight: 1
-    region: content
     label: visually_hidden
     settings:
       linked: '1'
       separator: ' / '
       reverse: 0
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_keywords:
     type: entity_reference_entity_view
-    weight: 3
-    region: content
     label: visually_hidden
     settings:
       view_mode: button
       link: false
     third_party_settings: {  }
+    weight: 3
+    region: content
   field_purpose:
     type: basic_string
-    weight: 0
-    region: content
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_subject_areas:
     type: cshs_full_hierarchy
-    weight: 4
-    region: content
     label: visually_hidden
     settings:
       linked: '1'
       separator: ' / '
       reverse: 0
     third_party_settings: {  }
+    weight: 4
+    region: content
 hidden:
   body: true
   field_accessibility_level: true

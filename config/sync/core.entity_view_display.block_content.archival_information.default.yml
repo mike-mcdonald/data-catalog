@@ -17,6 +17,7 @@ third_party_settings:
     settings: {  }
   layout_builder:
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
@@ -29,19 +30,19 @@ third_party_settings:
             configuration:
               id: 'field_block:block_content:archival_information:type'
               label: 'Block type'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_label
-                settings:
-                  link: false
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_twocol_flex
@@ -54,64 +55,63 @@ third_party_settings:
             configuration:
               id: 'field_block:block_content:archival_information:field_earliest_record_year'
               label: 'Earliest record year'
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: above
                 type: number_integer
+                label: above
                 settings:
                   thousand_separator: ''
                   prefix_suffix: false
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
+            additional: {  }
           9f30120c-eb39-4858-8ce4-d8923179f979:
             uuid: 9f30120c-eb39-4858-8ce4-d8923179f979
             region: second
             configuration:
               id: 'field_block:block_content:archival_information:field_latest_record_year'
               label: 'Latest record year'
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: above
                 type: number_integer
+                label: above
                 settings:
                   thousand_separator: ''
                   prefix_suffix: false
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
-    allow_custom: false
 id: block_content.archival_information.default
 targetEntityType: block_content
 bundle: archival_information
 mode: default
 content:
   field_earliest_record_year:
-    weight: 0
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 0
     region: content
   field_latest_record_year:
-    weight: 1
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

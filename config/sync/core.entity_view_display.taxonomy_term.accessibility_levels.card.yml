@@ -27,17 +27,17 @@ third_party_settings:
             uuid: 078befc3-eadf-49fc-96bd-a554c0801924
             region: content
             configuration:
+              id: 'field_block:taxonomy_term:accessibility_levels:field_accessibility_value'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:taxonomy_term:accessibility_levels:field_accessibility_value'
               formatter:
+                type: list_default
                 label: visually_hidden
                 settings: {  }
                 third_party_settings: {  }
-                type: list_default
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: taxonomy_term.accessibility_levels.card
 targetEntityType: taxonomy_term
@@ -45,11 +45,11 @@ bundle: accessibility_levels
 mode: card
 content:
   field_accessibility_value:
-    weight: 0
+    type: list_default
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 0
     region: content
 hidden:
   description: true

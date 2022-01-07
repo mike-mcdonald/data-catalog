@@ -15,13 +15,13 @@ bundle: logo
 mode: default
 content:
   field_media_image:
-    label: visually_hidden
-    weight: 0
-    settings:
-      image_style: thumbnail
-      image_link: ''
-    third_party_settings: {  }
     type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   created: true

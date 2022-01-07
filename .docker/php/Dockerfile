@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:8-fpm
 
 ARG INSTALL_XDEBUG="false"
 ARG INSTALL_COMPOSER="true"

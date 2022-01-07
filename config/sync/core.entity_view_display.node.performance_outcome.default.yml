@@ -21,14 +21,14 @@ bundle: performance_outcome
 mode: default
 content:
   body:
-    weight: 7
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 7
     region: content
   field_actual:
-    weight: 6
+    type: number_decimal
     label: inline
     settings:
       thousand_separator: ''
@@ -36,10 +36,10 @@ content:
       scale: 6
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_decimal
+    weight: 6
     region: content
   field_estimate:
-    weight: 5
+    type: number_decimal
     label: inline
     settings:
       thousand_separator: ''
@@ -47,47 +47,47 @@ content:
       scale: 6
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_decimal
+    weight: 5
     region: content
   field_performance_measure:
-    weight: 1
+    type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 1
     region: content
   field_reporting_month:
-    weight: 4
+    type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 4
     region: content
   field_reporting_period:
-    weight: 2
+    type: cshs_full_hierarchy
     label: inline
     settings:
       separator: ' - '
       linked: 0
       reverse: 0
     third_party_settings: {  }
-    type: cshs_full_hierarchy
+    weight: 2
     region: content
   field_reporting_quarter:
-    weight: 3
+    type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   group_content: true
   search_api_excerpt: true

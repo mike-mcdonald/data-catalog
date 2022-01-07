@@ -1,8 +1,8 @@
+_core:
+  default_config_hash: WjzGZxnJGXoIaHx9RH7X41ipxchz0ww43r8Bz5qwjR8
 enabled: true
 settings:
-  redirect_url: ''
   authorization_endpoint: 'https://login.microsoftonline.com/common/oauth2/authorize'
   token_endpoint: 'https://login.microsoftonline.com/common/oauth2/token'
   userinfo_endpoint: 'https://graph.windows.net/me?api-version=1.6'
-_core:
-  default_config_hash: WjzGZxnJGXoIaHx9RH7X41ipxchz0ww43r8Bz5qwjR8
+  redirect_url: ''

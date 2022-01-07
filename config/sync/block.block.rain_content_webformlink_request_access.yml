@@ -17,8 +17,8 @@ plugin: webform_link_block
 settings:
   id: webform_link_block
   label: 'Request access link'
-  provider: portland
   label_display: '0'
+  provider: portland
   webform_id: request_access
   prefix_message: 'If you are unable to log in using the button above,'
   webform_message: 'click here to request access to the site'
@@ -26,13 +26,13 @@ settings:
 visibility:
   user_role:
     id: user_role
-    roles:
-      anonymous: anonymous
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
   request_path:
     id: request_path
-    pages: /form/request-access
     negate: true
     context_mapping: {  }
+    pages: /form/request-access

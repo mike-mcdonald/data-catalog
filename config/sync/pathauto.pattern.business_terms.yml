@@ -11,12 +11,12 @@ pattern: 'term/[node:title]'
 selection_criteria:
   eab8aba4-0201-4a19-ba55-241dbf07e1e6:
     id: node_type
-    bundles:
-      business_term: business_term
     negate: false
+    uuid: eab8aba4-0201-4a19-ba55-241dbf07e1e6
     context_mapping:
       node: node
-    uuid: eab8aba4-0201-4a19-ba55-241dbf07e1e6
+    bundles:
+      business_term: business_term
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -21,11 +21,11 @@ bundle: reporting_period
 mode: default
 content:
   field_date_range:
+    type: daterange_default
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: daterange_default
-    region: content
   name:
     type: string_textfield
     weight: 0
@@ -36,10 +36,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 2
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   description: true

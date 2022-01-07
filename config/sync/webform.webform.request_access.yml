@@ -2,9 +2,9 @@ uuid: 70fbee30-5899-4b77-8af0-5d1b436d4a54
 langcode: en
 status: open
 dependencies: {  }
+weight: 0
 open: null
 close: null
-weight: 0
 uid: 1
 template: false
 archive: false
@@ -12,7 +12,25 @@ id: request_access
 title: 'Request access'
 description: 'Form for forwarding access requests to the site generally.'
 category: ''
-elements: "information_message:\n  '#type': webform_message\n  '#message_type': info\n  '#message_message': 'If you are unable to log in, use this form to send a request to have a user account created for you.'\nemail:\n  '#type': email\n  '#title': 'E-mail address'\n  '#required': true\nname:\n  '#type': webform_name\n  '#title': 'Full name'\n  '#description': 'If you&#39;d like an account set up with a preferred name, provide one here.'\n  '#title_display': before\n  '#description_display': before\n  '#title__access': false\n  '#middle__access': false\n  '#suffix__access': false\n  '#degree__access': false"
+elements: |-
+  information_message:
+    '#type': webform_message
+    '#message_type': info
+    '#message_message': 'If you are unable to log in, use this form to send a request to have a user account created for you.'
+  email:
+    '#type': email
+    '#title': 'E-mail address'
+    '#required': true
+  name:
+    '#type': webform_name
+    '#title': 'Full name'
+    '#description': 'If you&#39;d like an account set up with a preferred name, provide one here.'
+    '#title_display': before
+    '#description_display': before
+    '#title__access': false
+    '#middle__access': false
+    '#suffix__access': false
+    '#degree__access': false
 css: ''
 javascript: ''
 settings:
@@ -27,28 +45,27 @@ settings:
   page_theme_name: ''
   form_title: both
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
@@ -60,7 +77,12 @@ settings:
   share_title: true
   share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -69,11 +91,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: 'You have already requested access.'
   previous_submissions_message: 'You have already requested access.'
   autofill: false
@@ -84,13 +101,13 @@ settings:
   wizard_progress_percentage: false
   wizard_progress_link: false
   wizard_progress_states: false
-  wizard_auto_forward: true
-  wizard_auto_forward_hide_next_button: false
-  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
@@ -113,9 +130,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: inline
+  confirmation_url: ''
   confirmation_title: ''
   confirmation_message: 'Your request for access has been submitted. Once your account has been created you will receive an email notification to the address you provided.'
-  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -144,6 +161,7 @@ settings:
   token_update: false
   token_delete: false
   serial_disabled: false
+  form_remote_addr: true
 access:
   create:
     roles:
@@ -194,9 +212,9 @@ access:
 handlers:
   email:
     id: email
+    handler_id: email
     label: E-mail
     notes: ''
-    handler_id: email
     status: true
     conditions: {  }
     weight: 0
@@ -205,13 +223,17 @@ handlers:
         - completed
       to_mail: '[webform_role:user_admin]'
       to_options: {  }
-      cc_mail: '[webform_role:administrator]'
-      cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
+      cc_mail: '[webform_role:administrator]'
+      cc_options: {  }
       from_mail: '[site:mail]'
       from_options: {  }
       from_name: _default
+      reply_to: '[webform_submission:values:email:raw]'
+      return_path: ''
+      sender_mail: '[webform_submission:values:email:raw]'
+      sender_name: '[webform_submission:values:name:value]'
       subject: 'Request for Data Catalog access'
       body: "<h1>New request to access PBOT's Data Catalog</h1>\r\n<p class=\"text-xl leading-normal\">You are receiving this e-mail because you have permissions to add users to <a href=\"{{ webform_token('[site:url]', webform_submission) }}\">PBOT's Data Catalog</a></p>\r\n<p>Submitted on {{ webform_token('[webform_submission:created:short]', webform_submission) }}</p>\r\n{{ webform_token('[webform_submission:values]', webform_submission) }}\r\n<p>Use the link below to manage users. Before adding this request as a new user account, use the search form on the management page to make sure they do not already have a user account.</p>\r\n<p><a href=\"{{ webform_token('[site:url]admin/people', webform_submission) }}\">Click here to manage users</a></p>\r\n"
       excluded_elements: {  }
@@ -222,11 +244,7 @@ handlers:
       html: true
       attachments: false
       twig: true
-      debug: false
-      reply_to: '[webform_submission:values:email:raw]'
-      return_path: ''
-      sender_mail: '[webform_submission:values:email:raw]'
-      sender_name: '[webform_submission:values:name:value]'
       theme_name: ''
       parameters: {  }
+      debug: false
 variants: {  }
