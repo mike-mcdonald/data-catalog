@@ -898,6 +898,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ID
           exclude: false
           alter:
@@ -954,9 +957,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -2344,6 +2344,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Measure ID'
           exclude: false
           alter:
@@ -2400,9 +2403,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -3293,6 +3293,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Supporting datasets'
           exclude: false
           alter:
@@ -3348,7 +3349,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_category:
           id: field_category
           table: node__field_category
@@ -4347,6 +4347,7 @@ display:
   data_export_3:
     id: data_export_3
     display_title: 'Measure data export'
+    display_plugin: null
     position: 5
     display_options:
       fields:
@@ -5507,7 +5508,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: display_link
-          label: 'Export outcomes'
+          label: 'Export measure data'
           empty: false
           display_id: data_export_3
       display_extenders: {  }

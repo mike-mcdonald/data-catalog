@@ -3,8 +3,14 @@ _core:
 always_save_userinfo: true
 connect_existing_users: true
 override_registration_settings: false
+end_session_enabled: false
+user_login_display: replace
+redirect_login: user
+redirect_logout: ''
 userinfo_mappings:
   timezone: zoneinfo
-  group_content: '0'
-  path: '0'
   user_picture: picture
+role_mappings:
+  content_admin: {  }
+  user_admin: {  }
+  administrator: {  }

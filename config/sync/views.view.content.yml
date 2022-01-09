@@ -2126,6 +2126,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Measure ID'
           exclude: false
           alter:
@@ -2182,9 +2185,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -3012,6 +3012,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Supporting datasets'
           exclude: false
           alter:
@@ -3067,7 +3068,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_data_reliability:
           id: field_data_reliability
           table: node__field_data_reliability
@@ -4143,6 +4143,7 @@ display:
   data_export_5:
     id: data_export_5
     display_title: 'Measure data export'
+    display_plugin: null
     position: 5
     display_options:
       fields:
@@ -4998,9 +4999,9 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: display_link
+          label: 'Export measure data'
           empty: false
           display_id: data_export_5
-          label: 'Export measure data'
     cache_metadata:
       max-age: 0
       contexts:

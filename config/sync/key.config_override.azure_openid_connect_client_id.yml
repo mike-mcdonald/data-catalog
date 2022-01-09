@@ -1,0 +1,14 @@
+uuid: 724e6680-a761-4df9-b558-0b4aca7ef512
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.azure_client_id
+    - openid_connect.client.azure
+id: azure_openid_connect_client_id
+label: 'Azure OpenID Connect client id'
+config_type: openid_connect_client
+config_prefix: openid_connect.client
+config_name: azure
+config_item: settings.client_id
+key_id: azure_client_id

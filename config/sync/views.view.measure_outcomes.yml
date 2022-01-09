@@ -26,6 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
+      title: 'Measure data'
       fields:
         field_reporting_period:
           id: field_reporting_period
@@ -292,9 +293,6 @@ display:
             label: ''
           granularity: day
           plugin_id: datetime
-      title: 'Measure data'
-      header: {  }
-      footer: {  }
       empty:
         area:
           id: area
@@ -429,6 +427,8 @@ display:
           plugin_id: standard
           required: false
       use_ajax: true
+      header: {  }
+      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
