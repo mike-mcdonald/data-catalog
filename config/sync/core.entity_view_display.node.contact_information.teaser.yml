@@ -21,6 +21,7 @@ third_party_settings:
     settings: {  }
   layout_builder:
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
@@ -33,58 +34,57 @@ third_party_settings:
             configuration:
               id: 'field_block:node:contact_information:field_email_address'
               label: 'E-mail address'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: email_mailto
-                settings: {  }
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: email_mailto
+                label: visually_hidden
+                settings: {  }
+                third_party_settings: {  }
             weight: -9
+            additional: {  }
           b0c21c2c-a0ce-4c0b-a2e1-be58e3465f76:
             uuid: b0c21c2c-a0ce-4c0b-a2e1-be58e3465f76
             region: content
             configuration:
               id: 'field_block:node:contact_information:field_telephone_number'
               label: 'Telephone number'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: telephone_link
-                settings:
-                  title: ''
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: telephone_link
+                label: visually_hidden
+                settings:
+                  title: ''
+                third_party_settings: {  }
             weight: -8
+            additional: {  }
           0029ab44-080d-4077-bae9-c9d20c56e0f6:
             uuid: 0029ab44-080d-4077-bae9-c9d20c56e0f6
             region: content
             configuration:
               id: 'field_block:node:contact_information:title'
               label: Name
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: inline
-                type: string
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
             weight: -10
+            additional: {  }
         third_party_settings: {  }
-    allow_custom: false
 id: node.contact_information.teaser
 targetEntityType: node
 bundle: contact_information
@@ -92,19 +92,19 @@ mode: teaser
 content:
   field_email_address:
     type: email_mailto
-    weight: 0
-    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_telephone_number:
     type: telephone_link
-    weight: 1
-    region: content
     label: above
     settings:
       title: ''
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   group_content: true
   links: true

@@ -21,17 +21,17 @@ bundle: liveness_information
 mode: default
 content:
   field_earliest_record_year:
+    type: number
     weight: 26
+    region: content
     settings:
       placeholder: XXXX
     third_party_settings: {  }
-    type: number
-    region: content
   field_frequency_update:
+    type: options_select
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
 hidden:
   info: true

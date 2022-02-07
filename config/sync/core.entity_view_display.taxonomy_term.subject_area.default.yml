@@ -26,17 +26,17 @@ third_party_settings:
             uuid: 6f1e341f-25da-4b25-af8b-668cbf45901c
             region: content
             configuration:
+              id: 'field_block:taxonomy_term:subject_area:description'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:taxonomy_term:subject_area:description'
               formatter:
-                label: hidden
                 type: text_default
+                label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: taxonomy_term.subject_area.default
 targetEntityType: taxonomy_term
@@ -44,11 +44,11 @@ bundle: subject_area
 mode: default
 content:
   description:
-    label: hidden
     type: text_default
-    weight: 0
-    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   search_api_excerpt: true

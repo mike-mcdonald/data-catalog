@@ -96,18 +96,19 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   hierarchy:
+    weights:
+      preprocess_index: -45
     fields:
       dataset_data_group: taxonomy_term-parent
       dataset_source: taxonomy_term-parent
       field_subject_areas: taxonomy_term-parent
-    weights:
-      preprocess_index: -45
   language_with_fallback: {  }
   rendered_item: {  }
 tracker_settings:
   default:
     indexing_order: fifo
 options:
-  index_directly: true
   cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
 server: database

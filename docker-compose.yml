@@ -26,15 +26,6 @@ services:
       - code-network
       - db-network
 
-  mail:
-    image: mailhog/mailhog
-    ports:
-      - "1025:1025"
-      - "8025:8025"
-    restart: always
-    networks:
-      - mail-network
-
   redis:
     image: redis
     networks:
@@ -73,7 +64,7 @@ services:
       AZURE_CLIENT_SECRET: ${AZURE_CLIENT_SECRET}
       SENDGRID_API_KEY: ${SENDGRID_API_KEY}
     volumes:
-      - ".:/var/www/html:cached"
+      - ".:/var/www/html"
     networks:
       - code-network
       - cache-network

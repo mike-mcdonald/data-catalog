@@ -1,0 +1,24 @@
+uuid: 0899117b-92c1-410c-a63f-4590f26f1384
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_effective_date
+    - node.type.changelog
+  module:
+    - datetime
+id: node.changelog.field_effective_date
+field_name: field_effective_date
+entity_type: node
+bundle: changelog
+label: 'Effective Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

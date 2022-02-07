@@ -23,17 +23,18 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           12c9816e-7e12-495a-a25f-b1c74e3c792a:
             uuid: 12c9816e-7e12-495a-a25f-b1c74e3c792a
             region: content
             configuration:
+              id: 'extra_field_block:node:database:links'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:database:links'
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: node.database.teaser
 targetEntityType: node
@@ -41,10 +42,10 @@ bundle: database
 mode: teaser
 content:
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_server: true
   group_content: true

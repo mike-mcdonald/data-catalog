@@ -15,7 +15,7 @@ plugin: internet_explorer_warning_block
 settings:
   id: internet_explorer_warning_block
   label: 'Internet Explorer warning'
-  provider: portland
   label_display: '0'
+  provider: portland
   display_message: 'You are using an unsupported browser, features of this site will not function. Please use a different browser.'
 visibility: {  }

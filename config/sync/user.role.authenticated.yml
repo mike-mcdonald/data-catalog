@@ -1,55 +1,55 @@
 uuid: f7446b45-433d-489f-8e53-f1ab5d15ccf4
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
-label: "Authenticated user"
+label: 'Authenticated user'
 weight: -9
 is_admin: false
 permissions:
-  - "access administration pages"
-  - "access contact_browser entity browser pages"
-  - "access content"
-  - "access environment indicator"
-  - "access taxonomy overview"
-  - "access user profiles"
-  - "administer blocks"
-  - "change own username"
-  - "create access_point content"
-  - "create archival_information block content"
-  - "create contact_information content"
-  - "create dataset content"
-  - "create liveness_information block content"
-  - "create performance_measure content"
-  - "create performance_outcome content"
-  - "create terms in database"
-  - "create terms in file_type"
-  - "create terms in keywords"
-  - "delete any archival_information block content"
-  - "delete any liveness_information block content"
-  - "delete own access_point content"
-  - "delete own contact_information content"
-  - "delete own dataset content"
-  - "edit own access_point content"
-  - "edit own contact_information content"
-  - "edit own dataset content"
-  - "edit own performance_measure content"
-  - "edit own performance_outcome content"
-  - "update any archival_information block content"
-  - "update any liveness_information block content"
-  - "use editorial transition create_new_draft"
-  - "use editorial transition publish"
-  - "use text format basic_html"
-  - "use text format restricted_html"
-  - "view access_point revisions"
-  - "view any unpublished content"
-  - "view contact_information revisions"
-  - "view dataset revisions"
-  - "view latest version"
-  - "view media"
-  - "view own unpublished content"
-  - "view performance_measure revisions"
-  - "view performance_outcome revisions"
-  - "view the administration theme"
+  - 'access administration pages'
+  - 'access contact_browser entity browser pages'
+  - 'access content'
+  - 'access environment indicator'
+  - 'access taxonomy overview'
+  - 'access user profiles'
+  - 'administer blocks'
+  - 'change own username'
+  - 'create access_point content'
+  - 'create archival_information block content'
+  - 'create contact_information content'
+  - 'create dataset content'
+  - 'create liveness_information block content'
+  - 'create performance_measure content'
+  - 'create performance_outcome content'
+  - 'create terms in database'
+  - 'create terms in file_type'
+  - 'create terms in keywords'
+  - 'delete any archival_information block content'
+  - 'delete any liveness_information block content'
+  - 'delete own access_point content'
+  - 'delete own contact_information content'
+  - 'delete own dataset content'
+  - 'edit own access_point content'
+  - 'edit own contact_information content'
+  - 'edit own dataset content'
+  - 'edit own performance_measure content'
+  - 'edit own performance_outcome content'
+  - 'update any archival_information block content'
+  - 'update any liveness_information block content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
+  - 'view access_point revisions'
+  - 'view any unpublished content'
+  - 'view contact_information revisions'
+  - 'view dataset revisions'
+  - 'view latest version'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view performance_measure revisions'
+  - 'view performance_outcome revisions'
+  - 'view the administration theme'

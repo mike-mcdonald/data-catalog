@@ -18,12 +18,12 @@ plugin: 'facet_block:full_division_group'
 settings:
   id: 'facet_block:full_division_group'
   label: 'Filter by division/group'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: fulldivisiongroup
 visibility:
   request_path:
     id: request_path
-    pages: /search
     negate: false
     context_mapping: {  }
+    pages: /search

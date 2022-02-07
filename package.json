@@ -1,0 +1,21 @@
+{
+  "name": "data-catalog",
+  "version": "2.1.4",
+  "description": "Catalog of datasets for Portland Bureau of Transportation",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mike-mcdonald/data-catalog.git"
+  },
+  "author": "Mike McDonald <michael.mcdonald@portlandoregon.gov>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mike-mcdonald/data-catalog/issues"
+  },
+  "homepage": "https://github.com/mike-mcdonald/data-catalog#readme",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.17.6"
+  }
+}
