@@ -152,7 +152,7 @@ class Azure extends OpenIDConnectClientBase {
 
     $url_options = [
       'query' => [
-        'client_id' => $this->secretsReader->get('azure_client_id'),
+        'client_id' => $this->configuration['client_id'],
         'response_type' => 'code',
         'scope' => $scope,
         'redirect_uri' => $redirect_uri->getGeneratedUrl(),
@@ -194,8 +194,8 @@ class Azure extends OpenIDConnectClientBase {
     $request_options = [
       'form_params' => [
         'code' => $authorization_code,
-        'client_id' => $this->secretsReader->get('azure_client_id'),
-        'client_secret' => $this->secretsReader->get('azure_client_secret'),
+        'client_id' => $this->configuration['client_id'],
+        'client_secret' => $this->configuration['client_secret'],
         'redirect_uri' => $redirect_uri,
         'grant_type' => 'authorization_code',
         'resource' => 'https://graph.windows.net', // to access user profile
