@@ -122,11 +122,11 @@ class Azure extends OpenIDConnectClientBase
 
     if (isset($userinfo)) {
       // convert properties
-      $userinfo["email"] = $userinfo[$primary_email_property];
+      $userinfo["email"] = $userinfo['mail'];
 
       if (!isset($userinfo["email"])) {
         // Write watchdog warning.
-        $variables = ["@user" => $userinfo[$backup_mail_property]];
+        $variables = ["@user" => $userinfo['userPrincipalName']];
 
         $this->loggerFactory
           ->get("portland")
@@ -135,13 +135,13 @@ class Azure extends OpenIDConnectClientBase
             $variables
           );
 
-        $userinfo["email"] = $userinfo[$backup_mail_property];
+        $userinfo["email"] = $userinfo['userPrincipalName'];
       }
 
       // create username from the email address
       $userinfo["name"] = implode(" ", [
-        $userinfo[$first_name_property],
-        $userinfo[$last_name_property],
+        $userinfo['givenName'],
+        $userinfo['surname'],
       ]);
     }
 
