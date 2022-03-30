@@ -23,6 +23,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           5c46b5a7-1c12-4f8c-9008-55fa6b4e5224:
             uuid: 5c46b5a7-1c12-4f8c-9008-55fa6b4e5224
@@ -48,6 +49,7 @@ third_party_settings:
         layout_id: layout_twocol_flex
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           4151be50-4991-4ae5-9a83-af97c3afc4de:
             uuid: 4151be50-4991-4ae5-9a83-af97c3afc4de

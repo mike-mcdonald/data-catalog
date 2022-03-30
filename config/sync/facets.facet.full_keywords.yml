@@ -19,6 +19,9 @@ hard_limit: 0
 exclude: false
 use_hierarchy: false
 keep_hierarchy_parents_active: false
+hierarchy:
+  type: taxonomy
+  config: {  }
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 widget:
@@ -28,7 +31,8 @@ widget:
     width: 100%
     autocomplete: false
     match_operator: CONTAINS
-empty_behavior: null
+empty_behavior:
+  behavior: none
 only_visible_when_facet_source_is_visible: true
 show_only_one_result: false
 show_title: false

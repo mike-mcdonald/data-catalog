@@ -39,6 +39,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           cadbd31c-396e-462d-94b2-8af779e4f976:
             uuid: cadbd31c-396e-462d-94b2-8af779e4f976

@@ -7,12 +7,12 @@ dependencies:
 id: changelog
 label: Changelog
 type: 'canonical_entities:node'
-pattern: '/changelog/[node:field_effective_date]'
+pattern: '/changelog/[node:title]'
 selection_criteria:
-  e775eff2-446b-4391-8bc8-4609944faf81:
+  4ca83df7-310c-4e48-9c1b-d5c4eada56ab:
     id: node_type
     negate: false
-    uuid: e775eff2-446b-4391-8bc8-4609944faf81
+    uuid: 4ca83df7-310c-4e48-9c1b-d5c4eada56ab
     context_mapping:
       node: node
     bundles:

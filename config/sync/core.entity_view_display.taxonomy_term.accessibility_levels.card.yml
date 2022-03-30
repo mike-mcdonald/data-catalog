@@ -10,6 +10,8 @@ dependencies:
     - field_layout
     - layout_builder
     - options
+  theme:
+    - rain
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -22,6 +24,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           078befc3-eadf-49fc-96bd-a554c0801924:
             uuid: 078befc3-eadf-49fc-96bd-a554c0801924

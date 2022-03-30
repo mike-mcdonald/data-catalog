@@ -44,6 +44,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           09357d93-538e-4ae5-92b8-9e3df624e5fd:
             uuid: 09357d93-538e-4ae5-92b8-9e3df624e5fd
@@ -69,6 +70,7 @@ third_party_settings:
         layout_id: layout_twocol_flex
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           d4b2f9ce-f7ac-4264-875c-bb573868458e:
             uuid: d4b2f9ce-f7ac-4264-875c-bb573868458e
@@ -113,6 +115,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           08b89231-5ccf-490f-8f76-b6d33d3ab237:
             uuid: 08b89231-5ccf-490f-8f76-b6d33d3ab237

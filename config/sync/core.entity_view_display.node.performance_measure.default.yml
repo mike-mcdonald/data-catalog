@@ -30,9 +30,9 @@ dependencies:
     - node.type.performance_measure
     - views.view.measure_outcomes
   module:
+    - formblock
     - layout_builder
     - link
-    - node
     - text
     - user
     - views
@@ -47,6 +47,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           56585286-57c9-4e71-9058-e62532c3ac31:
             uuid: 56585286-57c9-4e71-9058-e62532c3ac31
@@ -472,7 +473,7 @@ third_party_settings:
             region: content
             configuration:
               id: formblock_node
-              label: 'Add new measure data'
+              label: 'Add new data'
               label_display: visible
               provider: node
               context_mapping: {  }
@@ -485,7 +486,7 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:performance_measure:field_data_type'
-              label: 'Outcome value data type'
+              label: 'Data value type'
               label_display: '0'
               provider: layout_builder
               context_mapping:

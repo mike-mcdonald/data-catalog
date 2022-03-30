@@ -24,6 +24,7 @@ third_party_settings:
         layout_id: layout_twocol_flex
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           27d080a8-a633-47de-83b8-86113b987ada:
             uuid: 27d080a8-a633-47de-83b8-86113b987ada

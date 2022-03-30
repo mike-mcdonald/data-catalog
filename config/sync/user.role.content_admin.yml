@@ -1,7 +1,41 @@
 uuid: 0f619ee3-3302-4445-803b-1eb269971f4b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - taxonomy.vocabulary.accessibility_levels
+    - taxonomy.vocabulary.audience
+    - taxonomy.vocabulary.authority_levels
+    - taxonomy.vocabulary.data_group_levels
+    - taxonomy.vocabulary.data_owners
+    - taxonomy.vocabulary.data_type
+    - taxonomy.vocabulary.database
+    - taxonomy.vocabulary.demographic_information
+    - taxonomy.vocabulary.file_type
+    - taxonomy.vocabulary.frequency
+    - taxonomy.vocabulary.information_security_levels
+    - taxonomy.vocabulary.keywords
+    - taxonomy.vocabulary.operating_system
+    - taxonomy.vocabulary.performance_measure_level
+    - taxonomy.vocabulary.performance_measure_type
+    - taxonomy.vocabulary.performance_metric_purpose
+    - taxonomy.vocabulary.program_area
+    - taxonomy.vocabulary.quality
+    - taxonomy.vocabulary.reporting_month
+    - taxonomy.vocabulary.reporting_period
+    - taxonomy.vocabulary.reporting_quarter
+    - taxonomy.vocabulary.spatial_information
+    - taxonomy.vocabulary.status
+    - taxonomy.vocabulary.strategic_plan
+    - taxonomy.vocabulary.strategic_year
+    - taxonomy.vocabulary.subject_area
+    - workflows.workflow.editorial
+  module:
+    - block_content_permissions
+    - content_moderation
+    - node
+    - taxonomy
+    - toolbar
 id: content_admin
 label: 'Content admin'
 weight: -7

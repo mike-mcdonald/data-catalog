@@ -1,7 +1,10 @@
 uuid: d29dd44f-2acd-486f-ab44-aa4bd43a4a11
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - group
+    - toolbar
 id: user_admin
 label: 'User admin'
 weight: -6
