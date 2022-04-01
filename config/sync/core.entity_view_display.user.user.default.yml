@@ -88,25 +88,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
-          69ef0893-ab28-4d00-9888-f22cd8d0a2cf:
-            uuid: 69ef0893-ab28-4d00-9888-f22cd8d0a2cf
-            region: second
-            configuration:
-              id: 'field_block:user:user:group_content'
-              label: 'Group memberships'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: '@user.current_user_context:current_user'
-                view_mode: view_mode
-              formatter:
-                type: parent_group_label_formatter
-                label: above
-                settings:
-                  link: 0
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
