@@ -9,10 +9,10 @@ dependencies:
     - gnode
     - node
 id: group_content_type_b4cbdbdf5a73d
-label: "Group: Add Performance measure data"
-description: "Add new data that should be attached to a performance measure"
+label: 'Group: Add Performance measure data'
+description: 'Add new data that should be attached to a performance measure'
 group_type: group
-content_plugin: "group_node:performance_outcome"
+content_plugin: 'group_node:performance_outcome'
 plugin_config:
   group_cardinality: 0
   entity_cardinality: 1
