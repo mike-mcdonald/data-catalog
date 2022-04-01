@@ -38,6 +38,8 @@
     "drupal/facets": "^2.0",
     "drupal/field_group": "^3.2",
     "drupal/formblock": "^2.0@beta",
+    "drupal/gin": "^3.0@beta",
+    "drupal/gin_toolbar": "^1.0@beta",
     "drupal/group": "^1.0@RC",
     "drupal/honeypot": "^2.0",
     "drupal/inline_entity_form": "^1.0@RC",
