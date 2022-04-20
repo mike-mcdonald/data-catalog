@@ -1,0 +1,31 @@
+uuid: 8cb3d8f0-551b-413c-a34f-b5abe2269058
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser
+  module:
+    - views
+name: strategic_plan_outcome
+label: 'Strategic plan outcome browser'
+display: modal
+display_configuration:
+  width: ''
+  height: '500'
+  link_text: 'Select strategic plan outcome(s)'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  035152a0-ed32-4023-909b-26c43da65441:
+    id: view
+    uuid: 035152a0-ed32-4023-909b-26c43da65441
+    label: Find
+    weight: 1
+    settings:
+      submit_text: 'Select strategic plan outcome(s)'
+      auto_select: false
+      view: entity_browser
+      view_display: strategic_plan_outcome_browser
