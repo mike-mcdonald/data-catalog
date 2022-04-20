@@ -1,0 +1,18 @@
+uuid: fbb8c298-f0fa-4e08-bb09-5a2e6de5203d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.activity
+id: node.activity.title
+field_name: title
+entity_type: node
+bundle: activity
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
