@@ -1,0 +1,95 @@
+uuid: e130141f-7896-4d6e-ad0a-b03c673d3686
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.measures
+id: measures-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 621b8b0e-fa02-4b5d-928c-6064d93401ad
+  sections:
+    -
+      layout_id: layout_twocol_right
+      layout_settings:
+        label: ''
+        context_mapping: {  }
+      components:
+        755f0054-f75b-4780-8d5b-94e48a457e74:
+          uuid: 755f0054-f75b-4780-8d5b-94e48a457e74
+          region: first
+          configuration:
+            id: 'views_block:index_measures-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        bcae2d86-cf36-44c6-b7c7-60d5ea7098ad:
+          uuid: bcae2d86-cf36-44c6-b7c7-60d5ea7098ad
+          region: second
+          configuration:
+            id: 'facet_block:measure_strategic_plan_outcome'
+            label: 'Filter by strategic plan outcome'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+        887569eb-0603-4bdb-a03a-b92392cb33f4:
+          uuid: 887569eb-0603-4bdb-a03a-b92392cb33f4
+          region: second
+          configuration:
+            id: 'facet_block:measure_program_outcome'
+            label: 'Filter by program outcome'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 1
+          additional: {  }
+        b4d88cef-f8c6-4914-9b99-d69886baca0e:
+          uuid: b4d88cef-f8c6-4914-9b99-d69886baca0e
+          region: second
+          configuration:
+            id: 'facet_block:measure_activity'
+            label: 'Filter by activity'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 2
+          additional: {  }
+        83fd3811-032e-491b-bcbd-3223d450d07c:
+          uuid: 83fd3811-032e-491b-bcbd-3223d450d07c
+          region: second
+          configuration:
+            id: 'facet_block:measure_program_area'
+            label: 'Filter by program area'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 3
+          additional: {  }
+        68b8d02a-662f-4506-8b8c-e4af0669574f:
+          uuid: 68b8d02a-662f-4506-8b8c-e4af0669574f
+          region: second
+          configuration:
+            id: 'facet_block:measure_division_and_group'
+            label: 'Filter by division and group'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 4
+          additional: {  }
+      third_party_settings: {  }
+page: measures
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

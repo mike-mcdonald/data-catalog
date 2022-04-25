@@ -151,9 +151,14 @@ datasource_settings:
     bundles:
       default: true
       selected:
+        - activity
         - changelog
+        - database
         - page
         - performance_outcome
+        - program_outcome
+        - server
+        - strategic_plan_outcome
     languages:
       default: true
       selected: {  }
@@ -161,6 +166,7 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   entity_status: {  }
+  entity_type: {  }
   hierarchy:
     weights:
       preprocess_index: -45

@@ -5,6 +5,7 @@ module:
   admin_toolbar_tools: 0
   auto_entitylabel: 0
   automated_cron: 0
+  better_exposed_filters: 0
   big_pipe: 0
   block: 0
   block_blacklist: 0
@@ -50,6 +51,10 @@ module:
   honeypot: 0
   image: 0
   inline_entity_form: 0
+  jquery_ui: 0
+  jquery_ui_datepicker: 0
+  jquery_ui_slider: 0
+  jquery_ui_touch_punch: 0
   key: 0
   layout_builder: 0
   layout_discovery: 0
@@ -66,6 +71,8 @@ module:
   openid_connect: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  page_manager_ui: 0
   path: 0
   path_alias: 0
   portland: 0
@@ -81,12 +88,14 @@ module:
   system: 0
   taxonomy: 0
   telephone: 0
+  term_reference_change: 0
   text: 0
   token: 0
   toolbar: 0
   user: 0
   variationcache: 0
   views_bootstrap: 0
+  views_bulk_edit: 0
   views_data_export: 0
   views_ui: 0
   webform: 0

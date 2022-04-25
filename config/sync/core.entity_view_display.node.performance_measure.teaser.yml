@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.performance_measure.body
+    - field.field.node.performance_measure.field_activity
     - field.field.node.performance_measure.field_audience
     - field.field.node.performance_measure.field_category
     - field.field.node.performance_measure.field_data_custodian
@@ -48,6 +49,7 @@ content:
     region: content
 hidden:
   body: true
+  field_activity: true
   field_audience: true
   field_category: true
   field_data_custodian: true

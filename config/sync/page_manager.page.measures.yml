@@ -1,0 +1,12 @@
+uuid: 06d637dd-6fba-45cf-9283-99378543834d
+langcode: en
+status: true
+dependencies: {  }
+id: measures
+label: Measures
+description: 'Search page for performance measures'
+use_admin_theme: false
+path: /measures
+access_logic: and
+access_conditions: {  }
+parameters: {  }

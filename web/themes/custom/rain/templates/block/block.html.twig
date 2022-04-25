@@ -27,14 +27,14 @@
 #}
 {%
   set block_classes = block_classes|default([
-    'my-3',
+    'grid',
+    'grid-cols-1',
+    'gap-3',
   ])
 %}
 
 {%
-  set title_classes = title_classes|default([
-    'my-3'
-  ])
+  set title_classes = title_classes|default([])
 %}
 
 {% set heading_element = heading_element|default('h2') %}

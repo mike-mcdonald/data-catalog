@@ -11,7 +11,7 @@ _core:
 id: rain_breadcrumbs
 theme: rain
 region: content
-weight: -8
+weight: -10
 provider: null
 plugin: system_breadcrumb_block
 settings:

@@ -1,0 +1,8 @@
+uuid: e652cf86-6772-49e4-b129-ea6a2ef850bd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Performance framework'
+vid: strategic_framework
+description: ''
+weight: 0
