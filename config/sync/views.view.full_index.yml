@@ -22,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Search PBOT''s data catalog'
+      title: 'Search catalog'
       fields:
         field_authority_level:
           id: field_authority_level

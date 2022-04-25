@@ -7,12 +7,12 @@ dependencies:
 id: datasets
 label: Datasets
 type: 'canonical_entities:node'
-pattern: 'dataset/[node:title]'
+pattern: 'datasets/[node:title]'
 selection_criteria:
-  3cec4a89-e13e-478c-b5ed-125681ccbda3:
+  9e32e29d-59ee-4552-b215-a87b746911d2:
     id: node_type
     negate: false
-    uuid: 3cec4a89-e13e-478c-b5ed-125681ccbda3
+    uuid: 9e32e29d-59ee-4552-b215-a87b746911d2
     context_mapping:
       node: node
     bundles:

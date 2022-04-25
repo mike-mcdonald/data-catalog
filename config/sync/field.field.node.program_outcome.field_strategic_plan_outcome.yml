@@ -1,0 +1,29 @@
+uuid: 26e631a7-e491-4cc5-895f-20af9a10f2f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_strategic_plan_outcome
+    - node.type.program_outcome
+    - node.type.strategic_plan_outcome
+id: node.program_outcome.field_strategic_plan_outcome
+field_name: field_strategic_plan_outcome
+entity_type: node
+bundle: program_outcome
+label: 'Associated strategic plan outcome(s)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      strategic_plan_outcome: strategic_plan_outcome
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

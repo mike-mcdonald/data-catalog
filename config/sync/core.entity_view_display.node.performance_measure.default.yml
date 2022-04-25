@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.performance_measure.body
+    - field.field.node.performance_measure.field_activity
     - field.field.node.performance_measure.field_audience
     - field.field.node.performance_measure.field_category
     - field.field.node.performance_measure.field_data_custodian
@@ -597,6 +598,22 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 3
             additional: {  }
+          b7394762-f77a-4df5-a9bc-482ceb2418f0:
+            uuid: b7394762-f77a-4df5-a9bc-482ceb2418f0
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_activity'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 12
+            additional: {  }
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
@@ -614,6 +631,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: -20
+    region: content
+  field_activity:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 147
     region: content
   field_audience:
     type: entity_reference_label

@@ -1,0 +1,9 @@
+uuid: 962a5e33-4361-4e77-bd98-66f064ffee3a
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__index_datasets__block_1
+name: 'search_api:views_block__index_datasets__block_1'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

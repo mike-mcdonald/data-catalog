@@ -1,5 +1,5 @@
 card:
-  label: 'Card'
+  label: "Card"
   path: layouts
   template: layout--card
   default_region: content
@@ -10,7 +10,7 @@ card:
     - [content]
 
 layout_row:
-  label: 'Row'
+  label: "Row"
   path: layouts
   template: layout--row
   default_region: content
@@ -21,7 +21,7 @@ layout_row:
     - [content]
 
 layout_blank:
-  label: 'Blank'
+  label: "Blank"
   path: layouts
   template: layout--blank
   default_region: content
@@ -32,7 +32,7 @@ layout_blank:
     - [content]
 
 layout_onecol:
-  label: 'One column'
+  label: "One column"
   path: layouts/onecol
   template: layout--onecol
   default_region: content
@@ -43,7 +43,7 @@ layout_onecol:
     - [content]
 
 layout_twocol:
-  label: 'Two column (grid)'
+  label: "Two column (grid)"
   path: layouts/twocol
   template: layout--twocol
   default_region: first
@@ -56,7 +56,7 @@ layout_twocol:
     - [first, second]
 
 layout_twocol_flex:
-  label: 'Two column (flex)'
+  label: "Two column (flex)"
   path: layouts/twocol
   template: layout--twocol-flex
   default_region: first
@@ -68,8 +68,34 @@ layout_twocol_flex:
   icon_map:
     - [first, second]
 
+layout_twocol_left:
+  label: "Two column (left)"
+  path: layouts/twocol
+  template: layout--twocol-left
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+  icon_map:
+    - [first, second]
+
+layout_twocol_right:
+  label: "Two column (right)"
+  path: layouts/twocol
+  template: layout--twocol-right
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+  icon_map:
+    - [first, second]
+
 layout_threecol:
-  label: 'Three columns (grid)'
+  label: "Three columns (grid)"
   path: layouts/threecol
   template: layout--threecol
   default_region: first
@@ -84,7 +110,7 @@ layout_threecol:
     - [first, second, third]
 
 layout_threecol_flex:
-  label: 'Three columns (flex)'
+  label: "Three columns (flex)"
   path: layouts/threecol
   template: layout--threecol-flex
   default_region: first

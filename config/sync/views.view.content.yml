@@ -64,236 +64,15 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    id: default
-    display_title: Master
-    display_plugin: default
-    position: 0
     display_options:
-      title: Content
-      fields:
-        node_bulk_form:
-          id: node_bulk_form
-          table: node
-          field: node_bulk_form
-          entity_type: node
-          plugin_id: node_bulk_form
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-          element_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          entity_type: node
-          entity_field: title
-          plugin_id: field
-          label: Title
-          exclude: false
-          alter:
-            alter_text: false
-          element_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          type: string
-          settings:
-            link_to_entity: true
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: field
-          label: 'Content type'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        name:
-          id: name
-          table: users_field_data
-          field: name
-          relationship: uid
-          entity_type: user
-          entity_field: name
-          plugin_id: field
-          label: Author
-          exclude: false
-          alter:
-            alter_text: false
-          element_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          type: user_name
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: field
-          label: Status
-          exclude: false
-          alter:
-            alter_text: false
-          element_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          type: boolean
-          settings:
-            format: custom
-            format_custom_false: Unpublished
-            format_custom_true: Published
-        changed:
-          id: changed
-          table: node_field_data
-          field: changed
-          entity_type: node
-          entity_field: changed
-          plugin_id: field
-          label: Updated
-          exclude: false
-          alter:
-            alter_text: false
-          element_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          type: timestamp
-          settings:
-            date_format: short
-            custom_date_format: ''
-            timezone: ''
-        operations:
-          id: operations
-          table: node
-          field: operations
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: entity_operations
-          label: Operations
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          destination: true
-      pager:
-        type: full
+      access:
+        type: perm
         options:
-          items_per_page: 50
-          tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
+          perm: 'access content overview'
+      cache:
+        type: tag
+      query:
+        type: views_query
       exposed_form:
         type: basic
         options:
@@ -304,223 +83,26 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-      access:
-        type: perm
+      pager:
+        type: full
         options:
-          perm: 'access content overview'
-      cache:
-        type: tag
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          plugin_id: text_custom
-          empty: true
-          content: 'No content available.'
-      sorts: {  }
-      arguments: {  }
-      filters:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: string
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: title_op
-            label: Title
-            description: ''
-            use_operator: false
-            operator: title_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: title
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: type_op
-            label: 'Content type'
-            description: ''
-            use_operator: false
-            operator: type_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: type
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_admin: '0'
-              user_admin: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: Status
-            description: ''
-            use_operator: false
-            operator: status_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: status
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: true
-          group_info:
-            label: 'Published status'
-            description: ''
-            identifier: status
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: Published
-                operator: '='
-                value: '1'
-              2:
-                title: Unpublished
-                operator: '='
-                value: '0'
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-          operator: in
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: langcode_op
-            label: Language
-            description: ''
-            use_operator: false
-            operator: langcode_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: langcode
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        status_extra:
-          id: status_extra
-          table: node_field_data
-          field: status_extra
-          entity_type: node
-          plugin_id: node_status
-          operator: '='
-          value: false
-          group: 1
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+          items_per_page: 50
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
       style:
         type: table
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
+          override: true
+          sticky: true
+          caption: ''
+          summary: ''
+          description: ''
           columns:
             node_bulk_form: node_bulk_form
             title: title
@@ -532,7 +114,6 @@ display:
             delete_node: delete_node
             dropbutton: dropbutton
             timestamp: title
-          default: changed
           info:
             node_bulk_form:
               align: ''
@@ -602,28 +183,446 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-          override: true
-          sticky: true
-          summary: ''
+          default: changed
           empty_table: true
-          caption: ''
-          description: ''
       row:
         type: fields
-      query:
-        type: views_query
+      fields:
+        node_bulk_form:
+          id: node_bulk_form
+          table: node
+          field: node_bulk_form
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+          element_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          plugin_id: node_bulk_form
+          entity_type: node
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          label: Title
+          exclude: false
+          alter:
+            alter_text: false
+          element_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          entity_type: node
+          entity_field: title
+          type: string
+          settings:
+            link_to_entity: true
+          plugin_id: field
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Content type'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: type
+          plugin_id: field
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: uid
+          label: Author
+          exclude: false
+          alter:
+            alter_text: false
+          element_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          plugin_id: field
+          type: user_name
+          entity_type: user
+          entity_field: name
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          label: Status
+          exclude: false
+          alter:
+            alter_text: false
+          element_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: boolean
+          settings:
+            format: custom
+            format_custom_true: Published
+            format_custom_false: Unpublished
+          plugin_id: field
+          entity_type: node
+          entity_field: status
+        changed:
+          id: changed
+          table: node_field_data
+          field: changed
+          label: Updated
+          exclude: false
+          alter:
+            alter_text: false
+          element_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: timestamp
+          settings:
+            date_format: short
+            custom_date_format: ''
+            timezone: ''
+          plugin_id: field
+          entity_type: node
+          entity_field: changed
+        operations:
+          id: operations
+          table: node
+          field: operations
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Operations
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          destination: true
+          plugin_id: entity_operations
+      filters:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: Title
+            description: ''
+            use_operator: false
+            operator: title_op
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+          entity_type: node
+          entity_field: title
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_op
+            label: 'Content type'
+            description: ''
+            use_operator: false
+            operator: type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_admin: '0'
+              user_admin: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: bundle
+          entity_type: node
+          entity_field: type
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: Status
+            description: ''
+            use_operator: false
+            operator: status_op
+            identifier: status
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: true
+          group_info:
+            label: 'Published status'
+            description: ''
+            identifier: status
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Published
+                operator: '='
+                value: '1'
+              2:
+                title: Unpublished
+                operator: '='
+                value: '0'
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: langcode_op
+            label: Language
+            description: ''
+            use_operator: false
+            operator: langcode_op
+            identifier: langcode
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: language
+          entity_type: node
+          entity_field: langcode
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          operator: '='
+          value: false
+          plugin_id: node_status
+          group: 1
+          entity_type: node
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      sorts: {  }
+      title: Content
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          empty: true
+          content: 'No content available.'
+          plugin_id: text_custom
+      arguments: {  }
       relationships:
         uid:
           id: uid
           table: node_field_data
           field: uid
           admin_label: author
-          plugin_id: standard
           required: true
+          plugin_id: standard
       show_admin_links: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       display_extenders: {  }
+    display_plugin: default
+    display_title: Master
+    id: default
+    position: 0
     cache_metadata:
-      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -632,13 +631,74 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
+      max-age: 0
       tags: {  }
   data_export_1:
+    display_plugin: data_export
     id: data_export_1
     display_title: 'Dataset export'
-    display_plugin: data_export
     position: 2
     display_options:
+      display_extenders: {  }
+      path: admin/content/export/dataset
+      filename: 'data-catalog_datasets_[date:html_date].csv'
+      automatic_download: false
+      store_in_public_file_directory: false
+      redirect_to_display: page_1
+      custom_redirect_path: false
+      include_query_params: false
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            dataset: dataset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+      defaults:
+        filters: false
+        filter_groups: false
+        fields: false
+        relationships: false
+        group_by: false
+      filter_groups:
+        operator: AND
+        groups: {  }
       fields:
         nid:
           id: nid
@@ -647,9 +707,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
           label: ID
           exclude: false
           alter:
@@ -706,6 +763,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -713,9 +773,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: field
           label: Title
           exclude: false
           alter:
@@ -771,6 +828,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
         field_purpose:
           id: field_purpose
           table: node__field_purpose
@@ -778,7 +838,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Description
           exclude: false
           alter:
@@ -833,6 +892,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         changed:
           id: changed
           table: node_field_data
@@ -840,9 +900,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: changed
-          plugin_id: field
           label: Changed
           exclude: false
           alter:
@@ -900,6 +957,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: changed
+          plugin_id: field
         field_authority_level:
           id: field_authority_level
           table: node__field_authority_level
@@ -907,7 +967,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Authority level'
           exclude: false
           alter:
@@ -963,6 +1022,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_accessibility_level:
           id: field_accessibility_level
           table: node__field_accessibility_level
@@ -970,7 +1030,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Data protection level'
           exclude: false
           alter:
@@ -1026,6 +1085,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_data_owner:
           id: field_data_owner
           table: node__field_data_owner
@@ -1033,7 +1093,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Data publisher'
           exclude: false
           alter:
@@ -1089,6 +1148,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_data_reliability:
           id: field_data_reliability
           table: node__field_data_reliability
@@ -1096,7 +1156,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Data reliability'
           exclude: false
           alter:
@@ -1152,6 +1211,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_demographic_information:
           id: field_demographic_information
           table: node__field_demographic_information
@@ -1159,7 +1219,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Demographic information'
           exclude: false
           alter:
@@ -1215,6 +1274,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_data_group:
           id: field_data_group
           table: node__field_data_group
@@ -1222,7 +1282,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Division and group'
           exclude: false
           alter:
@@ -1280,6 +1339,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_security_level:
           id: field_security_level
           table: node__field_security_level
@@ -1287,7 +1347,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Information security regulation'
           exclude: false
           alter:
@@ -1343,6 +1402,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_keywords:
           id: field_keywords
           table: node__field_keywords
@@ -1350,7 +1410,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Keywords
           exclude: false
           alter:
@@ -1406,6 +1465,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_data_custodian:
           id: field_data_custodian
           table: node__field_data_custodian
@@ -1413,7 +1473,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Primary Contact'
           exclude: false
           alter:
@@ -1469,6 +1528,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_quality_concerns:
           id: field_quality_concerns
           table: node__field_quality_concerns
@@ -1476,7 +1536,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Quality concerns'
           exclude: false
           alter:
@@ -1531,6 +1590,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_source:
           id: field_source
           table: node__field_source
@@ -1538,7 +1598,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Source
           exclude: false
           alter:
@@ -1594,6 +1653,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_spatial_information:
           id: field_spatial_information
           table: node__field_spatial_information
@@ -1601,7 +1661,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Spatial information type'
           exclude: false
           alter:
@@ -1657,6 +1716,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_subject_areas:
           id: field_subject_areas
           table: node__field_subject_areas
@@ -1664,7 +1724,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Subject areas'
           exclude: false
           alter:
@@ -1722,6 +1781,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         type:
           id: type
           table: block_content_field_data
@@ -1729,9 +1789,6 @@ display:
           relationship: field_timeliness
           group_type: group
           admin_label: ''
-          entity_type: block_content
-          entity_field: type
-          plugin_id: field
           label: Timeliness
           exclude: false
           alter:
@@ -1787,6 +1844,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: block_content
+          entity_field: type
+          plugin_id: field
         field_earliest_record_year:
           id: field_earliest_record_year
           table: block_content__field_earliest_record_year
@@ -1794,7 +1854,6 @@ display:
           relationship: field_timeliness
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Earliest record year'
           exclude: false
           alter:
@@ -1851,6 +1910,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         uid:
           id: uid
           table: node_field_revision
@@ -1858,9 +1918,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: uid
-          plugin_id: field
           label: Author
           exclude: false
           alter:
@@ -1916,6 +1973,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: uid
+          plugin_id: field
         created:
           id: created
           table: node_field_revision
@@ -1923,9 +1983,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: field
           label: 'Authored on'
           exclude: false
           alter:
@@ -1983,52 +2040,22 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
           entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            dataset: dataset
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-      filter_groups:
-        operator: AND
-        groups: {  }
+          entity_field: created
+          plugin_id: field
+      row:
+        type: data_field
+        options:
+          field_options:
+            nid:
+              alias: ''
+              raw_output: false
+            title:
+              alias: ''
+              raw_output: false
+            field_purpose:
+              alias: Purpose
+              raw_output: false
       style:
         type: data_export
         options:
@@ -2043,25 +2070,6 @@ display:
             encoding: utf8
             utf8_bom: '0'
             use_serializer_encode_only: false
-      row:
-        type: data_field
-        options:
-          field_options:
-            nid:
-              alias: ''
-              raw_output: false
-            title:
-              alias: ''
-              raw_output: false
-            field_purpose:
-              alias: Purpose
-              raw_output: false
-      defaults:
-        group_by: false
-        relationships: false
-        fields: false
-        filters: false
-        filter_groups: false
       relationships:
         field_timeliness:
           id: field_timeliness
@@ -2070,21 +2078,13 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_timeliness: Custom block'
-          plugin_id: standard
           required: false
-      group_by: false
+          plugin_id: standard
       display_description: ''
-      display_extenders: {  }
-      path: admin/content/export/dataset
       displays:
         default: '0'
         page_1: '0'
-      filename: 'data-catalog_datasets_[date:html_date].csv'
-      automatic_download: false
-      store_in_public_file_directory: false
-      custom_redirect_path: false
-      redirect_to_display: page_1
-      include_query_params: false
+      group_by: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -2110,11 +2110,34 @@ display:
         - 'config:field.storage.node.field_spatial_information'
         - 'config:field.storage.node.field_subject_areas'
   data_export_4:
+    display_plugin: data_export
     id: data_export_4
     display_title: 'Measure export'
-    display_plugin: data_export
     position: 4
     display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: admin/content/export/measure
+      filename: 'data-catalog_measures_[date:html_date].csv'
+      automatic_download: false
+      store_in_public_file_directory: false
+      redirect_to_display: none
+      custom_redirect_path: false
+      include_query_params: false
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+            utf8_bom: '0'
+            use_serializer_encode_only: false
       fields:
         title:
           id: title
@@ -2123,9 +2146,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: field
           label: 'Measure ID'
           exclude: false
           alter:
@@ -2181,6 +2201,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
         field_measure_id:
           id: field_measure_id
           table: node__field_measure_id
@@ -2188,7 +2211,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'CBO measure ID'
           exclude: false
           alter:
@@ -2244,6 +2266,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         changed:
           id: changed
           table: node_field_data
@@ -2251,9 +2274,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: changed
-          plugin_id: field
           label: Updated
           exclude: false
           alter:
@@ -2311,6 +2331,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: changed
+          plugin_id: field
         field_status:
           id: field_status
           table: node__field_status
@@ -2318,7 +2341,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Status
           exclude: false
           alter:
@@ -2374,6 +2396,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         body:
           id: body
           table: node__body
@@ -2381,7 +2404,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Definition
           exclude: false
           alter:
@@ -2436,6 +2458,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_data_group:
           id: field_data_group
           table: node__field_data_group
@@ -2443,7 +2466,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Division/Group
           exclude: false
           alter:
@@ -2499,6 +2521,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_keywords:
           id: field_keywords
           table: node__field_keywords
@@ -2506,7 +2529,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Keywords
           exclude: false
           alter:
@@ -2562,6 +2584,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_data_custodian:
           id: field_data_custodian
           table: node__field_data_custodian
@@ -2569,7 +2592,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Primary Contact '
           exclude: false
           alter:
@@ -2625,6 +2647,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_measure_type:
           id: field_measure_type
           table: node__field_measure_type
@@ -2632,7 +2655,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Performance Measure Type'
           exclude: false
           alter:
@@ -2688,6 +2710,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_audience:
           id: field_audience
           table: node__field_audience
@@ -2695,7 +2718,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Audience
           exclude: false
           alter:
@@ -2751,6 +2773,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_level:
           id: field_level
           table: node__field_level
@@ -2758,7 +2781,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Level
           exclude: false
           alter:
@@ -2814,6 +2836,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_requirements:
           id: field_requirements
           table: node__field_requirements
@@ -2821,7 +2844,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Performance Measure Data Requirements'
           exclude: false
           alter:
@@ -2876,6 +2898,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_frequency:
           id: field_frequency
           table: node__field_frequency
@@ -2883,7 +2906,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Frequency of performance reporting'
           exclude: false
           alter:
@@ -2939,6 +2961,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_data_reliability:
           id: field_data_reliability
           table: node__field_data_reliability
@@ -2946,7 +2969,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Data Reliability'
           exclude: false
           alter:
@@ -3002,6 +3024,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_category:
           id: field_category
           table: node__field_category
@@ -3009,7 +3032,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Performance Metric Purpose'
           exclude: false
           alter:
@@ -3065,6 +3087,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_formula:
           id: field_formula
           table: node__field_formula
@@ -3072,7 +3095,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Performance Measure Formula'
           exclude: false
           alter:
@@ -3127,6 +3149,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_threshold:
           id: field_threshold
           table: node__field_threshold
@@ -3134,7 +3157,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Performance Measure Threshold'
           exclude: false
           alter:
@@ -3190,6 +3212,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_program_area:
           id: field_program_area
           table: node__field_program_area
@@ -3197,7 +3220,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Program Area'
           exclude: false
           alter:
@@ -3253,6 +3275,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_project_name:
           id: field_project_name
           table: node__field_project_name
@@ -3260,7 +3283,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Project name'
           exclude: false
           alter:
@@ -3316,6 +3338,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_strategic_plan:
           id: field_strategic_plan
           table: node__field_strategic_plan
@@ -3323,7 +3346,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Strategic plan'
           exclude: false
           alter:
@@ -3379,6 +3401,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_strategic_target:
           id: field_strategic_target
           table: node__field_strategic_target
@@ -3386,7 +3409,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Strategic target'
           exclude: false
           alter:
@@ -3432,9 +3454,9 @@ display:
           type: number_decimal
           settings:
             thousand_separator: ''
+            prefix_suffix: true
             decimal_separator: .
             scale: 6
-            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -3445,6 +3467,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_strategic_year:
           id: field_strategic_year
           table: node__field_strategic_year
@@ -3452,7 +3475,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Strategic year'
           exclude: false
           alter:
@@ -3508,6 +3530,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_origination_date:
           id: field_origination_date
           table: node__field_origination_date
@@ -3515,7 +3538,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Performance measure origination date'
           exclude: false
           alter:
@@ -3571,6 +3593,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_url:
           id: field_url
           table: node__field_url
@@ -3578,7 +3601,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: URL
           exclude: false
           alter:
@@ -3638,6 +3660,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_data_type:
           id: field_data_type
           table: node__field_data_type
@@ -3645,8 +3668,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
-          label: 'Data value type'
+          label: 'Outcome value data type'
           exclude: false
           alter:
             alter_text: false
@@ -3701,6 +3723,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         uid:
           id: uid
           table: node_field_revision
@@ -3708,9 +3731,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: uid
-          plugin_id: field
           label: Author
           exclude: false
           alter:
@@ -3766,6 +3786,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: uid
+          plugin_id: field
         created:
           id: created
           table: node_field_revision
@@ -3773,9 +3796,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: field
           label: 'Authored on'
           exclude: false
           alter:
@@ -3833,11 +3853,16 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-      access:
-        type: perm
-        options:
-          perm: 'access content overview'
-      arguments: {  }
+          entity_type: node
+          entity_field: created
+          plugin_id: field
+      defaults:
+        fields: false
+        filters: false
+        filter_groups: false
+        relationships: false
+        arguments: false
+        access: false
       filters:
         status:
           id: status
@@ -3846,9 +3871,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
           operator: '='
           value: '1'
           group: 1
@@ -3859,8 +3881,6 @@ display:
             description: ''
             use_operator: false
             operator: status_op
-            operator_limit_selection: false
-            operator_list: {  }
             identifier: status
             required: true
             remember: false
@@ -3870,6 +3890,8 @@ display:
               anonymous: '0'
               administrator: '0'
               group_admin: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: true
           group_info:
             label: 'Published status'
@@ -3890,6 +3912,9 @@ display:
                 title: Unpublished
                 operator: '='
                 value: '0'
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
         type:
           id: type
           table: node_field_data
@@ -3897,9 +3922,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
           operator: in
           value:
             performance_measure: performance_measure
@@ -3936,46 +3958,24 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
       filter_groups:
         operator: AND
         groups:
           1: AND
-      style:
-        type: data_export
-        options:
-          formats:
-            csv: csv
-          csv_settings:
-            delimiter: ','
-            enclosure: '"'
-            escape_char: \
-            strip_tags: true
-            trim: true
-            encoding: utf8
-            utf8_bom: '0'
-            use_serializer_encode_only: false
-      defaults:
-        access: false
-        relationships: false
-        fields: false
-        arguments: false
-        filters: false
-        filter_groups: false
       relationships:
         field_performance_measure:
           id: field_performance_measure
           table: node__field_performance_measure
           field: field_performance_measure
           plugin_id: standard
-      display_description: ''
-      display_extenders: {  }
-      path: admin/content/export/measure
-      filename: 'data-catalog_measures_[date:html_date].csv'
-      automatic_download: false
-      store_in_public_file_directory: false
-      custom_redirect_path: false
-      redirect_to_display: none
-      include_query_params: false
+      arguments: {  }
+      access:
+        type: perm
+        options:
+          perm: 'access content overview'
     cache_metadata:
       max-age: -1
       contexts:
@@ -4011,11 +4011,33 @@ display:
         - 'config:field.storage.node.field_url'
     data_export_4: null
   data_export_5:
-    id: data_export_5
-    display_title: 'Measure data export'
     display_plugin: data_export
+    id: data_export_5
+    display_title: 'Outcome export'
     position: 5
     display_options:
+      display_extenders: {  }
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+            utf8_bom: '0'
+            use_serializer_encode_only: false
+      defaults:
+        relationships: false
+        fields: false
+        filters: true
+        filter_groups: true
+        access: false
+        arguments: false
       fields:
         title_1:
           id: title_1
@@ -4024,9 +4046,6 @@ display:
           relationship: field_performance_measure
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: field
           label: 'Measure ID'
           exclude: false
           alter:
@@ -4082,6 +4101,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
         changed:
           id: changed
           table: node_field_data
@@ -4089,9 +4111,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: changed
-          plugin_id: field
           label: Updated
           exclude: false
           alter:
@@ -4149,6 +4168,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: changed
+          plugin_id: field
         field_reporting_period:
           id: field_reporting_period
           table: node__field_reporting_period
@@ -4156,7 +4178,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: 'Reporting period'
           exclude: false
           alter:
@@ -4214,6 +4235,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_estimate:
           id: field_estimate
           table: node__field_estimate
@@ -4221,7 +4243,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Estimate
           exclude: false
           alter:
@@ -4267,9 +4288,9 @@ display:
           type: number_decimal
           settings:
             thousand_separator: ''
+            prefix_suffix: true
             decimal_separator: .
             scale: 2
-            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -4280,6 +4301,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         field_actual:
           id: field_actual
           table: node__field_actual
@@ -4287,7 +4309,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Actual
           exclude: false
           alter:
@@ -4333,9 +4354,9 @@ display:
           type: number_decimal
           settings:
             thousand_separator: ''
+            prefix_suffix: true
             decimal_separator: .
             scale: 2
-            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -4346,6 +4367,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         body:
           id: body
           table: node__body
@@ -4353,7 +4375,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
           label: Definition
           exclude: false
           alter:
@@ -4408,6 +4429,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         uid:
           id: uid
           table: node_field_revision
@@ -4415,9 +4437,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: uid
-          plugin_id: field
           label: Author
           exclude: false
           alter:
@@ -4473,6 +4492,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: uid
+          plugin_id: field
         created:
           id: created
           table: node_field_revision
@@ -4480,9 +4502,6 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: field
           label: 'Authored on'
           exclude: false
           alter:
@@ -4540,32 +4559,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-      access:
-        type: perm
-        options:
-          perm: 'access content overview'
-      arguments: {  }
-      style:
-        type: data_export
-        options:
-          formats:
-            csv: csv
-          csv_settings:
-            delimiter: ','
-            enclosure: '"'
-            escape_char: \
-            strip_tags: true
-            trim: true
-            encoding: utf8
-            utf8_bom: '0'
-            use_serializer_encode_only: false
-      defaults:
-        access: false
-        relationships: false
-        fields: false
-        arguments: false
-        filters: true
-        filter_groups: true
+          entity_type: node
+          entity_field: created
+          plugin_id: field
+      display_description: ''
+      path: admin/content/export/outcome
+      filename: 'data-catalog_outcomes_[date:html_date].csv'
+      automatic_download: false
+      store_in_public_file_directory: false
+      redirect_to_display: none
+      custom_redirect_path: false
+      include_query_params: false
       relationships:
         field_performance_measure:
           id: field_performance_measure
@@ -4574,17 +4578,13 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_performance_measure: Content'
-          plugin_id: standard
           required: true
-      display_description: ''
-      display_extenders: {  }
-      path: admin/content/export/measure_data
-      filename: 'data-catalog_measure_data_[date:html_date].csv'
-      automatic_download: false
-      store_in_public_file_directory: false
-      custom_redirect_path: false
-      redirect_to_display: none
-      include_query_params: false
+          plugin_id: standard
+      access:
+        type: perm
+        options:
+          perm: 'access content overview'
+      arguments: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -4601,13 +4601,22 @@ display:
         - 'config:field.storage.node.field_estimate'
         - 'config:field.storage.node.field_reporting_period'
   page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
-    position: 1
     display_options:
-      defaults:
-        header: false
+      path: admin/content/node
+      menu:
+        type: 'default tab'
+        title: Content
+        description: ''
+        menu_name: admin
+        weight: -10
+        context: ''
+      tab_options:
+        type: normal
+        title: Content
+        description: 'Find and manage content'
+        menu_name: admin
+        weight: -10
+      display_extenders: {  }
       header:
         display_link:
           id: display_link
@@ -4616,10 +4625,10 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: display_link
-          label: 'Export datasets'
           empty: false
           display_id: data_export_1
+          label: 'Export datasets'
+          plugin_id: display_link
         display_link_3:
           id: display_link_3
           table: views
@@ -4627,10 +4636,10 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: display_link
-          label: 'Export measures'
           empty: false
           display_id: data_export_4
+          label: 'Export measures'
+          plugin_id: display_link
         display_link_4:
           id: display_link_4
           table: views
@@ -4638,27 +4647,17 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: display_link
-          label: 'Export measure data'
           empty: false
           display_id: data_export_5
-      display_extenders: {  }
-      path: admin/content/node
-      menu:
-        type: 'default tab'
-        title: Content
-        description: ''
-        weight: -10
-        menu_name: admin
-        context: ''
-      tab_options:
-        type: normal
-        title: Content
-        description: 'Find and manage content'
-        weight: -10
-        menu_name: admin
+          label: 'Export outcomes'
+          plugin_id: display_link
+      defaults:
+        header: false
+    display_plugin: page
+    display_title: Page
+    id: page_1
+    position: 1
     cache_metadata:
-      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -4667,4 +4666,5 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
+      max-age: 0
       tags: {  }

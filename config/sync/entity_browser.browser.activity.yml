@@ -1,0 +1,31 @@
+uuid: f66d56c7-9b51-47c0-9b6f-f143146d8633
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser
+  module:
+    - views
+name: activity
+label: Activity
+display: modal
+display_configuration:
+  width: ''
+  height: '500'
+  link_text: 'Select activity'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  1ec072aa-bb56-43ce-a75f-48fbbd1132af:
+    id: view
+    uuid: 1ec072aa-bb56-43ce-a75f-48fbbd1132af
+    label: Find
+    weight: 1
+    settings:
+      submit_text: 'Select activity'
+      auto_select: false
+      view: entity_browser
+      view_display: activity_browser

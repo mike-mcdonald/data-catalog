@@ -1,0 +1,38 @@
+uuid: c460fdf2-0d35-493b-b3d9-c3f49ab145df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.strategic_plan_outcome.body
+    - node.type.strategic_plan_outcome
+  module:
+    - text
+    - user
+id: node.strategic_plan_outcome.default
+targetEntityType: node
+bundle: strategic_plan_outcome
+mode: default
+content:
+  body:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  group_content:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 50
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

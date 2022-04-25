@@ -1,0 +1,12 @@
+uuid: d4dfce3a-406c-4f09-8009-ffbbd6c60326
+langcode: en
+status: true
+dependencies: {  }
+id: datasets
+label: Datasets
+description: ''
+use_admin_theme: false
+path: /datasets
+access_logic: and
+access_conditions: {  }
+parameters: {  }

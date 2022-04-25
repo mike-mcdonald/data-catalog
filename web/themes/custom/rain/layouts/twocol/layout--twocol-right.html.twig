@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set layout_classes = layout_classes|default([
+    'md:grid',
+    'md:grid-cols-4',
+    'md:gap-4',
+  ])
+%}
+{%
+  set region_classes = region_classes|default([
+    'flex',
+    'flex-col',
+  ])
+%}
+{% if content %}
+	{% set content_first = content.first|render %}
+	{% set content_second = content.second|render %}
+
+	<div{{attributes.addClass(layout_classes)}}>
+		{% if content_first is not empty %}
+			<div{{region_attributes.first.addClass(region_classes).addClass(['col-span-3'])}}>
+				{{ content_first }}
+			</div>
+		{% endif %}
+		{% if content_second is not empty %}
+			<div{{region_attributes.second.addClass(region_classes)}}>
+				{{ content_second }}
+			</div>
+		{% endif %}
+	</div>
+{% endif %}

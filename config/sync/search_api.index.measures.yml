@@ -1,0 +1,115 @@
+uuid: 087d6e7b-7457-41c2-8dc9-28e948f0b330
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_activity
+    - field.storage.node.field_data_group
+    - field.storage.node.field_program_area
+    - field.storage.node.field_program_outcome
+    - field.storage.node.field_strategic_plan_outcome
+    - search_api.server.database
+    - core.entity_view_mode.node.full
+  module:
+    - node
+    - search_api
+id: measures
+name: Measures
+description: ''
+read_only: false
+field_settings:
+  field_activity:
+    label: 'Associated activities'
+    datasource_id: 'entity:node'
+    property_path: field_activity
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_activity
+  field_data_group:
+    label: 'Division and group'
+    datasource_id: 'entity:node'
+    property_path: field_data_group
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_data_group
+  field_program_area:
+    label: 'Program area'
+    datasource_id: 'entity:node'
+    property_path: field_program_area
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_program_area
+  field_program_outcome:
+    label: 'Associated activities » Content » Associated program outcome(s)'
+    datasource_id: 'entity:node'
+    property_path: 'field_activity:entity:field_program_outcome'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_activity
+        - field.storage.node.field_program_outcome
+      module:
+        - node
+  field_strategic_plan_outcome:
+    label: 'Associated activities » Content » Associated program outcome(s) » Content » Associated strategic plan outcome(s)'
+    datasource_id: 'entity:node'
+    property_path: 'field_activity:entity:field_program_outcome:entity:field_strategic_plan_outcome'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_activity
+        - field.storage.node.field_program_outcome
+        - field.storage.node.field_strategic_plan_outcome
+      module:
+        - node
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        authenticated: authenticated
+      view_mode:
+        'entity:node':
+          performance_measure: full
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 21
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - performance_measure
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_type: {  }
+  hierarchy:
+    weights:
+      preprocess_index: -45
+    fields:
+      field_data_group: taxonomy_term-parent
+      field_program_area: taxonomy_term-parent
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: database
