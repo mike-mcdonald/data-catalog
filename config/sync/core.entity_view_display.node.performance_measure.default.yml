@@ -360,24 +360,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: -9
             additional: {  }
-          e753ce6b-7151-47f6-84a5-83e186f0cf3d:
-            uuid: e753ce6b-7151-47f6-84a5-83e186f0cf3d
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:moderation_state'
-              label: 'Current State'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: content_moderation_state
-                label: inline
-                settings: {  }
-                third_party_settings: {  }
-            weight: -6
-            additional: {  }
           5456cbe4-66c6-4c25-94d9-35a5ce757c8e:
             uuid: 5456cbe4-66c6-4c25-94d9-35a5ce757c8e
             region: content
@@ -613,6 +595,25 @@ third_party_settings:
                   link: true
                 third_party_settings: {  }
             weight: 12
+            additional: {  }
+          189eb177-b50e-4ed2-82cd-aa4840af4a15:
+            uuid: 189eb177-b50e-4ed2-82cd-aa4840af4a15
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_activity'
+              label: 'Associated activities'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -6
             additional: {  }
         third_party_settings: {  }
 id: node.performance_measure.default

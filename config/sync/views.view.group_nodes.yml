@@ -887,7 +887,7 @@ display:
     display_plugin: data_export
     position: 3
     display_options:
-      enabled: true
+      enabled: false
       fields:
         title:
           id: title
