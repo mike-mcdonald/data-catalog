@@ -10,7 +10,7 @@ field_name: field_actual
 entity_type: node
 bundle: performance_outcome
 label: Actual
-description: ''
+description: 'Enter the actual, measured data you want to report here.'
 required: false
 translatable: false
 default_value: {  }

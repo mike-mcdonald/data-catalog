@@ -11,7 +11,7 @@ field_name: field_activity
 entity_type: node
 bundle: performance_measure
 label: 'Associated activities'
-description: ''
+description: 'Use the modal to select the performance framework activities that are measured by this performance measure.'
 required: false
 translatable: false
 default_value: {  }

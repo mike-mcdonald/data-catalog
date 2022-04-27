@@ -15,6 +15,7 @@
 {%
   set wrapper_classes = wrapper_classes|default([
     'relative',
+    'inline-flex',
   ])
 %}
 
@@ -23,11 +24,10 @@
     required ? 'bg-red-100' : 'bg-gray-100',
     required ? 'text-red-900' : 'text-current',
     'appearance-none',
-    'block',
+    'inline-flex',
     'border',
     required ? 'border-red-600' : 'border-gray-500',
     'rounded',
-    'w-full',
     'px-3',
     'pr-8',
     'py-2',

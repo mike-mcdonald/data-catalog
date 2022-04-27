@@ -10,8 +10,8 @@ id: node.performance_measure.field_category
 field_name: field_category
 entity_type: node
 bundle: performance_measure
-label: 'Performance metric purpose'
-description: ''
+label: Purpose
+description: 'Select all that apply. If you aren''t sure what purposes apply, please contact <a href="mailto:emma.sagor@portlandoregon.gov">Emma Sagor</a>'
 required: true
 translatable: false
 default_value: {  }

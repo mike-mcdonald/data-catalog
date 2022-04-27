@@ -11,7 +11,7 @@ third_party_settings:
 name: 'Performance measure'
 type: performance_measure
 description: 'Use This Content Type to create new Performance Measure records.'
-help: ''
+help: 'Use this form to add a new performance measure to the catalog. Before doing this, please check if the measure already exists by using the search or measures links at the top of this site.'
 new_revision: true
 preview_mode: 1
 display_submitted: false

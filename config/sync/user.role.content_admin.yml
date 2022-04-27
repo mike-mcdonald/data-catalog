@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - taxonomy.vocabulary.accessibility_levels
-    - taxonomy.vocabulary.audience
     - taxonomy.vocabulary.authority_levels
     - taxonomy.vocabulary.data_group_levels
     - taxonomy.vocabulary.data_owners
@@ -49,7 +48,6 @@ permissions:
   - 'create archival_information block content'
   - 'create liveness_information block content'
   - 'create terms in accessibility_levels'
-  - 'create terms in audience'
   - 'create terms in authority_levels'
   - 'create terms in data_group_levels'
   - 'create terms in data_owners'
@@ -76,7 +74,6 @@ permissions:
   - 'create terms in subject_area'
   - 'delete all revisions'
   - 'delete terms in accessibility_levels'
-  - 'delete terms in audience'
   - 'delete terms in authority_levels'
   - 'delete terms in data_group_levels'
   - 'delete terms in data_owners'
@@ -102,7 +99,6 @@ permissions:
   - 'delete terms in strategic_year'
   - 'delete terms in subject_area'
   - 'edit terms in accessibility_levels'
-  - 'edit terms in audience'
   - 'edit terms in authority_levels'
   - 'edit terms in data_group_levels'
   - 'edit terms in data_owners'

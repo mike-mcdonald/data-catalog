@@ -6,28 +6,23 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.performance_measure.body
     - field.field.node.performance_measure.field_activity
-    - field.field.node.performance_measure.field_audience
     - field.field.node.performance_measure.field_category
     - field.field.node.performance_measure.field_data_custodian
     - field.field.node.performance_measure.field_data_group
     - field.field.node.performance_measure.field_data_reliability
     - field.field.node.performance_measure.field_data_type
     - field.field.node.performance_measure.field_datasets
-    - field.field.node.performance_measure.field_formula
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
-    - field.field.node.performance_measure.field_level
     - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_origination_date
     - field.field.node.performance_measure.field_program_area
-    - field.field.node.performance_measure.field_project_name
     - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
     - field.field.node.performance_measure.field_strategic_plan
     - field.field.node.performance_measure.field_strategic_target
     - field.field.node.performance_measure.field_strategic_year
-    - field.field.node.performance_measure.field_threshold
     - field.field.node.performance_measure.field_url
     - node.type.performance_measure
   module:
@@ -50,28 +45,23 @@ content:
 hidden:
   body: true
   field_activity: true
-  field_audience: true
   field_category: true
   field_data_custodian: true
   field_data_group: true
   field_data_reliability: true
   field_data_type: true
   field_datasets: true
-  field_formula: true
   field_frequency: true
   field_keywords: true
-  field_level: true
   field_measure_id: true
   field_measure_type: true
   field_origination_date: true
   field_program_area: true
-  field_project_name: true
   field_requirements: true
   field_status: true
   field_strategic_plan: true
   field_strategic_target: true
   field_strategic_year: true
-  field_threshold: true
   field_url: true
   group_content: true
   search_api_excerpt: true

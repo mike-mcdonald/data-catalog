@@ -94,6 +94,7 @@ module:
   toolbar: 0
   user: 0
   variationcache: 0
+  views_aggregator: 0
   views_bootstrap: 0
   views_bulk_edit: 0
   views_data_export: 0
