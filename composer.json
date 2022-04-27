@@ -166,6 +166,9 @@
       },
       "drupal/select2": {
         "Fix auto create bug in PostgreSQL": "patches/select2_autocreate_fix.patch"
+      },
+      "drupal/term_merge": {
+        "Sort terms in select lists": "patches/term_merge_sort.patch"
       }
     }
   }
