@@ -1,0 +1,4 @@
+portland.contact_admin:
+  title: "Contacts"
+  route_name: view.contacts_admin.page_1
+  parent_id: system.admin_content
