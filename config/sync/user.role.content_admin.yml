@@ -45,7 +45,6 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'administer nodes'
-  - 'administer taxonomy'
   - 'bypass node access'
   - 'create archival_information block content'
   - 'create liveness_information block content'
