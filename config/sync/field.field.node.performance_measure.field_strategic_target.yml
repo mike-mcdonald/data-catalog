@@ -10,7 +10,7 @@ field_name: field_strategic_target
 entity_type: node
 bundle: performance_measure
 label: 'Strategic target'
-description: 'A quantifiable level of performance or condition, as a value for a measure, to be achieved within a time period.'
+description: 'Tell us what the strategic target or goal is for this measure (i.e., what level you want to achieve) and by what year.'
 required: false
 translatable: false
 default_value: {  }

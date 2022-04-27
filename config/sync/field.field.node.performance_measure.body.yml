@@ -12,7 +12,7 @@ field_name: body
 entity_type: node
 bundle: performance_measure
 label: Description
-description: 'Provide a description of what the measure is.'
+description: 'Use this field to explain the measure and why it is important to track.'
 required: true
 translatable: true
 default_value: {  }

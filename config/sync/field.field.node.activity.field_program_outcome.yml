@@ -10,7 +10,7 @@ id: node.activity.field_program_outcome
 field_name: field_program_outcome
 entity_type: node
 bundle: activity
-label: 'Associated program outcome(s)'
+label: 'Associated program offer outcome(s)'
 description: ''
 required: true
 translatable: false

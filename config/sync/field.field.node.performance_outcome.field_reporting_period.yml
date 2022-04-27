@@ -10,7 +10,7 @@ id: node.performance_outcome.field_reporting_period
 field_name: field_reporting_period
 entity_type: node
 bundle: performance_outcome
-label: 'Reporting period'
+label: 'Reporting year'
 description: ''
 required: true
 translatable: false
