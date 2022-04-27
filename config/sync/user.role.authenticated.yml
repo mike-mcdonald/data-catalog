@@ -31,10 +31,13 @@ label: 'Authenticated user'
 weight: -9
 is_admin: false
 permissions:
+  - 'access activity entity browser pages'
   - 'access administration pages'
   - 'access contact_browser entity browser pages'
   - 'access content'
   - 'access environment indicator'
+  - 'access performance_outcome entity browser pages'
+  - 'access strategic_plan_outcome entity browser pages'
   - 'access taxonomy overview'
   - 'access user profiles'
   - 'administer blocks'
