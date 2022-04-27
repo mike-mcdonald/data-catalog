@@ -10,7 +10,7 @@ _core:
   default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
 id: rain_help
 theme: rain
-region: notification
+region: content
 weight: -8
 provider: null
 plugin: help_block
