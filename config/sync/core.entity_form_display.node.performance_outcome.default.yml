@@ -59,10 +59,10 @@ content:
     weight: 1
     region: content
     settings:
-      width: 100%
+      width: 60rem
       autocomplete: false
       match_operator: CONTAINS
-      match_limit: 20
+      match_limit: 10
     third_party_settings: {  }
   field_reporting_month:
     type: options_select

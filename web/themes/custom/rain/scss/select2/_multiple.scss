@@ -1,9 +1,9 @@
 .select2-selection--multiple {
-  @apply bg-gray-100 appearance-none block border border-gray-500 rounded w-full py-2 px-3;
+  @apply bg-gray-100 appearance-none block border border-gray-500 rounded w-full px-3 py-2;
   cursor: text;
 
   .select2-selection__rendered {
-    @apply pl-0 list-none flex flex-wrap items-center;
+    @apply p-0 list-none flex flex-wrap items-center;
   }
 
   .select2-selection__placeholder {
