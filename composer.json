@@ -93,7 +93,8 @@
       "cweagans/composer-patches": true,
       "drupal/console-extend-plugin": true,
       "oomphinc/composer-installers-extender": true
-    }
+    },
+    "preferred-install": "source"
   },
   "autoload": {
     "classmap": [
