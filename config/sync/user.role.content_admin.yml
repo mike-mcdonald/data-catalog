@@ -34,7 +34,9 @@ dependencies:
     - content_moderation
     - node
     - taxonomy
+    - term_merge
     - toolbar
+    - views_bulk_edit
 id: content_admin
 label: 'Content admin'
 weight: -7
@@ -123,9 +125,11 @@ permissions:
   - 'edit terms in strategic_plan'
   - 'edit terms in strategic_year'
   - 'edit terms in subject_area'
+  - 'merge taxonomy terms'
   - 'revert all revisions'
   - 'use editorial transition archive'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use editorial transition revive'
+  - 'use views bulk edit'
   - 'view all revisions'
