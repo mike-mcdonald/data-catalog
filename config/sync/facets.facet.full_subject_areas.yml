@@ -18,7 +18,7 @@ query_operator: or
 hard_limit: 0
 exclude: false
 use_hierarchy: true
-keep_hierarchy_parents_active: false
+keep_hierarchy_parents_active: true
 hierarchy:
   type: taxonomy
   config: {  }
@@ -59,6 +59,11 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 100
+    settings: {  }
   translate_entity:
     processor_id: translate_entity
     weights:

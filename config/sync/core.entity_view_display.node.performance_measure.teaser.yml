@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.performance_measure.field_data_group
     - field.field.node.performance_measure.field_data_type
     - field.field.node.performance_measure.field_datasets
+    - field.field.node.performance_measure.field_direction
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
     - field.field.node.performance_measure.field_measure_id
@@ -47,6 +48,7 @@ hidden:
   field_data_group: true
   field_data_type: true
   field_datasets: true
+  field_direction: true
   field_frequency: true
   field_keywords: true
   field_measure_id: true

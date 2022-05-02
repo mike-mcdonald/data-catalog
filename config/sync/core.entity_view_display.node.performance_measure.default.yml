@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.performance_measure.field_data_group
     - field.field.node.performance_measure.field_data_type
     - field.field.node.performance_measure.field_datasets
+    - field.field.node.performance_measure.field_direction
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
     - field.field.node.performance_measure.field_measure_id
@@ -450,6 +451,22 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 12
             additional: {  }
+          4781a069-95e1-45f4-8544-faeea96df24b:
+            uuid: 4781a069-95e1-45f4-8544-faeea96df24b
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_direction'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 13
+            additional: {  }
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
@@ -507,6 +524,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 126
+    region: content
+  field_direction:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 148
     region: content
   field_frequency:
     type: entity_reference_label

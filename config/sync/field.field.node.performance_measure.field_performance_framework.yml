@@ -13,7 +13,7 @@ field_name: field_performance_framework
 entity_type: node
 bundle: performance_measure
 label: 'Associated performance framework component(s)'
-description: ''
+description: 'Us the modal to select the activity, budget program outcome, and/or strategic plan outcome this measure pertains to. Open the modal by clicking the button below.'
 required: false
 translatable: false
 default_value: {  }

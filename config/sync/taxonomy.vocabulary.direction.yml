@@ -1,0 +1,8 @@
+uuid: d416651c-7735-47ae-a517-0d552b97df8c
+langcode: en
+status: true
+dependencies: {  }
+name: Direction
+vid: direction
+description: 'Use this to manage the performance measure direction options.'
+weight: 0

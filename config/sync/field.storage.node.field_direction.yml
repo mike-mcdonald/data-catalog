@@ -1,0 +1,20 @@
+uuid: 7a39c54f-1712-43f7-8f5f-526e8bfff8e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_direction
+field_name: field_direction
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
