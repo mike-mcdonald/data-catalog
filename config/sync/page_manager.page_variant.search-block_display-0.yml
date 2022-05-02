@@ -77,17 +77,6 @@ variant_settings:
             context_mapping: {  }
           weight: 3
           additional: {  }
-        8bfa6b51-c725-4e5e-9659-6bc356748796:
-          uuid: 8bfa6b51-c725-4e5e-9659-6bc356748796
-          region: second
-          configuration:
-            id: 'facet_block:full_budget_program'
-            label: 'Filter by budget program'
-            label_display: visible
-            provider: facets
-            context_mapping: {  }
-          weight: 4
-          additional: {  }
       third_party_settings: {  }
   blocks: {  }
   page_title: ''

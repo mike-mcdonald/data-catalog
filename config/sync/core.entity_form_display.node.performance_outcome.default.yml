@@ -7,9 +7,7 @@ dependencies:
     - field.field.node.performance_outcome.field_actual
     - field.field.node.performance_outcome.field_estimate
     - field.field.node.performance_outcome.field_performance_measure
-    - field.field.node.performance_outcome.field_reporting_month
     - field.field.node.performance_outcome.field_reporting_period
-    - field.field.node.performance_outcome.field_reporting_quarter
     - node.type.performance_outcome
   module:
     - content_moderation
@@ -59,16 +57,10 @@ content:
     weight: 1
     region: content
     settings:
-      width: 60rem
+      width: 100%
       autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
-    third_party_settings: {  }
-  field_reporting_month:
-    type: options_select
-    weight: 4
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_reporting_period:
     type: cshs
@@ -82,12 +74,6 @@ content:
       hierarchy_depth: 0
       required_depth: 0
       none_label: '- Please select -'
-    third_party_settings: {  }
-  field_reporting_quarter:
-    type: options_select
-    weight: 3
-    region: content
-    settings: {  }
     third_party_settings: {  }
   group_content:
     type: group_selector_widget

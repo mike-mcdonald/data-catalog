@@ -80,7 +80,7 @@ third_party_settings:
                 settings:
                   view_mode: card
                 third_party_settings: {  }
-            weight: -3
+            weight: -4
             additional: {  }
           06ad06cb-b6c5-4375-a85a-fc6d7bdf9a72:
             uuid: 06ad06cb-b6c5-4375-a85a-fc6d7bdf9a72
@@ -103,7 +103,7 @@ third_party_settings:
                   rel: '0'
                   target: _blank
                 third_party_settings: {  }
-            weight: 10
+            weight: 9
             additional: {  }
           eb77e2c7-c01f-434a-a132-af07633b71b2:
             uuid: eb77e2c7-c01f-434a-a132-af07633b71b2
@@ -122,7 +122,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 10
+            weight: 8
             additional: {  }
           8370368d-4a53-44c8-9076-e3127acd33a7:
             uuid: 8370368d-4a53-44c8-9076-e3127acd33a7
@@ -159,7 +159,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 10
+            weight: 1
             additional: {  }
           d2cbe4bf-ddc2-4418-a76b-5326c36ff1ad:
             uuid: d2cbe4bf-ddc2-4418-a76b-5326c36ff1ad
@@ -178,7 +178,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 5
+            weight: 4
             additional: {  }
           dc44f6af-c558-402c-b1ed-acbaf57d8e94:
             uuid: dc44f6af-c558-402c-b1ed-acbaf57d8e94
@@ -216,7 +216,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 10
+            weight: 3
             additional: {  }
           2638be8d-05d6-45d4-9e4c-ae67e7ca698d:
             uuid: 2638be8d-05d6-45d4-9e4c-ae67e7ca698d
@@ -253,7 +253,7 @@ third_party_settings:
                 settings:
                   view_mode: reference
                 third_party_settings: {  }
-            weight: 10
+            weight: 5
             additional: {  }
           9f150d66-8d5b-40d2-b477-8dbf9456e7c3:
             uuid: 9f150d66-8d5b-40d2-b477-8dbf9456e7c3
@@ -293,7 +293,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -1
+            weight: -2
             additional: {  }
           255f4eb8-307c-4d2e-b81b-e9f54c9ebf55:
             uuid: 255f4eb8-307c-4d2e-b81b-e9f54c9ebf55
@@ -357,7 +357,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 9
+            weight: 2
             additional: {  }
           d99de31f-252e-4296-a866-f348abe56bd6:
             uuid: d99de31f-252e-4296-a866-f348abe56bd6
@@ -398,7 +398,7 @@ third_party_settings:
                   scale: 2
                   prefix_suffix: true
                 third_party_settings: {  }
-            weight: 0
+            weight: -1
             additional: {  }
           449b94db-9329-4792-8215-4448ead56fbf:
             uuid: 449b94db-9329-4792-8215-4448ead56fbf
@@ -417,23 +417,7 @@ third_party_settings:
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-            weight: -2
-            additional: {  }
-          89c3c282-d39b-4b6e-bb4b-8812d47820ec:
-            uuid: 89c3c282-d39b-4b6e-bb4b-8812d47820ec
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:field_performance_framework'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 11
+            weight: -3
             additional: {  }
           85f3471e-d4dc-49fc-aa75-05021ae3cc51:
             uuid: 85f3471e-d4dc-49fc-aa75-05021ae3cc51
@@ -449,7 +433,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 12
+            weight: 6
             additional: {  }
           4781a069-95e1-45f4-8544-faeea96df24b:
             uuid: 4781a069-95e1-45f4-8544-faeea96df24b
@@ -465,7 +449,26 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 13
+            weight: 0
+            additional: {  }
+          89c3c282-d39b-4b6e-bb4b-8812d47820ec:
+            uuid: 89c3c282-d39b-4b6e-bb4b-8812d47820ec
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_performance_framework'
+              label: 'Associated performance framework component(s)'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -6
             additional: {  }
         third_party_settings: {  }
 id: node.performance_measure.default
