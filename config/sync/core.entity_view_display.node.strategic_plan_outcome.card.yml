@@ -44,14 +44,19 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:strategic_plan_outcome:field_strategic_plan'
+              label: 'Strategic plan goal'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                type: entity_reference_label
+                type: cshs_full_hierarchy
                 label: above
                 settings:
-                  link: true
+                  linked: 1
+                  reverse: 0
+                  separator: ' / '
                 third_party_settings: {  }
             weight: -7
             additional: {  }

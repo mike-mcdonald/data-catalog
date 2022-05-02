@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.strategic_plan_outcome.field_strategic_plan
     - node.type.strategic_plan_outcome
   module:
+    - cshs
     - text
     - user
 id: node.strategic_plan_outcome.default
@@ -22,10 +23,12 @@ content:
     weight: 0
     region: content
   field_strategic_plan:
-    type: entity_reference_label
+    type: cshs_full_hierarchy
     label: above
     settings:
-      link: true
+      linked: '1'
+      separator: ' / '
+      reverse: 0
     third_party_settings: {  }
     weight: 1
     region: content
