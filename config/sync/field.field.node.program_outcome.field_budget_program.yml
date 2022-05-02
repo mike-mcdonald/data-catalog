@@ -1,18 +1,18 @@
-uuid: fed33d89-3b81-4220-b942-b5c201152696
+uuid: 14f56d8d-3b55-44ad-bc6a-f76657d7cda7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_program_area
-    - node.type.performance_measure
+    - field.storage.node.field_budget_program
+    - node.type.program_outcome
     - taxonomy.vocabulary.program_area
-id: node.performance_measure.field_program_area
-field_name: field_program_area
+id: node.program_outcome.field_budget_program
+field_name: field_budget_program
 entity_type: node
-bundle: performance_measure
-label: 'Program area'
+bundle: program_outcome
+label: 'Budget program'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

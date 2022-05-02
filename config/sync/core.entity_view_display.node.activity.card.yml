@@ -1,0 +1,129 @@
+uuid: 257a3068-4492-49ab-805c-a35bd6212623
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.activity.title
+    - core.entity_view_mode.node.card
+    - field.field.node.activity.body
+    - field.field.node.activity.field_budget_program
+    - node.type.activity
+  module:
+    - layout_builder
+    - text
+    - user
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          371e1546-27e3-43b4-9993-2a1da1aaff61:
+            uuid: 371e1546-27e3-43b4-9993-2a1da1aaff61
+            region: content
+            configuration:
+              id: 'field_block:node:activity:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: -7
+            additional: {  }
+          04dbb634-6f8a-41ec-a708-f379b024ff66:
+            uuid: 04dbb634-6f8a-41ec-a708-f379b024ff66
+            region: content
+            configuration:
+              id: 'field_block:node:activity:field_budget_program'
+              label: 'Budget program'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: cshs_full_hierarchy
+                label: above
+                settings:
+                  linked: 0
+                  reverse: 0
+                  separator: ' / '
+                third_party_settings: {  }
+            weight: -8
+            additional: {  }
+          45219d61-9627-4c56-84bf-b350466360e3:
+            uuid: 45219d61-9627-4c56-84bf-b350466360e3
+            region: content
+            configuration:
+              id: 'field_block:node:activity:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: -10
+            additional: {  }
+          dc20af00-53fa-4466-af8f-c436f415242c:
+            uuid: dc20af00-53fa-4466-af8f-c436f415242c
+            region: content
+            configuration:
+              id: 'field_block:node:activity:title'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+        third_party_settings: {  }
+id: node.activity.card
+targetEntityType: node
+bundle: activity
+mode: card
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_budget_program:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  group_content: true
+  search_api_excerpt: true

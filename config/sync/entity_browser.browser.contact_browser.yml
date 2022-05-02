@@ -12,7 +12,7 @@ label: 'Contact browser'
 display: modal
 display_configuration:
   width: ''
-  height: '800'
+  height: '600'
   link_text: 'Select contact(s)'
   auto_open: false
 selection_display: no_display

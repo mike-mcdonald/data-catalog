@@ -1,18 +1,18 @@
-uuid: e130141f-7896-4d6e-ad0a-b03c673d3686
+uuid: 0ff2eed8-feb7-402a-806b-b7e53701a3ea
 langcode: en
 status: true
 dependencies:
   config:
-    - page_manager.page.measures
-id: measures-layout_builder-0
-label: 'Layout Builder'
+    - page_manager.page.search
+id: search-block_display-0
+label: 'Layout builder'
 weight: 0
 variant: layout_builder
 variant_settings:
   id: layout_builder
   label: null
   weight: 0
-  uuid: 621b8b0e-fa02-4b5d-928c-6064d93401ad
+  uuid: 7138df0c-3d56-4a39-80ae-0fe351852cbd
   sections:
     -
       layout_id: layout_twocol_right
@@ -20,11 +20,11 @@ variant_settings:
         label: ''
         context_mapping: {  }
       components:
-        755f0054-f75b-4780-8d5b-94e48a457e74:
-          uuid: 755f0054-f75b-4780-8d5b-94e48a457e74
+        b8eb15cc-94fb-48d2-ab7b-cf9c2c55d170:
+          uuid: b8eb15cc-94fb-48d2-ab7b-cf9c2c55d170
           region: first
           configuration:
-            id: 'views_block:index_measures-block_1'
+            id: 'views_block:full_index-block_1'
             label: ''
             label_display: '0'
             provider: views
@@ -33,63 +33,65 @@ variant_settings:
             items_per_page: none
           weight: 0
           additional: {  }
-        bcae2d86-cf36-44c6-b7c7-60d5ea7098ad:
-          uuid: bcae2d86-cf36-44c6-b7c7-60d5ea7098ad
+        2d43d9d7-0f34-4188-8f3c-1a87760f82a9:
+          uuid: 2d43d9d7-0f34-4188-8f3c-1a87760f82a9
           region: second
           configuration:
-            id: 'facet_block:measure_strategic_plan_outcome'
-            label: 'Filter by strategic plan outcome'
+            id: 'facet_block:full_content_type'
+            label: 'Filter by content type'
             label_display: visible
             provider: facets
             context_mapping: {  }
           weight: 0
           additional: {  }
-        887569eb-0603-4bdb-a03a-b92392cb33f4:
-          uuid: 887569eb-0603-4bdb-a03a-b92392cb33f4
+        74b364f8-a71c-428b-bff7-db27eddb676c:
+          uuid: 74b364f8-a71c-428b-bff7-db27eddb676c
           region: second
           configuration:
-            id: 'facet_block:measure_program_outcome'
-            label: 'Filter by program outcome'
+            id: 'facet_block:full_division_group'
+            label: 'Filter by division/group'
             label_display: visible
             provider: facets
             context_mapping: {  }
           weight: 1
           additional: {  }
-        b4d88cef-f8c6-4914-9b99-d69886baca0e:
-          uuid: b4d88cef-f8c6-4914-9b99-d69886baca0e
+        20acafaa-e826-48e4-8c89-d39897bda822:
+          uuid: 20acafaa-e826-48e4-8c89-d39897bda822
           region: second
           configuration:
-            id: 'facet_block:measure_activity'
-            label: 'Filter by activity'
+            id: 'facet_block:full_subject_areas'
+            label: 'Filter by data domain'
             label_display: visible
             provider: facets
             context_mapping: {  }
           weight: 2
           additional: {  }
-        83fd3811-032e-491b-bcbd-3223d450d07c:
-          uuid: 83fd3811-032e-491b-bcbd-3223d450d07c
+        04cf2e08-24d3-4369-8a0d-d1eb9a0adb5d:
+          uuid: 04cf2e08-24d3-4369-8a0d-d1eb9a0adb5d
           region: second
           configuration:
-            id: 'facet_block:measure_program_area'
-            label: 'Filter by program area'
+            id: 'facet_block:full_contact'
+            label: 'Filter by contact'
             label_display: visible
             provider: facets
             context_mapping: {  }
           weight: 3
           additional: {  }
-        68b8d02a-662f-4506-8b8c-e4af0669574f:
-          uuid: 68b8d02a-662f-4506-8b8c-e4af0669574f
+        8bfa6b51-c725-4e5e-9659-6bc356748796:
+          uuid: 8bfa6b51-c725-4e5e-9659-6bc356748796
           region: second
           configuration:
-            id: 'facet_block:measure_division_and_group'
-            label: 'Filter by division and group'
+            id: 'facet_block:full_budget_program'
+            label: 'Filter by budget program'
             label_display: visible
             provider: facets
             context_mapping: {  }
           weight: 4
           additional: {  }
       third_party_settings: {  }
-page: measures
+  blocks: {  }
+  page_title: ''
+page: search
 selection_criteria: {  }
 selection_logic: and
 static_context: {  }

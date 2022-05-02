@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8fff9cebd6ff1c5be67ca67596620b70",
+    "content-hash": "0ed876f12ad02d863cd52df600f016c7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4290,10 +4290,6 @@
                     "homepage": "https://www.drupal.org/user/28539"
                 },
                 {
-                    "name": "pmichelazzo",
-                    "homepage": "https://www.drupal.org/user/182237"
-                },
-                {
                     "name": "srdtwc",
                     "homepage": "https://www.drupal.org/user/3422763"
                 }
@@ -7966,16 +7962,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.6.2",
+            "version": "1.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "becb9603a31d70f5007d505877a7b812598dfe46"
+                "reference": "e4cd0c2dd97809fcfdcd1f367ccf0be86c235168"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/becb9603a31d70f5007d505877a7b812598dfe46",
-                "reference": "becb9603a31d70f5007d505877a7b812598dfe46",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e4cd0c2dd97809fcfdcd1f367ccf0be86c235168",
+                "reference": "e4cd0c2dd97809fcfdcd1f367ccf0be86c235168",
                 "shasum": ""
             },
             "require": {
@@ -8001,7 +7997,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.6.2"
+                "source": "https://github.com/phpstan/phpstan/tree/1.6.4"
             },
             "funding": [
                 {
@@ -8021,7 +8017,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-27T11:05:24+00:00"
+            "time": "2022-05-02T16:02:21+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",

@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_authority_level
     - search_api.index.full
   module:
     - search_api
@@ -209,12 +208,13 @@ display:
           view_modes:
             'entity:node':
               access_point: card
+              activity: card
               business_term: card
               contact_information: card
-              database: card
               dataset: card
               performance_measure: card
-              server: card
+              program_outcome: card
+              strategic_plan_outcome: card
       query:
         type: views_query
         options:
@@ -229,14 +229,33 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_authority_level'
+        - 'config:search_api.index.full'
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
+    position: 1
+    display_options:
+      cache:
+        type: none
+      defaults:
+        cache: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
         - 'config:search_api.index.full'
   page_1:
     id: page_1
@@ -244,6 +263,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      enabled: false
       cache:
         type: none
       defaults:
@@ -253,12 +273,10 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_authority_level'
         - 'config:search_api.index.full'

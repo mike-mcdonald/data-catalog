@@ -1,26 +1,26 @@
-uuid: 565a7d1e-2c41-4e14-8320-eacb7c35b7b6
+uuid: c0c8f68f-42cc-4419-a801-0a4a4e9ed9fc
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_strategic_plan
+    - field.storage.node.field_subject_areas
     - node.type.performance_measure
-    - taxonomy.vocabulary.strategic_plan
-id: node.performance_measure.field_strategic_plan
-field_name: field_strategic_plan
+    - taxonomy.vocabulary.subject_area
+id: node.performance_measure.field_subject_areas
+field_name: field_subject_areas
 entity_type: node
 bundle: performance_measure
-label: 'Strategic plan'
+label: 'Data domain'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      strategic_plan: strategic_plan
+      subject_area: subject_area
     sort:
       field: name
       direction: asc

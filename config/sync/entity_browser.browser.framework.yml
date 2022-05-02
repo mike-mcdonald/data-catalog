@@ -1,4 +1,4 @@
-uuid: f66d56c7-9b51-47c0-9b6f-f143146d8633
+uuid: cb71b93a-dbbd-4185-90f1-c41419682cf2
 langcode: en
 status: true
 dependencies:
@@ -6,26 +6,26 @@ dependencies:
     - views.view.entity_browser
   module:
     - views
-name: activity
-label: Activity
+name: framework
+label: 'Performance framework'
 display: modal
 display_configuration:
   width: ''
-  height: '500'
-  link_text: 'Select activity'
+  height: '600'
+  link_text: 'Select component(s)'
   auto_open: false
 selection_display: no_display
 selection_display_configuration: {  }
 widget_selector: single
 widget_selector_configuration: {  }
 widgets:
-  1ec072aa-bb56-43ce-a75f-48fbbd1132af:
+  bc4e091f-1f7f-4371-81e4-4f6d6d46d8e3:
     id: view
-    uuid: 1ec072aa-bb56-43ce-a75f-48fbbd1132af
+    uuid: bc4e091f-1f7f-4371-81e4-4f6d6d46d8e3
     label: Find
     weight: 1
     settings:
-      submit_text: 'Select activity'
+      submit_text: 'Select components'
       auto_select: false
       view: entity_browser
-      view_display: activity_browser
+      view_display: framework_browser

@@ -1,26 +1,26 @@
-uuid: 7e11a497-4511-4845-b283-605e94840082
+uuid: 096d444a-282f-4926-a908-6864919e4047
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_subject_areas
-    - node.type.dataset
-    - taxonomy.vocabulary.subject_area
-id: node.dataset.field_subject_areas
-field_name: field_subject_areas
+    - field.storage.node.field_budget_program
+    - node.type.activity
+    - taxonomy.vocabulary.program_area
+id: node.activity.field_budget_program
+field_name: field_budget_program
 entity_type: node
-bundle: dataset
-label: 'Data domain'
+bundle: activity
+label: 'Budget program'
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      subject_area: subject_area
+      program_area: program_area
     sort:
       field: name
       direction: asc

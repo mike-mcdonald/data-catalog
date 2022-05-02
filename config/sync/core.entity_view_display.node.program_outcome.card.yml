@@ -1,0 +1,145 @@
+uuid: 8865e2f6-bc4d-4263-96f4-1079a91cc794
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.program_outcome.title
+    - core.entity_view_mode.node.card
+    - field.field.node.program_outcome.body
+    - field.field.node.program_outcome.field_budget_program
+    - field.field.node.program_outcome.field_strategic_plan_outcome
+    - node.type.program_outcome
+  module:
+    - layout_builder
+    - text
+    - user
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          490b0e5e-686c-4a92-aa42-42837effbf5b:
+            uuid: 490b0e5e-686c-4a92-aa42-42837effbf5b
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:field_budget_program'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -7
+            additional: {  }
+          3eba6b00-192d-4a6b-8e12-1d15c0179d60:
+            uuid: 3eba6b00-192d-4a6b-8e12-1d15c0179d60
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:field_strategic_plan_outcome'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -6
+            additional: {  }
+          c7a72d2f-369c-4d2c-b628-63894b9b9fd3:
+            uuid: c7a72d2f-369c-4d2c-b628-63894b9b9fd3
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: -8
+            additional: {  }
+          7d70736a-0066-43a5-a831-3306a3f49ee6:
+            uuid: 7d70736a-0066-43a5-a831-3306a3f49ee6
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: -10
+            additional: {  }
+          213bef27-a027-4c7b-936b-77c786697a9a:
+            uuid: 213bef27-a027-4c7b-936b-77c786697a9a
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:title'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+        third_party_settings: {  }
+id: node.program_outcome.card
+targetEntityType: node
+bundle: program_outcome
+mode: card
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_budget_program:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_strategic_plan_outcome:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  group_content: true
+  links: true
+  search_api_excerpt: true

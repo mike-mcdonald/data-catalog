@@ -1,19 +1,19 @@
-uuid: b47e00c9-083c-4100-abb1-e63d2e646ae7
+uuid: 8cbd865a-157b-45f5-9645-7e2b4f94316e
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.measures
-    - views.view.index_measures
+    - search_api.index.full
+    - views.view.full_index
   module:
     - search_api
-id: measure_program_outcome
-name: 'Program outcome'
+id: associated_performance_framework_budget_program
+name: 'Associated performance framework component(s) » Content » Budget program'
 weight: 0
 min_count: 1
-url_alias: program_outcome
-facet_source_id: 'search_api:views_block__index_measures__block_1'
-field_identifier: field_program_outcome
+url_alias: associated_performance_framework_budget_program
+facet_source_id: 'search_api:views_block__full_index__block_1'
+field_identifier: field_budget_program_1
 query_operator: or
 hard_limit: 0
 exclude: false
@@ -59,6 +59,11 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 100
+    settings: {  }
   translate_entity:
     processor_id: translate_entity
     weights:

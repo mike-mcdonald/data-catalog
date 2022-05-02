@@ -1,0 +1,29 @@
+uuid: 8c6dc76f-e1b2-46bf-a361-63a8f5c74c87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_strategic_plan
+    - node.type.strategic_plan_outcome
+    - taxonomy.vocabulary.strategic_plan
+id: node.strategic_plan_outcome.field_strategic_plan
+field_name: field_strategic_plan
+entity_type: node
+bundle: strategic_plan_outcome
+label: 'Strategic plan goal'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      strategic_plan: strategic_plan
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,19 +1,19 @@
-uuid: 2002a219-5db5-460d-bb2e-e40386a58615
+uuid: 000c906b-f559-4531-85cf-1d6080e6d1eb
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.measures
-    - views.view.index_measures
+    - search_api.index.full
+    - views.view.full_index
   module:
     - search_api
-id: measure_division_and_group
-name: 'Measure division and group'
+id: full_budget_program
+name: 'Budget program'
 weight: 0
 min_count: 1
-url_alias: division_and_group
-facet_source_id: 'search_api:views_block__index_measures__block_1'
-field_identifier: field_data_group
+url_alias: full_budget_program
+facet_source_id: 'search_api:views_block__full_index__block_1'
+field_identifier: field_budget_program
 query_operator: or
 hard_limit: 0
 exclude: false
@@ -47,6 +47,29 @@ processor_configs:
       sort: 20
     settings:
       sort: ASC
+  combine_processor:
+    processor_id: combine_processor
+    weights:
+      build: 5
+    settings:
+      associated_performance_framework_budget_program:
+        combine: true
+        mode: union
+      full_contact:
+        combine: false
+        mode: null
+      full_content_type:
+        combine: false
+        mode: null
+      full_division_group:
+        combine: false
+        mode: null
+      full_keywords:
+        combine: false
+        mode: null
+      full_subject_areas:
+        combine: false
+        mode: null
   count_widget_order:
     processor_id: count_widget_order
     weights:
@@ -59,6 +82,11 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 100
+    settings: {  }
   translate_entity:
     processor_id: translate_entity
     weights:

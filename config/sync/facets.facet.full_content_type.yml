@@ -8,11 +8,11 @@ dependencies:
   module:
     - search_api
 id: full_content_type
-name: 'Full content type'
+name: 'Content type'
 weight: 0
 min_count: 1
 url_alias: full_content_type
-facet_source_id: 'search_api:views_page__full_index__page_1'
+facet_source_id: 'search_api:views_block__full_index__block_1'
 field_identifier: type
 query_operator: or
 hard_limit: 0

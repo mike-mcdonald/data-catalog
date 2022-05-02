@@ -155,7 +155,8 @@
         "Fix number step validation bug 2": "patches/number_step_validation_bug_2.patch",
         "Remove rounding preSave": "patches/decimal_round_error.patch",
         "Load users by e-mail, case-insensitive": "patches/user_email_load_insensitive.patch",
-        "2429699 - Add Views EntityReference filter to be available for all entity reference fields": "https://www.drupal.org/files/issues/2022-04-07/drupal-views-entity-reference-filter-2429699-476.patch"
+        "2429699 - Add Views EntityReference filter to be available for all entity reference fields": "https://www.drupal.org/files/issues/2022-04-07/drupal-views-entity-reference-filter-2429699-476.patch",
+        "Help debug bad config": "https://www.drupal.org/files/issues/2022-02-09/3218230-8.patch"
       },
       "drupal/group": {
         "Change some labels to be more friendly": "patches/group_friendly_labels_5.patch",

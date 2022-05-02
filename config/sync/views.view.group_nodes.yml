@@ -12,7 +12,6 @@ dependencies:
     - field.storage.node.field_data_custodian
     - field.storage.node.field_data_group
     - field.storage.node.field_data_owner
-    - field.storage.node.field_data_reliability
     - field.storage.node.field_data_type
     - field.storage.node.field_demographic_information
     - field.storage.node.field_estimate
@@ -21,7 +20,6 @@ dependencies:
     - field.storage.node.field_measure_id
     - field.storage.node.field_measure_type
     - field.storage.node.field_origination_date
-    - field.storage.node.field_program_area
     - field.storage.node.field_purpose
     - field.storage.node.field_quality_concerns
     - field.storage.node.field_reporting_period
@@ -1838,69 +1836,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_data_reliability:
-          id: field_data_reliability
-          table: node__field_data_reliability
-          field: field_data_reliability
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Data Reliability'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_quality_concerns:
           id: field_quality_concerns
           table: node__field_quality_concerns
@@ -2248,7 +2183,6 @@ display:
         - 'config:field.storage.node.field_data_custodian'
         - 'config:field.storage.node.field_data_group'
         - 'config:field.storage.node.field_data_owner'
-        - 'config:field.storage.node.field_data_reliability'
         - 'config:field.storage.node.field_demographic_information'
         - 'config:field.storage.node.field_keywords'
         - 'config:field.storage.node.field_purpose'
@@ -2963,69 +2897,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_data_reliability:
-          id: field_data_reliability
-          table: node__field_data_reliability
-          field: field_data_reliability
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Data Reliability'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_category:
           id: field_category
           table: node__field_category
@@ -3035,69 +2906,6 @@ display:
           admin_label: ''
           plugin_id: field
           label: 'Performance Metric Purpose'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_program_area:
-          id: field_program_area
-          table: node__field_program_area
-          field: field_program_area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Program Area'
           exclude: false
           alter:
             alter_text: false
@@ -3814,14 +3622,12 @@ display:
         - 'config:field.storage.node.field_category'
         - 'config:field.storage.node.field_data_custodian'
         - 'config:field.storage.node.field_data_group'
-        - 'config:field.storage.node.field_data_reliability'
         - 'config:field.storage.node.field_data_type'
         - 'config:field.storage.node.field_frequency'
         - 'config:field.storage.node.field_keywords'
         - 'config:field.storage.node.field_measure_id'
         - 'config:field.storage.node.field_measure_type'
         - 'config:field.storage.node.field_origination_date'
-        - 'config:field.storage.node.field_program_area'
         - 'config:field.storage.node.field_requirements'
         - 'config:field.storage.node.field_status'
         - 'config:field.storage.node.field_strategic_plan'
