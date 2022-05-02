@@ -5,11 +5,11 @@ dependencies:
   config:
     - field.storage.node.field_budget_program
     - field.storage.node.field_performance_framework
-    - field.storage.node.field_strategic_plan
-    - field.storage.node.field_subject_areas
+    - field.storage.node.field_data_custodian
     - field.storage.node.field_data_group
     - field.storage.node.field_keywords
-    - field.storage.node.field_data_custodian
+    - field.storage.node.field_strategic_plan
+    - field.storage.node.field_subject_areas
     - search_api.server.database
     - core.entity_view_mode.node.search_index
   module:
@@ -154,6 +154,7 @@ processor_settings:
       preprocess_index: -45
     fields:
       field_data_group: taxonomy_term-parent
+      field_strategic_plan: taxonomy_term-parent
       field_subject_areas: taxonomy_term-parent
   html_filter:
     weights:
