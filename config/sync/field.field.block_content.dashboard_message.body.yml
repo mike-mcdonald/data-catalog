@@ -1,0 +1,23 @@
+uuid: 818e33a6-a8f2-48f3-88ed-caa527857628
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dashboard_message
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.dashboard_message.body
+field_name: body
+entity_type: block_content
+bundle: dashboard_message
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

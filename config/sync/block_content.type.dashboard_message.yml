@@ -1,0 +1,8 @@
+uuid: cf5bf009-ac68-4554-a66a-ea4e32438c72
+langcode: en
+status: true
+dependencies: {  }
+id: dashboard_message
+label: 'Dashboard message'
+revision: 1
+description: 'These blocks will display on all user dashboards at the top of the page. Use these to provide messages and directions for users of the site.'
