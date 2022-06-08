@@ -1,0 +1,49 @@
+uuid: 2b86979c-bc26-43ba-a14c-9801af7443a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dashboard_message
+    - field.field.block_content.dashboard_message.body
+    - field.field.block_content.dashboard_message.field_weight
+  module:
+    - field_layout
+    - text
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.dashboard_message.default
+targetEntityType: block_content
+bundle: dashboard_message
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_weight:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

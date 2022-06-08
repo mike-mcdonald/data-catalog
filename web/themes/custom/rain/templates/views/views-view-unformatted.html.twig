@@ -15,10 +15,16 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
+{% set classes = classes|default([
+  'grid',
+  'grid-cols-1',
+  'gap-1',
+]) %}
+
 {% if title %}
 	<h3>{{ title }}</h3>
 {% endif %}
-<section>
+<section{{create_attribute({'class':classes})}}>
 	{% for row in rows %}
 		{%
       set row_classes = [

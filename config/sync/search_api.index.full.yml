@@ -138,6 +138,7 @@ datasource_settings:
       selected:
         - changelog
         - database
+        - notification
         - page
         - performance_outcome
         - server

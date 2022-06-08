@@ -215,7 +215,7 @@ display:
       style:
         type: default
         options:
-          row_class: my-12
+          row_class: my-6
           default_row_class: true
           uses_fields: false
       row:
