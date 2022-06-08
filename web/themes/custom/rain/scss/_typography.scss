@@ -27,7 +27,9 @@ body {
 }
 
 p {
-  @apply my-3;
+  + p {
+    @apply mt-3;
+  }
 }
 dt {
   @apply font-bold leading-normal;
