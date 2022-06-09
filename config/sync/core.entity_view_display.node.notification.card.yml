@@ -1,0 +1,115 @@
+uuid: f9c8db13-3ba8-42fc-93be-94dc0a4d0d09
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.notification.body
+    - node.type.notification
+  module:
+    - layout_builder
+    - text
+    - user
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9f4a163d-6be8-4ac1-9dae-cadfa4bfe5fb:
+            uuid: 9f4a163d-6be8-4ac1-9dae-cadfa4bfe5fb
+            region: content
+            configuration:
+              id: 'field_block:node:notification:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: smart_trim
+                label: hidden
+                settings:
+                  trim_length: 300
+                  trim_type: chars
+                  trim_suffix: ''
+                  wrap_output: false
+                  wrap_class: trimmed
+                  more_link: true
+                  more_class: ''
+                  more_text: 'Read more ...'
+                  summary_handler: full
+                  trim_options:
+                    text: false
+                    trim_zero: false
+                third_party_settings: {  }
+            weight: -8
+            additional: {  }
+          60c490ae-29ae-49a0-8513-7680cdefb844:
+            uuid: 60c490ae-29ae-49a0-8513-7680cdefb844
+            region: content
+            configuration:
+              id: 'field_block:node:notification:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: -10
+            additional: {  }
+          378a725c-0004-4585-998b-dca00a62e922:
+            uuid: 378a725c-0004-4585-998b-dca00a62e922
+            region: content
+            configuration:
+              id: 'field_block:node:notification:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+        third_party_settings: {  }
+id: node.notification.card
+targetEntityType: node
+bundle: notification
+mode: card
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  group_content: true
+  search_api_excerpt: true
