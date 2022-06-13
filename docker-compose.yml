@@ -35,11 +35,10 @@ services:
     build:
       context: .docker/nginx
     environment:
-      PANTHEON_ENVIRONMENT: dev
       FASTCGI_HOST: php
       FASTCGI_PORT: 9000
     ports:
-      - "8080:80"
+      - "8888:80"
     volumes:
       - ".:/var/www/html"
       - "./.docker/nginx/rootfs/etc/nginx/templates:/etc/nginx/templates:cached"
