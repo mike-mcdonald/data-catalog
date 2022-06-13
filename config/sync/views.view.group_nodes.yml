@@ -39,7 +39,6 @@ dependencies:
     - node.type.contact_information
     - node.type.database
     - node.type.dataset
-    - node.type.page
     - node.type.performance_measure
     - node.type.performance_outcome
     - node.type.server
