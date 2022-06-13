@@ -18,8 +18,8 @@ content:
   body:
     type: text_default
     label: visually_hidden
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
   field_budget_program:
@@ -27,7 +27,7 @@ content:
     label: inline
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 1
     region: content
   field_strategic_plan_outcome:
@@ -35,7 +35,7 @@ content:
     label: inline
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 2
     region: content
 hidden:
