@@ -27,8 +27,8 @@ body {
 }
 
 p {
-  + p {
-    @apply mt-3;
+  &:not(:first-child) {
+    @apply mt-4;
   }
 }
 dt {
