@@ -2,6 +2,8 @@ uuid: 50be3540-84c4-4ba8-b099-03414e50dd12
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - rain
 _core:
@@ -17,4 +19,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/user/*'
