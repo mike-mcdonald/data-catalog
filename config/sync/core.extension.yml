@@ -75,6 +75,7 @@ module:
   page_manager_ui: 0
   path: 0
   path_alias: 0
+  pgsql: 0
   portland: 0
   rdf: 0
   rest: 0

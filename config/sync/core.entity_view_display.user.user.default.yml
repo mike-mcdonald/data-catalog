@@ -83,6 +83,25 @@ third_party_settings:
               items_per_page: none
             weight: -9
             additional: {  }
+          328ba587-4ced-4336-ad39-05ee3711c2cb:
+            uuid: 328ba587-4ced-4336-ad39-05ee3711c2cb
+            region: content
+            configuration:
+              id: 'field_block:user:user:user_picture'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -114,6 +133,8 @@ content:
     settings:
       image_link: content
       image_style: thumbnail
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
