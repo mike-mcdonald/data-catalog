@@ -77,6 +77,28 @@ variant_settings:
             context_mapping: {  }
           weight: 3
           additional: {  }
+        bd22299e-2690-4b34-9612-1ca651127a04:
+          uuid: bd22299e-2690-4b34-9612-1ca651127a04
+          region: second
+          configuration:
+            id: 'facet_block:full_strategic_plan'
+            label: 'Filter by strategic plan'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 4
+          additional: {  }
+        bc47b7c9-1d84-49d3-a45c-fa5fb8b10961:
+          uuid: bc47b7c9-1d84-49d3-a45c-fa5fb8b10961
+          region: second
+          configuration:
+            id: 'facet_block:full_budget_program'
+            label: 'Filter by budget program'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 5
+          additional: {  }
       third_party_settings: {  }
   blocks: {  }
   page_title: ''

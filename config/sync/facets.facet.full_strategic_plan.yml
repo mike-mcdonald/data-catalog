@@ -1,4 +1,4 @@
-uuid: da79ba0a-6ce7-45c5-acff-794e03aa91f4
+uuid: b9c46f33-b3fc-4696-9045-bf056545e63d
 langcode: en
 status: true
 dependencies:
@@ -7,18 +7,18 @@ dependencies:
     - views.view.full_index
   module:
     - search_api
-id: full_budget_program
-name: 'Budget program'
+id: full_strategic_plan
+name: 'Strategic plan'
 weight: 0
 min_count: 1
-url_alias: full_budget_program
+url_alias: full_strategic_plan
 facet_source_id: 'search_api:views_block__full_index__block_1'
-field_identifier: budget_program
+field_identifier: strategic_plan
 query_operator: or
 hard_limit: 0
 exclude: false
 use_hierarchy: true
-keep_hierarchy_parents_active: false
+keep_hierarchy_parents_active: true
 hierarchy:
   type: taxonomy
   config: {  }
@@ -47,11 +47,6 @@ processor_configs:
       sort: 20
     settings:
       sort: ASC
-  advanced_translate_entity_aggregated_fields:
-    processor_id: advanced_translate_entity_aggregated_fields
-    weights:
-      build: 5
-    settings: {  }
   count_widget_order:
     processor_id: count_widget_order
     weights:
@@ -68,6 +63,11 @@ processor_configs:
     processor_id: hierarchy_processor
     weights:
       build: 100
+    settings: {  }
+  translate_entity_aggregated_fields:
+    processor_id: translate_entity_aggregated_fields
+    weights:
+      build: 5
     settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
