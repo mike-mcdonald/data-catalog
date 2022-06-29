@@ -20,6 +20,7 @@ dependencies:
     - entity_browser
     - environment_indicator
     - filter
+    - flag
     - media
     - node
     - system
@@ -62,6 +63,8 @@ permissions:
   - 'edit own dataset content'
   - 'edit own performance_measure content'
   - 'edit own performance_outcome content'
+  - 'flag bookmark'
+  - 'unflag bookmark'
   - 'update any archival_information block content'
   - 'update any liveness_information block content'
   - 'use editorial transition create_new_draft'
