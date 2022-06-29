@@ -115,6 +115,16 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 3
             additional: {  }
+          3d85096e-ce2b-4070-a659-7996c4aa4b6f:
+            uuid: 3d85096e-ce2b-4070-a659-7996c4aa4b6f
+            region: content
+            configuration:
+              id: 'extra_field_block:node:business_term:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 4
+            additional: {  }
         third_party_settings: {  }
 id: node.business_term.card
 targetEntityType: node
@@ -136,6 +146,11 @@ content:
       link: true
     third_party_settings: {  }
     weight: 3
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   field_data_custodian: true

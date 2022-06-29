@@ -8,8 +8,118 @@ dependencies:
     - field.field.node.program_outcome.field_strategic_plan_outcome
     - node.type.program_outcome
   module:
+    - layout_builder
     - text
     - user
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          4b78cf45-cd31-467d-b460-885b2b580b71:
+            uuid: 4b78cf45-cd31-467d-b460-885b2b580b71
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: visually_hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: -7
+            additional: {  }
+          59ed8616-05f3-40ca-a431-fd37f834c63b:
+            uuid: 59ed8616-05f3-40ca-a431-fd37f834c63b
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:field_budget_program'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -6
+            additional: {  }
+          d21aae46-9453-4053-a055-0d0402032a17:
+            uuid: d21aae46-9453-4053-a055-0d0402032a17
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:field_strategic_plan_outcome'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -5
+            additional: {  }
+          20219185-ed45-4b0e-952d-57143ddc3c5c:
+            uuid: 20219185-ed45-4b0e-952d-57143ddc3c5c
+            region: content
+            configuration:
+              id: 'extra_field_block:node:program_outcome:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -8
+            additional: {  }
+          b99b17f5-0704-48b3-800c-516b4f4be362:
+            uuid: b99b17f5-0704-48b3-800c-516b4f4be362
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+          2c87abdb-3fe0-48a9-8009-90aad85f1cc5:
+            uuid: 2c87abdb-3fe0-48a9-8009-90aad85f1cc5
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:uid'
+              label: 'Authored by'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: author
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+            weight: -10
+            additional: {  }
+        third_party_settings: {  }
 id: node.program_outcome.default
 targetEntityType: node
 bundle: program_outcome
@@ -37,6 +147,11 @@ content:
       link: true
     third_party_settings: {  }
     weight: 2
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   group_content: true

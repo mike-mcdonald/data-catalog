@@ -41,43 +41,6 @@ third_party_settings:
           label: ''
           context_mapping: {  }
         components:
-          cadbd31c-396e-462d-94b2-8af779e4f976:
-            uuid: cadbd31c-396e-462d-94b2-8af779e4f976
-            region: content
-            configuration:
-              id: 'field_block:node:dataset:type'
-              label: 'Content type'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: visually_hidden
-                settings:
-                  link: false
-                third_party_settings: {  }
-            weight: -10
-            additional: {  }
-          cdc2497f-bc6d-42c6-b5e1-ec72dab5fe45:
-            uuid: cdc2497f-bc6d-42c6-b5e1-ec72dab5fe45
-            region: content
-            configuration:
-              id: 'field_block:node:dataset:title'
-              label: 'Dataset name'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
-            weight: -9
-            additional: {  }
           5aa4faa8-f9f7-424d-a1a4-60a5744e5b1c:
             uuid: 5aa4faa8-f9f7-424d-a1a4-60a5744e5b1c
             region: content
@@ -148,6 +111,54 @@ third_party_settings:
                 third_party_settings: {  }
             weight: -8
             additional: {  }
+          50c3e5b6-8591-424e-bcbb-503d0487bb96:
+            uuid: 50c3e5b6-8591-424e-bcbb-503d0487bb96
+            region: content
+            configuration:
+              id: 'extra_field_block:node:dataset:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -5
+            additional: {  }
+          4b05371a-a427-4121-9ce6-1a757eabfd04:
+            uuid: 4b05371a-a427-4121-9ce6-1a757eabfd04
+            region: content
+            configuration:
+              id: 'field_block:node:dataset:title'
+              label: 'Dataset name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+          8c3df17e-37e1-483e-9a6e-dc674137ef59:
+            uuid: 8c3df17e-37e1-483e-9a6e-dc674137ef59
+            region: content
+            configuration:
+              id: 'field_block:node:dataset:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: -10
+            additional: {  }
         third_party_settings: {  }
 id: node.dataset.card
 targetEntityType: node
@@ -189,6 +200,11 @@ content:
       reverse: 0
     third_party_settings: {  }
     weight: 3
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   field_accessibility_level: true

@@ -32,7 +32,7 @@
   }
 
   input {
-    @apply p-1 w-6 h-6 cursor-pointer flex-shrink-0;
+    @apply p-1 w-4 h-4 cursor-pointer flex-shrink-0;
     z-index: 1;
     margin: 0;
     zoom: 1;
@@ -71,6 +71,10 @@
 }
 .cke_editable {
   @apply px-2;
+}
+
+[data-drupal-selector*="-bulk-form"] {
+  @apply inline-flex items-end;
 }
 
 #views-exposed-form-full-index-page-1 {

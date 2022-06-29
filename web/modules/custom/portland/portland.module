@@ -1,8 +1,13 @@
 <?php
 
+use Drupal\Core\Database\Database;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+
 include 'portland.tokens.inc';
 
-function portland_inline_entity_form_table_fields_alter(&$fields, $context) {
+function portland_inline_entity_form_table_fields_alter(&$fields, $context)
+{
   if ($context['entity_type'] == 'block_content') {
     // Remove 'block description'
     unset($fields['label']);
@@ -16,7 +21,8 @@ function portland_inline_entity_form_table_fields_alter(&$fields, $context) {
 /**
  * Implements hook_views_data().
  */
-function portland_views_data() {
+function portland_views_data()
+{
   $data['portland']['table']['group'] = t('Portland');
   $data['portland']['table']['join'] = [
     // #global is a special flag which allows a table to appear all the time.
@@ -25,11 +31,22 @@ function portland_views_data() {
 
   $data['portland']['combine_lower'] = [
     'title' => t('Combine fields filter (case-insensitive)'),
-     'help' => t('Combine multiple fields together and search them without case-sensitivity.'),
-     'filter' => [
-       'id' => 'combine_lower',
-     ],
-   ];
+    'help' => t('Combine multiple fields together and search them without case-sensitivity.'),
+    'filter' => [
+      'id' => 'combine_lower',
+    ],
+  ];
 
   return $data;
+}
+
+function portland_views_query_alter(ViewExecutable $view, QueryPluginBase $query)
+{
+
+  $db = Database::getConnection()->driver();
+  if ($db == 'pgsql') {
+    if (isset($view->relationship['flag_relationship'])) {
+      $query->getTableInfo('flagging_node_field_data')['join']->field .= '::bigint';
+    }
+  }
 }

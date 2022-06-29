@@ -1,6 +1,6 @@
 uuid: 46d5f3da-7a46-42a2-808b-0105de24e16f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -55,6 +55,16 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
+          fba5593d-6c8c-42fe-adad-75d8f47d92a8:
+            uuid: fba5593d-6c8c-42fe-adad-75d8f47d92a8
+            region: content
+            configuration:
+              id: 'extra_field_block:node:business_term:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
 id: node.business_term.teaser
 targetEntityType: node
@@ -68,6 +78,11 @@ content:
       trim_length: 600
     third_party_settings: {  }
     weight: 101
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
   links:
     settings: {  }

@@ -30,6 +30,9 @@ p {
   &:not(:first-child) {
     @apply mt-4;
   }
+  &.js-flag-message {
+    @apply mt-0;
+  }
 }
 dt {
   @apply font-bold leading-normal;

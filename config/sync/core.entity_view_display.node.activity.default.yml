@@ -41,7 +41,7 @@ third_party_settings:
                   reverse: 0
                   separator: ' / '
                 third_party_settings: {  }
-            weight: -9
+            weight: -6
             additional: {  }
           5ede3f60-f7dd-4d9b-88da-1c165dd4d7fc:
             uuid: 5ede3f60-f7dd-4d9b-88da-1c165dd4d7fc
@@ -59,7 +59,56 @@ third_party_settings:
                 label: visually_hidden
                 settings: {  }
                 third_party_settings: {  }
+            weight: -7
+            additional: {  }
+          e2f65775-cf82-417b-b468-8799a5b8f67c:
+            uuid: e2f65775-cf82-417b-b468-8799a5b8f67c
+            region: content
+            configuration:
+              id: 'extra_field_block:node:activity:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -8
+            additional: {  }
+          6c255e90-ccac-45e3-8b87-756d3cea206c:
+            uuid: 6c255e90-ccac-45e3-8b87-756d3cea206c
+            region: content
+            configuration:
+              id: 'field_block:node:activity:uid'
+              label: 'Authored by'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: author
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
             weight: -10
+            additional: {  }
+          8b30d57a-c816-4769-966a-45ca23b2ba63:
+            uuid: 8b30d57a-c816-4769-966a-45ca23b2ba63
+            region: content
+            configuration:
+              id: 'field_block:node:activity:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -9
             additional: {  }
         third_party_settings: {  }
 id: node.activity.default
@@ -81,6 +130,11 @@ content:
       link: true
     third_party_settings: {  }
     weight: 1
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
   links:
     settings: {  }

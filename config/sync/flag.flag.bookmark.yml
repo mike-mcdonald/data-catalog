@@ -1,0 +1,41 @@
+uuid: 35d6cbe7-2a8f-4e64-8dde-91c29e32ff91
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  enforced:
+    module:
+      - flag_bookmark
+_core:
+  default_config_hash: vuzrLaRZ3xV-FmT127t2gLy_p8JDLMWtsKsnCwdWR2Y
+id: bookmark
+label: Bookmark
+bundles:
+  - access_point
+  - activity
+  - business_term
+  - dataset
+  - performance_measure
+  - program_outcome
+  - strategic_plan_outcome
+entity_type: node
+global: false
+flag_short: 'Add bookmark'
+flag_long: 'Add this catalog entry to your bookmarks'
+flag_message: 'This entry has been added to your bookmarks'
+unflag_short: 'Remove bookmark'
+unflag_long: 'Remove this entry from your bookmarks'
+unflag_message: 'This entry has been removed from your bookmarks'
+unflag_denied_text: ''
+weight: 0
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

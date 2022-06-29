@@ -41,6 +41,8 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  flag: 0
+  flag_bookmark: 0
   formblock: 0
   gcontent_field: 0
   gin_toolbar: 0
