@@ -101,6 +101,16 @@ third_party_settings:
                 third_party_settings: {  }
             weight: -9
             additional: {  }
+          1101f441-9ce3-410a-a78f-4d355adc39ca:
+            uuid: 1101f441-9ce3-410a-a78f-4d355adc39ca
+            region: content
+            configuration:
+              id: 'extra_field_block:node:strategic_plan_outcome:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -6
+            additional: {  }
         third_party_settings: {  }
 id: node.strategic_plan_outcome.card
 targetEntityType: node
@@ -121,6 +131,11 @@ content:
       link: true
     third_party_settings: {  }
     weight: 1
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   group_content: true

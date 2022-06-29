@@ -8,8 +8,104 @@ dependencies:
     - node.type.strategic_plan_outcome
   module:
     - cshs
+    - layout_builder
     - text
     - user
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          b4bd9f2a-48c1-41c8-a772-2fb0cc042111:
+            uuid: b4bd9f2a-48c1-41c8-a772-2fb0cc042111
+            region: content
+            configuration:
+              id: 'field_block:node:strategic_plan_outcome:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: visually_hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: -7
+            additional: {  }
+          08135f91-4c68-424e-a28c-6f7cfef7f912:
+            uuid: 08135f91-4c68-424e-a28c-6f7cfef7f912
+            region: content
+            configuration:
+              id: 'field_block:node:strategic_plan_outcome:field_strategic_plan'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: cshs_full_hierarchy
+                label: above
+                settings:
+                  linked: '1'
+                  separator: ' / '
+                  reverse: 0
+                third_party_settings: {  }
+            weight: -6
+            additional: {  }
+          02b20683-4a12-4fba-b273-01ce9799364d:
+            uuid: 02b20683-4a12-4fba-b273-01ce9799364d
+            region: content
+            configuration:
+              id: 'extra_field_block:node:strategic_plan_outcome:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -8
+            additional: {  }
+          9f86bbfd-ad88-4e12-b57c-f7b22da13697:
+            uuid: 9f86bbfd-ad88-4e12-b57c-f7b22da13697
+            region: content
+            configuration:
+              id: 'field_block:node:strategic_plan_outcome:uid'
+              label: 'Authored by'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: author
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+            weight: -10
+            additional: {  }
+          c106579a-3057-47e0-89ff-695837dc4ea4:
+            uuid: c106579a-3057-47e0-89ff-695837dc4ea4
+            region: content
+            configuration:
+              id: 'field_block:node:strategic_plan_outcome:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+        third_party_settings: {  }
 id: node.strategic_plan_outcome.default
 targetEntityType: node
 bundle: strategic_plan_outcome
@@ -31,6 +127,11 @@ content:
       reverse: 0
     third_party_settings: {  }
     weight: 1
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   group_content: true

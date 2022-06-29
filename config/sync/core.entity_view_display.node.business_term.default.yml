@@ -21,6 +21,7 @@ third_party_settings:
     settings: {  }
   layout_builder:
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
@@ -41,7 +42,7 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: -8
+            weight: -7
             additional: {  }
           5b3df6bb-eff5-49a9-8117-b10dc6e570b8:
             uuid: 5b3df6bb-eff5-49a9-8117-b10dc6e570b8
@@ -60,7 +61,7 @@ third_party_settings:
                 settings:
                   view_mode: card
                 third_party_settings: {  }
-            weight: -7
+            weight: -6
             additional: {  }
           7d1cc1f4-751c-4754-96bd-32964e35f517:
             uuid: 7d1cc1f4-751c-4754-96bd-32964e35f517
@@ -79,7 +80,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -6
+            weight: -5
             additional: {  }
           1a39d82d-dcef-44ee-b1ff-37368ff5eb7a:
             uuid: 1a39d82d-dcef-44ee-b1ff-37368ff5eb7a
@@ -98,7 +99,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -5
+            weight: -4
             additional: {  }
           ee99d0f7-2e43-435f-9bbf-fe16c889e73c:
             uuid: ee99d0f7-2e43-435f-9bbf-fe16c889e73c
@@ -140,6 +141,16 @@ third_party_settings:
                 third_party_settings: {  }
             weight: -10
             additional: {  }
+          bea25a43-4d9a-46f5-b300-52299bd90447:
+            uuid: bea25a43-4d9a-46f5-b300-52299bd90447
+            region: content
+            configuration:
+              id: 'extra_field_block:node:business_term:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -8
+            additional: {  }
         third_party_settings: {  }
 id: node.business_term.default
 targetEntityType: node
@@ -176,6 +187,11 @@ content:
       link: true
     third_party_settings: {  }
     weight: 3
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   group_content: true

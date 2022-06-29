@@ -52,7 +52,7 @@ third_party_settings:
                 view_mode: view_mode
               formatter:
                 type: cshs_full_hierarchy
-                label: above
+                label: visually_hidden
                 settings:
                   linked: 1
                   reverse: 0
@@ -98,6 +98,16 @@ third_party_settings:
                 third_party_settings: {  }
             weight: -9
             additional: {  }
+          df370cb7-189c-4757-8ef5-09260253fae7:
+            uuid: df370cb7-189c-4757-8ef5-09260253fae7
+            region: content
+            configuration:
+              id: 'extra_field_block:node:activity:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -6
+            additional: {  }
         third_party_settings: {  }
 id: node.activity.card
 targetEntityType: node
@@ -118,6 +128,11 @@ content:
       link: true
     third_party_settings: {  }
     weight: 1
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
   links:
     settings: {  }
