@@ -240,7 +240,7 @@ handlers:
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      cc_mail: aubrey.lindstrom@portlandoregon.gov
+      cc_mail: _default
       cc_options: {  }
       from_mail: _default
       from_options: {  }
