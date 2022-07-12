@@ -8,6 +8,7 @@ dependencies:
     - block_content_permissions
     - group
     - node
+    - system
     - toolbar
 id: user_admin
 label: 'User admin'
@@ -15,6 +16,7 @@ weight: -6
 is_admin: null
 permissions:
   - 'access group overview'
+  - 'access site in maintenance mode'
   - 'access toolbar'
   - 'access user profiles'
   - 'administer group'
