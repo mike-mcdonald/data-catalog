@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the entitygroupfield dropbutton wrapper.
+ *
+ * Available variables:
+ * - children: The child elements of the entitygroupfield dropbutton menu.
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_entitygroupfield_dropbutton_wrapper()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if children %}
+  <div class="entitygroupfield-dropbutton-wrapper">
+    {{ children }}
+  </div>
+{% endif %}

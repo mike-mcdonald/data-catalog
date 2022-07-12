@@ -8,7 +8,7 @@ dependencies:
   module:
     - content_moderation
     - field_layout
-    - gcontent_field
+    - entitygroupfield
     - path
     - text
   theme:
@@ -39,12 +39,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  group_content:
-    type: group_selector_widget
+  entitygroupfield:
+    type: entitygroupfield_select_widget
     weight: 7
     region: content
     settings:
-      widget: autocomplete
+      help_text: 'Select a group from the options above, then comfirm that selection using the button below.'
+      label: 'Add to group'
       multiple: true
       required: false
     third_party_settings: {  }

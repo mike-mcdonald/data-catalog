@@ -32,3 +32,4 @@ permissions:
   - 'revert notification revisions'
   - 'update any dashboard_message block content'
   - 'view notification revisions'
+  - 'view user email addresses'

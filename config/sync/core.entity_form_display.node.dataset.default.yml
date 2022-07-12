@@ -24,7 +24,7 @@ dependencies:
     - cshs
     - entity_browser
     - field_layout
-    - gcontent_field
+    - entitygroupfield
     - inline_entity_form
     - select2
   theme:
@@ -39,6 +39,16 @@ targetEntityType: node
 bundle: dataset
 mode: default
 content:
+  entitygroupfield:
+    type: entitygroupfield_select_widget
+    weight: 15
+    region: content
+    settings:
+      help_text: 'Select a group from the options above, then comfirm that selection using the button below.'
+      label: 'Add to group'
+      multiple: false
+      required: false
+    third_party_settings: {  }
   field_accessibility_level:
     type: options_select
     weight: 3
@@ -162,15 +172,6 @@ content:
       collapsible: false
       collapsed: false
       revision: false
-    third_party_settings: {  }
-  group_content:
-    type: group_selector_widget
-    weight: 15
-    region: content
-    settings:
-      widget: select
-      multiple: '1'
-      required: 0
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default

@@ -1,0 +1,31 @@
+{
+  "name": "drupal/entitygroupfield",
+  "type": "drupal-module",
+  "description": "Defines a field to view and edit the groups associated with content.",
+  "homepage": "http://drupal.org/project/entitygroupfield",
+  "authors": [
+    {
+      "name": "Derek Wright",
+      "homepage": "https://www.drupal.org/u/dww",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Ivan Duarte",
+      "homepage": "https://www.drupal.org/u/jidrone",
+      "role": "Co-Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://drupal.org/project/issues/entitygroupfield",
+    "source": "https://git.drupalcode.org/project/entitygroupfield"
+  },
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/core": "^8.8 || ^9",
+    "drupal/group": "~1.0"
+  },
+  "require-dev": {
+    "drupal/variationcache": "~1.0"
+  }
+}

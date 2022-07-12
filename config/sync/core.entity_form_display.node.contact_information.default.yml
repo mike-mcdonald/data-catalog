@@ -9,7 +9,7 @@ dependencies:
   module:
     - content_moderation
     - field_layout
-    - gcontent_field
+    - entitygroupfield
     - telephone
   theme:
     - rain
@@ -23,6 +23,16 @@ targetEntityType: node
 bundle: contact_information
 mode: default
 content:
+  entitygroupfield:
+    type: entitygroupfield_select_widget
+    weight: 3
+    region: content
+    settings:
+      help_text: 'Select a group from the options above, then comfirm that selection using the button below.'
+      label: 'Add to group'
+      multiple: true
+      required: false
+    third_party_settings: {  }
   field_email_address:
     type: email_default
     weight: 1
@@ -37,15 +47,6 @@ content:
     region: content
     settings:
       placeholder: ''
-    third_party_settings: {  }
-  group_content:
-    type: group_selector_widget
-    weight: 3
-    region: content
-    settings:
-      widget: select
-      multiple: '1'
-      required: 0
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
