@@ -1,16 +1,37 @@
 uuid: d29dd44f-2acd-486f-ab44-aa4bd43a4a11
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.notification
+  module:
+    - block_content_permissions
+    - group
+    - node
+    - system
+    - toolbar
 id: user_admin
 label: 'User admin'
 weight: -6
 is_admin: null
 permissions:
   - 'access group overview'
+  - 'access site in maintenance mode'
   - 'access toolbar'
   - 'access user profiles'
   - 'administer group'
   - 'administer users'
   - 'bypass group access'
+  - 'create dashboard_message block content'
   - 'create group group'
+  - 'create notification content'
+  - 'delete any dashboard_message block content'
+  - 'delete any notification content'
+  - 'delete notification revisions'
+  - 'delete own notification content'
+  - 'edit any notification content'
+  - 'edit own notification content'
+  - 'revert notification revisions'
+  - 'update any dashboard_message block content'
+  - 'view notification revisions'
+  - 'view user email addresses'

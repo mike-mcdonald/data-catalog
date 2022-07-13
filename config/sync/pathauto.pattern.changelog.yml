@@ -1,0 +1,22 @@
+uuid: ad4d553c-36e1-4321-bc04-851d5f4f6f71
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: changelog
+label: Changelog
+type: 'canonical_entities:node'
+pattern: '/changelog/[node:title]'
+selection_criteria:
+  4ca83df7-310c-4e48-9c1b-d5c4eada56ab:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 4ca83df7-310c-4e48-9c1b-d5c4eada56ab
+    context_mapping:
+      node: node
+    bundles:
+      changelog: changelog
+selection_logic: and
+weight: -5
+relationships: {  }

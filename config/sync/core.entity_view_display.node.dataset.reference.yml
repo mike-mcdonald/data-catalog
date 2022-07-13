@@ -39,6 +39,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           e19b5325-c585-4901-912a-4116840af1e8:
             uuid: e19b5325-c585-4901-912a-4116840af1e8
@@ -46,38 +47,38 @@ third_party_settings:
             configuration:
               id: 'field_block:node:dataset:field_data_custodian'
               label: 'Primary Contact '
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: above
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: teaser
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: teaser
+                third_party_settings: {  }
             weight: -9
+            additional: {  }
           434c6b8b-5f19-4ce1-b035-caebd755ac33:
             uuid: 434c6b8b-5f19-4ce1-b035-caebd755ac33
             region: content
             configuration:
               id: 'field_block:node:dataset:title'
               label: 'Dataset name'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: string
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
             weight: -10
+            additional: {  }
         third_party_settings: {  }
 id: node.dataset.reference
 targetEntityType: node
@@ -85,91 +86,91 @@ bundle: dataset
 mode: reference
 content:
   field_authority_level:
-    weight: 7
+    type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 7
     region: content
   field_data_custodian:
-    weight: 2
+    type: entity_reference_entity_view
     label: inline
     settings:
       view_mode: teaser
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 2
     region: content
   field_data_group:
-    weight: 1
+    type: cshs_full_hierarchy
     label: inline
     settings:
       linked: '1'
       separator: ' » '
       reverse: 0
     third_party_settings: {  }
-    type: cshs_full_hierarchy
+    weight: 1
     region: content
   field_demographic_information:
-    weight: 12
+    type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 12
     region: content
   field_keywords:
-    weight: 3
+    type: entity_reference_entity_view
     label: inline
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 3
     region: content
   field_purpose:
-    weight: 0
+    type: basic_string
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 0
     region: content
   field_source:
     type: cshs_full_hierarchy
-    weight: 5
     label: inline
     settings:
       separator: ' » '
       linked: false
       reverse: false
     third_party_settings: {  }
+    weight: 5
     region: content
   field_spatial_information:
-    weight: 11
+    type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 11
     region: content
   field_subject_areas:
-    weight: 4
+    type: cshs_full_hierarchy
     label: inline
     settings:
       linked: '1'
       separator: ' » '
       reverse: 0
     third_party_settings: {  }
-    type: cshs_full_hierarchy
+    weight: 4
     region: content
   field_timeliness:
-    weight: 13
+    type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 13
     region: content
 hidden:
   field_accessibility_level: true

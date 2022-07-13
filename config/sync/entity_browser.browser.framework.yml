@@ -1,0 +1,31 @@
+uuid: cb71b93a-dbbd-4185-90f1-c41419682cf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser
+  module:
+    - views
+name: framework
+label: 'Performance framework'
+display: modal
+display_configuration:
+  width: ''
+  height: '600'
+  link_text: 'Select component(s)'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  bc4e091f-1f7f-4371-81e4-4f6d6d46d8e3:
+    id: view
+    uuid: bc4e091f-1f7f-4371-81e4-4f6d6d46d8e3
+    label: Find
+    weight: 1
+    settings:
+      submit_text: 'Select components'
+      auto_select: false
+      view: entity_browser
+      view_display: framework_browser

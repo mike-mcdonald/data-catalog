@@ -23,11 +23,13 @@ third_party_settings:
     settings: {  }
   layout_builder:
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           5a0b5fbe-cdc4-4879-8877-08f4c74e4011:
             uuid: 5a0b5fbe-cdc4-4879-8877-08f4c74e4011
@@ -35,47 +37,50 @@ third_party_settings:
             configuration:
               id: 'field_block:node:business_term:type'
               label: 'Content type'
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: visually_hidden
                 type: entity_reference_label
+                label: visually_hidden
                 settings:
                   link: false
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
             weight: 0
+            additional: {  }
           85ba897a-576a-4425-8788-0ae599b3b43b:
             uuid: 85ba897a-576a-4425-8788-0ae599b3b43b
             region: content
             configuration:
               id: 'field_block:node:business_term:title'
               label: Term
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: hidden
                 type: string
+                label: hidden
                 settings:
                   link_to_entity: true
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
             weight: 1
+            additional: {  }
           92a64537-6abd-4830-87cc-8abe3bc2cd97:
             uuid: 92a64537-6abd-4830-87cc-8abe3bc2cd97
             region: content
             configuration:
               id: 'field_block:node:business_term:body'
               label: Definition
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: visually_hidden
                 type: smart_trim
+                label: visually_hidden
                 settings:
                   trim_length: 300
                   trim_type: chars
@@ -83,58 +88,69 @@ third_party_settings:
                   wrap_output: false
                   wrap_class: trimmed
                   more_link: false
-                  more_text: More
                   more_class: more-link
+                  more_text: More
                   summary_handler: trim
                   trim_options:
                     text: true
                     trim_zero: false
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 2
+            additional: {  }
           addd0879-d4da-4222-adaf-83a918c7fe9e:
             uuid: addd0879-d4da-4222-adaf-83a918c7fe9e
             region: content
             configuration:
               id: 'field_block:node:business_term:field_keywords'
               label: Keywords
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: visually_hidden
                 type: entity_reference_entity_view
+                label: visually_hidden
                 settings:
                   view_mode: card
                 third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          3d85096e-ce2b-4070-a659-7996c4aa4b6f:
+            uuid: 3d85096e-ce2b-4070-a659-7996c4aa4b6f
+            region: content
+            configuration:
+              id: 'extra_field_block:node:business_term:flag_bookmark'
+              label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
+            weight: 4
             additional: {  }
-            weight: 3
         third_party_settings: {  }
-    allow_custom: false
 id: node.business_term.card
 targetEntityType: node
 bundle: business_term
 mode: card
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 2
+    label: hidden
     settings:
       trim_length: 200
     third_party_settings: {  }
+    weight: 2
     region: content
   field_keywords:
-    weight: 3
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   field_data_custodian: true

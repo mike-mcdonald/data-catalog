@@ -1,0 +1,29 @@
+uuid: 3940cd34-47f2-444b-8ce9-b0bfe2bb2038
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_direction
+    - node.type.performance_measure
+    - taxonomy.vocabulary.direction
+id: node.performance_measure.field_direction
+field_name: field_direction
+entity_type: node
+bundle: performance_measure
+label: Directionality
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      direction: direction
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

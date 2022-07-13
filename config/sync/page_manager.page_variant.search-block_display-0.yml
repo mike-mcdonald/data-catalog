@@ -1,0 +1,108 @@
+uuid: 0ff2eed8-feb7-402a-806b-b7e53701a3ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.search
+id: search-block_display-0
+label: 'Layout builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 7138df0c-3d56-4a39-80ae-0fe351852cbd
+  sections:
+    -
+      layout_id: layout_twocol_right
+      layout_settings:
+        label: ''
+        context_mapping: {  }
+      components:
+        b8eb15cc-94fb-48d2-ab7b-cf9c2c55d170:
+          uuid: b8eb15cc-94fb-48d2-ab7b-cf9c2c55d170
+          region: first
+          configuration:
+            id: 'views_block:full_index-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        2d43d9d7-0f34-4188-8f3c-1a87760f82a9:
+          uuid: 2d43d9d7-0f34-4188-8f3c-1a87760f82a9
+          region: second
+          configuration:
+            id: 'facet_block:full_content_type'
+            label: 'Filter by content type'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+        74b364f8-a71c-428b-bff7-db27eddb676c:
+          uuid: 74b364f8-a71c-428b-bff7-db27eddb676c
+          region: second
+          configuration:
+            id: 'facet_block:full_division_group'
+            label: 'Filter by division/group'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 1
+          additional: {  }
+        20acafaa-e826-48e4-8c89-d39897bda822:
+          uuid: 20acafaa-e826-48e4-8c89-d39897bda822
+          region: second
+          configuration:
+            id: 'facet_block:full_subject_areas'
+            label: 'Filter by data domain'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 2
+          additional: {  }
+        04cf2e08-24d3-4369-8a0d-d1eb9a0adb5d:
+          uuid: 04cf2e08-24d3-4369-8a0d-d1eb9a0adb5d
+          region: second
+          configuration:
+            id: 'facet_block:full_contact'
+            label: 'Filter by contact'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 3
+          additional: {  }
+        bd22299e-2690-4b34-9612-1ca651127a04:
+          uuid: bd22299e-2690-4b34-9612-1ca651127a04
+          region: second
+          configuration:
+            id: 'facet_block:full_strategic_plan'
+            label: 'Filter by strategic plan'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 4
+          additional: {  }
+        bc47b7c9-1d84-49d3-a45c-fa5fb8b10961:
+          uuid: bc47b7c9-1d84-49d3-a45c-fa5fb8b10961
+          region: second
+          configuration:
+            id: 'facet_block:full_budget_program'
+            label: 'Filter by budget program'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 5
+          additional: {  }
+      third_party_settings: {  }
+  blocks: {  }
+  page_title: ''
+page: search
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,22 @@
+uuid: 1c1ae2c5-adc7-468e-a9d9-608489183dd4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: measures
+label: Measures
+type: 'canonical_entities:node'
+pattern: 'measures/[node:title]'
+selection_criteria:
+  bc418034-0e04-42ed-9b32-1f2213433186:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: bc418034-0e04-42ed-9b32-1f2213433186
+    context_mapping:
+      node: node
+    bundles:
+      performance_measure: performance_measure
+selection_logic: and
+weight: -5
+relationships: {  }

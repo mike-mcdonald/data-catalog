@@ -31,6 +31,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           8369b0a0-ba45-4eec-83d7-48912c720110:
             uuid: 8369b0a0-ba45-4eec-83d7-48912c720110
@@ -38,30 +39,33 @@ third_party_settings:
             configuration:
               id: 'field_block:node:access_point:field_keywords'
               label: Keywords
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: card
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_entity_view
+                label: visually_hidden
+                settings:
+                  view_mode: card
+                third_party_settings: {  }
             weight: -6
+            additional: {  }
           d8feb8b0-caf9-477f-8971-83af52270e20:
             uuid: d8feb8b0-caf9-477f-8971-83af52270e20
             region: content
             configuration:
               id: 'field_block:node:access_point:field_purpose'
               label: Description
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: visually_hidden
                 type: smart_trim
+                label: visually_hidden
                 settings:
                   trim_length: 300
                   trim_type: chars
@@ -69,66 +73,66 @@ third_party_settings:
                   wrap_output: false
                   wrap_class: trimmed
                   more_link: false
-                  more_text: More
                   more_class: more-link
+                  more_text: More
                   trim_options:
                     text: false
                     trim_zero: false
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: -7
+            additional: {  }
           9ee206ef-7305-44a1-9ca5-3d3ada8727e2:
             uuid: 9ee206ef-7305-44a1-9ca5-3d3ada8727e2
             region: content
             configuration:
               id: 'field_block:node:access_point:type'
               label: 'Content type'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_label
-                settings:
-                  link: false
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
             weight: -10
+            additional: {  }
           6fe987f1-4abc-462f-952f-865cc85610af:
             uuid: 6fe987f1-4abc-462f-952f-865cc85610af
             region: content
             configuration:
               id: 'field_block:node:access_point:title'
               label: Name
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: string
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
             weight: -9
+            additional: {  }
           1d62180a-5c10-4609-83eb-b12cbbdbbdf1:
             uuid: 1d62180a-5c10-4609-83eb-b12cbbdbbdf1
             region: content
             configuration:
               id: 'field_block:node:access_point:field_url'
               label: URL
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: visually_hidden
                 type: link
+                label: visually_hidden
                 settings:
                   trim_length: 80
                   url_only: false
@@ -136,11 +140,8 @@ third_party_settings:
                   rel: '0'
                   target: '0'
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: -8
+            additional: {  }
         third_party_settings: {  }
 id: node.access_point.card
 targetEntityType: node
@@ -148,40 +149,40 @@ bundle: access_point
 mode: card
 content:
   field_data_custodian:
-    weight: 103
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 103
     region: content
   field_keywords:
-    weight: 102
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 102
     region: content
   field_purpose:
-    weight: 101
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 101
     region: content
   field_subject_areas:
-    weight: 104
+    type: cshs_full_hierarchy
     label: above
     settings:
       separator: ' / '
       linked: false
       reverse: false
     third_party_settings: {  }
-    type: cshs_full_hierarchy
+    weight: 104
     region: content
   field_url:
-    weight: 105
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -190,13 +191,13 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 105
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   group_content: true
   search_api_excerpt: true

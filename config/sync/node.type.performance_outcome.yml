@@ -9,9 +9,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: 'Performance measure outcome'
+name: 'Performance measure data'
 type: performance_outcome
-description: 'Add a new outcome that should be attached to a performance measure'
+description: 'Add new data that should be attached to a performance measure'
 help: ''
 new_revision: true
 preview_mode: 1

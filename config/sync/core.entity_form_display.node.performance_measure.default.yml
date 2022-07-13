@@ -3,30 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.contact_browser
+    - entity_browser.browser.framework
     - field.field.node.performance_measure.body
-    - field.field.node.performance_measure.field_audience
     - field.field.node.performance_measure.field_category
     - field.field.node.performance_measure.field_data_custodian
     - field.field.node.performance_measure.field_data_group
-    - field.field.node.performance_measure.field_data_reliability
     - field.field.node.performance_measure.field_data_type
     - field.field.node.performance_measure.field_datasets
-    - field.field.node.performance_measure.field_formula
+    - field.field.node.performance_measure.field_direction
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
-    - field.field.node.performance_measure.field_level
     - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_origination_date
-    - field.field.node.performance_measure.field_program_area
-    - field.field.node.performance_measure.field_project_name
+    - field.field.node.performance_measure.field_performance_framework
     - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
-    - field.field.node.performance_measure.field_strategic_plan
     - field.field.node.performance_measure.field_strategic_target
     - field.field.node.performance_measure.field_strategic_year
-    - field.field.node.performance_measure.field_threshold
+    - field.field.node.performance_measure.field_subject_areas
     - field.field.node.performance_measure.field_url
     - node.type.performance_measure
     - workflows.workflow.editorial
@@ -34,9 +29,10 @@ dependencies:
     - content_moderation
     - cshs
     - entity_browser
+    - entitygroupfield
     - field_layout
-    - gcontent_field
     - link
+    - path
     - select2
     - text
   theme:
@@ -52,238 +48,201 @@ bundle: performance_measure
 mode: default
 content:
   body:
+    type: text_textarea_with_summary
     weight: 2
+    region: content
     settings:
       rows: 9
-      placeholder: ''
       summary_rows: 3
+      placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    type: text_textarea_with_summary
-    region: content
   created:
     type: datetime_timestamp
-    weight: 27
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_audience:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
+  entitygroupfield:
+    type: entitygroupfield_select_widget
+    weight: 1
     region: content
+    settings:
+      help_text: 'Select a group from the options above, then comfirm that selection using the button below.'
+      label: 'Add to group'
+      multiple: true
+      required: true
+    third_party_settings: {  }
   field_category:
+    type: options_buttons
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_data_custodian:
-    weight: 20
+    type: entity_browser_entity_reference
+    weight: 17
+    region: content
     settings:
       entity_browser: contact_browser
       field_widget_display: rendered_entity
+      field_widget_edit: false
+      field_widget_remove: true
+      field_widget_replace: false
+      open: true
       field_widget_display_settings:
         view_mode: teaser
-      field_widget_remove: true
-      open: true
       selection_mode: selection_append
-      field_widget_edit: false
-      field_widget_replace: false
     third_party_settings: {  }
-    type: entity_browser_entity_reference
-    region: content
   field_data_group:
-    weight: 18
+    type: cshs
+    weight: 16
+    region: content
     settings:
+      save_lineage: false
+      force_deepest: false
       parent: '0'
       level_labels: ''
-      force_deepest: false
-      save_lineage: false
       hierarchy_depth: 0
       required_depth: 0
+      none_label: '- Please select -'
     third_party_settings: {  }
-    type: cshs
-    region: content
-  field_data_reliability:
-    weight: 21
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_data_type:
-    weight: 15
+    type: options_buttons
+    weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_datasets:
-    weight: 12
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: 'Begin typing to search for a dataset...'
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_formula:
-    weight: 13
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_frequency:
-    weight: 11
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_keywords:
-    weight: 23
-    settings:
-      autocomplete: false
-      match_operator: CONTAINS
-      match_limit: 10
-      width: 100%
-    third_party_settings: {  }
-    type: select2_entity_reference
-    region: content
-  field_level:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_measure_id:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_measure_type:
-    weight: 17
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_origination_date:
-    weight: 25
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_program_area:
-    weight: 19
-    settings:
-      parent: '0'
-      level_labels: ''
-      force_deepest: false
-      save_lineage: false
-      hierarchy_depth: 0
-      required_depth: 0
-    third_party_settings: {  }
-    type: cshs
-    region: content
-  field_project_name:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_requirements:
-    weight: 14
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_status:
-    weight: 24
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_strategic_plan:
-    weight: 9
-    settings:
-      parent: '0'
-      level_labels: ''
-      force_deepest: false
-      save_lineage: false
-      hierarchy_depth: 0
-      required_depth: 0
-    third_party_settings: {  }
-    type: cshs
-    region: content
-  field_strategic_target:
+  field_direction:
+    type: options_buttons
     weight: 8
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
     region: content
-  field_strategic_year:
-    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  field_frequency:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_keywords:
+    type: select2_entity_reference
+    weight: 19
+    region: content
     settings:
+      width: 100%
       autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
-      width: 100%
     third_party_settings: {  }
-    type: select2_entity_reference
+  field_measure_type:
+    type: options_buttons
+    weight: 9
     region: content
-  field_threshold:
-    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+  field_origination_date:
+    type: string_textfield
+    weight: 13
+    region: content
     settings:
-      size: 512
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+  field_performance_framework:
+    type: entity_browser_entity_reference
+    weight: 5
     region: content
+    settings:
+      entity_browser: framework
+      field_widget_display: label
+      field_widget_edit: false
+      field_widget_remove: true
+      field_widget_replace: false
+      open: true
+      field_widget_display_settings: {  }
+      selection_mode: selection_append
+    third_party_settings: {  }
+  field_requirements:
+    type: string_textarea
+    weight: 15
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_status:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_strategic_target:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_strategic_year:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_subject_areas:
+    type: cshs
+    weight: 18
+    region: content
+    settings:
+      save_lineage: false
+      force_deepest: false
+      parent: ''
+      level_labels: ''
+      hierarchy_depth: 0
+      required_depth: 0
+      none_label: '- Please select -'
+    third_party_settings: {  }
   field_url:
-    weight: 22
+    type: link_default
+    weight: 12
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
-  group_content:
-    type: group_selector_widget
-    weight: 0
-    region: content
-    settings:
-      widget: select
-      multiple: '1'
-      required: '1'
-    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 29
-    settings: {  }
+    weight: 24
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 22
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 23
+    region: content
     settings:
       display_label: true
-    weight: 28
-    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 1
+    weight: 0
     region: content
     settings:
       size: 60
@@ -291,15 +250,15 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 26
+    weight: 20
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden:
-  path: true
+  field_measure_id: true
   promote: true
   sticky: true

@@ -5,25 +5,21 @@ dependencies:
   config:
     - field.storage.node.field_measure_type
     - node.type.performance_measure
-    - taxonomy.vocabulary.performance_measure_type
 id: node.performance_measure.field_measure_type
 field_name: field_measure_type
 entity_type: node
 bundle: performance_measure
-label: 'Performance measure type'
+label: 'Measure type'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: views
   handler_settings:
-    target_bundles:
-      performance_measure_type: performance_measure_type
-    sort:
-      field: name
-      direction: asc
-    auto_create: false
-    auto_create_bundle: ''
+    view:
+      view_name: taxonomy_reference_sources
+      display_name: measure_types
+      arguments: {  }
 field_type: entity_reference

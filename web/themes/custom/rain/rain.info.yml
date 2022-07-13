@@ -2,7 +2,7 @@ name: Rain
 type: theme
 description: "A steady theme"
 package: Portland themes
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 libraries:
   - rain/global-styling
 

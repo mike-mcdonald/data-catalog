@@ -1,0 +1,18 @@
+uuid: aa0a7d3b-7a19-4020-aa59-839dbdfe7991
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Activity
+type: activity
+description: 'The organizational unit that describes the products and services the bureau delivers on a day-to-day basis.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -8,13 +8,22 @@ dependencies:
   module:
     - search_api
 id: full_contact
-name: Contact
-url_alias: contact
+name: 'Primary Contact '
 weight: 0
 min_count: 1
-show_only_one_result: true
+url_alias: contact
+facet_source_id: 'search_api:views_block__full_index__block_1'
 field_identifier: field_data_custodian
-facet_source_id: 'search_api:views_page__full_index__page_1'
+query_operator: or
+hard_limit: 0
+exclude: false
+use_hierarchy: false
+keep_hierarchy_parents_active: false
+hierarchy:
+  type: taxonomy
+  config: {  }
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
 widget:
   type: select2
   config:
@@ -22,13 +31,11 @@ widget:
     width: 100%
     autocomplete: false
     match_operator: CONTAINS
-query_operator: or
-use_hierarchy: false
-expand_hierarchy: false
-enable_parent_when_child_gets_disabled: true
-hard_limit: 0
-exclude: false
+empty_behavior:
+  behavior: none
 only_visible_when_facet_source_is_visible: false
+show_only_one_result: true
+show_title: false
 processor_configs:
   active_widget_order:
     processor_id: active_widget_order
@@ -59,6 +66,3 @@ processor_configs:
       pre_query: 50
       build: 15
     settings: {  }
-empty_behavior:
-  behavior: none
-show_title: false

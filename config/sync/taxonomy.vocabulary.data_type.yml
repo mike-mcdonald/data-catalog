@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Data type'
 vid: data_type
-description: 'Numeric value data type in performance measure and performance measure outcome.'
+description: 'Numeric value data type in performance measure and performance measure data.'
 weight: 0

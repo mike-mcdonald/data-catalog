@@ -1,8 +1,11 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   auto_entitylabel: 0
   automated_cron: 0
+  better_exposed_filters: 0
   big_pipe: 0
   block: 0
   block_blacklist: 0
@@ -29,16 +32,20 @@ module:
   entity_browser: 0
   entity_browser_entity_form: 0
   entity_reference_revisions: 0
+  entitygroupfield: 0
   environment_indicator: 0
   environment_indicator_ui: 0
+  externalauth: 0
   facets: 0
   field: 0
   field_layout: 0
   field_ui: 0
   file: 0
   filter: 0
+  flag: 0
+  flag_bookmark: 0
   formblock: 0
-  gcontent_field: 0
+  gin_toolbar: 0
   gnode: 0
   group: 0
   help: 0
@@ -46,6 +53,10 @@ module:
   honeypot: 0
   image: 0
   inline_entity_form: 0
+  jquery_ui: 0
+  jquery_ui_datepicker: 0
+  jquery_ui_slider: 0
+  jquery_ui_touch_punch: 0
   key: 0
   layout_builder: 0
   layout_discovery: 0
@@ -62,8 +73,11 @@ module:
   openid_connect: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  page_manager_ui: 0
   path: 0
   path_alias: 0
+  pgsql: 0
   portland: 0
   rdf: 0
   rest: 0
@@ -77,12 +91,16 @@ module:
   system: 0
   taxonomy: 0
   telephone: 0
+  term_merge: 0
+  term_reference_change: 0
   text: 0
   token: 0
   toolbar: 0
   user: 0
   variationcache: 0
+  views_aggregator: 0
   views_bootstrap: 0
+  views_bulk_edit: 0
   views_data_export: 0
   views_ui: 0
   webform: 0
@@ -96,12 +114,10 @@ module:
   seed: 1000
 theme:
   stable: 0
-  classy: 0
   bartik: 0
   seven: 0
   adminimal_theme: 0
   rain: 0
   claro: 0
+  gin: 0
 profile: seed
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

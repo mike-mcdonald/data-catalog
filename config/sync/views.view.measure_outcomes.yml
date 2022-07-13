@@ -13,7 +13,7 @@ dependencies:
     - taxonomy
     - user
 id: measure_outcomes
-label: 'Measure outcomes'
+label: 'Measure data'
 module: views
 description: ''
 tag: ''
@@ -21,82 +21,12 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: full
-        options:
-          items_per_page: 3
-          offset: 0
-          id: 0
-          total_pages: null
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
-          quantity: 9
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            title: title
-          info:
-            title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
-      row:
-        type: fields
+      title: 'Measure data'
       fields:
         field_reporting_period:
           id: field_reporting_period
@@ -105,6 +35,7 @@ display:
           relationship: reverse__node__field_performance_measure
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Reporting period'
           exclude: false
           alter:
@@ -162,7 +93,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_estimate:
           id: field_estimate
           table: node__field_estimate
@@ -170,7 +100,7 @@ display:
           relationship: reverse__node__field_performance_measure
           group_type: group
           admin_label: ''
-          label: Estimate
+          label: Target
           exclude: false
           alter:
             alter_text: false
@@ -215,9 +145,9 @@ display:
           type: number_decimal
           settings:
             thousand_separator: ''
-            prefix_suffix: true
             decimal_separator: .
             scale: 2
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -228,7 +158,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_actual:
           id: field_actual
           table: node__field_actual
@@ -236,6 +165,7 @@ display:
           relationship: reverse__node__field_performance_measure
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Actual
           exclude: false
           alter:
@@ -281,9 +211,9 @@ display:
           type: number_decimal
           settings:
             thousand_separator: ''
-            prefix_suffix: true
             decimal_separator: .
             scale: 2
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -294,7 +224,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -302,6 +231,8 @@ display:
           relationship: reverse__node__field_performance_measure
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
           label: ''
           exclude: false
           alter:
@@ -343,42 +274,25 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: 'Edit outcome'
+          text: 'Edit data'
           output_url_as_text: false
           absolute: false
-          entity_type: node
-          plugin_id: entity_link_edit
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-      sorts:
-        field_date_range_value:
-          id: field_date_range_value
-          table: taxonomy_term__field_date_range
-          field: field_date_range_value
-          relationship: field_reporting_period
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 3
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
           expose:
             label: ''
           granularity: day
           plugin_id: datetime
-      title: 'Measure outcomes'
-      header: {  }
-      footer: {  }
       empty:
         area:
           id: area
@@ -387,32 +301,27 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: true
-          tokenize: false
-          content:
-            value: 'There are no outcomes available yet.'
-            format: basic_html
           plugin_id: text
-      relationships:
-        reverse__node__field_performance_measure:
-          id: reverse__node__field_performance_measure
-          table: node_field_data
-          field: reverse__node__field_performance_measure
-          relationship: none
+          empty: true
+          content:
+            value: 'There is no measure data available yet.'
+            format: basic_html
+          tokenize: false
+      sorts:
+        field_date_range_value:
+          id: field_date_range_value
+          table: taxonomy_term__field_date_range
+          field: field_date_range_value
+          relationship: field_reporting_period
           group_type: group
-          admin_label: field_performance_measure
-          required: true
-          entity_type: node
-          plugin_id: entity_reverse
-        field_reporting_period:
-          id: field_reporting_period
-          table: node__field_reporting_period
-          field: field_reporting_period
-          relationship: reverse__node__field_performance_measure
-          group_type: group
-          admin_label: 'field_reporting_period: Taxonomy term'
-          required: false
-          plugin_id: standard
+          admin_label: ''
+          plugin_id: datetime
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: field_date_range_value
+          exposed: false
+          granularity: day
       arguments:
         nid:
           id: nid
@@ -421,6 +330,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: node_nid
           default_action: default
           exception:
             value: all
@@ -434,8 +346,8 @@ display:
           summary_options:
             base_path: ''
             count: true
-            items_per_page: 25
             override: false
+            items_per_page: 25
           summary:
             sort_order: asc
             number_of_records: 0
@@ -447,11 +359,77 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
           entity_type: node
-          entity_field: nid
-          plugin_id: node_nid
-      display_extenders: {  }
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            title: title
+          default: '-1'
+          info:
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships:
+        reverse__node__field_performance_measure:
+          id: reverse__node__field_performance_measure
+          table: node_field_data
+          field: reverse__node__field_performance_measure
+          relationship: none
+          group_type: group
+          admin_label: field_performance_measure
+          entity_type: node
+          plugin_id: entity_reverse
+          required: true
+        field_reporting_period:
+          id: field_reporting_period
+          table: node__field_reporting_period
+          field: field_reporting_period
+          relationship: reverse__node__field_performance_measure
+          group_type: group
+          admin_label: 'field_reporting_period: Taxonomy term'
+          plugin_id: standard
+          required: false
       use_ajax: true
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -466,9 +444,9 @@ display:
         - 'config:field.storage.node.field_estimate'
         - 'config:field.storage.node.field_reporting_period'
   block_1:
-    display_plugin: block
     id: block_1
     display_title: Block
+    display_plugin: block
     position: 1
     display_options:
       display_extenders: {  }

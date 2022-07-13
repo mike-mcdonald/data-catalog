@@ -9,7 +9,7 @@ id: node.performance_measure.field_origination_date
 field_name: field_origination_date
 entity_type: node
 bundle: performance_measure
-label: 'Performance measure origination date'
+label: 'Origination date'
 description: ''
 required: false
 translatable: false

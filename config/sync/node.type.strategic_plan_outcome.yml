@@ -1,0 +1,17 @@
+uuid: 2036befe-348e-4112-bdb8-4d92339152e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Strategic plan outcome'
+type: strategic_plan_outcome
+description: 'Measurable changes we want to see in our transportation system, aligned with the overarching goals of our Strategic Plan.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

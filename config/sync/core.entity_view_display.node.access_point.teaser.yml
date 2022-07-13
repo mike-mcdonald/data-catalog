@@ -27,17 +27,18 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           145dcb30-3267-4b71-8e00-b024e6c439c3:
             uuid: 145dcb30-3267-4b71-8e00-b024e6c439c3
             region: content
             configuration:
+              id: 'extra_field_block:node:access_point:links'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:access_point:links'
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: node.access_point.teaser
 targetEntityType: node
@@ -45,9 +46,9 @@ bundle: access_point
 mode: teaser
 content:
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   field_data_custodian: true
@@ -55,4 +56,5 @@ hidden:
   field_purpose: true
   field_subject_areas: true
   field_url: true
+  group_content: true
   search_api_excerpt: true

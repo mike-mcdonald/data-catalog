@@ -23,17 +23,18 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           da8ec27a-725f-4048-b42b-fb2800405aa2:
             uuid: da8ec27a-725f-4048-b42b-fb2800405aa2
             region: content
             configuration:
+              id: 'extra_field_block:node:server:links'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:server:links'
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: node.server.teaser
 targetEntityType: node
@@ -41,10 +42,11 @@ bundle: server
 mode: teaser
 content:
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_operating_system: true
+  group_content: true
   search_api_excerpt: true

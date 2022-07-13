@@ -23,11 +23,16 @@ h6 {
 }
 
 body {
-  @apply text-lg font-sans;
+  @apply font-sans;
 }
 
 p {
-  @apply my-3;
+  &:not(:first-child) {
+    @apply mt-4;
+  }
+  &.js-flag-message {
+    @apply mt-0;
+  }
 }
 dt {
   @apply font-bold leading-normal;

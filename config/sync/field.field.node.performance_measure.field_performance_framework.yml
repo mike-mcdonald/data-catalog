@@ -1,0 +1,33 @@
+uuid: d31345a7-1c67-4780-92be-4885cd4a3d66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_performance_framework
+    - node.type.activity
+    - node.type.performance_measure
+    - node.type.program_outcome
+    - node.type.strategic_plan_outcome
+id: node.performance_measure.field_performance_framework
+field_name: field_performance_framework
+entity_type: node
+bundle: performance_measure
+label: 'Associated performance framework component(s)'
+description: 'Us the modal to select the activity, budget program outcome, and/or strategic plan outcome this measure pertains to. Open the modal by clicking the button below.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      activity: activity
+      program_outcome: program_outcome
+      strategic_plan_outcome: strategic_plan_outcome
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: activity
+field_type: entity_reference

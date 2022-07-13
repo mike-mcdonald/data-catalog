@@ -1,9 +1,9 @@
 .select2-selection--single {
-  @apply bg-gray-100 appearance-none block border border-gray-500 rounded w-full h-full pl-4 pr-8 py-3;
+  @apply bg-gray-100 appearance-none block border border-gray-500 rounded w-full h-full px-3 pr-8 py-2;
   cursor: text;
 
   .select2-selection__rendered {
-    @apply flex items-center;
+    @apply flex items-center p-0;
     cursor: default;
   }
 
@@ -12,7 +12,7 @@
   }
 
   .select2-selection__placeholder {
-    float: left
+    float: left;
   }
 }
 
@@ -39,4 +39,3 @@
     }
   }
 }
-

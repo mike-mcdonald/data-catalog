@@ -1,0 +1,143 @@
+uuid: 715bd219-46c9-4ca3-b154-f0a9a0b614ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.strategic_plan_outcome.title
+    - core.entity_view_mode.node.card
+    - field.field.node.strategic_plan_outcome.body
+    - field.field.node.strategic_plan_outcome.field_strategic_plan
+    - node.type.strategic_plan_outcome
+  module:
+    - layout_builder
+    - text
+    - user
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          64551cfa-1ede-4b76-a448-bab26e0252d2:
+            uuid: 64551cfa-1ede-4b76-a448-bab26e0252d2
+            region: content
+            configuration:
+              id: 'field_block:node:strategic_plan_outcome:body'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: visually_hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: -8
+            additional: {  }
+          d8df1286-14cb-4f58-9e0f-24893d41359d:
+            uuid: d8df1286-14cb-4f58-9e0f-24893d41359d
+            region: content
+            configuration:
+              id: 'field_block:node:strategic_plan_outcome:field_strategic_plan'
+              label: 'Strategic plan goal'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: cshs_full_hierarchy
+                label: above
+                settings:
+                  linked: 1
+                  reverse: 0
+                  separator: ' / '
+                third_party_settings: {  }
+            weight: -7
+            additional: {  }
+          f78b174f-c458-42e5-a83b-de35a1e332c0:
+            uuid: f78b174f-c458-42e5-a83b-de35a1e332c0
+            region: content
+            configuration:
+              id: 'field_block:node:strategic_plan_outcome:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: -10
+            additional: {  }
+          c2a53c0e-3829-493a-8b5f-19db6c65e985:
+            uuid: c2a53c0e-3829-493a-8b5f-19db6c65e985
+            region: content
+            configuration:
+              id: 'field_block:node:strategic_plan_outcome:title'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+          1101f441-9ce3-410a-a78f-4d355adc39ca:
+            uuid: 1101f441-9ce3-410a-a78f-4d355adc39ca
+            region: content
+            configuration:
+              id: 'extra_field_block:node:strategic_plan_outcome:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -6
+            additional: {  }
+        third_party_settings: {  }
+id: node.strategic_plan_outcome.card
+targetEntityType: node
+bundle: strategic_plan_outcome
+mode: card
+content:
+  body:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_strategic_plan:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  group_content: true
+  links: true
+  search_api_excerpt: true

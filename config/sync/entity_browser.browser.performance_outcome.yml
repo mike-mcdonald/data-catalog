@@ -1,0 +1,31 @@
+uuid: 10031ab8-9cc1-4560-9e36-c5aef7ba81c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser
+  module:
+    - views
+name: performance_outcome
+label: 'Program outcome'
+display: modal
+display_configuration:
+  width: ''
+  height: '500'
+  link_text: 'Select program outcome(s)'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  0e7853b6-cdba-4f74-bf0b-34ec0be139b9:
+    id: view
+    uuid: 0e7853b6-cdba-4f74-bf0b-34ec0be139b9
+    label: Find
+    weight: 1
+    settings:
+      submit_text: 'Select program outcome(s)'
+      auto_select: false
+      view: entity_browser
+      view_display: program_outcome_browser

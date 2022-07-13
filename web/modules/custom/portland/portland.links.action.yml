@@ -42,7 +42,7 @@ performance_measure_add_action:
 
 performance_outcome_add_action:
   route_name: node.add
-  title: "Add outcome"
+  title: "Add measure data"
   route_parameters:
     node_type: "performance_outcome"
   appears_on:

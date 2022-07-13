@@ -1,0 +1,25 @@
+uuid: 5fe77984-0c64-4272-99a8-1eca230ed29d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dashboard_message
+    - field.storage.block_content.field_weight
+id: block_content.dashboard_message.field_weight
+field_name: field_weight
+entity_type: block_content
+bundle: dashboard_message
+label: Weight
+description: 'Use this field to provide sorting amongst messages. A lower weight (including negative numbers) will appear at the top of the message list, while a higher weight will appear lower. You may enter values between -99 and 99.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: -99
+  max: 99
+  prefix: ''
+  suffix: ''
+field_type: integer

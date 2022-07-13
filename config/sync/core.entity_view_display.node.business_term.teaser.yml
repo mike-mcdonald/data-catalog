@@ -1,6 +1,6 @@
 uuid: 46d5f3da-7a46-42a2-808b-0105de24e16f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -27,33 +27,44 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           3f8e8e0b-e6fd-40f4-bbab-feeb2faefa52:
             uuid: 3f8e8e0b-e6fd-40f4-bbab-feeb2faefa52
             region: content
             configuration:
+              id: 'extra_field_block:node:business_term:links'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:business_term:links'
-            additional: {  }
             weight: 0
+            additional: {  }
           8e2e8152-0ce4-4a37-a27b-278d7193e924:
             uuid: 8e2e8152-0ce4-4a37-a27b-278d7193e924
             region: content
             configuration:
+              id: 'field_block:node:business_term:body'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:business_term:body'
               formatter:
-                label: hidden
                 type: text_summary_or_trimmed
+                label: hidden
                 settings:
                   trim_length: 600
                 third_party_settings: {  }
-            additional: {  }
             weight: 1
+            additional: {  }
+          fba5593d-6c8c-42fe-adad-75d8f47d92a8:
+            uuid: fba5593d-6c8c-42fe-adad-75d8f47d92a8
+            region: content
+            configuration:
+              id: 'extra_field_block:node:business_term:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
 id: node.business_term.teaser
 targetEntityType: node
@@ -61,20 +72,26 @@ bundle: business_term
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 101
     region: content
-  links:
-    weight: 100
-    region: content
+  flag_bookmark:
     settings: {  }
     third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_data_custodian: true
   field_keywords: true
   field_subject_areas: true
+  group_content: true
   search_api_excerpt: true

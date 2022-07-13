@@ -6,28 +6,23 @@ dependencies:
     - core.base_field_override.node.performance_measure.title
     - core.entity_view_mode.node.card
     - field.field.node.performance_measure.body
-    - field.field.node.performance_measure.field_audience
     - field.field.node.performance_measure.field_category
     - field.field.node.performance_measure.field_data_custodian
     - field.field.node.performance_measure.field_data_group
-    - field.field.node.performance_measure.field_data_reliability
     - field.field.node.performance_measure.field_data_type
     - field.field.node.performance_measure.field_datasets
-    - field.field.node.performance_measure.field_formula
+    - field.field.node.performance_measure.field_direction
     - field.field.node.performance_measure.field_frequency
     - field.field.node.performance_measure.field_keywords
-    - field.field.node.performance_measure.field_level
     - field.field.node.performance_measure.field_measure_id
     - field.field.node.performance_measure.field_measure_type
     - field.field.node.performance_measure.field_origination_date
-    - field.field.node.performance_measure.field_program_area
-    - field.field.node.performance_measure.field_project_name
+    - field.field.node.performance_measure.field_performance_framework
     - field.field.node.performance_measure.field_requirements
     - field.field.node.performance_measure.field_status
-    - field.field.node.performance_measure.field_strategic_plan
     - field.field.node.performance_measure.field_strategic_target
     - field.field.node.performance_measure.field_strategic_year
-    - field.field.node.performance_measure.field_threshold
+    - field.field.node.performance_measure.field_subject_areas
     - field.field.node.performance_measure.field_url
     - node.type.performance_measure
   module:
@@ -37,82 +32,14 @@ dependencies:
     - rain
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
-        components:
-          09357d93-538e-4ae5-92b8-9e3df624e5fd:
-            uuid: 09357d93-538e-4ae5-92b8-9e3df624e5fd
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:type'
-              label: 'Content type'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_label
-                settings:
-                  link: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-      -
-        layout_id: layout_twocol_flex
-        layout_settings:
-          label: ''
-        components:
-          d4b2f9ce-f7ac-4264-875c-bb573868458e:
-            uuid: d4b2f9ce-f7ac-4264-875c-bb573868458e
-            region: first
-            configuration:
-              id: 'field_block:node:performance_measure:title'
-              label: 'Measure Name'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: string
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-          175f87a2-3a32-4ddf-a475-fda590f5eaa4:
-            uuid: 175f87a2-3a32-4ddf-a475-fda590f5eaa4
-            region: second
-            configuration:
-              id: 'field_block:node:performance_measure:field_status'
-              label: Status
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: card
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
+          context_mapping: {  }
         components:
           08b89231-5ccf-490f-8f76-b6d33d3ab237:
             uuid: 08b89231-5ccf-490f-8f76-b6d33d3ab237
@@ -120,70 +47,73 @@ third_party_settings:
             configuration:
               id: 'field_block:node:performance_measure:field_category'
               label: 'Performance Metric Purpose'
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -5
             additional: {  }
-            weight: -8
           c5f9a42d-bf99-4806-9d11-06a7305e5393:
             uuid: c5f9a42d-bf99-4806-9d11-06a7305e5393
             region: content
             configuration:
               id: 'field_block:node:performance_measure:field_keywords'
               label: Keywords
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: card
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: visually_hidden
+                settings:
+                  view_mode: card
+                third_party_settings: {  }
+            weight: -4
             additional: {  }
-            weight: -7
           8aeea7a5-ba56-474f-94c8-5e5ee2cf2ac1:
             uuid: 8aeea7a5-ba56-474f-94c8-5e5ee2cf2ac1
             region: content
             configuration:
               id: 'field_block:node:performance_measure:changed'
               label: Updated
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: inline
                 type: timestamp
+                label: inline
                 settings:
                   date_format: short
                   custom_date_format: ''
                   timezone: ''
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
+            weight: -7
             additional: {  }
-            weight: -10
           1e740314-5031-41b6-80dc-3517b7aba6a0:
             uuid: 1e740314-5031-41b6-80dc-3517b7aba6a0
             region: content
             configuration:
               id: 'field_block:node:performance_measure:body'
               label: Description
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: visually_hidden
                 type: smart_trim
+                label: visually_hidden
                 settings:
                   trim_length: 300
                   trim_type: chars
@@ -191,18 +121,87 @@ third_party_settings:
                   wrap_output: false
                   wrap_class: trimmed
                   more_link: false
-                  more_text: More
                   more_class: more-link
+                  more_text: More
                   summary_handler: trim
                   trim_options:
                     text: true
                     trim_zero: false
                 third_party_settings: {  }
+            weight: -6
+            additional: {  }
+          0eca2fb5-5137-4c86-bbac-da8a386ecc42:
+            uuid: 0eca2fb5-5137-4c86-bbac-da8a386ecc42
+            region: content
+            configuration:
+              id: 'extra_field_block:node:performance_measure:flag_bookmark'
+              label: 'Flag: <em class="placeholder">Bookmark</em>'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                settings: {  }
+                third_party_settings: {  }
+            weight: -3
+            additional: {  }
+          ef93d129-2b10-4d8e-8178-0b0de73e6885:
+            uuid: ef93d129-2b10-4d8e-8178-0b0de73e6885
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:title'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
             weight: -9
+            additional: {  }
+          175f87a2-3a32-4ddf-a475-fda590f5eaa4:
+            uuid: 175f87a2-3a32-4ddf-a475-fda590f5eaa4
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:field_status'
+              label: Status
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: visually_hidden
+                settings:
+                  view_mode: card
+                third_party_settings: {  }
+            weight: -8
+            additional: {  }
+          09357d93-538e-4ae5-92b8-9e3df624e5fd:
+            uuid: 09357d93-538e-4ae5-92b8-9e3df624e5fd
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: -10
+            additional: {  }
         third_party_settings: {  }
 id: node.performance_measure.card
 targetEntityType: node
@@ -210,46 +209,39 @@ bundle: performance_measure
 mode: card
 content:
   content_moderation_control:
-    weight: -20
     settings: {  }
     third_party_settings: {  }
+    weight: -20
     region: content
-  field_audience:
-    type: entity_reference_label
-    weight: 2
-    region: content
-    label: above
-    settings:
-      link: true
+  flag_bookmark:
+    settings: {  }
     third_party_settings: {  }
+    weight: 10
+    region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   body: true
   field_category: true
   field_data_custodian: true
   field_data_group: true
-  field_data_reliability: true
   field_data_type: true
   field_datasets: true
-  field_formula: true
+  field_direction: true
   field_frequency: true
   field_keywords: true
-  field_level: true
   field_measure_id: true
   field_measure_type: true
   field_origination_date: true
-  field_program_area: true
-  field_project_name: true
+  field_performance_framework: true
   field_requirements: true
   field_status: true
-  field_strategic_plan: true
   field_strategic_target: true
   field_strategic_year: true
-  field_threshold: true
+  field_subject_areas: true
   field_url: true
   group_content: true
   search_api_excerpt: true

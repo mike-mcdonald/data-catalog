@@ -5,6 +5,9 @@ dependencies:
   config:
     - field.field.user.user.user_picture
     - image.style.thumbnail
+    - views.view.dashboard_messages
+    - views.view.flag_bookmark
+    - views.view.notifications
     - views.view.user_content
     - views.view.your_groups
   module:
@@ -21,105 +24,106 @@ third_party_settings:
     settings: {  }
   layout_builder:
     enabled: true
+    allow_custom: false
     sections:
       -
-        layout_id: layout_twocol
+        layout_id: layout_twocol_right
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
-          9ece0e13-d87c-49cb-bd75-813634143291:
-            uuid: 9ece0e13-d87c-49cb-bd75-813634143291
+          0478f13b-a199-4667-87ac-779a8e26d744:
+            uuid: 0478f13b-a199-4667-87ac-779a8e26d744
             region: first
             configuration:
+              id: 'views_block:dashboard_messages-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: -10
+            additional: {  }
+          6118d3f0-2b56-4c5d-bda6-9174fcffd43a:
+            uuid: 6118d3f0-2b56-4c5d-bda6-9174fcffd43a
+            region: second
+            configuration:
+              id: 'views_block:notifications-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: -7
+            additional: {  }
+          5e79943a-d23e-4878-b683-26ea3ba528ed:
+            uuid: 5e79943a-d23e-4878-b683-26ea3ba528ed
+            region: first
+            configuration:
+              id: 'views_block:user_content-block_1'
+              label: 'Owned content'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Owned content'
+              items_per_page: none
+            weight: -8
+            additional: {  }
+          125c203a-bdbe-4d27-8e37-c4f31ea85c6e:
+            uuid: 125c203a-bdbe-4d27-8e37-c4f31ea85c6e
+            region: first
+            configuration:
+              id: 'views_block:your_groups-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: -9
+            additional: {  }
+          328ba587-4ced-4336-ad39-05ee3711c2cb:
+            uuid: 328ba587-4ced-4336-ad39-05ee3711c2cb
+            region: content
+            configuration:
               id: 'field_block:user:user:user_picture'
-              label: Picture
-              provider: layout_builder
               label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: hidden
                 type: image
+                label: hidden
                 settings:
-                  image_style: medium
-                  image_link: ''
+                  image_link: content
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
-          8976f6c4-e41e-4b72-968e-8205707e0e19:
-            uuid: 8976f6c4-e41e-4b72-968e-8205707e0e19
-            region: second
-            configuration:
-              id: 'field_block:user:user:mail'
-              label: Email
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: email_mailto
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
             additional: {  }
-            weight: 0
-          15eb7a43-a65f-43bb-ae7e-4e10dff7b55f:
-            uuid: 15eb7a43-a65f-43bb-ae7e-4e10dff7b55f
-            region: second
+          5082fff1-64a2-4abb-b0a4-46ef6d609b99:
+            uuid: 5082fff1-64a2-4abb-b0a4-46ef6d609b99
+            region: first
             configuration:
-              id: 'field_block:user:user:access'
-              label: 'Last access'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: timestamp
-                settings:
-                  date_format: html_date
-                  custom_date_format: ''
-                  timezone: ''
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
+              id: 'views_block:flag_bookmark-block_1'
+              label: 'Bookmarked content'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Bookmarked content'
+              items_per_page: none
+            weight: -7
             additional: {  }
-            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
-        components:
-          5e79943a-d23e-4878-b683-26ea3ba528ed:
-            uuid: 5e79943a-d23e-4878-b683-26ea3ba528ed
-            region: content
-            configuration:
-              id: 'views_block:user_content-block_1'
-              label: 'Owned content'
-              provider: views
-              label_display: visible
-              views_label: 'Owned content'
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: -9
-          125c203a-bdbe-4d27-8e37-c4f31ea85c6e:
-            uuid: 125c203a-bdbe-4d27-8e37-c4f31ea85c6e
-            region: content
-            configuration:
-              id: 'views_block:your_groups-block_1'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: -10
+          context_mapping: {  }
+        components: {  }
         third_party_settings: {  }
-    allow_custom: false
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.default
@@ -128,24 +132,26 @@ bundle: user
 mode: default
 content:
   masquerade:
-    weight: 50
     settings: {  }
     third_party_settings: {  }
+    weight: 50
     region: first
   member_for:
-    weight: 5
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 5
+    region: content
   user_picture:
     type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
     weight: 0
     region: content
-    settings:
-      image_style: thumbnail
-      image_link: content
-    third_party_settings: {  }
-    label: hidden
 hidden:
   group_content: true
   search_api_excerpt: true

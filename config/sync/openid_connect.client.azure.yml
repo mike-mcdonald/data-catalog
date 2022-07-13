@@ -1,0 +1,12 @@
+uuid: 604ebdba-806b-48e5-8aa3-6b4614e3f275
+langcode: en
+status: true
+dependencies:
+  module:
+    - portland
+id: azure
+label: Azure
+plugin: azure
+settings:
+  client_id: null
+  client_secret: null

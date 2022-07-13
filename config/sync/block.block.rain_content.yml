@@ -11,12 +11,12 @@ _core:
 id: rain_content
 theme: rain
 region: content
-weight: -5
+weight: -6
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
   label: 'Main page content'
-  provider: system
   label_display: '0'
+  provider: system
 visibility: {  }

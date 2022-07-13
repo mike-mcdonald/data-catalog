@@ -6,66 +6,52 @@ dependencies:
     - field.field.group.group.field_email_address
     - field.field.group.group.field_summary
     - group.type.group
-    - views.view.group_nodes
   module:
     - layout_builder
-    - views
   theme:
     - rain
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           99457e14-2918-4ca5-92e7-2b84700513b3:
             uuid: 99457e14-2918-4ca5-92e7-2b84700513b3
             region: content
             configuration:
+              id: 'field_block:group:group:field_summary'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:group:group:field_summary'
               formatter:
+                type: string
                 label: visually_hidden
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-                type: string
-            additional: {  }
             weight: 1
+            additional: {  }
           f4ecc3d1-1c59-46c8-aa5b-3f18195520cf:
             uuid: f4ecc3d1-1c59-46c8-aa5b-3f18195520cf
             region: content
             configuration:
+              id: 'field_block:group:group:field_email_address'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:group:group:field_email_address'
               formatter:
+                type: email_mailto
                 label: inline
                 settings: {  }
                 third_party_settings: {  }
-                type: email_mailto
-            additional: {  }
             weight: 2
-          067627e5-415b-4c49-a4ff-25e4245b83e7:
-            uuid: 067627e5-415b-4c49-a4ff-25e4245b83e7
-            region: content
-            configuration:
-              id: 'views_block:group_nodes-block_1'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
             additional: {  }
-            weight: 3
         third_party_settings: {  }
 id: group.group.default
 targetEntityType: group
@@ -73,28 +59,28 @@ bundle: group
 mode: default
 content:
   field_email_address:
-    weight: 2
+    type: email_mailto
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: email_mailto
+    weight: 2
     region: content
   field_summary:
-    weight: 1
+    type: string
     label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   label:
-    label: hidden
     type: string
-    weight: 0
-    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   changed: true
   created: true

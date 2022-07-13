@@ -24,7 +24,7 @@ dependencies:
     - cshs
     - entity_browser
     - field_layout
-    - gcontent_field
+    - entitygroupfield
     - inline_entity_form
     - select2
   theme:
@@ -39,144 +39,145 @@ targetEntityType: node
 bundle: dataset
 mode: default
 content:
+  entitygroupfield:
+    type: entitygroupfield_select_widget
+    weight: 15
+    region: content
+    settings:
+      help_text: 'Select a group from the options above, then comfirm that selection using the button below.'
+      label: 'Add to group'
+      multiple: false
+      required: false
+    third_party_settings: {  }
   field_accessibility_level:
+    type: options_select
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_authority_level:
+    type: options_select
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_data_custodian:
+    type: entity_browser_entity_reference
     weight: 2
+    region: content
     settings:
       entity_browser: contact_browser
       field_widget_display: rendered_entity
+      field_widget_edit: false
+      field_widget_remove: true
+      field_widget_replace: false
+      open: true
       field_widget_display_settings:
         view_mode: teaser
-      field_widget_remove: true
-      open: true
       selection_mode: selection_append
-      field_widget_edit: false
-      field_widget_replace: false
     third_party_settings: {  }
-    type: entity_browser_entity_reference
-    region: content
   field_data_group:
+    type: cshs
     weight: 7
+    region: content
     settings:
+      save_lineage: false
+      force_deepest: false
       parent: '0'
       level_labels: ''
-      force_deepest: false
-      save_lineage: false
       hierarchy_depth: 0
       required_depth: 0
     third_party_settings: {  }
-    type: cshs
-    region: content
   field_data_owner:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 6
     region: content
-  field_demographic_information:
-    weight: 14
     settings: {  }
     third_party_settings: {  }
+  field_demographic_information:
     type: options_buttons
+    weight: 14
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_keywords:
+    type: select2_entity_reference
     weight: 9
+    region: content
     settings:
-      match_operator: CONTAINS
-      autocomplete: false
       width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
       match_limit: 10
     third_party_settings: {  }
-    type: select2_entity_reference
-    region: content
   field_purpose:
+    type: string_textarea
     weight: 4
+    region: content
     settings:
       rows: 10
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_quality_concerns:
+    type: string_textarea
     weight: 12
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_security_level:
+    type: options_buttons
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_source:
     type: options_select
     weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_spatial_information:
+    type: options_buttons
     weight: 13
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_subject_areas:
+    type: cshs
     weight: 8
+    region: content
     settings:
+      save_lineage: false
+      force_deepest: false
       parent: '0'
       level_labels: ''
-      force_deepest: false
-      save_lineage: false
       hierarchy_depth: 0
       required_depth: 0
     third_party_settings: {  }
-    type: cshs
-    region: content
   field_timeliness:
+    type: inline_entity_form_complex
     weight: 11
+    region: content
     settings:
       form_mode: default
       override_labels: true
       label_singular: 'timeliness entry'
       label_plural: 'timeliness entries'
       allow_new: true
+      allow_existing: false
       match_operator: CONTAINS
+      allow_duplicate: false
       collapsible: false
       collapsed: false
-      allow_existing: false
-      allow_duplicate: false
       revision: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
-    region: content
-  group_content:
-    type: group_selector_widget
-    weight: 15
-    region: content
-    settings:
-      widget: select
-      multiple: '1'
-      required: 0
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
     weight: 18
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

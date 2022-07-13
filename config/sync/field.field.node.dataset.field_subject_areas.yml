@@ -10,7 +10,7 @@ id: node.dataset.field_subject_areas
 field_name: field_subject_areas
 entity_type: node
 bundle: dataset
-label: 'Subject areas'
+label: 'Data domain'
 description: ''
 required: false
 translatable: false

@@ -24,6 +24,7 @@ third_party_settings:
         layout_id: layout_twocol_flex
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           27d080a8-a633-47de-83b8-86113b987ada:
             uuid: 27d080a8-a633-47de-83b8-86113b987ada
@@ -31,39 +32,58 @@ third_party_settings:
             configuration:
               id: 'field_block:user:user:user_picture'
               label: Picture
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: image
-                settings:
-                  image_style: avatar
-                  image_link: ''
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: avatar
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
           15899e04-ecba-4852-b519-a8ebaed2e1f9:
             uuid: 15899e04-ecba-4852-b519-a8ebaed2e1f9
             region: second
             configuration:
               id: 'field_block:user:user:name'
               label: Name
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: string
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
             weight: 4
+            additional: {  }
+          7064dd5f-0b40-40b5-a452-eb2e18d06132:
+            uuid: 7064dd5f-0b40-40b5-a452-eb2e18d06132
+            region: content
+            configuration:
+              id: 'field_block:user:user:user_picture'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
@@ -73,19 +93,21 @@ bundle: user
 mode: compact
 content:
   masquerade:
-    weight: 50
     settings: {  }
     third_party_settings: {  }
+    weight: 50
     region: content
   user_picture:
     type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
     weight: 0
     region: content
-    settings:
-      image_style: thumbnail
-      image_link: content
-    third_party_settings: {  }
-    label: hidden
 hidden:
   group_content: true
   member_for: true

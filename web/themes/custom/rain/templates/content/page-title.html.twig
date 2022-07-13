@@ -13,13 +13,11 @@
  */
 #}
 {%
-  set title_classes = title_classes|default([
-    'mb-12',
-  ])
+  set title_classes = title_classes|default([])
 %}
 
 {{ title_prefix }}
 {% if title %}
-  <h1{{ title_attributes.addClass(title_classes) }}>{{ title }}</h1>
+	<h1{{title_attributes.addClass(title_classes)}}>{{ title }}</h1>
 {% endif %}
 {{ title_suffix }}

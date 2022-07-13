@@ -33,60 +33,28 @@ third_party_settings:
     settings: {  }
   layout_builder:
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
-          cadbd31c-396e-462d-94b2-8af779e4f976:
-            uuid: cadbd31c-396e-462d-94b2-8af779e4f976
-            region: content
-            configuration:
-              id: 'field_block:node:dataset:type'
-              label: 'Content type'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: visually_hidden
-                type: entity_reference_label
-                settings:
-                  link: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: -10
-          cdc2497f-bc6d-42c6-b5e1-ec72dab5fe45:
-            uuid: cdc2497f-bc6d-42c6-b5e1-ec72dab5fe45
-            region: content
-            configuration:
-              id: 'field_block:node:dataset:title'
-              label: 'Dataset name'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: -9
           5aa4faa8-f9f7-424d-a1a4-60a5744e5b1c:
             uuid: 5aa4faa8-f9f7-424d-a1a4-60a5744e5b1c
             region: content
             configuration:
               id: 'field_block:node:dataset:field_purpose'
               label: Description
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: visually_hidden
                 type: smart_trim
+                label: visually_hidden
                 settings:
                   trim_length: 300
                   trim_type: chars
@@ -94,100 +62,149 @@ third_party_settings:
                   wrap_output: false
                   wrap_class: trimmed
                   more_link: false
-                  more_text: More
                   more_class: more-link
+                  more_text: More
                   trim_options:
                     text: true
                     trim_zero: false
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: -7
+            additional: {  }
           a838f55d-eee6-4846-b09a-1bdc9e2f9934:
             uuid: a838f55d-eee6-4846-b09a-1bdc9e2f9934
             region: content
             configuration:
               id: 'field_block:node:dataset:field_keywords'
               label: Keywords
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: visually_hidden
                 type: entity_reference_entity_view
+                label: visually_hidden
                 settings:
                   view_mode: card
                 third_party_settings:
                   ds:
                     ds_limit: ''
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
             weight: -6
+            additional: {  }
           bdd1138c-5a53-4277-a4d4-8df12f9c0a79:
             uuid: bdd1138c-5a53-4277-a4d4-8df12f9c0a79
             region: content
             configuration:
               id: 'field_block:node:dataset:field_data_group'
               label: Division/Group
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: visually_hidden
                 type: cshs_full_hierarchy
+                label: visually_hidden
                 settings:
                   linked: 1
                   reverse: 0
                   separator: ' / '
                 third_party_settings: {  }
+            weight: -8
+            additional: {  }
+          50c3e5b6-8591-424e-bcbb-503d0487bb96:
+            uuid: 50c3e5b6-8591-424e-bcbb-503d0487bb96
+            region: content
+            configuration:
+              id: 'extra_field_block:node:dataset:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -5
+            additional: {  }
+          4b05371a-a427-4121-9ce6-1a757eabfd04:
+            uuid: 4b05371a-a427-4121-9ce6-1a757eabfd04
+            region: content
+            configuration:
+              id: 'field_block:node:dataset:title'
+              label: 'Dataset name'
+              label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: -9
             additional: {  }
-            weight: -8
+          8c3df17e-37e1-483e-9a6e-dc674137ef59:
+            uuid: 8c3df17e-37e1-483e-9a6e-dc674137ef59
+            region: content
+            configuration:
+              id: 'field_block:node:dataset:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: -10
+            additional: {  }
         third_party_settings: {  }
-    allow_custom: false
 id: node.dataset.card
 targetEntityType: node
 bundle: dataset
 mode: card
 content:
   field_data_group:
-    weight: 1
+    type: cshs_full_hierarchy
     label: visually_hidden
     settings:
       linked: '1'
       separator: ' / '
       reverse: 0
     third_party_settings: {  }
-    type: cshs_full_hierarchy
+    weight: 1
     region: content
   field_keywords:
-    weight: 2
+    type: entity_reference_entity_view
     label: visually_hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 2
     region: content
   field_purpose:
-    weight: 0
+    type: basic_string
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 0
     region: content
   field_subject_areas:
-    weight: 3
+    type: cshs_full_hierarchy
     label: visually_hidden
     settings:
       linked: '1'
       separator: ' / '
       reverse: 0
     third_party_settings: {  }
-    type: cshs_full_hierarchy
+    weight: 3
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   field_accessibility_level: true

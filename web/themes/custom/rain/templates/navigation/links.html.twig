@@ -45,34 +45,35 @@
 {% set link_attributes = link_attributes|default(create_attribute()) %}
 {%
   set link_classes = link_classes|default([
-    'border-0',
+    'border-b-2',
+    'border-current',
     'whitespace-no-wrap',
   ])
 %}
 
 {% if links -%}
-  {% block heading %}
-    {%- if heading -%}
-      {%- if heading.level -%}
-        <{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>
-      {%- else -%}
-        <h2{{ heading.attributes }}>{{ heading.text }}</h2>
-      {%- endif -%}
-    {%- endif -%}
-  {% endblock %}
-  {% block list %}
-    <ul{{ attributes.addClass(list_classes) }}>
-      {%- for item in links -%}
-        <li{{ item.attributes.addClass(list_item_classes) }}>
-          {%- if item.link -%}
-            <a{{ link_attributes.addClass(link_classes) }} href="{{ item.link['#url'].toString() }}">{{ item.text }}</a>
-          {%- elseif item.text_attributes -%}
-            <span{{ item.text_attributes }}>{{ item.text }}</span>
-          {%- else -%}
-            {{ item.text }}
-          {%- endif -%}
-        </li>
-      {%- endfor -%}
-    </ul>
-  {% endblock %}
+	{% block heading %}
+		{%- if heading -%}
+			{%- if heading.level -%}
+				<{{heading.level}}{{heading.attributes}}>{{ heading.text }}</{{heading.level}}>
+			{%- else -%}
+				<h2{{heading.attributes}}>{{ heading.text }}</h2>
+			{%- endif -%}
+		{%- endif -%}
+	{% endblock %}
+	{% block list %}
+		<ul{{attributes.addClass(list_classes)}}>
+			{%- for item in links -%}
+				<li{{item.attributes.addClass(list_item_classes)}}>
+					{%- if item.link -%}
+						<a{{link_attributes.addClass(link_classes)}} href="{{ item.link['#url'].toString() }}">{{ item.text }}</a>
+					{%- elseif item.text_attributes -%}
+						<span{{item.text_attributes}}>{{ item.text }}</span>
+					{%- else -%}
+						{{ item.text }}
+					{%- endif -%}
+				</li>
+			{%- endfor -%}
+		</ul>
+	{% endblock %}
 {%- endif %}

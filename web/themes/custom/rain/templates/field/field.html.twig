@@ -43,7 +43,7 @@
 %}
 
 {%
-  set field_classes = field_classes|default([])|merge(layout_classes)
+  set field_classes = field_classes|default(['py-1'])|merge(layout_classes)
 %}
 
 {%
@@ -59,6 +59,7 @@
 {% set content_classes = content_classes|default([])|merge([
    label_display == 'inline' ? 'lg:col-span-2'
 ]) %}
+{% set item_element = item_element|default('div') %}
 {% set item_classes = item_classes|default([]) %}
 
 {% spaceless %}
@@ -73,9 +74,9 @@
 			{% block content %}
 				<div{{content_attribute.addClass(content_classes)}}>
 					{%- for item in items -%}
-						<div{{item.attributes.addClass(item_classes)}}>
+						<{{item_element}}{{item.attributes.addClass(item_classes)}}>
 							{{ item.content }}
-						</div>
+						</{{item_element}}>
 					{%- endfor -%}
 				</div>
 			{% endblock %}

@@ -9,6 +9,7 @@
             "type": "php",
             "request": "launch",
             "port": 9000,
+            "hostname": "localhost",
             "pathMappings": {
                 "/var/www/html": "${workspaceRoot}"
             }

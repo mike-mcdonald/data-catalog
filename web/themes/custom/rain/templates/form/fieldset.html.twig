@@ -38,37 +38,34 @@
   ])
 %}
 <fieldset{{attributes.addClass(classes)}}>
-  {%
+	{%
     set legend_span_classes = [
       'fieldset-legend',
       required ? 'js-form-required',
       required ? 'form-required',
     ]
   %}
-  {#  Always wrap fieldset legends in a SPAN for CSS positioning. #}
-  {% if legend.title is not empty %}
-    <legend{{legend.attributes.addClass(legend_classes)}}>
-      <span{{legend_span.attributes.addClass(legend_span_classes)}}>{{ legend.title }}</span>
-    </legend>
-  {% endif %}
-  <div
-    class="fieldset-wrapper">
-    {% if errors %}
-      <div>
-        {{ errors }}
-      </div>
-    {% endif %}
-    {% if prefix %}
-      <span
-        class="field-prefix">{{ prefix }}</span>
-    {% endif %}
-    {{ children }}
-    {% if suffix %}
-      <span
-        class="field-suffix">{{ suffix }}</span>
-    {% endif %}
-    {% if description.content %}
-      <div{{description.attributes.addClass('description')}}>{{ description.content }}</div>
-    {% endif %}
-  </div>
+	{#  Always wrap fieldset legends in a SPAN for CSS positioning. #}
+	{% if legend.title is not empty %}
+		<legend{{legend.attributes.addClass(legend_classes)}}>
+			<span{{legend_span.attributes.addClass(legend_span_classes)}}>{{ legend.title }}</span>
+		</legend>
+	{% endif %}
+	<div class="fieldset-wrapper">
+		{% if errors %}
+			<div>
+				{{ errors }}
+			</div>
+		{% endif %}
+		{% if prefix %}
+			<span class="field-prefix">{{ prefix }}</span>
+		{% endif %}
+		{{ children }}
+		{% if suffix %}
+			<span class="field-suffix">{{ suffix }}</span>
+		{% endif %}
+		{% if description.content %}
+			<small{{description.attributes.addClass(['text-gray-600','my-3'])}}>{{ description.content }}</small>
+		{% endif %}
+	</div>
 </fieldset>

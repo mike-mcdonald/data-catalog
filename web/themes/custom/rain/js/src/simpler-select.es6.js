@@ -117,6 +117,8 @@ import chevronDown from '../../icons/chevron-down.svg';
       const wrapperClasses = [
         'select-wrapper',
         'relative',
+        'inline-flex',
+        'mr-2',
         'mb-2'
       ];
 
@@ -147,10 +149,9 @@ import chevronDown from '../../icons/chevron-down.svg';
         'border',
         required ? 'border-red-600' : 'border-gray-500',
         'rounded',
-        'w-full',
-        'px-4',
+        'px-3',
         'pr-8',
-        'py-3',
+        'py-2',
         'focus:outline-none',
         'focus:shadow-outline',
         'focus:bg-white',
