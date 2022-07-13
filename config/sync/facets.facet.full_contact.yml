@@ -11,6 +11,8 @@ id: full_contact
 name: 'Primary Contact '
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: contact
 facet_source_id: 'search_api:views_block__full_index__block_1'
 field_identifier: field_data_custodian

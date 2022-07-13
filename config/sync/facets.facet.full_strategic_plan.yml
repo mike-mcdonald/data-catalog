@@ -11,6 +11,8 @@ id: full_strategic_plan
 name: 'Strategic plan'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: full_strategic_plan
 facet_source_id: 'search_api:views_block__full_index__block_1'
 field_identifier: strategic_plan

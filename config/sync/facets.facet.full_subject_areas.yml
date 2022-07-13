@@ -11,6 +11,8 @@ id: full_subject_areas
 name: 'Data domain'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: full_subject_areas
 facet_source_id: 'search_api:views_block__full_index__block_1'
 field_identifier: field_subject_areas

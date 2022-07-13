@@ -11,6 +11,8 @@ id: full_budget_program
 name: 'Budget program'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: full_budget_program
 facet_source_id: 'search_api:views_block__full_index__block_1'
 field_identifier: budget_program

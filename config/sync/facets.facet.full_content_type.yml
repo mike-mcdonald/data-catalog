@@ -11,6 +11,8 @@ id: full_content_type
 name: 'Content type'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: full_content_type
 facet_source_id: 'search_api:views_block__full_index__block_1'
 field_identifier: type

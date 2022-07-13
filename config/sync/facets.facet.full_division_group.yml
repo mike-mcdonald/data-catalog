@@ -11,6 +11,8 @@ id: full_division_group
 name: Division/Group
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: full_division_group
 facet_source_id: 'search_api:views_block__full_index__block_1'
 field_identifier: field_data_group
