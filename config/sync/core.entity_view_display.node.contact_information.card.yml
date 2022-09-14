@@ -42,7 +42,7 @@ third_party_settings:
                 label: visually_hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 2
+            weight: -7
             additional: {  }
           d22c38fe-6fa6-49a7-8bdf-4e4b6b2a8d3a:
             uuid: d22c38fe-6fa6-49a7-8bdf-4e4b6b2a8d3a
@@ -58,7 +58,7 @@ third_party_settings:
                 settings:
                   title: ''
                 third_party_settings: {  }
-            weight: 3
+            weight: -6
             additional: {  }
           a1c7bd51-15c8-446d-9c32-5c82d67da99a:
             uuid: a1c7bd51-15c8-446d-9c32-5c82d67da99a
@@ -77,7 +77,7 @@ third_party_settings:
                 settings:
                   link_to_entity: true
                 third_party_settings: {  }
-            weight: 1
+            weight: -9
             additional: {  }
           b4115568-e5bb-4463-96f2-ba8b0ac04a45:
             uuid: b4115568-e5bb-4463-96f2-ba8b0ac04a45
@@ -96,7 +96,28 @@ third_party_settings:
                 settings:
                   link: false
                 third_party_settings: {  }
-            weight: 0
+            weight: -10
+            additional: {  }
+          f26068c4-1239-427f-ac56-05479eebf09c:
+            uuid: f26068c4-1239-427f-ac56-05479eebf09c
+            region: content
+            configuration:
+              id: 'field_block:node:contact_information:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -8
             additional: {  }
         third_party_settings: {  }
 id: node.contact_information.card
@@ -120,6 +141,7 @@ content:
     weight: 1
     region: content
 hidden:
+  entitygroupfield: true
   group_content: true
   links: true
   search_api_excerpt: true

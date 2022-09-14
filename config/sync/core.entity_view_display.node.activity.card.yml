@@ -37,7 +37,7 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: -7
+            weight: -6
             additional: {  }
           04dbb634-6f8a-41ec-a708-f379b024ff66:
             uuid: 04dbb634-6f8a-41ec-a708-f379b024ff66
@@ -58,7 +58,7 @@ third_party_settings:
                   reverse: 0
                   separator: ' / '
                 third_party_settings: {  }
-            weight: -8
+            weight: -7
             additional: {  }
           45219d61-9627-4c56-84bf-b350466360e3:
             uuid: 45219d61-9627-4c56-84bf-b350466360e3
@@ -106,7 +106,28 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-            weight: -6
+            weight: -5
+            additional: {  }
+          5035de9a-0c24-4ef6-850b-b496638bc6b5:
+            uuid: 5035de9a-0c24-4ef6-850b-b496638bc6b5
+            region: content
+            configuration:
+              id: 'field_block:node:activity:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -8
             additional: {  }
         third_party_settings: {  }
 id: node.activity.card
@@ -140,5 +161,6 @@ content:
     weight: 2
     region: content
 hidden:
+  entitygroupfield: true
   group_content: true
   search_api_excerpt: true

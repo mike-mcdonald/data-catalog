@@ -47,7 +47,7 @@ third_party_settings:
                 settings:
                   link: false
                 third_party_settings: {  }
-            weight: 0
+            weight: -10
             additional: {  }
           85ba897a-576a-4425-8788-0ae599b3b43b:
             uuid: 85ba897a-576a-4425-8788-0ae599b3b43b
@@ -65,7 +65,7 @@ third_party_settings:
                 settings:
                   link_to_entity: true
                 third_party_settings: {  }
-            weight: 1
+            weight: -9
             additional: {  }
           92a64537-6abd-4830-87cc-8abe3bc2cd97:
             uuid: 92a64537-6abd-4830-87cc-8abe3bc2cd97
@@ -95,7 +95,7 @@ third_party_settings:
                     text: true
                     trim_zero: false
                 third_party_settings: {  }
-            weight: 2
+            weight: -7
             additional: {  }
           addd0879-d4da-4222-adaf-83a918c7fe9e:
             uuid: addd0879-d4da-4222-adaf-83a918c7fe9e
@@ -113,7 +113,7 @@ third_party_settings:
                 settings:
                   view_mode: card
                 third_party_settings: {  }
-            weight: 3
+            weight: -6
             additional: {  }
           3d85096e-ce2b-4070-a659-7996c4aa4b6f:
             uuid: 3d85096e-ce2b-4070-a659-7996c4aa4b6f
@@ -123,7 +123,28 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-            weight: 4
+            weight: -5
+            additional: {  }
+          ad9297bf-643b-48f3-9b56-f1dc3ac2be27:
+            uuid: ad9297bf-643b-48f3-9b56-f1dc3ac2be27
+            region: content
+            configuration:
+              id: 'field_block:node:business_term:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -8
             additional: {  }
         third_party_settings: {  }
 id: node.business_term.card
@@ -153,6 +174,7 @@ content:
     weight: 10
     region: content
 hidden:
+  entitygroupfield: true
   field_data_custodian: true
   field_subject_areas: true
   group_content: true

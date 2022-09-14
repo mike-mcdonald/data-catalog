@@ -39,7 +39,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -7
+            weight: -6
             additional: {  }
           3eba6b00-192d-4a6b-8e12-1d15c0179d60:
             uuid: 3eba6b00-192d-4a6b-8e12-1d15c0179d60
@@ -55,7 +55,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -6
+            weight: -5
             additional: {  }
           c7a72d2f-369c-4d2c-b628-63894b9b9fd3:
             uuid: c7a72d2f-369c-4d2c-b628-63894b9b9fd3
@@ -73,7 +73,7 @@ third_party_settings:
                 label: visually_hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: -8
+            weight: -7
             additional: {  }
           7d70736a-0066-43a5-a831-3306a3f49ee6:
             uuid: 7d70736a-0066-43a5-a831-3306a3f49ee6
@@ -121,7 +121,28 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-            weight: -5
+            weight: -4
+            additional: {  }
+          9b8cf323-9835-40dd-a633-bcd13a6ad4ff:
+            uuid: 9b8cf323-9835-40dd-a633-bcd13a6ad4ff
+            region: content
+            configuration:
+              id: 'field_block:node:program_outcome:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -8
             additional: {  }
         third_party_settings: {  }
 id: node.program_outcome.card
@@ -158,6 +179,7 @@ content:
     weight: 10
     region: content
 hidden:
+  entitygroupfield: true
   group_content: true
   links: true
   search_api_excerpt: true

@@ -120,25 +120,6 @@ third_party_settings:
                   custom_date_format: ''
                   timezone: ''
                 third_party_settings: {  }
-            weight: -9
-            additional: {  }
-          d54001e6-8a4e-4822-93a3-6a84c41f8e0b:
-            uuid: d54001e6-8a4e-4822-93a3-6a84c41f8e0b
-            region: content
-            configuration:
-              id: 'field_block:node:business_term:uid'
-              label: 'Authored by'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: inline
-                settings:
-                  view_mode: compact
-                third_party_settings: {  }
             weight: -10
             additional: {  }
           bea25a43-4d9a-46f5-b300-52299bd90447:
@@ -150,6 +131,25 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             weight: -8
+            additional: {  }
+          f45c72ac-7c97-4824-971c-d82a2cc54830:
+            uuid: f45c72ac-7c97-4824-971c-d82a2cc54830
+            region: content
+            configuration:
+              id: 'field_block:node:business_term:revision_uid'
+              label: 'Revision user'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -9
             additional: {  }
         third_party_settings: {  }
 id: node.business_term.default
@@ -194,6 +194,7 @@ content:
     weight: 10
     region: content
 hidden:
+  entitygroupfield: true
   group_content: true
   links: true
   search_api_excerpt: true

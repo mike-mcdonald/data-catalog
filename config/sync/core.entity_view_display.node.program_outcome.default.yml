@@ -99,25 +99,26 @@ third_party_settings:
                   custom_date_format: ''
                   timezone: ''
                 third_party_settings: {  }
-            weight: -9
+            weight: -10
             additional: {  }
-          2c87abdb-3fe0-48a9-8009-90aad85f1cc5:
-            uuid: 2c87abdb-3fe0-48a9-8009-90aad85f1cc5
+          e9dcfb60-285c-427f-83ee-e6a456478dad:
+            uuid: e9dcfb60-285c-427f-83ee-e6a456478dad
             region: content
             configuration:
-              id: 'field_block:node:program_outcome:uid'
-              label: 'Authored by'
+              id: 'field_block:node:program_outcome:revision_uid'
+              label: 'Revision user'
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: author
+                type: entity_reference_label
                 label: inline
-                settings: {  }
+                settings:
+                  link: true
                 third_party_settings: {  }
-            weight: -10
+            weight: -9
             additional: {  }
         third_party_settings: {  }
 id: node.program_outcome.default
@@ -154,6 +155,7 @@ content:
     weight: 10
     region: content
 hidden:
+  entitygroupfield: true
   group_content: true
   links: true
   search_api_excerpt: true
