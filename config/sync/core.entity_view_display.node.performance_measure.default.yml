@@ -255,27 +255,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 6
             additional: {  }
-          9f150d66-8d5b-40d2-b477-8dbf9456e7c3:
-            uuid: 9f150d66-8d5b-40d2-b477-8dbf9456e7c3
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:changed'
-              label: 'Revised on'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: timestamp
-                label: inline
-                settings:
-                  date_format: short
-                  custom_date_format: ''
-                  timezone: ''
-                third_party_settings: {  }
-            weight: -9
-            additional: {  }
           5456cbe4-66c6-4c25-94d9-35a5ce757c8e:
             uuid: 5456cbe4-66c6-4c25-94d9-35a5ce757c8e
             region: content
@@ -358,25 +337,6 @@ third_party_settings:
                   link: true
                 third_party_settings: {  }
             weight: 3
-            additional: {  }
-          d99de31f-252e-4296-a866-f348abe56bd6:
-            uuid: d99de31f-252e-4296-a866-f348abe56bd6
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:uid'
-              label: 'Authored by'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: inline
-                settings:
-                  view_mode: compact
-                third_party_settings: {  }
-            weight: -10
             additional: {  }
           1c95fb4c-548a-4d11-8003-2cea9022b9fa:
             uuid: 1c95fb4c-548a-4d11-8003-2cea9022b9fa
@@ -479,6 +439,46 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             weight: -8
+            additional: {  }
+          a83b0109-1c99-4bb6-b86e-baba40f33227:
+            uuid: a83b0109-1c99-4bb6-b86e-baba40f33227
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:revision_uid'
+              label: 'Revision user'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+          9f150d66-8d5b-40d2-b477-8dbf9456e7c3:
+            uuid: 9f150d66-8d5b-40d2-b477-8dbf9456e7c3
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -10
             additional: {  }
         third_party_settings: {  }
 id: node.performance_measure.default
@@ -659,5 +659,6 @@ content:
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   group_content: true
   search_api_excerpt: true

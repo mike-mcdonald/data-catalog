@@ -68,7 +68,7 @@ third_party_settings:
                     text: true
                     trim_zero: false
                 third_party_settings: {  }
-            weight: -7
+            weight: -6
             additional: {  }
           a838f55d-eee6-4846-b09a-1bdc9e2f9934:
             uuid: a838f55d-eee6-4846-b09a-1bdc9e2f9934
@@ -88,7 +88,7 @@ third_party_settings:
                 third_party_settings:
                   ds:
                     ds_limit: ''
-            weight: -6
+            weight: -5
             additional: {  }
           bdd1138c-5a53-4277-a4d4-8df12f9c0a79:
             uuid: bdd1138c-5a53-4277-a4d4-8df12f9c0a79
@@ -109,7 +109,7 @@ third_party_settings:
                   reverse: 0
                   separator: ' / '
                 third_party_settings: {  }
-            weight: -8
+            weight: -7
             additional: {  }
           50c3e5b6-8591-424e-bcbb-503d0487bb96:
             uuid: 50c3e5b6-8591-424e-bcbb-503d0487bb96
@@ -119,7 +119,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-            weight: -5
+            weight: -4
             additional: {  }
           4b05371a-a427-4121-9ce6-1a757eabfd04:
             uuid: 4b05371a-a427-4121-9ce6-1a757eabfd04
@@ -158,6 +158,27 @@ third_party_settings:
                   link: false
                 third_party_settings: {  }
             weight: -10
+            additional: {  }
+          7e07ea93-3886-4e80-8d1f-05a70bcd0a5d:
+            uuid: 7e07ea93-3886-4e80-8d1f-05a70bcd0a5d
+            region: content
+            configuration:
+              id: 'field_block:node:dataset:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -8
             additional: {  }
         third_party_settings: {  }
 id: node.dataset.card
@@ -207,6 +228,7 @@ content:
     weight: 10
     region: content
 hidden:
+  entitygroupfield: true
   field_accessibility_level: true
   field_authority_level: true
   field_data_custodian: true

@@ -71,24 +71,6 @@ third_party_settings:
                 entity: layout_builder.entity
             weight: -8
             additional: {  }
-          6c255e90-ccac-45e3-8b87-756d3cea206c:
-            uuid: 6c255e90-ccac-45e3-8b87-756d3cea206c
-            region: content
-            configuration:
-              id: 'field_block:node:activity:uid'
-              label: 'Authored by'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: author
-                label: inline
-                settings: {  }
-                third_party_settings: {  }
-            weight: -10
-            additional: {  }
           8b30d57a-c816-4769-966a-45ca23b2ba63:
             uuid: 8b30d57a-c816-4769-966a-45ca23b2ba63
             region: content
@@ -107,6 +89,25 @@ third_party_settings:
                   date_format: short
                   custom_date_format: ''
                   timezone: ''
+                third_party_settings: {  }
+            weight: -10
+            additional: {  }
+          435a79cf-37dd-4ea3-8f82-1051d22d1f40:
+            uuid: 435a79cf-37dd-4ea3-8f82-1051d22d1f40
+            region: content
+            configuration:
+              id: 'field_block:node:activity:revision_uid'
+              label: 'Revision user'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
                 third_party_settings: {  }
             weight: -9
             additional: {  }
@@ -142,5 +143,6 @@ content:
     weight: 2
     region: content
 hidden:
+  entitygroupfield: true
   group_content: true
   search_api_excerpt: true

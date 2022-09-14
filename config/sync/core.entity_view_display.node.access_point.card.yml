@@ -50,7 +50,7 @@ third_party_settings:
                 settings:
                   view_mode: card
                 third_party_settings: {  }
-            weight: -6
+            weight: -5
             additional: {  }
           d8feb8b0-caf9-477f-8971-83af52270e20:
             uuid: d8feb8b0-caf9-477f-8971-83af52270e20
@@ -79,7 +79,7 @@ third_party_settings:
                     text: false
                     trim_zero: false
                 third_party_settings: {  }
-            weight: -7
+            weight: -6
             additional: {  }
           9ee206ef-7305-44a1-9ca5-3d3ada8727e2:
             uuid: 9ee206ef-7305-44a1-9ca5-3d3ada8727e2
@@ -140,6 +140,37 @@ third_party_settings:
                   rel: '0'
                   target: '0'
                 third_party_settings: {  }
+            weight: -7
+            additional: {  }
+          8ad60837-4252-42b7-8a8f-2ba58dc73ea7:
+            uuid: 8ad60837-4252-42b7-8a8f-2ba58dc73ea7
+            region: content
+            configuration:
+              id: 'extra_field_block:node:access_point:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -4
+            additional: {  }
+          c3556a91-937b-4fc6-97ee-ca930eb759c2:
+            uuid: c3556a91-937b-4fc6-97ee-ca930eb759c2
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
             weight: -8
             additional: {  }
         third_party_settings: {  }
@@ -193,11 +224,17 @@ content:
     third_party_settings: {  }
     weight: 105
     region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   group_content: true
   search_api_excerpt: true

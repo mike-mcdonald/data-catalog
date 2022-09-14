@@ -40,7 +40,7 @@ third_party_settings:
                 label: visually_hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: -8
+            weight: -7
             additional: {  }
           d8df1286-14cb-4f58-9e0f-24893d41359d:
             uuid: d8df1286-14cb-4f58-9e0f-24893d41359d
@@ -61,7 +61,7 @@ third_party_settings:
                   reverse: 0
                   separator: ' / '
                 third_party_settings: {  }
-            weight: -7
+            weight: -6
             additional: {  }
           f78b174f-c458-42e5-a83b-de35a1e332c0:
             uuid: f78b174f-c458-42e5-a83b-de35a1e332c0
@@ -109,7 +109,28 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-            weight: -6
+            weight: -5
+            additional: {  }
+          669349c3-6f5a-4bea-8a8b-27413c7609c0:
+            uuid: 669349c3-6f5a-4bea-8a8b-27413c7609c0
+            region: content
+            configuration:
+              id: 'field_block:node:strategic_plan_outcome:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -8
             additional: {  }
         third_party_settings: {  }
 id: node.strategic_plan_outcome.card
@@ -138,6 +159,7 @@ content:
     weight: 10
     region: content
 hidden:
+  entitygroupfield: true
   group_content: true
   links: true
   search_api_excerpt: true
