@@ -157,11 +157,9 @@
     "patches": {
       "drupal/core": {
         "2490294 - User email should not be case sensitive": "https://www.drupal.org/files/issues/2021-09-29/drupal-case_sensitive_email-2490294-45-d92.patch",
-        "Fix for PostgreSQL table alias length limit": "patches/drupal-571548-107-d8_0.patch",
-        "Fix for PostgreSQL table alias length limit 2": "patches/postgresql_table_alias_fix.patch",
+        "571548 - Identifiers longer than 63 characters are truncated, causing Views to break": "https://www.drupal.org/files/issues/2022-06-30/571548-165.patch",
         "Fix number step validation bug": "patches/number_step_validation_bug.patch",
         "Fix number step validation bug 2": "patches/number_step_validation_bug_2.patch",
-        "Remove rounding preSave": "patches/decimal_round_error.patch",
         "Load users by e-mail, case-insensitive": "patches/user_email_load_insensitive.patch",
         "2429699 - Add Views EntityReference filter to be available for all entity reference fields": "https://www.drupal.org/files/issues/2022-04-07/drupal-views-entity-reference-filter-2429699-476.patch",
         "Help debug bad config": "https://www.drupal.org/files/issues/2022-02-09/3218230-8.patch"
