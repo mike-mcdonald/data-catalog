@@ -99,6 +99,17 @@ variant_settings:
             context_mapping: {  }
           weight: 5
           additional: {  }
+        df0d3ffe-80eb-40c8-9cba-fae9f6514945:
+          uuid: df0d3ffe-80eb-40c8-9cba-fae9f6514945
+          region: second
+          configuration:
+            id: 'facet_block:full_development_stage'
+            label: 'Filter by development stage'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 6
+          additional: {  }
       third_party_settings: {  }
   blocks: {  }
   page_title: ''
