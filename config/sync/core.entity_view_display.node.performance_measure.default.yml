@@ -27,12 +27,11 @@ dependencies:
   module:
     - formblock
     - layout_builder
+    - layout_discovery
     - link
     - text
     - user
     - views
-  theme:
-    - rain
 third_party_settings:
   layout_builder:
     enabled: true
@@ -400,12 +399,15 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:performance_measure:field_direction'
+              label: Directionality
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: entity_reference_label
-                label: above
+                label: inline
                 settings:
                   link: true
                 third_party_settings: {  }
