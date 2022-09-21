@@ -7,10 +7,12 @@ dependencies:
     - field.field.node.program_outcome.field_budget_program
     - field.field.node.program_outcome.field_strategic_plan_outcome
     - node.type.program_outcome
+    - views.view.revisions
   module:
     - layout_builder
     - text
     - user
+    - views
   theme:
     - rain
 third_party_settings:
@@ -19,70 +21,14 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: layout_twocol_right
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
-          4b78cf45-cd31-467d-b460-885b2b580b71:
-            uuid: 4b78cf45-cd31-467d-b460-885b2b580b71
-            region: content
-            configuration:
-              id: 'field_block:node:program_outcome:body'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: visually_hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: -7
-            additional: {  }
-          59ed8616-05f3-40ca-a431-fd37f834c63b:
-            uuid: 59ed8616-05f3-40ca-a431-fd37f834c63b
-            region: content
-            configuration:
-              id: 'field_block:node:program_outcome:field_budget_program'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: -6
-            additional: {  }
-          d21aae46-9453-4053-a055-0d0402032a17:
-            uuid: d21aae46-9453-4053-a055-0d0402032a17
-            region: content
-            configuration:
-              id: 'field_block:node:program_outcome:field_strategic_plan_outcome'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: -5
-            additional: {  }
-          20219185-ed45-4b0e-952d-57143ddc3c5c:
-            uuid: 20219185-ed45-4b0e-952d-57143ddc3c5c
-            region: content
-            configuration:
-              id: 'extra_field_block:node:program_outcome:flag_bookmark'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: -8
-            additional: {  }
           b99b17f5-0704-48b3-800c-516b4f4be362:
             uuid: b99b17f5-0704-48b3-800c-516b4f4be362
-            region: content
+            region: second
             configuration:
               id: 'field_block:node:program_outcome:changed'
               label: Changed
@@ -99,11 +45,24 @@ third_party_settings:
                   custom_date_format: ''
                   timezone: ''
                 third_party_settings: {  }
+            weight: -9
+            additional: {  }
+          44720eb5-ab1f-4cb1-97d8-c116ccd1d013:
+            uuid: 44720eb5-ab1f-4cb1-97d8-c116ccd1d013
+            region: second
+            configuration:
+              id: 'views_block:revisions-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
             weight: -10
             additional: {  }
           e9dcfb60-285c-427f-83ee-e6a456478dad:
             uuid: e9dcfb60-285c-427f-83ee-e6a456478dad
-            region: content
+            region: second
             configuration:
               id: 'field_block:node:program_outcome:revision_uid'
               label: 'Revision user'
@@ -119,6 +78,63 @@ third_party_settings:
                   link: true
                 third_party_settings: {  }
             weight: -9
+            additional: {  }
+          20219185-ed45-4b0e-952d-57143ddc3c5c:
+            uuid: 20219185-ed45-4b0e-952d-57143ddc3c5c
+            region: second
+            configuration:
+              id: 'extra_field_block:node:program_outcome:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -8
+            additional: {  }
+          4b78cf45-cd31-467d-b460-885b2b580b71:
+            uuid: 4b78cf45-cd31-467d-b460-885b2b580b71
+            region: first
+            configuration:
+              id: 'field_block:node:program_outcome:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: visually_hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: -7
+            additional: {  }
+          59ed8616-05f3-40ca-a431-fd37f834c63b:
+            uuid: 59ed8616-05f3-40ca-a431-fd37f834c63b
+            region: first
+            configuration:
+              id: 'field_block:node:program_outcome:field_budget_program'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -6
+            additional: {  }
+          d21aae46-9453-4053-a055-0d0402032a17:
+            uuid: d21aae46-9453-4053-a055-0d0402032a17
+            region: first
+            configuration:
+              id: 'field_block:node:program_outcome:field_strategic_plan_outcome'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -5
             additional: {  }
         third_party_settings: {  }
 id: node.program_outcome.default

@@ -12,16 +12,17 @@
 #}
 {%
   set layout_classes = layout_classes|default([
-    'md:grid',
+    'grid',
+    'grid-cols-1',
     'md:grid-cols-4',
-    'md:gap-4',
+    'gap-4',
   ])
 %}
 {%
   set region_classes = region_classes|default([
     'flex',
     'flex-col',
-    'gap-1',
+    'gap-2',
   ])
 %}
 {% if content %}

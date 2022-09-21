@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.contact_information.field_telephone_number
     - node.type.contact_information
     - views.view.contact_content
+    - views.view.revisions
   module:
     - field_layout
     - layout_builder
@@ -24,27 +25,54 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: layout_twocol_right
         layout_settings:
           label: ''
           context_mapping: {  }
         components:
-          9657de25-4ad7-4380-9479-a9799ffc4d5e:
-            uuid: 9657de25-4ad7-4380-9479-a9799ffc4d5e
-            region: content
+          8b70b151-d579-4a00-896c-e7f1a23b21f5:
+            uuid: 8b70b151-d579-4a00-896c-e7f1a23b21f5
+            region: second
             configuration:
-              id: 'views_block:contact_content-block_1'
-              label: ''
-              label_display: visible
-              provider: views
-              context_mapping: {  }
-              views_label: ''
-              items_per_page: none
-            weight: -6
+              id: 'field_block:node:contact_information:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+          7db5a183-2ab4-4725-8ce7-b66feb40aea6:
+            uuid: 7db5a183-2ab4-4725-8ce7-b66feb40aea6
+            region: second
+            configuration:
+              id: 'field_block:node:contact_information:revision_uid'
+              label: 'Revision user'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -8
             additional: {  }
           c8cd60c3-bb26-4aa5-b11b-51f3da965336:
             uuid: c8cd60c3-bb26-4aa5-b11b-51f3da965336
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:contact_information:field_email_address'
               label: 'E-mail address'
@@ -62,7 +90,7 @@ third_party_settings:
             additional: {  }
           3ae94c6c-a92c-4f26-ac6d-dba8151084d4:
             uuid: 3ae94c6c-a92c-4f26-ac6d-dba8151084d4
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:contact_information:field_telephone_number'
               label: 'Telephone number'
@@ -79,44 +107,30 @@ third_party_settings:
                 third_party_settings: {  }
             weight: -7
             additional: {  }
-          7db5a183-2ab4-4725-8ce7-b66feb40aea6:
-            uuid: 7db5a183-2ab4-4725-8ce7-b66feb40aea6
-            region: content
+          9657de25-4ad7-4380-9479-a9799ffc4d5e:
+            uuid: 9657de25-4ad7-4380-9479-a9799ffc4d5e
+            region: first
             configuration:
-              id: 'field_block:node:contact_information:revision_uid'
-              label: 'Revision user'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: -9
+              id: 'views_block:contact_content-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: -6
             additional: {  }
-          8b70b151-d579-4a00-896c-e7f1a23b21f5:
-            uuid: 8b70b151-d579-4a00-896c-e7f1a23b21f5
-            region: content
+          2c4e17ad-a70e-4c5d-929d-be1c3cd511d7:
+            uuid: 2c4e17ad-a70e-4c5d-929d-be1c3cd511d7
+            region: second
             configuration:
-              id: 'field_block:node:contact_information:changed'
-              label: Changed
+              id: 'views_block:revisions-block_1'
+              label: ''
               label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: timestamp
-                label: inline
-                settings:
-                  date_format: short
-                  custom_date_format: ''
-                  timezone: ''
-                third_party_settings: {  }
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
             weight: -10
             additional: {  }
         third_party_settings: {  }

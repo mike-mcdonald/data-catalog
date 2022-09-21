@@ -24,28 +24,93 @@ dependencies:
     - field.field.node.performance_measure.field_url
     - node.type.performance_measure
     - views.view.measure_outcomes
+    - views.view.revisions
   module:
     - formblock
     - layout_builder
-    - layout_discovery
     - link
     - text
     - user
     - views
+  theme:
+    - rain
 third_party_settings:
   layout_builder:
     enabled: true
     allow_custom: false
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: layout_twocol_right
         layout_settings:
           label: ''
           context_mapping: {  }
         components:
+          9f150d66-8d5b-40d2-b477-8dbf9456e7c3:
+            uuid: 9f150d66-8d5b-40d2-b477-8dbf9456e7c3
+            region: second
+            configuration:
+              id: 'field_block:node:performance_measure:changed'
+              label: Changed
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: inline
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+          f3c033ab-a1a5-45c9-88a9-5a1b63a1b510:
+            uuid: f3c033ab-a1a5-45c9-88a9-5a1b63a1b510
+            region: second
+            configuration:
+              id: 'views_block:revisions-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: -10
+            additional: {  }
+          a83b0109-1c99-4bb6-b86e-baba40f33227:
+            uuid: a83b0109-1c99-4bb6-b86e-baba40f33227
+            region: second
+            configuration:
+              id: 'field_block:node:performance_measure:revision_uid'
+              label: 'Revision user'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -9
+            additional: {  }
+          5c3ec428-fa1b-4784-9509-e78e6e1c3dd3:
+            uuid: 5c3ec428-fa1b-4784-9509-e78e6e1c3dd3
+            region: second
+            configuration:
+              id: 'extra_field_block:node:performance_measure:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -8
+            additional: {  }
           56585286-57c9-4e71-9058-e62532c3ac31:
             uuid: 56585286-57c9-4e71-9058-e62532c3ac31
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_status'
               label: Status
@@ -64,7 +129,7 @@ third_party_settings:
             additional: {  }
           a653e4a3-2146-4cce-b3ab-3b58f4d08e8c:
             uuid: a653e4a3-2146-4cce-b3ab-3b58f4d08e8c
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_keywords'
               label: Keywords
@@ -83,7 +148,7 @@ third_party_settings:
             additional: {  }
           06ad06cb-b6c5-4375-a85a-fc6d7bdf9a72:
             uuid: 06ad06cb-b6c5-4375-a85a-fc6d7bdf9a72
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_url'
               label: URL
@@ -106,7 +171,7 @@ third_party_settings:
             additional: {  }
           eb77e2c7-c01f-434a-a132-af07633b71b2:
             uuid: eb77e2c7-c01f-434a-a132-af07633b71b2
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_data_custodian'
               label: 'Performance Measure Contact'
@@ -125,7 +190,7 @@ third_party_settings:
             additional: {  }
           8370368d-4a53-44c8-9076-e3127acd33a7:
             uuid: 8370368d-4a53-44c8-9076-e3127acd33a7
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_requirements'
               label: 'Performance Measure Data Requirements'
@@ -143,7 +208,7 @@ third_party_settings:
             additional: {  }
           44fca45b-3d28-4d11-b7ad-c36f1dd49acb:
             uuid: 44fca45b-3d28-4d11-b7ad-c36f1dd49acb
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_measure_type'
               label: 'Performance Measure Type'
@@ -162,7 +227,7 @@ third_party_settings:
             additional: {  }
           d2cbe4bf-ddc2-4418-a76b-5326c36ff1ad:
             uuid: d2cbe4bf-ddc2-4418-a76b-5326c36ff1ad
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_category'
               label: 'Performance Metric Purpose'
@@ -181,7 +246,7 @@ third_party_settings:
             additional: {  }
           dc44f6af-c558-402c-b1ed-acbaf57d8e94:
             uuid: dc44f6af-c558-402c-b1ed-acbaf57d8e94
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_data_group'
               label: Division/Group
@@ -200,7 +265,7 @@ third_party_settings:
             additional: {  }
           3f434581-4df1-42e9-b1ed-d7abae7952ee:
             uuid: 3f434581-4df1-42e9-b1ed-d7abae7952ee
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_frequency'
               label: 'Frequency of performance reporting'
@@ -219,7 +284,7 @@ third_party_settings:
             additional: {  }
           2638be8d-05d6-45d4-9e4c-ae67e7ca698d:
             uuid: 2638be8d-05d6-45d4-9e4c-ae67e7ca698d
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:body'
               label: Description
@@ -237,7 +302,7 @@ third_party_settings:
             additional: {  }
           f5634494-4633-428a-b6ee-f68cc254a71f:
             uuid: f5634494-4633-428a-b6ee-f68cc254a71f
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_datasets'
               label: 'Data set(s)'
@@ -256,7 +321,7 @@ third_party_settings:
             additional: {  }
           5456cbe4-66c6-4c25-94d9-35a5ce757c8e:
             uuid: 5456cbe4-66c6-4c25-94d9-35a5ce757c8e
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_strategic_year'
               label: 'Strategic year'
@@ -275,7 +340,7 @@ third_party_settings:
             additional: {  }
           255f4eb8-307c-4d2e-b81b-e9f54c9ebf55:
             uuid: 255f4eb8-307c-4d2e-b81b-e9f54c9ebf55
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_origination_date'
               label: 'Performance measure origination date'
@@ -294,7 +359,7 @@ third_party_settings:
             additional: {  }
           c328ed7f-4dd1-4698-a8c1-c6e87326eb44:
             uuid: c328ed7f-4dd1-4698-a8c1-c6e87326eb44
-            region: content
+            region: first
             configuration:
               id: 'views_block:measure_outcomes-block_1'
               label: ''
@@ -307,7 +372,7 @@ third_party_settings:
             additional: {  }
           b096a4aa-c6e9-4af0-93d4-5dc8f0e9a11c:
             uuid: b096a4aa-c6e9-4af0-93d4-5dc8f0e9a11c
-            region: content
+            region: first
             configuration:
               id: formblock_node
               label: 'Add new data'
@@ -320,7 +385,7 @@ third_party_settings:
             additional: {  }
           77fd30de-23f5-486c-823c-46145f9e3efa:
             uuid: 77fd30de-23f5-486c-823c-46145f9e3efa
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_data_type'
               label: 'Data value type'
@@ -339,7 +404,7 @@ third_party_settings:
             additional: {  }
           1c95fb4c-548a-4d11-8003-2cea9022b9fa:
             uuid: 1c95fb4c-548a-4d11-8003-2cea9022b9fa
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_strategic_target'
               label: 'Strategic target'
@@ -361,7 +426,7 @@ third_party_settings:
             additional: {  }
           449b94db-9329-4792-8215-4448ead56fbf:
             uuid: 449b94db-9329-4792-8215-4448ead56fbf
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_measure_id'
               label: 'CBO measure ID'
@@ -380,7 +445,7 @@ third_party_settings:
             additional: {  }
           85f3471e-d4dc-49fc-aa75-05021ae3cc51:
             uuid: 85f3471e-d4dc-49fc-aa75-05021ae3cc51
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_subject_areas'
               label_display: '0'
@@ -396,7 +461,7 @@ third_party_settings:
             additional: {  }
           4781a069-95e1-45f4-8544-faeea96df24b:
             uuid: 4781a069-95e1-45f4-8544-faeea96df24b
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_direction'
               label: Directionality
@@ -415,7 +480,7 @@ third_party_settings:
             additional: {  }
           89c3c282-d39b-4b6e-bb4b-8812d47820ec:
             uuid: 89c3c282-d39b-4b6e-bb4b-8812d47820ec
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:performance_measure:field_performance_framework'
               label: 'Associated performance framework component(s)'
@@ -432,56 +497,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: -5
             additional: {  }
-          5c3ec428-fa1b-4784-9509-e78e6e1c3dd3:
-            uuid: 5c3ec428-fa1b-4784-9509-e78e6e1c3dd3
-            region: content
-            configuration:
-              id: 'extra_field_block:node:performance_measure:flag_bookmark'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: -8
-            additional: {  }
-          a83b0109-1c99-4bb6-b86e-baba40f33227:
-            uuid: a83b0109-1c99-4bb6-b86e-baba40f33227
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:revision_uid'
-              label: 'Revision user'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: -9
-            additional: {  }
-          9f150d66-8d5b-40d2-b477-8dbf9456e7c3:
-            uuid: 9f150d66-8d5b-40d2-b477-8dbf9456e7c3
-            region: content
-            configuration:
-              id: 'field_block:node:performance_measure:changed'
-              label: Changed
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: timestamp
-                label: inline
-                settings:
-                  date_format: short
-                  custom_date_format: ''
-                  timezone: ''
-                third_party_settings: {  }
-            weight: -10
-            additional: {  }
         third_party_settings: {  }
 id: node.performance_measure.default
 targetEntityType: node
@@ -494,12 +509,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 127
-    region: content
+    region: first
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
     weight: -20
-    region: content
+    region: first
   field_category:
     type: entity_reference_label
     label: above
@@ -507,7 +522,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 135
-    region: content
+    region: first
   field_data_custodian:
     type: entity_reference_label
     label: above
@@ -515,7 +530,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 130
-    region: content
+    region: first
   field_data_group:
     type: entity_reference_label
     label: above
@@ -523,7 +538,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 129
-    region: content
+    region: first
   field_data_type:
     type: entity_reference_label
     label: above
@@ -531,7 +546,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 144
-    region: content
+    region: first
   field_datasets:
     type: entity_reference_label
     label: above
@@ -539,7 +554,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 126
-    region: content
+    region: first
   field_direction:
     type: entity_reference_label
     label: above
@@ -547,7 +562,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 148
-    region: content
+    region: first
   field_frequency:
     type: entity_reference_label
     label: above
@@ -555,7 +570,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 128
-    region: content
+    region: first
   field_keywords:
     type: entity_reference_label
     label: above
@@ -563,7 +578,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 118
-    region: content
+    region: first
   field_measure_id:
     type: string
     label: above
@@ -571,7 +586,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 145
-    region: content
+    region: first
   field_measure_type:
     type: entity_reference_label
     label: above
@@ -579,7 +594,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 134
-    region: content
+    region: first
   field_origination_date:
     type: string
     label: above
@@ -587,7 +602,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 143
-    region: content
+    region: first
   field_performance_framework:
     type: entity_reference_label
     label: above
@@ -595,14 +610,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 146
-    region: content
+    region: first
   field_requirements:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 131
-    region: content
+    region: first
   field_status:
     type: entity_reference_label
     label: above
@@ -610,7 +625,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 136
-    region: content
+    region: first
   field_strategic_target:
     type: number_decimal
     label: above
@@ -621,7 +636,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 144
-    region: content
+    region: first
   field_strategic_year:
     type: entity_reference_label
     label: above
@@ -629,7 +644,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 139
-    region: content
+    region: first
   field_subject_areas:
     type: entity_reference_label
     label: above
@@ -637,7 +652,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 147
-    region: content
+    region: first
   field_url:
     type: link
     label: above
@@ -649,17 +664,17 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 137
-    region: content
+    region: first
   flag_bookmark:
     settings: {  }
     third_party_settings: {  }
     weight: 10
-    region: content
+    region: first
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
-    region: content
+    region: first
 hidden:
   entitygroupfield: true
   group_content: true

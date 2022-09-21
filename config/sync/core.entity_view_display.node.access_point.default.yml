@@ -9,12 +9,14 @@ dependencies:
     - field.field.node.access_point.field_subject_areas
     - field.field.node.access_point.field_url
     - node.type.access_point
+    - views.view.revisions
   module:
     - cshs
     - field_layout
     - layout_builder
     - link
     - user
+    - views
   theme:
     - rain
 third_party_settings:
@@ -47,7 +49,7 @@ third_party_settings:
                 label: visually_hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: -6
+            weight: -5
             additional: {  }
           07f87100-0bb3-422b-b5ef-e8ae32d15f5a:
             uuid: 07f87100-0bb3-422b-b5ef-e8ae32d15f5a
@@ -66,7 +68,7 @@ third_party_settings:
                 settings:
                   view_mode: card
                 third_party_settings: {  }
-            weight: -3
+            weight: -2
             additional: {  }
           9a37da1b-a40f-472a-aaed-3a16759a9a6a:
             uuid: 9a37da1b-a40f-472a-aaed-3a16759a9a6a
@@ -87,7 +89,7 @@ third_party_settings:
                   reverse: 0
                   separator: ' / '
                 third_party_settings: {  }
-            weight: -4
+            weight: -3
             additional: {  }
           b0dda337-d91a-4242-be97-47edcf97e7db:
             uuid: b0dda337-d91a-4242-be97-47edcf97e7db
@@ -110,7 +112,7 @@ third_party_settings:
                   rel: '0'
                   target: '0'
                 third_party_settings: {  }
-            weight: -7
+            weight: -6
             additional: {  }
           6116ad09-1839-44ef-9640-8170a5269016:
             uuid: 6116ad09-1839-44ef-9640-8170a5269016
@@ -129,7 +131,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -5
+            weight: -4
             additional: {  }
           95ede239-3b32-4d6e-9281-c328323a3f9f:
             uuid: 95ede239-3b32-4d6e-9281-c328323a3f9f
@@ -148,7 +150,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -9
+            weight: -8
             additional: {  }
           593fd17b-72d8-4382-b043-749f0be4a0de:
             uuid: 593fd17b-72d8-4382-b043-749f0be4a0de
@@ -169,7 +171,7 @@ third_party_settings:
                   custom_date_format: ''
                   timezone: ''
                 third_party_settings: {  }
-            weight: -10
+            weight: -9
             additional: {  }
           124f736d-8f93-47a9-98be-09a46c7f5bd7:
             uuid: 124f736d-8f93-47a9-98be-09a46c7f5bd7
@@ -179,7 +181,20 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-            weight: -8
+            weight: -7
+            additional: {  }
+          c45ea870-972e-430c-b4dd-8fcc8b379696:
+            uuid: c45ea870-972e-430c-b4dd-8fcc8b379696
+            region: content
+            configuration:
+              id: 'views_block:revisions-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: -10
             additional: {  }
         third_party_settings: {  }
 id: node.access_point.default
