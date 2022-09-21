@@ -34,6 +34,7 @@
     "drupal/core-recommended": "^9.4",
     "drupal/cshs": "^3.5",
     "drupal/csv_serialization": "^2.0.0",
+    "drupal/diff": "^1.0",
     "drupal/easy_breadcrumb": "^2.0",
     "drupal/entity_browser": "^2.4",
     "drupal/environment_indicator": "^4.0",
