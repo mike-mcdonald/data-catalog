@@ -170,8 +170,8 @@
         "2842630 - Empty page when trying to create group node": "https://www.drupal.org/files/issues/2019-01-04/2842630-20.patch",
         "Add missing functions for gcontent_field module": "patches/gcontent_missing_functions.patch"
       },
-      "drupal/inline_entity_form": {
-        "Replace tokens in description": "patches/inline-entity-form-token-replace.patch"
+      "drupal/openid_connect": {
+        "Fix redirect when using base path": "patches/openid_connect_redirect.patch"
       },
       "drupal/select2": {
         "Fix auto create bug in PostgreSQL": "patches/select2_autocreate_fix.patch"

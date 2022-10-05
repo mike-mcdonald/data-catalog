@@ -1,0 +1,14 @@
+diff --git a/src/Controller/OpenIDConnectRedirectController.php b/src/Controller/OpenIDConnectRedirectController.php
+index 74d389d..7f7322e 100644
+--- a/src/Controller/OpenIDConnectRedirectController.php
++++ b/src/Controller/OpenIDConnectRedirectController.php
+@@ -270,6 +270,9 @@ class OpenIDConnectRedirectController implements ContainerInjectionInterface, Ac
+     $langcode = $session['langcode'] ?: $this->languageManager->getCurrentLanguage()->getId();
+     $language = $this->languageManager->getLanguage($langcode);
+
++    // Allow base path by removing that portion of destintation
++    $destination = str_replace(ltrim($request->getBasePath(), '/'), '', $destination);
++
+     $redirect = Url::fromUri('internal:/' . ltrim($destination, '/'), ['language' => $language])->toString();
+     return new RedirectResponse($redirect);
+   }
