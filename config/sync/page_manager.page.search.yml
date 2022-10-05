@@ -1,12 +1,21 @@
 uuid: 829e74a7-79a6-49b5-99aa-7d818b3c8165
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - user
 id: search
 label: Search
 description: ''
 use_admin_theme: false
 path: /search
 access_logic: and
-access_conditions: {  }
+access_conditions:
+  -
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
 parameters: {  }
