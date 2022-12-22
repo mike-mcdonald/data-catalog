@@ -71,6 +71,7 @@ content:
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   field_effective_date: true
   field_type: true
   group_content: true
