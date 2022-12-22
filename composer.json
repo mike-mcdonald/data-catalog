@@ -157,7 +157,7 @@
     },
     "patches": {
       "drupal/core": {
-        "2490294 - User email should not be case sensitive": "https://www.drupal.org/files/issues/2021-09-29/drupal-case_sensitive_email-2490294-45-d92.patch",
+        "2490294 - User email should not be case sensitive": "https://www.drupal.org/files/issues/2022-12-19/drupal-case_sensitive_email-2490294-58-d95.patch",
         "571548 - Identifiers longer than 63 characters are truncated, causing Views to break": "https://www.drupal.org/files/issues/2022-06-30/571548-165.patch",
         "Fix number step validation bug": "patches/number_step_validation_bug.patch",
         "Fix number step validation bug 2": "patches/number_step_validation_bug_2.patch",
@@ -174,7 +174,8 @@
         "Fix redirect when using base path": "patches/openid_connect_redirect.patch"
       },
       "drupal/select2": {
-        "Fix auto create bug in PostgreSQL": "patches/select2_autocreate_fix.patch"
+        "3292400 - Fix auto create bug in PostgreSQL": "patches/select2_autocreate_fix.patch",
+        "3326043 - Fix Gin theme color issues": "https://www.drupal.org/files/issues/2022-12-08/select2-updated-color-variables-for-gin-theme-3326043-2.patch"
       }
     }
   }
