@@ -23,8 +23,8 @@ dependencies:
     - content_moderation
     - cshs
     - entity_browser
-    - field_layout
     - entitygroupfield
+    - field_layout
     - inline_entity_form
     - select2
   theme:
@@ -78,7 +78,7 @@ content:
     third_party_settings: {  }
   field_data_group:
     type: cshs
-    weight: 7
+    weight: 8
     region: content
     settings:
       save_lineage: false
@@ -87,10 +87,11 @@ content:
       level_labels: ''
       hierarchy_depth: 0
       required_depth: 0
+      none_label: '- Please select -'
     third_party_settings: {  }
   field_data_owner:
     type: options_select
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -134,7 +135,7 @@ content:
     third_party_settings: {  }
   field_source:
     type: options_select
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -146,7 +147,7 @@ content:
     third_party_settings: {  }
   field_subject_areas:
     type: cshs
-    weight: 8
+    weight: 5
     region: content
     settings:
       save_lineage: false
@@ -155,6 +156,7 @@ content:
       level_labels: ''
       hierarchy_depth: 0
       required_depth: 0
+      none_label: '- Please select -'
     third_party_settings: {  }
   field_timeliness:
     type: inline_entity_form_complex
