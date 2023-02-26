@@ -127,6 +127,25 @@ third_party_settings:
                 third_party_settings: {  }
             weight: -6
             additional: {  }
+          9f8c1c07-1795-47aa-b61c-5d31abdb5851:
+            uuid: 9f8c1c07-1795-47aa-b61c-5d31abdb5851
+            region: second
+            configuration:
+              id: 'field_block:node:activity:uid'
+              label: 'Authored by'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
         third_party_settings: {  }
 id: node.activity.default
 targetEntityType: node

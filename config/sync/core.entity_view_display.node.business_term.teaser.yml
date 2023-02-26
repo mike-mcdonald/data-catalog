@@ -90,7 +90,6 @@ content:
     weight: 100
     region: content
 hidden:
-  entitygroupfield: true
   field_data_custodian: true
   field_keywords: true
   field_subject_areas: true

@@ -90,14 +90,8 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
-  flag_bookmark:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
 hidden:
   body: true
-  entitygroupfield: true
   field_accessibility_level: true
   field_data_owner: true
   field_demographic_information: true

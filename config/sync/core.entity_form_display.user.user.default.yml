@@ -57,5 +57,4 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
 hidden:
-  entitygroupfield: true
   group_content: true
