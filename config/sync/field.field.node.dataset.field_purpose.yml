@@ -10,10 +10,12 @@ field_name: field_purpose
 entity_type: node
 bundle: dataset
 label: Description
-description: 'Please describe what this dataset attempts to represent.'
-required: false
+description: 'Description of what this dataset attempts to represent. Be as detailed as possible. At a minimum you should include: What is the intended purpose of this dataset? Where does it come from or how was/is it collected? What is it used for? What are some of the key data fields included?'
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: "## What is the intended purpose of this dataset?\r\n\r\n## Where does it come from or how was/is it collected?\r\n\r\n## What is it used for?\r\n\r\n## What are some of the key data fields included?"
 default_value_callback: ''
 settings: {  }
 field_type: string_long
