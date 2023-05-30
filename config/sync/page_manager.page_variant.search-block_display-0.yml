@@ -3,7 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - facets.facet.full_budget_program
+    - facets.facet.full_contact
+    - facets.facet.full_content_type
+    - facets.facet.full_development_stage
+    - facets.facet.full_division_group
+    - facets.facet.full_purpose
+    - facets.facet.full_strategic_plan
+    - facets.facet.full_subject_areas
     - page_manager.page.search
+    - views.view.full_index
+  module:
+    - facets
+    - views
+  theme:
+    - rain
 id: search-block_display-0
 label: 'Layout builder'
 weight: 0
@@ -109,6 +123,17 @@ variant_settings:
             provider: facets
             context_mapping: {  }
           weight: 6
+          additional: {  }
+        a052d8e3-5256-493e-a3c8-53c717498a07:
+          uuid: a052d8e3-5256-493e-a3c8-53c717498a07
+          region: second
+          configuration:
+            id: 'facet_block:full_purpose'
+            label: 'Filter by purpose'
+            label_display: visible
+            provider: facets
+            context_mapping: {  }
+          weight: 7
           additional: {  }
       third_party_settings: {  }
   blocks: {  }
