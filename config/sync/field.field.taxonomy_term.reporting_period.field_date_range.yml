@@ -13,7 +13,7 @@ entity_type: taxonomy_term
 bundle: reporting_period
 label: 'Date range'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
