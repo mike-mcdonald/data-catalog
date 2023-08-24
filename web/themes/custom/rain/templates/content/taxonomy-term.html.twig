@@ -26,7 +26,11 @@
 {% set classes = classes|default([])
 %}
 
-{% set link_classes = link_classes|default([])
+{% set link_classes = link_classes|default([
+  'border-b-2',
+  'border-current',
+  'font-semibold',
+])
 %}
 
 {% set heading_element = heading_element|default('h2') %}

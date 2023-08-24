@@ -151,6 +151,10 @@
         "type:drupal-drush"
       ]
     },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
       "drupal/core": "-p2"
@@ -174,8 +178,7 @@
         "Fix redirect when using base path": "patches/openid_connect_redirect.patch"
       },
       "drupal/select2": {
-        "3292400 - Fix auto create bug in PostgreSQL": "patches/select2_autocreate_fix.patch",
-        "3326043 - Fix Gin theme color issues": "https://www.drupal.org/files/issues/2022-12-08/select2-updated-color-variables-for-gin-theme-3326043-2.patch"
+        "3292400 - Fix auto create bug in PostgreSQL": "patches/select2_autocreate_fix.patch"
       }
     }
   }

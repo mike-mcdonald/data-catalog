@@ -58,6 +58,7 @@ content:
     weight: 100
     region: content
 hidden:
+  entitygroupfield: true
   field_performance_measure: true
   field_reporting_period: true
   group_content: true

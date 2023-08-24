@@ -1,0 +1,8 @@
+uuid: 23d2fbf0-130b-4948-9f85-a863cf086e02
+langcode: en
+status: true
+dependencies: {  }
+name: Audience
+vid: audience
+description: 'Terms describing who is intended to consume the subject of a catalog entry'
+weight: 0

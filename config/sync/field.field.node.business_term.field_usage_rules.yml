@@ -1,0 +1,21 @@
+uuid: 8e5b3e92-4a42-4627-80af-e8e416838af6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usage_rules
+    - node.type.business_term
+  module:
+    - text
+id: node.business_term.field_usage_rules
+field_name: field_usage_rules
+entity_type: node
+bundle: business_term
+label: 'Usage rules'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

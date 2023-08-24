@@ -2,7 +2,7 @@
 a {
   &:not([class]),
   &.button {
-    @apply border-b-2 border-current;
+    @apply border-b-2 border-current font-semibold;
   }
 }
 

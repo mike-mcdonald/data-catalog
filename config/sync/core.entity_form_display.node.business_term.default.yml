@@ -5,15 +5,24 @@ dependencies:
   config:
     - entity_browser.browser.contact_browser
     - field.field.node.business_term.body
+    - field.field.node.business_term.field_acronym
+    - field.field.node.business_term.field_audience
     - field.field.node.business_term.field_data_custodian
+    - field.field.node.business_term.field_data_group
     - field.field.node.business_term.field_keywords
+    - field.field.node.business_term.field_relationship
+    - field.field.node.business_term.field_security_level
+    - field.field.node.business_term.field_source
+    - field.field.node.business_term.field_status
     - field.field.node.business_term.field_subject_areas
+    - field.field.node.business_term.field_usage_rules
     - node.type.business_term
   module:
     - content_moderation
     - cshs
     - entity_browser
     - field_layout
+    - paragraphs
     - select2
     - text
   theme:
@@ -38,6 +47,20 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+  field_acronym:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 32
+      placeholder: ''
+    third_party_settings: {  }
+  field_audience:
+    type: options_buttons
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_data_custodian:
     type: entity_browser_entity_reference
     weight: 3
@@ -53,6 +76,19 @@ content:
         view_mode: teaser
       selection_mode: selection_append
     third_party_settings: {  }
+  field_data_group:
+    type: cshs
+    weight: 30
+    region: content
+    settings:
+      save_lineage: false
+      force_deepest: false
+      parent: ''
+      level_labels: ''
+      hierarchy_depth: 0
+      required_depth: 0
+      none_label: '- Please select -'
+    third_party_settings: {  }
   field_keywords:
     type: select2_entity_reference
     weight: 2
@@ -62,6 +98,42 @@ content:
       autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
+    third_party_settings: {  }
+  field_relationship:
+    type: paragraphs
+    weight: 33
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_security_level:
+    type: options_buttons
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_source:
+    type: options_buttons
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_status:
+    type: options_buttons
+    weight: 27
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_subject_areas:
     type: cshs
@@ -74,6 +146,15 @@ content:
       level_labels: ''
       hierarchy_depth: 0
       required_depth: 0
+      none_label: '- Please select -'
+    third_party_settings: {  }
+  field_usage_rules:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
@@ -101,6 +182,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  entitygroupfield: true
   group_content: true
   path: true
   promote: true

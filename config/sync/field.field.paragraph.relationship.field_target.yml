@@ -1,0 +1,37 @@
+uuid: 17b84047-63df-4a5d-8170-a1cda5754c9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_target
+    - node.type.business_term
+    - node.type.dataset
+    - node.type.performance_measure
+    - node.type.program_outcome
+    - node.type.strategic_plan_outcome
+    - paragraphs.paragraphs_type.relationship
+id: paragraph.relationship.field_target
+field_name: field_target
+entity_type: paragraph
+bundle: relationship
+label: Target
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program_outcome: program_outcome
+      business_term: business_term
+      dataset: dataset
+      performance_measure: performance_measure
+      strategic_plan_outcome: strategic_plan_outcome
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: business_term
+field_type: entity_reference

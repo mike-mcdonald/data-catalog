@@ -1,0 +1,8 @@
+uuid: 574c429c-b967-4834-b15b-8f829e320def
+langcode: en
+status: true
+dependencies: {  }
+name: 'Definition source'
+vid: definition_source
+description: 'A taxonomy of commonly used sources of definitions for business terms'
+weight: 0
