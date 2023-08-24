@@ -180,12 +180,15 @@ third_party_settings:
             region: first
             configuration:
               id: 'field_block:node:business_term:field_source'
+              label: Source
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: entity_reference_label
-                label: above
+                label: inline
                 settings:
                   link: true
                 third_party_settings: {  }
@@ -197,11 +200,12 @@ third_party_settings:
             configuration:
               id: 'field_block:node:business_term:field_status'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: entity_reference_label
-                label: above
+                label: inline
                 settings:
                   link: true
                 third_party_settings: {  }
@@ -212,12 +216,15 @@ third_party_settings:
             region: first
             configuration:
               id: 'field_block:node:business_term:field_usage_rules'
+              label: 'Usage rules'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: text_default
-                label: above
+                label: inline
                 settings: {  }
                 third_party_settings: {  }
             weight: -1
@@ -228,11 +235,12 @@ third_party_settings:
             configuration:
               id: 'field_block:node:business_term:field_acronym'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: string
-                label: above
+                label: inline
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
@@ -244,11 +252,12 @@ third_party_settings:
             configuration:
               id: 'field_block:node:business_term:field_data_group'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: entity_reference_label
-                label: above
+                label: inline
                 settings:
                   link: true
                 third_party_settings: {  }
@@ -260,11 +269,12 @@ third_party_settings:
             configuration:
               id: 'field_block:node:business_term:field_security_level'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: entity_reference_label
-                label: above
+                label: inline
                 settings:
                   link: true
                 third_party_settings: {  }
@@ -276,11 +286,12 @@ third_party_settings:
             configuration:
               id: 'field_block:node:business_term:field_audience'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: entity_reference_label
-                label: above
+                label: inline
                 settings:
                   link: true
                 third_party_settings: {  }
@@ -292,11 +303,12 @@ third_party_settings:
             configuration:
               id: 'field_block:node:business_term:field_relationship'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: entity_reference_revisions_entity_view
-                label: above
+                label: inline
                 settings:
                   view_mode: default
                   link: ''
