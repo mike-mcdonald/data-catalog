@@ -1,0 +1,29 @@
+uuid: 9bf52864-215a-4064-8be0-051608bbc803
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source
+    - node.type.business_term
+    - taxonomy.vocabulary.definition_source
+id: node.business_term.field_source
+field_name: field_source
+entity_type: node
+bundle: business_term
+label: Source
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      definition_source: definition_source
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

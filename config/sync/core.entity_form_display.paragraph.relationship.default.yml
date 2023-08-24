@@ -1,0 +1,41 @@
+uuid: e8f0a4b3-44d8-4745-a91c-ba5172d13ddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.relationship.field_relationship_type
+    - field.field.paragraph.relationship.field_target
+    - paragraphs.paragraphs_type.relationship
+  module:
+    - field_layout
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.relationship.default
+targetEntityType: paragraph
+bundle: relationship
+mode: default
+content:
+  field_relationship_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_target:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

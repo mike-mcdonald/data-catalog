@@ -6,9 +6,17 @@ dependencies:
     - core.base_field_override.node.business_term.title
     - core.entity_view_mode.node.card
     - field.field.node.business_term.body
+    - field.field.node.business_term.field_acronym
+    - field.field.node.business_term.field_audience
     - field.field.node.business_term.field_data_custodian
+    - field.field.node.business_term.field_data_group
     - field.field.node.business_term.field_keywords
+    - field.field.node.business_term.field_relationship
+    - field.field.node.business_term.field_security_level
+    - field.field.node.business_term.field_source
+    - field.field.node.business_term.field_status
     - field.field.node.business_term.field_subject_areas
+    - field.field.node.business_term.field_usage_rules
     - node.type.business_term
   module:
     - field_layout
@@ -175,8 +183,16 @@ content:
     region: content
 hidden:
   entitygroupfield: true
+  field_acronym: true
+  field_audience: true
   field_data_custodian: true
+  field_data_group: true
+  field_relationship: true
+  field_security_level: true
+  field_source: true
+  field_status: true
   field_subject_areas: true
+  field_usage_rules: true
   group_content: true
   links: true
   search_api_excerpt: true

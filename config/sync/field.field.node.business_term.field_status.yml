@@ -1,0 +1,29 @@
+uuid: e79b391c-caaf-45dd-a95b-4bd9eaa7df44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status
+    - node.type.business_term
+    - taxonomy.vocabulary.status
+id: node.business_term.field_status
+field_name: field_status
+entity_type: node
+bundle: business_term
+label: Status
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      status: status
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 1acb56eb-59f2-4ab6-a2bc-7062819a76d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_security_level
+    - node.type.business_term
+    - taxonomy.vocabulary.information_security_levels
+id: node.business_term.field_security_level
+field_name: field_security_level
+entity_type: node
+bundle: business_term
+label: 'Information security regulation'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      information_security_levels: information_security_levels
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

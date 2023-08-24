@@ -1,0 +1,31 @@
+uuid: 01045d20-0d90-444d-a9f2-4e08110df1ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.relationship.field_relationship_type
+    - field.field.paragraph.relationship.field_target
+    - paragraphs.paragraphs_type.relationship
+id: paragraph.relationship.default
+targetEntityType: paragraph
+bundle: relationship
+mode: default
+content:
+  field_relationship_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_target:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

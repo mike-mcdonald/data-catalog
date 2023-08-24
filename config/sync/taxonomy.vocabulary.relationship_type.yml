@@ -1,0 +1,8 @@
+uuid: ba112e25-4a2f-44df-b559-fdc85eeb346a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Relationship type'
+vid: relationship_type
+description: ''
+weight: 0

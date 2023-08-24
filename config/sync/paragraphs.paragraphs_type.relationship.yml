@@ -1,0 +1,10 @@
+uuid: f5d68e72-03b4-4b88-9864-0267bc49ff08
+langcode: en
+status: true
+dependencies: {  }
+id: relationship
+label: Relationship
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,29 @@
+uuid: f88c7f6f-666a-4a72-b2ff-8732bc1ccdfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_relationship_type
+    - paragraphs.paragraphs_type.relationship
+    - taxonomy.vocabulary.relationship_type
+id: paragraph.relationship.field_relationship_type
+field_name: field_relationship_type
+entity_type: paragraph
+bundle: relationship
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      relationship_type: relationship_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

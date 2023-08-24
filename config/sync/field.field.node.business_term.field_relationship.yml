@@ -1,0 +1,31 @@
+uuid: 55d64fcc-06cb-4f97-bd2b-0ae0d1ad6290
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relationship
+    - node.type.business_term
+    - paragraphs.paragraphs_type.relationship
+  module:
+    - entity_reference_revisions
+id: node.business_term.field_relationship
+field_name: field_relationship
+entity_type: node
+bundle: business_term
+label: Relationship(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      relationship: relationship
+    negate: 0
+    target_bundles_drag_drop:
+      relationship:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

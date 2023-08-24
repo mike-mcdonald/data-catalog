@@ -1,0 +1,19 @@
+uuid: 98adbb47-3c0b-4f84-8054-2b9dd5fd159e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acronym
+    - node.type.business_term
+id: node.business_term.field_acronym
+field_name: field_acronym
+entity_type: node
+bundle: business_term
+label: Acronym(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
