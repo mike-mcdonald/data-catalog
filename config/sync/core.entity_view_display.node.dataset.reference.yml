@@ -79,6 +79,16 @@ third_party_settings:
                 third_party_settings: {  }
             weight: -10
             additional: {  }
+          fe4f5a8b-1e02-461b-b06b-9539d2a14240:
+            uuid: fe4f5a8b-1e02-461b-b06b-9539d2a14240
+            region: content
+            configuration:
+              id: 'extra_field_block:node:dataset:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: -8
+            additional: {  }
         third_party_settings: {  }
 id: node.dataset.reference
 targetEntityType: node
@@ -172,7 +182,13 @@ content:
     third_party_settings: {  }
     weight: 13
     region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
 hidden:
+  entitygroupfield: true
   field_accessibility_level: true
   field_data_owner: true
   field_quality_concerns: true

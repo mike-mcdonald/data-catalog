@@ -24,6 +24,7 @@ content:
     region: content
 hidden:
   body: true
+  entitygroupfield: true
   field_actual: true
   field_estimate: true
   field_performance_measure: true
