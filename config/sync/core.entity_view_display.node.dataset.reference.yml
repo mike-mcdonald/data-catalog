@@ -41,25 +41,6 @@ third_party_settings:
           label: ''
           context_mapping: {  }
         components:
-          e19b5325-c585-4901-912a-4116840af1e8:
-            uuid: e19b5325-c585-4901-912a-4116840af1e8
-            region: content
-            configuration:
-              id: 'field_block:node:dataset:field_data_custodian'
-              label: 'Primary Contact '
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: above
-                settings:
-                  view_mode: teaser
-                third_party_settings: {  }
-            weight: -9
-            additional: {  }
           434c6b8b-5f19-4ce1-b035-caebd755ac33:
             uuid: 434c6b8b-5f19-4ce1-b035-caebd755ac33
             region: content
@@ -77,17 +58,26 @@ third_party_settings:
                 settings:
                   link_to_entity: true
                 third_party_settings: {  }
-            weight: -10
+            weight: -1
             additional: {  }
-          fe4f5a8b-1e02-461b-b06b-9539d2a14240:
-            uuid: fe4f5a8b-1e02-461b-b06b-9539d2a14240
+          e017147f-9158-45ab-9a08-acf9310f7470:
+            uuid: e017147f-9158-45ab-9a08-acf9310f7470
             region: content
             configuration:
-              id: 'extra_field_block:node:dataset:flag_bookmark'
+              id: 'field_block:node:dataset:type'
+              label: 'Content type'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
-            weight: -8
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: -9
             additional: {  }
         third_party_settings: {  }
 id: node.dataset.reference

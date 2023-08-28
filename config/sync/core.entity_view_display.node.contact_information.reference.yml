@@ -1,0 +1,95 @@
+uuid: 24a2a9b8-3e65-4562-bb66-1149ace3696c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.contact_information.title
+    - core.entity_view_mode.node.reference
+    - field.field.node.contact_information.field_email_address
+    - field.field.node.contact_information.field_telephone_number
+    - node.type.contact_information
+  module:
+    - field_layout
+    - layout_builder
+    - telephone
+    - user
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          3b3b2fed-b0cd-4d13-b03b-e386001ad030:
+            uuid: 3b3b2fed-b0cd-4d13-b03b-e386001ad030
+            region: content
+            configuration:
+              id: 'field_block:node:contact_information:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          dcf55752-892b-441e-b0a1-683f3c080e5a:
+            uuid: dcf55752-892b-441e-b0a1-683f3c080e5a
+            region: content
+            configuration:
+              id: 'field_block:node:contact_information:title'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.contact_information.reference
+targetEntityType: node
+bundle: contact_information
+mode: reference
+content:
+  field_email_address:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_telephone_number:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entitygroupfield: true
+  group_content: true
+  links: true
+  search_api_excerpt: true

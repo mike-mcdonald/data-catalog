@@ -1,0 +1,242 @@
+uuid: ecc549c7-f3a8-4206-9774-31fd7238bbef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.access_point.title
+    - core.entity_view_mode.node.reference
+    - field.field.node.access_point.field_data_custodian
+    - field.field.node.access_point.field_keywords
+    - field.field.node.access_point.field_purpose
+    - field.field.node.access_point.field_subject_areas
+    - field.field.node.access_point.field_url
+    - node.type.access_point
+  module:
+    - cshs
+    - field_layout
+    - layout_builder
+    - link
+    - user
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          8ebc97be-364a-4b2d-862f-1677c32e182e:
+            uuid: 8ebc97be-364a-4b2d-862f-1677c32e182e
+            region: first
+            configuration:
+              id: 'extra_field_block:node:access_point:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          67c780c0-11c4-40e0-950e-a18d58b125ef:
+            uuid: 67c780c0-11c4-40e0-950e-a18d58b125ef
+            region: first
+            configuration:
+              id: 'extra_field_block:node:access_point:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          c509387f-f310-4729-beaa-0c0b16bdceda:
+            uuid: c509387f-f310-4729-beaa-0c0b16bdceda
+            region: first
+            configuration:
+              id: 'field_block:node:access_point:field_purpose'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          d487a68c-94df-4455-b184-b49104ca54dd:
+            uuid: d487a68c-94df-4455-b184-b49104ca54dd
+            region: first
+            configuration:
+              id: 'field_block:node:access_point:field_keywords'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          8aebb724-f712-4c0d-8cb7-af662d25b7b1:
+            uuid: 8aebb724-f712-4c0d-8cb7-af662d25b7b1
+            region: first
+            configuration:
+              id: 'field_block:node:access_point:field_data_custodian'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          dde769e2-818a-44d5-82ff-c9a4abfd3242:
+            uuid: dde769e2-818a-44d5-82ff-c9a4abfd3242
+            region: first
+            configuration:
+              id: 'field_block:node:access_point:field_subject_areas'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: cshs_full_hierarchy
+                label: above
+                settings:
+                  separator: ' / '
+                  linked: false
+                  reverse: false
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          b3b627a3-9907-458b-8519-26aaf47115bf:
+            uuid: b3b627a3-9907-458b-8519-26aaf47115bf
+            region: first
+            configuration:
+              id: 'field_block:node:access_point:field_url'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          dfa950b3-5b0e-4bd7-b564-e9dbf8069737:
+            uuid: dfa950b3-5b0e-4bd7-b564-e9dbf8069737
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          b5016b60-9eb0-4f71-ae4c-aba7e226d06a:
+            uuid: b5016b60-9eb0-4f71-ae4c-aba7e226d06a
+            region: content
+            configuration:
+              id: 'field_block:node:access_point:title'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.access_point.reference
+targetEntityType: node
+bundle: access_point
+mode: reference
+content:
+  field_data_custodian:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: first
+  field_keywords:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: first
+  field_purpose:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: first
+  field_subject_areas:
+    type: cshs_full_hierarchy
+    label: above
+    settings:
+      separator: ' / '
+      linked: false
+      reverse: false
+    third_party_settings: {  }
+    weight: 104
+    region: first
+  field_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: first
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: first
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: first
+hidden:
+  entitygroupfield: true
+  group_content: true
+  search_api_excerpt: true

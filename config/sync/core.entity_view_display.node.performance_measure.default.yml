@@ -312,10 +312,10 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: entity_reference_entity_view
+                type: entity_reference_label
                 label: inline
                 settings:
-                  view_mode: reference
+                  link: true
                 third_party_settings: {  }
             weight: 6
             additional: {  }
