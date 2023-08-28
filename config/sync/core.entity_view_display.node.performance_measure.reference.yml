@@ -1,0 +1,265 @@
+uuid: caa3b843-d7a2-4857-b772-a1b22c0802eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.performance_measure.title
+    - core.entity_view_mode.node.reference
+    - field.field.node.performance_measure.body
+    - field.field.node.performance_measure.field_category
+    - field.field.node.performance_measure.field_data_custodian
+    - field.field.node.performance_measure.field_data_group
+    - field.field.node.performance_measure.field_data_type
+    - field.field.node.performance_measure.field_datasets
+    - field.field.node.performance_measure.field_direction
+    - field.field.node.performance_measure.field_frequency
+    - field.field.node.performance_measure.field_keywords
+    - field.field.node.performance_measure.field_measure_id
+    - field.field.node.performance_measure.field_measure_type
+    - field.field.node.performance_measure.field_origination_date
+    - field.field.node.performance_measure.field_performance_framework
+    - field.field.node.performance_measure.field_requirements
+    - field.field.node.performance_measure.field_status
+    - field.field.node.performance_measure.field_strategic_target
+    - field.field.node.performance_measure.field_strategic_year
+    - field.field.node.performance_measure.field_subject_areas
+    - field.field.node.performance_measure.field_url
+    - node.type.performance_measure
+  module:
+    - layout_builder
+    - link
+    - text
+    - user
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          1b1121bc-77c4-4677-987f-f9e4debd21eb:
+            uuid: 1b1121bc-77c4-4677-987f-f9e4debd21eb
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          05216155-0c07-4c88-ab4c-91b669429b30:
+            uuid: 05216155-0c07-4c88-ab4c-91b669429b30
+            region: content
+            configuration:
+              id: 'field_block:node:performance_measure:title'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.performance_measure.reference
+targetEntityType: node
+bundle: performance_measure
+mode: reference
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 127
+    region: first
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: first
+  field_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 135
+    region: first
+  field_data_custodian:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 130
+    region: first
+  field_data_group:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 129
+    region: first
+  field_data_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 144
+    region: first
+  field_datasets:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 126
+    region: first
+  field_direction:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 148
+    region: first
+  field_frequency:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 128
+    region: first
+  field_keywords:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 118
+    region: first
+  field_measure_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 145
+    region: first
+  field_measure_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 134
+    region: first
+  field_origination_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 143
+    region: first
+  field_performance_framework:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 146
+    region: first
+  field_requirements:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 131
+    region: first
+  field_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 136
+    region: first
+  field_strategic_target:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 144
+    region: first
+  field_strategic_year:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 139
+    region: first
+  field_subject_areas:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 147
+    region: first
+  field_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 137
+    region: first
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: first
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: first
+hidden:
+  entitygroupfield: true
+  group_content: true
+  search_api_excerpt: true

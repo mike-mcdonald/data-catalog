@@ -1,8 +1,10 @@
-uuid: 9fa8b655-2264-42d0-8306-691eb0f39d82
+uuid: f0efd8a9-953e-4bab-bb1e-aab882419c50
 langcode: en
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.business_term.title
+    - core.entity_view_mode.node.reference
     - field.field.node.business_term.body
     - field.field.node.business_term.field_acronym
     - field.field.node.business_term.field_audience
@@ -16,14 +18,12 @@ dependencies:
     - field.field.node.business_term.field_subject_areas
     - field.field.node.business_term.field_usage_rules
     - node.type.business_term
-    - views.view.revisions
   module:
     - entity_reference_revisions
     - field_layout
     - layout_builder
     - text
     - user
-    - views
   theme:
     - rain
 third_party_settings:
@@ -35,13 +35,12 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_twocol_right
+        layout_id: layout_onecol
         layout_settings:
           label: ''
-          context_mapping: {  }
         components:
-          bab41ea9-f3fd-4af2-a06c-8cd3679b2178:
-            uuid: bab41ea9-f3fd-4af2-a06c-8cd3679b2178
+          7fe3e11d-8706-451d-8ba8-4c8df3abd869:
+            uuid: 7fe3e11d-8706-451d-8ba8-4c8df3abd869
             region: first
             configuration:
               id: 'field_block:node:business_term:body'
@@ -53,277 +52,237 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: -7
+            weight: 0
             additional: {  }
-          5b3df6bb-eff5-49a9-8117-b10dc6e570b8:
-            uuid: 5b3df6bb-eff5-49a9-8117-b10dc6e570b8
-            region: first
-            configuration:
-              id: 'field_block:node:business_term:field_keywords'
-              label: Keywords
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: inline
-                settings:
-                  view_mode: card
-                third_party_settings: {  }
-            weight: -6
-            additional: {  }
-          7d1cc1f4-751c-4754-96bd-32964e35f517:
-            uuid: 7d1cc1f4-751c-4754-96bd-32964e35f517
-            region: first
-            configuration:
-              id: 'field_block:node:business_term:field_subject_areas'
-              label: 'Subject areas'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: -5
-            additional: {  }
-          1a39d82d-dcef-44ee-b1ff-37368ff5eb7a:
-            uuid: 1a39d82d-dcef-44ee-b1ff-37368ff5eb7a
+          9d2c0a75-ed4d-4f4c-b55c-5c16ee5fc721:
+            uuid: 9d2c0a75-ed4d-4f4c-b55c-5c16ee5fc721
             region: first
             configuration:
               id: 'field_block:node:business_term:field_data_custodian'
-              label: 'Primary Contact '
               label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: -4
-            additional: {  }
-          ee99d0f7-2e43-435f-9bbf-fe16c889e73c:
-            uuid: ee99d0f7-2e43-435f-9bbf-fe16c889e73c
-            region: second
-            configuration:
-              id: 'field_block:node:business_term:changed'
-              label: Changed
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: timestamp
-                label: inline
-                settings:
-                  date_format: short
-                  custom_date_format: ''
-                  timezone: ''
-                third_party_settings: {  }
-            weight: -9
-            additional: {  }
-          bea25a43-4d9a-46f5-b300-52299bd90447:
-            uuid: bea25a43-4d9a-46f5-b300-52299bd90447
-            region: second
-            configuration:
-              id: 'extra_field_block:node:business_term:flag_bookmark'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: -7
-            additional: {  }
-          f45c72ac-7c97-4824-971c-d82a2cc54830:
-            uuid: f45c72ac-7c97-4824-971c-d82a2cc54830
-            region: second
-            configuration:
-              id: 'field_block:node:business_term:revision_uid'
-              label: 'Revision user'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: -8
-            additional: {  }
-          a773238d-1713-4c28-af42-d3bfd13a24d9:
-            uuid: a773238d-1713-4c28-af42-d3bfd13a24d9
-            region: second
-            configuration:
-              id: 'views_block:revisions-block_1'
-              label: ''
-              label_display: '0'
-              provider: views
-              context_mapping: {  }
-              views_label: ''
-              items_per_page: none
-            weight: -10
-            additional: {  }
-          4bfede75-e3f5-4eb7-a7d3-524bbb287597:
-            uuid: 4bfede75-e3f5-4eb7-a7d3-524bbb287597
-            region: first
-            configuration:
-              id: 'field_block:node:business_term:field_source'
-              label: Source
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: -3
-            additional: {  }
-          fc7cb03d-093c-4be9-81b3-87be0a02aa73:
-            uuid: fc7cb03d-093c-4be9-81b3-87be0a02aa73
-            region: first
-            configuration:
-              id: 'field_block:node:business_term:field_status'
-              label_display: '0'
-              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: entity_reference_label
-                label: inline
+                label: above
                 settings:
                   link: true
-                third_party_settings: {  }
-            weight: -2
-            additional: {  }
-          b1e2d5f1-3f8c-4f77-b124-218df06c72da:
-            uuid: b1e2d5f1-3f8c-4f77-b124-218df06c72da
-            region: first
-            configuration:
-              id: 'field_block:node:business_term:field_usage_rules'
-              label: 'Usage rules'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: inline
-                settings: {  }
-                third_party_settings: {  }
-            weight: -1
-            additional: {  }
-          6c425fcd-b394-429d-86e8-f9c185da4033:
-            uuid: 6c425fcd-b394-429d-86e8-f9c185da4033
-            region: first
-            configuration:
-              id: 'field_block:node:business_term:field_acronym'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: inline
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          e7ee8ad2-4f59-438c-ac67-a0b1e5f4e28f:
-            uuid: e7ee8ad2-4f59-438c-ac67-a0b1e5f4e28f
-            region: first
-            configuration:
-              id: 'field_block:node:business_term:field_data_group'
-              label: 'Organizational unit'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: cshs_full_hierarchy
-                label: inline
-                settings:
-                  linked: 1
-                  reverse: 0
-                  separator: ' / '
                 third_party_settings: {  }
             weight: 1
             additional: {  }
-          3acdc1e7-4305-4dc0-b1d3-bc21cfb6d555:
-            uuid: 3acdc1e7-4305-4dc0-b1d3-bc21cfb6d555
+          96615aa7-de90-45fc-b670-b7614959ee07:
+            uuid: 96615aa7-de90-45fc-b670-b7614959ee07
             region: first
             configuration:
-              id: 'field_block:node:business_term:field_security_level'
+              id: 'field_block:node:business_term:field_keywords'
               label_display: '0'
-              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: entity_reference_label
-                label: inline
+                label: above
                 settings:
                   link: true
                 third_party_settings: {  }
             weight: 2
             additional: {  }
-          5f9b2f9e-a3de-441e-8b87-d5e4787a79f7:
-            uuid: 5f9b2f9e-a3de-441e-8b87-d5e4787a79f7
+          8e07e139-668a-4c12-bee1-08bb78412f1f:
+            uuid: 8e07e139-668a-4c12-bee1-08bb78412f1f
             region: first
             configuration:
-              id: 'field_block:node:business_term:field_audience'
+              id: 'field_block:node:business_term:field_subject_areas'
               label_display: '0'
-              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: entity_reference_label
-                label: inline
+                label: above
                 settings:
                   link: true
                 third_party_settings: {  }
             weight: 3
             additional: {  }
-          637550c8-928f-44cc-83cb-2c02c74f3224:
-            uuid: 637550c8-928f-44cc-83cb-2c02c74f3224
+          7ededcb7-cfa7-4750-b4c7-7e466b78f61c:
+            uuid: 7ededcb7-cfa7-4750-b4c7-7e466b78f61c
+            region: first
+            configuration:
+              id: 'extra_field_block:node:business_term:flag_bookmark'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 4
+            additional: {  }
+          fa1d811f-fe10-4fbf-92c5-68a9e0964121:
+            uuid: fa1d811f-fe10-4fbf-92c5-68a9e0964121
+            region: first
+            configuration:
+              id: 'field_block:node:business_term:field_source'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          7572aaaf-2d3f-43bc-bd7b-0fa3cee62014:
+            uuid: 7572aaaf-2d3f-43bc-bd7b-0fa3cee62014
+            region: first
+            configuration:
+              id: 'field_block:node:business_term:field_status'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          f69524d8-e2da-489d-af1d-030d160538c1:
+            uuid: f69524d8-e2da-489d-af1d-030d160538c1
+            region: first
+            configuration:
+              id: 'field_block:node:business_term:field_usage_rules'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          5c5e2cb8-0219-4356-8ae5-ee180c0de793:
+            uuid: 5c5e2cb8-0219-4356-8ae5-ee180c0de793
+            region: first
+            configuration:
+              id: 'field_block:node:business_term:field_acronym'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          eb3fb437-b610-42cd-8492-8b65a674c045:
+            uuid: eb3fb437-b610-42cd-8492-8b65a674c045
+            region: first
+            configuration:
+              id: 'field_block:node:business_term:field_data_group'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 9
+            additional: {  }
+          691eab07-c1ba-4c34-ad70-a99d92cbe8b3:
+            uuid: 691eab07-c1ba-4c34-ad70-a99d92cbe8b3
+            region: first
+            configuration:
+              id: 'field_block:node:business_term:field_security_level'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 10
+            additional: {  }
+          17e45a43-621c-4924-a3ac-c48e31635765:
+            uuid: 17e45a43-621c-4924-a3ac-c48e31635765
+            region: first
+            configuration:
+              id: 'field_block:node:business_term:field_audience'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 11
+            additional: {  }
+          67b9b8b8-f018-4c7b-a5dd-913718585890:
+            uuid: 67b9b8b8-f018-4c7b-a5dd-913718585890
             region: first
             configuration:
               id: 'field_block:node:business_term:field_relationship'
               label_display: '0'
-              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: entity_reference_revisions_entity_view
-                label: inline
+                label: above
                 settings:
                   view_mode: default
                   link: ''
                 third_party_settings: {  }
-            weight: 4
+            weight: 12
+            additional: {  }
+          4efee900-ffae-4c11-930e-4bc45d490a2e:
+            uuid: 4efee900-ffae-4c11-930e-4bc45d490a2e
+            region: content
+            configuration:
+              id: 'field_block:node:business_term:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          ff0ee96f-eac3-4990-93b2-2f6a7340ff26:
+            uuid: ff0ee96f-eac3-4990-93b2-2f6a7340ff26
+            region: content
+            configuration:
+              id: 'field_block:node:business_term:title'
+              label: Term
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
             additional: {  }
         third_party_settings: {  }
-id: node.business_term.default
+id: node.business_term.reference
 targetEntityType: node
 bundle: business_term
-mode: default
+mode: reference
 content:
   body:
     type: text_default

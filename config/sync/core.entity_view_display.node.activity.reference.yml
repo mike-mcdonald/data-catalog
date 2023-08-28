@@ -1,0 +1,100 @@
+uuid: b1c35a1e-18d4-4a65-8ad1-9105010fc060
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.activity.title
+    - core.entity_view_mode.node.reference
+    - field.field.node.activity.body
+    - field.field.node.activity.field_budget_program
+    - node.type.activity
+  module:
+    - layout_builder
+    - text
+    - user
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          575f5845-ba6c-4170-b863-47ed93e70d6f:
+            uuid: 575f5845-ba6c-4170-b863-47ed93e70d6f
+            region: content
+            configuration:
+              id: 'field_block:node:activity:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a048591f-ca92-46e9-ba00-35b64142e910:
+            uuid: a048591f-ca92-46e9-ba00-35b64142e910
+            region: content
+            configuration:
+              id: 'field_block:node:activity:title'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.activity.reference
+targetEntityType: node
+bundle: activity
+mode: reference
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_budget_program:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entitygroupfield: true
+  group_content: true
+  search_api_excerpt: true
