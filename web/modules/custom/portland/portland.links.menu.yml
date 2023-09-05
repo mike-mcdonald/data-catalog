@@ -1,11 +1,11 @@
 portland.user_guide:
-  title: 'User guide'
+  title: "User guide"
   description: Data Catalog user guide on PBOT's Confluence page
   menu_name: footer
-  url: https://pbotapps.atlassian.net/wiki/spaces/TSDKB/pages/462225427/Drupal+Data+Catalog+User+Guide
+  url: https://employees.portland.gov/pbot/document/pbot-catalog-user-guide/download?inline
 portland.feedback:
-  title: 'Feedback and issue reporting'
-  description: 'Form for providing feedback and reporting issues'
+  title: "Feedback and issue reporting"
+  description: "Form for providing feedback and reporting issues"
   menu_name: footer
   url: internal:/form/feedback
   weight: 100
