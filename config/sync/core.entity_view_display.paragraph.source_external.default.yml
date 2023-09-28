@@ -1,0 +1,84 @@
+uuid: b1c692b8-7f10-4292-91a0-472d5d3d5056
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.source_external.field_source_external
+    - paragraphs.paragraphs_type.source_external
+  module:
+    - layout_builder
+    - link
+  theme:
+    - rain
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          915c44b2-417e-45ce-84a1-8574f594571a:
+            uuid: 915c44b2-417e-45ce-84a1-8574f594571a
+            region: content
+            configuration:
+              id: 'field_block:paragraph:source_external:field_source_external'
+              label: 'External source'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: visually_hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: _blank
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          7430ec94-86ed-4843-bbac-160dcaba2a38:
+            uuid: 7430ec94-86ed-4843-bbac-160dcaba2a38
+            region: content
+            configuration:
+              id: 'field_block:paragraph:source_external:type'
+              label: 'Paragraph type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.source_external.default
+targetEntityType: paragraph
+bundle: source_external
+mode: default
+content:
+  field_source_external:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

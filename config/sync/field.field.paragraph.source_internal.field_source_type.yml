@@ -1,0 +1,29 @@
+uuid: 7932399c-c739-45c6-9b3b-4618f2f41562
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_source_type
+    - paragraphs.paragraphs_type.source_internal
+    - taxonomy.vocabulary.source_type
+id: paragraph.source_internal.field_source_type
+field_name: field_source_type
+entity_type: paragraph
+bundle: source_internal
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      source_type: source_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
