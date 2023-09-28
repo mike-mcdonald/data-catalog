@@ -1,0 +1,8 @@
+uuid: c7632161-9798-4dad-9d2e-a97a7f87afbc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Source type'
+vid: source_type
+description: 'Types of internal sources for business terms'
+weight: 0

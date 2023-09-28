@@ -12,10 +12,11 @@ dependencies:
     - field.field.node.business_term.field_keywords
     - field.field.node.business_term.field_relationship
     - field.field.node.business_term.field_security_level
-    - field.field.node.business_term.field_source
     - field.field.node.business_term.field_status
     - field.field.node.business_term.field_subject_areas
+    - field.field.node.business_term.field_term_source
     - field.field.node.business_term.field_usage_rules
+    - field.field.node.business_term.field_usage_type
     - node.type.business_term
   module:
     - field_layout
@@ -106,9 +107,10 @@ hidden:
   field_keywords: true
   field_relationship: true
   field_security_level: true
-  field_source: true
   field_status: true
   field_subject_areas: true
+  field_term_source: true
   field_usage_rules: true
+  field_usage_type: true
   group_content: true
   search_api_excerpt: true

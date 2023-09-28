@@ -1,0 +1,42 @@
+uuid: c84cdd79-964d-44fb-96ef-a2145bed879b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_source
+    - node.type.business_term
+    - paragraphs.paragraphs_type.source_external
+    - paragraphs.paragraphs_type.source_internal
+  module:
+    - entity_reference_revisions
+id: node.business_term.field_term_source
+field_name: field_term_source
+entity_type: node
+bundle: business_term
+label: Source
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      source_external: source_external
+      source_internal: source_internal
+    negate: 0
+    target_bundles_drag_drop:
+      relationship:
+        weight: 5
+        enabled: false
+      source:
+        weight: 6
+        enabled: false
+      source_external:
+        weight: 7
+        enabled: true
+      source_internal:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

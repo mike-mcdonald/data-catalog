@@ -1,0 +1,30 @@
+uuid: e524b209-b82e-4caf-a298-0140b956e63e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.source_internal.field_source_type
+    - paragraphs.paragraphs_type.source_internal
+  module:
+    - field_layout
+  theme:
+    - rain
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.source_internal.default
+targetEntityType: paragraph
+bundle: source_internal
+mode: default
+content:
+  field_source_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

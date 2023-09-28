@@ -1,0 +1,10 @@
+uuid: 2f004e4c-aef4-4eb6-bc0b-4de6cb90aa5b
+langcode: en
+status: true
+dependencies: {  }
+id: source_internal
+label: 'Internal source'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

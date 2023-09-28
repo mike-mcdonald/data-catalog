@@ -12,10 +12,11 @@ dependencies:
     - field.field.node.business_term.field_keywords
     - field.field.node.business_term.field_relationship
     - field.field.node.business_term.field_security_level
-    - field.field.node.business_term.field_source
     - field.field.node.business_term.field_status
     - field.field.node.business_term.field_subject_areas
+    - field.field.node.business_term.field_term_source
     - field.field.node.business_term.field_usage_rules
+    - field.field.node.business_term.field_usage_type
     - node.type.business_term
   module:
     - content_moderation
@@ -49,7 +50,7 @@ content:
     third_party_settings: {  }
   field_acronym:
     type: string_textfield
-    weight: 29
+    weight: 11
     region: content
     settings:
       size: 32
@@ -57,7 +58,7 @@ content:
     third_party_settings: {  }
   field_audience:
     type: options_buttons
-    weight: 32
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -78,7 +79,7 @@ content:
     third_party_settings: {  }
   field_data_group:
     type: cshs
-    weight: 30
+    weight: 5
     region: content
     settings:
       save_lineage: false
@@ -101,7 +102,7 @@ content:
     third_party_settings: {  }
   field_relationship:
     type: paragraphs
-    weight: 33
+    weight: 13
     region: content
     settings:
       title: Paragraph
@@ -119,19 +120,13 @@ content:
     third_party_settings: {  }
   field_security_level:
     type: options_buttons
-    weight: 31
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_source:
-    type: options_buttons
-    weight: 26
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_status:
     type: options_buttons
-    weight: 27
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -148,17 +143,42 @@ content:
       required_depth: 0
       none_label: '- Please select -'
     third_party_settings: {  }
+  field_term_source:
+    type: paragraphs
+    weight: 8
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: '0'
+        duplicate: '0'
+    third_party_settings: {  }
   field_usage_rules:
     type: text_textarea
-    weight: 28
+    weight: 10
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_usage_type:
+    type: options_buttons
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 5
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -172,7 +192,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 15
     region: content
     settings:
       match_operator: CONTAINS
