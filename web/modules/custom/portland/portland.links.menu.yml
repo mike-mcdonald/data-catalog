@@ -7,5 +7,8 @@ portland.feedback:
   title: "Feedback and issue reporting"
   description: "Form for providing feedback and reporting issues"
   menu_name: footer
-  url: internal:/form/feedback
+  url: internal:/
   weight: 100
+  options:
+    attributes:
+      id: feedback-form
