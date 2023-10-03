@@ -28,24 +28,34 @@
 %}
 
 <!DOCTYPE html>
-<html{{ html_attributes }}>
-  <head>
-    <head-placeholder token="{{ placeholder_token|raw }}">
-    <title>{{ head_title|safe_join(' | ') }}</title>
-    <css-placeholder token="{{ placeholder_token|raw }}">
-    <js-placeholder token="{{ placeholder_token|raw }}">
-  </head>
-  <body{{ attributes.addClass(body_classes) }}>
-    {#
-      Keyboard navigation/accessibility link to main content section in
-      page.html.twig.
-    #}
-    <a href="#main-content" class="visually-hidden focusable">
-      {{ 'Skip to main content'|t }}
-    </a>
-    {{ page_top }}
-    {{ page }}
-    {{ page_bottom }}
-    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
-  </body>
-</html>
+<html{{html_attributes}}>
+	<head>
+		<head-placeholder token="{{ placeholder_token|raw }}">
+			<title>{{ head_title|safe_join(' | ') }}</title>
+			<css-placeholder token="{{ placeholder_token|raw }}">
+				<js-placeholder token="{{ placeholder_token|raw }}">
+					<script type="text/javascript" src="https://pbotapps.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-3o5b4z/b/5/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=33354eba"></script>
+					<script type="text/javascript">
+						window.ATL_JQ_PAGE_PROPS = {
+"triggerFunction": function (showCollectorDialog) { // Requires that jQuery is available!
+jQuery("#feedback-form").click(function (e) {
+e.preventDefault();
+showCollectorDialog();
+});
+}
+};
+					</script>
+				</head>
+				<body{{attributes.addClass(body_classes)}}>
+					{#
+										      Keyboard navigation/accessibility link to main content section in
+										      page.html.twig.
+										    #}
+					<a href="#main-content" class="visually-hidden focusable">
+						{{ 'Skip to main content'|t }}
+					</a>
+					{{ page_top }}
+					{{ page }}
+					{{ page_bottom }}
+					<js-bottom-placeholder token="{{ placeholder_token|raw }}"></body>
+				</html>
