@@ -12,8 +12,7 @@ module:
   block_content: 0
   block_content_permissions: 0
   breakpoint: 0
-  ckeditor: 0
-  color: 0
+  ckeditor5: 0
   config: 0
   config_filter: 0
   config_split: 0
@@ -80,7 +79,6 @@ module:
   path_alias: 0
   pgsql: 0
   portland: 0
-  rdf: 0
   rest: 0
   search_api: 0
   search_api_db: 0
@@ -121,4 +119,5 @@ theme:
   rain: 0
   claro: 0
   gin: 0
+  olivero: 0
 profile: seed

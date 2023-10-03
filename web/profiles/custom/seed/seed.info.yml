@@ -1,14 +1,12 @@
 name: Seed
 type: profile
-description: "Trimmed down profile based on Standard."
+description: 'Trimmed down profile based on Standard.'
 core_version_requirement: ^8.8 || ^9
 dependencies:
   - node
   - history
   - block
   - breakpoint
-  - ckeditor
-  - color
   - config
   - contextual
   - menu_link_content
@@ -28,7 +26,6 @@ dependencies:
   - toolbar
   - field_ui
   - file
-  - rdf
   - user
   - views
   - views_ui
