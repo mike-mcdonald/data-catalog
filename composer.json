@@ -29,7 +29,6 @@
     "drupal/block_blacklist": "^1.0",
     "drupal/block_content_permissions": "^1.8",
     "drupal/config_split": "^1.4",
-    "drupal/console": "^1.0.2",
     "drupal/core-composer-scaffold": "^9.4",
     "drupal/core-recommended": "^9.4",
     "drupal/cshs": "^3.5",
@@ -98,7 +97,9 @@
       "drupal/core-composer-scaffold": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "drupal/console-extend-plugin": true,
-      "oomphinc/composer-installers-extender": true
+      "oomphinc/composer-installers-extender": true,
+      "phpstan/extension-installer": true,
+      "drupal/core-project-message": true
     }
   },
   "autoload": {
