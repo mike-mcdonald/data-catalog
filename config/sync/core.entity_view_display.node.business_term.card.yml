@@ -96,13 +96,13 @@ third_party_settings:
                   trim_suffix: ...
                   wrap_output: false
                   wrap_class: trimmed
-                  more_link: false
-                  more_class: more-link
-                  more_text: More
                   summary_handler: trim
                   trim_options:
                     text: true
                     trim_zero: false
+                  more_link: false
+                  more_class: more-link
+                  more_text: More
                 third_party_settings: {  }
             weight: -7
             additional: {  }

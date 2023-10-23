@@ -9,8 +9,6 @@ dependencies:
     - gnode
     - node
 id: group_content_type_8b46be7d37516
-label: 'Group: Add Contact information'
-description: 'Use this content type to add information about people that can be contacted about datasets'
 group_type: group
 content_plugin: 'group_node:contact_information'
 plugin_config:

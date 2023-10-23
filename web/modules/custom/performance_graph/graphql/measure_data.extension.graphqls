@@ -1,0 +1,8 @@
+extend type Query {
+  plan(id: Int!): Plan
+  plans(offset: Int = 0, limit: Int = 10): PlanConnection!
+}
+
+extend type Mutation {
+  savePlan(plan: PlanInput): PlanResponse
+}

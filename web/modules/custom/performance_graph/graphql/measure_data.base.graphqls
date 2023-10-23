@@ -1,0 +1,74 @@
+type Plan {
+  id: Int!
+  uuid: String!
+  owner: User
+  name: String!
+  description: String!
+  legalMandate: Boolean!
+  legalRequirements: [String]
+  website: String
+  organizationUnit: [TaxonomyTerm]
+  staff: [Contact]
+  consultants: [Contact]
+  partners: [Contact]
+  region: [TaxonomyTerm]
+  questions: [String]
+  decisions: [String]
+  impactLevel: [TaxonomyTerm]
+  impactDescription: String
+  interestLevel: [TaxonomyTerm]
+  interestDescription: String
+  promise: [TaxonomyTerm]
+  promiseDescription: String
+  anticipatedImpact: [String]
+  intendedOutcome: [String]
+  budget: [BudgetLineItem]
+  stakeholderStrategy: [StakeholderStrategy]
+  engagementTimeframe: [EngagementTimeframe]
+}
+
+type BudgetLineItem {
+  id: Int!
+  uuid: String!
+  activity: String
+  budget: Float
+}
+
+type StakeholderStrategy {
+  id: Int!
+  uuid: String!
+  stakeholders: [String]
+  involvementLevel: [TaxonomyTerm]
+  strategy: String
+}
+
+type EngagementTimeframe {
+  id: Int!
+  uuid: String!
+  dates: [String]
+  activity: String
+  strategy: String
+}
+
+input PlanInput {
+  id: Int
+  name: String!
+  description: String!
+  legalMandate: Boolean!
+  legalRequirements: [String]
+  staff: [Int]
+  consultants: [Int]
+  partners: [Int]
+  region: String
+  questions: [String]
+}
+
+type PlanResponse implements Response {
+  errors: [Violation]
+  plan: Plan
+}
+
+type PlanConnection {
+  total: Int!
+  items: [Plan!]
+}

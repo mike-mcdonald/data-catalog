@@ -11,7 +11,7 @@ archive: false
 id: request_access
 title: 'Request access'
 description: 'Form for forwarding access requests to the site generally.'
-category: ''
+categories: {  }
 elements: |-
   information_message:
     '#type': webform_message
@@ -118,6 +118,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

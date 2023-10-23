@@ -30,12 +30,13 @@ dependencies:
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {}
+    settings: {  }
   layout_builder:
     enabled: true
     allow_custom: false
     sections:
-      - layout_id: layout_onecol
+      -
+        layout_id: layout_onecol
         layout_settings:
           label: ''
         components:
@@ -50,10 +51,10 @@ third_party_settings:
               formatter:
                 type: text_default
                 label: hidden
-                settings: {}
-                third_party_settings: {}
+                settings: {  }
+                third_party_settings: {  }
             weight: 0
-            additional: {}
+            additional: {  }
           9d2c0a75-ed4d-4f4c-b55c-5c16ee5fc721:
             uuid: 9d2c0a75-ed4d-4f4c-b55c-5c16ee5fc721
             region: first
@@ -67,9 +68,9 @@ third_party_settings:
                 label: above
                 settings:
                   link: true
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 1
-            additional: {}
+            additional: {  }
           96615aa7-de90-45fc-b670-b7614959ee07:
             uuid: 96615aa7-de90-45fc-b670-b7614959ee07
             region: first
@@ -83,9 +84,9 @@ third_party_settings:
                 label: above
                 settings:
                   link: true
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 2
-            additional: {}
+            additional: {  }
           8e07e139-668a-4c12-bee1-08bb78412f1f:
             uuid: 8e07e139-668a-4c12-bee1-08bb78412f1f
             region: first
@@ -99,9 +100,9 @@ third_party_settings:
                 label: above
                 settings:
                   link: true
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 3
-            additional: {}
+            additional: {  }
           7ededcb7-cfa7-4750-b4c7-7e466b78f61c:
             uuid: 7ededcb7-cfa7-4750-b4c7-7e466b78f61c
             region: first
@@ -111,7 +112,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             weight: 4
-            additional: {}
+            additional: {  }
           7572aaaf-2d3f-43bc-bd7b-0fa3cee62014:
             uuid: 7572aaaf-2d3f-43bc-bd7b-0fa3cee62014
             region: first
@@ -125,9 +126,9 @@ third_party_settings:
                 label: above
                 settings:
                   link: true
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 6
-            additional: {}
+            additional: {  }
           f69524d8-e2da-489d-af1d-030d160538c1:
             uuid: f69524d8-e2da-489d-af1d-030d160538c1
             region: first
@@ -139,10 +140,10 @@ third_party_settings:
               formatter:
                 type: text_default
                 label: above
-                settings: {}
-                third_party_settings: {}
+                settings: {  }
+                third_party_settings: {  }
             weight: 7
-            additional: {}
+            additional: {  }
           5c5e2cb8-0219-4356-8ae5-ee180c0de793:
             uuid: 5c5e2cb8-0219-4356-8ae5-ee180c0de793
             region: first
@@ -156,9 +157,9 @@ third_party_settings:
                 label: above
                 settings:
                   link_to_entity: false
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 8
-            additional: {}
+            additional: {  }
           eb3fb437-b610-42cd-8492-8b65a674c045:
             uuid: eb3fb437-b610-42cd-8492-8b65a674c045
             region: first
@@ -172,9 +173,9 @@ third_party_settings:
                 label: above
                 settings:
                   link: true
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 9
-            additional: {}
+            additional: {  }
           691eab07-c1ba-4c34-ad70-a99d92cbe8b3:
             uuid: 691eab07-c1ba-4c34-ad70-a99d92cbe8b3
             region: first
@@ -188,9 +189,9 @@ third_party_settings:
                 label: above
                 settings:
                   link: true
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 10
-            additional: {}
+            additional: {  }
           17e45a43-621c-4924-a3ac-c48e31635765:
             uuid: 17e45a43-621c-4924-a3ac-c48e31635765
             region: first
@@ -204,9 +205,9 @@ third_party_settings:
                 label: above
                 settings:
                   link: true
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 11
-            additional: {}
+            additional: {  }
           67b9b8b8-f018-4c7b-a5dd-913718585890:
             uuid: 67b9b8b8-f018-4c7b-a5dd-913718585890
             region: first
@@ -221,9 +222,9 @@ third_party_settings:
                 settings:
                   view_mode: default
                   link: ''
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 12
-            additional: {}
+            additional: {  }
           4efee900-ffae-4c11-930e-4bc45d490a2e:
             uuid: 4efee900-ffae-4c11-930e-4bc45d490a2e
             region: content
@@ -240,9 +241,9 @@ third_party_settings:
                 label: visually_hidden
                 settings:
                   link: false
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 0
-            additional: {}
+            additional: {  }
           ff0ee96f-eac3-4990-93b2-2f6a7340ff26:
             uuid: ff0ee96f-eac3-4990-93b2-2f6a7340ff26
             region: content
@@ -259,10 +260,10 @@ third_party_settings:
                 label: visually_hidden
                 settings:
                   link_to_entity: true
-                third_party_settings: {}
+                third_party_settings: {  }
             weight: 1
-            additional: {}
-        third_party_settings: {}
+            additional: {  }
+        third_party_settings: {  }
 id: node.business_term.reference
 targetEntityType: node
 bundle: business_term
@@ -271,8 +272,8 @@ content:
   body:
     type: text_default
     label: hidden
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: first
   field_acronym:
@@ -280,7 +281,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 14
     region: first
   field_audience:
@@ -288,7 +289,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 17
     region: first
   field_data_custodian:
@@ -296,7 +297,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 1
     region: first
   field_data_group:
@@ -304,7 +305,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 15
     region: first
   field_keywords:
@@ -312,7 +313,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 2
     region: first
   field_relationship:
@@ -321,7 +322,7 @@ content:
     settings:
       view_mode: default
       link: ''
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 18
     region: first
   field_security_level:
@@ -329,7 +330,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 16
     region: first
   field_status:
@@ -337,7 +338,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 12
     region: first
   field_subject_areas:
@@ -345,19 +346,19 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 3
     region: first
   field_usage_rules:
     type: text_default
     label: above
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 13
     region: first
   flag_bookmark:
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 10
     region: first
 hidden:

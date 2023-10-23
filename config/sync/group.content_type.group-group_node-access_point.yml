@@ -9,8 +9,6 @@ dependencies:
     - gnode
     - node
 id: group-group_node-access_point
-label: 'Group: Add Access point'
-description: 'An access point is an online source for retrieving datasets'
 group_type: group
 content_plugin: 'group_node:access_point'
 plugin_config:

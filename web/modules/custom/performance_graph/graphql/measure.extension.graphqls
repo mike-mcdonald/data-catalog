@@ -1,0 +1,8 @@
+extend type Query {
+  measure(id: Int!): Measure
+  measures(offset: Int = 0, limit: Int = 10): MeasureConnection!
+}
+
+extend type Mutation {
+  saveMeasure(data: MeasureInput): MeasureResponse
+}

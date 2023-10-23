@@ -4,14 +4,16 @@ status: true
 dependencies:
   config:
     - group.type.group
+    - user.role.authenticated
 id: group-outsider
 label: Outsider
 weight: -101
-internal: true
-audience: outsider
+admin: false
+scope: outsider
+global_role: authenticated
 group_type: group
-permissions_ui: true
 permissions:
+  - 'access group_node overview'
   - 'join group'
   - 'view group'
   - 'view group_node:access_point entity'

@@ -21,7 +21,6 @@ permissions:
   - 'access user profiles'
   - 'administer group'
   - 'administer users'
-  - 'bypass group access'
   - 'create dashboard_message block content'
   - 'create group group'
   - 'create notification content'
