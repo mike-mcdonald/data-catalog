@@ -4,11 +4,12 @@ status: true
 dependencies:
   config:
     - group.type.group
+    - user.role.anonymous
 id: group-anonymous
 label: Anonymous
 weight: -102
-group_type: group
-permissions: {  }
 admin: false
 scope: outsider
 global_role: anonymous
+group_type: group
+permissions: {  }
