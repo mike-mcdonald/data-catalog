@@ -1,0 +1,25 @@
+type ContactType {
+  key: String!
+  value: String!
+}
+
+type Measure {
+  id: Int!
+  uuid: String!
+  title: String!
+}
+
+input MeasureInput {
+  id: Int
+  title: String!
+}
+
+type MeasureResponse implements Response {
+  errors: [Violation]
+  measure: Measure
+}
+
+type MeasureConnection {
+  total: Int!
+  items: [Measure!]
+}

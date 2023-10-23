@@ -7,10 +7,7 @@ dependencies:
 id: group-member
 label: Member
 weight: -100
-internal: true
-audience: member
 group_type: group
-permissions_ui: true
 permissions:
   - 'access group_node overview'
   - 'create group_node:access_point entity'
@@ -42,3 +39,6 @@ permissions:
   - 'view unpublished group_node:dataset entity'
   - 'view unpublished group_node:performance_measure entity'
   - 'view unpublished group_node:performance_outcome entity'
+admin: false
+scope: insider
+global_role: authenticated

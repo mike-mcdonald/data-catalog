@@ -21,7 +21,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * )
  *
  */
-class WebformLinkBlock extends BlockBase implements ContainerFactoryPluginInterface {
+class WebformLinkBlock extends BlockBase implements ContainerFactoryPluginInterface
+{
   /**
    * Constructs a new WebformLinkBlock plugin.
    *
@@ -32,14 +33,16 @@ class WebformLinkBlock extends BlockBase implements ContainerFactoryPluginInterf
    * @param mixed $plugin_definition
    *   The plugin implementation definition.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition)
+  {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition)
+  {
     return new static(
       $configuration,
       $plugin_id,
@@ -50,14 +53,16 @@ class WebformLinkBlock extends BlockBase implements ContainerFactoryPluginInterf
   /**
    * {@inheritdoc}
    */
-  public function access(AccountInterface $account, $return_as_object = FALSE) {
+  public function access(AccountInterface $account, $return_as_object = FALSE)
+  {
     return AccessResult::allowed();
   }
 
   /**
    * {@inheritdoc}
    */
-  public function defaultConfiguration() {
+  public function defaultConfiguration()
+  {
     return [
       'webform_id' => NULL,
       'prefix_message' => '',
@@ -69,7 +74,8 @@ class WebformLinkBlock extends BlockBase implements ContainerFactoryPluginInterf
   /**
    * {@inheritdoc}
    */
-  public function blockForm($form, FormStateInterface $form_state) {
+  public function blockForm($form, FormStateInterface $form_state)
+  {
     $form['webform_id'] = [
       '#type' => 'entity_autocomplete',
       '#required' => TRUE,
@@ -103,7 +109,8 @@ class WebformLinkBlock extends BlockBase implements ContainerFactoryPluginInterf
   /**
    * {@inheritdoc}
    */
-  public function blockSubmit($form, FormStateInterface $form_state) {
+  public function blockSubmit($form, FormStateInterface $form_state)
+  {
     $this->configuration['webform_id'] = $form_state->getValue('webform_id');
     $this->configuration['prefix_message'] = $form_state->getValue('prefix_message');
     $this->configuration['webform_message'] = $form_state->getValue('webform_message');
@@ -113,8 +120,9 @@ class WebformLinkBlock extends BlockBase implements ContainerFactoryPluginInterf
   /**
    * {@inheritdoc}
    */
-  public function build() {
-    $link = Webform::load($this->configuration['webform_id'])->link($this->configuration['webform_message']);
+  public function build()
+  {
+    $link = Webform::load($this->configuration['webform_id'])->toLink($this->configuration['webform_message']);
 
 
     return [
@@ -123,12 +131,11 @@ class WebformLinkBlock extends BlockBase implements ContainerFactoryPluginInterf
         '#children' => $this->configuration['prefix_message'] . ' ',
       ],
       'link' => [
-        '#children' => $link,
+        '#children' => $link->toString(),
       ],
       'suffix' => [
         '#children' => ' ' . $this->configuration['suffix_message'],
       ],
     ];
   }
-
 }

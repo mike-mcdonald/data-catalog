@@ -1,0 +1,92 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  forums: [Forum]
+  forum(id: Int): Forum
+  entityDefinition(
+    entity_type: String!
+    bundle: String
+    field_types: FieldTypes
+  ): EntityDefinition
+}
+
+type Mutation {
+  createTopic(forum: Int!, data: TopicInput!): TopicResponse
+}
+
+scalar Violation
+scalar Any
+
+interface Response {
+  errors: [Violation]
+}
+
+type User {
+  id: Int!
+  uuid: ID!
+  emailAddress: String
+  name: String
+}
+
+type Forum {
+  id: Int!
+  uuid: String!
+  name: String!
+  parent: Forum
+  topics: [ForumTopic]
+}
+
+type ForumTopic {
+  id: Int!
+  uuid: String!
+  forum: Forum!
+  subject: String!
+  body: [String]
+}
+
+type TopicResponse implements Response {
+  errors: [Violation]
+  topic: ForumTopic
+}
+
+input TopicInput {
+  subject: String!
+  body: [String]
+}
+
+type TaxonomyTerm {
+  id: Int!
+  uuid: String!
+  name: String!
+  description: String
+}
+
+type EntityDefinition {
+  label: String
+  fields: [EntityDefinitionField]
+}
+
+type EntityDefinitionField {
+  id: String
+  label: String
+  description: String
+  type: String
+  required: Boolean
+  multiple: Boolean
+  maxNumItems: Int
+  status: Boolean
+  defaultValue: String
+  isReference: Boolean
+  isHidden: Boolean
+  weight: Int
+  settings: Any
+}
+
+enum FieldTypes {
+  ALL
+  BASE_FIELDS
+  FIELD_CONFIG
+}

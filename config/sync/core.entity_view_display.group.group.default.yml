@@ -6,8 +6,10 @@ dependencies:
     - field.field.group.group.field_email_address
     - field.field.group.group.field_summary
     - group.type.group
+    - views.view.group_nodes
   module:
     - layout_builder
+    - views
   theme:
     - rain
 third_party_settings:
@@ -51,6 +53,19 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             weight: 2
+            additional: {  }
+          41759fd6-09c0-4177-88d3-a85cd84814e4:
+            uuid: 41759fd6-09c0-4177-88d3-a85cd84814e4
+            region: content
+            configuration:
+              id: 'views_block:group_nodes-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 3
             additional: {  }
         third_party_settings: {  }
 id: group.group.default

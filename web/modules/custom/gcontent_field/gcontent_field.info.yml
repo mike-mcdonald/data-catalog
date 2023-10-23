@@ -1,7 +1,0 @@
-name: "Group Content Field"
-description: "Defines a field to view and edit the groups associated with content."
-package: "Group"
-type: "module"
-core_version_requirement: ^8.8 || ^9
-dependencies:
-  - "group:group"

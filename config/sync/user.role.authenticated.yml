@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.webform_default
     - node.type.access_point
     - node.type.contact_information
     - node.type.dataset
@@ -70,6 +71,7 @@ permissions:
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use text format basic_html'
+  - 'use text format webform_default'
   - 'view access_point revisions'
   - 'view any unpublished content'
   - 'view contact_information revisions'

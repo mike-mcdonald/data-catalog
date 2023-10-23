@@ -9,11 +9,9 @@ dependencies:
     - gnode
     - node
 id: group-group_node-dataset
-label: 'Group: Add Dataset'
-description: 'Use this content type to create a new dataset that exists in a database or server'
 group_type: group
 content_plugin: 'group_node:dataset'
 plugin_config:
-  group_cardinality: 1
+  group_cardinality: 0
   entity_cardinality: 1
   use_creation_wizard: false

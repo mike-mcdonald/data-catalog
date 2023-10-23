@@ -9,8 +9,6 @@ dependencies:
     - gnode
     - node
 id: group_content_type_e1851433e2e09
-label: 'Group: Add Performance measure'
-description: 'Use This Content Type to create new Performance Measure records.'
 group_type: group
 content_plugin: 'group_node:performance_measure'
 plugin_config:

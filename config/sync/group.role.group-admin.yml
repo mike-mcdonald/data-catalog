@@ -7,10 +7,7 @@ dependencies:
 id: group-admin
 label: Admin
 weight: 100
-internal: false
-audience: member
 group_type: group
-permissions_ui: true
 permissions:
   - 'access group_node overview'
   - 'administer members'
@@ -75,3 +72,5 @@ permissions:
   - 'view unpublished group_node:dataset entity'
   - 'view unpublished group_node:performance_measure entity'
   - 'view unpublished group_node:performance_outcome entity'
+admin: false
+scope: individual
