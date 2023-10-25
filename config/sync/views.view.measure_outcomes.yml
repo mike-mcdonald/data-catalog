@@ -11,7 +11,6 @@ dependencies:
     - datetime
     - node
     - taxonomy
-    - user
 id: measure_outcomes
 label: 'Measure data'
 module: views
@@ -403,7 +402,7 @@ display:
         options:
           query_comment: ''
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_tags: {  }
       relationships:
@@ -438,7 +437,6 @@ display:
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
       tags:
         - 'config:field.storage.node.field_actual'
         - 'config:field.storage.node.field_estimate'
@@ -458,7 +456,6 @@ display:
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
       tags:
         - 'config:field.storage.node.field_actual'
         - 'config:field.storage.node.field_estimate'
