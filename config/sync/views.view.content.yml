@@ -158,7 +158,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -313,8 +313,8 @@ display:
           plugin_id: text_custom
           empty: true
           content: 'No content available.'
-      sorts: {}
-      arguments: {}
+      sorts: {  }
+      arguments: {  }
       filters:
         title:
           id: title
@@ -337,7 +337,7 @@ display:
             use_operator: false
             operator: title_op
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
             identifier: title
             required: false
             remember: false
@@ -356,8 +356,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {}
-            group_items: {}
+            default_group_multiple: {  }
+            group_items: {  }
         type:
           id: type
           table: node_field_data
@@ -369,7 +369,7 @@ display:
           entity_field: type
           plugin_id: bundle
           operator: in
-          value: {}
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -379,7 +379,7 @@ display:
             use_operator: false
             operator: type_op
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
             identifier: type
             required: false
             remember: false
@@ -401,8 +401,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {}
-            group_items: {}
+            default_group_multiple: {  }
+            group_items: {  }
         status:
           id: status
           table: node_field_data
@@ -424,7 +424,7 @@ display:
             use_operator: false
             operator: status_op
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
             identifier: status
             required: false
             remember: false
@@ -441,7 +441,7 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {}
+            default_group_multiple: {  }
             group_items:
               1:
                 title: Published
@@ -462,7 +462,7 @@ display:
           entity_field: langcode
           plugin_id: language
           operator: in
-          value: {}
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -472,7 +472,7 @@ display:
             use_operator: false
             operator: langcode_op
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
             identifier: langcode
             required: false
             remember: false
@@ -492,8 +492,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {}
-            group_items: {}
+            default_group_multiple: {  }
+            group_items: {  }
         status_extra:
           id: status_extra
           table: node_field_data
@@ -505,7 +505,7 @@ display:
           group: 1
           expose:
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
       filter_groups:
         operator: AND
         groups:
@@ -513,7 +513,7 @@ display:
       style:
         type: table
         options:
-          grouping: {}
+          grouping: {  }
           row_class: ''
           default_row_class: true
           columns:
@@ -609,10 +609,10 @@ display:
         type: views_query
         options:
           query_comment: ''
-          disable_sql_rewrite: false
+          disable_sql_rewrite: true
           distinct: true
           replica: false
-          query_tags: {}
+          query_tags: {  }
       relationships:
         uid:
           id: uid
@@ -622,7 +622,7 @@ display:
           plugin_id: standard
           required: true
       show_admin_links: false
-      display_extenders: {}
+      display_extenders: {  }
     cache_metadata:
       max-age: 0
       contexts:
@@ -633,7 +633,7 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {}
+      tags: {  }
   data_export_1:
     id: data_export_1
     display_title: 'Dataset export'
@@ -651,7 +651,7 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: field
-          label: Dataset ID
+          label: 'Dataset ID'
           exclude: false
           alter:
             alter_text: false
@@ -698,7 +698,7 @@ display:
             thousand_separator: ''
             prefix_suffix: true
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -717,7 +717,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: Dataset name
+          label: 'Dataset name'
           exclude: false
           alter:
             alter_text: false
@@ -763,7 +763,7 @@ display:
           settings:
             link_to_entity: false
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -823,9 +823,9 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: basic_string
-          settings: {}
+          settings: {  }
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -888,7 +888,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -951,7 +951,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1014,7 +1014,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1077,7 +1077,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1142,7 +1142,7 @@ display:
             reverse: 0
             separator: ' / '
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1205,7 +1205,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1268,7 +1268,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 7
           delta_offset: 0
@@ -1331,7 +1331,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1391,9 +1391,9 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: basic_string
-          settings: {}
+          settings: {  }
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1456,7 +1456,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1519,7 +1519,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1584,7 +1584,7 @@ display:
             reverse: 0
             separator: ' / '
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1649,7 +1649,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1713,7 +1713,7 @@ display:
             thousand_separator: ''
             prefix_suffix: true
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1732,7 +1732,7 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: field
-          label: 'Created'
+          label: Created
           exclude: false
           alter:
             alter_text: false
@@ -1780,7 +1780,7 @@ display:
             custom_date_format: ''
             timezone: ''
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1799,7 +1799,7 @@ display:
           entity_type: node
           entity_field: uid
           plugin_id: field
-          label: Created by
+          label: 'Created by'
           exclude: false
           alter:
             alter_text: false
@@ -1845,7 +1845,7 @@ display:
           settings:
             link: true
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1912,7 +1912,7 @@ display:
             custom_date_format: ''
             timezone: ''
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1977,7 +1977,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2009,7 +2009,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -2027,11 +2027,11 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {}
-            group_items: {}
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
-        groups: {}
+        groups: {  }
       style:
         type: data_export
         options:
@@ -2077,7 +2077,7 @@ display:
           required: false
       group_by: false
       display_description: ''
-      display_extenders: {}
+      display_extenders: {  }
       path: admin/content/export/dataset
       displays:
         default: '0'
@@ -2175,7 +2175,7 @@ display:
             thousand_separator: ''
             prefix_suffix: true
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2240,7 +2240,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2303,7 +2303,7 @@ display:
           settings:
             link_to_entity: false
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2366,7 +2366,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2426,9 +2426,9 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: text_default
-          settings: {}
+          settings: {  }
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2493,7 +2493,7 @@ display:
             reverse: 0
             separator: ' / '
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2556,7 +2556,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 7
           delta_offset: 0
@@ -2619,7 +2619,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2682,7 +2682,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2742,9 +2742,9 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: basic_string
-          settings: {}
+          settings: {  }
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2807,7 +2807,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2870,7 +2870,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2933,7 +2933,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -2999,7 +2999,7 @@ display:
             scale: 6
             prefix_suffix: true
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3062,7 +3062,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3125,7 +3125,7 @@ display:
           settings:
             link_to_entity: false
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3192,7 +3192,7 @@ display:
             rel: '0'
             target: '0'
           group_column: ''
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3255,7 +3255,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3318,7 +3318,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3337,7 +3337,7 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: field
-          label: 'Created'
+          label: Created
           exclude: false
           alter:
             alter_text: false
@@ -3385,7 +3385,7 @@ display:
             custom_date_format: ''
             timezone: ''
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3404,7 +3404,7 @@ display:
           entity_type: node
           entity_field: uid
           plugin_id: field
-          label: Created by
+          label: 'Created by'
           exclude: false
           alter:
             alter_text: false
@@ -3450,7 +3450,7 @@ display:
           settings:
             link: true
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3517,7 +3517,7 @@ display:
             custom_date_format: ''
             timezone: ''
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3582,7 +3582,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3595,7 +3595,7 @@ display:
         type: perm
         options:
           perm: 'access content overview'
-      arguments: {}
+      arguments: {  }
       filters:
         status:
           id: status
@@ -3618,7 +3618,7 @@ display:
             use_operator: false
             operator: status_op
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
             identifier: status
             required: true
             remember: false
@@ -3638,7 +3638,7 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {}
+            default_group_multiple: {  }
             group_items:
               1:
                 title: Published
@@ -3670,7 +3670,7 @@ display:
             use_operator: false
             operator: type_op
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
             identifier: type
             required: false
             remember: false
@@ -3692,8 +3692,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {}
-            group_items: {}
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -3726,7 +3726,7 @@ display:
           field: field_performance_measure
           plugin_id: standard
       display_description: ''
-      display_extenders: {}
+      display_extenders: {  }
       path: admin/content/export/measure
       filename: 'data-catalog_measures_[date:html_date].csv'
       automatic_download: false
@@ -3826,7 +3826,7 @@ display:
             thousand_separator: ''
             prefix_suffix: true
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3891,7 +3891,7 @@ display:
           settings:
             link_to_entity: false
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -3956,7 +3956,7 @@ display:
             reverse: 0
             separator: ' - '
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -4022,7 +4022,7 @@ display:
             scale: 2
             prefix_suffix: true
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -4088,7 +4088,7 @@ display:
             scale: 2
             prefix_suffix: true
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -4148,9 +4148,9 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: text_default
-          settings: {}
+          settings: {  }
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -4169,7 +4169,7 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: field
-          label: 'Created'
+          label: Created
           exclude: false
           alter:
             alter_text: false
@@ -4217,7 +4217,7 @@ display:
             custom_date_format: ''
             timezone: ''
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -4236,7 +4236,7 @@ display:
           entity_type: node
           entity_field: uid
           plugin_id: field
-          label: Created by
+          label: 'Created by'
           exclude: false
           alter:
             alter_text: false
@@ -4282,7 +4282,7 @@ display:
           settings:
             link: true
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -4349,7 +4349,7 @@ display:
             custom_date_format: ''
             timezone: ''
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -4414,7 +4414,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -4427,7 +4427,7 @@ display:
         type: perm
         options:
           perm: 'access content overview'
-      arguments: {}
+      arguments: {  }
       filters:
         type:
           id: type
@@ -4451,7 +4451,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {}
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -4469,11 +4469,11 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {}
-            group_items: {}
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
-        groups: {}
+        groups: {  }
       style:
         type: data_export
         options:
@@ -4506,7 +4506,7 @@ display:
           plugin_id: standard
           required: true
       display_description: ''
-      display_extenders: {}
+      display_extenders: {  }
       path: admin/content/export/outcome
       filename: 'data-catalog_outcomes_[date:html_date].csv'
       automatic_download: false
@@ -4569,7 +4569,7 @@ display:
           label: 'Export outcomes'
           empty: false
           display_id: data_export_5
-      display_extenders: {}
+      display_extenders: {  }
       path: admin/content/node
       menu:
         type: 'default tab'
@@ -4594,4 +4594,4 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {}
+      tags: {  }
