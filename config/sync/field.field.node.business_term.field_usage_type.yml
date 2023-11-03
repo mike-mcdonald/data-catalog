@@ -6,12 +6,17 @@ dependencies:
     - field.storage.node.field_usage_type
     - node.type.business_term
     - taxonomy.vocabulary.usage_type
+  module:
+    - label_help
+third_party_settings:
+  label_help:
+    label_help_description: 'Select how this business term is typically used (e.g., Metric, Dimension, KPI).'
 id: node.business_term.field_usage_type
 field_name: field_usage_type
 entity_type: node
 bundle: business_term
 label: 'Usage type'
-description: 'How is this term used?'
+description: ''
 required: false
 translatable: false
 default_value: {  }

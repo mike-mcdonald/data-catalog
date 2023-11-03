@@ -5,6 +5,11 @@ dependencies:
   config:
     - field.storage.node.field_acronym
     - node.type.business_term
+  module:
+    - label_help
+third_party_settings:
+  label_help:
+    label_help_description: 'List any acronyms or abbreviations associated with this business term.'
 id: node.business_term.field_acronym
 field_name: field_acronym
 entity_type: node

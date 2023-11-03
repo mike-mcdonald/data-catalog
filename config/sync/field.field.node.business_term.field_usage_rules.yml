@@ -7,6 +7,10 @@ dependencies:
     - node.type.business_term
   module:
     - text
+    - label_help
+third_party_settings:
+  label_help:
+    label_help_description: 'Describe any specific rules or guidelines for using this business term, if applicable.'
 id: node.business_term.field_usage_rules
 field_name: field_usage_rules
 entity_type: node
