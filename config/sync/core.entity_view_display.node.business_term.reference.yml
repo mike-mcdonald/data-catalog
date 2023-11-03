@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.business_term.field_data_custodian
     - field.field.node.business_term.field_data_group
     - field.field.node.business_term.field_keywords
+    - field.field.node.business_term.field_media
     - field.field.node.business_term.field_relationship
     - field.field.node.business_term.field_security_level
     - field.field.node.business_term.field_status
@@ -363,6 +364,7 @@ content:
     region: first
 hidden:
   entitygroupfield: true
+  field_media: true
   field_term_source: true
   field_usage_type: true
   group_content: true

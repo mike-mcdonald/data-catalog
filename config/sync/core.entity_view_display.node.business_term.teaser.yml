@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.business_term.field_data_custodian
     - field.field.node.business_term.field_data_group
     - field.field.node.business_term.field_keywords
+    - field.field.node.business_term.field_media
     - field.field.node.business_term.field_relationship
     - field.field.node.business_term.field_security_level
     - field.field.node.business_term.field_status
@@ -105,6 +106,7 @@ hidden:
   field_data_custodian: true
   field_data_group: true
   field_keywords: true
+  field_media: true
   field_relationship: true
   field_security_level: true
   field_status: true

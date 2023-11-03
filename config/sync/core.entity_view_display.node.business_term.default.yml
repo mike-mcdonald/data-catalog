@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.business_term.field_data_custodian
     - field.field.node.business_term.field_data_group
     - field.field.node.business_term.field_keywords
+    - field.field.node.business_term.field_media
     - field.field.node.business_term.field_relationship
     - field.field.node.business_term.field_security_level
     - field.field.node.business_term.field_status
@@ -54,7 +55,7 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: -7
+            weight: -10
             additional: {  }
           5b3df6bb-eff5-49a9-8117-b10dc6e570b8:
             uuid: 5b3df6bb-eff5-49a9-8117-b10dc6e570b8
@@ -73,7 +74,7 @@ third_party_settings:
                 settings:
                   view_mode: card
                 third_party_settings: {  }
-            weight: -6
+            weight: -8
             additional: {  }
           7d1cc1f4-751c-4754-96bd-32964e35f517:
             uuid: 7d1cc1f4-751c-4754-96bd-32964e35f517
@@ -92,7 +93,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -5
+            weight: -7
             additional: {  }
           1a39d82d-dcef-44ee-b1ff-37368ff5eb7a:
             uuid: 1a39d82d-dcef-44ee-b1ff-37368ff5eb7a
@@ -111,7 +112,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -4
+            weight: -6
             additional: {  }
           ee99d0f7-2e43-435f-9bbf-fe16c889e73c:
             uuid: ee99d0f7-2e43-435f-9bbf-fe16c889e73c
@@ -191,7 +192,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -3
+            weight: -5
             additional: {  }
           b1e2d5f1-3f8c-4f77-b124-218df06c72da:
             uuid: b1e2d5f1-3f8c-4f77-b124-218df06c72da
@@ -209,7 +210,7 @@ third_party_settings:
                 label: inline
                 settings: {  }
                 third_party_settings: {  }
-            weight: 1
+            weight: -1
             additional: {  }
           6c425fcd-b394-429d-86e8-f9c185da4033:
             uuid: 6c425fcd-b394-429d-86e8-f9c185da4033
@@ -226,7 +227,7 @@ third_party_settings:
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-            weight: 2
+            weight: 0
             additional: {  }
           e7ee8ad2-4f59-438c-ac67-a0b1e5f4e28f:
             uuid: e7ee8ad2-4f59-438c-ac67-a0b1e5f4e28f
@@ -247,7 +248,7 @@ third_party_settings:
                   reverse: 0
                   separator: ' / '
                 third_party_settings: {  }
-            weight: 3
+            weight: 1
             additional: {  }
           3acdc1e7-4305-4dc0-b1d3-bc21cfb6d555:
             uuid: 3acdc1e7-4305-4dc0-b1d3-bc21cfb6d555
@@ -264,7 +265,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 4
+            weight: 2
             additional: {  }
           5f9b2f9e-a3de-441e-8b87-d5e4787a79f7:
             uuid: 5f9b2f9e-a3de-441e-8b87-d5e4787a79f7
@@ -281,7 +282,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: -2
+            weight: -4
             additional: {  }
           637550c8-928f-44cc-83cb-2c02c74f3224:
             uuid: 637550c8-928f-44cc-83cb-2c02c74f3224
@@ -299,7 +300,7 @@ third_party_settings:
                   view_mode: default
                   link: ''
                 third_party_settings: {  }
-            weight: 5
+            weight: 3
             additional: {  }
           7e95208c-08c4-4025-9eb0-4177559a8a36:
             uuid: 7e95208c-08c4-4025-9eb0-4177559a8a36
@@ -318,7 +319,7 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 0
+            weight: -2
             additional: {  }
           f2433b45-cd71-45b2-9002-f5027b9122f4:
             uuid: f2433b45-cd71-45b2-9002-f5027b9122f4
@@ -337,7 +338,24 @@ third_party_settings:
                 settings:
                   view_mode: default
                 third_party_settings: {  }
-            weight: -1
+            weight: -3
+            additional: {  }
+          cd94a13e-64ca-4740-9e13-1526c1397f49:
+            uuid: cd94a13e-64ca-4740-9e13-1526c1397f49
+            region: first
+            configuration:
+              id: 'field_block:node:business_term:field_media'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: -9
             additional: {  }
         third_party_settings: {  }
 id: node.business_term.default
@@ -391,6 +409,15 @@ content:
       link: true
     third_party_settings: {  }
     weight: 2
+    region: first
+  field_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 21
     region: first
   field_relationship:
     type: entity_reference_revisions_entity_view

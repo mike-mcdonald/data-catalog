@@ -1,0 +1,34 @@
+uuid: 01062e38-9851-4475-9912-4cf30007f5ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - media.type.image
+    - node.type.business_term
+  module:
+    - label_help
+third_party_settings:
+  label_help:
+    label_help_description: 'Select or add an image that helps demonstrate the definition of this term.'
+id: node.business_term.field_media
+field_name: field_media
+entity_type: node
+bundle: business_term
+label: Image
+description: 'Select or add an image that helps demonstrate the definition of this term.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
