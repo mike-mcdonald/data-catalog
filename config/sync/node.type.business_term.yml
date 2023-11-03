@@ -4,10 +4,16 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - node_title_help_text
+    - label_help
 third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
+  node_title_help_text:
+    title_help: 'Enter the name or title of the business term.'
+  label_help:
+    label_help_description: 'Enter the name or title of the business term.'
 name: 'Business term'
 type: business_term
 description: 'Use this content type to create terms that describe business lingo that you want to relate to subject areas.'

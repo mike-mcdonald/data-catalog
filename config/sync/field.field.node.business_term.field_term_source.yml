@@ -9,6 +9,10 @@ dependencies:
     - paragraphs.paragraphs_type.source_internal
   module:
     - entity_reference_revisions
+    - label_help
+third_party_settings:
+  label_help:
+    label_help_description: 'Specify the source or origin of this business term (e.g., internal policy, industry standard, external regulation).'
 id: node.business_term.field_term_source
 field_name: field_term_source
 entity_type: node
@@ -29,9 +33,6 @@ settings:
     target_bundles_drag_drop:
       relationship:
         weight: 5
-        enabled: false
-      source:
-        weight: 6
         enabled: false
       source_external:
         weight: 7

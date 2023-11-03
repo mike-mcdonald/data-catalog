@@ -8,6 +8,10 @@ dependencies:
     - paragraphs.paragraphs_type.relationship
   module:
     - entity_reference_revisions
+    - label_help
+third_party_settings:
+  label_help:
+    label_help_description: 'Describe how this business term is related to other items in the catalog (e.g., data assets, performance measures, other terms).'
 id: node.business_term.field_relationship
 field_name: field_relationship
 entity_type: node
@@ -28,4 +32,10 @@ settings:
       relationship:
         weight: 2
         enabled: true
+      source_external:
+        weight: 5
+        enabled: false
+      source_internal:
+        weight: 6
+        enabled: false
 field_type: entity_reference_revisions
