@@ -1,9 +1,9 @@
-uuid: 2f004e4c-aef4-4eb6-bc0b-4de6cb90aa5b
+uuid: dcc48c93-7f71-4d04-8ee3-308fd02c780f
 langcode: en
 status: true
 dependencies: {  }
-id: source_internal
-label: 'Internal source'
+id: source
+label: Source
 icon_uuid: null
 icon_default: null
 description: ''

@@ -1,0 +1,45 @@
+uuid: 1f369d7f-0497-40ed-896d-de3348363cbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.source.field_description
+    - field.field.paragraph.source.field_source_external
+    - field.field.paragraph.source.field_source_type
+    - paragraphs.paragraphs_type.source
+  module:
+    - link
+id: paragraph.source.default
+targetEntityType: paragraph
+bundle: source
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_source_external:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_source_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

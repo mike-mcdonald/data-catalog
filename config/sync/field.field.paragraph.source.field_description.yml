@@ -1,0 +1,19 @@
+uuid: 82c61376-dd1e-4fda-9582-7dd741dc25b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.source
+id: paragraph.source.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: source
+label: Description
+description: 'Please provide additional information about this source that describes how this particular source relates to this term.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -5,8 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_term_source
     - node.type.business_term
-    - paragraphs.paragraphs_type.source_external
-    - paragraphs.paragraphs_type.source_internal
+    - paragraphs.paragraphs_type.source
   module:
     - entity_reference_revisions
     - label_help
@@ -27,17 +26,19 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      source_external: source_external
-      source_internal: source_internal
+      source: source
     negate: 0
     target_bundles_drag_drop:
       relationship:
         weight: 5
         enabled: false
+      source:
+        weight: 6
+        enabled: true
       source_external:
         weight: 7
-        enabled: true
+        enabled: false
       source_internal:
         weight: 8
-        enabled: true
+        enabled: false
 field_type: entity_reference_revisions
