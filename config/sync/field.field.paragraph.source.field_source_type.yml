@@ -1,19 +1,19 @@
-uuid: 7932399c-c739-45c6-9b3b-4618f2f41562
+uuid: 8dedea85-f8e0-4482-a013-d96987654727
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_source_type
-    - paragraphs.paragraphs_type.source_internal
+    - paragraphs.paragraphs_type.source
     - taxonomy.vocabulary.source_type
-id: paragraph.source_internal.field_source_type
+id: paragraph.source.field_source_type
 field_name: field_source_type
 entity_type: paragraph
-bundle: source_internal
-label: Type
-description: ''
-required: false
-translatable: false
+bundle: source
+label: 'Source type'
+description: 'Please select the type of source this is. Sources can be internal or external, and internal sources can be further defined. Select the deepest level you think is accurate.'
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
