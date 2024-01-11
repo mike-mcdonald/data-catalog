@@ -10,7 +10,7 @@ dependencies:
     - text
 third_party_settings:
   label_help:
-    label_help_description: 'Define the term so that it is understandable to the general business, specify how it should be used, and clarify how it is different from other terms if necessary.'
+    label_help_description: 'Define the term so that it is understandable to the general business use, specify how it should be used, and clarify how it is different from other terms if necessary.'
 id: node.business_term.body
 field_name: body
 entity_type: node
