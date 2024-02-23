@@ -3,7 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - facets.facet.full_development_stage
+    - facets.facet.full_budget_program
+    - facets.facet.full_contact
+    - facets.facet.full_content_type
+    - facets.facet.full_division_group
+    - facets.facet.full_strategic_plan
+    - facets.facet.full_subject_areas
     - page_manager.page.search
+    - views.view.full_index
+  module:
+    - facets
+    - views
+  theme:
+    - rain
 id: search-block_display-0
 label: 'Layout builder'
 weight: 0
@@ -99,8 +112,8 @@ variant_settings:
             context_mapping: {  }
           weight: 5
           additional: {  }
-        df0d3ffe-80eb-40c8-9cba-fae9f6514945:
-          uuid: df0d3ffe-80eb-40c8-9cba-fae9f6514945
+        40ebc07b-d3bf-4f0b-b185-da1ec1d67680:
+          uuid: 40ebc07b-d3bf-4f0b-b185-da1ec1d67680
           region: second
           configuration:
             id: 'facet_block:full_development_stage'
