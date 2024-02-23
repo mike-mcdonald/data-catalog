@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
     - filter.format.webform_default
     - node.type.access_point
+    - node.type.business_term
     - node.type.contact_information
     - node.type.dataset
     - node.type.performance_measure
@@ -46,6 +47,7 @@ permissions:
   - 'change own username'
   - 'create access_point content'
   - 'create archival_information block content'
+  - 'create business_term content'
   - 'create contact_information content'
   - 'create dataset content'
   - 'create liveness_information block content'
