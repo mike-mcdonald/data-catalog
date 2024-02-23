@@ -12,9 +12,9 @@ dependencies:
     - field.field.node.business_term.field_media
     - field.field.node.business_term.field_relationship
     - field.field.node.business_term.field_security_level
-    - field.field.node.business_term.field_status
     - field.field.node.business_term.field_subject_areas
     - field.field.node.business_term.field_term_source
+    - field.field.node.business_term.field_term_status
     - field.field.node.business_term.field_usage_rules
     - field.field.node.business_term.field_usage_type
     - node.type.business_term
@@ -176,23 +176,6 @@ third_party_settings:
               views_label: ''
               items_per_page: none
             weight: -10
-            additional: {  }
-          fc7cb03d-093c-4be9-81b3-87be0a02aa73:
-            uuid: fc7cb03d-093c-4be9-81b3-87be0a02aa73
-            region: first
-            configuration:
-              id: 'field_block:node:business_term:field_status'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: -5
             additional: {  }
           b1e2d5f1-3f8c-4f77-b124-218df06c72da:
             uuid: b1e2d5f1-3f8c-4f77-b124-218df06c72da
@@ -357,6 +340,22 @@ third_party_settings:
                 third_party_settings: {  }
             weight: -9
             additional: {  }
+          8aa0fb7c-ae17-496b-8dc1-4d443f2ea6b4:
+            uuid: 8aa0fb7c-ae17-496b-8dc1-4d443f2ea6b4
+            region: first
+            configuration:
+              id: 'field_block:node:business_term:field_term_status'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -5
+            additional: {  }
         third_party_settings: {  }
 id: node.business_term.default
 targetEntityType: node
@@ -436,14 +435,6 @@ content:
     third_party_settings: {  }
     weight: 16
     region: first
-  field_status:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 12
-    region: first
   field_subject_areas:
     type: entity_reference_label
     label: above
@@ -460,6 +451,14 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 20
+    region: first
+  field_term_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 22
     region: first
   field_usage_rules:
     type: text_default

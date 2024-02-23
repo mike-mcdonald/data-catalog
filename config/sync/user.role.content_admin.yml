@@ -38,6 +38,7 @@ dependencies:
   module:
     - block_content_permissions
     - content_moderation
+    - field_permissions
     - node
     - taxonomy
     - term_merge
@@ -118,6 +119,7 @@ permissions:
   - 'delete terms in strategic_year'
   - 'delete terms in subject_area'
   - 'delete terms in usage_type'
+  - 'edit field_term_status'
   - 'edit terms in accessibility_levels'
   - 'edit terms in audience'
   - 'edit terms in authority_levels'
