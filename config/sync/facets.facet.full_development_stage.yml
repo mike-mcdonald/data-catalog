@@ -1,4 +1,4 @@
-uuid: 3b408dd9-d1f3-47b9-9efc-df3c4a740240
+uuid: d16af989-6d60-4717-9d34-ff51cb43e231
 langcode: en
 status: true
 dependencies:
@@ -15,7 +15,7 @@ missing: false
 missing_label: others
 url_alias: full_development_stage
 facet_source_id: 'search_api:views_block__full_index__block_1'
-field_identifier: field_status
+field_identifier: field_dev_stage
 query_operator: or
 hard_limit: 0
 exclude: false
@@ -66,8 +66,8 @@ processor_configs:
     weights:
       build: 100
     settings: {  }
-  translate_entity:
-    processor_id: translate_entity
+  translate_entity_aggregated_fields:
+    processor_id: translate_entity_aggregated_fields
     weights:
       build: 5
     settings: {  }

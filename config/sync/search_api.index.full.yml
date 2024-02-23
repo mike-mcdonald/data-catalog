@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_subject_areas
-    - field.storage.node.field_status
     - field.storage.node.field_data_group
     - field.storage.node.field_keywords
     - field.storage.node.field_data_custodian
@@ -61,6 +60,18 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_data_group
+  field_dev_stage:
+    label: 'Development stage'
+    property_path: aggregated_field
+    type: integer
+    configuration:
+      type: union
+      separator: |+
+
+
+      fields:
+        - 'entity:node/field_status'
+        - 'entity:node/field_term_status'
   field_keywords:
     label: Keywords
     datasource_id: 'entity:node'
@@ -69,14 +80,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_keywords
-  field_status:
-    label: 'Development stage'
-    datasource_id: 'entity:node'
-    property_path: field_status
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_status
   field_subject_areas:
     label: 'Data domain'
     datasource_id: 'entity:node'
@@ -145,6 +148,7 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  custom_value: {  }
   entity_status: {  }
   entity_type: {  }
   hierarchy:

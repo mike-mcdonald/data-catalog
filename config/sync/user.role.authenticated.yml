@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
     - filter.format.webform_default
     - node.type.access_point
+    - node.type.business_term
     - node.type.contact_information
     - node.type.dataset
     - node.type.performance_measure
@@ -20,6 +21,7 @@ dependencies:
     - content_moderation
     - entity_browser
     - environment_indicator
+    - field_permissions
     - filter
     - flag
     - media
@@ -46,6 +48,7 @@ permissions:
   - 'change own username'
   - 'create access_point content'
   - 'create archival_information block content'
+  - 'create business_term content'
   - 'create contact_information content'
   - 'create dataset content'
   - 'create liveness_information block content'
@@ -56,9 +59,6 @@ permissions:
   - 'create terms in keywords'
   - 'delete any archival_information block content'
   - 'delete any liveness_information block content'
-  - 'delete own access_point content'
-  - 'delete own contact_information content'
-  - 'delete own dataset content'
   - 'edit own access_point content'
   - 'edit own contact_information content'
   - 'edit own dataset content'
@@ -76,8 +76,10 @@ permissions:
   - 'view any unpublished content'
   - 'view contact_information revisions'
   - 'view dataset revisions'
+  - 'view field_term_status'
   - 'view latest version'
   - 'view media'
+  - 'view own field_term_status'
   - 'view own unpublished content'
   - 'view performance_measure revisions'
   - 'view performance_outcome revisions'

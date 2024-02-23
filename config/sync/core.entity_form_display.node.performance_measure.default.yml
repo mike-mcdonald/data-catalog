@@ -182,7 +182,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_status:
-    type: options_select
+    type: options_buttons
     weight: 4
     region: content
     settings: {  }
