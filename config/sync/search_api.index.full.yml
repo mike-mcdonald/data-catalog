@@ -9,7 +9,6 @@ dependencies:
     - field.storage.node.field_data_custodian
     - field.storage.node.field_category
     - search_api.server.database
-    - core.entity_view_mode.node.full
   module:
     - node
     - search_api
@@ -69,6 +68,7 @@ field_settings:
       separator: |+
 
 
+
       fields:
         - 'entity:node/field_status'
         - 'entity:node/field_term_status'
@@ -97,14 +97,14 @@ field_settings:
         - authenticated
       view_mode:
         'entity:node':
-          access_point: full
-          activity: full
-          business_term: full
-          contact_information: full
-          dataset: full
-          performance_measure: full
-          program_outcome: full
-          strategic_plan_outcome: full
+          access_point: default
+          activity: default
+          business_term: default
+          contact_information: default
+          dataset: default
+          performance_measure: default
+          program_outcome: default
+          strategic_plan_outcome: default
   strategic_plan:
     label: 'Strategic plan'
     property_path: aggregated_field
