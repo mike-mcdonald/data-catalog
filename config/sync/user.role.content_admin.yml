@@ -39,6 +39,7 @@ dependencies:
     - block_content_permissions
     - content_moderation
     - field_permissions
+    - media
     - node
     - taxonomy
     - term_merge
@@ -50,12 +51,15 @@ weight: -7
 is_admin: null
 permissions:
   - 'access content overview'
+  - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer media'
   - 'administer nodes'
   - 'bypass node access'
   - 'create archival_information block content'
   - 'create liveness_information block content'
+  - 'create media'
   - 'create terms in accessibility_levels'
   - 'create terms in audience'
   - 'create terms in authority_levels'
@@ -88,6 +92,7 @@ permissions:
   - 'create terms in subject_area'
   - 'create terms in usage_type'
   - 'delete all revisions'
+  - 'delete any media'
   - 'delete terms in accessibility_levels'
   - 'delete terms in audience'
   - 'delete terms in authority_levels'
@@ -153,9 +158,12 @@ permissions:
   - 'edit terms in usage_type'
   - 'merge taxonomy terms'
   - 'revert all revisions'
+  - 'update any media'
   - 'use editorial transition archive'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use editorial transition revive'
   - 'use views bulk edit'
+  - 'view all media revisions'
   - 'view all revisions'
+  - 'view media'
